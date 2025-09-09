@@ -34,55 +34,36 @@ const ExploreBotswanaSection = () => {
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-h1 mb-6">
-            Explore <span className="gradient-text">Botswana</span> with MobiRides
+          <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+            What's new
           </h2>
-          <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Discover insider guides, success stories, and expert tips for making the most of your mobility across Botswana.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
-            <Card key={index} className="card-elevated overflow-hidden group hover:shadow-strong transition-all duration-300">
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+            <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+              <div className="aspect-[4/3] overflow-hidden">
                 <div className={`w-full h-full bg-gradient-to-br ${post.gradient} flex items-center justify-center`}>
                   <MapPin className="w-12 h-12 text-white opacity-80" />
                 </div>
-                <div className="absolute top-4 left-4">
-                  <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-800">
-                    {post.category}
+              </div>
+              <div className="p-6">
+                <div className="mb-3">
+                  <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
+                    #{post.category.replace(' ', '')}
                   </span>
                 </div>
-              </div>
-
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4 text-sm text-muted-foreground">
-                  <Clock className="w-4 h-4 mr-1" />
-                  {post.readTime}
-                  <span className="mx-2">•</span>
-                  <Users className="w-4 h-4 mr-1" />
-                  Featured
-                </div>
-
-                <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                   {post.title}
                 </h3>
-                
-                <p className="text-body text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-sm text-gray-600 line-clamp-3">
                   {post.excerpt}
                 </p>
-
-                <Button 
-                  variant="ghost" 
-                  className="text-primary hover:text-primary font-semibold p-0 h-auto group/btn"
-                >
-                  Read Article
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
 

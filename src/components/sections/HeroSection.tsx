@@ -19,73 +19,56 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="text-white animate-fade-up">
-            <h1 className="text-display mb-6">
-              Mobility for the <span className="gradient-text bg-gradient-to-r from-primary-light to-secondary-light bg-clip-text text-transparent">Driven</span>.
+          <div className="max-w-2xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+              Rent a car<br />
+              <span className="gradient-text-light">in just a few taps</span>
             </h1>
-            <p className="text-h3 font-normal mb-4 text-gray-100">
-              Premium Car Rentals on Your Terms.
-            </p>
-            <p className="text-body-lg mb-8 text-gray-200 max-w-lg">
-              Access a curated fleet of vehicles from trusted local owners. 
-              Safe, seamless, and sophisticated.
+            <p className="text-xl text-white/90 mb-8 font-light">
+              <span className="gradient-text-light font-semibold">Unlock cars 24/7</span> with your phone, and go!
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button className="btn-hero text-lg px-8 py-4">
-                Start Exploring
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-4"
-              >
-                Learn More
-              </Button>
+            {/* Mobile App Badge */}
+            <div className="mb-8">
+              <p className="text-sm text-white/80 mb-4">Car rental by locals with trip liability insurance included</p>
             </div>
           </div>
 
           {/* Search Component */}
-          <div className="animate-scale-in">
-            <Card className="bg-white/95 backdrop-blur-md p-6 lg:p-8 shadow-strong">
-              <h3 className="text-h3 mb-6 text-gray-900">Find Your Perfect Ride</h3>
-              
-              <div className="space-y-4">
-                <div className="relative">
-                  <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                  <Input 
-                    placeholder="Where do you need a car?"
-                    className="pl-10 py-3 text-lg"
-                  />
-                </div>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="relative">
-                    <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <Input 
-                      type="date"
-                      className="pl-10 py-3"
-                    />
-                  </div>
-                  <div className="relative">
-                    <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <Input 
-                      type="date"
-                      className="pl-10 py-3"
-                    />
-                  </div>
-                </div>
-                
-                <Button className="w-full btn-hero text-lg py-4 mt-6">
-                  <Search className="mr-2 h-5 w-5" />
-                  Explore Rides
-                </Button>
+          <div className="bg-white rounded-3xl p-8 shadow-2xl">
+            <div className="space-y-6">
+              <div className="relative">
+                <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input 
+                  type="text" 
+                  placeholder="Specific address, station, suburb..."
+                  className="w-full pl-12 pr-4 py-4 text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50"
+                />
               </div>
               
-              <p className="text-sm text-gray-600 mt-4 text-center">
-                Redirects to app.mobirides.com
-              </p>
-            </Card>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative">
+                  <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input 
+                    type="text" 
+                    placeholder="Pickup"
+                    className="w-full pl-12 pr-4 py-4 text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50"
+                  />
+                </div>
+                <div className="relative">
+                  <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input 
+                    type="text" 
+                    placeholder="Return"
+                    className="w-full pl-12 pr-4 py-4 text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50"
+                  />
+                </div>
+              </div>
+              
+              <button className="w-full bg-gradient-hero text-white py-4 px-8 text-xl font-bold rounded-2xl shadow-strong hover:shadow-glow transition-all duration-300 transform hover:scale-[1.02]">
+                Search
+              </button>
+            </div>
           </div>
         </div>
       </div>
