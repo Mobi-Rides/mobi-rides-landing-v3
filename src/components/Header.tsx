@@ -32,9 +32,7 @@ const Header = () => {
             <div className="bg-gradient-hero w-10 h-10 rounded-xl flex items-center justify-center">
               <span className="text-white font-black text-xl">M</span>
             </div>
-            <span className={`ml-3 text-xl font-bold transition-colors ${
-              isScrolled ? 'text-white font-black' : 'text-foreground'
-            }`}>MobiRides</span>
+            <span className="ml-3 text-xl font-bold text-foreground">MobiRides</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -43,11 +41,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className={`transition-colors font-medium ${
-                  isScrolled 
-                    ? 'text-white hover:text-gray-200 font-semibold' 
-                    : 'text-foreground hover:text-primary'
-                }`}
+                className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 {item.name}
               </a>
@@ -65,11 +59,7 @@ const Header = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`transition-colors ${
-                isScrolled 
-                  ? 'text-white hover:text-gray-200' 
-                  : 'text-foreground hover:text-primary'
-              }`}
+              className="text-foreground hover:text-primary transition-colors"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
