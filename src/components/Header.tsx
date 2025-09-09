@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import logoUrl from '@/assets/mobirides-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center flex-shrink-0 min-w-[180px]">
             <img 
-              src="/lovable-uploads/92c03df6-acb7-4341-8eba-2c40c3d12ed6.png" 
+              src={logoUrl} 
               alt="MobiRides Logo" 
               className="h-12 lg:h-16 w-auto max-h-full"
               onError={(e) => {
