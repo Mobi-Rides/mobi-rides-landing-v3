@@ -4,39 +4,31 @@ import Autoplay from 'embla-carousel-autoplay';
 import findYourDriveImage from '@/assets/find-your-drive.jpg';
 import bookWithConfidenceImage from '@/assets/book-with-confidence.jpg';
 import conciergeServiceImage from '@/assets/concierge-service.jpg';
-
 const HowItWorksSection = () => {
   const autoplay = Autoplay({
     delay: 5500,
     stopOnInteraction: true,
     stopOnMouseEnter: true,
-    stopOnFocusIn: true,
+    stopOnFocusIn: true
   });
-
-  const steps = [
-    {
-      title: "Find Your Drive",
-      description: "Browse our curated fleet of premium vehicles from trusted local owners across Botswana.",
-      image: findYourDriveImage
-    },
-    {
-      title: "Book with Confidence", 
-      description: "Secure booking with comprehensive insurance coverage and transparent pricing.",
-      image: bookWithConfidenceImage
-    },
-    {
-      title: "Enjoy Concierge Service",
-      description: "Professional handover with 24/7 support throughout your journey.",
-      image: conciergeServiceImage
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-subtle">
+  const steps = [{
+    title: "Find Your Drive",
+    description: "Browse our curated fleet of premium vehicles from trusted local owners across Botswana.",
+    image: findYourDriveImage
+  }, {
+    title: "Book with Confidence",
+    description: "Secure booking with comprehensive insurance coverage and transparent pricing.",
+    image: bookWithConfidenceImage
+  }, {
+    title: "Enjoy Concierge Service",
+    description: "Professional handover with 24/7 support throughout your journey.",
+    image: conciergeServiceImage
+  }];
+  return <section className="py-20 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-h1 mb-6">
-            How <span className="text-primary">MobiRides</span> Works
+            How <span className="gradient-text">MobiRides</span> Works
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
             Premium car sharing made simple. Three easy steps to unlock mobility across Botswana.
@@ -44,30 +36,19 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="relative max-w-lg mx-auto">
-          <Carousel
-            opts={{
-              align: "center",
-              loop: true,
-            }}
-            plugins={[autoplay]}
-            className="w-full"
-          >
+          <Carousel opts={{
+          align: "center",
+          loop: true
+        }} plugins={[autoplay]} className="w-full">
             <CarouselContent>
-              {steps.map((step, index) => (
-                <CarouselItem key={index}>
+              {steps.map((step, index) => <CarouselItem key={index}>
                   <div className="text-center group px-4">
                     {/* Step Number */}
                     <div className="relative mb-8">
                       <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-medium group-hover:shadow-strong transition-all duration-300">
-                        <img 
-                          src={step.image} 
-                          alt={step.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        />
+                        <img src={step.image} alt={step.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                       </div>
-                      <div className="absolute -top-2 -right-4 w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold text-lg">
-                        {index + 1}
-                      </div>
+                      
                     </div>
 
                     {/* Content */}
@@ -78,8 +59,7 @@ const HowItWorksSection = () => {
                       </p>
                     </div>
                   </div>
-                </CarouselItem>
-              ))}
+                </CarouselItem>)}
             </CarouselContent>
             
             <CarouselPrevious className="absolute -left-16 top-1/2 -translate-y-1/2" />
@@ -97,8 +77,6 @@ const HowItWorksSection = () => {
           </button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HowItWorksSection;
