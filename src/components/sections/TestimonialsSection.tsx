@@ -1,7 +1,20 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Star, Quote } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import { useRef } from 'react';
 
 const TestimonialsSection = () => {
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
+
   const testimonials = [
     {
       name: "Kgosi Molapisi",
@@ -65,46 +78,63 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="card-elevated group hover:shadow-strong transition-all duration-300 relative">
-              <CardContent className="p-6">
-                {/* Quote Icon */}
-                <div className="absolute -top-4 left-6">
-                  <div className="w-8 h-8 bg-gradient-hero rounded-full flex items-center justify-center">
-                    <Quote className="w-4 h-4 text-white" />
-                  </div>
-                </div>
+        {/* Testimonials Carousel */}
+        <div className="relative">
+          <Carousel
+            plugins={[plugin.current]}
+            className="w-full"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                  <Card className="card-elevated group hover:shadow-strong transition-all duration-300 relative h-full">
+                    <CardContent className="p-6 flex flex-col h-full">
+                      {/* Quote Icon */}
+                      <div className="absolute -top-4 left-6">
+                        <div className="w-8 h-8 bg-gradient-hero rounded-full flex items-center justify-center">
+                          <Quote className="w-4 h-4 text-white" />
+                        </div>
+                      </div>
 
-                {/* Rating */}
-                <div className="flex items-center mb-4 pt-2">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
+                      {/* Rating */}
+                      <div className="flex items-center mb-4 pt-2">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
 
-                {/* Content */}
-                <p className="text-body text-muted-foreground mb-6 leading-relaxed italic">
-                  "{testimonial.content}"
-                </p>
+                      {/* Content */}
+                      <p className="text-body text-muted-foreground mb-6 leading-relaxed italic flex-grow">
+                        "{testimonial.content}"
+                      </p>
 
-                {/* Author */}
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold text-sm">
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    <p className="text-sm text-primary font-medium">{testimonial.company}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                      {/* Author */}
+                      <div className="flex items-center mt-auto">
+                        <div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center mr-4">
+                          <span className="text-white font-bold text-sm">
+                            {testimonial.name.split(' ').map(n => n[0]).join('')}
+                          </span>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
+                          <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                          <p className="text-sm text-primary font-medium">{testimonial.company}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
         </div>
 
         {/* Trust Indicators */}
