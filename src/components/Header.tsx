@@ -28,11 +28,14 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center flex-shrink-0 min-w-[140px]">
+          <div className="flex items-center flex-shrink-0 min-w-[180px]">
             <img 
-              src="/lovable-uploads/e9cc4838-3889-4734-91aa-c175246c4453.png" 
+              src="/lovable-uploads/92c03df6-acb7-4341-8eba-2c40c3d12ed6.png" 
               alt="MobiRides Logo" 
               className="h-12 lg:h-16 w-auto max-h-full"
+              onError={(e) => {
+                console.error('Logo failed to load:', e);
+              }}
             />
           </div>
 
