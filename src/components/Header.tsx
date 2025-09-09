@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import logoImage from '@/assets/mobirides-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/9a727084-f91b-4ca5-9fbb-de3d7fcfe5ef.png" 
+              src={logoImage} 
               alt="MobiRides Logo" 
               className="h-8 lg:h-10 w-auto"
             />
