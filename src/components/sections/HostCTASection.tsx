@@ -44,7 +44,7 @@ const HostCTASection = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                 <img 
-                  src="/api/placeholder/500/400"
+                  src="/lovable-uploads/f8b461ed-0b87-4858-81ad-7986353c8bbf.png"
                   alt="Professional in car earning with car sharing"
                   className="w-full h-full object-cover"
                 />
