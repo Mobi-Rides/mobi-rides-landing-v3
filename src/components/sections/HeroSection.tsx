@@ -22,10 +22,10 @@ const HeroSection = () => {
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
               Rent a car<br />
-              <span className="gradient-text-light">in just a few taps</span>
+              <span className="text-white">in just a few taps</span>
             </h1>
             <p className="text-xl text-white/90 mb-8 font-light">
-              <span className="gradient-text-light font-semibold">Unlock cars 24/7</span> with your phone, and go!
+              <span className="text-white font-semibold">Unlock cars 24/7</span> with your phone, and go!
             </p>
             
             {/* Mobile App Badge */}

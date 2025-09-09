@@ -34,7 +34,7 @@ const FinalCTASection = () => {
           {/* Content */}
           <div>
             <h2 className="text-h1 mb-6">
-              Your Next <span className="gradient-text">Opportunity</span> Awaits.
+              Your Next <span className="text-primary">Opportunity</span> Awaits.
             </h2>
             <p className="text-body-lg text-muted-foreground mb-8 max-w-lg">
               Access premium mobility now. Whether you're heading to a crucial business meeting, 

@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-h1 mb-6">
-            Hear From Our <span className="gradient-text">Community</span>
+            Hear From Our <span className="text-primary">Community</span>
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
             Join thousands of professionals who trust MobiRides for their mobility needs across Botswana.

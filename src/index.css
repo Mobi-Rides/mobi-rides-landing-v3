@@ -172,7 +172,7 @@ All colors MUST be HSL. Typography: Poppins family.
 @layer components {
   /* Button Variants */
   .btn-hero {
-    @apply bg-gradient-to-r from-primary to-secondary text-white font-semibold px-8 py-4 rounded-xl hover:shadow-medium transition-all duration-300 hover:scale-105;
+    @apply bg-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:shadow-medium transition-all duration-300 hover:scale-105;
   }
   
   .btn-primary {
@@ -207,12 +207,6 @@ All colors MUST be HSL. Typography: Poppins family.
 }
 
 @layer utilities {
-  .gradient-text {
-    background: var(--gradient-hero);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
   
   .bg-gradient-hero {
     background: var(--gradient-hero);
