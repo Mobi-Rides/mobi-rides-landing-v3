@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { MapPin, Mail, Phone, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import mobiRidesLogo from '@/assets/mobirides-logo.png';
 
 const Footer = () => {
   const footerLinks = {
@@ -49,11 +50,12 @@ const Footer = () => {
         <div className="grid lg:grid-cols-6 gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-6">
-              <div className="bg-gradient-hero w-10 h-10 rounded-xl flex items-center justify-center">
-                <span className="text-white font-black text-xl">M</span>
-              </div>
-              <span className="ml-3 text-xl font-bold">MobiRides</span>
+            <div className="mb-6">
+              <img 
+                src={mobiRidesLogo} 
+                alt="MobiRides - Premium Car Sharing in Botswana"
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-6 max-w-sm leading-relaxed">
               Futuristic African Mobility. Premium car sharing for Botswana's driven professionals and entrepreneurs.
