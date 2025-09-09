@@ -11,9 +11,9 @@ All colors MUST be HSL. Typography: Poppins family.
 @layer base {
   :root {
     /* Mobi Rides Brand Colors */
-    --mobi-purple: 271 91% 68%; /* Lighter purple to match logo */
-    --mobi-purple-light: 271 91% 78%;
-    --mobi-purple-dark: 271 91% 55%;
+    --mobi-purple: 271 91% 59%; /* #A134F9 */
+    --mobi-purple-light: 271 91% 70%;
+    --mobi-purple-dark: 271 91% 45%;
     --renter-green: 142 71% 45%; /* #16A34A */
     --renter-green-light: 142 71% 55%;
     --renter-green-dark: 142 71% 35%;
@@ -22,10 +22,10 @@ All colors MUST be HSL. Typography: Poppins family.
     --background: 0 0% 100%;
     --foreground: 222 47% 11%;
     
-    --primary: 271 91% 68%; /* Lighter Mobi Purple */
+    --primary: 271 91% 59%; /* Mobi Purple */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 271 91% 78%;
-    --primary-dark: 271 91% 55%;
+    --primary-light: 271 91% 70%;
+    --primary-dark: 271 91% 45%;
 
     --secondary: 142 71% 45%; /* Renter Green */
     --secondary-foreground: 0 0% 100%;
@@ -43,7 +43,7 @@ All colors MUST be HSL. Typography: Poppins family.
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 271 91% 68%;
+    --ring: 271 91% 59%;
 
     /* Professional Grays */
     --gray-50: 220 13% 98%;
