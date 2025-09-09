@@ -1,6 +1,9 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, MapPin, Clock, Users } from 'lucide-react';
+import { ArrowRight, Clock, Users } from 'lucide-react';
+import botswanaSafariImage from '@/assets/botswana-safari.jpg';
+import gaboroneBusinessImage from '@/assets/gaborone-business.jpg';
+import agriEntrepreneurImage from '@/assets/agri-entrepreneur.jpg';
 
 const ExploreBotswanaSection = () => {
   const blogPosts = [
@@ -9,24 +12,21 @@ const ExploreBotswanaSection = () => {
       excerpt: "Discover how mining professionals are maximizing their weekends with curated routes from Jwaneng to the Okavango Delta.",
       readTime: "8 min read",
       category: "Travel Guide",
-      image: "/api/placeholder/400/250",
-      gradient: "from-primary/80 to-primary"
+      image: botswanaSafariImage
     },
     {
       title: "Gaborone's Business Lunch Hotspots",
       excerpt: "The ultimate guide to impressing clients and closing deals at Botswana's most prestigious business dining destinations.",
       readTime: "5 min read", 
       category: "Business",
-      image: "/api/placeholder/400/250",
-      gradient: "from-secondary/80 to-secondary"
+      image: gaboroneBusinessImage
     },
     {
       title: "How Agri-preneurs are Using MobiRides to Grow",
       excerpt: "Meet the innovative farmers leveraging flexible mobility solutions to expand their agricultural operations across Botswana.",
       readTime: "6 min read",
       category: "Success Stories",
-      image: "/api/placeholder/400/250", 
-      gradient: "from-gray-700/80 to-gray-800"
+      image: agriEntrepreneurImage
     }
   ];
 
@@ -46,9 +46,11 @@ const ExploreBotswanaSection = () => {
           {blogPosts.map((post, index) => (
             <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
               <div className="aspect-[4/3] overflow-hidden">
-                <div className={`w-full h-full bg-gradient-to-br ${post.gradient} flex items-center justify-center`}>
-                  <MapPin className="w-12 h-12 text-white opacity-80" />
-                </div>
+                <img 
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <div className="p-6">
                 <div className="mb-3">

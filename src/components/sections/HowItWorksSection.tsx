@@ -1,25 +1,24 @@
 import { Card } from '@/components/ui/card';
-import { Search, CheckCircle, Key } from 'lucide-react';
+import findYourDriveImage from '@/assets/find-your-drive.jpg';
+import bookWithConfidenceImage from '@/assets/book-with-confidence.jpg';
+import conciergeServiceImage from '@/assets/concierge-service.jpg';
 
 const HowItWorksSection = () => {
   const steps = [
     {
-      icon: Search,
       title: "Find Your Drive",
       description: "Browse our curated fleet of premium vehicles from trusted local owners across Botswana.",
-      image: "/api/placeholder/400/300"
+      image: findYourDriveImage
     },
     {
-      icon: CheckCircle,
       title: "Book with Confidence", 
       description: "Secure booking with comprehensive insurance coverage and transparent pricing.",
-      image: "/api/placeholder/400/300"
+      image: bookWithConfidenceImage
     },
     {
-      icon: Key,
       title: "Enjoy Concierge Service",
       description: "Professional handover with 24/7 support throughout your journey.",
-      image: "/api/placeholder/400/300"
+      image: conciergeServiceImage
     }
   ];
 
@@ -36,35 +35,36 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-          {steps.map((step, index) => {
-            const Icon = step.icon;
-            return (
-              <div key={index} className="text-center group">
-                {/* Step Number */}
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 mx-auto bg-gradient-hero rounded-full flex items-center justify-center shadow-medium group-hover:shadow-strong transition-all duration-300">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    {index + 1}
-                  </div>
+          {steps.map((step, index) => (
+            <div key={index} className="text-center group">
+              {/* Step Number */}
+              <div className="relative mb-8">
+                <div className="w-24 h-24 mx-auto rounded-full overflow-hidden shadow-medium group-hover:shadow-strong transition-all duration-300">
+                  <img 
+                    src={step.image} 
+                    alt={step.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
-
-                {/* Content */}
-                <div className="card-feature group-hover:shadow-medium transition-all duration-300">
-                  <h3 className="text-h3 mb-4">{step.title}</h3>
-                  <p className="text-body text-muted-foreground">
-                    {step.description}
-                  </p>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  {index + 1}
                 </div>
-
-                {/* Connector Line */}
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary to-secondary opacity-30 transform translate-x-1/2"></div>
-                )}
               </div>
-            );
-          })}
+
+              {/* Content */}
+              <div className="card-feature group-hover:shadow-medium transition-all duration-300">
+                <h3 className="text-h3 mb-4">{step.title}</h3>
+                <p className="text-body text-muted-foreground">
+                  {step.description}
+                </p>
+              </div>
+
+              {/* Connector Line */}
+              {index < steps.length - 1 && (
+                <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary to-secondary opacity-30 transform translate-x-1/2"></div>
+              )}
+            </div>
+          ))}
         </div>
 
         {/* CTA */}
