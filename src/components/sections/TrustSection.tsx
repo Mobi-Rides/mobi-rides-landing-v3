@@ -46,13 +46,13 @@ const TrustSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-cta">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-h1 mb-6">
-            Built on <span className="text-primary">Trust</span> & <span className="text-primary">Excellence</span>
+          <h2 className="text-h1 mb-6 text-white">
+            Built on <span className="text-yellow-300">Trust</span> & <span className="text-yellow-300">Excellence</span>
           </h2>
-          <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-body-lg text-white/90 max-w-2xl mx-auto">
             Every aspect of MobiRides is designed to give you confidence, from comprehensive coverage to professional support.
           </p>
         </div>
@@ -116,10 +116,10 @@ const TrustSection = () => {
             { number: "24/7", label: "Support Available" }
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl lg:text-4xl font-black text-primary mb-2">
+              <div className="text-3xl lg:text-4xl font-black text-yellow-300 mb-2">
                 {stat.number}
               </div>
-              <div className="text-body text-muted-foreground">
+              <div className="text-body text-white/80">
                 {stat.label}
               </div>
             </div>

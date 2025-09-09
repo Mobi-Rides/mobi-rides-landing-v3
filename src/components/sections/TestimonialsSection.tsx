@@ -62,13 +62,13 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-gradient-cta">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-h1 mb-6">
-            Hear From Our <span className="text-primary">Community</span>
+          <h2 className="text-h1 mb-6 text-white">
+            Hear From Our <span className="text-yellow-300">Community</span>
           </h2>
-          <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-body-lg text-white/90 max-w-2xl mx-auto">
             Join thousands of professionals who trust MobiRides for their mobility needs across Botswana.
           </p>
         </div>
@@ -131,7 +131,7 @@ const TestimonialsSection = () => {
 
         {/* Trust Indicators */}
         <div className="mt-16 text-center">
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-white/70">
             <div className="text-sm font-medium">Trusted by leading companies in:</div>
             <div className="flex flex-wrap gap-6">
               <span className="text-sm">Mining</span>
