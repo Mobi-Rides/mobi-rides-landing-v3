@@ -29,11 +29,11 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0 min-w-[140px]">
             <img 
               src={logoImage} 
               alt="MobiRides Logo" 
-              className="h-8 lg:h-10 w-auto"
+              className="h-12 lg:h-16 w-auto max-h-full"
             />
           </div>
 
