@@ -1,10 +1,19 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Shield, Headphones, DollarSign, TrendingUp } from 'lucide-react';
+import Autoplay from 'embla-carousel-autoplay';
 import miningImage from '@/assets/mining-professional.jpg';
 import supportImage from '@/assets/customer-support.jpg';
 import agribusinessImage from '@/assets/agribusiness.jpg';
 
 const TrustSection = () => {
+  const autoplay = Autoplay({
+    delay: 4000,
+    stopOnInteraction: true,
+    stopOnMouseEnter: true,
+    stopOnFocusIn: true,
+  });
+
   const trustPoints = [
     {
       icon: Shield,
@@ -48,38 +57,54 @@ const TrustSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          {trustPoints.map((point, index) => {
-            const Icon = point.icon;
-            return (
-              <Card key={index} className="card-elevated overflow-hidden group hover:shadow-strong transition-all duration-300">
-                <div className="md:flex">
-                  {/* Image */}
-                  <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
-                    <img 
-                      src={point.image} 
-                      alt={point.alt}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
-                  </div>
-                  
-                  {/* Content */}
-                  <CardContent className="md:w-1/2 p-6 lg:p-8 flex flex-col justify-center">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center mr-4">
-                        <Icon className="w-6 h-6 text-white" />
+        <div className="relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[autoplay]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {trustPoints.map((point, index) => {
+                const Icon = point.icon;
+                return (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2">
+                    <Card className="card-elevated overflow-hidden group hover:shadow-strong transition-all duration-300">
+                      <div className="md:flex">
+                        {/* Image */}
+                        <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+                          <img 
+                            src={point.image} 
+                            alt={point.alt}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+                        </div>
+                        
+                        {/* Content */}
+                        <CardContent className="md:w-1/2 p-6 lg:p-8 flex flex-col justify-center">
+                          <div className="flex items-center mb-4">
+                            <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center mr-4">
+                              <Icon className="w-6 h-6 text-white" />
+                            </div>
+                            <h3 className="text-h3">{point.title}</h3>
+                          </div>
+                          <p className="text-body text-muted-foreground leading-relaxed">
+                            {point.description}
+                          </p>
+                        </CardContent>
                       </div>
-                      <h3 className="text-h3">{point.title}</h3>
-                    </div>
-                    <p className="text-body text-muted-foreground leading-relaxed">
-                      {point.description}
-                    </p>
-                  </CardContent>
-                </div>
-              </Card>
-            );
-          })}
+                    </Card>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            
+            <CarouselPrevious className="absolute -left-12 top-1/2 -translate-y-1/2" />
+            <CarouselNext className="absolute -right-12 top-1/2 -translate-y-1/2" />
+          </Carousel>
         </div>
 
         {/* Stats */}
