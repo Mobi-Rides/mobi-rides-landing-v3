@@ -29,12 +29,11 @@ const Header = () => {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="bg-gradient-hero w-10 h-10 rounded-xl flex items-center justify-center">
-              <span className="text-white font-black text-xl">M</span>
-            </div>
-            <span className={`ml-3 text-xl transition-colors ${
-              isScrolled ? 'text-foreground font-bold' : 'text-white font-black'
-            }`}>MobiRides</span>
+            <img 
+              src="/lovable-uploads/9a727084-f91b-4ca5-9fbb-de3d7fcfe5ef.png" 
+              alt="MobiRides Logo" 
+              className="h-8 lg:h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
