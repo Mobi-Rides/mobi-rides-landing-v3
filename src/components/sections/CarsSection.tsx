@@ -1,29 +1,32 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Truck, Car, Crown, MapPin } from 'lucide-react';
+import pickupTruckImage from '@/assets/pickup-truck.jpg';
+import commercialVanImage from '@/assets/commercial-van.jpg';
+import familySedanImage from '@/assets/family-sedan.jpg';
+import luxurySuvImage from '@/assets/luxury-suv.jpg';
 
 const CarsSection = () => {
   const categories = [
     {
       title: "Pickup",
       description: "For the site, farm, or safari",
-      image: "/api/placeholder/350/200",
+      image: pickupTruckImage,
       popular: true
     },
     {
       title: "Commercial", 
       description: "For business and cargo needs",
-      image: "/api/placeholder/350/200"
+      image: commercialVanImage
     },
     {
       title: "Family car",
       description: "Perfect for daily commutes and trips",
-      image: "/api/placeholder/350/200"
+      image: familySedanImage
     },
     {
       title: "SUV",
       description: "Adventure-ready vehicles", 
-      image: "/api/placeholder/350/200"
+      image: luxurySuvImage
     }
   ];
 
