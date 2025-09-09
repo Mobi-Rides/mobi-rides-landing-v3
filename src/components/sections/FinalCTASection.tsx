@@ -1,28 +1,21 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Smartphone, Globe, Shield } from 'lucide-react';
-
 const FinalCTASection = () => {
-  const features = [
-    {
-      icon: Smartphone,
-      title: "Mobile Optimized",
-      description: "Perfect experience on any device"
-    },
-    {
-      icon: Globe,
-      title: "No Download Required", 
-      description: "Access instantly through your browser"
-    },
-    {
-      icon: Shield,
-      title: "Secure & Reliable",
-      description: "Bank-level security for all transactions"
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-background relative overflow-hidden">
+  const features = [{
+    icon: Smartphone,
+    title: "Mobile Optimized",
+    description: "Perfect experience on any device"
+  }, {
+    icon: Globe,
+    title: "No Download Required",
+    description: "Access instantly through your browser"
+  }, {
+    icon: Shield,
+    title: "Secure & Reliable",
+    description: "Bank-level security for all transactions"
+  }];
+  return <section className="py-20 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
@@ -34,7 +27,7 @@ const FinalCTASection = () => {
           {/* Content */}
           <div>
             <h2 className="text-h1 mb-6">
-              Your Next <span className="text-primary">Opportunity</span> Awaits.
+              Your Next <span className="gradient-text">Opportunity</span> Awaits.
             </h2>
             <p className="text-body-lg text-muted-foreground mb-8 max-w-lg">
               Access premium mobility now. Whether you're heading to a crucial business meeting, 
@@ -44,9 +37,8 @@ const FinalCTASection = () => {
 
             <div className="space-y-4 mb-8">
               {features.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <div key={index} className="flex items-center">
+              const Icon = feature.icon;
+              return <div key={index} className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center mr-4">
                       <Icon className="w-5 h-5 text-white" />
                     </div>
@@ -54,9 +46,8 @@ const FinalCTASection = () => {
                       <h3 className="font-semibold text-foreground">{feature.title}</h3>
                       <p className="text-sm text-muted-foreground">{feature.description}</p>
                     </div>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -69,9 +60,7 @@ const FinalCTASection = () => {
               </Button>
             </div>
 
-            <p className="text-sm text-muted-foreground mt-6">
-              🚗 <strong>app.mobirides.com</strong> • Available 24/7 • Instant access
-            </p>
+            
           </div>
 
           {/* Web App Preview */}
@@ -140,8 +129,6 @@ const FinalCTASection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FinalCTASection;
