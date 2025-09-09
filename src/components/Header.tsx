@@ -49,12 +49,9 @@ const Header = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="ghost" className="font-semibold">
-              Log In
-            </Button>
+          <div className="hidden lg:flex items-center">
             <Button className="btn-primary">
-              Sign Up
+              Let's Go
             </Button>
           </div>
 
@@ -87,12 +84,9 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <div className="pt-4 flex flex-col space-y-2">
-                <Button variant="ghost" className="font-semibold justify-start">
-                  Log In
-                </Button>
+              <div className="pt-4">
                 <Button className="btn-primary justify-start">
-                  Sign Up
+                  Let's Go
                 </Button>
               </div>
             </div>
