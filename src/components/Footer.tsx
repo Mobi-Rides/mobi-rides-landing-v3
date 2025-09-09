@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { MapPin, Mail, Phone, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
@@ -92,24 +93,53 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links Columns */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="font-semibold text-lg mb-6">{category}</h3>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors text-sm"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Desktop Links Columns - Hidden on mobile */}
+          <div className="hidden lg:contents">
+            {Object.entries(footerLinks).map(([category, links]) => (
+              <div key={category}>
+                <h3 className="font-semibold text-lg mb-6">{category}</h3>
+                <ul className="space-y-3">
+                  {links.map((link) => (
+                    <li key={link.name}>
+                      <a
+                        href={link.href}
+                        className="text-gray-400 hover:text-white transition-colors text-sm"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile Accordion - Shown on mobile, hidden on desktop */}
+          <div className="lg:hidden lg:col-span-4 mt-8">
+            <Accordion type="multiple" className="w-full">
+              {Object.entries(footerLinks).map(([category, links]) => (
+                <AccordionItem key={category} value={category} className="border-gray-800">
+                  <AccordionTrigger className="text-white font-semibold text-lg hover:text-gray-300 py-4">
+                    {category}
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-4">
+                    <ul className="space-y-3">
+                      {links.map((link) => (
+                        <li key={link.name}>
+                          <a
+                            href={link.href}
+                            className="text-gray-400 hover:text-white transition-colors text-sm block py-1"
+                          >
+                            {link.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
 
