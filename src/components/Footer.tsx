@@ -2,7 +2,6 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { MapPin, Mail, Phone, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import mobiRidesLogo from '@/assets/mobirides-logo.png';
 
 const Footer = () => {
   const footerLinks = {
@@ -52,7 +51,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="mb-6">
               <img 
-                src={mobiRidesLogo} 
+                src="/mobirides-logo.png" 
                 alt="MobiRides - Premium Car Sharing in Botswana"
                 className="h-12 w-auto"
               />
