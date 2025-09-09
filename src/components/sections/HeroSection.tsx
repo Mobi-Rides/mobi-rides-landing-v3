@@ -21,8 +21,8 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-              Rent a car<br />
-              <span className="text-white">in just a few taps</span>
+              Mobility for the Driven<br />
+              <span className="text-white">Premium Car Rentals on Your Terms</span>
             </h1>
             <p className="text-xl text-white/90 mb-8 font-light">
               <span className="text-white font-semibold">Unlock cars 24/7</span> with your phone, and go!
@@ -43,6 +43,7 @@ const HeroSection = () => {
                   type="text" 
                   placeholder="Specific address, station, suburb..."
                   className="w-full pl-12 pr-4 py-4 text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50"
+                  aria-label="Enter pickup location"
                 />
               </div>
               
@@ -53,6 +54,7 @@ const HeroSection = () => {
                     type="text" 
                     placeholder="Pickup"
                     className="w-full pl-12 pr-4 py-4 text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50"
+                    aria-label="Select pickup date"
                   />
                 </div>
                 <div className="relative">
@@ -61,11 +63,16 @@ const HeroSection = () => {
                     type="text" 
                     placeholder="Return"
                     className="w-full pl-12 pr-4 py-4 text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50"
+                    aria-label="Select return date"
                   />
                 </div>
               </div>
               
-              <button className="w-full bg-gradient-hero text-white py-4 px-8 text-xl font-bold rounded-2xl shadow-strong hover:shadow-glow transition-all duration-300 transform hover:scale-[1.02]">
+              <button 
+                onClick={() => window.open('https://app.mobirides.com', '_blank')}
+                className="w-full bg-gradient-hero text-white py-4 px-8 text-xl font-bold rounded-2xl shadow-strong hover:shadow-glow transition-all duration-300 transform hover:scale-[1.02]"
+                aria-label="Search for cars on MobiRides app"
+              >
                 Search
               </button>
             </div>

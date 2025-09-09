@@ -17,8 +17,8 @@ const CarsSection = () => {
 
   const categories = [
     {
-      title: "Pickup",
-      description: "For the site, farm, or safari",
+      title: "Bakkies",
+      description: "For the site, farm, or safari adventures",
       image: pickupTruckImage,
       popular: true
     },
@@ -47,7 +47,7 @@ const CarsSection = () => {
             Cars for your every need
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            From rugged pickups to luxury sedans, find the perfect vehicle for every occasion in Botswana.
+            From rugged bakkies to luxury sedans, find the perfect vehicle for every occasion in Botswana.
           </p>
         </div>
 
@@ -68,8 +68,9 @@ const CarsSection = () => {
                     <div className="relative overflow-hidden rounded-3xl mb-6 bg-gray-100">
                       <img 
                         src={category.image}
-                        alt={category.title}
+                        alt={`${category.title} vehicle category - ${category.description}`}
                         className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-300" />
                     </div>

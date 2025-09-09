@@ -1,14 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/sections/HeroSection';
-import HowItWorksSection from '@/components/sections/HowItWorksSection';
-import CarsSection from '@/components/sections/CarsSection';
-import TrustSection from '@/components/sections/TrustSection';
-import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import HostCTASection from '@/components/sections/HostCTASection';
-import ExploreBotswanaSection from '@/components/sections/ExploreBotswanaSection';
-import FinalCTASection from '@/components/sections/FinalCTASection';
+import { LazySection } from '@/components/LazySection';
+import { AnimatedSection } from '@/components/AnimatedSection';
+import { HeroSkeleton, CarsSkeleton, TrustSkeleton, TestimonialsSkeleton, SectionSkeleton } from '@/components/ui/skeleton-sections';
 import Footer from '@/components/Footer';
+
+// Lazy load sections for better performance
+const HowItWorksSection = lazy(() => import('@/components/sections/HowItWorksSection'));
+const CarsSection = lazy(() => import('@/components/sections/CarsSection'));
+const TrustSection = lazy(() => import('@/components/sections/TrustSection'));
+const TestimonialsSection = lazy(() => import('@/components/sections/TestimonialsSection'));
+const HostCTASection = lazy(() => import('@/components/sections/HostCTASection'));
+const ExploreBotswanaSection = lazy(() => import('@/components/sections/ExploreBotswanaSection'));
+const FinalCTASection = lazy(() => import('@/components/sections/FinalCTASection'));
 
 const Index = () => {
   useEffect(() => {
@@ -60,13 +65,48 @@ const Index = () => {
       
       <main>
         <HeroSection />
-        <HowItWorksSection />
-        <CarsSection />
-        <TrustSection />
-        <TestimonialsSection />
-        <HostCTASection />
-        <ExploreBotswanaSection />
-        <FinalCTASection />
+        
+        <LazySection fallback={<SectionSkeleton />}>
+          <AnimatedSection animation="fade-up">
+            <HowItWorksSection />
+          </AnimatedSection>
+        </LazySection>
+        
+        <LazySection fallback={<CarsSkeleton />}>
+          <AnimatedSection animation="fade-up" delay={100}>
+            <CarsSection />
+          </AnimatedSection>
+        </LazySection>
+        
+        <LazySection fallback={<TrustSkeleton />}>
+          <AnimatedSection animation="fade-up" delay={200}>
+            <TrustSection />
+          </AnimatedSection>
+        </LazySection>
+        
+        <LazySection fallback={<TestimonialsSkeleton />}>
+          <AnimatedSection animation="fade-up" delay={300}>
+            <TestimonialsSection />
+          </AnimatedSection>
+        </LazySection>
+        
+        <LazySection fallback={<SectionSkeleton />}>
+          <AnimatedSection animation="fade-up" delay={400}>
+            <HostCTASection />
+          </AnimatedSection>
+        </LazySection>
+        
+        <LazySection fallback={<SectionSkeleton />}>
+          <AnimatedSection animation="fade-up" delay={500}>
+            <ExploreBotswanaSection />
+          </AnimatedSection>
+        </LazySection>
+        
+        <LazySection fallback={<SectionSkeleton />}>
+          <AnimatedSection animation="fade-up" delay={600}>
+            <FinalCTASection />
+          </AnimatedSection>
+        </LazySection>
       </main>
       
       <Footer />
