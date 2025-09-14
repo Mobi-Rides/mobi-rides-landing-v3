@@ -15,8 +15,8 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-              Rent a car<br />
-              <span className="gradient-text-light">in just a few taps</span>
+              Like it, Tap it,<br />
+              <span className="gradient-text-light">Drive it</span>
             </h1>
             <p className="text-xl mb-8 font-light text-white">
               <span className="gradient-text-light font-semibold">Unlock cars 24/7</span> with your phone, and go!
