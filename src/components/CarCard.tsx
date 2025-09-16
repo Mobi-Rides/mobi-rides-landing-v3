@@ -76,7 +76,7 @@ export const CarCard = ({ car, onClick }: CarCardProps) => {
           </div>
           <div className="text-right">
             <p className="font-bold text-lg text-purple-600">
-              ₱{car.price_per_day}
+              P{car.price_per_day}
             </p>
             <p className="text-xs text-gray-400">/day</p>
           </div>
