@@ -72,9 +72,14 @@ const HowItWorksSection = () => {
           <p className="text-body-lg text-muted-foreground mb-6">
             Ready to experience premium mobility?
           </p>
-          <button className="btn-hero text-lg px-8 py-4">
+          <a 
+            href="https://app.mobirides.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-hero text-lg px-8 py-4 inline-block"
+          >
             Get Started Now
-          </button>
+          </a>
         </div>
       </div>
     </section>;

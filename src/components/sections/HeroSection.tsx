@@ -47,9 +47,14 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              <button className="w-full bg-gradient-hero text-white py-4 px-8 text-xl font-bold rounded-2xl shadow-strong hover:shadow-glow transition-all duration-300 transform hover:scale-[1.02]">
+              <a 
+                href="https://app.mobirides.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full bg-gradient-hero text-white py-4 px-8 text-xl font-bold rounded-2xl shadow-strong hover:shadow-glow transition-all duration-300 transform hover:scale-[1.02] block text-center"
+              >
                 Search
-              </button>
+              </a>
             </div>
           </div>
         </div>

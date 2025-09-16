@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
@@ -15,10 +16,10 @@ const Header = () => {
   }, []);
 
   const navigation = [
-    { name: 'Find a Ride', href: '#find-ride' },
-    { name: 'Rent Out Your Car', href: '#host' },
-    { name: 'Partners', href: '#partners' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Find a Ride', href: '/find-ride' },
+    { name: 'Rent Out Your Car', href: '/host' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Blog', href: '/blog' },
   ];
 
   return (
@@ -29,22 +30,24 @@ const Header = () => {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0 min-w-[180px]">
-            <img 
-              src="/public/mobirides-logo.png" 
-              alt="MobiRides Logo"
-              className="h-12 lg:h-16 w-auto max-h-full"
-              onError={(e) => {
-                console.error('Logo failed to load:', e);
-              }}
-            />
+            <Link to="/">
+              <img 
+                src="/public/mobirides-logo.png" 
+                alt="MobiRides Logo"
+                className="h-12 lg:h-16 w-auto max-h-full"
+                onError={(e) => {
+                  console.error('Logo failed to load:', e);
+                }}
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className={`transition-colors ${
                   isScrolled 
                     ? 'text-foreground hover:text-primary font-medium' 
@@ -52,14 +55,23 @@ const Header = () => {
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center">
-            <Button className="btn-primary">
-              Let's Go
+            <Button 
+              className="btn-primary" 
+              asChild
+            >
+              <a 
+                href="https://app.mobirides.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Let's Go
+              </a>
             </Button>
           </div>
 
@@ -87,18 +99,27 @@ const Header = () => {
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md rounded-lg mt-2 shadow-medium">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="pt-4">
-                <Button className="btn-primary justify-start">
-                  Let's Go
+                <Button 
+                  className="btn-primary justify-start" 
+                  asChild
+                >
+                  <a 
+                    href="https://app.mobirides.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Let's Go
+                  </a>
                 </Button>
               </div>
             </div>

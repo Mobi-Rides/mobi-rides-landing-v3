@@ -51,9 +51,15 @@ const FinalCTASection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-hero text-lg px-8 py-4 group">
-                Start Exploring
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Button className="btn-hero text-lg px-8 py-4 group" asChild>
+                <a 
+                  href="https://app.mobirides.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Start Exploring
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <Button variant="outline" className="font-semibold px-8 py-4">
                 Learn More

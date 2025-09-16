@@ -170,9 +170,14 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               🇧🇼 Proudly Botswana
             </p>
-            <Button className="btn-primary">
+            <a 
+              href="https://app.mobirides.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-primary inline-block text-center"
+            >
               Get Started
-            </Button>
+            </a>
           </div>
         </div>
       </div>
