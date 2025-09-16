@@ -290,10 +290,12 @@ const FindRidePage: React.FC = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold text-blue-600 mb-2">
-                  {fee.amount || (fee.rate && `${(fee.rate * 100)}%`) || 'Free'}
+                  {'amount' in fee ? `P${fee.amount}` : 
+                   'rate' in fee ? `${(fee.rate * 100).toFixed(1)}%` : 
+                   'withinGaborone' in fee ? 'Free in Gaborone' : 'Free'}
                 </div>
                 <p className="text-sm text-gray-600">{fee.description}</p>
-                {fee.mandatory && (
+                {'mandatory' in fee && fee.mandatory && (
                   <p className="text-xs text-blue-600 mt-2">✓ Mandatory</p>
                 )}
               </CardContent>

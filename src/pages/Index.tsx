@@ -63,7 +63,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main>
+      <main className="scroll-snap-y overflow-y-auto h-screen">
         <HeroSection />
         
         <LazySection fallback={<SectionSkeleton />}>

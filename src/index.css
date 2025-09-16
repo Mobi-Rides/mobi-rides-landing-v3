@@ -235,6 +235,35 @@ All colors MUST be HSL. Typography: Poppins family.
   .shadow-strong {
     box-shadow: var(--shadow-strong);
   }
+
+  /* Scroll Snap Utilities */
+  .scroll-snap-y {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .scroll-snap-start {
+    scroll-snap-align: start;
+  }
+  
+  .scroll-snap-center {
+    scroll-snap-align: center;
+  }
+  
+  .scroll-snap-end {
+    scroll-snap-align: end;
+  }
+  
+  .scroll-snap-none {
+    scroll-snap-type: none;
+  }
+
+  /* Responsive scroll snap - disable on small screens */
+  @media (max-width: 768px) {
+    .scroll-snap-y {
+      scroll-snap-type: none;
+    }
+  }
 }
 
 /* Keyframes */

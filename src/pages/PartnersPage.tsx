@@ -469,9 +469,9 @@ const PartnersPage: React.FC = () => {
         subtitle="Strategic Partnerships"
         description="Join our network of trusted partners and grow your business while contributing to Botswana's mobility ecosystem."
         ctaText="Apply for Partnership"
-        ctaHref="#application"
+        ctaLink="#application"
         backgroundImage="https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=business%20partnership%20handshake%20modern%20office%20Botswana%20professional%20setting%20corporate%20meeting&image_size=landscape_16_9"
-        variant="gradient"
+        variant="centered"
       />
 
       {/* Partner Categories Section */}
