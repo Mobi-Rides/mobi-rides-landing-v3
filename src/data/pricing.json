@@ -1,0 +1,49 @@
+{
+  "basePricing": {
+    "economy": {
+      "dailyRate": 250,
+      "weeklyDiscount": 0.15,
+      "monthlyDiscount": 0.25
+    },
+    "luxury": {
+      "dailyRate": 650,
+      "weeklyDiscount": 0.12,
+      "monthlyDiscount": 0.20
+    },
+    "commercial": {
+      "dailyRate": 500,
+      "weeklyDiscount": 0.18,
+      "monthlyDiscount": 0.30
+    }
+  },
+  "fees": {
+    "insurance": {
+      "name": "Comprehensive Insurance",
+      "rate": 0.10,
+      "description": "10% of rental value, secured via credit card",
+      "mandatory": true
+    },
+    "deliveryFee": {
+      "name": "Delivery Fee",
+      "withinGaborone": 0,
+      "outsideGaborone": 2.5,
+      "description": "Free delivery within Gaborone, P2.50/km outside"
+    },
+    "crossBorderFee": {
+      "name": "Cross-Border Authorization",
+      "amount": 150,
+      "description": "Required for travel to neighboring countries"
+    }
+  },
+  "ageRequirements": {
+    "minimumAge": 25,
+    "minimumExperience": 2,
+    "description": "Drivers must be at least 25 years old with 2+ years driving experience"
+  },
+  "guarantees": [
+    "No hidden fees",
+    "Transparent pricing",
+    "All-inclusive rates",
+    "24/7 support included"
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "botswana-driving-guide-2024",
+    "title": "Complete Guide to Driving in Botswana: What You Need to Know",
+    "slug": "botswana-driving-guide-2024",
+    "excerpt": "Essential tips for safe driving in Botswana, including wildlife encounters, road conditions, and local regulations.",
+    "content": "Driving in Botswana offers unique experiences but requires preparation. This comprehensive guide covers everything from wildlife encounters to fuel station locations.",
+    "author": "Mobirides Team",
+    "publishedAt": "2024-01-15",
+    "category": "Travel Guides",
+    "tags": ["driving", "botswana", "safety", "wildlife"],
+    "featuredImage": "/src/assets/botswana-safari.jpg",
+    "readTime": 8,
+    "featured": true
+  },
+  {
+    "id": "car-rental-business-botswana",
+    "title": "The Future of Car Rental Business in Botswana",
+    "slug": "car-rental-business-botswana",
+    "excerpt": "How technology is transforming the car rental industry in Botswana and creating new opportunities for entrepreneurs.",
+    "content": "The car rental industry in Botswana is experiencing rapid growth driven by technology and changing consumer preferences.",
+    "author": "Business Development Team",
+    "publishedAt": "2024-01-10",
+    "category": "Business Insights",
+    "tags": ["business", "technology", "entrepreneurship"],
+    "featuredImage": "/src/assets/gaborone-business.jpg",
+    "readTime": 6,
+    "featured": false
+  },
+  {
+    "id": "best-vehicles-botswana-roads",
+    "title": "Best Vehicles for Botswana's Diverse Road Conditions",
+    "slug": "best-vehicles-botswana-roads",
+    "excerpt": "From city streets to safari trails, discover which vehicles perform best on Botswana's varied terrain.",
+    "content": "Botswana's roads range from well-maintained highways to challenging off-road tracks. Choosing the right vehicle is crucial for your journey.",
+    "author": "Vehicle Experts",
+    "publishedAt": "2024-01-05",
+    "category": "Vehicle Reviews",
+    "tags": ["vehicles", "reviews", "off-road", "recommendations"],
+    "featuredImage": "/src/assets/pickup-truck.jpg",
+    "readTime": 5,
+    "featured": true
+  },
+  {
+    "id": "sustainable-mobility-botswana",
+    "title": "Building Sustainable Mobility Solutions in Botswana",
+    "slug": "sustainable-mobility-botswana",
+    "excerpt": "How shared mobility platforms are contributing to environmental sustainability and economic growth in Botswana.",
+    "content": "Sustainable mobility is becoming increasingly important in Botswana as the country focuses on environmental conservation and economic development.",
+    "author": "Sustainability Team",
+    "publishedAt": "2023-12-28",
+    "category": "Local News",
+    "tags": ["sustainability", "environment", "mobility", "botswana"],
+    "featuredImage": "/src/assets/find-your-drive.jpg",
+    "readTime": 7,
+    "featured": false
+  }
+]

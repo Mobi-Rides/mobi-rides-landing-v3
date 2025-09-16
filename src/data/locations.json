@@ -1,0 +1,97 @@
+{
+  "serviceAreas": [
+    {
+      "id": "gaborone",
+      "name": "Gaborone",
+      "type": "city",
+      "coordinates": [-24.653257, 25.906792],
+      "coverage": "full",
+      "deliveryFee": 0,
+      "description": "Capital city with full service coverage and free delivery",
+      "landmarks": ["Sir Seretse Khama International Airport", "Government Enclave", "Riverwalk Mall"]
+    },
+    {
+      "id": "francistown",
+      "name": "Francistown",
+      "type": "city",
+      "coordinates": [-21.173611, 27.512501],
+      "coverage": "full",
+      "deliveryFee": 2.5,
+      "description": "Second largest city with comprehensive vehicle selection",
+      "landmarks": ["Francistown Airport", "Blue Jacket Street", "Tachila Nature Reserve"]
+    },
+    {
+      "id": "maun",
+      "name": "Maun",
+      "type": "town",
+      "coordinates": [-20.0, 23.4167],
+      "coverage": "limited",
+      "deliveryFee": 5.0,
+      "description": "Gateway to Okavango Delta, specialized safari vehicles available",
+      "landmarks": ["Maun Airport", "Okavango Delta", "Moremi Game Reserve"]
+    },
+    {
+      "id": "kasane",
+      "name": "Kasane",
+      "type": "town",
+      "coordinates": [-17.8167, 25.15],
+      "coverage": "limited",
+      "deliveryFee": 7.5,
+      "description": "Chobe National Park access point, 4WD vehicles recommended",
+      "landmarks": ["Chobe National Park", "Kasane Airport", "Chobe River"]
+    },
+    {
+      "id": "palapye",
+      "name": "Palapye",
+      "type": "town",
+      "coordinates": [-22.55, 27.1167],
+      "coverage": "basic",
+      "deliveryFee": 3.0,
+      "description": "Central location with basic vehicle selection",
+      "landmarks": ["Palapye Museum", "Morupule Coal Mine", "A1 Highway"]
+    }
+  ],
+  "crossBorderDestinations": [
+    {
+      "country": "South Africa",
+      "popularDestinations": ["Johannesburg", "Cape Town", "Pretoria"],
+      "requirements": ["Cross-border authorization", "Valid passport", "International driving permit"],
+      "additionalFee": 150
+    },
+    {
+      "country": "Namibia",
+      "popularDestinations": ["Windhoek", "Swakopmund", "Etosha National Park"],
+      "requirements": ["Cross-border authorization", "Valid passport", "International driving permit"],
+      "additionalFee": 150
+    },
+    {
+      "country": "Zambia",
+      "popularDestinations": ["Lusaka", "Livingstone", "Victoria Falls"],
+      "requirements": ["Cross-border authorization", "Valid passport", "International driving permit", "Yellow fever certificate"],
+      "additionalFee": 200
+    },
+    {
+      "country": "Zimbabwe",
+      "popularDestinations": ["Harare", "Bulawayo", "Victoria Falls"],
+      "requirements": ["Cross-border authorization", "Valid passport", "International driving permit"],
+      "additionalFee": 175
+    }
+  ],
+  "fuelStations": [
+    {
+      "name": "Engen",
+      "locations": ["Gaborone", "Francistown", "Maun", "Kasane"],
+      "hours": "24/7 in major cities, 6AM-10PM in towns"
+    },
+    {
+      "name": "Shell",
+      "locations": ["Gaborone", "Francistown", "Palapye"],
+      "hours": "6AM-10PM"
+    },
+    {
+      "name": "Total",
+      "locations": ["Gaborone", "Francistown", "Maun"],
+      "hours": "6AM-9PM"
+    }
+  ]
+}

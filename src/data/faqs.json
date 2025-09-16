@@ -1,0 +1,116 @@
+{
+  "categories": [
+    {
+      "id": "insurance",
+      "name": "Insurance & Coverage",
+      "faqs": [
+        {
+          "question": "What insurance coverage is included with my rental?",
+          "answer": "All rentals include comprehensive insurance coverage. A 10% excess fee is required, secured via credit card authorization. This covers collision damage, theft protection, and third-party liability as required by Botswana law."
+        },
+        {
+          "question": "How does the insurance excess work?",
+          "answer": "The insurance excess is 10% of the total rental value. We place a hold on your credit card for this amount, which is released upon safe return of the vehicle. No cash payments are required upfront."
+        },
+        {
+          "question": "Am I covered for cross-border travel?",
+          "answer": "Cross-border coverage requires special authorization and an additional fee of P150-200 depending on the destination country. This must be arranged at least 48 hours before travel."
+        }
+      ]
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation & Requirements",
+      "faqs": [
+        {
+          "question": "What documents do I need to rent a car?",
+          "answer": "You need: (1) Valid driver's license (minimum 2 years), (2) International driving permit (for foreign licenses), (3) Valid passport or national ID, (4) Credit card in your name for security deposit."
+        },
+        {
+          "question": "What are the age requirements for renting?",
+          "answer": "Drivers must be at least 25 years old with a minimum of 2 years driving experience. This is a legal requirement in Botswana for rental vehicles."
+        },
+        {
+          "question": "Do I need an international driving permit?",
+          "answer": "Yes, if your license is not issued in English or by a SADC member country. International driving permits must be obtained in your home country before travel."
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "name": "Pricing & Fees",
+      "faqs": [
+        {
+          "question": "Are there any hidden fees?",
+          "answer": "No hidden fees guaranteed! Our pricing includes: vehicle rental, basic insurance, 24/7 support, and free delivery within Gaborone. Additional costs are clearly stated: delivery outside Gaborone (P2.50/km), cross-border authorization (P150-200), and fuel."
+        },
+        {
+          "question": "How is the rental price calculated?",
+          "answer": "Pricing is based on vehicle category, rental duration, and season. Weekly rentals get 15-18% discount, monthly rentals get 20-30% discount. All prices are inclusive of VAT and basic insurance."
+        },
+        {
+          "question": "When do I pay for the rental?",
+          "answer": "Payment is processed when you pick up the vehicle. We accept credit cards, debit cards, and mobile money. A security deposit (insurance excess) is held on your credit card."
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "name": "Safety & Driving",
+      "faqs": [
+        {
+          "question": "What should I do if I encounter wildlife while driving?",
+          "answer": "Reduce speed immediately, do not swerve suddenly, and maintain a safe distance. If animals block the road, wait patiently for them to move. Never exit your vehicle or attempt to feed wildlife. Contact our 24/7 support if you need assistance."
+        },
+        {
+          "question": "What are the key driving rules in Botswana?",
+          "answer": "Drive on the left side of the road. Speed limits: 60km/h in towns, 120km/h on highways. Mobile phone use while driving is prohibited. Seatbelts are mandatory for all passengers. Drinking and driving has zero tolerance."
+        },
+        {
+          "question": "What should I do in case of an accident or breakdown?",
+          "answer": "Contact our 24/7 emergency line immediately (+267 123 4567). For accidents, also contact local police. Do not admit fault or sign any documents without speaking to us first. We provide roadside assistance and replacement vehicles when needed."
+        }
+      ]
+    },
+    {
+      "id": "booking",
+      "name": "Booking & Process",
+      "faqs": [
+        {
+          "question": "How far in advance should I book?",
+          "answer": "We recommend booking at least 48 hours in advance to ensure vehicle availability. During peak seasons (April-October), book 1-2 weeks ahead. Last-minute bookings are subject to availability."
+        },
+        {
+          "question": "Can I modify or cancel my booking?",
+          "answer": "Yes, modifications and cancellations are free up to 24 hours before pickup. Cancellations within 24 hours incur a 25% fee. No-shows are charged the full first day rate."
+        },
+        {
+          "question": "How does vehicle pickup and delivery work?",
+          "answer": "Free delivery within Gaborone city limits. Outside Gaborone, delivery fee is P2.50 per kilometer. Vehicle inspection is done together at pickup, and we provide a detailed checklist. Return inspection follows the same process."
+        }
+      ]
+    }
+  ],
+  "quickAnswers": [
+    {
+      "question": "Minimum age to rent?",
+      "answer": "25 years with 2+ years experience"
+    },
+    {
+      "question": "Insurance excess?",
+      "answer": "10% of rental value via credit card"
+    },
+    {
+      "question": "Cross-border travel?",
+      "answer": "P150-200 fee, 48h advance notice"
+    },
+    {
+      "question": "Hidden fees?",
+      "answer": "None - transparent pricing guaranteed"
+    },
+    {
+      "question": "Emergency support?",
+      "answer": "24/7 hotline: +267 123 4567"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "economy-sedan",
+    "name": "Economy Sedan",
+    "category": "Economy",
+    "description": "Perfect for city driving and short trips",
+    "image": "/src/assets/family-sedan.jpg",
+    "pricePerDay": 250,
+    "features": ["Air Conditioning", "Manual Transmission", "4 Seats", "Fuel Efficient"],
+    "specifications": {
+      "seats": 4,
+      "transmission": "Manual",
+      "fuelType": "Petrol",
+      "doors": 4
+    },
+    "available": true
+  },
+  {
+    "id": "luxury-suv",
+    "name": "Luxury SUV",
+    "category": "Luxury",
+    "description": "Premium comfort for business and leisure",
+    "image": "/src/assets/luxury-suv.jpg",
+    "pricePerDay": 650,
+    "features": ["Air Conditioning", "Automatic Transmission", "7 Seats", "4WD", "GPS Navigation"],
+    "specifications": {
+      "seats": 7,
+      "transmission": "Automatic",
+      "fuelType": "Petrol",
+      "doors": 5
+    },
+    "available": true
+  },
+  {
+    "id": "pickup-truck",
+    "name": "Pickup Truck",
+    "category": "Commercial",
+    "description": "Ideal for cargo transport and off-road adventures",
+    "image": "/src/assets/pickup-truck.jpg",
+    "pricePerDay": 450,
+    "features": ["Air Conditioning", "Manual Transmission", "2 Seats", "4WD", "Cargo Bed"],
+    "specifications": {
+      "seats": 2,
+      "transmission": "Manual",
+      "fuelType": "Diesel",
+      "doors": 2
+    },
+    "available": true
+  },
+  {
+    "id": "commercial-van",
+    "name": "Commercial Van",
+    "category": "Commercial",
+    "description": "Large cargo space for business needs",
+    "image": "/src/assets/commercial-van.jpg",
+    "pricePerDay": 550,
+    "features": ["Air Conditioning", "Manual Transmission", "3 Seats", "Large Cargo Space"],
+    "specifications": {
+      "seats": 3,
+      "transmission": "Manual",
+      "fuelType": "Diesel",
+      "doors": 4
+    },
+    "available": true
+  }
+]

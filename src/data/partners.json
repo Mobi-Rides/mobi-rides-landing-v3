@@ -1,0 +1,120 @@
+{
+  "categories": [
+    {
+      "id": "fleet-owners",
+      "name": "Fleet Owners",
+      "description": "Large vehicle fleet operators looking to maximize utilization",
+      "benefits": [
+        "Revenue optimization through dynamic pricing",
+        "Fleet management dashboard",
+        "Maintenance scheduling integration",
+        "Insurance coverage coordination"
+      ],
+      "requirements": [
+        "Minimum 10 vehicles",
+        "Valid commercial insurance",
+        "Maintenance records",
+        "Business registration"
+      ]
+    },
+    {
+      "id": "insurance-providers",
+      "name": "Insurance Providers",
+      "description": "Insurance companies offering comprehensive coverage for rental vehicles",
+      "benefits": [
+        "Access to growing rental market",
+        "Risk assessment data sharing",
+        "Streamlined claims processing",
+        "Customer acquisition opportunities"
+      ],
+      "requirements": [
+        "Licensed in Botswana",
+        "Comprehensive coverage options",
+        "24/7 claims support",
+        "API integration capability"
+      ]
+    },
+    {
+      "id": "financial-partners",
+      "name": "Financial Partners",
+      "description": "Banks and financial institutions providing financing solutions",
+      "benefits": [
+        "Vehicle financing programs",
+        "Payment processing integration",
+        "Credit assessment tools",
+        "Customer financing options"
+      ],
+      "requirements": [
+        "Banking license in Botswana",
+        "Vehicle financing products",
+        "API integration",
+        "Competitive interest rates"
+      ]
+    },
+    {
+      "id": "service-providers",
+      "name": "Service Providers",
+      "description": "Workshops, dealerships, and maintenance service providers",
+      "benefits": [
+        "Steady stream of maintenance work",
+        "Preferred service provider status",
+        "Digital work order management",
+        "Performance tracking dashboard"
+      ],
+      "requirements": [
+        "Certified mechanics",
+        "Quality service standards",
+        "Geographic coverage",
+        "Digital integration capability"
+      ]
+    }
+  ],
+  "valuePropositions": [
+    {
+      "title": "Revenue Growth",
+      "description": "Increase revenue through our expanding customer base and optimized pricing algorithms",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "Technology Integration",
+      "description": "Seamless API integration with your existing systems for streamlined operations",
+      "icon": "Zap"
+    },
+    {
+      "title": "Market Expansion",
+      "description": "Access new market segments and geographic areas across Botswana",
+      "icon": "Globe"
+    },
+    {
+      "title": "Risk Management",
+      "description": "Advanced analytics and vetting processes to minimize operational risks",
+      "icon": "Shield"
+    }
+  ],
+  "partnershipProcess": [
+    {
+      "step": 1,
+      "title": "Initial Contact",
+      "description": "Submit partnership inquiry through our contact form",
+      "timeline": "Day 1"
+    },
+    {
+      "step": 2,
+      "title": "Assessment & Discussion",
+      "description": "Our business development team reviews your application and schedules a meeting",
+      "timeline": "Days 2-7"
+    },
+    {
+      "step": 3,
+      "title": "Technical Integration",
+      "description": "API setup, system integration, and testing phase",
+      "timeline": "Days 8-21"
+    },
+    {
+      "step": 4,
+      "title": "Launch & Support",
+      "description": "Go-live with dedicated support and performance monitoring",
+      "timeline": "Day 22+"
+    }
+  ]
+}
