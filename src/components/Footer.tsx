@@ -57,7 +57,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-sm leading-relaxed">
-              Futuristic African Mobility. Premium car sharing for Botswana's driven professionals and entrepreneurs.
+              The future of African Mobility. Premium car sharing for Botswana's driven professionals and entrepreneurs.
             </p>
             
             {/* Contact Info */}
