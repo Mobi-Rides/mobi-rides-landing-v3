@@ -107,9 +107,13 @@ const Index = () => {
             <FinalCTASection />
           </AnimatedSection>
         </LazySection>
+        
+        <LazySection fallback={<SectionSkeleton />}>
+          <AnimatedSection animation="fade-up" delay={700}>
+            <Footer />
+          </AnimatedSection>
+        </LazySection>
       </main>
-      
-      <Footer />
     </div>
   );
 };
