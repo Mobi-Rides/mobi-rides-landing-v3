@@ -79,11 +79,12 @@ const Header = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`transition-colors ${
+              className={`transition-colors p-2 ${
                 isScrolled
                   ? 'text-foreground hover:text-primary'
                   : 'text-white hover:text-gray-200'
               }`}
+              style={{ zIndex: 9999 }}
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -96,7 +97,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden">
+          <div className="lg:hidden" style={{ zIndex: 9998 }}>
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md rounded-lg mt-2 shadow-medium">
               {navigation.map((item) => (
                 <Link

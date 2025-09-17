@@ -182,20 +182,6 @@ const FindRidePage: React.FC = () => {
             </Card>
           )}
 
-        {/* Load More Button */}
-        {!isLoading && filteredVehicles.length > 0 && hasMore && (
-          <div className="text-center mt-8">
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="px-8"
-              onClick={loadMore}
-              disabled={isLoading}
-            >
-              {isLoading ? 'Loading...' : 'Load More Vehicles'}
-            </Button>
-          </div>
-        )}
         </div>
 
         {/* Results Summary */}
@@ -238,11 +224,26 @@ const FindRidePage: React.FC = () => {
                 key={vehicle.id} 
                 car={vehicle} 
                 onClick={() => {
-                  // Navigate to car details or booking page
-                  window.open('https://app.mobirides.com', '_blank');
+                  // Navigate to specific car details page
+                  window.open(`https://app.mobirides.com/cars/${vehicle.id}`, '_blank');
                 }}
               />
             ))}
+          </div>
+        )}
+        
+        {/* Load More Button */}
+        {!isLoading && filteredVehicles.length > 0 && hasMore && (
+          <div className="text-center mt-8">
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="px-8"
+              onClick={loadMore}
+              disabled={isLoading}
+            >
+              {isLoading ? 'Loading...' : 'Load More Vehicles'}
+            </Button>
           </div>
         )}
         
@@ -290,10 +291,13 @@ const FindRidePage: React.FC = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold text-blue-600 mb-2">
-                  {fee.amount || (fee.rate && `${(fee.rate * 100)}%`) || 'Free'}
+                  {'amount' in fee ? `P${fee.amount}` : 
+                   'rate' in fee ? `${(fee.rate * 100)}%` : 
+                   'withinGaborone' in fee ? `P${fee.withinGaborone} - P${fee.outsideGaborone}` : 
+                   'Free'}
                 </div>
                 <p className="text-sm text-gray-600">{fee.description}</p>
-                {fee.mandatory && (
+                {'mandatory' in fee && fee.mandatory && (
                   <p className="text-xs text-blue-600 mt-2">✓ Mandatory</p>
                 )}
               </CardContent>

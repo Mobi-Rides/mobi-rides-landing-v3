@@ -23,7 +23,6 @@ import {
   Calendar,
   MapPin
 } from 'lucide-react';
-import vehiclesData from '../data/vehicles.json';
 import pricingData from '../data/pricing.json';
 
 interface EarningsCalculation {

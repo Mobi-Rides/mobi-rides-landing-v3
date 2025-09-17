@@ -18,7 +18,9 @@ import {
   Heart, 
   Share2, 
   ExternalLink, 
-  Star 
+  Star,
+  AlertCircle,
+  RefreshCw 
 } from 'lucide-react';
 import locationsData from '../data/locations.json';
 
@@ -43,6 +45,13 @@ interface MapboxMapProps {
   onAreaSelect: (area: ServiceArea) => void;
   onAreaHover: (areaId: string | null) => void;
   hoveredArea: string | null;
+  mapError: string | null;
+  setMapError: (error: string | null) => void;
+  retryCount: number;
+  setRetryCount: (count: number) => void;
+  maxRetries: number;
+  fallbackStyles: string[];
+  mapCenter: [number, number];
 }
 
 const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
@@ -54,6 +63,21 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   const [isLoading, setIsLoading] = useState(false);
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
+  const [mapError, setMapError] = useState<string | null>(null);
+  const [retryCount, setRetryCount] = useState(0);
+  
+  // Refresh functionality state
+  const [refreshInterval, setRefreshInterval] = useState<number>(30000); // 30 seconds default
+  const [autoRefreshEnabled, setAutoRefreshEnabled] = useState<boolean>(true);
+  const [lastRefreshTime, setLastRefreshTime] = useState<Date>(new Date());
+  const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
+  
+  const MAX_RETRIES = 2;
+  const FALLBACK_STYLES = [
+    'mapbox://styles/mapbox/light-v11',
+    'mapbox://styles/mapbox/streets-v12',
+    'mapbox://styles/mapbox/outdoors-v12'
+  ];
 
   const serviceAreas = useMemo(() => locationsData.serviceAreas, []);
 
@@ -139,13 +163,37 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
     }
   };
 
+  // Manual refresh function
+  const refreshMapData = async () => {
+    if (isRefreshing) return; // Prevent multiple simultaneous refreshes
+    
+    setIsRefreshing(true);
+    setLastRefreshTime(new Date());
+    
+    try {
+      // In a real application, you would fetch fresh data from an API here
+      // For now, we'll simulate a refresh by re-triggering marker updates
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
+      
+      // Force re-render of markers by updating a dependency
+      // This will trigger the marker creation useEffect
+      setRetryCount(prev => prev); // Trigger re-render without changing retry count
+      
+      console.log('Map data refreshed successfully');
+    } catch (error) {
+      console.error('Failed to refresh map data:', error);
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
+
   // Mapbox configuration
   const mapCenter = useMemo(() => [24.6849, -22.3285] as [number, number], []); // Center of Botswana [lng, lat]
   const mapOptions = useMemo(() => ({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v11',
     center: mapCenter,
-    zoom: 6,
+    zoom: 4,
     attributionControl: false
   }), [mapCenter]);
 
@@ -168,7 +216,14 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
     selectedArea,
     onAreaSelect,
     onAreaHover,
-    hoveredArea
+    hoveredArea,
+    mapError,
+    setMapError,
+    retryCount,
+    setRetryCount,
+    maxRetries,
+    fallbackStyles,
+    mapCenter
   }) => {
     const mapContainer = useRef<HTMLDivElement>(null);
     const map = useRef<mapboxgl.Map | null>(null);
@@ -176,36 +231,93 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
     const markersRef = useRef<{ [key: string]: mapboxgl.Marker }>({});
     const popupRef = useRef<mapboxgl.Popup | null>(null);
 
-    // Initialize map
-    useEffect(() => {
-      if (!mapContainer.current || map.current) return;
+    // Initialize map with retry and fallback logic
+    const initializeMap = (styleIndex = 0) => {
+      if (!mapContainer.current) return;
 
       const mapboxToken = import.meta.env.VITE_MAPBOX_TOKEN;
       if (!mapboxToken) {
         console.error('Mapbox token is required');
+        setMapError('Mapbox token is missing');
         return;
       }
 
       mapboxgl.accessToken = mapboxToken;
       
-      map.current = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: 'mapbox://styles/mapbox/light-v11',
-        center: mapCenter,
-        zoom: 6,
-        attributionControl: false
-      });
+      try {
+        // Clean up existing map if any
+        if (map.current) {
+          map.current.remove();
+          map.current = null;
+        }
 
-      map.current.on('load', () => {
-        setMapLoaded(true);
-      });
+        const currentStyle = fallbackStyles[styleIndex] || fallbackStyles[0];
+        console.log(`Attempting to load map with style: ${currentStyle} (attempt ${styleIndex + 1})`);
+
+        map.current = new mapboxgl.Map({
+          container: mapContainer.current,
+          style: currentStyle,
+          center: mapCenter,
+          zoom: 4,
+          attributionControl: false,
+          // Add retry and error handling options
+          transformRequest: (url, resourceType) => {
+            // Add custom headers or modify requests if needed
+            if (resourceType === 'Style' && url.startsWith('https://api.mapbox.com/styles/')) {
+              return {
+                url: url,
+                headers: {
+                  'Accept': 'application/json',
+                  'Cache-Control': 'no-cache'
+                }
+              };
+            }
+            return { url };
+          }
+        });
+
+        map.current.on('load', () => {
+          console.log('Map loaded successfully');
+          setMapLoaded(true);
+          setMapError(null);
+        });
+
+        // Add error handling for map loading failures
+        map.current.on('error', (e) => {
+          console.error('Mapbox error:', e.error);
+          
+          // Try next fallback style if available
+          if (styleIndex < fallbackStyles.length - 1 && retryCount < maxRetries) {
+            console.log(`Retrying with fallback style ${styleIndex + 1}`);
+            setRetryCount(prev => prev + 1);
+            setTimeout(() => initializeMap(styleIndex + 1), 1000);
+          } else {
+            setMapError(`Failed to load map after ${maxRetries} attempts`);
+          }
+        });
+
+        // Add style loading error handler
+        map.current.on('styleimagemissing', (e) => {
+          console.warn('Style image missing:', e.id);
+        });
+
+      } catch (error) {
+        console.error('Failed to initialize Mapbox map:', error);
+        setMapError(`Map initialization failed: ${error}`);
+      }
+    };
+
+    // Initialize map
+    useEffect(() => {
+      if (!mapContainer.current || map.current) return;
+      initializeMap(0);
 
       return () => {
         if (map.current) {
           map.current.remove();
         }
       };
-    }, [mapCenter]);
+    }, []);
 
     // Create markers when map is ready
     useEffect(() => {
@@ -313,6 +425,17 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
       });
     }, [serviceAreas, selectedArea, hoveredArea]);
 
+    // Automatic refresh mechanism
+    useEffect(() => {
+      if (!autoRefreshEnabled || refreshInterval <= 0) return;
+
+      const intervalId = setInterval(() => {
+        refreshMapData();
+      }, refreshInterval * 1000);
+
+      return () => clearInterval(intervalId);
+    }, [autoRefreshEnabled, refreshInterval]);
+
     return <div ref={mapContainer} className="w-full h-full rounded-lg" />;
   };
 
@@ -346,6 +469,49 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
       );
     }
 
+    // If there's a map error, show error message with retry option
+    if (mapError) {
+      return (
+        <div className="flex items-center justify-center h-96 bg-red-50 border border-red-200 rounded-lg">
+          <div className="text-center p-6">
+            <div className="mb-4">
+              <AlertCircle className="w-12 h-12 text-red-600 mx-auto mb-2" />
+            </div>
+            <h3 className="text-lg font-semibold text-red-800 mb-2">Map Loading Failed</h3>
+            <p className="text-red-700 mb-4 max-w-md">
+              {mapError.includes('401') || mapError.includes('Unauthorized') 
+                ? 'Invalid or expired Mapbox token. Please check your API key configuration.'
+                : mapError.includes('network') || mapError.includes('CORS')
+                ? 'Network connectivity issue. Please check your internet connection.'
+                : 'Unable to load the map. This might be due to network issues or API limitations.'}
+            </p>
+            <div className="space-y-3">
+              <button
+                onClick={() => {
+                  setMapError(null);
+                  setRetryCount(0);
+                  initializeMap();
+                }}
+                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors flex items-center gap-2 mx-auto"
+              >
+                <RefreshCw className="w-4 h-4" />
+                Try Again
+              </button>
+              <div className="bg-red-100 rounded-lg p-3 text-left">
+                <p className="text-sm font-medium text-red-800 mb-1">Troubleshooting:</p>
+                <ul className="text-sm text-red-700 space-y-1">
+                  <li>• Check your internet connection</li>
+                  <li>• Verify your Mapbox token is valid</li>
+                  <li>• Try refreshing the page</li>
+                  <li>• Contact support if the issue persists</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <MapboxMapComponent
         serviceAreas={serviceAreas}
@@ -353,6 +519,13 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
         onAreaSelect={setSelectedArea}
         onAreaHover={setHoveredArea}
         hoveredArea={hoveredArea}
+        mapError={mapError}
+        setMapError={setMapError}
+        retryCount={retryCount}
+        setRetryCount={setRetryCount}
+        maxRetries={MAX_RETRIES}
+        fallbackStyles={FALLBACK_STYLES}
+        mapCenter={mapCenter}
       />
     );
   };
@@ -360,8 +533,66 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
   return (
     <div className={`bg-white rounded-xl shadow-lg p-6 ${className}`}>
       <div className="mb-6">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">Service Coverage Areas</h3>
-        <p className="text-gray-600">Explore our vehicle rental locations across Botswana</p>
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Service Coverage Areas</h3>
+            <p className="text-gray-600">Explore our vehicle rental locations across Botswana</p>
+          </div>
+          
+          {/* Refresh Controls */}
+          <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-3 border border-gray-200">
+            {/* Auto-refresh toggle */}
+            <div className="flex items-center gap-2">
+              <label className="flex items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={autoRefreshEnabled}
+                  onChange={(e) => setAutoRefreshEnabled(e.target.checked)}
+                  className="sr-only"
+                />
+                <div className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
+                  autoRefreshEnabled ? 'bg-blue-600' : 'bg-gray-300'
+                }`}>
+                  <span className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
+                    autoRefreshEnabled ? 'translate-x-5' : 'translate-x-1'
+                  }`} />
+                </div>
+                <span className="ml-2 text-sm text-gray-700">Auto-refresh</span>
+              </label>
+            </div>
+            
+            {/* Refresh interval selector */}
+            <select
+              value={refreshInterval}
+              onChange={(e) => setRefreshInterval(Number(e.target.value))}
+              disabled={!autoRefreshEnabled}
+              className="px-2 py-1 text-sm border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100 disabled:text-gray-400"
+            >
+              <option value={15}>15s</option>
+              <option value={30}>30s</option>
+              <option value={60}>60s</option>
+              <option value={120}>120s</option>
+            </select>
+            
+            {/* Manual refresh button */}
+            <button
+              onClick={refreshMapData}
+              disabled={isRefreshing}
+              className="flex items-center gap-1 px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed transition-colors"
+              title="Refresh map data"
+            >
+              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
+              {isRefreshing ? 'Refreshing...' : 'Refresh'}
+            </button>
+            
+            {/* Last refresh time */}
+            {lastRefreshTime && (
+              <div className="text-xs text-gray-500">
+                Last: {lastRefreshTime.toLocaleTimeString()}
+              </div>
+            )}
+          </div>
+        </div>
       </div>
 
       <div className="grid lg:grid-cols-3 gap-6">

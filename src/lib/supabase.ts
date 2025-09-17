@@ -6,10 +6,10 @@ const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-// Database types
+// Database types - matches main app's cars table structure
 export interface Car {
-  id: string;
-  owner_id: string;
+  id: string; // UUID from database
+  owner_id: string; // UUID from database
   brand: string;
   model: string;
   year: number;
@@ -21,8 +21,8 @@ export interface Car {
   transmission: string;
   fuel: string;
   seats: number;
-  description: string;
-  image_url: string;
+  description: string | null;
+  image_url: string | null;
   is_available: boolean;
   features: string[];
   created_at: string;
