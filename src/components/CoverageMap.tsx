@@ -48,7 +48,7 @@ interface MapboxMapProps {
   mapError: string | null;
   setMapError: (error: string | null) => void;
   retryCount: number;
-  setRetryCount: (count: number) => void;
+  setRetryCount: React.Dispatch<React.SetStateAction<number>>;
   maxRetries: number;
   fallbackStyles: string[];
   mapCenter: [number, number];
@@ -490,7 +490,8 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
                 onClick={() => {
                   setMapError(null);
                   setRetryCount(0);
-                  initializeMap();
+                  // Force component remount to reinitialize map
+                  window.location.reload();
                 }}
                 className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors flex items-center gap-2 mx-auto"
               >
