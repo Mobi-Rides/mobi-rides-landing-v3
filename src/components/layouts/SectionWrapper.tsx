@@ -8,6 +8,7 @@ interface SectionWrapperProps {
   background?: 'white' | 'gray' | 'blue' | 'gradient' | 'transparent';
   padding?: 'none' | 'small' | 'medium' | 'large';
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';
+  snapAlign?: 'start' | 'center' | 'end' | 'none';
 }
 
 const SectionWrapper: React.FC<SectionWrapperProps> = ({
@@ -17,7 +18,8 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
   containerClassName = '',
   background = 'white',
   padding = 'medium',
-  maxWidth = 'xl'
+  maxWidth = 'xl',
+  snapAlign = 'start'
 }) => {
   const getBackgroundClasses = () => {
     switch (background) {
@@ -66,10 +68,23 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
     }
   };
 
+  const getSnapAlignClasses = () => {
+    switch (snapAlign) {
+      case 'center':
+        return 'scroll-snap-center';
+      case 'end':
+        return 'scroll-snap-end';
+      case 'none':
+        return 'scroll-snap-none';
+      default:
+        return 'scroll-snap-start';
+    }
+  };
+
   return (
     <section 
       id={id}
-      className={`${getBackgroundClasses()} ${getPaddingClasses()} ${className}`}
+      className={`${getBackgroundClasses()} ${getPaddingClasses()} ${getSnapAlignClasses()} min-h-screen ${className}`}
     >
       <div className={`container mx-auto px-4 ${getMaxWidthClasses()} ${containerClassName}`}>
         {children}

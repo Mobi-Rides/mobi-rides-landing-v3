@@ -23,13 +23,10 @@ import blogData from '../data/blog-posts.json';
 interface BlogPost {
   id: string;
   title: string;
+  slug: string;
   excerpt: string;
   content: string;
-  author: {
-    name: string;
-    avatar: string;
-    bio: string;
-  };
+  author: string;
   publishedAt: string;
   category: string;
   tags: string[];
@@ -141,7 +138,7 @@ const BlogPage: React.FC = () => {
       "datePublished": post.publishedAt,
       "author": {
         "@type": "Person",
-        "name": post.author.name
+        "name": post.author
       }
     }))
   };
@@ -162,7 +159,7 @@ const BlogPage: React.FC = () => {
         subtitle="Insights & Guides"
         description="Discover travel guides, vehicle reviews, business insights, and the latest news about mobility in Botswana."
         backgroundImage="https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20blog%20writing%20workspace%20laptop%20coffee%20Botswana%20landscape%20travel%20journalism&image_size=landscape_16_9"
-        variant="gradient"
+        variant="centered"
       />
 
       {/* Featured Posts Section */}
@@ -209,10 +206,10 @@ const BlogPage: React.FC = () => {
                     
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-1">
-                           <User className="w-4 h-4" />
-                           {post.author}
-                         </div>
+                         <div className="flex items-center gap-1">
+                            <User className="w-4 h-4" />
+                            {post.author}
+                          </div>
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
                           {formatDate(post.publishedAt)}
@@ -396,10 +393,10 @@ const BlogPage: React.FC = () => {
                       
                       <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                         <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-1">
-                             <User className="w-3 h-3" />
-                             {post.author}
-                           </div>
+                           <div className="flex items-center gap-1">
+                              <User className="w-3 h-3" />
+                              {post.author}
+                            </div>
                           <div className="flex items-center gap-1">
                             <Calendar className="w-3 h-3" />
                             {formatDate(post.publishedAt)}

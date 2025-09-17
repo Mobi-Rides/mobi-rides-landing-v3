@@ -292,7 +292,7 @@ const FindRidePage: React.FC = () => {
               <CardContent>
                 <div className="text-2xl font-bold text-blue-600 mb-2">
                   {'amount' in fee ? `P${fee.amount}` : 
-                   'rate' in fee ? `${(fee.rate * 100)}%` : 
+                   'rate' in fee ? `${(fee.rate * 100).toFixed(1)}%` : 
                    'withinGaborone' in fee ? `P${fee.withinGaborone} - P${fee.outsideGaborone}` : 
                    'Free'}
                 </div>
