@@ -1,0 +1,425 @@
+{
+  "hero": {
+    "title": "Host Dashboard",
+    "subtitle": "Manage your MobiRides hosting business",
+    "description": "Track your earnings, manage rides, view analytics, and grow your hosting business with comprehensive tools and insights.",
+    "backgroundImage": "https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20dashboard%20interface%20with%20charts%20and%20analytics%20screens%20in%20a%20professional%20office%20setting%20with%20blue%20and%20purple%20gradient%20lighting&image_size=landscape_16_9"
+  },
+  "quickStats": {
+    "title": "Today's Overview",
+    "stats": [
+      {
+        "label": "Today's Earnings",
+        "value": "P 245.50",
+        "change": "+12.5%",
+        "changeType": "positive",
+        "icon": "DollarSign",
+        "color": "green"
+      },
+      {
+        "label": "Completed Rides",
+        "value": "8",
+        "change": "+2",
+        "changeType": "positive",
+        "icon": "Car",
+        "color": "blue"
+      },
+      {
+        "label": "Online Hours",
+        "value": "6.5h",
+        "change": "-0.5h",
+        "changeType": "negative",
+        "icon": "Clock",
+        "color": "purple"
+      },
+      {
+        "label": "Rating",
+        "value": "4.9",
+        "change": "+0.1",
+        "changeType": "positive",
+        "icon": "Star",
+        "color": "yellow"
+      }
+    ]
+  },
+  "earningsOverview": {
+    "title": "Earnings Overview",
+    "subtitle": "Track your income and growth",
+    "periods": [
+      {
+        "label": "Today",
+        "value": "P 245.50",
+        "rides": 8,
+        "hours": 6.5
+      },
+      {
+        "label": "This Week",
+        "value": "P 1,680.25",
+        "rides": 52,
+        "hours": 38.5
+      },
+      {
+        "label": "This Month",
+        "value": "P 6,420.80",
+        "rides": 198,
+        "hours": 142.3
+      },
+      {
+        "label": "All Time",
+        "value": "P 28,945.60",
+        "rides": 892,
+        "hours": 645.8
+      }
+    ],
+    "chartData": {
+      "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      "earnings": [180, 220, 195, 280, 245, 320, 290],
+      "rides": [6, 8, 7, 10, 8, 12, 11]
+    }
+  },
+  "rideManagement": {
+    "title": "Ride Management",
+    "subtitle": "Manage your current and upcoming rides",
+    "activeRides": [
+      {
+        "id": "MR-2024-001",
+        "passenger": "Thabo M.",
+        "pickup": "Game City Mall",
+        "destination": "Sir Seretse Khama Airport",
+        "status": "in_progress",
+        "estimatedEarning": "P 85.00",
+        "distance": "12.5 km",
+        "duration": "18 min",
+        "startTime": "14:30"
+      }
+    ],
+    "upcomingRides": [
+      {
+        "id": "MR-2024-002",
+        "passenger": "Mpho K.",
+        "pickup": "University of Botswana",
+        "destination": "Riverwalk Mall",
+        "scheduledTime": "16:00",
+        "estimatedEarning": "P 45.00",
+        "distance": "8.2 km",
+        "duration": "12 min"
+      },
+      {
+        "id": "MR-2024-003",
+        "passenger": "Keabetswe L.",
+        "pickup": "Broadhurst",
+        "destination": "CBD",
+        "scheduledTime": "17:30",
+        "estimatedEarning": "P 35.00",
+        "distance": "6.8 km",
+        "duration": "10 min"
+      }
+    ],
+    "recentRides": [
+      {
+        "id": "MR-2024-000",
+        "passenger": "Lesego T.",
+        "pickup": "Molapo Crossing",
+        "destination": "Masa Centre",
+        "completedTime": "13:45",
+        "earning": "P 42.50",
+        "rating": 5,
+        "distance": "7.3 km",
+        "duration": "11 min"
+      },
+      {
+        "id": "MR-2023-999",
+        "passenger": "Boitumelo S.",
+        "pickup": "Main Mall",
+        "destination": "Phakalane",
+        "completedTime": "12:20",
+        "earning": "P 68.00",
+        "rating": 5,
+        "distance": "11.2 km",
+        "duration": "16 min"
+      }
+    ]
+  },
+  "performanceMetrics": {
+    "title": "Performance Metrics",
+    "subtitle": "Track your hosting performance",
+    "metrics": [
+      {
+        "label": "Acceptance Rate",
+        "value": "94%",
+        "target": "90%",
+        "status": "excellent",
+        "icon": "CheckCircle",
+        "color": "green",
+        "description": "Percentage of ride requests accepted"
+      },
+      {
+        "label": "Cancellation Rate",
+        "value": "2%",
+        "target": "<5%",
+        "status": "excellent",
+        "icon": "XCircle",
+        "color": "green",
+        "description": "Percentage of rides cancelled by you"
+      },
+      {
+        "label": "Average Rating",
+        "value": "4.9",
+        "target": "4.7+",
+        "status": "excellent",
+        "icon": "Star",
+        "color": "yellow",
+        "description": "Average passenger rating"
+      },
+      {
+        "label": "Response Time",
+        "value": "45s",
+        "target": "<60s",
+        "status": "good",
+        "icon": "Clock",
+        "color": "blue",
+        "description": "Average time to accept rides"
+      },
+      {
+        "label": "Completion Rate",
+        "value": "98%",
+        "target": "95%",
+        "status": "excellent",
+        "icon": "TrendingUp",
+        "color": "green",
+        "description": "Percentage of accepted rides completed"
+      },
+      {
+        "label": "Online Hours",
+        "value": "38.5h",
+        "target": "40h",
+        "status": "good",
+        "icon": "Activity",
+        "color": "purple",
+        "description": "Hours online this week"
+      }
+    ]
+  },
+  "vehicleStatus": {
+    "title": "Vehicle Status",
+    "subtitle": "Monitor your vehicle condition and maintenance",
+    "vehicle": {
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": "2020",
+      "plateNumber": "B 123 ABC",
+      "color": "White",
+      "status": "active"
+    },
+    "maintenance": {
+      "lastService": "2024-01-15",
+      "nextService": "2024-04-15",
+      "mileage": "45,280 km",
+      "fuelLevel": "75%",
+      "batteryHealth": "Good",
+      "tireCondition": "Good"
+    },
+    "documents": [
+      {
+        "type": "Driver's License",
+        "status": "valid",
+        "expiryDate": "2026-08-15",
+        "daysUntilExpiry": 945
+      },
+      {
+        "type": "Vehicle Registration",
+        "status": "valid",
+        "expiryDate": "2024-12-31",
+        "daysUntilExpiry": 315
+      },
+      {
+        "type": "Insurance",
+        "status": "valid",
+        "expiryDate": "2024-06-30",
+        "daysUntilExpiry": 131
+      },
+      {
+        "type": "Road Worthiness",
+        "status": "expiring_soon",
+        "expiryDate": "2024-03-15",
+        "daysUntilExpiry": 24
+      }
+    ]
+  },
+  "incentives": {
+    "title": "Incentives & Bonuses",
+    "subtitle": "Earn extra with our reward programs",
+    "activeIncentives": [
+      {
+        "title": "Weekend Warrior",
+        "description": "Complete 15 rides this weekend",
+        "progress": 8,
+        "target": 15,
+        "reward": "P 150 bonus",
+        "deadline": "2024-02-25",
+        "status": "active",
+        "color": "blue"
+      },
+      {
+        "title": "Peak Hour Champion",
+        "description": "Drive during peak hours (7-9 AM, 5-7 PM)",
+        "progress": 12,
+        "target": 20,
+        "reward": "1.5x earnings multiplier",
+        "deadline": "2024-02-29",
+        "status": "active",
+        "color": "purple"
+      },
+      {
+        "title": "5-Star Service",
+        "description": "Maintain 4.8+ rating for 30 days",
+        "progress": 18,
+        "target": 30,
+        "reward": "P 200 bonus",
+        "deadline": "2024-03-10",
+        "status": "active",
+        "color": "yellow"
+      }
+    ],
+    "completedIncentives": [
+      {
+        "title": "New Host Welcome",
+        "reward": "P 500 bonus",
+        "completedDate": "2024-01-15",
+        "status": "completed"
+      },
+      {
+        "title": "First 50 Rides",
+        "reward": "P 300 bonus",
+        "completedDate": "2024-01-28",
+        "status": "completed"
+      }
+    ]
+  },
+  "notifications": {
+    "title": "Notifications",
+    "unreadCount": 3,
+    "notifications": [
+      {
+        "id": "notif-001",
+        "type": "warning",
+        "title": "Document Expiring Soon",
+        "message": "Your Road Worthiness certificate expires in 24 days. Please renew to continue hosting.",
+        "timestamp": "2024-02-20T10:30:00Z",
+        "read": false,
+        "action": "Renew Document"
+      },
+      {
+        "id": "notif-002",
+        "type": "success",
+        "title": "Incentive Progress",
+        "message": "You're halfway to completing the Weekend Warrior challenge! 7 more rides to go.",
+        "timestamp": "2024-02-20T09:15:00Z",
+        "read": false,
+        "action": "View Progress"
+      },
+      {
+        "id": "notif-003",
+        "type": "info",
+        "title": "New Feature Available",
+        "message": "Try our new route optimization feature to reduce fuel costs and increase earnings.",
+        "timestamp": "2024-02-19T16:45:00Z",
+        "read": false,
+        "action": "Learn More"
+      },
+      {
+        "id": "notif-004",
+        "type": "success",
+        "title": "Payment Processed",
+        "message": "Your weekly earnings of P 1,680.25 have been deposited to your account.",
+        "timestamp": "2024-02-19T08:00:00Z",
+        "read": true,
+        "action": "View Details"
+      }
+    ]
+  },
+  "quickActions": {
+    "title": "Quick Actions",
+    "actions": [
+      {
+        "title": "Go Online",
+        "description": "Start accepting ride requests",
+        "icon": "Play",
+        "color": "green",
+        "action": "toggle_online"
+      },
+      {
+        "title": "View Earnings",
+        "description": "Detailed earnings breakdown",
+        "icon": "DollarSign",
+        "color": "blue",
+        "action": "view_earnings"
+      },
+      {
+        "title": "Update Profile",
+        "description": "Manage your host profile",
+        "icon": "User",
+        "color": "purple",
+        "action": "edit_profile"
+      },
+      {
+        "title": "Support",
+        "description": "Get help and support",
+        "icon": "HelpCircle",
+        "color": "orange",
+        "action": "contact_support"
+      }
+    ]
+  },
+  "settings": {
+    "title": "Dashboard Settings",
+    "preferences": {
+      "notifications": {
+        "pushNotifications": true,
+        "emailNotifications": true,
+        "smsNotifications": false,
+        "rideRequests": true,
+        "earnings": true,
+        "promotions": true
+      },
+      "privacy": {
+        "shareLocation": true,
+        "shareEarnings": false,
+        "shareRating": true
+      },
+      "display": {
+        "theme": "light",
+        "language": "English",
+        "currency": "BWP",
+        "dateFormat": "DD/MM/YYYY"
+      }
+    }
+  },
+  "support": {
+    "title": "Need Help?",
+    "subtitle": "Get support when you need it",
+    "channels": [
+      {
+        "name": "Emergency Support",
+        "contact": "+267 123 4567",
+        "hours": "24/7",
+        "icon": "Phone",
+        "color": "red"
+      },
+      {
+        "name": "Live Chat",
+        "contact": "Start Chat",
+        "hours": "6 AM - 10 PM",
+        "icon": "MessageCircle",
+        "color": "blue"
+      },
+      {
+        "name": "Email Support",
+        "contact": "hosts@mobirides.co.bw",
+        "hours": "24-48h response",
+        "icon": "Mail",
+        "color": "green"
+      }
+    ]
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "categories": [
+    {
+      "id": "getting-started",
+      "name": "Getting Started",
+      "description": "Learn the basics of using MobiRides",
+      "icon": "PlayCircle",
+      "color": "bg-blue-500"
+    },
+    {
+      "id": "booking",
+      "name": "Booking & Rides",
+      "description": "Everything about booking and managing rides",
+      "icon": "Car",
+      "color": "bg-green-500"
+    },
+    {
+      "id": "payments",
+      "name": "Payments & Billing",
+      "description": "Payment methods, billing, and refunds",
+      "icon": "CreditCard",
+      "color": "bg-purple-500"
+    },
+    {
+      "id": "safety",
+      "name": "Safety & Security",
+      "description": "Safety features and security guidelines",
+      "icon": "Shield",
+      "color": "bg-red-500"
+    },
+    {
+      "id": "hosting",
+      "name": "Vehicle Hosting",
+      "description": "Guide for vehicle owners and hosts",
+      "icon": "Key",
+      "color": "bg-orange-500"
+    },
+    {
+      "id": "technical",
+      "name": "Technical Issues",
+      "description": "App troubleshooting and technical support",
+      "icon": "Settings",
+      "color": "bg-gray-500"
+    }
+  ],
+  "articles": [
+    {
+      "id": "how-to-book-ride",
+      "title": "How to Book Your First Ride",
+      "category": "getting-started",
+      "tags": ["booking", "beginner", "tutorial"],
+      "readTime": "3 min read",
+      "popularity": 95,
+      "lastUpdated": "2024-01-15",
+      "summary": "Step-by-step guide to booking your first ride with MobiRides",
+      "content": "# How to Book Your First Ride\n\n## Step 1: Download the App\nDownload the MobiRides app from the App Store or Google Play Store.\n\n## Step 2: Create Your Account\n1. Open the app and tap 'Sign Up'\n2. Enter your phone number\n3. Verify with the SMS code\n4. Complete your profile\n\n## Step 3: Set Your Location\n1. Allow location access\n2. Enter your pickup location\n3. Set your destination\n\n## Step 4: Choose Your Vehicle\n1. Browse available vehicles\n2. Check ratings and reviews\n3. Select your preferred option\n\n## Step 5: Confirm and Pay\n1. Review booking details\n2. Choose payment method\n3. Confirm your booking\n\n## Step 6: Meet Your Host\n1. Contact your host if needed\n2. Follow pickup instructions\n3. Enjoy your ride!",
+      "helpful": 142,
+      "notHelpful": 8
+    },
+    {
+      "id": "payment-methods",
+      "title": "Accepted Payment Methods",
+      "category": "payments",
+      "tags": ["payment", "billing", "cards"],
+      "readTime": "2 min read",
+      "popularity": 88,
+      "lastUpdated": "2024-01-10",
+      "summary": "Learn about all available payment options on MobiRides",
+      "content": "# Accepted Payment Methods\n\n## Credit and Debit Cards\n- Visa\n- Mastercard\n- American Express\n\n## Mobile Money\n- Orange Money\n- Mascom MyZaka\n- BTC Smega\n\n## Bank Transfers\n- FNB Botswana\n- Standard Chartered\n- Barclays Bank\n\n## Digital Wallets\n- PayPal (International users)\n- Apple Pay\n- Google Pay\n\n## Cash Payments\nCash payments are accepted for certain bookings. Please check with your host.",
+      "helpful": 98,
+      "notHelpful": 5
+    },
+    {
+      "id": "safety-features",
+      "title": "Safety Features and Guidelines",
+      "category": "safety",
+      "tags": ["safety", "security", "guidelines"],
+      "readTime": "5 min read",
+      "popularity": 92,
+      "lastUpdated": "2024-01-12",
+      "summary": "Comprehensive guide to MobiRides safety features and best practices",
+      "content": "# Safety Features and Guidelines\n\n## Built-in Safety Features\n\n### Real-time Tracking\n- GPS tracking for all rides\n- Share trip details with contacts\n- Live location updates\n\n### Identity Verification\n- All hosts are verified\n- Government ID verification\n- Background checks\n\n### Emergency Features\n- In-app emergency button\n- 24/7 safety hotline\n- Automatic incident detection\n\n## Safety Guidelines\n\n### Before Your Ride\n- Verify vehicle details\n- Check host ratings\n- Share trip details\n\n### During Your Ride\n- Wear seatbelts\n- Follow traffic rules\n- Report any issues\n\n### After Your Ride\n- Rate your experience\n- Report any incidents\n- Provide feedback",
+      "helpful": 156,
+      "notHelpful": 12
+    },
+    {
+      "id": "become-host",
+      "title": "How to Become a Vehicle Host",
+      "category": "hosting",
+      "tags": ["hosting", "earnings", "vehicle"],
+      "readTime": "4 min read",
+      "popularity": 76,
+      "lastUpdated": "2024-01-08",
+      "summary": "Complete guide to listing your vehicle and earning with MobiRides",
+      "content": "# How to Become a Vehicle Host\n\n## Requirements\n\n### Vehicle Requirements\n- Valid registration\n- Comprehensive insurance\n- Regular maintenance\n- Clean and roadworthy\n\n### Host Requirements\n- Valid driver's license\n- Clean driving record\n- 21+ years old\n- Botswana resident\n\n## Getting Started\n\n### Step 1: Application\n1. Complete online application\n2. Upload required documents\n3. Vehicle inspection\n4. Background verification\n\n### Step 2: Setup\n1. Create host profile\n2. Set availability\n3. Upload vehicle photos\n4. Set pricing\n\n### Step 3: Go Live\n1. Activate your listing\n2. Receive bookings\n3. Meet guests\n4. Earn money\n\n## Earnings\n- Keep 70-80% of booking fees\n- Weekly payouts\n- Performance bonuses\n- Referral rewards",
+      "helpful": 89,
+      "notHelpful": 7
+    },
+    {
+      "id": "app-troubleshooting",
+      "title": "App Troubleshooting Guide",
+      "category": "technical",
+      "tags": ["app", "troubleshooting", "technical"],
+      "readTime": "3 min read",
+      "popularity": 65,
+      "lastUpdated": "2024-01-14",
+      "summary": "Solutions for common app issues and technical problems",
+      "content": "# App Troubleshooting Guide\n\n## Common Issues\n\n### App Won't Load\n1. Check internet connection\n2. Force close and restart app\n3. Update to latest version\n4. Restart your device\n\n### GPS/Location Issues\n1. Enable location services\n2. Check app permissions\n3. Restart location services\n4. Clear app cache\n\n### Payment Problems\n1. Verify payment method\n2. Check card details\n3. Contact your bank\n4. Try alternative payment\n\n### Booking Issues\n1. Check availability\n2. Verify pickup location\n3. Clear app cache\n4. Contact support\n\n## Getting Help\n\n### In-App Support\n- Use help center\n- Contact support chat\n- Submit feedback\n\n### Contact Options\n- Phone: +267 123 4567\n- Email: support@mobirides.bw\n- WhatsApp: +267 123 4567",
+      "helpful": 73,
+      "notHelpful": 15
+    },
+    {
+      "id": "cancellation-policy",
+      "title": "Cancellation and Refund Policy",
+      "category": "booking",
+      "tags": ["cancellation", "refund", "policy"],
+      "readTime": "3 min read",
+      "popularity": 82,
+      "lastUpdated": "2024-01-11",
+      "summary": "Understanding cancellation fees and refund policies",
+      "content": "# Cancellation and Refund Policy\n\n## Cancellation Windows\n\n### Free Cancellation\n- Up to 24 hours before pickup\n- No fees applied\n- Full refund processed\n\n### Partial Fee\n- 2-24 hours before pickup\n- 25% cancellation fee\n- 75% refund processed\n\n### Full Fee\n- Less than 2 hours before pickup\n- 100% cancellation fee\n- No refund available\n\n## Refund Process\n\n### Processing Time\n- Credit/Debit cards: 3-5 business days\n- Mobile money: 1-2 business days\n- Bank transfers: 5-7 business days\n\n### Refund Methods\n- Original payment method\n- Account credit (faster option)\n- Alternative payment method\n\n## Special Circumstances\n\n### Weather Conditions\n- Severe weather cancellations\n- Full refund available\n- No cancellation fees\n\n### Vehicle Issues\n- Host cancellations\n- Full refund + credit\n- Alternative vehicle offered",
+      "helpful": 94,
+      "notHelpful": 11
+    }
+  ],
+  "faqs": [
+    {
+      "id": "what-is-mobirides",
+      "question": "What is MobiRides?",
+      "answer": "MobiRides is Botswana's leading peer-to-peer vehicle sharing platform that connects vehicle owners with people who need transportation. We offer a safe, convenient, and affordable way to access vehicles for short-term and long-term use.",
+      "category": "getting-started",
+      "popularity": 98
+    },
+    {
+      "id": "how-much-does-it-cost",
+      "question": "How much does it cost to use MobiRides?",
+      "answer": "Costs vary depending on the vehicle type, duration, and location. Our pricing is transparent with no hidden fees. You'll see the total cost before confirming your booking, including any applicable taxes and fees.",
+      "category": "payments",
+      "popularity": 95
+    },
+    {
+      "id": "is-insurance-included",
+      "question": "Is insurance included with my booking?",
+      "answer": "Yes, all vehicles on MobiRides are covered by comprehensive insurance during your booking period. This includes third-party liability and comprehensive coverage for the vehicle.",
+      "category": "safety",
+      "popularity": 92
+    },
+    {
+      "id": "minimum-age-requirement",
+      "question": "What is the minimum age to book a vehicle?",
+      "answer": "You must be at least 21 years old with a valid driver's license to book a vehicle on MobiRides. Some premium vehicles may have higher age requirements.",
+      "category": "booking",
+      "popularity": 88
+    },
+    {
+      "id": "fuel-policy",
+      "question": "What is the fuel policy?",
+      "answer": "Vehicles are provided with a full tank of fuel and should be returned with the same level. If returned with less fuel, a refueling fee will be charged based on current fuel prices.",
+      "category": "booking",
+      "popularity": 85
+    },
+    {
+      "id": "late-return-fees",
+      "question": "Are there fees for late returns?",
+      "answer": "Yes, late return fees apply if you return the vehicle after the agreed time. The fee is calculated hourly and varies by vehicle type. We recommend extending your booking in advance if you need more time.",
+      "category": "payments",
+      "popularity": 78
+    },
+    {
+      "id": "emergency-support",
+      "question": "What should I do in case of an emergency?",
+      "answer": "In case of an emergency, first ensure everyone's safety, then contact emergency services if needed. Use the in-app emergency button or call our 24/7 emergency hotline at +267 911 MOBI (6624).",
+      "category": "safety",
+      "popularity": 90
+    },
+    {
+      "id": "vehicle-breakdown",
+      "question": "What happens if the vehicle breaks down?",
+      "answer": "If you experience a breakdown, contact us immediately through the app or emergency hotline. We'll arrange roadside assistance or a replacement vehicle at no additional cost to you.",
+      "category": "technical",
+      "popularity": 75
+    }
+  ],
+  "quickActions": [
+    {
+      "id": "contact-support",
+      "title": "Contact Support",
+      "description": "Get help from our support team",
+      "icon": "MessageCircle",
+      "action": "contact",
+      "color": "bg-blue-500"
+    },
+    {
+      "id": "report-issue",
+      "title": "Report an Issue",
+      "description": "Report a problem with your booking",
+      "icon": "AlertTriangle",
+      "action": "report",
+      "color": "bg-red-500"
+    },
+    {
+      "id": "emergency-help",
+      "title": "Emergency Help",
+      "description": "Get immediate emergency assistance",
+      "icon": "Phone",
+      "action": "emergency",
+      "color": "bg-red-600"
+    },
+    {
+      "id": "booking-help",
+      "title": "Booking Help",
+      "description": "Get help with your current booking",
+      "icon": "Calendar",
+      "action": "booking",
+      "color": "bg-green-500"
+    }
+  ],
+  "searchSuggestions": [
+    "How to book a ride",
+    "Payment methods",
+    "Cancellation policy",
+    "Safety features",
+    "Become a host",
+    "Emergency contact",
+    "App not working",
+    "Refund request",
+    "Vehicle breakdown",
+    "Insurance coverage"
+  ]
+}

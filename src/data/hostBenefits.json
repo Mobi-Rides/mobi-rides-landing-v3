@@ -1,0 +1,295 @@
+{
+  "hero": {
+    "title": "Earn More as a MobiRides Host",
+    "subtitle": "Join thousands of drivers earning extra income in Botswana",
+    "description": "Turn your car into a money-making opportunity. Drive when you want, earn what you deserve, and be part of Botswana's leading ride-sharing platform.",
+    "ctaText": "Start Earning Today",
+    "backgroundImage": "https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20African%20driver%20smiling%20in%20modern%20car%20in%20Botswana%20city%20street%20sunny%20day%20professional%20photography&image_size=landscape_16_9"
+  },
+  "earningPotential": {
+    "title": "Your Earning Potential",
+    "subtitle": "Real numbers from real hosts in Botswana",
+    "currency": "BWP",
+    "timeframes": [
+      {
+        "period": "Per Hour",
+        "amount": "45-85",
+        "description": "Average earnings during peak hours",
+        "icon": "Clock"
+      },
+      {
+        "period": "Per Day",
+        "amount": "350-650",
+        "description": "Full-time drivers (8-10 hours)",
+        "icon": "Sun"
+      },
+      {
+        "period": "Per Week",
+        "amount": "2,500-4,500",
+        "description": "Part-time to full-time earnings",
+        "icon": "Calendar"
+      },
+      {
+        "period": "Per Month",
+        "amount": "10,000-18,000",
+        "description": "Dedicated full-time hosts",
+        "icon": "TrendingUp"
+      }
+    ],
+    "factors": [
+      "Peak hours (7-9 AM, 5-7 PM) earn 40% more",
+      "Weekend nights can double your hourly rate",
+      "Special events and holidays boost earnings",
+      "Consistent 5-star ratings unlock bonus opportunities"
+    ]
+  },
+  "benefits": [
+    {
+      "id": "flexible-schedule",
+      "title": "Complete Flexibility",
+      "description": "Drive when you want, where you want. Set your own schedule and work around your life.",
+      "icon": "Clock",
+      "features": [
+        "Choose your own hours",
+        "Work part-time or full-time",
+        "Take breaks whenever needed",
+        "No minimum hour requirements"
+      ]
+    },
+    {
+      "id": "instant-payments",
+      "title": "Instant Payments",
+      "description": "Get paid immediately after each trip. No waiting for weekly payouts.",
+      "icon": "CreditCard",
+      "features": [
+        "Instant cash-out available",
+        "Direct bank transfers",
+        "Mobile money integration",
+        "Transparent fare breakdown"
+      ]
+    },
+    {
+      "id": "safety-first",
+      "title": "Safety & Security",
+      "description": "Your safety is our priority with comprehensive insurance and 24/7 support.",
+      "icon": "Shield",
+      "features": [
+        "Comprehensive insurance coverage",
+        "24/7 emergency support",
+        "GPS tracking for all trips",
+        "Background-checked passengers"
+      ]
+    },
+    {
+      "id": "growth-opportunities",
+      "title": "Growth Opportunities",
+      "description": "Unlock higher earnings with our tier system and special programs.",
+      "icon": "TrendingUp",
+      "features": [
+        "Performance-based bonuses",
+        "VIP host program",
+        "Referral rewards",
+        "Training and development"
+      ]
+    },
+    {
+      "id": "community-support",
+      "title": "Host Community",
+      "description": "Join a supportive community of hosts with exclusive events and networking.",
+      "icon": "Users",
+      "features": [
+        "Host meetups and events",
+        "Peer mentorship program",
+        "Exclusive host forums",
+        "Recognition programs"
+      ]
+    },
+    {
+      "id": "vehicle-maintenance",
+      "title": "Vehicle Support",
+      "description": "Keep your car in top condition with our maintenance partnerships and discounts.",
+      "icon": "Car",
+      "features": [
+        "Discounted maintenance services",
+        "Partner garage network",
+        "Vehicle inspection support",
+        "Fuel efficiency tips"
+      ]
+    }
+  ],
+  "successStories": [
+    {
+      "id": "thabo-gaborone",
+      "name": "Thabo Mokoena",
+      "location": "Gaborone",
+      "image": "https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20African%20man%20smiling%20next%20to%20clean%20sedan%20car%20in%20Gaborone%20Botswana%20portrait%20photography&image_size=square",
+      "duration": "2 years",
+      "monthlyEarnings": "BWP 15,000",
+      "rating": 4.9,
+      "totalTrips": 3420,
+      "quote": "MobiRides changed my life. I started part-time and now support my family full-time. The flexibility lets me attend my children's school events.",
+      "highlights": [
+        "Bought a second car for hosting",
+        "Achieved VIP host status",
+        "Mentors new hosts in Gaborone"
+      ]
+    },
+    {
+      "id": "neo-francistown",
+      "name": "Neo Kgosana",
+      "location": "Francistown",
+      "image": "https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20African%20woman%20smiling%20standing%20next%20to%20modern%20SUV%20in%20Francistown%20Botswana%20portrait%20photography&image_size=square",
+      "duration": "18 months",
+      "monthlyEarnings": "BWP 12,500",
+      "rating": 4.8,
+      "totalTrips": 2150,
+      "quote": "As a single mother, MobiRides gives me the income and flexibility I need. I work while my kids are at school and evenings when they're asleep.",
+      "highlights": [
+        "Top-rated host in Francistown",
+        "Completed over 2000 trips",
+        "Saved for children's education"
+      ]
+    },
+    {
+      "id": "kabo-maun",
+      "name": "Kabo Tsheko",
+      "location": "Maun",
+      "image": "https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20African%20man%20smiling%20with%20pickup%20truck%20in%20Maun%20Botswana%20tourism%20area%20portrait%20photography&image_size=square",
+      "duration": "1 year",
+      "monthlyEarnings": "BWP 8,500",
+      "rating": 4.9,
+      "totalTrips": 890,
+      "quote": "Tourism season in Maun is amazing with MobiRides. I earn extra during peak season and maintain steady income year-round.",
+      "highlights": [
+        "Specializes in airport transfers",
+        "Highest rating in Maun",
+        "Expanded to tourism services"
+      ]
+    }
+  ],
+  "incentives": {
+    "title": "Boost Your Earnings",
+    "subtitle": "Multiple ways to earn more with MobiRides",
+    "programs": [
+      {
+        "name": "Peak Hour Bonuses",
+        "description": "Earn 40% more during rush hours",
+        "amount": "+40%",
+        "icon": "Clock",
+        "color": "blue"
+      },
+      {
+        "name": "Weekend Warriors",
+        "description": "Double rates on Friday and Saturday nights",
+        "amount": "2x Rate",
+        "icon": "Moon",
+        "color": "purple"
+      },
+      {
+        "name": "Referral Rewards",
+        "description": "Earn BWP 500 for each new host you refer",
+        "amount": "BWP 500",
+        "icon": "Users",
+        "color": "green"
+      },
+      {
+        "name": "Streak Bonuses",
+        "description": "Complete 20 trips in a week for bonus",
+        "amount": "BWP 200",
+        "icon": "Target",
+        "color": "orange"
+      },
+      {
+        "name": "5-Star Rewards",
+        "description": "Maintain 4.8+ rating for monthly bonus",
+        "amount": "BWP 300",
+        "icon": "Star",
+        "color": "yellow"
+      },
+      {
+        "name": "Event Surges",
+        "description": "Special rates during major events",
+        "amount": "+60%",
+        "icon": "Calendar",
+        "color": "red"
+      }
+    ]
+  },
+  "comparison": {
+    "title": "Why Choose MobiRides?",
+    "subtitle": "Compare us with traditional employment",
+    "mobirides": {
+      "title": "MobiRides Host",
+      "features": [
+        "Flexible schedule - work when you want",
+        "Unlimited earning potential",
+        "Instant daily payments",
+        "Be your own boss",
+        "Work from anywhere in Botswana",
+        "Performance bonuses and incentives",
+        "Comprehensive insurance coverage",
+        "24/7 support and community"
+      ]
+    },
+    "traditional": {
+      "title": "Traditional Job",
+      "features": [
+        "Fixed 8-5 schedule",
+        "Limited salary growth",
+        "Monthly salary payments",
+        "Report to supervisors",
+        "Commute to office daily",
+        "Annual performance reviews",
+        "Basic medical aid",
+        "Limited support outside hours"
+      ]
+    }
+  },
+  "requirements": {
+    "title": "Quick Requirements Check",
+    "subtitle": "See if you qualify to become a host",
+    "items": [
+      {
+        "requirement": "Valid Botswana driver's license",
+        "description": "Must be valid for at least 2 years",
+        "icon": "FileText"
+      },
+      {
+        "requirement": "Vehicle registration and insurance",
+        "description": "Current registration and comprehensive insurance",
+        "icon": "Car"
+      },
+      {
+        "requirement": "Clean driving record",
+        "description": "No major violations in the past 3 years",
+        "icon": "Shield"
+      },
+      {
+        "requirement": "Smartphone with internet",
+        "description": "Android 6.0+ or iOS 12+ required",
+        "icon": "Smartphone"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Start Earning?",
+    "subtitle": "Join thousands of successful hosts in Botswana",
+    "description": "Complete our simple application process and start earning within 48 hours.",
+    "primaryButton": "Apply to Become a Host",
+    "secondaryButton": "Learn More About Requirements",
+    "features": [
+      "Quick 5-minute application",
+      "Fast approval process",
+      "Free onboarding training",
+      "Start earning immediately"
+    ]
+  },
+  "stats": {
+    "totalHosts": "5,000+",
+    "averageRating": "4.8",
+    "totalTrips": "500,000+",
+    "citiesCovered": "12",
+    "monthlyEarnings": "BWP 12,500",
+    "satisfactionRate": "96%"
+  }
+}

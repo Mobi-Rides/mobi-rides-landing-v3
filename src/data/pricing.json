@@ -1,49 +1,118 @@
 {
-  "basePricing": {
-    "economy": {
-      "dailyRate": 250,
-      "weeklyDiscount": 0.15,
-      "monthlyDiscount": 0.25
+  "pricingTiers": [
+    {
+      "id": "basic",
+      "name": "Basic Ride",
+      "description": "Affordable rides for everyday travel",
+      "basePrice": 15,
+      "pricePerKm": 2.5,
+      "pricePerMinute": 1.2,
+      "features": [
+        "Standard vehicles",
+        "Basic insurance coverage",
+        "24/7 customer support",
+        "GPS tracking"
+      ],
+      "popular": false,
+      "color": "blue"
     },
-    "luxury": {
-      "dailyRate": 650,
-      "weeklyDiscount": 0.12,
-      "monthlyDiscount": 0.20
+    {
+      "id": "comfort",
+      "name": "Comfort Ride",
+      "description": "Enhanced comfort for a better experience",
+      "basePrice": 20,
+      "pricePerKm": 3.2,
+      "pricePerMinute": 1.5,
+      "features": [
+        "Premium vehicles",
+        "Air conditioning",
+        "Leather seats",
+        "Phone charging ports",
+        "Complimentary water",
+        "Priority booking"
+      ],
+      "popular": true,
+      "color": "green"
     },
-    "commercial": {
-      "dailyRate": 500,
-      "weeklyDiscount": 0.18,
-      "monthlyDiscount": 0.30
+    {
+      "id": "premium",
+      "name": "Premium Ride",
+      "description": "Luxury travel with top-tier service",
+      "basePrice": 35,
+      "pricePerKm": 4.8,
+      "pricePerMinute": 2.0,
+      "features": [
+        "Luxury vehicles",
+        "Professional chauffeurs",
+        "Complimentary refreshments",
+        "Wi-Fi connectivity",
+        "Premium insurance",
+        "Concierge service",
+        "Airport priority pickup"
+      ],
+      "popular": false,
+      "color": "purple"
     }
-  },
-  "fees": {
-    "insurance": {
-      "name": "Comprehensive Insurance",
-      "rate": 0.10,
-      "description": "10% of rental value, secured via credit card",
-      "mandatory": true
+  ],
+  "additionalServices": [
+    {
+      "name": "Airport Transfer",
+      "price": 25,
+      "description": "Fixed rate for airport pickups and drop-offs"
     },
-    "deliveryFee": {
-      "name": "Delivery Fee",
-      "withinGaborone": 0,
-      "outsideGaborone": 2.5,
-      "description": "Free delivery within Gaborone, P2.50/km outside"
+    {
+      "name": "Waiting Time",
+      "price": 2,
+      "unit": "per minute",
+      "description": "Additional charge for waiting beyond 5 minutes"
     },
-    "crossBorderFee": {
-      "name": "Cross-Border Authorization",
-      "amount": 150,
-      "description": "Required for travel to neighboring countries"
+    {
+      "name": "Pet Transport",
+      "price": 10,
+      "description": "Additional fee for traveling with pets"
+    },
+    {
+      "name": "Extra Luggage",
+      "price": 5,
+      "description": "Fee for oversized or extra luggage"
     }
+  ],
+  "discounts": [
+    {
+      "name": "Student Discount",
+      "percentage": 15,
+      "description": "Valid student ID required",
+      "conditions": "Available Monday-Friday, 6AM-6PM"
+    },
+    {
+      "name": "Senior Citizen",
+      "percentage": 20,
+      "description": "For passengers 65 years and older",
+      "conditions": "Valid ID required"
+    },
+    {
+      "name": "Frequent Rider",
+      "percentage": 10,
+      "description": "After 20 rides in a month",
+      "conditions": "Automatically applied"
+    }
+  ],
+  "currency": "BWP",
+  "currencySymbol": "P",
+  "taxRate": 0.12,
+  "minimumFare": 12,
+  "cancellationFee": 8,
+  "peakHours": {
+    "multiplier": 1.5,
+    "times": [
+      { "start": "07:00", "end": "09:00", "days": ["monday", "tuesday", "wednesday", "thursday", "friday"] },
+      { "start": "17:00", "end": "19:00", "days": ["monday", "tuesday", "wednesday", "thursday", "friday"] },
+      { "start": "20:00", "end": "02:00", "days": ["friday", "saturday"] }
+    ]
   },
-  "ageRequirements": {
-    "minimumAge": 25,
-    "minimumExperience": 2,
-    "description": "Drivers must be at least 25 years old with 2+ years driving experience"
-  },
-  "guarantees": [
-    "No hidden fees",
-    "Transparent pricing",
-    "All-inclusive rates",
-    "24/7 support included"
-  ]
+  "estimateFactors": {
+    "trafficMultiplier": 1.2,
+    "weatherMultiplier": 1.1,
+    "eventMultiplier": 1.3
+  }
 }

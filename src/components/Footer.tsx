@@ -2,36 +2,33 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { MapPin, Mail, Phone, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const footerLinks = {
     Company: [
-      { name: 'About Us', href: '#about' },
-      { name: 'How It Works', href: '#how-it-works' },
-      { name: 'Safety', href: '#safety' },
-      { name: 'Careers', href: '#careers' },
-      { name: 'Press', href: '#press' }
+      { name: 'About Us', href: '/about' },
+      { name: 'How It Works', href: '/#how-it-works' },
+      { name: 'Partners', href: '/partners' }
     ],
     Renters: [
-      { name: 'Find a Car', href: '#find-car' },
-      { name: 'Pricing', href: '#pricing' },
-      { name: 'Insurance', href: '#insurance' },
-      { name: 'Support', href: '#support' },
-      { name: 'Mobile App', href: '#app' }
+      { name: 'Find a Car', href: '/find-ride' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Insurance', href: '/insurance' },
+      { name: 'Mobile App', href: '/#app' }
     ],
     Hosts: [
-      { name: 'List Your Car', href: '#list-car' },
-      { name: 'Host Requirements', href: '#requirements' },
-      { name: 'Earnings Calculator', href: '#earnings' },
-      { name: 'Host Protection', href: '#protection' },
-      { name: 'Host Community', href: '#community' }
+      { name: 'List Your Car', href: '/host' },
+      { name: 'Host Requirements', href: '/host-requirements' },
+      { name: 'Earnings Calculator', href: '/#earnings' },
+      { name: 'Host Protection', href: '/host-protection' },
+      { name: 'Host Community', href: '/host-community' }
     ],
     Resources: [
-      { name: 'Blog', href: '#blog' },
-      { name: 'Help Center', href: '#help' },
-      { name: 'Travel Guides', href: '#guides' },
-      { name: 'Business Solutions', href: '#business' },
-      { name: 'API Documentation', href: '#api' }
+      { name: 'Blog', href: '/blog' },
+      { name: 'Travel Guides', href: '/travel-guides' },
+      { name: 'Business Solutions', href: '/business-solutions' },
+      { name: 'API Documentation', href: '/api-docs' }
     ]
   };
 
@@ -102,12 +99,21 @@ const Footer = () => {
                 <ul className="space-y-3">
                   {links.map((link) => (
                     <li key={link.name}>
-                      <a
-                        href={link.href}
-                        className="text-gray-400 hover:text-white transition-colors text-sm"
-                      >
-                        {link.name}
-                      </a>
+                      {link.href.startsWith('/') ? (
+                        <Link
+                          to={link.href}
+                          className="text-gray-400 hover:text-white transition-colors text-sm"
+                        >
+                          {link.name}
+                        </Link>
+                      ) : (
+                        <a
+                          href={link.href}
+                          className="text-gray-400 hover:text-white transition-colors text-sm"
+                        >
+                          {link.name}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -127,12 +133,21 @@ const Footer = () => {
                     <ul className="space-y-3">
                       {links.map((link) => (
                         <li key={link.name}>
-                          <a
-                            href={link.href}
-                            className="text-gray-400 hover:text-white transition-colors text-sm block py-1"
-                          >
-                            {link.name}
-                          </a>
+                          {link.href.startsWith('/') ? (
+                            <Link
+                              to={link.href}
+                              className="text-gray-400 hover:text-white transition-colors text-sm block py-1"
+                            >
+                              {link.name}
+                            </Link>
+                          ) : (
+                            <a
+                              href={link.href}
+                              className="text-gray-400 hover:text-white transition-colors text-sm block py-1"
+                            >
+                              {link.name}
+                            </a>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -154,13 +169,7 @@ const Footer = () => {
               © 2024 MobiRides. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-6">
-              <a href="#privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </a>
-              <a href="#cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <a href="/#cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
               </a>
             </div>

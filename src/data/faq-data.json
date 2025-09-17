@@ -1,0 +1,187 @@
+{
+  "general": [
+    {
+      "id": "faq-gen-001",
+      "question": "What is MobiRides?",
+      "answer": "MobiRides is Botswana's leading car sharing platform that connects car owners with people who need temporary access to vehicles. Our platform allows you to rent cars by the hour, day, or longer periods directly from local car owners, providing a convenient and affordable alternative to traditional car rental services.",
+      "category": "About MobiRides",
+      "tags": ["basics", "platform", "car sharing"]
+    },
+    {
+      "id": "faq-gen-002",
+      "question": "How does MobiRides work?",
+      "answer": "It's simple! Download our mobile app, create an account, and browse available cars in your area. Once you find a car you like, book it instantly through the app. You'll receive pickup instructions and can unlock the car using our app. After your trip, return the car to the designated location and end your booking through the app.",
+      "category": "How It Works",
+      "tags": ["process", "booking", "mobile app"]
+    },
+    {
+      "id": "faq-gen-003",
+      "question": "Where is MobiRides available?",
+      "answer": "MobiRides is currently available in Gaborone, Francistown, and Maun. We're rapidly expanding across Botswana and plan to launch in additional cities throughout 2024. We're also planning expansion into Namibia and Zambia by the end of 2024.",
+      "category": "Availability",
+      "tags": ["locations", "cities", "expansion"]
+    },
+    {
+      "id": "faq-gen-004",
+      "question": "What are the requirements to use MobiRides?",
+      "answer": "To rent a car through MobiRides, you must be at least 21 years old, have a valid Botswana or international driving license, and pass our verification process. You'll also need a valid credit card or mobile money account for payment.",
+      "category": "Requirements",
+      "tags": ["age", "license", "verification"]
+    },
+    {
+      "id": "faq-gen-005",
+      "question": "How much does it cost to use MobiRides?",
+      "answer": "Pricing varies by vehicle type, location, and rental duration. Our rates typically start from P50 per hour or P300 per day, plus fuel. All bookings include comprehensive insurance coverage at no extra cost. You can see exact pricing for each vehicle in our mobile app before booking.",
+      "category": "Pricing",
+      "tags": ["cost", "rates", "pricing"]
+    }
+  ],
+  "safety": [
+    {
+      "id": "faq-safety-001",
+      "question": "Is MobiRides safe to use?",
+      "answer": "Yes, safety is our top priority. All vehicles undergo regular safety inspections, and every user goes through a comprehensive verification process. We provide full insurance coverage, 24/7 roadside assistance, and real-time trip monitoring for added security.",
+      "category": "Safety Measures",
+      "tags": ["safety", "security", "verification"]
+    },
+    {
+      "id": "faq-safety-002",
+      "question": "What insurance coverage is provided?",
+      "answer": "Every MobiRides trip includes comprehensive insurance coverage up to P2 million in liability, full vehicle damage protection, and personal accident insurance. This coverage is provided through our partnerships with leading local insurers and is included at no additional cost.",
+      "category": "Insurance",
+      "tags": ["insurance", "coverage", "protection"]
+    },
+    {
+      "id": "faq-safety-003",
+      "question": "What happens if there's an accident?",
+      "answer": "In case of an accident, immediately contact emergency services if needed, then report the incident through our app or 24/7 support line. Our insurance partners will handle the claims process, and we provide full support throughout. Most claims are resolved within 48 hours.",
+      "category": "Accidents",
+      "tags": ["accidents", "claims", "emergency"]
+    },
+    {
+      "id": "faq-safety-004",
+      "question": "How are vehicles maintained and inspected?",
+      "answer": "All vehicles on our platform undergo regular safety inspections every 6 months or 10,000 km, whichever comes first. Car owners must maintain valid insurance, registration, and roadworthy certificates. We also conduct random spot checks to ensure vehicle quality.",
+      "category": "Vehicle Maintenance",
+      "tags": ["maintenance", "inspection", "quality"]
+    },
+    {
+      "id": "faq-safety-005",
+      "question": "What safety features are built into the app?",
+      "answer": "Our app includes real-time GPS tracking, emergency contact features, trip monitoring, and instant communication with our support team. We also have a 24/7 roadside assistance service and can remotely disable vehicles if necessary for safety reasons.",
+      "category": "App Safety",
+      "tags": ["app features", "GPS", "monitoring"]
+    }
+  ],
+  "hosting": [
+    {
+      "id": "faq-host-001",
+      "question": "How can I list my car on MobiRides?",
+      "answer": "Listing your car is easy! Download our app, create a host account, and provide details about your vehicle including photos, availability, and pricing. After a quick verification process and vehicle inspection, your car will be live on the platform and ready to earn money.",
+      "category": "Getting Started",
+      "tags": ["listing", "hosting", "verification"]
+    },
+    {
+      "id": "faq-host-002",
+      "question": "How much can I earn by hosting my car?",
+      "answer": "Earnings vary based on your car type, location, and availability. On average, hosts earn between P3,000 to P8,000 per month. Popular vehicles in high-demand areas can earn even more. You set your own rates and availability schedule.",
+      "category": "Earnings",
+      "tags": ["income", "earnings", "rates"]
+    },
+    {
+      "id": "faq-host-003",
+      "question": "What are the requirements for hosting?",
+      "answer": "Your vehicle must be less than 10 years old, have valid registration and insurance, pass our safety inspection, and be in good condition. You must be the legal owner or have permission to rent the vehicle, and maintain it according to our standards.",
+      "category": "Host Requirements",
+      "tags": ["requirements", "vehicle age", "condition"]
+    },
+    {
+      "id": "faq-host-004",
+      "question": "How do I get paid?",
+      "answer": "Payments are processed automatically after each completed trip. You'll receive 75% of the rental fee (after MobiRides' 25% service fee) directly to your bank account or mobile money wallet within 24-48 hours of trip completion.",
+      "category": "Payments",
+      "tags": ["payment", "fees", "bank transfer"]
+    },
+    {
+      "id": "faq-host-005",
+      "question": "What if my car gets damaged?",
+      "answer": "All rentals are covered by comprehensive insurance. If damage occurs during a trip, report it immediately through the app. Our insurance partners will assess the damage and handle repairs. You're protected against theft, accidents, and vandalism during active rentals.",
+      "category": "Protection",
+      "tags": ["damage", "insurance", "protection"]
+    }
+  ],
+  "booking": [
+    {
+      "id": "faq-book-001",
+      "question": "How do I book a car?",
+      "answer": "Open the MobiRides app, enter your location and desired rental period, browse available cars, select your preferred vehicle, and complete the booking with your payment method. You'll receive instant confirmation and pickup instructions.",
+      "category": "Booking Process",
+      "tags": ["booking", "process", "mobile app"]
+    },
+    {
+      "id": "faq-book-002",
+      "question": "Can I cancel my booking?",
+      "answer": "Yes, you can cancel your booking through the app. Free cancellation is available up to 2 hours before your trip starts. Cancellations within 2 hours may incur a small fee. No-shows are charged the full amount.",
+      "category": "Cancellation",
+      "tags": ["cancellation", "refund", "policy"]
+    },
+    {
+      "id": "faq-book-003",
+      "question": "How do I unlock and start the car?",
+      "answer": "Once you arrive at the pickup location, use the MobiRides app to unlock the car. The keys will be inside the vehicle in a secure lockbox or key holder. Follow the specific instructions provided for each vehicle in your booking confirmation.",
+      "category": "Vehicle Access",
+      "tags": ["unlock", "keys", "access"]
+    },
+    {
+      "id": "faq-book-004",
+      "question": "What payment methods do you accept?",
+      "answer": "We accept major credit cards (Visa, Mastercard), debit cards, and mobile money payments (Orange Money, Mascom MyZaka). Payment is processed automatically when you complete your booking.",
+      "category": "Payment",
+      "tags": ["payment methods", "credit card", "mobile money"]
+    },
+    {
+      "id": "faq-book-005",
+      "question": "Can I extend my rental period?",
+      "answer": "Yes, you can extend your rental through the app if the car is available for the additional time. Extensions are charged at the same hourly or daily rate. Make sure to extend before your original booking ends to avoid late fees.",
+      "category": "Extensions",
+      "tags": ["extension", "additional time", "rates"]
+    }
+  ],
+  "support": [
+    {
+      "id": "faq-support-001",
+      "question": "How can I contact customer support?",
+      "answer": "You can reach our customer support team 24/7 through the in-app chat, by calling +267 123 4567, or emailing support@mobirides.com. We also have WhatsApp support available at +267 123 4568.",
+      "category": "Contact",
+      "tags": ["support", "contact", "24/7"]
+    },
+    {
+      "id": "faq-support-002",
+      "question": "What languages does support offer?",
+      "answer": "Our customer support team provides assistance in English and Setswana. We're working on adding support for additional local languages to better serve all our users across Botswana.",
+      "category": "Languages",
+      "tags": ["languages", "English", "Setswana"]
+    },
+    {
+      "id": "faq-support-003",
+      "question": "What if I have a problem during my trip?",
+      "answer": "If you encounter any issues during your trip, immediately contact our 24/7 support team through the app's emergency button or call our hotline. We provide roadside assistance, emergency support, and can help resolve any problems quickly.",
+      "category": "Trip Issues",
+      "tags": ["trip problems", "emergency", "roadside assistance"]
+    },
+    {
+      "id": "faq-support-004",
+      "question": "How do I report a problem with a vehicle?",
+      "answer": "Report vehicle issues immediately through the app's report feature or contact support. Include photos and detailed descriptions of the problem. We'll investigate promptly and take appropriate action, including removing unsafe vehicles from the platform.",
+      "category": "Vehicle Issues",
+      "tags": ["vehicle problems", "reporting", "safety"]
+    },
+    {
+      "id": "faq-support-005",
+      "question": "How long does it take to resolve support tickets?",
+      "answer": "We aim to respond to all support inquiries within 2 hours. Emergency issues are handled immediately, while general inquiries are typically resolved within 24 hours. Complex issues may take longer, but we'll keep you updated throughout the process.",
+      "category": "Response Times",
+      "tags": ["response time", "resolution", "tickets"]
+    }
+  ]
+}

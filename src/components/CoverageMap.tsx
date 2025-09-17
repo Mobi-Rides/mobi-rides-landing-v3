@@ -28,11 +28,13 @@ interface ServiceArea {
   id: string;
   name: string;
   type: string;
-  coordinates: number[];
+  coordinates: [number, number];
   coverage: string;
   deliveryFee: number;
   description: string;
-  landmarks: string[];
+  landmarks?: string[];
+  estimatedTime?: number;
+  isActive?: boolean;
 }
 
 interface CoverageMapProps {
@@ -79,7 +81,28 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
     'mapbox://styles/mapbox/outdoors-v12'
   ];
 
-  const serviceAreas = useMemo(() => locationsData.serviceAreas, []);
+  const serviceAreas = useMemo(() => {
+    // Extract service areas from all current cities
+    const allServiceAreas: ServiceArea[] = [];
+    
+    locationsData.currentCities?.forEach((city, cityIndex) => {
+      city.serviceAreas?.forEach((areaName, areaIndex) => {
+        allServiceAreas.push({
+          id: `${city.id}-${areaIndex}`,
+          name: areaName,
+          description: `Service area in ${city.name}`,
+          coordinates: [city.coordinates.lng, city.coordinates.lat] as [number, number],
+          coverage: city.coverage > 90 ? 'full' : city.coverage > 70 ? 'limited' : 'basic',
+          type: 'city',
+          deliveryFee: 15 + (cityIndex * 5), // Mock delivery fee
+          estimatedTime: city.averageWaitTime || 10,
+          isActive: city.status === 'active'
+        });
+      });
+    });
+    
+    return allServiceAreas;
+  }, []);
 
   // Computed filtered and sorted areas
   const filteredAndSortedAreas = useMemo(() => {
@@ -329,7 +352,7 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
 
       // Create new markers
       serviceAreas.forEach(area => {
-        const [lat, lng] = area.coordinates.length >= 2 ? area.coordinates : [0, 0];
+        const [lng, lat] = area.coordinates.length >= 2 ? area.coordinates : [0, 0];
         
         // Create marker element
         const markerElement = document.createElement('div');

@@ -1,97 +1,344 @@
 {
-  "serviceAreas": [
+  "currentCities": [
     {
       "id": "gaborone",
       "name": "Gaborone",
-      "type": "city",
-      "coordinates": [-24.653257, 25.906792],
-      "coverage": "full",
-      "deliveryFee": 0,
-      "description": "Capital city with full service coverage and free delivery",
-      "landmarks": ["Sir Seretse Khama International Airport", "Government Enclave", "Riverwalk Mall"]
+      "region": "South-East District",
+      "population": 246325,
+      "status": "active",
+      "launchDate": "2023-01-15",
+      "coverage": 95,
+      "averageWaitTime": 8,
+      "coordinates": {
+        "lat": -24.6282,
+        "lng": 25.9231
+      },
+      "serviceAreas": [
+        "City Centre",
+        "Block 6",
+        "Block 7",
+        "Block 8",
+        "Block 9",
+        "Block 10",
+        "Broadhurst",
+        "Extension 2",
+        "Extension 4",
+        "Extension 6",
+        "Extension 9",
+        "Extension 10",
+        "Extension 11",
+        "Extension 12",
+        "Extension 14",
+        "Extension 15",
+        "Extension 16",
+        "Extension 17",
+        "Extension 18",
+        "Extension 20",
+        "Gaborone West",
+        "Mogoditshane",
+        "Tlokweng",
+        "Phakalane",
+        "Kumakwane"
+      ],
+      "landmarks": [
+        "Sir Seretse Khama International Airport",
+        "University of Botswana",
+        "Gaborone Game Reserve",
+        "Three Dikgosi Monument",
+        "National Museum",
+        "Main Mall",
+        "Riverwalk Mall",
+        "Game City Mall",
+        "Rail Park Mall"
+      ],
+      "stats": {
+        "totalRides": 125000,
+        "activeDrivers": 450,
+        "customerSatisfaction": 4.7
+      }
     },
     {
       "id": "francistown",
       "name": "Francistown",
-      "type": "city",
-      "coordinates": [-21.173611, 27.512501],
-      "coverage": "full",
-      "deliveryFee": 2.5,
-      "description": "Second largest city with comprehensive vehicle selection",
-      "landmarks": ["Francistown Airport", "Blue Jacket Street", "Tachila Nature Reserve"]
+      "region": "North-East District",
+      "population": 103417,
+      "status": "active",
+      "launchDate": "2023-03-20",
+      "coverage": 85,
+      "averageWaitTime": 12,
+      "coordinates": {
+        "lat": -21.1699,
+        "lng": 27.5084
+      },
+      "serviceAreas": [
+        "City Centre",
+        "Aerodrome",
+        "Bluetown",
+        "Donga",
+        "Extension 2",
+        "Extension 4",
+        "Gerald Estate",
+        "Kgaphamadi",
+        "Monarch",
+        "Newtown",
+        "Tati Siding",
+        "Tatitown"
+      ],
+      "landmarks": [
+        "Francistown Airport",
+        "Supa Ngwao Museum",
+        "Tachila Nature Reserve",
+        "Francistown Stadium",
+        "Galo Mall",
+        "Nzano Mall"
+      ],
+      "stats": {
+        "totalRides": 45000,
+        "activeDrivers": 180,
+        "customerSatisfaction": 4.5
+      }
     },
     {
       "id": "maun",
       "name": "Maun",
-      "type": "town",
-      "coordinates": [-20.0, 23.4167],
-      "coverage": "limited",
-      "deliveryFee": 5.0,
-      "description": "Gateway to Okavango Delta, specialized safari vehicles available",
-      "landmarks": ["Maun Airport", "Okavango Delta", "Moremi Game Reserve"]
-    },
+      "region": "North-West District",
+      "population": 65000,
+      "status": "active",
+      "launchDate": "2023-06-10",
+      "coverage": 75,
+      "averageWaitTime": 15,
+      "coordinates": {
+        "lat": -19.9835,
+        "lng": 23.4164
+      },
+      "serviceAreas": [
+        "Boseja",
+        "Disaneng",
+        "Maun Airport Area",
+        "Matlapaneng",
+        "Sedie",
+        "Sexaxa",
+        "Shorobe Road",
+        "Thamalakane"
+      ],
+      "landmarks": [
+        "Maun Airport",
+        "Okavango Delta",
+        "Nhabe Museum",
+        "Maun Sports Complex",
+        "Thamalakane River Lodge"
+      ],
+      "stats": {
+        "totalRides": 28000,
+        "activeDrivers": 95,
+        "customerSatisfaction": 4.6
+      }
+    }
+  ],
+  "upcomingCities": [
     {
       "id": "kasane",
       "name": "Kasane",
-      "type": "town",
-      "coordinates": [-17.8167, 25.15],
-      "coverage": "limited",
-      "deliveryFee": 7.5,
-      "description": "Chobe National Park access point, 4WD vehicles recommended",
-      "landmarks": ["Chobe National Park", "Kasane Airport", "Chobe River"]
+      "region": "Chobe District",
+      "population": 9250,
+      "status": "planned",
+      "expectedLaunch": "2024-04-15",
+      "coordinates": {
+        "lat": -17.8145,
+        "lng": 25.1503
+      },
+      "targetCoverage": 80,
+      "estimatedDrivers": 25,
+      "keyFeatures": [
+        "Tourism-focused service",
+        "Airport transfers",
+        "Safari lodge connections",
+        "Border crossing support"
+      ]
     },
     {
       "id": "palapye",
       "name": "Palapye",
-      "type": "town",
-      "coordinates": [-22.55, 27.1167],
-      "coverage": "basic",
-      "deliveryFee": 3.0,
-      "description": "Central location with basic vehicle selection",
-      "landmarks": ["Palapye Museum", "Morupule Coal Mine", "A1 Highway"]
+      "region": "Central District",
+      "population": 35000,
+      "status": "planned",
+      "expectedLaunch": "2024-06-01",
+      "coordinates": {
+        "lat": -22.5436,
+        "lng": 27.1247
+      },
+      "targetCoverage": 70,
+      "estimatedDrivers": 45,
+      "keyFeatures": [
+        "Railway station connections",
+        "Mining area service",
+        "Inter-city travel hub"
+      ]
+    },
+    {
+      "id": "serowe",
+      "name": "Serowe",
+      "region": "Central District",
+      "population": 47419,
+      "status": "planned",
+      "expectedLaunch": "2024-08-15",
+      "coordinates": {
+        "lat": -22.3928,
+        "lng": 26.7108
+      },
+      "targetCoverage": 75,
+      "estimatedDrivers": 60,
+      "keyFeatures": [
+        "Historical sites access",
+        "Educational institutions",
+        "Government offices"
+      ]
+    },
+    {
+      "id": "lobatse",
+      "name": "Lobatse",
+      "region": "South-East District",
+      "population": 30883,
+      "status": "planned",
+      "expectedLaunch": "2024-10-01",
+      "coordinates": {
+        "lat": -25.2272,
+        "lng": 25.6847
+      },
+      "targetCoverage": 85,
+      "estimatedDrivers": 40,
+      "keyFeatures": [
+        "Industrial area coverage",
+        "Court complex access",
+        "Border town services"
+      ]
     }
   ],
-  "crossBorderDestinations": [
+  "serviceZones": {
+    "urban": {
+      "name": "Urban Areas",
+      "description": "City centers and high-density residential areas",
+      "coverage": "24/7 service",
+      "averageWaitTime": "5-10 minutes",
+      "features": [
+        "High driver density",
+        "Premium vehicle options",
+        "Express booking",
+        "Corporate accounts"
+      ]
+    },
+    "suburban": {
+      "name": "Suburban Areas",
+      "description": "Residential extensions and developing areas",
+      "coverage": "5:00 AM - 11:00 PM",
+      "averageWaitTime": "8-15 minutes",
+      "features": [
+        "Standard service",
+        "School run specials",
+        "Shopping center hubs"
+      ]
+    },
+    "airport": {
+      "name": "Airport Zones",
+      "description": "Airport pickup and drop-off areas",
+      "coverage": "24/7 service",
+      "averageWaitTime": "3-8 minutes",
+      "features": [
+        "Dedicated pickup areas",
+        "Flight tracking",
+        "Luggage assistance",
+        "Premium vehicles available"
+      ]
+    },
+    "tourism": {
+      "name": "Tourism Areas",
+      "description": "Hotels, lodges, and tourist attractions",
+      "coverage": "6:00 AM - 10:00 PM",
+      "averageWaitTime": "10-20 minutes",
+      "features": [
+        "Multilingual drivers",
+        "Tour guide partnerships",
+        "Scenic route options",
+        "Cultural site access"
+      ]
+    }
+  },
+  "expansionPlan": {
+    "phase1": {
+      "timeline": "Q2 2024",
+      "cities": ["Kasane", "Palapye"],
+      "focus": "Tourism and transport hubs",
+      "investment": "2.5M BWP",
+      "expectedDrivers": 70
+    },
+    "phase2": {
+      "timeline": "Q3-Q4 2024",
+      "cities": ["Serowe", "Lobatse"],
+      "focus": "Government and industrial centers",
+      "investment": "3.2M BWP",
+      "expectedDrivers": 100
+    },
+    "phase3": {
+      "timeline": "2025",
+      "cities": ["Molepolole", "Kanye", "Mochudi"],
+      "focus": "Rural connectivity",
+      "investment": "4.8M BWP",
+      "expectedDrivers": 150
+    }
+  },
+  "specialServices": [
     {
-      "country": "South Africa",
-      "popularDestinations": ["Johannesburg", "Cape Town", "Pretoria"],
-      "requirements": ["Cross-border authorization", "Valid passport", "International driving permit"],
-      "additionalFee": 150
+      "name": "Airport Express",
+      "description": "Direct airport transfers with premium vehicles",
+      "availableIn": ["gaborone", "francistown", "maun"],
+      "features": ["Flight tracking", "Meet & greet", "Luggage assistance"]
     },
     {
-      "country": "Namibia",
-      "popularDestinations": ["Windhoek", "Swakopmund", "Etosha National Park"],
-      "requirements": ["Cross-border authorization", "Valid passport", "International driving permit"],
-      "additionalFee": 150
+      "name": "Safari Shuttle",
+      "description": "Specialized transport to game reserves and lodges",
+      "availableIn": ["maun", "kasane"],
+      "features": ["4WD vehicles", "Game viewing stops", "Local guides"]
     },
     {
-      "country": "Zambia",
-      "popularDestinations": ["Lusaka", "Livingstone", "Victoria Falls"],
-      "requirements": ["Cross-border authorization", "Valid passport", "International driving permit", "Yellow fever certificate"],
-      "additionalFee": 200
+      "name": "Business Connect",
+      "description": "Corporate transportation solutions",
+      "availableIn": ["gaborone", "francistown"],
+      "features": ["Account billing", "Priority booking", "Executive vehicles"]
     },
     {
-      "country": "Zimbabwe",
-      "popularDestinations": ["Harare", "Bulawayo", "Victoria Falls"],
-      "requirements": ["Cross-border authorization", "Valid passport", "International driving permit"],
-      "additionalFee": 175
+      "name": "Medical Transport",
+      "description": "Non-emergency medical transportation",
+      "availableIn": ["gaborone", "francistown", "maun"],
+      "features": ["Wheelchair accessible", "Medical equipment space", "Trained drivers"]
     }
   ],
-  "fuelStations": [
+  "coverage": {
+    "totalArea": "15,000 km²",
+    "populationCovered": "450,000+",
+    "averageCoverage": "85%",
+    "totalDrivers": 725,
+    "totalRides": "198,000+"
+  },
+  "partnerships": [
     {
-      "name": "Engen",
-      "locations": ["Gaborone", "Francistown", "Maun", "Kasane"],
-      "hours": "24/7 in major cities, 6AM-10PM in towns"
+      "name": "Botswana Tourism Organisation",
+      "type": "Tourism",
+      "description": "Official transport partner for tourism promotion"
     },
     {
-      "name": "Shell",
-      "locations": ["Gaborone", "Francistown", "Palapye"],
-      "hours": "6AM-10PM"
+      "name": "University of Botswana",
+      "type": "Education",
+      "description": "Student transportation services and discounts"
     },
     {
-      "name": "Total",
-      "locations": ["Gaborone", "Francistown", "Maun"],
-      "hours": "6AM-9PM"
+      "name": "Sir Seretse Khama International Airport",
+      "type": "Transportation Hub",
+      "description": "Authorized airport pickup and drop-off services"
+    },
+    {
+      "name": "Major Hotels & Lodges",
+      "type": "Hospitality",
+      "description": "Guest transportation and concierge services"
     }
   ]
 }
