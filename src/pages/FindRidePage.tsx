@@ -35,8 +35,10 @@ const FindRidePage: React.FC = () => {
     const filtered = vehicles.filter(vehicle => {
       const matchesCategory = selectedCategory === 'all' || vehicle.vehicle_type === selectedCategory;
       const matchesLocation = searchLocation === '' || 
-        locationsData.serviceAreas.some(area => 
-          area.name.toLowerCase().includes(searchLocation.toLowerCase())
+        locationsData.currentCities.some(city => 
+          city.serviceAreas.some(area => 
+            area.toLowerCase().includes(searchLocation.toLowerCase())
+          ) || city.name.toLowerCase().includes(searchLocation.toLowerCase())
         ) || vehicle.location?.toLowerCase().includes(searchLocation.toLowerCase());
       
       let matchesPrice = true;
@@ -291,7 +293,7 @@ const FindRidePage: React.FC = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold text-blue-600 mb-2">
-                  {tier.price}
+                  P{tier.basePrice}
                 </div>
                 <p className="text-sm text-gray-600">{tier.description}</p>
                 <div className="mt-3">
@@ -311,11 +313,13 @@ const FindRidePage: React.FC = () => {
             Our Guarantee
           </h3>
           <ul className="text-sm text-blue-800 space-y-1">
-            {pricingData.guarantees?.map((guarantee, index) => (
+            {[
+              "Quality Guarantee - We ensure reliable and safe transportation services",
+              "24/7 Customer Support",
+              "No Hidden Fees Policy"
+            ].map((guarantee, index) => (
               <li key={index}>✓ {guarantee}</li>
-            )) || [
-              <li key="default">✓ Quality Guarantee - We ensure reliable and safe transportation services</li>
-            ]}
+            ))}
           </ul>
         </div>
       </SectionWrapper>

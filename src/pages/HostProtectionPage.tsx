@@ -214,7 +214,7 @@ const HostProtectionPage: React.FC = () => {
               ].map(({ id, label, icon: Icon }) => (
                 <button
                   key={id}
-                  onClick={() => setActiveTab(id as 'overview' | 'coverage' | 'claims' | 'support')}
+                  onClick={() => setActiveTab(id as 'features' | 'protocols' | 'support')}
                   className={`py-4 px-1 border-b-2 font-medium text-sm flex items-center space-x-2 ${
                     activeTab === id
                       ? 'border-blue-500 text-blue-600'

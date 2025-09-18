@@ -7,6 +7,7 @@ interface PageLayoutProps {
   children: React.ReactNode;
   title: string;
   description: string;
+  keywords?: string;
   canonical?: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -19,6 +20,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   children,
   title,
   description,
+  keywords,
   canonical,
   ogTitle,
   ogDescription,
@@ -31,6 +33,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
+        {keywords && <meta name="keywords" content={keywords} />}
         {canonical && <link rel="canonical" href={canonical} />}
         
         {/* Open Graph tags */}
