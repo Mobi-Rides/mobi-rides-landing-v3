@@ -2,72 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { MapPin, Mail, Phone, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-const Footer = () => {
-  const footerLinks = {
-    Company: [{
-      name: 'About Us',
-      href: '#about'
-    }, {
-      name: 'How It Works',
-      href: '#how-it-works'
-    }, {
-      name: 'Safety',
-      href: '#safety'
-    }, {
-      name: 'Careers',
-      href: '#careers'
-    }, {
-      name: 'Press',
-      href: '#press'
-    }],
-    Renters: [{
-      name: 'Find a Car',
-      href: '#find-car'
-    }, {
-      name: 'Pricing',
-      href: '#pricing'
-    }, {
-      name: 'Insurance',
-      href: '#insurance'
-    }, {
-      name: 'Support',
-      href: '#support'
-    }, {
-      name: 'Mobile App',
-      href: '#app'
-    }],
-    Hosts: [{
-      name: 'List Your Car',
-      href: '#list-car'
-    }, {
-      name: 'Host Requirements',
-      href: '#requirements'
-    }, {
-      name: 'Earnings Calculator',
-      href: '#earnings'
-    }, {
-      name: 'Host Protection',
-      href: '#protection'
-    }, {
-      name: 'Host Community',
-      href: '#community'
-    }],
-    Resources: [{
-      name: 'Blog',
-      href: '#blog'
-    }, {
-      name: 'Help Center',
-      href: '#help'
-    }, {
-      name: 'Travel Guides',
-      href: '#guides'
-    }, {
-      name: 'Business Solutions',
-      href: '#business'
-    }, {
-      name: 'API Documentation',
-      href: '#api'
-    }]
+
   };
   const socialLinks = [{
     name: 'Facebook',
@@ -131,11 +66,6 @@ const Footer = () => {
             {Object.entries(footerLinks).map(([category, links]) => <div key={category}>
                 <h3 className="font-semibold text-lg mb-6">{category}</h3>
                 <ul className="space-y-3">
-                  {links.map(link => <li key={link.name}>
-                      <a href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
-                        {link.name}
-                      </a>
-                    </li>)}
                 </ul>
               </div>)}
           </div>
@@ -149,11 +79,6 @@ const Footer = () => {
                   </AccordionTrigger>
                   <AccordionContent className="pb-4">
                     <ul className="space-y-3">
-                      {links.map(link => <li key={link.name}>
-                          <a href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm block py-1">
-                            {link.name}
-                          </a>
-                        </li>)}
                     </ul>
                   </AccordionContent>
                 </AccordionItem>)}
@@ -172,13 +97,7 @@ const Footer = () => {
               © 2024 MobiRides. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-6">
-              <a href="#privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </a>
-              <a href="#cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <a href="/#cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
               </a>
             </div>

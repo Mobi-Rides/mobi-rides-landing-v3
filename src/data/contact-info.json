@@ -1,0 +1,206 @@
+{
+  "headquarters": {
+    "name": "MobiRides Headquarters",
+    "address": {
+      "street": "Plot 123, Independence Avenue",
+      "city": "Gaborone",
+      "state": "South-East District",
+      "country": "Botswana",
+      "postalCode": "00000"
+    },
+    "coordinates": {
+      "lat": -24.6282,
+      "lng": 25.9231
+    },
+    "phone": "+267 123 4567",
+    "email": "info@mobirides.bw",
+    "businessHours": {
+      "monday": "08:00 - 17:00",
+      "tuesday": "08:00 - 17:00",
+      "wednesday": "08:00 - 17:00",
+      "thursday": "08:00 - 17:00",
+      "friday": "08:00 - 17:00",
+      "saturday": "09:00 - 13:00",
+      "sunday": "Closed"
+    }
+  },
+  "offices": [
+    {
+      "id": "gaborone-main",
+      "name": "Gaborone Main Office",
+      "type": "headquarters",
+      "address": {
+        "street": "Plot 123, Independence Avenue",
+        "city": "Gaborone",
+        "state": "South-East District",
+        "country": "Botswana",
+        "postalCode": "00000"
+      },
+      "coordinates": {
+        "lat": -24.6282,
+        "lng": 25.9231
+      },
+      "phone": "+267 123 4567",
+      "email": "gaborone@mobirides.bw",
+      "services": ["Customer Support", "Fleet Management", "Corporate Sales"],
+      "businessHours": {
+        "monday": "08:00 - 17:00",
+        "tuesday": "08:00 - 17:00",
+        "wednesday": "08:00 - 17:00",
+        "thursday": "08:00 - 17:00",
+        "friday": "08:00 - 17:00",
+        "saturday": "09:00 - 13:00",
+        "sunday": "Closed"
+      }
+    },
+    {
+      "id": "francistown",
+      "name": "Francistown Branch",
+      "type": "branch",
+      "address": {
+        "street": "Blue Jacket Street",
+        "city": "Francistown",
+        "state": "North-East District",
+        "country": "Botswana",
+        "postalCode": "00000"
+      },
+      "coordinates": {
+        "lat": -21.1699,
+        "lng": 27.5084
+      },
+      "phone": "+267 241 2345",
+      "email": "francistown@mobirides.bw",
+      "services": ["Customer Support", "Vehicle Inspection"],
+      "businessHours": {
+        "monday": "08:00 - 17:00",
+        "tuesday": "08:00 - 17:00",
+        "wednesday": "08:00 - 17:00",
+        "thursday": "08:00 - 17:00",
+        "friday": "08:00 - 17:00",
+        "saturday": "09:00 - 13:00",
+        "sunday": "Closed"
+      }
+    },
+    {
+      "id": "maun",
+      "name": "Maun Service Center",
+      "type": "service_center",
+      "address": {
+        "street": "Tsheko Tsheko Road",
+        "city": "Maun",
+        "state": "North-West District",
+        "country": "Botswana",
+        "postalCode": "00000"
+      },
+      "coordinates": {
+        "lat": -19.9835,
+        "lng": 23.4241
+      },
+      "phone": "+267 686 1234",
+      "email": "maun@mobirides.bw",
+      "services": ["Customer Support", "Tourism Partnerships"],
+      "businessHours": {
+        "monday": "08:00 - 17:00",
+        "tuesday": "08:00 - 17:00",
+        "wednesday": "08:00 - 17:00",
+        "thursday": "08:00 - 17:00",
+        "friday": "08:00 - 17:00",
+        "saturday": "09:00 - 13:00",
+        "sunday": "Closed"
+      }
+    }
+  ],
+  "supportChannels": [
+    {
+      "id": "phone",
+      "name": "Phone Support",
+      "description": "Speak directly with our support team",
+      "contact": "+267 123 4567",
+      "availability": "24/7 Emergency Support",
+      "responseTime": "Immediate",
+      "icon": "Phone"
+    },
+    {
+      "id": "email",
+      "name": "Email Support",
+      "description": "Send us your questions and concerns",
+      "contact": "support@mobirides.bw",
+      "availability": "Business Hours",
+      "responseTime": "Within 2 hours",
+      "icon": "Mail"
+    },
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp Support",
+      "description": "Quick support via WhatsApp",
+      "contact": "+267 123 4567",
+      "availability": "08:00 - 20:00",
+      "responseTime": "Within 15 minutes",
+      "icon": "MessageCircle"
+    },
+    {
+      "id": "live-chat",
+      "name": "Live Chat",
+      "description": "Instant chat support on our website",
+      "contact": "Available on website",
+      "availability": "08:00 - 20:00",
+      "responseTime": "Within 5 minutes",
+      "icon": "MessageSquare"
+    }
+  ],
+  "emergencyContact": {
+    "phone": "+267 911 MOBI (6624)",
+    "description": "24/7 Emergency roadside assistance and safety support",
+    "services": ["Roadside Assistance", "Emergency Pickup", "Safety Incidents", "Vehicle Breakdown"]
+  },
+  "departments": [
+    {
+      "id": "customer-support",
+      "name": "Customer Support",
+      "email": "support@mobirides.bw",
+      "phone": "+267 123 4567",
+      "description": "General inquiries, booking assistance, and customer service"
+    },
+    {
+      "id": "safety",
+      "name": "Safety & Security",
+      "email": "safety@mobirides.bw",
+      "phone": "+267 123 4568",
+      "description": "Safety incidents, security concerns, and emergency response"
+    },
+    {
+      "id": "partnerships",
+      "name": "Business Partnerships",
+      "email": "partnerships@mobirides.bw",
+      "phone": "+267 123 4569",
+      "description": "Corporate partnerships, fleet solutions, and business inquiries"
+    },
+    {
+      "id": "media",
+      "name": "Media & Press",
+      "email": "media@mobirides.bw",
+      "phone": "+267 123 4570",
+      "description": "Press inquiries, media relations, and public communications"
+    },
+    {
+      "id": "careers",
+      "name": "Human Resources",
+      "email": "careers@mobirides.bw",
+      "phone": "+267 123 4571",
+      "description": "Job applications, career opportunities, and employment inquiries"
+    }
+  ],
+  "socialMedia": {
+    "facebook": "https://facebook.com/mobirides.bw",
+    "twitter": "https://twitter.com/mobirides_bw",
+    "instagram": "https://instagram.com/mobirides.bw",
+    "linkedin": "https://linkedin.com/company/mobirides-botswana",
+    "youtube": "https://youtube.com/@mobirides-bw"
+  },
+  "mailingAddress": {
+    "name": "MobiRides Botswana",
+    "poBox": "P.O. Box 12345",
+    "city": "Gaborone",
+    "country": "Botswana"
+  }
+}

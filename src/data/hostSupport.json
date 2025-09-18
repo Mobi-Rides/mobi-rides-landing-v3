@@ -1,0 +1,306 @@
+{
+  "hero": {
+    "title": "Host Support Center",
+    "subtitle": "Get the help you need, when you need it",
+    "description": "Access comprehensive support resources, connect with our team, and join the MobiRides host community in Botswana.",
+    "backgroundImage": "https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20customer%20support%20center%20with%20friendly%20staff%20helping%20rideshare%20drivers%20in%20modern%20office%20environment%20Botswana&image_size=landscape_16_9",
+    "ctaText": "Get Support Now"
+  },
+  "quickActions": {
+    "title": "Quick Actions",
+    "subtitle": "Get instant help with common tasks",
+    "actions": [
+      {
+        "title": "Report an Issue",
+        "description": "Report technical problems or safety concerns",
+        "icon": "AlertTriangle",
+        "color": "red",
+        "action": "report"
+      },
+      {
+        "title": "Update Documents",
+        "description": "Upload new license, insurance, or vehicle documents",
+        "icon": "Upload",
+        "color": "blue",
+        "action": "documents"
+      },
+      {
+        "title": "Payment Help",
+        "description": "Get help with earnings, payments, or tax documents",
+        "icon": "CreditCard",
+        "color": "green",
+        "action": "payment"
+      },
+      {
+        "title": "Account Settings",
+        "description": "Update your profile, preferences, and notifications",
+        "icon": "Settings",
+        "color": "purple",
+        "action": "account"
+      }
+    ]
+  },
+  "supportChannels": {
+    "title": "Contact Support",
+    "subtitle": "Choose the best way to reach us",
+    "channels": [
+      {
+        "name": "Phone Support",
+        "description": "Speak directly with our support team",
+        "icon": "Phone",
+        "contact": "+267 123 4567",
+        "hours": "24/7 Emergency | Mon-Fri 8AM-6PM General",
+        "responseTime": "Immediate",
+        "languages": ["English", "Setswana"],
+        "color": "blue"
+      },
+      {
+        "name": "WhatsApp Chat",
+        "description": "Quick chat support via WhatsApp",
+        "icon": "MessageCircle",
+        "contact": "+267 123 4567",
+        "hours": "Mon-Sun 6AM-10PM",
+        "responseTime": "< 5 minutes",
+        "languages": ["English", "Setswana"],
+        "color": "green"
+      },
+      {
+        "name": "Email Support",
+        "description": "Detailed support via email",
+        "icon": "Mail",
+        "contact": "hosts@mobirides.co.bw",
+        "hours": "24/7",
+        "responseTime": "< 2 hours",
+        "languages": ["English", "Setswana"],
+        "color": "purple"
+      },
+      {
+        "name": "In-App Chat",
+        "description": "Chat directly through the MobiRides app",
+        "icon": "Smartphone",
+        "contact": "Open MobiRides App",
+        "hours": "24/7",
+        "responseTime": "< 3 minutes",
+        "languages": ["English", "Setswana"],
+        "color": "orange"
+      }
+    ]
+  },
+  "helpCategories": {
+    "title": "Help Categories",
+    "subtitle": "Find answers to common questions",
+    "categories": [
+      {
+        "id": "getting-started",
+        "title": "Getting Started",
+        "description": "New host onboarding and setup",
+        "icon": "Play",
+        "color": "blue",
+        "articleCount": 12,
+        "topics": [
+          "Account setup and verification",
+          "Vehicle inspection process",
+          "First ride preparation",
+          "App navigation basics"
+        ]
+      },
+      {
+        "id": "earnings-payments",
+        "title": "Earnings & Payments",
+        "description": "Payment schedules, tax info, and earnings",
+        "icon": "DollarSign",
+        "color": "green",
+        "articleCount": 18,
+        "topics": [
+          "Weekly payment schedule",
+          "Tax documentation (IRP5)",
+          "Surge pricing explained",
+          "Bonus and incentive programs"
+        ]
+      },
+      {
+        "id": "safety-security",
+        "title": "Safety & Security",
+        "description": "Safety features and emergency procedures",
+        "icon": "Shield",
+        "color": "red",
+        "articleCount": 15,
+        "topics": [
+          "Emergency assistance features",
+          "Passenger verification",
+          "Safe driving practices",
+          "Incident reporting"
+        ]
+      },
+      {
+        "id": "vehicle-maintenance",
+        "title": "Vehicle & Maintenance",
+        "description": "Vehicle requirements and maintenance tips",
+        "icon": "Car",
+        "color": "purple",
+        "articleCount": 10,
+        "topics": [
+          "Regular inspection requirements",
+          "Maintenance best practices",
+          "Insurance requirements",
+          "Vehicle cleanliness standards"
+        ]
+      },
+      {
+        "id": "app-technical",
+        "title": "App & Technical",
+        "description": "App troubleshooting and technical issues",
+        "icon": "Smartphone",
+        "color": "orange",
+        "articleCount": 14,
+        "topics": [
+          "GPS and navigation issues",
+          "App crashes and bugs",
+          "Offline mode usage",
+          "Device compatibility"
+        ]
+      },
+      {
+        "id": "account-profile",
+        "title": "Account & Profile",
+        "description": "Profile management and account settings",
+        "icon": "User",
+        "color": "yellow",
+        "articleCount": 8,
+        "topics": [
+          "Profile photo requirements",
+          "Document updates",
+          "Notification settings",
+          "Account deactivation"
+        ]
+      }
+    ]
+  },
+  "communityResources": {
+    "title": "Host Community",
+    "subtitle": "Connect with fellow MobiRides hosts",
+    "resources": [
+      {
+        "title": "WhatsApp Groups",
+        "description": "Join city-specific WhatsApp groups for tips and support",
+        "icon": "Users",
+        "members": "2,500+ hosts",
+        "activity": "Very Active",
+        "cities": ["Gaborone", "Francistown", "Maun", "Kasane"]
+      },
+      {
+        "title": "Monthly Meetups",
+        "description": "Attend monthly host meetups in major cities",
+        "icon": "Calendar",
+        "members": "200+ attendees",
+        "activity": "Monthly",
+        "cities": ["Gaborone", "Francistown"]
+      },
+      {
+        "title": "Training Workshops",
+        "description": "Free workshops on safety, customer service, and earnings",
+        "icon": "BookOpen",
+        "members": "500+ graduates",
+        "activity": "Bi-weekly",
+        "cities": ["All major cities"]
+      },
+      {
+        "title": "Host Recognition Program",
+        "description": "Get recognized for excellent service and safety",
+        "icon": "Award",
+        "members": "Top 10% hosts",
+        "activity": "Quarterly",
+        "cities": ["Nationwide"]
+      }
+    ]
+  },
+  "emergencySupport": {
+    "title": "Emergency Support",
+    "subtitle": "24/7 emergency assistance when you need it most",
+    "description": "Our emergency support team is available 24/7 for safety incidents, medical emergencies, and urgent technical issues.",
+    "hotline": "+267 911 MOBI (6624)",
+    "features": [
+      {
+        "title": "Incident Response",
+        "description": "Immediate response to safety incidents",
+        "icon": "AlertTriangle",
+        "responseTime": "< 2 minutes"
+      },
+      {
+        "title": "Medical Emergency",
+        "description": "Coordinate with emergency services",
+        "icon": "Heart",
+        "responseTime": "Immediate"
+      },
+      {
+        "title": "Vehicle Breakdown",
+        "description": "Roadside assistance coordination",
+        "icon": "Wrench",
+        "responseTime": "< 15 minutes"
+      },
+      {
+        "title": "App Critical Issues",
+        "description": "Urgent technical support",
+        "icon": "Zap",
+        "responseTime": "< 5 minutes"
+      }
+    ]
+  },
+  "trainingResources": {
+    "title": "Training & Resources",
+    "subtitle": "Improve your skills and earnings",
+    "resources": [
+      {
+        "title": "Customer Service Excellence",
+        "description": "Learn how to provide 5-star service",
+        "type": "Video Course",
+        "duration": "45 minutes",
+        "icon": "Star",
+        "completion": "85% of hosts"
+      },
+      {
+        "title": "Safety First Training",
+        "description": "Comprehensive safety protocols and procedures",
+        "type": "Interactive Course",
+        "duration": "60 minutes",
+        "icon": "Shield",
+        "completion": "92% of hosts"
+      },
+      {
+        "title": "Maximizing Earnings",
+        "description": "Tips and strategies to increase your income",
+        "type": "Webinar Series",
+        "duration": "30 minutes each",
+        "icon": "TrendingUp",
+        "completion": "78% of hosts"
+      },
+      {
+        "title": "Navigation & Routes",
+        "description": "Master Gaborone and Francistown routes",
+        "type": "Interactive Map",
+        "duration": "Self-paced",
+        "icon": "Map",
+        "completion": "65% of hosts"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Still Need Help?",
+    "subtitle": "Our support team is here for you",
+    "description": "Can't find what you're looking for? Our dedicated host support team is available 24/7 to help you succeed on the MobiRides platform.",
+    "primaryButton": "Contact Support",
+    "secondaryButton": "Schedule Call",
+    "features": [
+      "24/7 Emergency Support",
+      "Multilingual Assistance",
+      "Dedicated Host Success Team",
+      "Community Resources"
+    ]
+  },
+  "stats": {
+    "supportTickets": "<2 hours",
+    "satisfactionRate": "98%",
+    "responseTime": "< 3 minutes",
+    "activeHosts": "5,000+"
+  }
+}

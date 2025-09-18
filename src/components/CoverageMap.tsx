@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { 
@@ -28,11 +28,13 @@ interface ServiceArea {
   id: string;
   name: string;
   type: string;
-  coordinates: number[];
+  coordinates: [number, number];
   coverage: string;
   deliveryFee: number;
   description: string;
-  landmarks: string[];
+  landmarks?: string[];
+  estimatedTime?: number;
+  isActive?: boolean;
 }
 
 interface CoverageMapProps {
@@ -45,13 +47,6 @@ interface MapboxMapProps {
   onAreaSelect: (area: ServiceArea) => void;
   onAreaHover: (areaId: string | null) => void;
   hoveredArea: string | null;
-  mapError: string | null;
-  setMapError: (error: string | null) => void;
-  retryCount: number;
-  setRetryCount: React.Dispatch<React.SetStateAction<number>>;
-  maxRetries: number;
-  fallbackStyles: string[];
-  mapCenter: [number, number];
 }
 
 const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
@@ -79,7 +74,28 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
     'mapbox://styles/mapbox/outdoors-v12'
   ];
 
-  const serviceAreas = useMemo(() => locationsData.serviceAreas, []);
+  const serviceAreas = useMemo(() => {
+    // Extract service areas from all current cities
+    const allServiceAreas: ServiceArea[] = [];
+    
+    locationsData.currentCities?.forEach((city, cityIndex) => {
+      city.serviceAreas?.forEach((areaName, areaIndex) => {
+        allServiceAreas.push({
+          id: `${city.id}-${areaIndex}`,
+          name: areaName,
+          description: `Service area in ${city.name}`,
+          coordinates: [city.coordinates.lng, city.coordinates.lat] as [number, number],
+          coverage: city.coverage > 90 ? 'full' : city.coverage > 70 ? 'limited' : 'basic',
+          type: 'city',
+          deliveryFee: 15 + (cityIndex * 5), // Mock delivery fee
+          estimatedTime: city.averageWaitTime || 10,
+          isActive: city.status === 'active'
+        });
+      });
+    });
+    
+    return allServiceAreas;
+  }, []);
 
   // Computed filtered and sorted areas
   const filteredAndSortedAreas = useMemo(() => {
@@ -164,7 +180,7 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
   };
 
   // Manual refresh function
-  const refreshMapData = async () => {
+  const refreshMapData = useCallback(async () => {
     if (isRefreshing) return; // Prevent multiple simultaneous refreshes
     
     setIsRefreshing(true);
@@ -185,7 +201,7 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
     } finally {
       setIsRefreshing(false);
     }
-  };
+  }, [isRefreshing]);
 
   // Mapbox configuration
   const mapCenter = useMemo(() => [24.6849, -22.3285] as [number, number], []); // Center of Botswana [lng, lat]
@@ -210,20 +226,85 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
     return type === 'city' ? Car : Truck;
   };
 
+  // Initialize map with fallback styles (moved outside component)
+  const initializeMap = (styleIndex: number = 0) => {
+    const mapContainer = document.getElementById('mapbox-container');
+    if (!mapContainer) return;
+
+    try {
+      // Set Mapbox access token
+      const token = import.meta.env.VITE_MAPBOX_TOKEN;
+      if (!token || token === 'your_mapbox_token_here') {
+        setMapError('Mapbox token not configured');
+        return;
+      }
+      mapboxgl.accessToken = token;
+
+      // Clean up existing map
+      const existingMap = (window as Window & { currentMap?: mapboxgl.Map }).currentMap;
+      if (existingMap) {
+        existingMap.remove();
+      }
+
+      // Get the style to use (with fallback)
+      const styleToUse = FALLBACK_STYLES[styleIndex] || FALLBACK_STYLES[0];
+      console.log(`Initializing map with style: ${styleToUse}`);
+
+      // Create new map instance
+      const newMap = new mapboxgl.Map({
+        container: mapContainer,
+        style: styleToUse,
+        center: [24.6282, -25.9044], // Botswana center
+        zoom: 4.0,
+        attributionControl: false,
+        logoPosition: 'bottom-right'
+      });
+
+      // Store map reference globally for cleanup
+      (window as Window & { currentMap?: mapboxgl.Map }).currentMap = newMap;
+
+      // Add navigation controls
+      newMap.addControl(new mapboxgl.NavigationControl(), 'top-right');
+
+      // Map load event
+      newMap.on('load', () => {
+        console.log('Map loaded successfully');
+        setMapError(null);
+        setRetryCount(0);
+      });
+
+      // Error handling
+      newMap.on('error', (e) => {
+        console.error('Mapbox error:', e.error);
+        
+        // Try next fallback style if available
+        if (styleIndex < FALLBACK_STYLES.length - 1 && retryCount < MAX_RETRIES) {
+          console.log(`Retrying with fallback style ${styleIndex + 1}`);
+          setRetryCount(retryCount + 1);
+          setTimeout(() => initializeMap(styleIndex + 1), 1000);
+        } else {
+          setMapError(`Failed to load map after ${MAX_RETRIES} attempts`);
+        }
+      });
+
+      // Add style loading error handler
+      newMap.on('styleimagemissing', (e) => {
+        console.warn('Style image missing:', e.id);
+      });
+
+    } catch (error) {
+      console.error('Failed to initialize Mapbox map:', error);
+      setMapError(`Map initialization failed: ${error}`);
+    }
+  };
+
   // Mapbox Map Component
   const MapboxMapComponent: React.FC<MapboxMapProps> = ({
     serviceAreas,
     selectedArea,
     onAreaSelect,
     onAreaHover,
-    hoveredArea,
-    mapError,
-    setMapError,
-    retryCount,
-    setRetryCount,
-    maxRetries,
-    fallbackStyles,
-    mapCenter
+    hoveredArea
   }) => {
     const mapContainer = useRef<HTMLDivElement>(null);
     const map = useRef<mapboxgl.Map | null>(null);
@@ -231,90 +312,40 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
     const markersRef = useRef<{ [key: string]: mapboxgl.Marker }>({});
     const popupRef = useRef<mapboxgl.Popup | null>(null);
 
-    // Initialize map with retry and fallback logic
-    const initializeMap = (styleIndex = 0) => {
-      if (!mapContainer.current) return;
-
-      const mapboxToken = import.meta.env.VITE_MAPBOX_TOKEN;
-      if (!mapboxToken) {
-        console.error('Mapbox token is required');
-        setMapError('Mapbox token is missing');
-        return;
-      }
-
-      mapboxgl.accessToken = mapboxToken;
-      
-      try {
-        // Clean up existing map if any
-        if (map.current) {
-          map.current.remove();
-          map.current = null;
-        }
-
-        const currentStyle = fallbackStyles[styleIndex] || fallbackStyles[0];
-        console.log(`Attempting to load map with style: ${currentStyle} (attempt ${styleIndex + 1})`);
-
-        map.current = new mapboxgl.Map({
-          container: mapContainer.current,
-          style: currentStyle,
-          center: mapCenter,
-          zoom: 4,
-          attributionControl: false,
-          // Add retry and error handling options
-          transformRequest: (url, resourceType) => {
-            // Add custom headers or modify requests if needed
-            if (resourceType === 'Style' && url.startsWith('https://api.mapbox.com/styles/')) {
-              return {
-                url: url,
-                headers: {
-                  'Accept': 'application/json',
-                  'Cache-Control': 'no-cache'
-                }
-              };
-            }
-            return { url };
-          }
-        });
-
-        map.current.on('load', () => {
-          console.log('Map loaded successfully');
-          setMapLoaded(true);
-          setMapError(null);
-        });
-
-        // Add error handling for map loading failures
-        map.current.on('error', (e) => {
-          console.error('Mapbox error:', e.error);
-          
-          // Try next fallback style if available
-          if (styleIndex < fallbackStyles.length - 1 && retryCount < maxRetries) {
-            console.log(`Retrying with fallback style ${styleIndex + 1}`);
-            setRetryCount(prev => prev + 1);
-            setTimeout(() => initializeMap(styleIndex + 1), 1000);
-          } else {
-            setMapError(`Failed to load map after ${maxRetries} attempts`);
-          }
-        });
-
-        // Add style loading error handler
-        map.current.on('styleimagemissing', (e) => {
-          console.warn('Style image missing:', e.id);
-        });
-
-      } catch (error) {
-        console.error('Failed to initialize Mapbox map:', error);
-        setMapError(`Map initialization failed: ${error}`);
-      }
-    };
-
     // Initialize map
     useEffect(() => {
       if (!mapContainer.current || map.current) return;
-      initializeMap(0);
+      
+      // Set container ID for global access
+      mapContainer.current.id = 'mapbox-container';
+      
+      // Initialize map with proper cleanup
+      const token = import.meta.env.VITE_MAPBOX_TOKEN;
+      if (!token || token === 'your_mapbox_token_here') {
+        return;
+      }
+      
+      mapboxgl.accessToken = token;
+      
+      map.current = new mapboxgl.Map({
+        container: mapContainer.current,
+        style: FALLBACK_STYLES[0],
+        center: [24.6282, -25.9044],
+        zoom: 4,
+        attributionControl: false,
+        logoPosition: 'bottom-right'
+      });
+      
+      map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
+      
+      map.current.on('load', () => {
+        setMapLoaded(true);
+      });
 
       return () => {
         if (map.current) {
           map.current.remove();
+          map.current = null;
         }
       };
     }, []);
@@ -329,7 +360,7 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
 
       // Create new markers
       serviceAreas.forEach(area => {
-        const [lat, lng] = area.coordinates.length >= 2 ? area.coordinates : [0, 0];
+        const [lng, lat] = area.coordinates.length >= 2 ? area.coordinates : [0, 0];
         
         // Create marker element
         const markerElement = document.createElement('div');
@@ -434,7 +465,7 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
       }, refreshInterval * 1000);
 
       return () => clearInterval(intervalId);
-    }, [autoRefreshEnabled, refreshInterval]);
+    });
 
     return <div ref={mapContainer} className="w-full h-full rounded-lg" />;
   };
@@ -490,8 +521,7 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
                 onClick={() => {
                   setMapError(null);
                   setRetryCount(0);
-                  // Force component remount to reinitialize map
-                  window.location.reload();
+
                 }}
                 className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors flex items-center gap-2 mx-auto"
               >
@@ -511,7 +541,7 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
           </div>
         </div>
       );
-    }
+    
 
     return (
       <MapboxMapComponent
@@ -520,13 +550,6 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
         onAreaSelect={setSelectedArea}
         onAreaHover={setHoveredArea}
         hoveredArea={hoveredArea}
-        mapError={mapError}
-        setMapError={setMapError}
-        retryCount={retryCount}
-        setRetryCount={setRetryCount}
-        maxRetries={MAX_RETRIES}
-        fallbackStyles={FALLBACK_STYLES}
-        mapCenter={mapCenter}
       />
     );
   };

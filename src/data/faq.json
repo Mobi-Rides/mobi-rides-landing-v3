@@ -1,0 +1,258 @@
+{
+  "categories": [
+    {
+      "id": "general",
+      "name": "General",
+      "icon": "HelpCircle",
+      "description": "Basic information about MobiRides",
+      "questions": [
+        {
+          "id": "what-is-mobirides",
+          "question": "What is MobiRides?",
+          "answer": "MobiRides is Botswana's leading ride-sharing platform that connects passengers with reliable drivers across major cities. We provide safe, affordable, and convenient transportation solutions tailored for the Botswana market.",
+          "tags": ["about", "service", "botswana"]
+        },
+        {
+          "id": "how-it-works",
+          "question": "How does MobiRides work?",
+          "answer": "Simply download our app, create an account, enter your destination, and request a ride. Our system matches you with the nearest available driver. You can track your driver's location in real-time and pay through the app or cash.",
+          "tags": ["how-to", "booking", "process"]
+        },
+        {
+          "id": "service-areas",
+          "question": "Which cities does MobiRides serve?",
+          "answer": "We currently operate in Gaborone, Francistown, and Maun, with plans to expand to Kasane, Palapye, and Serowe in 2024. Check our Locations page for detailed coverage areas.",
+          "tags": ["locations", "cities", "coverage"]
+        },
+        {
+          "id": "operating-hours",
+          "question": "What are MobiRides operating hours?",
+          "answer": "MobiRides operates 24/7 in urban areas of Gaborone and Francistown. In other areas, service is typically available from 5:00 AM to 11:00 PM. Airport services are available 24/7.",
+          "tags": ["hours", "availability", "schedule"]
+        }
+      ]
+    },
+    {
+      "id": "booking",
+      "name": "Booking & Rides",
+      "icon": "Car",
+      "description": "How to book and manage your rides",
+      "questions": [
+        {
+          "id": "book-ride",
+          "question": "How do I book a ride?",
+          "answer": "Open the MobiRides app, enter your pickup location and destination, select your preferred ride type, and tap 'Request Ride'. You'll be matched with a nearby driver within minutes.",
+          "tags": ["booking", "app", "request"]
+        },
+        {
+          "id": "cancel-ride",
+          "question": "Can I cancel my ride?",
+          "answer": "Yes, you can cancel your ride through the app. Free cancellation is available within 2 minutes of booking. After that, a small cancellation fee of P10 may apply.",
+          "tags": ["cancel", "fees", "policy"]
+        },
+        {
+          "id": "schedule-ride",
+          "question": "Can I schedule a ride in advance?",
+          "answer": "Yes! You can schedule rides up to 7 days in advance. This is perfect for airport trips, important meetings, or early morning rides. Scheduled rides have a small booking fee of P5.",
+          "tags": ["schedule", "advance", "booking"]
+        },
+        {
+          "id": "ride-types",
+          "question": "What types of rides are available?",
+          "answer": "We offer MobiGo (economy), MobiComfort (premium), MobiXL (large groups), and MobiDelivery (package delivery). Each option is designed for different needs and budgets.",
+          "tags": ["types", "options", "categories"]
+        },
+        {
+          "id": "wait-time",
+          "question": "How long do I have to wait for a ride?",
+          "answer": "Average wait times are 3-5 minutes in urban areas and 8-12 minutes in suburban areas. During peak hours or bad weather, wait times may be slightly longer.",
+          "tags": ["wait", "time", "eta"]
+        }
+      ]
+    },
+    {
+      "id": "payment",
+      "name": "Payment & Pricing",
+      "icon": "CreditCard",
+      "description": "Payment methods and pricing information",
+      "questions": [
+        {
+          "id": "payment-methods",
+          "question": "What payment methods do you accept?",
+          "answer": "We accept cash, mobile money (Orange Money, MyZaka), credit/debit cards, and in-app wallet. You can add multiple payment methods and choose your preferred option for each ride.",
+          "tags": ["payment", "methods", "mobile-money"]
+        },
+        {
+          "id": "pricing-calculation",
+          "question": "How is the ride price calculated?",
+          "answer": "Pricing is based on distance, time, and demand. Base fare starts at P8, plus P2.50 per km and P0.50 per minute. During peak hours, surge pricing may apply with a maximum of 2x normal rates.",
+          "tags": ["pricing", "calculation", "surge"]
+        },
+        {
+          "id": "surge-pricing",
+          "question": "What is surge pricing?",
+          "answer": "Surge pricing occurs during high-demand periods (rush hours, events, bad weather) to ensure ride availability. The app will clearly show surge rates before you confirm your booking.",
+          "tags": ["surge", "peak", "demand"]
+        },
+        {
+          "id": "receipts",
+          "question": "Can I get a receipt for my ride?",
+          "answer": "Yes! Digital receipts are automatically sent to your email after each ride. You can also view and download receipts from the 'Trip History' section in the app.",
+          "tags": ["receipt", "invoice", "history"]
+        },
+        {
+          "id": "refunds",
+          "question": "How do refunds work?",
+          "answer": "Refunds are processed within 3-5 business days for valid claims. Common reasons include driver cancellations, route issues, or service problems. Contact support through the app to request a refund.",
+          "tags": ["refund", "money-back", "claims"]
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "name": "Safety & Security",
+      "icon": "Shield",
+      "description": "Safety features and security measures",
+      "questions": [
+        {
+          "id": "safety-features",
+          "question": "What safety features does MobiRides have?",
+          "answer": "We offer real-time GPS tracking, driver background checks, vehicle inspections, in-app emergency button, ride sharing with contacts, and 24/7 safety support. Your safety is our top priority.",
+          "tags": ["safety", "features", "security"]
+        },
+        {
+          "id": "emergency-help",
+          "question": "What should I do in an emergency?",
+          "answer": "Use the emergency button in the app to immediately contact local authorities and our safety team. You can also call our 24/7 safety hotline at 123-4567 or contact emergency services at 999.",
+          "tags": ["emergency", "help", "contact"]
+        },
+        {
+          "id": "driver-verification",
+          "question": "How are drivers verified?",
+          "answer": "All drivers undergo comprehensive background checks, provide valid driving licenses, vehicle registration, and insurance. They must also complete our safety training program before joining the platform.",
+          "tags": ["verification", "background", "checks"]
+        },
+        {
+          "id": "share-trip",
+          "question": "Can I share my trip details with someone?",
+          "answer": "Yes! You can share your live trip details with up to 3 trusted contacts. They'll receive real-time updates on your location and estimated arrival time for added peace of mind.",
+          "tags": ["share", "tracking", "contacts"]
+        },
+        {
+          "id": "lost-items",
+          "question": "What if I leave something in the car?",
+          "answer": "Contact the driver directly through the app within 24 hours, or use our Lost & Found feature. We'll help coordinate the return of your items. A small delivery fee may apply for item returns.",
+          "tags": ["lost", "items", "found"]
+        }
+      ]
+    },
+    {
+      "id": "drivers",
+      "name": "For Drivers",
+      "icon": "Users",
+      "description": "Information for current and prospective drivers",
+      "questions": [
+        {
+          "id": "become-driver",
+          "question": "How can I become a MobiRides driver?",
+          "answer": "Apply through our website or app. You'll need a valid Botswana driving license (3+ years), vehicle registration, insurance, and to pass our background check. The approval process takes 3-5 business days.",
+          "tags": ["driver", "application", "requirements"]
+        },
+        {
+          "id": "driver-earnings",
+          "question": "How much can drivers earn?",
+          "answer": "Drivers keep 80% of each fare after MobiRides' 20% service fee. Average earnings range from P150-300 per day, depending on hours worked and demand. Weekly bonuses are available for active drivers.",
+          "tags": ["earnings", "income", "commission"]
+        },
+        {
+          "id": "vehicle-requirements",
+          "question": "What are the vehicle requirements?",
+          "answer": "Vehicles must be 2010 or newer, have 4 doors, pass safety inspection, and maintain comprehensive insurance. Popular models include Toyota Corolla, Nissan Almera, and Honda Fit.",
+          "tags": ["vehicle", "requirements", "inspection"]
+        },
+        {
+          "id": "driver-support",
+          "question": "What support is available for drivers?",
+          "answer": "We provide 24/7 driver support, regular training sessions, vehicle maintenance partnerships, fuel discounts, and a dedicated driver community forum for tips and support.",
+          "tags": ["support", "training", "community"]
+        },
+        {
+          "id": "driver-insurance",
+          "question": "Does MobiRides provide insurance for drivers?",
+          "answer": "We provide additional commercial insurance coverage while you're actively driving for MobiRides. However, you must maintain your own comprehensive vehicle insurance as a requirement.",
+          "tags": ["insurance", "coverage", "protection"]
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "name": "Technical Support",
+      "icon": "Smartphone",
+      "description": "App issues and technical help",
+      "questions": [
+        {
+          "id": "app-not-working",
+          "question": "The app is not working properly. What should I do?",
+          "answer": "Try closing and reopening the app, check your internet connection, or restart your phone. If issues persist, update to the latest app version or contact our technical support team.",
+          "tags": ["app", "technical", "troubleshooting"]
+        },
+        {
+          "id": "gps-issues",
+          "question": "My location is not accurate. How can I fix this?",
+          "answer": "Ensure location services are enabled for MobiRides, check if you're in an area with good GPS signal, and try moving to an open area. You can also manually adjust your pickup location on the map.",
+          "tags": ["gps", "location", "accuracy"]
+        },
+        {
+          "id": "payment-failed",
+          "question": "My payment failed. What should I do?",
+          "answer": "Check your payment method details, ensure sufficient funds/credit, and verify your internet connection. You can also try a different payment method or contact your bank if the issue persists.",
+          "tags": ["payment", "failed", "error"]
+        },
+        {
+          "id": "app-updates",
+          "question": "How do I update the MobiRides app?",
+          "answer": "Visit the Google Play Store or Apple App Store, search for MobiRides, and tap 'Update' if available. Enable automatic updates to always have the latest features and security improvements.",
+          "tags": ["update", "app-store", "version"]
+        },
+        {
+          "id": "account-issues",
+          "question": "I'm having trouble with my account. Who can help?",
+          "answer": "Contact our customer support through the app's Help section, email support@mobirides.bw, or call our helpline. We're available 24/7 to help resolve account-related issues.",
+          "tags": ["account", "support", "help"]
+        }
+      ]
+    }
+  ],
+  "popularQuestions": [
+    "what-is-mobirides",
+    "how-it-works",
+    "book-ride",
+    "payment-methods",
+    "safety-features",
+    "become-driver"
+  ],
+  "searchTags": [
+    "booking",
+    "payment",
+    "safety",
+    "driver",
+    "app",
+    "pricing",
+    "locations",
+    "support",
+    "emergency",
+    "cancel",
+    "schedule",
+    "insurance",
+    "technical",
+    "refund",
+    "surge"
+  ],
+  "contactInfo": {
+    "supportEmail": "support@mobirides.bw",
+    "driverEmail": "drivers@mobirides.bw",
+    "emergencyHotline": "123-4567",
+    "businessHours": "24/7 Support Available",
+    "responseTime": "Within 2 hours during business hours"
+  }
+}

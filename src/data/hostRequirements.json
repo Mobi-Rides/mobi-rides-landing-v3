@@ -1,0 +1,324 @@
+{
+  "hero": {
+    "title": "Become a MobiRides Host",
+    "subtitle": "Meet the requirements and start earning today",
+    "description": "Join thousands of drivers across Botswana who are earning flexible income with MobiRides. We've made the requirements simple and straightforward.",
+    "backgroundImage": "https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20African%20driver%20with%20clean%20modern%20car%20in%20Botswana%20city%20setting%20sunny%20day%20professional%20photography&image_size=landscape_16_9",
+    "ctaText": "Start Application"
+  },
+  "requirements": {
+    "title": "Host Requirements",
+    "subtitle": "Everything you need to know to get started",
+    "categories": [
+      {
+        "id": "driver",
+        "title": "Driver Requirements",
+        "icon": "User",
+        "color": "blue",
+        "items": [
+          {
+            "requirement": "Valid Botswana Driver's License",
+            "description": "Must be valid for at least 2 years",
+            "icon": "CreditCard",
+            "mandatory": true
+          },
+          {
+            "requirement": "Minimum Age 21 Years",
+            "description": "Must be at least 21 years old",
+            "icon": "Calendar",
+            "mandatory": true
+          },
+          {
+            "requirement": "Clean Driving Record",
+            "description": "No major violations in the past 3 years",
+            "icon": "Shield",
+            "mandatory": true
+          },
+          {
+            "requirement": "Background Check",
+            "description": "Pass criminal background verification",
+            "icon": "FileCheck",
+            "mandatory": true
+          },
+          {
+            "requirement": "Smartphone with Data",
+            "description": "Android 8.0+ or iOS 12+ with reliable internet",
+            "icon": "Smartphone",
+            "mandatory": true
+          },
+          {
+            "requirement": "English Proficiency",
+            "description": "Basic English communication skills",
+            "icon": "MessageCircle",
+            "mandatory": false
+          }
+        ]
+      },
+      {
+        "id": "vehicle",
+        "title": "Vehicle Requirements",
+        "icon": "Car",
+        "color": "green",
+        "items": [
+          {
+            "requirement": "Vehicle Age",
+            "description": "2010 or newer (maximum 14 years old)",
+            "icon": "Calendar",
+            "mandatory": true
+          },
+          {
+            "requirement": "4-Door Vehicle",
+            "description": "Must have 4 doors and seat at least 4 passengers",
+            "icon": "Car",
+            "mandatory": true
+          },
+          {
+            "requirement": "Valid Registration",
+            "description": "Current vehicle registration in Botswana",
+            "icon": "FileText",
+            "mandatory": true
+          },
+          {
+            "requirement": "Comprehensive Insurance",
+            "description": "Valid comprehensive motor insurance",
+            "icon": "Shield",
+            "mandatory": true
+          },
+          {
+            "requirement": "Vehicle Inspection",
+            "description": "Pass MobiRides vehicle safety inspection",
+            "icon": "CheckCircle",
+            "mandatory": true
+          },
+          {
+            "requirement": "Clean Interior & Exterior",
+            "description": "Well-maintained, clean, and odor-free",
+            "icon": "Sparkles",
+            "mandatory": true
+          },
+          {
+            "requirement": "Air Conditioning",
+            "description": "Working AC system (recommended)",
+            "icon": "Wind",
+            "mandatory": false
+          }
+        ]
+      },
+      {
+        "id": "documents",
+        "title": "Required Documents",
+        "icon": "FileText",
+        "color": "purple",
+        "items": [
+          {
+            "requirement": "National ID or Passport",
+            "description": "Valid government-issued identification",
+            "icon": "CreditCard",
+            "mandatory": true
+          },
+          {
+            "requirement": "Driver's License",
+            "description": "Clear photo of both sides",
+            "icon": "CreditCard",
+            "mandatory": true
+          },
+          {
+            "requirement": "Vehicle Registration",
+            "description": "Current registration certificate",
+            "icon": "FileText",
+            "mandatory": true
+          },
+          {
+            "requirement": "Insurance Certificate",
+            "description": "Valid comprehensive insurance document",
+            "icon": "Shield",
+            "mandatory": true
+          },
+          {
+            "requirement": "Bank Account Details",
+            "description": "For direct deposit payments",
+            "icon": "CreditCard",
+            "mandatory": true
+          },
+          {
+            "requirement": "Profile Photo",
+            "description": "Clear, professional headshot",
+            "icon": "Camera",
+            "mandatory": true
+          }
+        ]
+      }
+    ]
+  },
+  "applicationProcess": {
+    "title": "Simple Application Process",
+    "subtitle": "Get approved in as little as 24 hours",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Submit Application",
+        "description": "Complete our online application with your personal and vehicle information",
+        "icon": "FileText",
+        "duration": "5 minutes",
+        "color": "blue"
+      },
+      {
+        "step": 2,
+        "title": "Document Upload",
+        "description": "Upload required documents and photos through our secure portal",
+        "icon": "Upload",
+        "duration": "10 minutes",
+        "color": "green"
+      },
+      {
+        "step": 3,
+        "title": "Background Check",
+        "description": "We verify your driving record and conduct background screening",
+        "icon": "Shield",
+        "duration": "2-24 hours",
+        "color": "purple"
+      },
+      {
+        "step": 4,
+        "title": "Vehicle Inspection",
+        "description": "Schedule and complete vehicle safety inspection at approved location",
+        "icon": "CheckCircle",
+        "duration": "30 minutes",
+        "color": "orange"
+      },
+      {
+        "step": 5,
+        "title": "Approval & Onboarding",
+        "description": "Get approved, download the app, and complete driver orientation",
+        "icon": "Award",
+        "duration": "1 hour",
+        "color": "green"
+      },
+      {
+        "step": 6,
+        "title": "Start Earning",
+        "description": "Go online and start accepting ride requests immediately",
+        "icon": "DollarSign",
+        "duration": "Immediate",
+        "color": "blue"
+      }
+    ]
+  },
+  "inspectionLocations": {
+    "title": "Vehicle Inspection Centers",
+    "subtitle": "Convenient locations across Botswana",
+    "locations": [
+      {
+        "city": "Gaborone",
+        "name": "MobiRides Gaborone Center",
+        "address": "Plot 123, Main Mall, Gaborone",
+        "hours": "Mon-Fri: 8:00-17:00, Sat: 8:00-13:00",
+        "phone": "+267 123 4567",
+        "services": ["Vehicle Inspection", "Document Verification", "Driver Orientation"]
+      },
+      {
+        "city": "Francistown",
+        "name": "MobiRides Francistown Hub",
+        "address": "Blue Jacket Street, Francistown",
+        "hours": "Mon-Fri: 8:00-17:00, Sat: 8:00-13:00",
+        "phone": "+267 234 5678",
+        "services": ["Vehicle Inspection", "Document Verification"]
+      },
+      {
+        "city": "Maun",
+        "name": "MobiRides Maun Station",
+        "address": "Tsheko Tsheko Road, Maun",
+        "hours": "Mon-Fri: 8:00-16:00",
+        "phone": "+267 345 6789",
+        "services": ["Vehicle Inspection"]
+      }
+    ]
+  },
+  "supportedVehicles": {
+    "title": "Approved Vehicle Models",
+    "subtitle": "Popular vehicle models that meet our requirements",
+    "categories": [
+      {
+        "category": "Economy",
+        "description": "Fuel-efficient vehicles perfect for city rides",
+        "models": [
+          "Toyota Corolla (2010+)",
+          "Nissan Almera (2012+)",
+          "Hyundai Accent (2011+)",
+          "Volkswagen Polo (2010+)",
+          "Ford Fiesta (2011+)"
+        ]
+      },
+      {
+        "category": "Compact",
+        "description": "Comfortable mid-size vehicles for longer trips",
+        "models": [
+          "Toyota Camry (2010+)",
+          "Nissan Sentra (2012+)",
+          "Hyundai Elantra (2011+)",
+          "Volkswagen Jetta (2010+)",
+          "Honda Civic (2012+)"
+        ]
+      },
+      {
+        "category": "SUV",
+        "description": "Spacious vehicles for groups and families",
+        "models": [
+          "Toyota RAV4 (2010+)",
+          "Nissan X-Trail (2011+)",
+          "Hyundai Tucson (2010+)",
+          "Ford EcoSport (2012+)",
+          "Honda CR-V (2011+)"
+        ]
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How long does the application process take?",
+        "answer": "Most applications are processed within 24-48 hours. The vehicle inspection can be scheduled immediately after document approval."
+      },
+      {
+        "question": "Can I use a rental car?",
+        "answer": "Yes, you can use a rental car as long as it meets our vehicle requirements and you have proper insurance coverage."
+      },
+      {
+        "question": "What if my car doesn't pass inspection?",
+        "answer": "We'll provide a detailed report of any issues. You can address them and schedule a re-inspection at no additional cost."
+      },
+      {
+        "question": "Do I need commercial insurance?",
+        "answer": "Comprehensive motor insurance is required. MobiRides provides additional coverage during active trips."
+      },
+      {
+        "question": "Can I drive part-time?",
+        "answer": "Absolutely! You can drive whenever you want. There are no minimum hour requirements."
+      },
+      {
+        "question": "What happens if I get into an accident?",
+        "answer": "MobiRides provides comprehensive insurance coverage during active trips. Contact our 24/7 support immediately."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Start Earning?",
+    "subtitle": "Join thousands of MobiRides hosts across Botswana",
+    "description": "Complete your application today and start earning flexible income on your schedule. Our team is here to help you every step of the way.",
+    "primaryButton": "Start Application Now",
+    "secondaryButton": "Schedule Inspection",
+    "features": [
+      "24-hour approval process",
+      "Free vehicle inspection",
+      "Comprehensive insurance",
+      "24/7 driver support"
+    ]
+  },
+  "stats": {
+    "approvalRate": "95%",
+    "averageApprovalTime": "24 hours",
+    "inspectionCenters": "15+",
+    "supportedVehicles": "200+"
+  }
+}

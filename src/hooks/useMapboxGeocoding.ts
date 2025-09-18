@@ -6,7 +6,7 @@ interface MapboxFeature {
   type: string;
   place_type: string[];
   relevance: number;
-  properties: Record<string, any>;
+  properties: Record<string, unknown>;
   text: string;
   place_name: string;
   center: [number, number];

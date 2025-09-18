@@ -1,0 +1,266 @@
+[
+  {
+    "id": "job-001",
+    "title": "Senior Mobile Developer",
+    "department": "Technology",
+    "location": "Gaborone, Botswana",
+    "type": "Full-time",
+    "level": "Senior",
+    "salary": {
+      "min": 25000,
+      "max": 35000,
+      "currency": "BWP",
+      "period": "month"
+    },
+    "description": "Join our technology team to build and enhance our mobile applications that serve thousands of users across Botswana. You'll work on React Native apps, implement new features, and ensure optimal performance.",
+    "requirements": [
+      "5+ years of mobile development experience",
+      "Strong proficiency in React Native and JavaScript/TypeScript",
+      "Experience with native iOS and Android development",
+      "Knowledge of RESTful APIs and mobile app architecture",
+      "Experience with Git, CI/CD, and agile development practices",
+      "Bachelor's degree in Computer Science or related field"
+    ],
+    "responsibilities": [
+      "Develop and maintain mobile applications for iOS and Android",
+      "Collaborate with designers and backend developers",
+      "Implement new features and optimize app performance",
+      "Write clean, maintainable, and well-documented code",
+      "Participate in code reviews and technical discussions",
+      "Mentor junior developers and contribute to team growth"
+    ],
+    "benefits": [
+      "Competitive salary and performance bonuses",
+      "Medical aid and life insurance",
+      "Flexible working hours and remote work options",
+      "Professional development opportunities",
+      "Free MobiRides credits",
+      "Annual team retreats and company events"
+    ],
+    "postedDate": "2024-01-15",
+    "applicationDeadline": "2024-02-15",
+    "isRemote": false,
+    "isUrgent": true,
+    "tags": ["React Native", "Mobile", "iOS", "Android", "Senior"]
+  },
+  {
+    "id": "job-002",
+    "title": "Customer Success Specialist",
+    "department": "Customer Success",
+    "location": "Francistown, Botswana",
+    "type": "Full-time",
+    "level": "Mid-level",
+    "salary": {
+      "min": 15000,
+      "max": 20000,
+      "currency": "BWP",
+      "period": "month"
+    },
+    "description": "Help our users have the best possible experience with MobiRides. You'll handle customer inquiries, resolve issues, and work to improve our service quality across Botswana.",
+    "requirements": [
+      "2+ years of customer service or support experience",
+      "Excellent communication skills in English and Setswana",
+      "Problem-solving mindset and patience",
+      "Experience with CRM systems and support tools",
+      "Understanding of the local market and culture",
+      "Diploma or degree in Business, Communications, or related field"
+    ],
+    "responsibilities": [
+      "Respond to customer inquiries via phone, email, and chat",
+      "Resolve customer issues and escalate complex cases",
+      "Maintain customer satisfaction and retention",
+      "Document customer feedback and suggest improvements",
+      "Collaborate with other teams to enhance user experience",
+      "Conduct customer onboarding and training sessions"
+    ],
+    "benefits": [
+      "Competitive salary with performance incentives",
+      "Medical aid and retirement fund",
+      "Training and career development programs",
+      "Flexible working arrangements",
+      "Free MobiRides usage",
+      "Team building activities and events"
+    ],
+    "postedDate": "2024-01-10",
+    "applicationDeadline": "2024-02-10",
+    "isRemote": false,
+    "isUrgent": false,
+    "tags": ["Customer Service", "Support", "Communication", "Mid-level"]
+  },
+  {
+    "id": "job-003",
+    "title": "Digital Marketing Coordinator",
+    "department": "Marketing",
+    "location": "Gaborone, Botswana",
+    "type": "Full-time",
+    "level": "Junior",
+    "salary": {
+      "min": 12000,
+      "max": 16000,
+      "currency": "BWP",
+      "period": "month"
+    },
+    "description": "Join our marketing team to create engaging campaigns and grow our brand presence across Botswana. You'll work on social media, content creation, and digital advertising.",
+    "requirements": [
+      "1-2 years of digital marketing experience",
+      "Knowledge of social media platforms and digital advertising",
+      "Basic understanding of SEO and content marketing",
+      "Creative thinking and attention to detail",
+      "Proficiency in design tools (Canva, Photoshop) is a plus",
+      "Diploma in Marketing, Communications, or related field"
+    ],
+    "responsibilities": [
+      "Create and manage social media content and campaigns",
+      "Assist with digital advertising on Facebook, Google, and other platforms",
+      "Write blog posts and marketing copy",
+      "Monitor and report on campaign performance",
+      "Support event marketing and community engagement",
+      "Collaborate with design and content teams"
+    ],
+    "benefits": [
+      "Competitive starting salary",
+      "Medical aid and basic insurance",
+      "Learning and development opportunities",
+      "Creative and collaborative work environment",
+      "Free MobiRides credits",
+      "Mentorship from senior marketing professionals"
+    ],
+    "postedDate": "2024-01-08",
+    "applicationDeadline": "2024-02-08",
+    "isRemote": true,
+    "isUrgent": false,
+    "tags": ["Digital Marketing", "Social Media", "Content", "Junior"]
+  },
+  {
+    "id": "job-004",
+    "title": "Fleet Operations Manager",
+    "department": "Operations",
+    "location": "Maun, Botswana",
+    "type": "Full-time",
+    "level": "Senior",
+    "salary": {
+      "min": 22000,
+      "max": 28000,
+      "currency": "BWP",
+      "period": "month"
+    },
+    "description": "Oversee our vehicle fleet operations in the northern region of Botswana. You'll ensure optimal vehicle availability, maintenance, and user satisfaction in Maun and surrounding areas.",
+    "requirements": [
+      "5+ years of fleet or operations management experience",
+      "Strong understanding of vehicle maintenance and logistics",
+      "Leadership and team management skills",
+      "Knowledge of local regulations and compliance requirements",
+      "Data analysis and reporting capabilities",
+      "Bachelor's degree in Operations, Business, or related field"
+    ],
+    "responsibilities": [
+      "Manage fleet operations and vehicle availability",
+      "Coordinate vehicle maintenance and repairs",
+      "Optimize vehicle distribution and utilization",
+      "Lead and develop the local operations team",
+      "Ensure compliance with safety and regulatory standards",
+      "Analyze operational data and implement improvements"
+    ],
+    "benefits": [
+      "Competitive salary and performance bonuses",
+      "Comprehensive medical aid and insurance",
+      "Company vehicle and fuel allowance",
+      "Leadership development programs",
+      "Relocation assistance if needed",
+      "Annual performance reviews and career progression"
+    ],
+    "postedDate": "2024-01-12",
+    "applicationDeadline": "2024-02-12",
+    "isRemote": false,
+    "isUrgent": true,
+    "tags": ["Operations", "Fleet Management", "Leadership", "Senior"]
+  },
+  {
+    "id": "job-005",
+    "title": "Data Analyst",
+    "department": "Technology",
+    "location": "Gaborone, Botswana",
+    "type": "Full-time",
+    "level": "Mid-level",
+    "salary": {
+      "min": 18000,
+      "max": 24000,
+      "currency": "BWP",
+      "period": "month"
+    },
+    "description": "Help us make data-driven decisions by analyzing user behavior, operational metrics, and business performance. You'll work with large datasets to uncover insights that drive our growth.",
+    "requirements": [
+      "3+ years of data analysis experience",
+      "Proficiency in SQL, Python, or R",
+      "Experience with data visualization tools (Tableau, Power BI)",
+      "Statistical analysis and modeling skills",
+      "Understanding of business metrics and KPIs",
+      "Bachelor's degree in Statistics, Mathematics, or related field"
+    ],
+    "responsibilities": [
+      "Analyze user behavior and operational data",
+      "Create dashboards and reports for stakeholders",
+      "Identify trends and insights to support business decisions",
+      "Collaborate with product and operations teams",
+      "Develop predictive models and forecasts",
+      "Ensure data quality and integrity"
+    ],
+    "benefits": [
+      "Competitive salary with annual reviews",
+      "Medical aid and retirement contributions",
+      "Professional development and training budget",
+      "Modern tools and technology",
+      "Flexible working hours",
+      "Conference attendance and learning opportunities"
+    ],
+    "postedDate": "2024-01-05",
+    "applicationDeadline": "2024-02-05",
+    "isRemote": true,
+    "isUrgent": false,
+    "tags": ["Data Analysis", "SQL", "Python", "Analytics", "Mid-level"]
+  },
+  {
+    "id": "job-006",
+    "title": "Business Development Intern",
+    "department": "Business Development",
+    "location": "Gaborone, Botswana",
+    "type": "Internship",
+    "level": "Entry",
+    "salary": {
+      "min": 5000,
+      "max": 7000,
+      "currency": "BWP",
+      "period": "month"
+    },
+    "description": "Gain hands-on experience in business development and partnerships. You'll support our growth initiatives, research new markets, and assist with strategic projects.",
+    "requirements": [
+      "Currently pursuing or recently completed degree in Business, Economics, or related field",
+      "Strong analytical and research skills",
+      "Excellent communication and presentation abilities",
+      "Interest in the sharing economy and mobility sector",
+      "Proficiency in Microsoft Office and Google Workspace",
+      "Enthusiasm for learning and professional growth"
+    ],
+    "responsibilities": [
+      "Research market opportunities and competitive landscape",
+      "Support partnership development and negotiations",
+      "Assist with business case development and analysis",
+      "Prepare presentations and reports for management",
+      "Participate in strategic planning sessions",
+      "Support various business development projects"
+    ],
+    "benefits": [
+      "Competitive internship stipend",
+      "Mentorship from senior business leaders",
+      "Real-world business experience",
+      "Networking opportunities",
+      "Potential for full-time employment",
+      "Certificate of completion and references"
+    ],
+    "postedDate": "2024-01-20",
+    "applicationDeadline": "2024-02-20",
+    "isRemote": false,
+    "isUrgent": false,
+    "tags": ["Internship", "Business Development", "Entry Level", "Learning"]
+  }
+]

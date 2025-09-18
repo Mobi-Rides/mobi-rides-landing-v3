@@ -35,8 +35,10 @@ const FindRidePage: React.FC = () => {
     const filtered = vehicles.filter(vehicle => {
       const matchesCategory = selectedCategory === 'all' || vehicle.vehicle_type === selectedCategory;
       const matchesLocation = searchLocation === '' || 
-        locationsData.serviceAreas.some(area => 
-          area.name.toLowerCase().includes(searchLocation.toLowerCase())
+        locationsData.currentCities.some(city => 
+          city.serviceAreas.some(area => 
+            area.toLowerCase().includes(searchLocation.toLowerCase())
+          ) || city.name.toLowerCase().includes(searchLocation.toLowerCase())
         ) || vehicle.location?.toLowerCase().includes(searchLocation.toLowerCase());
       
       let matchesPrice = true;
@@ -284,22 +286,23 @@ const FindRidePage: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {Object.values(pricingData.fees).map((fee, index) => (
+          {pricingData?.pricingTiers && Object.values(pricingData.pricingTiers).map((tier, index) => (
             <Card key={index}>
               <CardHeader>
-                <CardTitle className="text-lg">{fee.name}</CardTitle>
+                <CardTitle className="text-lg">{tier.name}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold text-blue-600 mb-2">
-                  {'amount' in fee ? `P${fee.amount}` : 
-                   'rate' in fee ? `${(fee.rate * 100).toFixed(1)}%` : 
-                   'withinGaborone' in fee ? `P${fee.withinGaborone} - P${fee.outsideGaborone}` : 
-                   'Free'}
+                  P{tier.basePrice}
                 </div>
-                <p className="text-sm text-gray-600">{fee.description}</p>
-                {'mandatory' in fee && fee.mandatory && (
-                  <p className="text-xs text-blue-600 mt-2">✓ Mandatory</p>
-                )}
+                <p className="text-sm text-gray-600">{tier.description}</p>
+                <div className="mt-3">
+                  <ul className="text-xs text-gray-600 space-y-1">
+                    {tier.features?.map((feature, featureIndex) => (
+                      <li key={featureIndex}>✓ {feature}</li>
+                    ))}
+                  </ul>
+                </div>
               </CardContent>
             </Card>
           ))}
@@ -310,7 +313,11 @@ const FindRidePage: React.FC = () => {
             Our Guarantee
           </h3>
           <ul className="text-sm text-blue-800 space-y-1">
-            {pricingData.guarantees.map((guarantee, index) => (
+            {[
+              "Quality Guarantee - We ensure reliable and safe transportation services",
+              "24/7 Customer Support",
+              "No Hidden Fees Policy"
+            ].map((guarantee, index) => (
               <li key={index}>✓ {guarantee}</li>
             ))}
           </ul>

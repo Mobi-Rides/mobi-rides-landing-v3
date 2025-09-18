@@ -1,0 +1,196 @@
+{
+  "privacyPolicy": {
+    "lastUpdated": "2024-01-15",
+    "version": "2.1",
+    "effectiveDate": "2024-01-01",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "Introduction",
+        "content": "MobiRides (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and website (collectively, the \"Service\"). By using our Service, you consent to the data practices described in this policy."
+      },
+      {
+        "id": "information-collection",
+        "title": "Information We Collect",
+        "content": "We collect information you provide directly to us, such as when you create an account, make a booking, or contact us for support. This includes:\n\n• **Personal Information**: Name, email address, phone number, date of birth, and government-issued ID\n• **Payment Information**: Credit card details, mobile money information, and billing addresses\n• **Location Data**: GPS coordinates, pickup and drop-off locations\n• **Usage Information**: App interactions, booking history, and preferences\n• **Device Information**: Device type, operating system, and unique device identifiers\n• **Communication Data**: Messages, calls, and feedback through our platform"
+      },
+      {
+        "id": "information-use",
+        "title": "How We Use Your Information",
+        "content": "We use the information we collect to:\n\n• Provide, maintain, and improve our services\n• Process transactions and send related information\n• Send you technical notices, updates, and support messages\n• Respond to your comments, questions, and customer service requests\n• Communicate with you about products, services, and events\n• Monitor and analyze trends, usage, and activities\n• Detect, investigate, and prevent fraudulent transactions\n• Comply with legal obligations and protect our rights"
+      },
+      {
+        "id": "information-sharing",
+        "title": "Information Sharing and Disclosure",
+        "content": "We may share your information in the following circumstances:\n\n• **With Vehicle Hosts**: We share necessary information to facilitate bookings\n• **With Service Providers**: Third-party vendors who perform services on our behalf\n• **For Legal Reasons**: When required by law or to protect our rights\n• **Business Transfers**: In connection with mergers, acquisitions, or asset sales\n• **With Your Consent**: When you explicitly agree to share information\n\nWe do not sell, trade, or rent your personal information to third parties for marketing purposes."
+      },
+      {
+        "id": "data-security",
+        "title": "Data Security",
+        "content": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:\n\n• Encryption of sensitive data in transit and at rest\n• Regular security assessments and updates\n• Access controls and authentication mechanisms\n• Employee training on data protection\n• Incident response procedures\n\nHowever, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security."
+      },
+      {
+        "id": "data-retention",
+        "title": "Data Retention",
+        "content": "We retain your personal information for as long as necessary to provide our services and fulfill the purposes outlined in this policy. Specific retention periods include:\n\n• Account information: Until account deletion plus 7 years for legal compliance\n• Transaction records: 7 years for financial and legal requirements\n• Location data: 30 days unless required for safety or legal purposes\n• Communication records: 3 years for customer service purposes\n\nYou may request deletion of your account and associated data at any time."
+      },
+      {
+        "id": "your-rights",
+        "title": "Your Rights and Choices",
+        "content": "You have the following rights regarding your personal information:\n\n• **Access**: Request a copy of your personal information\n• **Correction**: Update or correct inaccurate information\n• **Deletion**: Request deletion of your personal information\n• **Portability**: Receive your data in a structured, machine-readable format\n• **Objection**: Object to certain processing of your information\n• **Restriction**: Request limitation of processing\n\nTo exercise these rights, contact us at privacy@mobirides.bw or through the app settings."
+      },
+      {
+        "id": "cookies",
+        "title": "Cookies and Tracking Technologies",
+        "content": "We use cookies and similar tracking technologies to collect and use personal information about you. These technologies help us:\n\n• Remember your preferences and settings\n• Analyze app performance and usage\n• Provide personalized content and advertisements\n• Improve security and prevent fraud\n\nYou can control cookies through your browser settings, but disabling them may affect app functionality."
+      },
+      {
+        "id": "international-transfers",
+        "title": "International Data Transfers",
+        "content": "Your information may be transferred to and processed in countries other than Botswana. We ensure appropriate safeguards are in place to protect your information, including:\n\n• Adequacy decisions by relevant authorities\n• Standard contractual clauses\n• Binding corporate rules\n• Certification schemes\n\nWe only transfer data to countries or organizations that provide adequate protection."
+      },
+      {
+        "id": "children-privacy",
+        "title": "Children's Privacy",
+        "content": "Our Service is not intended for children under 18 years of age. We do not knowingly collect personal information from children under 18. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately."
+      },
+      {
+        "id": "policy-changes",
+        "title": "Changes to This Privacy Policy",
+        "content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the \"Last Updated\" date. For significant changes, we may provide additional notice through the app or email."
+      },
+      {
+        "id": "contact-info",
+        "title": "Contact Information",
+        "content": "If you have any questions about this Privacy Policy, please contact us:\n\n• **Email**: privacy@mobirides.bw\n• **Phone**: +267 123 4567\n• **Address**: MobiRides Privacy Office, Plot 123, Central Business District, Gaborone, Botswana\n• **Data Protection Officer**: dpo@mobirides.bw"
+      }
+    ]
+  },
+  "termsOfService": {
+    "lastUpdated": "2024-01-15",
+    "version": "3.2",
+    "effectiveDate": "2024-01-01",
+    "sections": [
+      {
+        "id": "acceptance",
+        "title": "Acceptance of Terms",
+        "content": "By accessing or using the MobiRides platform, you agree to be bound by these Terms of Service (\"Terms\"). If you do not agree to these Terms, you may not use our Service. These Terms constitute a legally binding agreement between you and MobiRides (Pty) Ltd."
+      },
+      {
+        "id": "service-description",
+        "title": "Service Description",
+        "content": "MobiRides is a peer-to-peer vehicle sharing platform that connects vehicle owners (\"Hosts\") with individuals seeking transportation (\"Guests\"). We provide the technology platform but do not own, operate, or manage the vehicles listed on our platform. We are not a transportation company or vehicle rental agency."
+      },
+      {
+        "id": "eligibility",
+        "title": "Eligibility",
+        "content": "To use our Service, you must:\n\n• Be at least 21 years old\n• Hold a valid driver's license\n• Be legally authorized to enter into contracts\n• Provide accurate and complete information\n• Comply with all applicable laws and regulations\n• Not be prohibited from using our Service under Botswana law"
+      },
+      {
+        "id": "user-accounts",
+        "title": "User Accounts",
+        "content": "You are responsible for:\n\n• Maintaining the confidentiality of your account credentials\n• All activities that occur under your account\n• Providing accurate and up-to-date information\n• Notifying us immediately of any unauthorized use\n• Complying with our verification requirements\n\nWe reserve the right to suspend or terminate accounts that violate these Terms."
+      },
+      {
+        "id": "booking-terms",
+        "title": "Booking and Rental Terms",
+        "content": "**For Guests:**\n\n• Bookings are subject to Host approval\n• You must inspect the vehicle before use\n• You are responsible for the vehicle during the rental period\n• You must return the vehicle in the same condition\n• Late returns may incur additional fees\n\n**For Hosts:**\n\n• You must provide accurate vehicle information\n• Vehicles must be properly maintained and insured\n• You must comply with all safety requirements\n• You are responsible for vehicle availability as listed"
+      },
+      {
+        "id": "payments",
+        "title": "Payments and Fees",
+        "content": "• All fees are clearly displayed before booking confirmation\n• Payment is processed through secure third-party providers\n• Service fees are non-refundable unless otherwise stated\n• Hosts receive payment after successful trip completion\n• Additional charges may apply for damages, late returns, or violations\n• All prices are in Botswana Pula (BWP) unless otherwise specified"
+      },
+      {
+        "id": "cancellation",
+        "title": "Cancellation Policy",
+        "content": "**Cancellation by Guests:**\n\n• Free cancellation up to 24 hours before pickup\n• Partial refund for cancellations 2-24 hours before pickup\n• No refund for cancellations less than 2 hours before pickup\n\n**Cancellation by Hosts:**\n\n• Must provide reasonable notice\n• Full refund plus inconvenience credit for Guest\n• Repeated cancellations may result in account suspension"
+      },
+      {
+        "id": "insurance-liability",
+        "title": "Insurance and Liability",
+        "content": "• All vehicles must maintain comprehensive insurance coverage\n• MobiRides provides additional coverage during active rentals\n• Users are responsible for damages not covered by insurance\n• Report all incidents immediately through the app\n• Cooperate fully with insurance investigations\n• MobiRides is not liable for personal injuries or property damage beyond insurance coverage"
+      },
+      {
+        "id": "prohibited-uses",
+        "title": "Prohibited Uses",
+        "content": "You may not use our Service to:\n\n• Violate any laws or regulations\n• Transport illegal substances or materials\n• Use vehicles for commercial purposes without authorization\n• Sublease or transfer bookings to third parties\n• Tamper with or damage vehicles\n• Harass, threaten, or discriminate against other users\n• Provide false or misleading information\n• Circumvent our fees or payment systems"
+      },
+      {
+        "id": "intellectual-property",
+        "title": "Intellectual Property",
+        "content": "The MobiRides platform, including all content, features, and functionality, is owned by MobiRides and protected by copyright, trademark, and other intellectual property laws. You may not:\n\n• Copy, modify, or distribute our content\n• Use our trademarks without permission\n• Reverse engineer our software\n• Create derivative works\n• Remove copyright or proprietary notices"
+      },
+      {
+        "id": "dispute-resolution",
+        "title": "Dispute Resolution",
+        "content": "• We encourage users to resolve disputes directly through our platform\n• Mediation services are available for unresolved issues\n• Legal disputes will be governed by Botswana law\n• Jurisdiction lies with the courts of Botswana\n• Class action lawsuits are not permitted\n• Arbitration may be required for certain disputes"
+      },
+      {
+        "id": "limitation-liability",
+        "title": "Limitation of Liability",
+        "content": "MobiRides' liability is limited to the maximum extent permitted by law. We are not liable for:\n\n• Indirect, incidental, or consequential damages\n• Loss of profits, data, or business opportunities\n• Damages exceeding the amount paid for services\n• Actions or omissions of Hosts or Guests\n• Force majeure events beyond our control"
+      },
+      {
+        "id": "termination",
+        "title": "Termination",
+        "content": "We may terminate or suspend your account immediately for:\n\n• Violation of these Terms\n• Fraudulent or illegal activity\n• Safety concerns\n• Non-payment of fees\n• Repeated policy violations\n\nYou may terminate your account at any time through the app settings."
+      },
+      {
+        "id": "changes-terms",
+        "title": "Changes to Terms",
+        "content": "We reserve the right to modify these Terms at any time. We will notify users of significant changes through the app or email. Continued use of the Service after changes constitutes acceptance of the new Terms."
+      },
+      {
+        "id": "contact-legal",
+        "title": "Contact Information",
+        "content": "For legal matters or questions about these Terms:\n\n• **Email**: legal@mobirides.bw\n• **Phone**: +267 123 4567\n• **Address**: MobiRides Legal Department, Plot 123, Central Business District, Gaborone, Botswana\n• **Business Registration**: Company Registration Number: BW00123456789"
+      }
+    ]
+  },
+  "cookiePolicy": {
+    "lastUpdated": "2024-01-15",
+    "sections": [
+      {
+        "id": "what-are-cookies",
+        "title": "What Are Cookies",
+        "content": "Cookies are small text files stored on your device when you visit our website or use our app. They help us provide you with a better experience by remembering your preferences and analyzing how you use our services."
+      },
+      {
+        "id": "types-of-cookies",
+        "title": "Types of Cookies We Use",
+        "content": "• **Essential Cookies**: Necessary for the website to function properly\n• **Performance Cookies**: Help us understand how visitors interact with our website\n• **Functional Cookies**: Remember your preferences and settings\n• **Marketing Cookies**: Used to deliver relevant advertisements"
+      },
+      {
+        "id": "managing-cookies",
+        "title": "Managing Cookies",
+        "content": "You can control and manage cookies through your browser settings. However, disabling certain cookies may affect the functionality of our services. Most browsers allow you to refuse cookies or delete existing ones."
+      }
+    ]
+  },
+  "communityGuidelines": {
+    "lastUpdated": "2024-01-15",
+    "sections": [
+      {
+        "id": "respect",
+        "title": "Treat Everyone with Respect",
+        "content": "• Be courteous and professional in all interactions\n• Respect cultural differences and personal boundaries\n• Use appropriate language in messages and reviews\n• Report inappropriate behavior immediately"
+      },
+      {
+        "id": "safety-first",
+        "title": "Safety First",
+        "content": "• Follow all traffic laws and safety regulations\n• Ensure vehicles are roadworthy and properly maintained\n• Report safety concerns immediately\n• Use safety features provided in the app"
+      },
+      {
+        "id": "honest-accurate",
+        "title": "Be Honest and Accurate",
+        "content": "• Provide truthful information in your profile and listings\n• Accurately describe vehicle condition and features\n• Honor your commitments and bookings\n• Give fair and honest reviews"
+      },
+      {
+        "id": "protect-platform",
+        "title": "Protect Our Platform",
+        "content": "• Don't attempt to circumvent our systems\n• Report suspicious activity or fraud\n• Respect intellectual property rights\n• Follow our terms of service and policies"
+      }
+    ]
+  }
+}

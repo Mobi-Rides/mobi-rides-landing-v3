@@ -19,6 +19,7 @@ const Header = () => {
     { name: 'Find a Ride', href: '/find-ride' },
     { name: 'Rent Out Your Car', href: '/host' },
     { name: 'Partners', href: '/partners' },
+    { name: 'About Us', href: '/about' },
     { name: 'Blog', href: '/blog' },
   ];
 

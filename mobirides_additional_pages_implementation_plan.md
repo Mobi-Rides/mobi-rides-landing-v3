@@ -337,3 +337,150 @@ src/
 *Prepared for: Mobirides — Implementation & Product team*
 *Version: 1.0 — Generated: 2025-09-15*
 
+
+---
+
+## Footer Navigation Pages — Phased Implementation Plan
+
+Purpose: Generate missing landing pages linked from the site footer, implemented consistently with existing layouts and component patterns. Each page includes route definition, file location, section outline, data needs, SEO, and acceptance criteria.
+
+Global Implementation Approach
+- Reuse: PageLayout, PageHero, SectionWrapper for layout; LazySection + AnimatedSection for progressive reveal.
+- Create reusable building blocks (if not already present):
+  - FAQAccordion (groups by category)
+  - ContentSection (title, subtitle, rich content)
+  - StatCards (icon + metric)
+  - ComparisonTable (pricing/features)
+  - ContactOptions (email, phone, chat/live support)
+  - DocumentList (downloadables)
+- SEO: Unique title/description, canonical, OpenGraph tags, JSON-LD (WebPage + BreadcrumbList when nested).
+- Routing: Add each page to React Router with human-readable paths.
+- Mobile: Ensure content stacks vertically, accordions for long sections.
+- Analytics: Track CTA clicks and FAQ expand events.
+
+Routing and Files (All Phases)
+- Add in src/App.tsx:
+  - Company: /about, /safety, /careers, /press
+  - Support & Info: /help, /pricing, /insurance, /support
+  - Resources: /travel-guides, /business, /developers
+  - Host: /host/requirements, /host/protection, /host/community
+- Create pages under src/pages/ with matching names, e.g. AboutUsPage.tsx, SafetyPage.tsx, etc.
+
+Reusable Data Sources
+- src/data/faqs.json: Extend with categories for Safety, Insurance, Help Center.
+- src/data/pricing.json: Ensure detailed fee schedule and examples.
+- src/data/locations.json: Leverage for travel guides.
+- src/data/partners.json: Reuse for Business Solutions examples.
+
+Phase 1: Company Pages
+1) About Us — /about — src/pages/AboutUsPage.tsx
+   - Hero: Company story + mission CTA
+   - Sections: Our Story, Mission & Values, Leadership Team (cards), Timeline/Milestones, Social Proof (logos/testimonials)
+   - Data: team bios (inline/static for v1)
+   - SEO: Organization schema markup
+   - Acceptance: Page loads under 2.5s; responsive; internal links to Careers and Press
+
+2) Safety — /safety — src/pages/SafetyPage.tsx
+   - Hero: “Your safety, our priority”
+   - Sections: Safety Protocols, Vehicle Inspections, Driver Vetting, Emergency Procedures, Insurance Overview (link to /insurance), Safety FAQs
+   - Data: safety faq entries in faqs.json
+   - SEO: FAQPage JSON-LD for FAQ section
+   - Acceptance: All FAQs accordion; clear contact options for emergencies
+
+3) Careers — /careers — src/pages/CareersPage.tsx
+   - Hero: “Build mobility in Botswana”
+   - Sections: Life at MobiRides (culture), Open Roles (cards/table), Hiring Process, Benefits
+   - Data: roles list (static JSON or placeholder)
+   - SEO: JobPosting JSON-LD (optional future)
+   - Acceptance: External application links or mailto present
+
+4) Press — /press — src/pages/PressPage.tsx
+   - Hero: Media Kit + Press Inquiries CTA
+   - Sections: Press Releases, Media Coverage, Brand Assets (download list), Contact Press
+   - Data: press releases list (static)
+   - Acceptance: Downloadable assets work; contact route visible
+
+Phase 2: Support & Information Pages
+1) Help Center — /help — src/pages/HelpCenterPage.tsx
+   - Hero: Search/FAQ entry
+   - Sections: FAQ categories (Booking, Payments, Insurance, Safety, Hosts), Troubleshooting Guides, Contact Options
+   - Data: faqs.json grouped by category
+   - SEO: FAQPage JSON-LD
+   - Acceptance: Search filters FAQs client-side; contact options visible
+
+2) Pricing — /pricing — src/pages/PricingPage.tsx
+   - Hero: Transparent pricing
+   - Sections: Pricing Breakdown (base rates, location-based fees, deposits), Comparison Table, Example Trips, Pricing FAQs
+   - Data: pricing.json; reuse ComparisonTable
+   - Acceptance: Clear location-based examples; links to FindRide
+
+3) Insurance — /insurance — src/pages/InsurancePage.tsx
+   - Hero: Coverage you can trust
+   - Sections: Coverage Details (third-party, comprehensive), Excess/Deposits, Claims Process, Policy Information, Insurance FAQs
+   - Data: insurance content (static), FAQs
+   - Acceptance: Links to Safety and Support; claims steps clearly listed
+
+4) Support — /support — src/pages/SupportPage.tsx
+   - Hero: We’re here to help
+   - Sections: Contact Form, Live Chat Integration (placeholder), Ticketing Info, Response Times
+   - Data: reuse PartnerContactForm for form foundation (rename/generalize if needed)
+   - Acceptance: Form validates; shows success state; contact alternatives listed
+
+Phase 3: Resource Pages
+1) Travel Guides — /travel-guides — src/pages/TravelGuidesPage.tsx
+   - Hero: Explore Botswana
+   - Sections: Destinations (cards using locations.json), Driving Tips, Local Insights, Seasonal Advice
+   - Data: locations.json + new travel guides entries
+   - Acceptance: Links to FindRide; mobile card grid
+
+2) Business Solutions — /business — src/pages/BusinessSolutionsPage.tsx
+   - Hero: Mobility for business
+   - Sections: Corporate Partnerships, Fleet Management, Billing & Invoicing, Enterprise Pricing (CTA to contact), Case Studies
+   - Data: partners.json (reuse), static content
+   - Acceptance: Contact CTA leads to form or mailto
+
+3) API Documentation — /developers — src/pages/APIDocsPage.tsx
+   - Hero: Build with MobiRides
+   - Sections: Getting Started, Auth, Endpoints (cards/tables), Webhooks, SDKs/Examples, Support
+   - Data: static for v1; future: fetch from real docs
+   - Acceptance: Clear code samples; link to contact for keys
+
+Phase 4: Host-Specific Pages
+1) Host Requirements — /host/requirements — src/pages/HostRequirementsPage.tsx
+   - Hero: Get started as a host
+   - Sections: Vehicle Standards, Driver Requirements, Verification Process, Onboarding Steps
+   - Acceptance: Links to Host page and Protection page
+
+2) Host Protection — /host/protection — src/pages/HostProtectionPage.tsx
+   - Hero: Protecting you and your vehicle
+   - Sections: Insurance Coverage for Hosts, Damage Policies, Incident Reporting, Dispute Resolution
+   - Acceptance: Clear steps + contact link
+
+3) Host Community — /host/community — src/pages/HostCommunityPage.tsx
+   - Hero: Learn and grow together
+   - Sections: Forum (placeholder), Success Stories, Events & Webinars, Community Guidelines
+   - Acceptance: Stories/cards render; event CTA present
+
+SEO & Structured Data Guidelines
+- Title format: PageName — MobiRides
+- Descriptions: 140–160 chars, Botswana-focused
+- Canonicals: https://www.mobirides.com/{path}
+- JSON-LD: Organization on About; FAQPage on Help/Insurance; WebPage on others; BreadcrumbList on nested host pages
+
+Acceptance Criteria (Global)
+- Consistent header/footer and hero styling
+- Passes lighthouse best practices and accessibility checks
+- All routes resolve with 200, proper 404 for unknown
+- Mobile layout verified for small screens
+- Internal links between related pages (Pricing ↔ Insurance ↔ Help; Host pages interlinked)
+
+Next Steps
+- Create page stubs with PageLayout/PageHero wiring and placeholder content
+- Extend faqs.json and pricing.json where applicable
+- Wire routes in App.tsx and update Footer.tsx links if needed
+- Implement 2–3 reusable components (FAQAccordion, ComparisonTable, ContactOptions)
+- Add meta tags and minimal JSON-LD per page
+
+*Prepared for: Mobirides — Implementation & Product team*
+*Version: 1.0 — Generated: 2025-09-15*
+
