@@ -520,11 +520,11 @@ const BusinessSolutionsPage: React.FC = () => {
                 <div className="space-y-3">
                   <div className="flex items-center text-blue-100">
                     <Phone className="w-5 h-5 mr-3" />
-                    <span>+1 (555) 123-4567</span>
+                    <span>+267 74300747</span>
                   </div>
                   <div className="flex items-center text-blue-100">
                     <Mail className="w-5 h-5 mr-3" />
-                    <span>enterprise@mobirides.com</span>
+                    <span>partnerships@mobirides.com</span>
                   </div>
                 </div>
               </div>

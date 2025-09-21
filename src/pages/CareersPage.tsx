@@ -95,24 +95,24 @@ const CareersPage: React.FC = () => {
 
   const officeLocations = [
     {
-      city: 'San Francisco',
-      country: 'USA',
-      address: '123 Market Street, San Francisco, CA 94105',
+      city: 'Gaborone',
+      country: 'Botswana', 
+      address: 'Plot 16530, Sehithwa Rd, Gaborone West - Phase 1',
       employees: 85,
       isHQ: true
     },
     {
-      city: 'New York',
-      country: 'USA', 
-      address: '456 Broadway, New York, NY 10013',
-      employees: 45,
+      city: 'Francistown',
+      country: 'Botswana',
+      address: 'Blue Jacket Street, Francistown',
+      employees: 25,
       isHQ: false
     },
     {
-      city: 'London',
-      country: 'UK',
-      address: '789 Oxford Street, London W1C 1JN',
-      employees: 20,
+      city: 'Maun',
+      country: 'Botswana',
+      address: 'Tsheko Tsheko Road, Maun',
+      employees: 15,
       isHQ: false
     }
   ];

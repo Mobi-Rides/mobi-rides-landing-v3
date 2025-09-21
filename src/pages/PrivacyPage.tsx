@@ -237,8 +237,8 @@ const PrivacyPage: React.FC = () => {
                 </p>
                 <div className="space-y-2 text-sm">
                   <p><strong>Email:</strong> privacy@mobirides.com</p>
-                  <p><strong>Address:</strong> 123 Tech Street, San Francisco, CA 94105</p>
-                  <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                  <p><strong>Address:</strong> Plot 16530, Sehithwa Rd, Gaborone West - Phase 1, Gaborone, Botswana</p>
+                  <p><strong>Phone:</strong> +267 74300747</p>
                 </div>
               </div>
 

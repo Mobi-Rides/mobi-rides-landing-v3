@@ -144,14 +144,14 @@ const HostCommunityPage: React.FC = () => {
     },
     {
       id: '2',
-      title: 'Local Host Meetup - New York City',
+      title: 'Local Host Meetup - Gaborone',
       type: 'meetup',
       date: '2024-02-18',
-      time: '2:00 PM EST',
-      location: 'Manhattan Community Center',
+      time: '2:00 PM CAT',
+      location: 'Gaborone Convention Centre',
       attendees: 67,
       maxAttendees: 100,
-      description: 'Network with fellow NYC hosts, share experiences, and enjoy refreshments.'
+      description: 'Network with fellow Gaborone hosts, share experiences, and enjoy refreshments.'
     },
     {
       id: '3',
@@ -180,33 +180,33 @@ const HostCommunityPage: React.FC = () => {
   const hostSpotlights: HostSpotlight[] = [
     {
       id: '1',
-      name: 'Maria Rodriguez',
-      location: 'Miami, FL',
+      name: 'Thabo Molefi',
+      location: 'Gaborone, Botswana',
       rating: 4.9,
       totalRides: 2847,
-      monthlyEarnings: '$3,200',
-      story: 'Started hosting to supplement her teaching income and now runs a successful side business.',
-      avatar: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20headshot%20of%20a%20friendly%20hispanic%20woman%20teacher%20smiling%20warmly&image_size=square'
+      monthlyEarnings: 'P8,500',
+      story: 'Started hosting to supplement his teaching income and now runs a successful side business.',
+      avatar: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20headshot%20of%20a%20friendly%20african%20man%20teacher%20from%20botswana%20smiling%20warmly&image_size=square'
     },
     {
       id: '2',
-      name: 'James Chen',
-      location: 'San Francisco, CA',
+      name: 'Keabetswe Mogale',
+      location: 'Francistown, Botswana',
       rating: 4.8,
       totalRides: 1923,
-      monthlyEarnings: '$4,100',
-      story: 'Tech professional who hosts during evenings and weekends to explore the city.',
-      avatar: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20headshot%20of%20an%20asian%20man%20in%20tech%20industry%20smiling%20confidently&image_size=square'
+      monthlyEarnings: 'P7,200',
+      story: 'Mining professional who hosts during evenings and weekends to explore entrepreneurship.',
+      avatar: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20headshot%20of%20an%20african%20woman%20mining%20professional%20from%20botswana%20smiling%20confidently&image_size=square'
     },
     {
       id: '3',
-      name: 'Ashley Johnson',
-      location: 'Austin, TX',
+      name: 'Lesego Kgang',
+      location: 'Maun, Botswana',
       rating: 4.9,
       totalRides: 3156,
-      monthlyEarnings: '$2,800',
-      story: 'College student who built a flexible income stream around her class schedule.',
-      avatar: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20headshot%20of%20a%20young%20african%20american%20college%20student%20smiling%20brightly&image_size=square'
+      monthlyEarnings: 'P9,100',
+      story: 'University student who built a flexible income stream around her class schedule and tourism season.',
+      avatar: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20headshot%20of%20a%20young%20african%20college%20student%20from%20botswana%20smiling%20brightly&image_size=square'
     }
   ];
 

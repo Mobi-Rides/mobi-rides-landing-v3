@@ -133,7 +133,7 @@ const HostProtectionPage: React.FC = () => {
       type: 'technical',
       title: 'Technical Support',
       description: 'Help with app issues and technical problems',
-      contact: 'support@mobirides.com',
+      contact: 'hello@mobirides.com',
       availability: 'Mon-Sun 6AM-10PM',
       icon: <FileText className="w-5 h-5" />
     },

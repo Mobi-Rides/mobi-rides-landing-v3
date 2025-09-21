@@ -32,21 +32,21 @@ const PressPage: React.FC = () => {
       name: 'Sarah Johnson',
       title: 'Head of Communications',
       email: 'press@mobirides.com',
-      phone: '+1 (555) 123-4567',
+      phone: '+267 74300750',
       specialties: ['Company News', 'Product Launches', 'Partnerships']
     },
     {
       name: 'Michael Chen',
       title: 'PR Manager',
       email: 'media@mobirides.com', 
-      phone: '+1 (555) 123-4568',
+      phone: '+267 74300750',
       specialties: ['Industry Analysis', 'Executive Interviews', 'Market Trends']
     },
     {
       name: 'Emily Rodriguez',
       title: 'Communications Specialist',
       email: 'news@mobirides.com',
-      phone: '+1 (555) 123-4569',
+      phone: '+267 74300750',
       specialties: ['Community Stories', 'Safety Updates', 'Local News']
     }
   ];

@@ -104,15 +104,15 @@ const TravelGuidesPage: React.FC = () => {
     },
     {
       id: '6',
-      name: 'New York City',
-      country: 'USA',
-      description: 'Experience the energy of the city that never sleeps, from Broadway shows to world-class museums.',
-      image: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=new%20york%20city%20manhattan%20skyline%20times%20square%20bustling%20urban%20scene&image_size=landscape_16_9',
+      name: 'Victoria Falls',
+      country: 'Zambia/Zimbabwe',
+      description: 'Experience one of the world\'s most spectacular waterfalls, adventure activities, and stunning natural beauty.',
+      image: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=victoria%20falls%20spectacular%20waterfall%20zimbabwe%20zambia%20rainbow%20mist%20natural%20wonder&image_size=landscape_16_9',
       rating: 4.7,
-      duration: '4-6 days',
-      category: 'city',
-      highlights: ['Central Park', 'Statue of Liberty', 'Broadway', 'Metropolitan Museum'],
-      bestTime: 'April-June, September-November'
+      duration: '2-4 days',
+      category: 'nature',
+      highlights: ['Victoria Falls Bridge', 'White Water Rafting', 'Sunset Cruise', 'Wildlife Safari'],
+      bestTime: 'April-October'
     }
   ];
 
