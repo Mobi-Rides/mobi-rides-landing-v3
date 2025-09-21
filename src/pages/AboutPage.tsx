@@ -73,10 +73,10 @@ const AboutPage: React.FC = () => {
               Founded in 2020, MobiRides emerged from a simple observation: millions of cars sit idle while people struggle with transportation access. We envisioned a world where communities could share resources, reduce environmental impact, and build stronger connections.
             </p>
             <p className="mb-6">
-              What started as a local initiative in three cities has grown into a nationwide platform serving over 50,000 users across 25+ cities. Our success stems from putting community first – every feature, policy, and decision is made with our users' safety, convenience, and trust in mind.
+              What started as a local initiative has grown into a trusted platform serving over 100+ users across 4+ cities in Botswana. Our success stems from putting community first – every feature, policy, and decision is made with our users' safety, convenience, and trust in mind.
             </p>
             <p>
-              Today, we're proud to be the leading community-driven car sharing platform, facilitating over 500,000 safe rides while reducing carbon emissions and making transportation more accessible for everyone.
+              Today, we're proud to be Botswana's premier community-driven car sharing platform, facilitating over 200+ safe rentals while reducing carbon emissions and making transportation more accessible for everyone.
             </p>
           </div>
         </div>

@@ -1,18 +1,18 @@
 {
   "headquarters": {
     "name": "MobiRides Headquarters",
-    "address": {
-      "street": "Plot 123, Independence Avenue",
-      "city": "Gaborone",
-      "state": "South-East District",
-      "country": "Botswana",
-      "postalCode": "00000"
-    },
+      "address": {
+        "street": "Plot 16530, Sehithwa Rd, Gaborone West - Phase 1",
+        "city": "Gaborone",
+        "state": "South-East District",
+        "country": "Botswana",
+        "postalCode": "00000"
+      },
     "coordinates": {
       "lat": -24.6282,
       "lng": 25.9231
     },
-    "phone": "+267 123 4567",
+    "phone": "+267 74300747",
     "email": "info@mobirides.bw",
     "businessHours": {
       "monday": "08:00 - 17:00",
@@ -30,7 +30,7 @@
       "name": "Gaborone Main Office",
       "type": "headquarters",
       "address": {
-        "street": "Plot 123, Independence Avenue",
+        "street": "Plot 16530, Sehithwa Rd, Gaborone West - Phase 1",
         "city": "Gaborone",
         "state": "South-East District",
         "country": "Botswana",
@@ -40,7 +40,7 @@
         "lat": -24.6282,
         "lng": 25.9231
       },
-      "phone": "+267 123 4567",
+      "phone": "+267 74300747",
       "email": "gaborone@mobirides.bw",
       "services": ["Customer Support", "Fleet Management", "Corporate Sales"],
       "businessHours": {
@@ -115,7 +115,7 @@
       "id": "phone",
       "name": "Phone Support",
       "description": "Speak directly with our support team",
-      "contact": "+267 123 4567",
+      "contact": "+267 74300747",
       "availability": "24/7 Emergency Support",
       "responseTime": "Immediate",
       "icon": "Phone"
@@ -133,7 +133,7 @@
       "id": "whatsapp",
       "name": "WhatsApp Support",
       "description": "Quick support via WhatsApp",
-      "contact": "+267 123 4567",
+      "contact": "+267 74300747",
       "availability": "08:00 - 20:00",
       "responseTime": "Within 15 minutes",
       "icon": "MessageCircle"
@@ -158,7 +158,7 @@
       "id": "customer-support",
       "name": "Customer Support",
       "email": "support@mobirides.bw",
-      "phone": "+267 123 4567",
+      "phone": "+267 74300747",
       "description": "General inquiries, booking assistance, and customer service",
       "icon": "Users"
     },
