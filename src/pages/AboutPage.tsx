@@ -35,9 +35,9 @@ const AboutPage: React.FC = () => {
   ];
 
   const companyStats = [
-    { label: 'Active Users', value: '50K+', icon: Users },
-    { label: 'Cities Served', value: '25+', icon: Globe },
-    { label: 'Rides Completed', value: '500K+', icon: Target },
+    { label: 'Active Users', value: '100+', icon: Users },
+    { label: 'Cities Served', value: '4+', icon: Globe },
+    { label: 'Rentals Completed', value: '200+', icon: Target },
     { label: 'Safety Rating', value: '4.9/5', icon: Award }
   ];
 
