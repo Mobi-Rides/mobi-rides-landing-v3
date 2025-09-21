@@ -110,8 +110,8 @@ const TrustSection = () => {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { number: "10K+", label: "Happy Customers" },
-            { number: "500+", label: "Trusted Vehicles" },
+            { number: "100+", label: "Happy Customers" },
+            { number: "50+", label: "Trusted Vehicles" },
             { number: "99.8%", label: "Reliability Rate" },
             { number: "24/7", label: "Support Available" }
           ].map((stat, index) => (
