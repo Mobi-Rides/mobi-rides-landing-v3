@@ -125,7 +125,7 @@ const CareersPage: React.FC = () => {
       title="Careers at MobiRides - Join Our Mission to Transform Transportation"
       description="Explore career opportunities at MobiRides. Join our team of passionate individuals working to revolutionize transportation through community-driven car sharing."
       keywords="MobiRides careers, jobs, employment, transportation jobs, car sharing careers, tech jobs"
-      canonicalUrl="/careers"
+      canonical="/careers"
     >
       <PageHero
         title="Build the Future of Transportation"
@@ -329,10 +329,9 @@ const CareersPage: React.FC = () => {
           </div>
 
           <JobListing 
-            jobs={jobListingsData}
+            jobs={jobListingsData as any}
             showFilters={true}
-            showStats={true}
-            initialLimit={6}
+            maxJobs={6}
           />
         </div>
       </SectionWrapper>
@@ -420,7 +419,7 @@ const CareersPage: React.FC = () => {
             </p>
           </div>
 
-          <ContactForm type="business" />
+          <ContactForm type="business" onSubmit={undefined} />
         </div>
       </SectionWrapper>
     </PageLayout>

@@ -92,7 +92,56 @@ const SafetyPage: React.FC = () => {
     { label: 'Claims Resolved', value: '99.8%', description: 'Within 48 hours' }
   ];
 
-  const safetyDocuments = [
+  const safetyDocuments: Document[] = [
+    {
+      id: 'safety-guide-001',
+      title: 'MobiRides Safety Guide',
+      description: 'Comprehensive safety guidelines for using MobiRides services.',
+      type: 'pdf' as const,
+      size: '2.4 MB',
+      category: 'guide',
+      downloadUrl: '/documents/safety-guide.pdf',
+      lastUpdated: '2024-01-15',
+      publishedDate: '2024-01-15',
+      tags: ['safety', 'guide']
+    },
+    {
+      id: 'insurance-policy',
+      title: 'Insurance Policy Details',
+      description: 'Full insurance coverage details and claim procedures',
+      type: 'pdf' as const,
+      size: '1.8 MB',
+      category: 'insurance',
+      downloadUrl: '/documents/insurance-policy.pdf',
+      lastUpdated: '2024-01-10',
+      publishedDate: '2024-01-10',
+      tags: ['insurance', 'claims']
+    },
+    {
+      id: 'emergency-contacts',
+      title: 'Emergency Contact List',
+      description: 'Important phone numbers and emergency contacts',
+      type: 'pdf' as const,
+      size: '0.5 MB',
+      category: 'emergency',
+      downloadUrl: '/documents/emergency-contacts.pdf',
+      lastUpdated: '2024-01-20',
+      publishedDate: '2024-01-20',
+      tags: ['emergency', 'contacts']
+    },
+    {
+      id: 'incident-form',
+      title: 'Incident Report Form',
+      description: 'Printable form for documenting incidents',
+      type: 'pdf' as const,
+      size: '0.3 MB',
+      category: 'forms',
+      downloadUrl: '/documents/incident-form.pdf',
+      lastUpdated: '2024-01-05',
+      publishedDate: '2024-01-05',
+      tags: ['incident', 'form']
+    }
+  ];
     {
       id: 'safety-guide',
       title: 'Complete Safety Guide',
@@ -135,14 +184,14 @@ const SafetyPage: React.FC = () => {
     }
   ];
 
-  const safetyFAQs = faqData.filter(faq => faq.category === 'safety');
+  const safetyFAQs = faqData.safety || [];
 
   return (
     <PageLayout
       title="Safety First - MobiRides Security & Insurance Coverage"
       description="Learn about MobiRides' comprehensive safety measures, insurance coverage, emergency procedures, and community protection protocols."
       keywords="MobiRides safety, car sharing insurance, emergency procedures, vehicle safety, community protection"
-      canonicalUrl="/safety"
+      canonical="/safety"
     >
       <PageHero
         title="Your Safety is Our Priority"
@@ -350,9 +399,9 @@ const SafetyPage: React.FC = () => {
           </div>
 
           <FAQSection 
-            faqs={safetyFAQs}
-            showSearch={true}
-            showCategoryFilter={false}
+            items={safetyFAQs}
+            searchable={true}
+            categories={[]}
             title=""
           />
         </div>
@@ -370,7 +419,7 @@ const SafetyPage: React.FC = () => {
             </p>
           </div>
 
-          <ContactForm type="support" />
+          <ContactForm type="support" onSubmit={undefined} />
         </div>
       </SectionWrapper>
     </PageLayout>

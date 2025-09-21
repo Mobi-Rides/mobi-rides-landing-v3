@@ -27,6 +27,8 @@ interface TeamGridProps {
   showDepartmentFilter?: boolean;
   showSkills?: boolean;
   showSocialLinks?: boolean;
+  showStats?: boolean;
+  initialLimit?: number;
   className?: string;
 }
 
@@ -37,10 +39,12 @@ const TeamGrid: React.FC<TeamGridProps> = ({
   showDepartmentFilter = true,
   showSkills = true,
   showSocialLinks = true,
+  showStats = true,
+  initialLimit,
   className = ''
 }) => {
   const [selectedDepartment, setSelectedDepartment] = React.useState<string>('all');
-  const [visibleMembers, setVisibleMembers] = React.useState(maxMembers);
+  const [visibleMembers, setVisibleMembers] = React.useState(initialLimit || maxMembers);
 
   // Get unique departments
   const departments = React.useMemo(() => {
@@ -229,32 +233,34 @@ const TeamGrid: React.FC<TeamGridProps> = ({
       )}
 
       {/* Team Stats */}
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-600 mb-1">
-            {members.length}
+      {showStats && (
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-blue-600 mb-1">
+              {members.length}
+            </div>
+            <div className="text-sm text-gray-600">Team Members</div>
           </div>
-          <div className="text-sm text-gray-600">Team Members</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-600 mb-1">
-            {departments.length - 1}
+          <div className="text-center">
+            <div className="text-2xl font-bold text-blue-600 mb-1">
+              {departments.length - 1}
+            </div>
+            <div className="text-sm text-gray-600">Departments</div>
           </div>
-          <div className="text-sm text-gray-600">Departments</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-600 mb-1">
-            {members.filter(m => m.isLeadership).length}
+          <div className="text-center">
+            <div className="text-2xl font-bold text-blue-600 mb-1">
+              {members.filter(m => m.isLeadership).length}
+            </div>
+            <div className="text-sm text-gray-600">Leadership</div>
           </div>
-          <div className="text-sm text-gray-600">Leadership</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-600 mb-1">
-            {Array.from(new Set(members.map(m => m.location))).length}
+          <div className="text-center">
+            <div className="text-2xl font-bold text-blue-600 mb-1">
+              {Array.from(new Set(members.map(m => m.location))).length}
+            </div>
+            <div className="text-sm text-gray-600">Locations</div>
           </div>
-          <div className="text-sm text-gray-600">Locations</div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

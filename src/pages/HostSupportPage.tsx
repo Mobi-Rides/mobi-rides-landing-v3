@@ -184,8 +184,8 @@ const HostSupportPage: React.FC = () => {
                 <div className="text-sm text-white opacity-90">Ticket Resolution</div>
               </div>
               <div className="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-white">{hostSupportData.stats.availableLanguages}</div>
-                <div className="text-sm text-white opacity-90">Languages</div>
+                <div className="text-2xl font-bold text-white">{hostSupportData.stats.activeHosts}</div>
+                <div className="text-sm text-white opacity-90">Active Hosts</div>
               </div>
             </div>
           </div>

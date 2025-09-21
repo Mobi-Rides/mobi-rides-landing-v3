@@ -159,44 +159,64 @@
       "name": "Customer Support",
       "email": "support@mobirides.bw",
       "phone": "+267 123 4567",
-      "description": "General inquiries, booking assistance, and customer service"
+      "description": "General inquiries, booking assistance, and customer service",
+      "icon": "Users"
     },
     {
       "id": "safety",
       "name": "Safety & Security",
       "email": "safety@mobirides.bw",
       "phone": "+267 123 4568",
-      "description": "Safety incidents, security concerns, and emergency response"
+      "description": "Safety incidents, security concerns, and emergency response",
+      "icon": "Building"
     },
     {
       "id": "partnerships",
       "name": "Business Partnerships",
       "email": "partnerships@mobirides.bw",
       "phone": "+267 123 4569",
-      "description": "Corporate partnerships, fleet solutions, and business inquiries"
+      "description": "Corporate partnerships, fleet solutions, and business inquiries",
+      "icon": "Globe"
     },
     {
       "id": "media",
       "name": "Media & Press",
       "email": "media@mobirides.bw",
       "phone": "+267 123 4570",
-      "description": "Press inquiries, media relations, and public communications"
+      "description": "Press inquiries, media relations, and public communications",
+      "icon": "Users"
     },
     {
       "id": "careers",
       "name": "Human Resources",
       "email": "careers@mobirides.bw",
       "phone": "+267 123 4571",
-      "description": "Job applications, career opportunities, and employment inquiries"
+      "description": "Job applications, career opportunities, and employment inquiries",
+      "icon": "Building"
     }
   ],
-  "socialMedia": {
-    "facebook": "https://facebook.com/mobirides.bw",
-    "twitter": "https://twitter.com/mobirides_bw",
-    "instagram": "https://instagram.com/mobirides.bw",
-    "linkedin": "https://linkedin.com/company/mobirides-botswana",
-    "youtube": "https://youtube.com/@mobirides-bw"
-  },
+  "socialMedia": [
+    {
+      "platform": "facebook",
+      "url": "https://facebook.com/mobirides.bw"
+    },
+    {
+      "platform": "twitter",
+      "url": "https://twitter.com/mobirides_bw"
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/mobirides.bw"
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://linkedin.com/company/mobirides-botswana"
+    },
+    {
+      "platform": "youtube",
+      "url": "https://youtube.com/@mobirides-bw"
+    }
+  ],
   "mailingAddress": {
     "name": "MobiRides Botswana",
     "poBox": "P.O. Box 12345",

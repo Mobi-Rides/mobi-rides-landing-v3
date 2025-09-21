@@ -66,21 +66,25 @@ const PressPage: React.FC = () => {
       id: 'logo-pack',
       title: 'Logo Pack',
       description: 'High-resolution logos in various formats (PNG, SVG, EPS)',
-      type: 'zip',
+      type: 'zip' as const,
       size: '12.8 MB',
       category: 'brand',
       downloadUrl: '/media-kit/logo-pack.zip',
-      lastUpdated: '2024-01-10'
+      lastUpdated: '2024-01-10',
+      publishedDate: '2024-01-01',
+      tags: ['logo', 'brand', 'assets']
     },
     {
       id: 'product-screenshots',
       title: 'Product Screenshots',
       description: 'High-quality screenshots of our mobile app and web platform',
-      type: 'zip',
+      type: 'zip' as const,
       size: '45.6 MB',
       category: 'product',
       downloadUrl: '/media-kit/product-screenshots.zip',
-      lastUpdated: '2024-01-20'
+      lastUpdated: '2024-01-20',
+      publishedDate: '2024-01-01',
+      tags: ['screenshots', 'product', 'mobile']
     },
     {
       id: 'executive-photos',
@@ -155,7 +159,7 @@ const PressPage: React.FC = () => {
       title="Press & Media - MobiRides News, Updates & Media Resources"
       description="Latest press releases, media kit, and resources for journalists covering MobiRides. Get the latest news, company updates, and media assets."
       keywords="MobiRides press, media kit, press releases, news, media resources, journalist resources"
-      canonicalUrl="/press"
+      canonical="/press"
     >
       <PageHero
         title="Press & Media Center"
@@ -274,7 +278,7 @@ const PressPage: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-sm text-gray-500">
                       <User className="h-4 w-4 mr-1" />
-                      {release.author.name}
+                      {release.author}
                     </div>
                     <Button variant="outline" size="sm">
                       Read More
@@ -385,7 +389,7 @@ const PressPage: React.FC = () => {
             </p>
           </div>
 
-          <ContactForm type="business" />
+          <ContactForm type="business" onSubmit={undefined} />
         </div>
       </SectionWrapper>
 
