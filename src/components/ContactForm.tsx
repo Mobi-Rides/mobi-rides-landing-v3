@@ -183,7 +183,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => handleInputChange('phone', e.target.value)}
-                placeholder="+267 123 4567"
+                placeholder="+267 74300747"
               />
             </div>
           )}
@@ -305,11 +305,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
           <div className="flex flex-col sm:flex-row gap-4 text-sm">
             <div className="flex items-center gap-2 text-gray-600">
               <Phone className="w-4 h-4" />
-              <span>+267 123 4567</span>
+              <span>+267 74300747</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Mail className="w-4 h-4" />
-              <span>support@mobirides.com</span>
+              <span>hello@mobirides.com</span>
             </div>
           </div>
         </div>

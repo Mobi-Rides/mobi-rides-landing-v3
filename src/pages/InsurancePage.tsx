@@ -168,12 +168,12 @@ const InsurancePage: React.FC = () => {
   const emergencyContacts = [
     {
       title: '24/7 Claims Hotline',
-      number: '+267 123 4567',
+      number: '+267 74300747',
       description: 'Report accidents and incidents'
     },
     {
       title: 'Emergency Roadside',
-      number: '+267 123 4568',
+      number: '+267 74300748',
       description: 'Towing and roadside assistance'
     },
     {

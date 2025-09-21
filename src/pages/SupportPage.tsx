@@ -403,7 +403,7 @@ const SupportPage: React.FC = () => {
             </a>
             
             <a
-              href="mailto:support@mobirides.bw"
+              href="mailto:hello@mobirides.com"
               className="bg-purple-600 text-white p-6 rounded-xl hover:bg-purple-700 transition-colors"
             >
               <Mail className="h-8 w-8 mx-auto mb-3" />

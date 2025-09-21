@@ -13,7 +13,7 @@
       "lng": 25.9231
     },
     "phone": "+267 74300747",
-    "email": "info@mobirides.bw",
+    "email": "hello@mobirides.com",
     "businessHours": {
       "monday": "08:00 - 17:00",
       "tuesday": "08:00 - 17:00",
@@ -41,7 +41,7 @@
         "lng": 25.9231
       },
       "phone": "+267 74300747",
-      "email": "gaborone@mobirides.bw",
+      "email": "gaborone@mobirides.com",
       "services": ["Customer Support", "Fleet Management", "Corporate Sales"],
       "businessHours": {
         "monday": "08:00 - 17:00",
@@ -69,7 +69,7 @@
         "lng": 27.5084
       },
       "phone": "+267 241 2345",
-      "email": "francistown@mobirides.bw",
+      "email": "francistown@mobirides.com",
       "services": ["Customer Support", "Vehicle Inspection"],
       "businessHours": {
         "monday": "08:00 - 17:00",
@@ -97,7 +97,7 @@
         "lng": 23.4241
       },
       "phone": "+267 686 1234",
-      "email": "maun@mobirides.bw",
+      "email": "maun@mobirides.com",
       "services": ["Customer Support", "Tourism Partnerships"],
       "businessHours": {
         "monday": "08:00 - 17:00",
@@ -124,7 +124,7 @@
       "id": "email",
       "name": "Email Support",
       "description": "Send us your questions and concerns",
-      "contact": "support@mobirides.bw",
+      "contact": "hello@mobirides.com",
       "availability": "Business Hours",
       "responseTime": "Within 2 hours",
       "icon": "Mail"
@@ -157,7 +157,7 @@
     {
       "id": "customer-support",
       "name": "Customer Support",
-      "email": "support@mobirides.bw",
+      "email": "hello@mobirides.com",
       "phone": "+267 74300747",
       "description": "General inquiries, booking assistance, and customer service",
       "icon": "Users"
@@ -165,32 +165,32 @@
     {
       "id": "safety",
       "name": "Safety & Security",
-      "email": "safety@mobirides.bw",
-      "phone": "+267 123 4568",
+      "email": "safety@mobirides.com",
+      "phone": "+267 74300748",
       "description": "Safety incidents, security concerns, and emergency response",
       "icon": "Building"
     },
     {
       "id": "partnerships",
       "name": "Business Partnerships",
-      "email": "partnerships@mobirides.bw",
-      "phone": "+267 123 4569",
+      "email": "partnerships@mobirides.com",
+      "phone": "+267 74300749",
       "description": "Corporate partnerships, fleet solutions, and business inquiries",
       "icon": "Globe"
     },
     {
       "id": "media",
       "name": "Media & Press",
-      "email": "media@mobirides.bw",
-      "phone": "+267 123 4570",
+      "email": "media@mobirides.com",
+      "phone": "+267 74300750",
       "description": "Press inquiries, media relations, and public communications",
       "icon": "Users"
     },
     {
       "id": "careers",
       "name": "Human Resources",
-      "email": "careers@mobirides.bw",
-      "phone": "+267 123 4571",
+      "email": "careers@mobirides.com",
+      "phone": "+267 74300751",
       "description": "Job applications, career opportunities, and employment inquiries",
       "icon": "Building"
     }
