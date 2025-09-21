@@ -114,7 +114,7 @@ const HeroSection = () => {
               <span className="gradient-text-light">By You</span>
             </h1>
             <p className="text-xl mb-8 font-light text-white">
-              <span className="gradient-text-light font-semibold">Unlock cars 24/7</span> with your phone, and go!
+              Search it, Tap it, Like it, Drive it!
             </p>
             
             {/* Mobile App Badge */}
