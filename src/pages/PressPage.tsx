@@ -56,11 +56,13 @@ const PressPage: React.FC = () => {
       id: 'brand-guidelines',
       title: 'Brand Guidelines',
       description: 'Complete brand guidelines including logos, colors, and usage rules',
-      type: 'pdf',
+      type: 'pdf' as const,
       size: '5.2 MB',
       category: 'brand',
       downloadUrl: '/media-kit/brand-guidelines.pdf',
-      lastUpdated: '2024-01-15'
+      lastUpdated: '2024-01-15',
+      publishedDate: '2024-01-15',
+      tags: ['brand', 'guidelines']
     },
     {
       id: 'logo-pack',
@@ -90,31 +92,37 @@ const PressPage: React.FC = () => {
       id: 'executive-photos',
       title: 'Executive Photos',
       description: 'Professional headshots of our leadership team',
-      type: 'zip',
+      type: 'zip' as const,
       size: '28.3 MB',
       category: 'team',
       downloadUrl: '/media-kit/executive-photos.zip',
-      lastUpdated: '2024-01-12'
+      lastUpdated: '2024-01-12',
+      publishedDate: '2024-01-12',
+      tags: ['photos', 'team', 'executives']
     },
     {
       id: 'company-fact-sheet',
       title: 'Company Fact Sheet',
       description: 'Key facts, figures, and milestones about MobiRides',
-      type: 'pdf',
+      type: 'pdf' as const,
       size: '1.2 MB',
       category: 'company',
       downloadUrl: '/media-kit/fact-sheet.pdf',
-      lastUpdated: '2024-01-18'
+      lastUpdated: '2024-01-18',
+      publishedDate: '2024-01-18',
+      tags: ['company', 'facts', 'information']
     },
     {
       id: 'video-assets',
       title: 'Video Assets',
       description: 'Promotional videos, product demos, and b-roll footage',
-      type: 'zip',
+      type: 'zip' as const,
       size: '156.7 MB',
       category: 'video',
       downloadUrl: '/media-kit/video-assets.zip',
-      lastUpdated: '2024-01-08'
+      lastUpdated: '2024-01-08',
+      publishedDate: '2024-01-08',
+      tags: ['video', 'promotional', 'demo']
     }
   ];
 
@@ -312,7 +320,6 @@ const PressPage: React.FC = () => {
 
           <DocumentDownload 
             documents={mediaKit}
-            title=""
             showSearch={true}
             showStats={true}
           />

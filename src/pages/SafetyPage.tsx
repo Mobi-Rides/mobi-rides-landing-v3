@@ -92,7 +92,7 @@ const SafetyPage: React.FC = () => {
     { label: 'Claims Resolved', value: '99.8%', description: 'Within 48 hours' }
   ];
 
-  const safetyDocuments: Document[] = [
+  const safetyDocuments = [
     {
       id: 'safety-guide-001',
       title: 'MobiRides Safety Guide',
@@ -140,47 +140,6 @@ const SafetyPage: React.FC = () => {
       lastUpdated: '2024-01-05',
       publishedDate: '2024-01-05',
       tags: ['incident', 'form']
-    }
-  ];
-    {
-      id: 'safety-guide',
-      title: 'Complete Safety Guide',
-      description: 'Comprehensive guide covering all safety protocols and procedures',
-      type: 'pdf',
-      size: '2.4 MB',
-      category: 'guide',
-      downloadUrl: '/documents/safety-guide.pdf',
-      lastUpdated: '2024-01-15'
-    },
-    {
-      id: 'insurance-policy',
-      title: 'Insurance Policy Details',
-      description: 'Full insurance coverage details and claim procedures',
-      type: 'pdf',
-      size: '1.8 MB',
-      category: 'insurance',
-      downloadUrl: '/documents/insurance-policy.pdf',
-      lastUpdated: '2024-01-10'
-    },
-    {
-      id: 'emergency-contacts',
-      title: 'Emergency Contact List',
-      description: 'Important phone numbers and emergency contacts',
-      type: 'pdf',
-      size: '0.5 MB',
-      category: 'emergency',
-      downloadUrl: '/documents/emergency-contacts.pdf',
-      lastUpdated: '2024-01-20'
-    },
-    {
-      id: 'incident-form',
-      title: 'Incident Report Form',
-      description: 'Printable form for documenting incidents',
-      type: 'pdf',
-      size: '0.3 MB',
-      category: 'forms',
-      downloadUrl: '/documents/incident-form.pdf',
-      lastUpdated: '2024-01-05'
     }
   ];
 
@@ -379,7 +338,6 @@ const SafetyPage: React.FC = () => {
 
           <DocumentDownload 
             documents={safetyDocuments}
-            title=""
             showSearch={false}
             showStats={false}
           />
@@ -419,7 +377,7 @@ const SafetyPage: React.FC = () => {
             </p>
           </div>
 
-          <ContactForm type="support" onSubmit={undefined} />
+          <ContactForm type="support" onSubmit={() => {}} />
         </div>
       </SectionWrapper>
     </PageLayout>
