@@ -71,30 +71,30 @@ const TrustSection = () => {
                 const Icon = point.icon;
                 return (
                   <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2">
-                    <Card className="card-elevated overflow-hidden group hover:shadow-strong transition-all duration-300">
-                      <div className="md:flex">
-                        {/* Image */}
-                        <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
-                          <img 
-                            src={point.image} 
-                            alt={point.alt}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
-                        </div>
-                        
-                        {/* Content */}
-                        <CardContent className="md:w-1/2 p-6 lg:p-8 flex flex-col justify-center">
-                          <div className="flex items-center mb-4">
-                            <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center mr-4">
-                              <Icon className="w-6 h-6 text-white" />
-                            </div>
-                            <h3 className="text-h3">{point.title}</h3>
-                          </div>
-                          <p className="text-body text-muted-foreground leading-relaxed">
-                            {point.description}
-                          </p>
-                        </CardContent>
+                     <Card className="card-elevated overflow-hidden group hover:shadow-strong transition-all duration-300 h-full">
+                       <div className="md:flex h-full">
+                         {/* Image */}
+                         <div className="md:w-2/5 h-64 md:h-auto relative overflow-hidden flex-shrink-0">
+                           <img 
+                             src={point.image} 
+                             alt={point.alt}
+                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                           />
+                           <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+                         </div>
+                         
+                         {/* Content */}
+                         <CardContent className="md:w-3/5 p-6 lg:p-8 flex flex-col justify-center">
+                           <div className="flex items-start mb-4">
+                             <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                               <Icon className="w-6 h-6 text-white" />
+                             </div>
+                             <h3 className="text-lg md:text-xl lg:text-2xl font-semibold leading-tight">{point.title}</h3>
+                           </div>
+                           <p className="text-body text-muted-foreground leading-relaxed">
+                             {point.description}
+                           </p>
+                         </CardContent>
                       </div>
                     </Card>
                   </CarouselItem>
