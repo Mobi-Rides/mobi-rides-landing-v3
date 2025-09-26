@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PageLayout } from '../components/layouts';
 import { MapPin, Clock, Star, Users, Camera, Navigation, Bookmark, Search, Calendar } from 'lucide-react';
+import { ImageWithFallback } from '../components/ImageWithFallback';
 
 interface TravelDestination {
   id: string;
@@ -44,62 +45,62 @@ const TravelGuidesPage: React.FC = () => {
   const travelDestinations: TravelDestination[] = [
     {
       id: '1',
-      name: 'Tokyo',
-      country: 'Japan',
-      description: 'Experience the perfect blend of traditional culture and modern innovation in Japan\'s bustling capital.',
-      image: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=beautiful%20tokyo%20cityscape%20with%20traditional%20temples%20and%20modern%20skyscrapers%20at%20sunset&image_size=landscape_16_9',
+      name: 'Cape Town',
+      country: 'South Africa',
+      description: 'Discover the Mother City\'s stunning landscapes, from Table Mountain to pristine beaches, rich history, and vibrant culture.',
+      image: 'https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&h=450&fit=crop&crop=entropy',
       rating: 4.8,
       duration: '5-7 days',
       category: 'city',
-      highlights: ['Shibuya Crossing', 'Senso-ji Temple', 'Tokyo Skytree', 'Tsukiji Fish Market'],
-      bestTime: 'March-May, September-November'
+      highlights: ['Table Mountain', 'V&A Waterfront', 'Robben Island', 'Cape Point'],
+      bestTime: 'October-March'
     },
     {
       id: '2',
-      name: 'Santorini',
-      country: 'Greece',
-      description: 'Discover stunning sunsets, white-washed buildings, and crystal-clear waters in this Greek island paradise.',
-      image: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=santorini%20greece%20white%20buildings%20blue%20domes%20overlooking%20aegean%20sea%20sunset&image_size=landscape_16_9',
-      rating: 4.9,
+      name: 'Windhoek',
+      country: 'Namibia',
+      description: 'Gateway to the Namib Desert, featuring German colonial architecture, vibrant markets, and stunning desert landscapes.',
+      image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=450&fit=crop&crop=entropy',
+      rating: 4.6,
       duration: '3-5 days',
       category: 'nature',
-      highlights: ['Oia Village', 'Red Beach', 'Akrotiri Archaeological Site', 'Wine Tasting'],
-      bestTime: 'April-June, September-October'
+      highlights: ['Christuskirche', 'Katutura Township', 'Sossusvlei Access', 'Craft Centre'],
+      bestTime: 'May-October'
     },
     {
       id: '3',
-      name: 'Machu Picchu',
-      country: 'Peru',
-      description: 'Explore the ancient Incan citadel high in the Andes Mountains, one of the New Seven Wonders of the World.',
-      image: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=machu%20picchu%20ancient%20ruins%20in%20andes%20mountains%20with%20dramatic%20clouds&image_size=landscape_16_9',
+      name: 'Kigali',
+      country: 'Rwanda',
+      description: 'Experience Africa\'s cleanest capital city with its rolling hills, genocide memorial sites, and thriving cultural scene.',
+      image: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73d0e?w=800&h=450&fit=crop&crop=entropy',
       rating: 4.7,
       duration: '2-4 days',
-      category: 'adventure',
-      highlights: ['Inca Trail', 'Huayna Picchu', 'Sacred Valley', 'Cusco City'],
-      bestTime: 'May-September'
+      category: 'city',
+      highlights: ['Genocide Memorial', 'Kimironko Market', 'Nyamirambo District', 'Inema Arts Center'],
+      bestTime: 'June-September, December-February'
     },
     {
       id: '4',
-      name: 'Marrakech',
-      country: 'Morocco',
-      description: 'Immerse yourself in the vibrant souks, stunning architecture, and rich culture of this imperial city.',
-      image: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=marrakech%20morocco%20colorful%20souks%20traditional%20architecture%20bustling%20market&image_size=landscape_16_9',
-      rating: 4.6,
+      name: 'Luanda',
+      country: 'Angola',
+      description: 'Explore Angola\'s bustling capital with Portuguese colonial architecture, beautiful bayside location, and vibrant nightlife.',
+      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=450&fit=crop&crop=entropy',
+      rating: 4.5,
       duration: '3-4 days',
       category: 'culture',
-      highlights: ['Jemaa el-Fnaa', 'Bahia Palace', 'Majorelle Garden', 'Atlas Mountains'],
-      bestTime: 'March-May, September-November'
+      highlights: ['Fortaleza de São Miguel', 'Ilha do Cabo', 'National Museum', 'Marginal Promenade'],
+      bestTime: 'May-October'
     },
     {
       id: '5',
-      name: 'Bali',
-      country: 'Indonesia',
-      description: 'Relax on pristine beaches, explore ancient temples, and experience the spiritual heart of Indonesia.',
-      image: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=bali%20indonesia%20rice%20terraces%20traditional%20temple%20tropical%20paradise&image_size=landscape_16_9',
+      name: 'Ponta do Ouro',
+      country: 'Mozambique',
+      description: 'Pristine beaches perfect for diving and whale watching, with crystal-clear waters and vibrant marine life.',
+      image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=450&fit=crop&crop=entropy',
       rating: 4.8,
-      duration: '7-10 days',
+      duration: '4-7 days',
       category: 'nature',
-      highlights: ['Ubud Rice Terraces', 'Tanah Lot Temple', 'Mount Batur', 'Seminyak Beach'],
+      highlights: ['Scuba Diving', 'Whale Watching', 'Ponta Malongane', 'Turtle Nesting'],
       bestTime: 'April-October'
     },
     {
@@ -107,7 +108,7 @@ const TravelGuidesPage: React.FC = () => {
       name: 'Victoria Falls',
       country: 'Zambia/Zimbabwe',
       description: 'Experience one of the world\'s most spectacular waterfalls, adventure activities, and stunning natural beauty.',
-      image: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=victoria%20falls%20spectacular%20waterfall%20zimbabwe%20zambia%20rainbow%20mist%20natural%20wonder&image_size=landscape_16_9',
+      image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&h=450&fit=crop&crop=entropy',
       rating: 4.7,
       duration: '2-4 days',
       category: 'nature',
@@ -158,36 +159,36 @@ const TravelGuidesPage: React.FC = () => {
   const localGuides: LocalGuide[] = [
     {
       id: '1',
-      name: 'Yuki Tanaka',
-      location: 'Tokyo, Japan',
-      specialties: ['Cultural Tours', 'Food Experiences', 'Hidden Gems'],
+      name: 'Thandiwe Mthembu',
+      location: 'Cape Town, South Africa',
+      specialties: ['Cultural Tours', 'Wine Experiences', 'Historical Sites'],
       rating: 4.9,
       reviews: 127,
-      languages: ['English', 'Japanese', 'Mandarin'],
-      avatar: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20japanese%20tour%20guide%20smiling%20in%20traditional%20setting&image_size=square',
-      description: 'Local Tokyo expert with 8 years of experience showing visitors the authentic side of Japan.'
+      languages: ['English', 'Afrikaans', 'Xhosa'],
+      avatar: 'https://images.unsplash.com/photo-1494790108755-2616c045e009?w=200&h=200&fit=crop&crop=face',
+      description: 'Cape Town local with 8 years of experience showcasing the city\'s rich cultural diversity and stunning landscapes.'
     },
     {
       id: '2',
-      name: 'Maria Gonzalez',
-      location: 'Barcelona, Spain',
-      specialties: ['Architecture Tours', 'Art History', 'Nightlife'],
+      name: 'Samuel Mukamana',
+      location: 'Kigali, Rwanda',
+      specialties: ['Historical Tours', 'Cultural Experiences', 'Community Visits'],
       rating: 4.8,
       reviews: 93,
-      languages: ['Spanish', 'English', 'French'],
-      avatar: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20spanish%20tour%20guide%20woman%20in%20barcelona%20setting&image_size=square',
-      description: 'Art historian and Barcelona native passionate about sharing the city\'s rich cultural heritage.'
+      languages: ['English', 'Kinyarwanda', 'French'],
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
+      description: 'Kigali native passionate about sharing Rwanda\'s inspiring recovery story and vibrant culture.'
     },
     {
       id: '3',
-      name: 'Ahmed Hassan',
-      location: 'Cairo, Egypt',
-      specialties: ['Historical Sites', 'Desert Adventures', 'Photography'],
+      name: 'Kealeboga Modise',
+      location: 'Gaborone, Botswana',
+      specialties: ['Safari Tours', 'Wildlife Photography', 'Cultural Heritage'],
       rating: 4.7,
       reviews: 156,
-      languages: ['Arabic', 'English', 'German'],
-      avatar: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20egyptian%20tour%20guide%20man%20near%20pyramids&image_size=square',
-      description: 'Egyptologist and photographer offering unique perspectives on ancient and modern Egypt.'
+      languages: ['English', 'Setswana', 'Afrikaans'],
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
+      description: 'Wildlife expert and cultural guide offering authentic experiences in Botswana\'s natural wonders.'
     }
   ];
 
@@ -314,10 +315,12 @@ const TravelGuidesPage: React.FC = () => {
                   {filteredDestinations.map((destination) => (
                     <div key={destination.id} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow">
                       <div className="relative">
-                        <img 
+                        <ImageWithFallback
                           src={destination.image} 
-                          alt={destination.name}
+                          alt={`${destination.name}, ${destination.country}`}
                           className="w-full h-48 object-cover"
+                          loading="lazy"
+                          fallbackSrc="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=450&fit=crop&crop=entropy"
                         />
                         <div className="absolute top-4 right-4">
                           <span className={`px-2 py-1 rounded-full text-xs font-medium text-white ${
