@@ -362,12 +362,12 @@ curl -X POST https://api.mobirides.com/v1/rides \
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "API Documentation - MobiRides",
-    "description": "Complete API documentation for MobiRides platform. Learn how to integrate ride-sharing services into your application.",
+    "description": "Complete API documentation for MobiRides platform. Learn how to integrate car-sharing services into your application.",
     "url": "https://mobirides.com/api-docs",
     "mainEntity": {
       "@type": "SoftwareApplication",
       "name": "MobiRides API",
-      "description": "RESTful API for ride-sharing platform integration",
+      "description": "RESTful API for car-sharing platform integration",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Any"
     }
@@ -381,8 +381,8 @@ curl -X POST https://api.mobirides.com/v1/rides \
       />
       <PageLayout
         title="API Documentation | MobiRides"
-        description="Complete API documentation for MobiRides platform. Learn how to integrate ride-sharing services into your application."
-        keywords="API documentation, REST API, ride sharing API, developer tools, SDK, integration"
+        description="Complete API documentation for MobiRides platform. Learn how to integrate car-sharing services into your application."
+        keywords="API documentation, REST API, car sharing API, developer tools, SDK, integration"
       >
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-gray-900 to-gray-800 py-20">
@@ -397,7 +397,7 @@ curl -X POST https://api.mobirides.com/v1/rides \
                 API Documentation
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Build amazing ride-sharing experiences with our comprehensive API. 
+                Build amazing car-sharing experiences with our comprehensive API. 
                 Get started in minutes with our SDKs and detailed documentation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -452,7 +452,7 @@ curl -X POST https://api.mobirides.com/v1/rides \
                     Getting Started with MobiRides API
                   </h2>
                   <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-                    Our RESTful API allows you to integrate ride-sharing functionality into your applications. 
+                    Our RESTful API allows you to integrate car-sharing functionality into your applications. 
                     Build custom booking experiences, manage fleets, and access real-time data.
                   </p>
                   
@@ -492,7 +492,7 @@ curl -X POST https://api.mobirides.com/v1/rides \
                       API Features
                     </h2>
                     <p className="text-lg text-gray-600">
-                      Everything you need to build powerful ride-sharing applications.
+                      Everything you need to build powerful car-sharing applications.
                     </p>
                   </div>
                   
