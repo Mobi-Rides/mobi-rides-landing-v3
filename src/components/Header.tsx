@@ -98,8 +98,8 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden" style={{ zIndex: 9998 }}>
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md rounded-lg mt-2 shadow-medium">
+          <div className="lg:hidden absolute top-full right-4 w-64" style={{ zIndex: 9998 }}>
+            <div className="pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md rounded-lg mt-2 shadow-medium">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
