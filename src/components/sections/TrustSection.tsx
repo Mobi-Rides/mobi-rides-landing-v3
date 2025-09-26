@@ -5,6 +5,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import miningImage from '@/assets/mining-professional.jpg';
 import supportImage from '@/assets/customer-support.jpg';
 import agribusinessImage from '@/assets/agribusiness.jpg';
+import transparentPricingImage from '@/assets/transparent-pricing-professional.png';
 
 const TrustSection = () => {
   const autoplay = Autoplay({
@@ -33,7 +34,7 @@ const TrustSection = () => {
       icon: DollarSign,
       title: "Transparent Pricing",
       description: "No hidden fees, no surprises. Clear, upfront pricing for every rental.",
-      image: "/api/placeholder/400/300",
+      image: transparentPricingImage,
       alt: "Professional reviewing transparent invoice"
     },
     {
