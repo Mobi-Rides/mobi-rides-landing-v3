@@ -64,7 +64,7 @@ const AboutPage: React.FC = () => {
             Our Story
           </h2>
           <div className="prose prose-lg mx-auto text-gray-600">
-            <p className="mb-6">Founded in February 2023, MobiRides emerged from a simple observation: millions of cars sit idle while people struggle with transportation access. We envisioned a world where communities could share resources, reduce environmental impact, and build stronger connections.</p>
+            <p className="mb-6">Founded in January 2025, MobiRides emerged from a simple observation: millions of cars sit idle while people struggle with transportation access. We envisioned a world where communities could share resources, reduce environmental impact, and build stronger connections.</p>
             <p className="mb-6">
               What started as a local initiative has grown into a trusted platform serving over 100+ users across 4+ cities in Botswana. Our success stems from putting community first – every feature, policy, and decision is made with our users' safety, convenience, and trust in mind.
             </p>
