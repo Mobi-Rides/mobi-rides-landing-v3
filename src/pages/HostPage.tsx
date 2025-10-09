@@ -43,8 +43,8 @@ const HostPage: React.FC = () => {
   const earningsCalculation = useMemo((): EarningsCalculation => {
     const baseRates = {
       economy: 450,
-      luxury: 850,
-      commercial: 650
+      luxury: 2000,
+      commercial: 4000
     };
 
     const locationMultipliers = {
