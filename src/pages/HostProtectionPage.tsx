@@ -472,7 +472,7 @@ const HostProtectionPage: React.FC = () => {
                     <div className="bg-white rounded-lg p-6">
                       <h4 className="font-semibold text-gray-900 mb-3">Security Deposit</h4>
                       <ul className="space-y-2 text-gray-700">
-                        <li>• P1,000 - P5,000 held during rental</li>
+                        <li>• 1 day rental deposit held</li>
                         <li>• Released after damage inspection</li>
                         <li>• No credit/debit card required</li>
                       </ul>
