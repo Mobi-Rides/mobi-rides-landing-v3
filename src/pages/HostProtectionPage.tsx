@@ -474,7 +474,7 @@ const HostProtectionPage: React.FC = () => {
                       <ul className="space-y-2 text-gray-700">
                         <li>• P1,000 - P5,000 held during rental</li>
                         <li>• Released after damage inspection</li>
-                        <li>• Credit/debit card required</li>
+                        <li>• No credit/debit card required</li>
                       </ul>
                     </div>
                     <div className="bg-white rounded-lg p-6">
