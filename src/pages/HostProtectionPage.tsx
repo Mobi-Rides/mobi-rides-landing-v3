@@ -347,11 +347,11 @@ const HostProtectionPage: React.FC = () => {
                     <AlertTriangle className="w-12 h-12 text-orange-500 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Emergency Situations</h3>
                     <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                      In case of emergency, immediately contact local authorities (911) first, then notify MobiRides support. Your safety is our top priority.
+                      In case of emergency, immediately contact local authorities (999) first, then notify MobiRides support. Your safety is our top priority.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <a href="tel:911" className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
-                        Call 911 (Emergency)
+                      <a href="tel:999" className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                        Call 999 (Emergency)
                       </a>
                       <a href="tel:1-800-MOBI-911" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                         Call MobiRides Emergency
