@@ -35,7 +35,7 @@ const InsurancePage: React.FC = () => {
       id: 'basic',
       name: 'Basic Coverage',
       description: 'Essential protection for everyday rides',
-      premium: 'P 5/day',
+      premium: 'P 150/month',
       coverageItems: [
         {
           type: 'Third Party Liability',
@@ -55,7 +55,7 @@ const InsurancePage: React.FC = () => {
       id: 'comprehensive',
       name: 'Comprehensive Coverage',
       description: 'Complete protection for hosts and riders',
-      premium: 'P 12/day',
+      premium: 'P 350/month',
       popular: true,
       coverageItems: [
         {
@@ -89,7 +89,7 @@ const InsurancePage: React.FC = () => {
       id: 'premium',
       name: 'Premium Coverage',
       description: 'Maximum protection with additional benefits',
-      premium: 'P 18/day',
+      premium: 'P 550/month',
       coverageItems: [
         {
           type: 'Third Party Liability',
