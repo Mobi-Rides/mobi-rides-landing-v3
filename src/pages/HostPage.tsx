@@ -37,14 +37,14 @@ interface EarningsCalculation {
 const HostPage: React.FC = () => {
   const [vehicleType, setVehicleType] = useState<string>('economy');
   const [daysPerWeek, setDaysPerWeek] = useState<number>(5);
-  const [hoursPerDay, setHoursPerDay] = useState<number>(8);
+  const [hoursPerDay, setHoursPerDay] = useState<number>(24);
   const [location, setLocation] = useState<string>('gaborone');
 
   const earningsCalculation = useMemo((): EarningsCalculation => {
     const baseRates = {
       economy: 450,
-      luxury: 850,
-      commercial: 650
+      luxury: 2000,
+      commercial: 4000
     };
 
     const locationMultipliers = {

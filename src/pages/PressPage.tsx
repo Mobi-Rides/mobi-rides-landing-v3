@@ -32,21 +32,21 @@ const PressPage: React.FC = () => {
       name: 'Sarah Johnson',
       title: 'Head of Communications',
       email: 'press@mobirides.com',
-      phone: '+1 (555) 123-4567',
+      phone: '+267 74300750',
       specialties: ['Company News', 'Product Launches', 'Partnerships']
     },
     {
       name: 'Michael Chen',
       title: 'PR Manager',
       email: 'media@mobirides.com', 
-      phone: '+1 (555) 123-4568',
+      phone: '+267 74300750',
       specialties: ['Industry Analysis', 'Executive Interviews', 'Market Trends']
     },
     {
       name: 'Emily Rodriguez',
       title: 'Communications Specialist',
       email: 'news@mobirides.com',
-      phone: '+1 (555) 123-4569',
+      phone: '+267 74300750',
       specialties: ['Community Stories', 'Safety Updates', 'Local News']
     }
   ];
@@ -56,61 +56,73 @@ const PressPage: React.FC = () => {
       id: 'brand-guidelines',
       title: 'Brand Guidelines',
       description: 'Complete brand guidelines including logos, colors, and usage rules',
-      type: 'pdf',
+      type: 'pdf' as const,
       size: '5.2 MB',
       category: 'brand',
       downloadUrl: '/media-kit/brand-guidelines.pdf',
-      lastUpdated: '2024-01-15'
+      lastUpdated: '2024-01-15',
+      publishedDate: '2024-01-15',
+      tags: ['brand', 'guidelines']
     },
     {
       id: 'logo-pack',
       title: 'Logo Pack',
       description: 'High-resolution logos in various formats (PNG, SVG, EPS)',
-      type: 'zip',
+      type: 'zip' as const,
       size: '12.8 MB',
       category: 'brand',
       downloadUrl: '/media-kit/logo-pack.zip',
-      lastUpdated: '2024-01-10'
+      lastUpdated: '2024-01-10',
+      publishedDate: '2024-01-01',
+      tags: ['logo', 'brand', 'assets']
     },
     {
       id: 'product-screenshots',
       title: 'Product Screenshots',
       description: 'High-quality screenshots of our mobile app and web platform',
-      type: 'zip',
+      type: 'zip' as const,
       size: '45.6 MB',
       category: 'product',
       downloadUrl: '/media-kit/product-screenshots.zip',
-      lastUpdated: '2024-01-20'
+      lastUpdated: '2024-01-20',
+      publishedDate: '2024-01-01',
+      tags: ['screenshots', 'product', 'mobile']
     },
     {
       id: 'executive-photos',
       title: 'Executive Photos',
       description: 'Professional headshots of our leadership team',
-      type: 'zip',
+      type: 'zip' as const,
       size: '28.3 MB',
       category: 'team',
       downloadUrl: '/media-kit/executive-photos.zip',
-      lastUpdated: '2024-01-12'
+      lastUpdated: '2024-01-12',
+      publishedDate: '2024-01-12',
+      tags: ['photos', 'team', 'executives']
     },
     {
       id: 'company-fact-sheet',
       title: 'Company Fact Sheet',
       description: 'Key facts, figures, and milestones about MobiRides',
-      type: 'pdf',
+      type: 'pdf' as const,
       size: '1.2 MB',
       category: 'company',
       downloadUrl: '/media-kit/fact-sheet.pdf',
-      lastUpdated: '2024-01-18'
+      lastUpdated: '2024-01-18',
+      publishedDate: '2024-01-18',
+      tags: ['company', 'facts', 'information']
     },
     {
       id: 'video-assets',
       title: 'Video Assets',
       description: 'Promotional videos, product demos, and b-roll footage',
-      type: 'zip',
+      type: 'zip' as const,
       size: '156.7 MB',
       category: 'video',
       downloadUrl: '/media-kit/video-assets.zip',
-      lastUpdated: '2024-01-08'
+      lastUpdated: '2024-01-08',
+      publishedDate: '2024-01-08',
+      tags: ['video', 'promotional', 'demo']
     }
   ];
 
@@ -155,7 +167,7 @@ const PressPage: React.FC = () => {
       title="Press & Media - MobiRides News, Updates & Media Resources"
       description="Latest press releases, media kit, and resources for journalists covering MobiRides. Get the latest news, company updates, and media assets."
       keywords="MobiRides press, media kit, press releases, news, media resources, journalist resources"
-      canonicalUrl="/press"
+      canonical="/press"
     >
       <PageHero
         title="Press & Media Center"
@@ -274,7 +286,7 @@ const PressPage: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-sm text-gray-500">
                       <User className="h-4 w-4 mr-1" />
-                      {release.author.name}
+                      {release.author}
                     </div>
                     <Button variant="outline" size="sm">
                       Read More
@@ -308,7 +320,6 @@ const PressPage: React.FC = () => {
 
           <DocumentDownload 
             documents={mediaKit}
-            title=""
             showSearch={true}
             showStats={true}
           />
@@ -385,7 +396,7 @@ const PressPage: React.FC = () => {
             </p>
           </div>
 
-          <ContactForm type="business" />
+          <ContactForm type="business" onSubmit={undefined} />
         </div>
       </SectionWrapper>
 

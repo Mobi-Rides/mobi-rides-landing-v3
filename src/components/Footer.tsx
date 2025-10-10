@@ -54,18 +54,18 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-sm leading-relaxed">
-              Futuristic African Mobility. Premium car sharing for Botswana's driven professionals and entrepreneurs.
+              The Future of African Mobility, from Botswana to the World. Premium vehicles for global travellers, driven professionals and ambitious entrepreneurs.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3 mb-8">
               <div className="flex items-center text-gray-400">
                 <MapPin className="w-4 h-4 mr-3 flex-shrink-0" />
-                <span className="text-sm">Plot 123, Independence Avenue, Gaborone, Botswana</span>
+                <span className="text-sm">Plot 16530, Sehithwa Rd, Gaborone West - Phase 1, Gaborone, Botswana</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <Phone className="w-4 h-4 mr-3 flex-shrink-0" />
-                <span className="text-sm">+267 123 4567</span>
+                <span className="text-sm">+267 74300747</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <Mail className="w-4 h-4 mr-3 flex-shrink-0" />

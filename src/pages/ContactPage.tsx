@@ -81,19 +81,19 @@ const ContactPage: React.FC = () => {
       "address": {
         "@type": "PostalAddress",
         "streetAddress": contactInfo.headquarters.address,
-        "addressLocality": contactInfo.headquarters.city,
-        "addressCountry": contactInfo.headquarters.country
+        "addressLocality": contactInfo.headquarters.address.city,
+        "addressCountry": contactInfo.headquarters.address.country
       },
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": contactInfo.support.phone,
+          "telephone": contactInfo.supportChannels.find(c => c.id === 'phone')?.contact,
           "contactType": "customer service",
           "availableLanguage": ["English", "Setswana"]
         },
         {
           "@type": "ContactPoint",
-          "telephone": contactInfo.emergency.phone,
+          "telephone": contactInfo.emergencyContact?.phone,
           "contactType": "emergency",
           "availableLanguage": ["English", "Setswana"]
         }
@@ -203,8 +203,8 @@ const ContactPage: React.FC = () => {
                   <MapPin className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-gray-900">{selectedOffice.name}</h3>
-                    <p className="text-gray-600">{selectedOffice.address}</p>
-                    <p className="text-gray-600">{selectedOffice.city}, {selectedOffice.country}</p>
+                    <p className="text-gray-600">{selectedOffice.address.street}</p>
+                    <p className="text-gray-600">{selectedOffice.address.city}, {selectedOffice.address.country}</p>
                   </div>
                 </div>
 
@@ -232,7 +232,9 @@ const ContactPage: React.FC = () => {
                   <Clock className="h-5 w-5 text-blue-600 mt-1" />
                   <div>
                     <p className="text-gray-900 font-medium">Business Hours</p>
-                    <p className="text-gray-600">{selectedOffice.hours}</p>
+                    <p className="text-gray-600">Mon-Fri: {selectedOffice.businessHours.monday}</p>
+                    <p className="text-gray-600">Sat: {selectedOffice.businessHours.saturday}</p>
+                    <p className="text-gray-600">Sun: {selectedOffice.businessHours.sunday}</p>
                   </div>
                 </div>
               </div>

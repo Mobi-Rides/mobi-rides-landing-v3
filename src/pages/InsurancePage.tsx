@@ -35,7 +35,7 @@ const InsurancePage: React.FC = () => {
       id: 'basic',
       name: 'Basic Coverage',
       description: 'Essential protection for everyday rides',
-      premium: 'P 150/month',
+      premium: '+P150/day',
       coverageItems: [
         {
           type: 'Third Party Liability',
@@ -55,7 +55,7 @@ const InsurancePage: React.FC = () => {
       id: 'comprehensive',
       name: 'Comprehensive Coverage',
       description: 'Complete protection for hosts and riders',
-      premium: 'P 350/month',
+      premium: '+P350/day',
       popular: true,
       coverageItems: [
         {
@@ -89,7 +89,7 @@ const InsurancePage: React.FC = () => {
       id: 'premium',
       name: 'Premium Coverage',
       description: 'Maximum protection with additional benefits',
-      premium: 'P 550/month',
+      premium: '+P550/day',
       coverageItems: [
         {
           type: 'Third Party Liability',
@@ -168,12 +168,12 @@ const InsurancePage: React.FC = () => {
   const emergencyContacts = [
     {
       title: '24/7 Claims Hotline',
-      number: '+267 123 4567',
+      number: '+267 74300747',
       description: 'Report accidents and incidents'
     },
     {
       title: 'Emergency Roadside',
-      number: '+267 123 4568',
+      number: '+267 74300748',
       description: 'Towing and roadside assistance'
     },
     {

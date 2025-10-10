@@ -401,7 +401,7 @@
     "channels": [
       {
         "name": "Emergency Support",
-        "contact": "+267 123 4567",
+        "contact": "+267 74300747",
         "hours": "24/7",
         "icon": "Phone",
         "color": "red"
@@ -415,7 +415,7 @@
       },
       {
         "name": "Email Support",
-        "contact": "hosts@mobirides.co.bw",
+        "contact": "hello@mobirides.com",
         "hours": "24-48h response",
         "icon": "Mail",
         "color": "green"

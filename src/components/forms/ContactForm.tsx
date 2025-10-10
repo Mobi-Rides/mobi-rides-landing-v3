@@ -14,7 +14,17 @@ interface FormErrors {
   [key: string]: string;
 }
 
-const ContactForm: React.FC = () => {
+export interface ContactFormProps {
+  type?: 'general' | 'support' | 'business' | 'media' | 'careers';
+  onSubmit?: (data: FormData) => void | Promise<void>;
+  className?: string;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({
+  type = 'general',
+  onSubmit,
+  className = ''
+}) => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -92,11 +102,13 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // In a real application, you would send the form data to your backend
-      console.log('Form submitted:', formData);
+      if (onSubmit) {
+        await onSubmit(formData);
+      } else {
+        // Default behavior - simulate API call
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        console.log('Form submitted:', formData);
+      }
       
       setIsSubmitted(true);
       setFormData({
@@ -104,7 +116,7 @@ const ContactForm: React.FC = () => {
         email: '',
         phone: '',
         subject: '',
-        department: '',
+        department: type || '',
         message: ''
       });
     } catch (error) {
@@ -138,7 +150,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className={`space-y-6 ${className}`}>
       {/* Name Field */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">

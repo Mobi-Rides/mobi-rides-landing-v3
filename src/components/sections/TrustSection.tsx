@@ -5,6 +5,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import miningImage from '@/assets/mining-professional.jpg';
 import supportImage from '@/assets/customer-support.jpg';
 import agribusinessImage from '@/assets/agribusiness.jpg';
+import transparentPricingImage from '@/assets/transparent-pricing-professional.png';
 
 const TrustSection = () => {
   const autoplay = Autoplay({
@@ -33,7 +34,7 @@ const TrustSection = () => {
       icon: DollarSign,
       title: "Transparent Pricing",
       description: "No hidden fees, no surprises. Clear, upfront pricing for every rental.",
-      image: "/api/placeholder/400/300",
+      image: transparentPricingImage,
       alt: "Professional reviewing transparent invoice"
     },
     {
@@ -71,30 +72,30 @@ const TrustSection = () => {
                 const Icon = point.icon;
                 return (
                   <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2">
-                    <Card className="card-elevated overflow-hidden group hover:shadow-strong transition-all duration-300">
-                      <div className="md:flex">
-                        {/* Image */}
-                        <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
-                          <img 
-                            src={point.image} 
-                            alt={point.alt}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
-                        </div>
-                        
-                        {/* Content */}
-                        <CardContent className="md:w-1/2 p-6 lg:p-8 flex flex-col justify-center">
-                          <div className="flex items-center mb-4">
-                            <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center mr-4">
-                              <Icon className="w-6 h-6 text-white" />
-                            </div>
-                            <h3 className="text-h3">{point.title}</h3>
-                          </div>
-                          <p className="text-body text-muted-foreground leading-relaxed">
-                            {point.description}
-                          </p>
-                        </CardContent>
+                     <Card className="card-elevated overflow-hidden group hover:shadow-strong transition-all duration-300 h-full">
+                       <div className="md:flex h-full">
+                         {/* Image */}
+                         <div className="md:w-2/5 h-64 md:h-auto relative overflow-hidden flex-shrink-0">
+                           <img 
+                             src={point.image} 
+                             alt={point.alt}
+                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                           />
+                           <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+                         </div>
+                         
+                         {/* Content */}
+                         <CardContent className="md:w-3/5 p-6 lg:p-8 flex flex-col justify-center">
+                           <div className="flex items-start mb-4">
+                             <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                               <Icon className="w-6 h-6 text-white" />
+                             </div>
+                             <h3 className="text-lg md:text-xl lg:text-2xl font-semibold leading-tight">{point.title}</h3>
+                           </div>
+                           <p className="text-body text-muted-foreground leading-relaxed">
+                             {point.description}
+                           </p>
+                         </CardContent>
                       </div>
                     </Card>
                   </CarouselItem>
@@ -110,8 +111,8 @@ const TrustSection = () => {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { number: "10K+", label: "Happy Customers" },
-            { number: "500+", label: "Trusted Vehicles" },
+            { number: "100+", label: "Happy Customers" },
+            { number: "50+", label: "Trusted Vehicles" },
             { number: "99.8%", label: "Reliability Rate" },
             { number: "24/7", label: "Support Available" }
           ].map((stat, index) => (

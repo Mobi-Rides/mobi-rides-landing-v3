@@ -217,7 +217,7 @@
         {
           "id": "account-issues",
           "question": "I'm having trouble with my account. Who can help?",
-          "answer": "Contact our customer support through the app's Help section, email support@mobirides.bw, or call our helpline. We're available 24/7 to help resolve account-related issues.",
+          "answer": "Contact our customer support through the app's Help section, email hello@mobirides.com, or call our helpline. We're available 24/7 to help resolve account-related issues.",
           "tags": ["account", "support", "help"]
         }
       ]
@@ -249,9 +249,9 @@
     "surge"
   ],
   "contactInfo": {
-    "supportEmail": "support@mobirides.bw",
-    "driverEmail": "drivers@mobirides.bw",
-    "emergencyHotline": "123-4567",
+    "supportEmail": "hello@mobirides.com",
+    "driverEmail": "drivers@mobirides.com",
+    "emergencyHotline": "+267 911 MOBI (6624)",
     "businessHours": "24/7 Support Available",
     "responseTime": "Within 2 hours during business hours"
   }

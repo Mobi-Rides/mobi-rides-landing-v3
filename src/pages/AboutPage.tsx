@@ -9,58 +9,53 @@ import { Badge } from '../components/ui/badge';
 import { Users, Target, Award, Globe, Heart, Shield } from 'lucide-react';
 import teamMembersData from '../data/team-members.json';
 import faqData from '../data/faq-data.json';
-
 const AboutPage: React.FC = () => {
-  const companyValues = [
-    {
-      icon: Shield,
-      title: 'Safety First',
-      description: 'Every ride is backed by comprehensive insurance and rigorous safety protocols to ensure peace of mind for all users.'
-    },
-    {
-      icon: Users,
-      title: 'Community Driven',
-      description: 'We believe in building strong communities by connecting neighbors and creating meaningful relationships through shared mobility.'
-    },
-    {
-      icon: Globe,
-      title: 'Sustainable Future',
-      description: 'Reducing carbon footprint through shared transportation while making mobility more accessible and affordable for everyone.'
-    },
-    {
-      icon: Heart,
-      title: 'Trust & Transparency',
-      description: 'Building trust through transparent pricing, clear policies, and honest communication with our community members.'
-    }
-  ];
-
-  const companyStats = [
-    { label: 'Active Users', value: '50K+', icon: Users },
-    { label: 'Cities Served', value: '25+', icon: Globe },
-    { label: 'Rides Completed', value: '500K+', icon: Target },
-    { label: 'Safety Rating', value: '4.9/5', icon: Award }
-  ];
-
+  const companyValues = [{
+    icon: Shield,
+    title: 'Safety First',
+    description: 'Every ride is backed by comprehensive insurance and rigorous safety protocols to ensure peace of mind for all users.'
+  }, {
+    icon: Users,
+    title: 'Community Driven',
+    description: 'We believe in building strong communities by connecting neighbors and creating meaningful relationships through shared mobility.'
+  }, {
+    icon: Globe,
+    title: 'Sustainable Future',
+    description: 'Reducing carbon footprint through shared transportation while making mobility more accessible and affordable for everyone.'
+  }, {
+    icon: Heart,
+    title: 'Trust & Transparency',
+    description: 'Building trust through transparent pricing, clear policies, and honest communication with our community members.'
+  }];
+  const companyStats = [{
+    label: 'Active Users',
+    value: '100+',
+    icon: Users
+  }, {
+    label: 'Cities Served',
+    value: '4+',
+    icon: Globe
+  }, {
+    label: 'Rentals Completed',
+    value: '200+',
+    icon: Target
+  }, {
+    label: 'Safety Rating',
+    value: '4.9/5',
+    icon: Award
+  }];
   const aboutFAQs = faqData.general.slice(0, 6);
-
-  const handleContactSubmit = (data: { name: string; email: string; message: string; subject?: string }) => {
+  const handleContactSubmit = (data: {
+    name: string;
+    email: string;
+    message: string;
+    subject?: string;
+  }) => {
     console.log('Contact form submitted:', data);
     // Handle form submission here
   };
-
-  return (
-    <PageLayout
-      title="About MobiRides - Connecting Communities Through Shared Mobility"
-      description="Learn about MobiRides' mission to revolutionize transportation through community-driven car sharing. Discover our story, values, and the team behind the platform."
-    >
-      <PageHero
-        title="Revolutionizing Transportation"
-        subtitle="Through Community Connection"
-        description="MobiRides is more than just a car sharing platform. We're building a community-driven ecosystem that makes transportation accessible, affordable, and sustainable for everyone."
-        variant="default"
-        ctaText="Join Our Community"
-        ctaLink="/signup"
-      />
+  return <PageLayout title="About MobiRides - Connecting Communities Through Shared Mobility" description="Learn about MobiRides' mission to revolutionize transportation through community-driven car sharing. Discover our story, values, and the team behind the platform.">
+      <PageHero title="Revolutionizing Transportation" subtitle="Through Community Connection" description="MobiRides is more than just a car sharing platform. We're building a community-driven ecosystem that makes transportation accessible, affordable, and sustainable for everyone." variant="default" ctaText="Join Our Community" ctaLink="/signup" />
 
       {/* Company Story Section */}
       <SectionWrapper className="py-16">
@@ -69,14 +64,12 @@ const AboutPage: React.FC = () => {
             Our Story
           </h2>
           <div className="prose prose-lg mx-auto text-gray-600">
+            <p className="mb-6">Founded in January 2025, MobiRides emerged from a simple observation: millions of cars sit idle while people struggle with transportation access. We envisioned a world where communities could share resources, reduce environmental impact, and build stronger connections.</p>
             <p className="mb-6">
-              Founded in 2020, MobiRides emerged from a simple observation: millions of cars sit idle while people struggle with transportation access. We envisioned a world where communities could share resources, reduce environmental impact, and build stronger connections.
-            </p>
-            <p className="mb-6">
-              What started as a local initiative in three cities has grown into a nationwide platform serving over 50,000 users across 25+ cities. Our success stems from putting community first – every feature, policy, and decision is made with our users' safety, convenience, and trust in mind.
+              What started as a local initiative has grown into a trusted platform serving over 100+ users across 4+ cities in Botswana. Our success stems from putting community first – every feature, policy, and decision is made with our users' safety, convenience, and trust in mind.
             </p>
             <p>
-              Today, we're proud to be the leading community-driven car sharing platform, facilitating over 500,000 safe rides while reducing carbon emissions and making transportation more accessible for everyone.
+              Today, we're proud to be Botswana's premier community-driven car sharing platform, facilitating over 200+ safe rentals while reducing carbon emissions and making transportation more accessible for everyone.
             </p>
           </div>
         </div>
@@ -84,9 +77,8 @@ const AboutPage: React.FC = () => {
         {/* Company Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {companyStats.map((stat, index) => {
-            const IconComponent = stat.icon;
-            return (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+          const IconComponent = stat.icon;
+          return <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardContent className="p-0">
                   <div className="flex justify-center mb-4">
                     <div className="p-3 bg-blue-100 rounded-full">
@@ -96,9 +88,8 @@ const AboutPage: React.FC = () => {
                   <div className="text-2xl font-bold text-gray-900 mb-2">{stat.value}</div>
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </CardContent>
-              </Card>
-            );
-          })}
+              </Card>;
+        })}
         </div>
       </SectionWrapper>
 
@@ -116,9 +107,8 @@ const AboutPage: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {companyValues.map((value, index) => {
-              const IconComponent = value.icon;
-              return (
-                <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
+            const IconComponent = value.icon;
+            return <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
                   <CardContent className="p-0">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
@@ -136,9 +126,8 @@ const AboutPage: React.FC = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
         </div>
       </SectionWrapper>
@@ -155,11 +144,7 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <TeamGrid 
-            members={teamMembersData}
-            showDepartmentFilter={true}
-            maxMembers={8}
-          />
+          <TeamGrid members={teamMembersData} showDepartmentFilter={true} maxMembers={8} />
         </div>
       </SectionWrapper>
 
@@ -208,12 +193,7 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <FAQSection 
-            items={aboutFAQs}
-            searchable={false}
-            categories={[]}
-            title=""
-          />
+          <FAQSection items={aboutFAQs} searchable={false} categories={[]} title="" />
         </div>
       </SectionWrapper>
 
@@ -229,14 +209,9 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <ContactForm 
-            type="general" 
-            onSubmit={handleContactSubmit}
-          />
+          <ContactForm type="general" onSubmit={handleContactSubmit} />
         </div>
       </SectionWrapper>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default AboutPage;

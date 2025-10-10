@@ -95,24 +95,24 @@ const CareersPage: React.FC = () => {
 
   const officeLocations = [
     {
-      city: 'San Francisco',
-      country: 'USA',
-      address: '123 Market Street, San Francisco, CA 94105',
+      city: 'Gaborone',
+      country: 'Botswana', 
+      address: 'Plot 16530, Sehithwa Rd, Gaborone West - Phase 1',
       employees: 85,
       isHQ: true
     },
     {
-      city: 'New York',
-      country: 'USA', 
-      address: '456 Broadway, New York, NY 10013',
-      employees: 45,
+      city: 'Francistown',
+      country: 'Botswana',
+      address: 'Blue Jacket Street, Francistown',
+      employees: 25,
       isHQ: false
     },
     {
-      city: 'London',
-      country: 'UK',
-      address: '789 Oxford Street, London W1C 1JN',
-      employees: 20,
+      city: 'Maun',
+      country: 'Botswana',
+      address: 'Tsheko Tsheko Road, Maun',
+      employees: 15,
       isHQ: false
     }
   ];
@@ -125,7 +125,7 @@ const CareersPage: React.FC = () => {
       title="Careers at MobiRides - Join Our Mission to Transform Transportation"
       description="Explore career opportunities at MobiRides. Join our team of passionate individuals working to revolutionize transportation through community-driven car sharing."
       keywords="MobiRides careers, jobs, employment, transportation jobs, car sharing careers, tech jobs"
-      canonicalUrl="/careers"
+      canonical="/careers"
     >
       <PageHero
         title="Build the Future of Transportation"
@@ -329,10 +329,9 @@ const CareersPage: React.FC = () => {
           </div>
 
           <JobListing 
-            jobs={jobListingsData}
+            jobs={jobListingsData as any}
             showFilters={true}
-            showStats={true}
-            initialLimit={6}
+            maxJobs={6}
           />
         </div>
       </SectionWrapper>
@@ -420,7 +419,7 @@ const CareersPage: React.FC = () => {
             </p>
           </div>
 
-          <ContactForm type="business" />
+          <ContactForm type="business" onSubmit={undefined} />
         </div>
       </SectionWrapper>
     </PageLayout>

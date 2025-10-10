@@ -98,21 +98,21 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden" style={{ zIndex: 9998 }}>
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md rounded-lg mt-2 shadow-medium">
+          <div className="lg:hidden absolute top-full right-4 w-auto min-w-fit" style={{ zIndex: 9998 }}>
+            <div className="pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md rounded-lg mt-2 shadow-medium">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
+                  className="block px-4 py-2 text-base font-medium text-foreground hover:text-primary transition-colors text-right whitespace-nowrap"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4">
+              <div className="pt-4 px-4">
                 <Button 
-                  className="btn-primary justify-start" 
+                  className="btn-primary" 
                   asChild
                 >
                   <a 

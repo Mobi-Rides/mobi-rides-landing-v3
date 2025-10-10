@@ -10,7 +10,7 @@ interface PageHeroProps {
   ctaText?: string;
   ctaAction?: () => void;
   ctaLink?: string;
-  variant?: 'default' | 'centered' | 'minimal';
+  variant?: 'default' | 'centered' | 'minimal' | 'gradient';
   overlay?: boolean;
   className?: string;
 }
@@ -31,7 +31,8 @@ const PageHero: React.FC<PageHeroProps> = ({
   const variantClasses = {
     default: 'text-left',
     centered: 'text-center',
-    minimal: 'py-12 lg:py-16'
+    minimal: 'py-12 lg:py-16',
+    gradient: 'text-center bg-gradient-to-br from-blue-600 to-purple-700'
   };
 
   const backgroundStyle = backgroundImage ? {

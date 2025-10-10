@@ -127,18 +127,18 @@ const CTASection: React.FC<CTASectionProps> = ({
               <p className="text-sm text-gray-200 mb-4">Need immediate assistance?</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
                 <a 
-                  href="tel:+2671234567" 
+                  href="tel:+26774300747" 
                   className="flex items-center gap-2 text-white hover:text-gray-200 transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  +267 123 4567
+                  +267 74300747
                 </a>
                 <a 
-                  href="mailto:support@mobirides.com" 
+                  href="mailto:hello@mobirides.com" 
                   className="flex items-center gap-2 text-white hover:text-gray-200 transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  support@mobirides.com
+                  hello@mobirides.com
                 </a>
               </div>
             </div>

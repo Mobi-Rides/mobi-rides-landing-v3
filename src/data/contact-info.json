@@ -1,19 +1,19 @@
 {
   "headquarters": {
     "name": "MobiRides Headquarters",
-    "address": {
-      "street": "Plot 123, Independence Avenue",
-      "city": "Gaborone",
-      "state": "South-East District",
-      "country": "Botswana",
-      "postalCode": "00000"
-    },
+      "address": {
+        "street": "Plot 16530, Sehithwa Rd, Gaborone West - Phase 1",
+        "city": "Gaborone",
+        "state": "South-East District",
+        "country": "Botswana",
+        "postalCode": "00000"
+      },
     "coordinates": {
       "lat": -24.6282,
       "lng": 25.9231
     },
-    "phone": "+267 123 4567",
-    "email": "info@mobirides.bw",
+    "phone": "+267 74300747",
+    "email": "hello@mobirides.com",
     "businessHours": {
       "monday": "08:00 - 17:00",
       "tuesday": "08:00 - 17:00",
@@ -30,7 +30,7 @@
       "name": "Gaborone Main Office",
       "type": "headquarters",
       "address": {
-        "street": "Plot 123, Independence Avenue",
+        "street": "Plot 16530, Sehithwa Rd, Gaborone West - Phase 1",
         "city": "Gaborone",
         "state": "South-East District",
         "country": "Botswana",
@@ -40,8 +40,8 @@
         "lat": -24.6282,
         "lng": 25.9231
       },
-      "phone": "+267 123 4567",
-      "email": "gaborone@mobirides.bw",
+      "phone": "+267 74300747",
+      "email": "gaborone@mobirides.com",
       "services": ["Customer Support", "Fleet Management", "Corporate Sales"],
       "businessHours": {
         "monday": "08:00 - 17:00",
@@ -69,7 +69,7 @@
         "lng": 27.5084
       },
       "phone": "+267 241 2345",
-      "email": "francistown@mobirides.bw",
+      "email": "francistown@mobirides.com",
       "services": ["Customer Support", "Vehicle Inspection"],
       "businessHours": {
         "monday": "08:00 - 17:00",
@@ -97,7 +97,7 @@
         "lng": 23.4241
       },
       "phone": "+267 686 1234",
-      "email": "maun@mobirides.bw",
+      "email": "maun@mobirides.com",
       "services": ["Customer Support", "Tourism Partnerships"],
       "businessHours": {
         "monday": "08:00 - 17:00",
@@ -115,7 +115,7 @@
       "id": "phone",
       "name": "Phone Support",
       "description": "Speak directly with our support team",
-      "contact": "+267 123 4567",
+      "contact": "+267 74300747",
       "availability": "24/7 Emergency Support",
       "responseTime": "Immediate",
       "icon": "Phone"
@@ -124,7 +124,7 @@
       "id": "email",
       "name": "Email Support",
       "description": "Send us your questions and concerns",
-      "contact": "support@mobirides.bw",
+      "contact": "hello@mobirides.com",
       "availability": "Business Hours",
       "responseTime": "Within 2 hours",
       "icon": "Mail"
@@ -133,7 +133,7 @@
       "id": "whatsapp",
       "name": "WhatsApp Support",
       "description": "Quick support via WhatsApp",
-      "contact": "+267 123 4567",
+      "contact": "+267 74300747",
       "availability": "08:00 - 20:00",
       "responseTime": "Within 15 minutes",
       "icon": "MessageCircle"
@@ -157,46 +157,66 @@
     {
       "id": "customer-support",
       "name": "Customer Support",
-      "email": "support@mobirides.bw",
-      "phone": "+267 123 4567",
-      "description": "General inquiries, booking assistance, and customer service"
+      "email": "hello@mobirides.com",
+      "phone": "+267 74300747",
+      "description": "General inquiries, booking assistance, and customer service",
+      "icon": "Users"
     },
     {
       "id": "safety",
       "name": "Safety & Security",
-      "email": "safety@mobirides.bw",
-      "phone": "+267 123 4568",
-      "description": "Safety incidents, security concerns, and emergency response"
+      "email": "safety@mobirides.com",
+      "phone": "+267 74300748",
+      "description": "Safety incidents, security concerns, and emergency response",
+      "icon": "Building"
     },
     {
       "id": "partnerships",
       "name": "Business Partnerships",
-      "email": "partnerships@mobirides.bw",
-      "phone": "+267 123 4569",
-      "description": "Corporate partnerships, fleet solutions, and business inquiries"
+      "email": "partnerships@mobirides.com",
+      "phone": "+267 74300749",
+      "description": "Corporate partnerships, fleet solutions, and business inquiries",
+      "icon": "Globe"
     },
     {
       "id": "media",
       "name": "Media & Press",
-      "email": "media@mobirides.bw",
-      "phone": "+267 123 4570",
-      "description": "Press inquiries, media relations, and public communications"
+      "email": "media@mobirides.com",
+      "phone": "+267 74300750",
+      "description": "Press inquiries, media relations, and public communications",
+      "icon": "Users"
     },
     {
       "id": "careers",
       "name": "Human Resources",
-      "email": "careers@mobirides.bw",
-      "phone": "+267 123 4571",
-      "description": "Job applications, career opportunities, and employment inquiries"
+      "email": "careers@mobirides.com",
+      "phone": "+267 74300751",
+      "description": "Job applications, career opportunities, and employment inquiries",
+      "icon": "Building"
     }
   ],
-  "socialMedia": {
-    "facebook": "https://facebook.com/mobirides.bw",
-    "twitter": "https://twitter.com/mobirides_bw",
-    "instagram": "https://instagram.com/mobirides.bw",
-    "linkedin": "https://linkedin.com/company/mobirides-botswana",
-    "youtube": "https://youtube.com/@mobirides-bw"
-  },
+  "socialMedia": [
+    {
+      "platform": "facebook",
+      "url": "https://facebook.com/mobirides.bw"
+    },
+    {
+      "platform": "twitter",
+      "url": "https://twitter.com/mobirides_bw"
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/mobirides.bw"
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://linkedin.com/company/mobirides-botswana"
+    },
+    {
+      "platform": "youtube",
+      "url": "https://youtube.com/@mobirides-bw"
+    }
+  ],
   "mailingAddress": {
     "name": "MobiRides Botswana",
     "poBox": "P.O. Box 12345",

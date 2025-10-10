@@ -250,7 +250,7 @@ const LocationsPage: React.FC = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
-              {locationsData.upcomingCities.map((city: City) => {
+              {locationsData.upcomingCities.map((city: any, index: number) => {
                 const StatusIcon = getStatusIcon(city.status);
                 return (
                   <div key={city.id} className="bg-white rounded-2xl shadow-xl p-8">

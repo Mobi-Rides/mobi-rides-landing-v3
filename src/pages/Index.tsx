@@ -33,7 +33,7 @@ const Index = () => {
       "name": "MobiRides",
       "description": "Premium car sharing platform for Botswana's professionals",
       "url": "https://mobirides.com",
-      "telephone": "+267-123-4567",
+      "telephone": "+267 74300747",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Plot 123, Independence Avenue",
