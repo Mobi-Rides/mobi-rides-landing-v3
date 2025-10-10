@@ -1,5 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useQuery } from '@tanstack/react-query';
+import { useNavigate } from 'react-router-dom';
+import { supabase, BlogPost } from '@/lib/supabase';
 import { PageLayout, PageHero, SectionWrapper } from '../components/layouts';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader } from '../components/ui/card';
@@ -18,41 +21,86 @@ import {
   Car,
   Briefcase
 } from 'lucide-react';
-import blogData from '../data/blog-posts.json';
+import { format } from 'date-fns';
+import localPosts from '@/data/blog-posts.json';
 
-interface BlogPost {
-  id: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  category: string;
-  tags: string[];
-  featuredImage: string;
-  readTime: number;
-  featured: boolean;
-}
+
 
 const BlogPage: React.FC = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedTag, setSelectedTag] = useState('');
   const [sortBy, setSortBy] = useState('newest');
 
-  const blogPosts: BlogPost[] = blogData;
-  const categories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))];
-  const allTags = Array.from(new Set(blogPosts.flatMap(post => post.tags)));
+  // Fallback: transform local JSON to BlogPost shape
+  const fallbackPosts: BlogPost[] = (localPosts as any[]).map((p: any) => ({
+    id: p.id,
+    title: p.title,
+    slug: p.slug,
+    excerpt: p.excerpt,
+    content: p.content,
+    featured_image: p.featuredImage,
+    author_name: p.author,
+    author_email: '',
+    author_bio: null,
+    author_image: null,
+    category: p.category,
+    tags: p.tags || [],
+    meta_description: p.excerpt || null,
+    status: 'published',
+    published_at: p.publishedAt,
+    scheduled_for: null,
+    created_at: p.publishedAt,
+    updated_at: p.publishedAt,
+    read_time: p.readTime || 0,
+    view_count: 0,
+    social_image: null,
+    // @ts-expect-error include featured for runtime use
+    featured: p.featured || false,
+  }));
+
+  // Fetch blog posts from Supabase with graceful fallback
+  const { data: blogPosts = [], isLoading, error, refetch } = useQuery({
+    queryKey: ['blog-posts'],
+    retry: false,
+    queryFn: async () => {
+      try {
+        const { data, error } = await supabase
+          .from('blog_posts')
+          .select('*')
+          .eq('status', 'published')
+          .order('published_at', { ascending: false });
+
+        if (error) {
+          console.warn('Supabase error fetching blog_posts, using local fallback:', error.message);
+          return fallbackPosts;
+        }
+
+        if (!data || data.length === 0) {
+          console.info('No published posts from Supabase, using local fallback');
+          return fallbackPosts;
+        }
+
+        return data as BlogPost[];
+      } catch (e: any) {
+        console.error('Failed to fetch blog posts from Supabase, using local fallback:', e?.message || e);
+        return fallbackPosts;
+      }
+    },
+  });
+
+  const categories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category).filter(Boolean)))];
+  const allTags = Array.from(new Set(blogPosts.flatMap(post => post.tags || [])));
 
   const filteredAndSortedPosts = useMemo(() => {
     const filtered = blogPosts.filter(post => {
       const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+                           post.excerpt?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           (post.tags || []).some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       
       const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
-      const matchesTag = !selectedTag || post.tags.includes(selectedTag);
+      const matchesTag = !selectedTag || (post.tags || []).includes(selectedTag);
       
       return matchesSearch && matchesCategory && matchesTag;
     });
@@ -61,13 +109,13 @@ const BlogPage: React.FC = () => {
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'newest':
-          return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+          return new Date(b.published_at || b.created_at).getTime() - new Date(a.published_at || a.created_at).getTime();
         case 'oldest':
-          return new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime();
+          return new Date(a.published_at || a.created_at).getTime() - new Date(b.published_at || b.created_at).getTime();
         case 'popular':
-          return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-        case 'readTime':
-          return a.readTime - b.readTime;
+          return (b.view_count || 0) - (a.view_count || 0);
+        case 'read_time':
+          return (a.read_time || 0) - (b.read_time || 0);
         default:
           return 0;
       }
@@ -79,11 +127,11 @@ const BlogPage: React.FC = () => {
   const featuredPosts = blogPosts.filter(post => post.featured).slice(0, 3);
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+    return format(new Date(dateString), 'MMMM d, yyyy');
+  };
+
+  const handlePostClick = (slug: string) => {
+    navigate(`/blog/${slug}`);
   };
 
   const getCategoryIcon = (category: string) => {
@@ -134,14 +182,48 @@ const BlogPage: React.FC = () => {
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.excerpt,
-      "image": post.featuredImage,
-      "datePublished": post.publishedAt,
+      "image": post.featured_image,
+      "datePublished": post.published_at || post.created_at,
       "author": {
         "@type": "Person",
-        "name": post.author
+        "name": post.author_name
       }
     }))
   };
+
+  // Loading state
+  if (isLoading) {
+    return (
+      <PageLayout
+        title="Blog - Travel Guides & Insights | Mobirides"
+        description="Discover travel guides, vehicle reviews, business insights, and local news about car rentals and mobility in Botswana."
+      >
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+        </div>
+      </PageLayout>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <PageLayout
+        title="Blog - Travel Guides & Insights | Mobirides"
+        description="Discover travel guides, vehicle reviews, business insights, and local news about car rentals and mobility in Botswana."
+      >
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Unable to Load Blog Posts</h1>
+            <p className="text-gray-600 mb-6">Please try again later.</p>
+            <Button onClick={() => window.location.reload()}>
+              Retry
+            </Button>
+          </div>
+        </div>
+      </PageLayout>
+    );
+  }
 
   return (
     <PageLayout
@@ -180,7 +262,7 @@ const BlogPage: React.FC = () => {
                 <div className="flex flex-col">
                   <div className="relative w-full">
                     <img
-                      src={post.featuredImage}
+                      src={post.featured_image}
                       alt={post.title}
                       className="w-full h-64 object-cover rounded-t-lg"
                     />
@@ -208,28 +290,28 @@ const BlogPage: React.FC = () => {
                       <div className="flex items-center gap-4">
                          <div className="flex items-center gap-1">
                             <User className="w-4 h-4" />
-                            {post.author}
+                            {post.author_name}
                           </div>
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
-                          {formatDate(post.publishedAt)}
+                          {formatDate(post.published_at || post.created_at)}
                         </div>
                         <div className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
-                          {post.readTime} min read
+                          {post.read_time} min read
                         </div>
                       </div>
                     </div>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.slice(0, 3).map(tag => (
+                      {(post.tags || []).slice(0, 3).map(tag => (
                         <Badge key={tag} variant="outline" className="text-xs">
                           {tag}
                         </Badge>
                       ))}
                     </div>
                     
-                    <Button variant="outline" className="w-full group">
+                    <Button variant="outline" className="w-full group" onClick={() => handlePostClick(post.slug)}>
                       Read More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -299,7 +381,7 @@ const BlogPage: React.FC = () => {
                 <option value="newest">Newest First</option>
                 <option value="oldest">Oldest First</option>
                 <option value="popular">Most Popular</option>
-                <option value="readTime">Quick Reads</option>
+                <option value="read_time">Quick Reads</option>
               </select>
             </div>
 
@@ -351,10 +433,13 @@ const BlogPage: React.FC = () => {
           </div>
 
           {/* Results Summary */}
-          <div className="mb-6">
+          <div className="mb-6 flex items-center justify-between">
             <p className="text-gray-600">
               Showing {filteredAndSortedPosts.length} of {blogPosts.length} articles
             </p>
+            <Button variant="outline" size="sm" onClick={() => refetch()}>
+              Retry Supabase
+            </Button>
           </div>
 
           {/* Articles List */}
@@ -365,7 +450,7 @@ const BlogPage: React.FC = () => {
                   <div className="flex flex-col">
                     <div className="relative w-full">
                       <img
-                        src={post.featuredImage}
+                        src={post.featured_image}
                         alt={post.title}
                         className="w-full h-48 object-cover rounded-t-lg"
                       />
@@ -395,33 +480,33 @@ const BlogPage: React.FC = () => {
                         <div className="flex items-center gap-4">
                            <div className="flex items-center gap-1">
                               <User className="w-3 h-3" />
-                              {post.author}
+                              {post.author_name}
                             </div>
                           <div className="flex items-center gap-1">
                             <Calendar className="w-3 h-3" />
-                            {formatDate(post.publishedAt)}
+                            {formatDate(post.published_at || post.created_at)}
                           </div>
                           <div className="flex items-center gap-1">
                             <Clock className="w-3 h-3" />
-                            {post.readTime} min
+                            {post.read_time} min
                           </div>
                         </div>
                       </div>
                       
                       <div className="flex flex-wrap gap-1 mb-4">
-                        {post.tags.slice(0, 2).map(tag => (
+                        {(post.tags || []).slice(0, 2).map(tag => (
                           <Badge key={tag} variant="outline" className="text-xs">
                             {tag}
                           </Badge>
                         ))}
-                        {post.tags.length > 2 && (
+                        {(post.tags || []).length > 2 && (
                           <Badge variant="outline" className="text-xs">
-                            +{post.tags.length - 2}
+                            +{(post.tags || []).length - 2}
                           </Badge>
                         )}
                       </div>
                       
-                      <Button variant="outline" size="sm" className="w-full group">
+                      <Button variant="outline" size="sm" className="w-full group" onClick={() => handlePostClick(post.slug)}>
                         Read Article
                         <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
                       </Button>
