@@ -240,6 +240,72 @@
       "answer": "Absolutely! Our Rent-to-Buy model is perfect for ride-sharing, delivery services, and logistics. Many of our customers generate revenue that covers their monthly payments."
     }
   ],
+  "howItWorksSteps": [
+    {
+      "step": 1,
+      "title": "Choose Your Vehicle",
+      "description": "Select from Compact, Sedan, SUV, or Commercial vehicles based on your needs and budget.",
+      "icon": "target"
+    },
+    {
+      "step": 2,
+      "title": "Build Equity Monthly",
+      "description": "40-65% of your monthly payment goes toward ownership. Watch your equity grow with every payment.",
+      "icon": "trending-up"
+    },
+    {
+      "step": 3,
+      "title": "Own Your Vehicle",
+      "description": "Complete your rental term and buy out at a reduced price, or upgrade to a new vehicle.",
+      "icon": "key"
+    }
+  ],
+  "targetAudiences": [
+    {
+      "type": "Individual",
+      "title": "Aspiring Vehicle Owners",
+      "benefits": [
+        "Own a car without traditional bank loans",
+        "Build wealth through asset ownership",
+        "Flexible terms that fit your budget",
+        "No complex credit requirements"
+      ],
+      "icon": "user"
+    },
+    {
+      "type": "Business",
+      "title": "Operators & Entrepreneurs",
+      "benefits": [
+        "Generate revenue from day one",
+        "Vehicle pays for itself through business use",
+        "Perfect for ride-sharing, delivery, logistics",
+        "Scale your operations with fleet access"
+      ],
+      "icon": "briefcase"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "No Bank Loans Required",
+      "description": "Skip traditional financing. Start driving with just a down payment.",
+      "icon": "ban"
+    },
+    {
+      "title": "100% Transparent Pricing",
+      "description": "See exactly where your money goes. No hidden fees, ever.",
+      "icon": "eye"
+    },
+    {
+      "title": "Maintenance Included",
+      "description": "Oil changes, servicing, and routine maintenance covered in your monthly rate.",
+      "icon": "wrench"
+    },
+    {
+      "title": "Flexible Buyout Options",
+      "description": "Buy out early with a discount, or upgrade to a new vehicle.",
+      "icon": "fast-forward"
+    }
+  ],
   "currency": "BWP",
   "currencySymbol": "P",
   "minimumDownPayment": 10,

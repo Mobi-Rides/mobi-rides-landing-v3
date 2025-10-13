@@ -16,9 +16,16 @@ import {
   Check, 
   TrendingUp,
   Shield,
-  Award,
   Calculator,
-  DollarSign
+  DollarSign,
+  Target,
+  Key,
+  User,
+  Briefcase,
+  Ban,
+  Eye,
+  Wrench,
+  FastForward
 } from 'lucide-react';
 import pricingData from '@/data/pricing.json';
 
@@ -65,14 +72,23 @@ const PricingPage: React.FC = () => {
   const vehicleCategories: VehicleCategory[] = pricingData.vehicleCategories;
   const { currencySymbol } = pricingData;
 
-  const getIconComponent = (iconName: string) => {
+  const getIconComponent = (iconName: string, size: string = "h-6 w-6") => {
     const icons: Record<string, React.ReactElement> = {
-      car: <Car className="h-6 w-6" />,
-      users: <Users className="h-6 w-6" />,
-      truck: <Truck className="h-6 w-6" />,
-      package: <Package className="h-6 w-6" />,
+      car: <Car className={size} />,
+      users: <Users className={size} />,
+      truck: <Truck className={size} />,
+      package: <Package className={size} />,
+      target: <Target className={size} />,
+      'trending-up': <TrendingUp className={size} />,
+      key: <Key className={size} />,
+      user: <User className={size} />,
+      briefcase: <Briefcase className={size} />,
+      ban: <Ban className={size} />,
+      eye: <Eye className={size} />,
+      wrench: <Wrench className={size} />,
+      'fast-forward': <FastForward className={size} />,
     };
-    return icons[iconName] || <Car className="h-6 w-6" />;
+    return icons[iconName] || <Car className={size} />;
   };
 
   const calculatedResults = useMemo(() => {
@@ -135,6 +151,87 @@ const PricingPage: React.FC = () => {
         description="Rent-to-Buy: Convert your rental payments into ownership equity."
       />
 
+      {/* How It Works Section */}
+      <section className="py-12 md:py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          {/* Introduction */}
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">How Rent-to-Buy Works</h2>
+            <p className="text-lg text-muted-foreground">
+              Unlike traditional rentals, every payment you make builds equity toward owning your vehicle. 
+              It's flexible financing without the bank, designed for Botswana's entrepreneurs and families.
+            </p>
+          </div>
+
+          {/* 3-Step Process */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {pricingData.howItWorksSteps?.map((step) => (
+              <Card key={step.step} className="text-center">
+                <CardHeader>
+                  <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
+                    {getIconComponent(step.icon, "h-8 w-8 text-primary")}
+                  </div>
+                  <div className="mb-2">
+                    <Badge variant="secondary" className="text-lg px-3 py-1">Step {step.step}</Badge>
+                  </div>
+                  <CardTitle className="text-xl">{step.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{step.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Target Audiences */}
+          <div className="mb-16">
+            <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">Who Is This For?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              {pricingData.targetAudiences?.map((audience) => (
+                <Card key={audience.type}>
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      {getIconComponent(audience.icon, "h-6 w-6 text-primary")}
+                      <CardTitle className="text-xl">{audience.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {audience.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-start text-sm">
+                          <Check className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Key Benefits */}
+          <div>
+            <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">Why Choose MobiRides?</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {pricingData.keyBenefits?.map((benefit, idx) => (
+                <Card key={idx} className="text-center">
+                  <CardHeader>
+                    <div className="mx-auto mb-3 h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      {getIconComponent(benefit.icon, "h-6 w-6 text-primary")}
+                    </div>
+                    <CardTitle className="text-lg">{benefit.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -148,9 +245,9 @@ const PricingPage: React.FC = () => {
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
-              <TabsTrigger value="vehicles">Vehicles</TabsTrigger>
-              <TabsTrigger value="calculator">Calculator</TabsTrigger>
-              <TabsTrigger value="additional">FAQs</TabsTrigger>
+              <TabsTrigger value="vehicles" className="text-xs sm:text-sm">Vehicles</TabsTrigger>
+              <TabsTrigger value="calculator" className="text-xs sm:text-sm">Calculator</TabsTrigger>
+              <TabsTrigger value="additional" className="text-xs sm:text-sm">FAQs</TabsTrigger>
             </TabsList>
 
             <TabsContent value="vehicles">
@@ -164,7 +261,7 @@ const PricingPage: React.FC = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="text-center py-4 bg-muted rounded-lg mb-4">
-                        <p className="text-3xl font-bold">{currencySymbol}{vehicle.rentalPeriods[1].monthlyRate.toLocaleString()}/mo</p>
+                        <p className="text-2xl sm:text-3xl font-bold">{currencySymbol}{vehicle.rentalPeriods[1].monthlyRate.toLocaleString()}/mo</p>
                       </div>
                       <ul className="space-y-2">
                         {vehicle.features.slice(0, 3).map((feature, idx) => (
@@ -234,27 +331,27 @@ const PricingPage: React.FC = () => {
                     {calculatedResults && (
                       <div className="space-y-6">
                         <div className="text-center py-6 bg-muted rounded-lg">
-                          <p className="text-4xl font-bold text-primary">{currencySymbol}{calculatedResults.monthlyPayment.toLocaleString()}</p>
+                          <p className="text-3xl sm:text-4xl font-bold text-primary">{currencySymbol}{calculatedResults.monthlyPayment.toLocaleString()}</p>
                           <p className="text-sm text-muted-foreground mt-2">per month</p>
                         </div>
                         <div className="space-y-2">
                           <div className="flex justify-between text-sm">
-                            <span>Ownership</span>
+                            <span>Ownership Progress</span>
                             <span className="font-semibold">{calculatedResults.equityPercentage.toFixed(1)}%</span>
                           </div>
-                          <Progress value={calculatedResults.equityPercentage} />
+                          <Progress value={calculatedResults.equityPercentage} className="h-3" />
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-muted p-4 rounded-lg">
-                            <p className="text-xs text-muted-foreground">Equity Built</p>
-                            <p className="text-lg font-bold text-green-600">{currencySymbol}{calculatedResults.equityBuilt.toLocaleString()}</p>
+                        <div className="grid grid-cols-1 xs:grid-cols-2 gap-4">
+                          <div className="bg-muted p-4 rounded-lg min-h-[80px] flex flex-col justify-center">
+                            <p className="text-xs text-muted-foreground mb-1">Equity Built</p>
+                            <p className="text-lg sm:text-xl font-bold text-green-600">{currencySymbol}{calculatedResults.equityBuilt.toLocaleString()}</p>
                           </div>
-                          <div className="bg-muted p-4 rounded-lg">
-                            <p className="text-xs text-muted-foreground">Buyout</p>
-                            <p className="text-lg font-bold">{currencySymbol}{calculatedResults.buyoutPrice.toLocaleString()}</p>
+                          <div className="bg-muted p-4 rounded-lg min-h-[80px] flex flex-col justify-center">
+                            <p className="text-xs text-muted-foreground mb-1">Final Buyout</p>
+                            <p className="text-lg sm:text-xl font-bold">{currencySymbol}{calculatedResults.buyoutPrice.toLocaleString()}</p>
                           </div>
                         </div>
-                        <Button className="w-full" size="lg">Start Journey</Button>
+                        <Button className="w-full min-h-[44px]" size="lg">Apply for Rent-to-Buy</Button>
                       </div>
                     )}
                   </CardContent>
@@ -267,8 +364,12 @@ const PricingPage: React.FC = () => {
                 <h3 className="text-2xl font-bold">Frequently Asked Questions</h3>
                 {pricingData.faqs.map((faq, idx) => (
                   <Card key={idx}>
-                    <CardHeader><CardTitle className="text-lg">{faq.question}</CardTitle></CardHeader>
-                    <CardContent><p className="text-muted-foreground">{faq.answer}</p></CardContent>
+                    <CardHeader className="p-4 sm:p-6">
+                      <CardTitle className="text-base sm:text-lg">{faq.question}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-4 sm:p-6 pt-0">
+                      <p className="text-sm text-muted-foreground">{faq.answer}</p>
+                    </CardContent>
                   </Card>
                 ))}
               </div>
