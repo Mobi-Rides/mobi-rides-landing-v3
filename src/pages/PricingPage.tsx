@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { PageLayout, PageHero } from '@/components/layouts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -124,12 +123,12 @@ const PricingPage: React.FC = () => {
   };
 
   return (
-    <PageLayout>
-      <Helmet>
-        <title>Rent-to-Buy Vehicle Leasing | Own Your Car | MobiRides Botswana</title>
-        <meta name="description" content="Flexible rent-to-own vehicle plans in Botswana. Build equity with every payment." />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+    <PageLayout
+      title="Rent-to-Buy Vehicle Leasing | Own Your Car | MobiRides Botswana"
+      description="Flexible rent-to-own vehicle plans in Botswana. Build equity with every payment. No traditional bank loans. Choose from Compact, Sedan, SUV, and Commercial vehicles starting from P2,200/month."
+      keywords="rent to buy car Botswana, vehicle leasing, car ownership, flexible vehicle finance, MobiRides, rent to own Gaborone"
+      jsonLd={jsonLd}
+    >
 
       <PageHero
         title="Own Your Vehicle, Build Your Wealth"
