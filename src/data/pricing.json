@@ -1,118 +1,249 @@
 {
-  "pricingTiers": [
+  "vehicleCategories": [
     {
-      "id": "basic",
-      "name": "Basic Ride",
-      "description": "Affordable rides for everyday travel",
-      "basePrice": 15,
-      "pricePerKm": 2.5,
-      "pricePerMinute": 1.2,
-      "features": [
-        "Standard vehicles",
-        "Basic insurance coverage",
-        "24/7 customer support",
-        "GPS tracking"
+      "id": "compact",
+      "name": "Compact",
+      "description": "Perfect for individuals and light-duty ride-sharing",
+      "vehicleValue": 80000,
+      "downPaymentPercentage": 15,
+      "rentalPeriods": [
+        {
+          "months": 6,
+          "monthlyRate": 4500,
+          "equityPercentage": 40,
+          "totalEquityBuilt": 32000,
+          "buyoutPrice": 36000
+        },
+        {
+          "months": 12,
+          "monthlyRate": 3500,
+          "equityPercentage": 55,
+          "totalEquityBuilt": 46200,
+          "buyoutPrice": 21800
+        },
+        {
+          "months": 18,
+          "monthlyRate": 2800,
+          "equityPercentage": 65,
+          "totalEquityBuilt": 54600,
+          "buyoutPrice": 13400
+        },
+        {
+          "months": 24,
+          "monthlyRate": 2200,
+          "equityPercentage": 50,
+          "totalEquityBuilt": 52800,
+          "buyoutPrice": 15200
+        }
       ],
+      "features": [
+        "Fuel-efficient for daily driving",
+        "Easy parking in urban areas",
+        "Low maintenance costs",
+        "Ideal for city commuting"
+      ],
+      "maintenanceIncluded": true,
+      "targetCustomer": "Individual",
       "popular": false,
-      "color": "blue"
+      "icon": "car"
     },
     {
-      "id": "comfort",
-      "name": "Comfort Ride",
-      "description": "Enhanced comfort for a better experience",
-      "basePrice": 20,
-      "pricePerKm": 3.2,
-      "pricePerMinute": 1.5,
-      "features": [
-        "Premium vehicles",
-        "Air conditioning",
-        "Leather seats",
-        "Phone charging ports",
-        "Complimentary water",
-        "Priority booking"
+      "id": "sedan",
+      "name": "Sedan",
+      "description": "Comfortable family vehicle and professional ride-sharing",
+      "vehicleValue": 150000,
+      "downPaymentPercentage": 20,
+      "rentalPeriods": [
+        {
+          "months": 6,
+          "monthlyRate": 8500,
+          "equityPercentage": 40,
+          "totalEquityBuilt": 60000,
+          "buyoutPrice": 60000
+        },
+        {
+          "months": 12,
+          "monthlyRate": 6500,
+          "equityPercentage": 55,
+          "totalEquityBuilt": 86625,
+          "buyoutPrice": 33375
+        },
+        {
+          "months": 18,
+          "monthlyRate": 5200,
+          "equityPercentage": 65,
+          "totalEquityBuilt": 101700,
+          "buyoutPrice": 18300
+        },
+        {
+          "months": 24,
+          "monthlyRate": 4100,
+          "equityPercentage": 50,
+          "totalEquityBuilt": 98400,
+          "buyoutPrice": 21600
+        }
       ],
+      "features": [
+        "Spacious interior for families",
+        "Professional appearance",
+        "Enhanced comfort features",
+        "Suitable for ride-sharing services"
+      ],
+      "maintenanceIncluded": true,
+      "targetCustomer": "Both",
       "popular": true,
-      "color": "green"
+      "icon": "users"
     },
     {
-      "id": "premium",
-      "name": "Premium Ride",
-      "description": "Luxury travel with top-tier service",
-      "basePrice": 35,
-      "pricePerKm": 4.8,
-      "pricePerMinute": 2.0,
-      "features": [
-        "Luxury vehicles",
-        "Professional chauffeurs",
-        "Complimentary refreshments",
-        "Wi-Fi connectivity",
-        "Premium insurance",
-        "Concierge service",
-        "Airport priority pickup"
+      "id": "suv",
+      "name": "SUV",
+      "description": "Premium family transport and high-end ride-sharing",
+      "vehicleValue": 250000,
+      "downPaymentPercentage": 25,
+      "rentalPeriods": [
+        {
+          "months": 6,
+          "monthlyRate": 14000,
+          "equityPercentage": 40,
+          "totalEquityBuilt": 100000,
+          "buyoutPrice": 87500
+        },
+        {
+          "months": 12,
+          "monthlyRate": 10800,
+          "equityPercentage": 55,
+          "totalEquityBuilt": 142560,
+          "buyoutPrice": 44940
+        },
+        {
+          "months": 18,
+          "monthlyRate": 8600,
+          "equityPercentage": 65,
+          "totalEquityBuilt": 167400,
+          "buyoutPrice": 20100
+        },
+        {
+          "months": 24,
+          "monthlyRate": 6800,
+          "equityPercentage": 50,
+          "totalEquityBuilt": 163200,
+          "buyoutPrice": 24300
+        }
       ],
+      "features": [
+        "Premium interior and exterior",
+        "7-seater capacity available",
+        "All-terrain capability",
+        "High earning potential for operators"
+      ],
+      "maintenanceIncluded": true,
+      "targetCustomer": "Both",
       "popular": false,
-      "color": "purple"
+      "icon": "truck"
+    },
+    {
+      "id": "commercial",
+      "name": "Commercial / Logistics",
+      "description": "Revenue-generating vehicle for e-commerce and delivery services",
+      "vehicleValue": 200000,
+      "downPaymentPercentage": 20,
+      "rentalPeriods": [
+        {
+          "months": 6,
+          "monthlyRate": 11500,
+          "equityPercentage": 40,
+          "totalEquityBuilt": 80000,
+          "buyoutPrice": 80000
+        },
+        {
+          "months": 12,
+          "monthlyRate": 8800,
+          "equityPercentage": 55,
+          "totalEquityBuilt": 115500,
+          "buyoutPrice": 44500
+        },
+        {
+          "months": 18,
+          "monthlyRate": 7000,
+          "equityPercentage": 65,
+          "totalEquityBuilt": 133000,
+          "buyoutPrice": 27000
+        },
+        {
+          "months": 24,
+          "monthlyRate": 5500,
+          "equityPercentage": 50,
+          "totalEquityBuilt": 132000,
+          "buyoutPrice": 28000
+        }
+      ],
+      "features": [
+        "High payload capacity (1000kg+)",
+        "Large cargo space",
+        "Ideal for logistics partnerships",
+        "Generate revenue from day one"
+      ],
+      "maintenanceIncluded": true,
+      "targetCustomer": "Business",
+      "popular": false,
+      "icon": "package"
     }
   ],
   "additionalServices": [
     {
-      "name": "Airport Transfer",
-      "price": 25,
-      "description": "Fixed rate for airport pickups and drop-offs"
+      "name": "Comprehensive Insurance",
+      "price": 350,
+      "unit": "per day",
+      "description": "Full coverage including third-party and collision"
     },
     {
-      "name": "Waiting Time",
-      "price": 2,
-      "unit": "per minute",
-      "description": "Additional charge for waiting beyond 5 minutes"
+      "name": "Premium Insurance",
+      "price": 550,
+      "unit": "per day",
+      "description": "Maximum protection with zero excess"
     },
     {
-      "name": "Pet Transport",
-      "price": 10,
-      "description": "Additional fee for traveling with pets"
+      "name": "Extended Maintenance Package",
+      "price": 500,
+      "unit": "per month",
+      "description": "Includes tires, batteries, and wear items"
     },
     {
-      "name": "Extra Luggage",
-      "price": 5,
-      "description": "Fee for oversized or extra luggage"
+      "name": "Early Buyout Discount",
+      "percentage": 5,
+      "description": "Complete your rental 6+ months early and save 5%"
     }
   ],
-  "discounts": [
+  "faqs": [
     {
-      "name": "Student Discount",
-      "percentage": 15,
-      "description": "Valid student ID required",
-      "conditions": "Available Monday-Friday, 6AM-6PM"
+      "question": "What happens if I can't complete the rental period?",
+      "answer": "You can return the vehicle with no penalty after 3 months. Any equity built remains yours and can be transferred to a new rental agreement or refunded (minus depreciation)."
     },
     {
-      "name": "Senior Citizen",
-      "percentage": 20,
-      "description": "For passengers 65 years and older",
-      "conditions": "Valid ID required"
+      "question": "Can I upgrade my vehicle mid-term?",
+      "answer": "Yes! Your built equity can be transferred to a higher-tier vehicle. We'll calculate your equity value and apply it as a down payment on your new rental-to-buy agreement."
     },
     {
-      "name": "Frequent Rider",
-      "percentage": 10,
-      "description": "After 20 rides in a month",
-      "conditions": "Automatically applied"
+      "question": "What condition must the vehicle be in for buyout?",
+      "answer": "Normal wear and tear is expected. A pre-buyout inspection ensures the vehicle meets our standards. Minor cosmetic issues are acceptable; major mechanical issues may require repair or adjustment to buyout price."
+    },
+    {
+      "question": "Do I need perfect credit?",
+      "answer": "No. We use data-driven risk scoring that considers multiple factors beyond traditional credit scores. Consistent income, rental history, and down payment amount all contribute to approval."
+    },
+    {
+      "question": "Is insurance and maintenance really included?",
+      "answer": "Yes! Basic insurance and scheduled maintenance are included in your monthly rate. This covers oil changes, brake pads, and routine servicing. You're only responsible for fuel and any damage beyond normal wear."
+    },
+    {
+      "question": "Can I use the vehicle for business purposes?",
+      "answer": "Absolutely! Our Rent-to-Buy model is perfect for ride-sharing, delivery services, and logistics. Many of our customers generate revenue that covers their monthly payments."
     }
   ],
   "currency": "BWP",
   "currencySymbol": "P",
-  "taxRate": 0.12,
-  "minimumFare": 12,
-  "cancellationFee": 8,
-  "peakHours": {
-    "multiplier": 1.5,
-    "times": [
-      { "start": "07:00", "end": "09:00", "days": ["monday", "tuesday", "wednesday", "thursday", "friday"] },
-      { "start": "17:00", "end": "19:00", "days": ["monday", "tuesday", "wednesday", "thursday", "friday"] },
-      { "start": "20:00", "end": "02:00", "days": ["friday", "saturday"] }
-    ]
-  },
-  "estimateFactors": {
-    "trafficMultiplier": 1.2,
-    "weatherMultiplier": 1.1,
-    "eventMultiplier": 1.3
-  }
+  "minimumDownPayment": 10,
+  "maximumDownPayment": 30,
+  "defaultInsuranceRate": 150,
+  "extendedMaintenanceRate": 500
 }

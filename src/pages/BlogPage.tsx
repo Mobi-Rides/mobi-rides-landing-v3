@@ -56,8 +56,6 @@ const BlogPage: React.FC = () => {
     read_time: p.readTime || 0,
     view_count: 0,
     social_image: null,
-    // @ts-expect-error include featured for runtime use
-    featured: p.featured || false,
   }));
 
   // Fetch blog posts from Supabase with graceful fallback
@@ -124,7 +122,7 @@ const BlogPage: React.FC = () => {
     return filtered;
   }, [blogPosts, searchTerm, selectedCategory, selectedTag, sortBy]);
 
-  const featuredPosts = blogPosts.filter(post => post.featured).slice(0, 3);
+  const featuredPosts = blogPosts.slice(0, 3);
 
   const formatDate = (dateString: string) => {
     return format(new Date(dateString), 'MMMM d, yyyy');
@@ -460,13 +458,6 @@ const BlogPage: React.FC = () => {
                           {post.category}
                         </Badge>
                       </div>
-                      {post.featured && (
-                        <div className="absolute top-4 right-4">
-                          <Badge variant="secondary" className="bg-black/70 text-white">
-                            Featured
-                          </Badge>
-                        </div>
-                      )}
                     </div>
                     <CardContent className="p-6 w-full">
                       <h3 className="font-bold text-lg text-gray-900 mb-3 line-clamp-2">

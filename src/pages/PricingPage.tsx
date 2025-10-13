@@ -1,392 +1,282 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { PageLayout } from '../components/layouts';
-import { Calculator, MapPin, Clock, Users, Star, Check, Info } from 'lucide-react';
-import pricingData from '../data/pricing.json';
+import React, { useState, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { PageLayout, PageHero } from '@/components/layouts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Slider } from '@/components/ui/slider';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Badge } from '@/components/ui/badge';
+import { Progress } from '@/components/ui/progress';
+import { 
+  Car, 
+  Users, 
+  Truck, 
+  Package, 
+  Check, 
+  TrendingUp,
+  Shield,
+  Award,
+  Calculator,
+  DollarSign
+} from 'lucide-react';
+import pricingData from '@/data/pricing.json';
 
-interface PricingTier {
+interface RentalPeriod {
+  months: number;
+  monthlyRate: number;
+  equityPercentage: number;
+  totalEquityBuilt: number;
+  buyoutPrice: number;
+}
+
+interface VehicleCategory {
   id: string;
   name: string;
   description: string;
-  basePrice: number;
-  pricePerKm: number;
-  pricePerMinute: number;
+  vehicleValue: number;
+  downPaymentPercentage: number;
+  rentalPeriods: RentalPeriod[];
   features: string[];
-  popular: boolean;
-  color: string;
+  maintenanceIncluded: boolean;
+  targetCustomer: string;
+  popular?: boolean;
+  icon: string;
 }
 
 interface CalculatorState {
-  distance: string;
-  duration: string;
-  selectedTier: string;
-  isPeakHour: boolean;
-  hasDiscount: string;
+  selectedVehicle: string;
+  rentalPeriod: number;
+  downPayment: number;
+  includeInsurance: boolean;
+  includeMaintenance: boolean;
 }
 
 const PricingPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<string>('vehicles');
   const [calculator, setCalculator] = useState<CalculatorState>({
-    distance: '',
-    duration: '',
-    selectedTier: 'comfort',
-    isPeakHour: false,
-    hasDiscount: 'none'
+    selectedVehicle: 'sedan',
+    rentalPeriod: 12,
+    downPayment: 20,
+    includeInsurance: false,
+    includeMaintenance: false,
   });
 
-  const [estimatedPrice, setEstimatedPrice] = useState<number>(0);
-  const [activeTab, setActiveTab] = useState<'tiers' | 'calculator' | 'additional'>('tiers');
+  const vehicleCategories: VehicleCategory[] = pricingData.vehicleCategories;
+  const { currencySymbol } = pricingData;
 
-  const calculatePrice = useCallback(() => {
-    const tier = pricingData.pricingTiers.find(t => t.id === calculator.selectedTier);
-    if (!tier || !calculator.distance || !calculator.duration) return 0;
+  const getIconComponent = (iconName: string) => {
+    const icons: Record<string, React.ReactElement> = {
+      car: <Car className="h-6 w-6" />,
+      users: <Users className="h-6 w-6" />,
+      truck: <Truck className="h-6 w-6" />,
+      package: <Package className="h-6 w-6" />,
+    };
+    return icons[iconName] || <Car className="h-6 w-6" />;
+  };
 
-    const distance = parseFloat(calculator.distance);
-    const duration = parseFloat(calculator.duration);
-    
-    let basePrice = tier.basePrice + (tier.pricePerKm * distance) + (tier.pricePerMinute * duration);
-    
-    // Apply peak hour multiplier
-    if (calculator.isPeakHour) {
-      basePrice *= pricingData.peakHours.multiplier;
-    }
-    
-    // Apply discount
-    if (calculator.hasDiscount !== 'none') {
-      const discount = pricingData.discounts.find(d => d.name.toLowerCase().includes(calculator.hasDiscount));
-      if (discount) {
-        basePrice *= (1 - discount.percentage / 100);
-      }
-    }
-    
-    // Apply tax
-    basePrice *= (1 + pricingData.taxRate);
-    
-    // Ensure minimum fare
-    return Math.max(basePrice, pricingData.minimumFare);
-  }, [calculator]);
+  const calculatedResults = useMemo(() => {
+    const selectedVehicleData = vehicleCategories.find(v => v.id === calculator.selectedVehicle);
+    if (!selectedVehicleData) return null;
 
-  useEffect(() => {
-    setEstimatedPrice(calculatePrice());
-  }, [calculator, calculatePrice]);
+    const selectedPeriod = selectedVehicleData.rentalPeriods.find(
+      p => p.months === calculator.rentalPeriod
+    );
+    if (!selectedPeriod) return null;
 
-  const handleCalculatorChange = (field: keyof CalculatorState, value: string | boolean) => {
+    const downPaymentAmount = (selectedVehicleData.vehicleValue * calculator.downPayment) / 100;
+    
+    let additionalMonthly = 0;
+    if (calculator.includeInsurance) additionalMonthly += pricingData.defaultInsuranceRate;
+    if (calculator.includeMaintenance) additionalMonthly += pricingData.extendedMaintenanceRate;
+
+    const monthlyPayment = selectedPeriod.monthlyRate + additionalMonthly;
+    const totalCost = downPaymentAmount + (monthlyPayment * selectedPeriod.months);
+    const equityBuilt = selectedPeriod.totalEquityBuilt;
+    const buyoutPrice = selectedPeriod.buyoutPrice;
+    const equityPercentage = (equityBuilt / selectedVehicleData.vehicleValue) * 100;
+
+    return {
+      monthlyPayment,
+      totalCost,
+      equityBuilt,
+      buyoutPrice,
+      equityPercentage,
+      downPaymentAmount,
+      vehicleValue: selectedVehicleData.vehicleValue,
+    };
+  }, [calculator, vehicleCategories]);
+
+  const handleCalculatorChange = (field: keyof CalculatorState, value: any) => {
     setCalculator(prev => ({ ...prev, [field]: value }));
   };
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "MobiRides Pricing",
-    "description": "Transparent pricing for ride-sharing services in Botswana",
+    "name": "MobiRides Rent-to-Buy Vehicle Leasing",
+    "description": "Flexible rent-to-own vehicle plans in Botswana. Build equity with every payment.",
     "provider": {
       "@type": "Organization",
       "name": "MobiRides"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Botswana"
-    },
-    "offers": pricingData.pricingTiers.map(tier => ({
-      "@type": "Offer",
-      "name": tier.name,
-      "description": tier.description,
-      "price": tier.basePrice,
-      "priceCurrency": pricingData.currency
-    }))
+    }
   };
 
   return (
-    <PageLayout
-      title="Pricing - MobiRides"
-      description="Transparent and affordable pricing for ride-sharing in Botswana. Calculate your fare and choose the perfect ride tier for your needs."
-      keywords="pricing, fare calculator, ride cost, Botswana transport, MobiRides rates"
-      jsonLd={jsonLd}
-    >
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Transparent <span className="text-blue-600">Pricing</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              No hidden fees, no surprises. Choose the ride tier that fits your needs and budget in Botswana.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-                <Check className="w-5 h-5 text-green-500" />
-                <span className="text-sm font-medium">No Hidden Fees</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-                <Calculator className="w-5 h-5 text-blue-500" />
-                <span className="text-sm font-medium">Fare Calculator</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-                <Star className="w-5 h-5 text-yellow-500" />
-                <span className="text-sm font-medium">Multiple Discounts</span>
-              </div>
-            </div>
+    <PageLayout>
+      <Helmet>
+        <title>Rent-to-Buy Vehicle Leasing | Own Your Car | MobiRides Botswana</title>
+        <meta name="description" content="Flexible rent-to-own vehicle plans in Botswana. Build equity with every payment." />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Helmet>
+
+      <PageHero
+        title="Own Your Vehicle, Build Your Wealth"
+        description="Rent-to-Buy: Convert your rental payments into ownership equity."
+      />
+
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <Badge variant="secondary" className="px-4 py-2">
+              <TrendingUp className="h-4 w-4 mr-2" />Build Equity Monthly
+            </Badge>
+            <Badge variant="secondary" className="px-4 py-2">
+              <Shield className="h-4 w-4 mr-2" />Flexible Terms
+            </Badge>
           </div>
-        </section>
 
-        {/* Navigation Tabs */}
-        <section className="max-w-6xl mx-auto px-4 mb-12">
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {[
-              { id: 'tiers', label: 'Pricing Tiers', icon: Users },
-              { id: 'calculator', label: 'Fare Calculator', icon: Calculator },
-              { id: 'additional', label: 'Additional Services', icon: Info }
-            ].map(({ id, label, icon: Icon }) => (
-              <button
-                key={id}
-                onClick={() => setActiveTab(id as 'tiers' | 'calculator' | 'additional')}
-                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all ${
-                  activeTab === id
-                    ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-gray-50 shadow-sm'
-                }`}
-              >
-                <Icon className="w-5 h-5" />
-                {label}
-              </button>
-            ))}
-          </div>
-        </section>
+          <Tabs value={activeTab} onValueChange={setActiveTab}>
+            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
+              <TabsTrigger value="vehicles">Vehicles</TabsTrigger>
+              <TabsTrigger value="calculator">Calculator</TabsTrigger>
+              <TabsTrigger value="additional">FAQs</TabsTrigger>
+            </TabsList>
 
-        {/* Pricing Tiers */}
-        {activeTab === 'tiers' && (
-          <section className="max-w-6xl mx-auto px-4 mb-16">
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingData.pricingTiers.map((tier: PricingTier) => (
-                <div
-                  key={tier.id}
-                  className={`relative bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300 ${
-                    tier.popular ? 'ring-4 ring-blue-500 ring-opacity-50' : ''
-                  }`}
-                >
-                  {tier.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
-                    <p className="text-gray-600 mb-4">{tier.description}</p>
-                    <div className="text-4xl font-bold text-gray-900 mb-2">
-                      {pricingData.currencySymbol}{tier.basePrice}
-                      <span className="text-lg font-normal text-gray-500"> base</span>
-                    </div>
-                    <div className="text-sm text-gray-500">
-                      + {pricingData.currencySymbol}{tier.pricePerKm}/km + {pricingData.currencySymbol}{tier.pricePerMinute}/min
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {tier.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-3">
-                        <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                    tier.popular
-                      ? 'bg-blue-600 text-white hover:bg-blue-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}>
-                    Choose {tier.name}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Fare Calculator */}
-        {activeTab === 'calculator' && (
-          <section className="max-w-4xl mx-auto px-4 mb-16">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Fare Calculator</h2>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Distance (km)
-                    </label>
-                    <div className="relative">
-                      <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                      <input
-                        type="number"
-                        value={calculator.distance}
-                        onChange={(e) => handleCalculatorChange('distance', e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter distance"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Duration (minutes)
-                    </label>
-                    <div className="relative">
-                      <Clock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                      <input
-                        type="number"
-                        value={calculator.duration}
-                        onChange={(e) => handleCalculatorChange('duration', e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter duration"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Ride Tier
-                    </label>
-                    <select
-                      value={calculator.selectedTier}
-                      onChange={(e) => handleCalculatorChange('selectedTier', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      {pricingData.pricingTiers.map((tier: PricingTier) => (
-                        <option key={tier.id} value={tier.id}>{tier.name}</option>
-                      ))}
-                    </select>
-                  </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="checkbox"
-                        checked={calculator.isPeakHour}
-                        onChange={(e) => handleCalculatorChange('isPeakHour', e.target.checked)}
-                        className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                      />
-                      <span className="text-sm text-gray-700">Peak hours (+50%)</span>
-                    </label>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Discount
-                    </label>
-                    <select
-                      value={calculator.hasDiscount}
-                      onChange={(e) => handleCalculatorChange('hasDiscount', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="none">No discount</option>
-                      {pricingData.discounts.map((discount, index) => (
-                        <option key={index} value={discount.name.toLowerCase()}>
-                          {discount.name} (-{discount.percentage}%)
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-                
-                <div className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Estimated Fare</h3>
-                  <div className="text-4xl font-bold text-blue-600 mb-4">
-                    {pricingData.currencySymbol}{estimatedPrice.toFixed(2)}
-                  </div>
-                  <div className="space-y-2 text-sm text-gray-600">
-                    <div className="flex justify-between">
-                      <span>Base fare:</span>
-                      <span>{pricingData.currencySymbol}{pricingData.pricingTiers.find(t => t.id === calculator.selectedTier)?.basePrice}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Tax ({(pricingData.taxRate * 100).toFixed(0)}%):</span>
-                      <span>Included</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Minimum fare:</span>
-                      <span>{pricingData.currencySymbol}{pricingData.minimumFare}</span>
-                    </div>
-                  </div>
-                  
-                  <button className="w-full mt-6 bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                    Book This Ride
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Additional Services */}
-        {activeTab === 'additional' && (
-          <section className="max-w-4xl mx-auto px-4 mb-16">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Additional Services</h2>
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                {pricingData.additionalServices.map((service, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-6">
-                    <div className="flex justify-between items-start mb-3">
-                      <h3 className="text-lg font-semibold text-gray-900">{service.name}</h3>
-                      <span className="text-xl font-bold text-blue-600">
-                        {pricingData.currencySymbol}{service.price}
-                        {service.unit && <span className="text-sm font-normal"> {service.unit}</span>}
-                      </span>
-                    </div>
-                    <p className="text-gray-600">{service.description}</p>
-                  </div>
+            <TabsContent value="vehicles">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {vehicleCategories.map(vehicle => (
+                  <Card key={vehicle.id} className={vehicle.popular ? 'border-primary border-2' : ''}>
+                    <CardHeader>
+                      <div className="flex justify-center mb-4">{getIconComponent(vehicle.icon)}</div>
+                      <CardTitle className="text-center">{vehicle.name}</CardTitle>
+                      <CardDescription className="text-center">{vehicle.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-center py-4 bg-muted rounded-lg mb-4">
+                        <p className="text-3xl font-bold">{currencySymbol}{vehicle.rentalPeriods[1].monthlyRate.toLocaleString()}/mo</p>
+                      </div>
+                      <ul className="space-y-2">
+                        {vehicle.features.slice(0, 3).map((feature, idx) => (
+                          <li key={idx} className="flex items-start text-sm">
+                            <Check className="h-4 w-4 text-primary mr-2 mt-0.5" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Button className="w-full mt-4" onClick={() => { handleCalculatorChange('selectedVehicle', vehicle.id); setActiveTab('calculator'); }}>
+                        Calculate
+                      </Button>
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
-              
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Available Discounts</h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {pricingData.discounts.map((discount, index) => (
-                    <div key={index} className="bg-green-50 border border-green-200 rounded-lg p-6">
-                      <div className="text-center mb-3">
-                        <div className="text-2xl font-bold text-green-600">{discount.percentage}% OFF</div>
-                        <h4 className="text-lg font-semibold text-gray-900">{discount.name}</h4>
-                      </div>
-                      <p className="text-sm text-gray-600 mb-2">{discount.description}</p>
-                      <p className="text-xs text-gray-500">{discount.conditions}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
+            </TabsContent>
 
-        {/* Peak Hours Info */}
-        <section className="max-w-4xl mx-auto px-4 mb-16">
-          <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">Peak Hours Information</h2>
-            <p className="text-center text-gray-600 mb-6">
-              During peak hours, fares are increased by {((pricingData.peakHours.multiplier - 1) * 100).toFixed(0)}% to ensure driver availability.
-            </p>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="text-center">
-                <h3 className="font-semibold text-gray-900 mb-2">Morning Rush</h3>
-                <p className="text-sm text-gray-600">7:00 AM - 9:00 AM</p>
-                <p className="text-xs text-gray-500">Monday - Friday</p>
+            <TabsContent value="calculator">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <Card>
+                  <CardHeader><CardTitle><Calculator className="h-5 w-5 inline mr-2" />Your Details</CardTitle></CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Vehicle</label>
+                      <Select value={calculator.selectedVehicle} onValueChange={(v) => handleCalculatorChange('selectedVehicle', v)}>
+                        <SelectTrigger><SelectValue /></SelectTrigger>
+                        <SelectContent>
+                          {vehicleCategories.map(v => <SelectItem key={v.id} value={v.id}>{v.name}</SelectItem>)}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Period</label>
+                      <Select value={calculator.rentalPeriod.toString()} onValueChange={(v) => handleCalculatorChange('rentalPeriod', parseInt(v))}>
+                        <SelectTrigger><SelectValue /></SelectTrigger>
+                        <SelectContent>
+                          {vehicleCategories.find(v => v.id === calculator.selectedVehicle)?.rentalPeriods.map(p => (
+                            <SelectItem key={p.months} value={p.months.toString()}>{p.months} months</SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex justify-between">
+                        <label className="text-sm font-medium">Down Payment</label>
+                        <span className="text-sm">{calculator.downPayment}%</span>
+                      </div>
+                      <Slider value={[calculator.downPayment]} onValueChange={(v) => handleCalculatorChange('downPayment', v[0])} min={10} max={30} step={5} />
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="ins" checked={calculator.includeInsurance} onCheckedChange={(c) => handleCalculatorChange('includeInsurance', c)} />
+                        <label htmlFor="ins" className="text-sm">Enhanced Insurance</label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="maint" checked={calculator.includeMaintenance} onCheckedChange={(c) => handleCalculatorChange('includeMaintenance', c)} />
+                        <label htmlFor="maint" className="text-sm">Extended Maintenance</label>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader><CardTitle><DollarSign className="h-5 w-5 inline mr-2" />Summary</CardTitle></CardHeader>
+                  <CardContent>
+                    {calculatedResults && (
+                      <div className="space-y-6">
+                        <div className="text-center py-6 bg-muted rounded-lg">
+                          <p className="text-4xl font-bold text-primary">{currencySymbol}{calculatedResults.monthlyPayment.toLocaleString()}</p>
+                          <p className="text-sm text-muted-foreground mt-2">per month</p>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex justify-between text-sm">
+                            <span>Ownership</span>
+                            <span className="font-semibold">{calculatedResults.equityPercentage.toFixed(1)}%</span>
+                          </div>
+                          <Progress value={calculatedResults.equityPercentage} />
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="bg-muted p-4 rounded-lg">
+                            <p className="text-xs text-muted-foreground">Equity Built</p>
+                            <p className="text-lg font-bold text-green-600">{currencySymbol}{calculatedResults.equityBuilt.toLocaleString()}</p>
+                          </div>
+                          <div className="bg-muted p-4 rounded-lg">
+                            <p className="text-xs text-muted-foreground">Buyout</p>
+                            <p className="text-lg font-bold">{currencySymbol}{calculatedResults.buyoutPrice.toLocaleString()}</p>
+                          </div>
+                        </div>
+                        <Button className="w-full" size="lg">Start Journey</Button>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
               </div>
-              <div className="text-center">
-                <h3 className="font-semibold text-gray-900 mb-2">Evening Rush</h3>
-                <p className="text-sm text-gray-600">5:00 PM - 7:00 PM</p>
-                <p className="text-xs text-gray-500">Monday - Friday</p>
+            </TabsContent>
+
+            <TabsContent value="additional">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold">Frequently Asked Questions</h3>
+                {pricingData.faqs.map((faq, idx) => (
+                  <Card key={idx}>
+                    <CardHeader><CardTitle className="text-lg">{faq.question}</CardTitle></CardHeader>
+                    <CardContent><p className="text-muted-foreground">{faq.answer}</p></CardContent>
+                  </Card>
+                ))}
               </div>
-              <div className="text-center">
-                <h3 className="font-semibold text-gray-900 mb-2">Weekend Nights</h3>
-                <p className="text-sm text-gray-600">8:00 PM - 2:00 AM</p>
-                <p className="text-xs text-gray-500">Friday - Saturday</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </section>
     </PageLayout>
   );
 };

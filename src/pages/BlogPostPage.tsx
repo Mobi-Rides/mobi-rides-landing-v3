@@ -235,9 +235,9 @@ const BlogPostPage = () => {
               {/* Author Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <div className="flex items-start gap-4">
-                  {post.author_avatar && (
+                  {post.author_image && (
                     <img
-                      src={post.author_avatar}
+                      src={post.author_image}
                       alt={post.author_name}
                       className="w-16 h-16 rounded-full object-cover"
                     />

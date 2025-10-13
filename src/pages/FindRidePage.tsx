@@ -286,19 +286,19 @@ const FindRidePage: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {pricingData?.pricingTiers && Object.values(pricingData.pricingTiers).map((tier, index) => (
+          {pricingData?.vehicleCategories && pricingData.vehicleCategories.map((vehicle, index) => (
             <Card key={index}>
               <CardHeader>
-                <CardTitle className="text-lg">{tier.name}</CardTitle>
+                <CardTitle className="text-lg">{vehicle.name}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold text-blue-600 mb-2">
-                  P{tier.basePrice}
+                  P{vehicle.rentalPeriods[1].monthlyRate}/month
                 </div>
-                <p className="text-sm text-gray-600">{tier.description}</p>
+                <p className="text-sm text-gray-600">{vehicle.description}</p>
                 <div className="mt-3">
                   <ul className="text-xs text-gray-600 space-y-1">
-                    {tier.features?.map((feature, featureIndex) => (
+                    {vehicle.features?.map((feature, featureIndex) => (
                       <li key={featureIndex}>✓ {feature}</li>
                     ))}
                   </ul>
