@@ -326,7 +326,7 @@ const PricingPage: React.FC = () => {
                 </Card>
 
                 <Card>
-                  <CardHeader><CardTitle><DollarSign className="h-5 w-5 inline mr-2" />Summary</CardTitle></CardHeader>
+                  <CardHeader><CardTitle>Summary</CardTitle></CardHeader>
                   <CardContent>
                     {calculatedResults && (
                       <div className="space-y-6">
