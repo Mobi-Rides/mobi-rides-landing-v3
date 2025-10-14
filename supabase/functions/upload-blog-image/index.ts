@@ -12,34 +12,46 @@ serve(async (req) => {
   }
 
   try {
-    const { imagePath, fileName } = await req.json();
+    const { imageData, fileName, contentType = 'image/jpeg' } = await req.json();
     
-    console.log("Uploading image:", fileName, "from:", imagePath);
+    console.log("Uploading image:", fileName);
 
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    // Read the image file from the assets directory
-    // Note: In production, we'd fetch from the actual deployed asset URL
-    const assetUrl = `${supabaseUrl.replace('.supabase.co', '.lovable.app')}${imagePath}`;
-    
-    console.log("Fetching image from:", assetUrl);
-    
-    const imageResponse = await fetch(assetUrl);
-    if (!imageResponse.ok) {
-      throw new Error(`Failed to fetch image: ${imageResponse.status}`);
+    // Convert base64 to buffer if needed
+    let imageBuffer: ArrayBuffer;
+    if (typeof imageData === 'string' && imageData.startsWith('data:')) {
+      // Handle base64 data URL
+      const base64Data = imageData.split(',')[1];
+      const binaryString = atob(base64Data);
+      const bytes = new Uint8Array(binaryString.length);
+      for (let i = 0; i < binaryString.length; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+      }
+      imageBuffer = bytes.buffer;
+    } else if (typeof imageData === 'string') {
+      // Handle base64 string without data URL prefix
+      const binaryString = atob(imageData);
+      const bytes = new Uint8Array(binaryString.length);
+      for (let i = 0; i < binaryString.length; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+      }
+      imageBuffer = bytes.buffer;
+    } else {
+      // Assume it's already an ArrayBuffer
+      imageBuffer = imageData;
     }
 
-    const imageBlob = await imageResponse.blob();
-    const imageBuffer = await imageBlob.arrayBuffer();
+    console.log("Image buffer size:", imageBuffer.byteLength);
 
     // Upload to blog-images bucket
     const storagePath = `featured/${fileName}`;
     const { data, error } = await supabase.storage
       .from("blog-images")
       .upload(storagePath, imageBuffer, {
-        contentType: imageBlob.type,
+        contentType: contentType,
         upsert: true,
       });
 

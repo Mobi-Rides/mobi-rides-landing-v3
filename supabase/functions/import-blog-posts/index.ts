@@ -98,22 +98,48 @@ serve(async (req) => {
         const { content, readTime } = await generateResponse.json();
         console.log(`✓ Generated ${readTime} min article`);
 
-        // Step 2: Upload featured image
-        console.log("Uploading featured image...");
+        // Step 2: Fetch and upload featured image
+        console.log("Fetching featured image...");
+        
+        // Map asset paths to Unsplash images as placeholders
+        const imageMap: Record<string, string> = {
+          "/src/assets/botswana-safari.jpg": "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&h=800&fit=crop",
+          "/src/assets/gaborone-business.jpg": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop",
+          "/src/assets/pickup-truck.jpg": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1200&h=800&fit=crop",
+          "/src/assets/find-your-drive.jpg": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&h=800&fit=crop",
+        };
+        
+        const imageUrl = imageMap[post.featured_image_asset];
+        const imageResponse = await fetch(imageUrl);
+        
+        if (!imageResponse.ok) {
+          throw new Error(`Image fetch failed: ${imageResponse.status}`);
+        }
+        
+        const imageBlob = await imageResponse.blob();
+        const imageBuffer = await imageBlob.arrayBuffer();
+        const base64Data = btoa(String.fromCharCode(...new Uint8Array(imageBuffer)));
+        
+        console.log(`✓ Fetched image (${imageBuffer.byteLength} bytes)`);
+        
+        // Upload to storage
+        console.log("Uploading to storage...");
         const uploadResponse = await fetch(
           `${supabaseUrl}/functions/v1/upload-blog-image`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              imagePath: post.featured_image_asset,
+              imageData: base64Data,
               fileName: post.image_file_name,
+              contentType: imageBlob.type,
             }),
           }
         );
 
         if (!uploadResponse.ok) {
-          throw new Error(`Image upload failed: ${uploadResponse.status}`);
+          const errorText = await uploadResponse.text();
+          throw new Error(`Image upload failed: ${uploadResponse.status} - ${errorText}`);
         }
 
         const { publicUrl } = await uploadResponse.json();
