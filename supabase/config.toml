@@ -1,0 +1,10 @@
+project_id = "putjowciegpzdheideaf"
+
+[functions.generate-blog-article]
+verify_jwt = false
+
+[functions.upload-blog-image]
+verify_jwt = false
+
+[functions.import-blog-posts]
+verify_jwt = false
