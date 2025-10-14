@@ -8,6 +8,7 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Badge } from '../components/ui/badge';
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '../components/ui/collapsible';
 import { 
   Search, 
   Calendar, 
@@ -19,7 +20,8 @@ import {
   TrendingUp,
   MapPin,
   Car,
-  Briefcase
+  Briefcase,
+  ChevronDown
 } from 'lucide-react';
 import { format } from 'date-fns';
 import localPosts from '@/data/blog-posts.json';
@@ -32,6 +34,7 @@ const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedTag, setSelectedTag] = useState('');
   const [sortBy, setSortBy] = useState('newest');
+  const [isAllArticlesOpen, setIsAllArticlesOpen] = useState(true);
 
   // Fallback: transform local JSON to BlogPost shape
   const fallbackPosts: BlogPost[] = (localPosts as any[]).map((p: any) => ({
@@ -324,124 +327,134 @@ const BlogPage: React.FC = () => {
       {/* Search and Filter Section */}
       <SectionWrapper background="gray" padding="medium">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              All Articles
-            </h2>
-            <p className="text-lg text-gray-600">
-              Explore our complete collection of articles and insights
-            </p>
-          </div>
-
-          {/* Search and Filters */}
-          <div className="bg-white rounded-lg p-6 shadow-sm mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {/* Search */}
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                <Input
-                  placeholder="Search articles..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10"
+          <Collapsible open={isAllArticlesOpen} onOpenChange={setIsAllArticlesOpen}>
+            {/* Clickable header */}
+            <CollapsibleTrigger className="w-full">
+              <div className="mb-8 flex items-start justify-between cursor-pointer hover:bg-gray-50 p-4 rounded-lg transition-colors">
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-2 text-left">
+                    All Articles
+                  </h2>
+                  <p className="text-lg text-gray-600 text-left">
+                    Explore our complete collection of articles and insights
+                  </p>
+                </div>
+                <ChevronDown 
+                  className={`w-6 h-6 text-gray-600 transition-transform duration-200 flex-shrink-0 ml-4 mt-1 ${
+                    isAllArticlesOpen ? 'rotate-0' : '-rotate-90'
+                  }`}
                 />
               </div>
+            </CollapsibleTrigger>
 
-              {/* Category Filter */}
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {categories.map(category => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
-              </select>
+            {/* Collapsible content */}
+            <CollapsibleContent>
+              {/* Search and Filters */}
+              <div className="bg-white rounded-lg p-6 shadow-sm mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {/* Search */}
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                    <Input
+                      placeholder="Search articles..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="pl-10"
+                    />
+                  </div>
 
-              {/* Tag Filter */}
-              <select
-                value={selectedTag}
-                onChange={(e) => setSelectedTag(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="">All Tags</option>
-                {allTags.map(tag => (
-                  <option key={tag} value={tag}>{tag}</option>
-                ))}
-              </select>
+                  {/* Category Filter */}
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    {categories.map(category => (
+                      <option key={category} value={category}>{category}</option>
+                    ))}
+                  </select>
 
-              {/* Sort */}
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="newest">Newest First</option>
-                <option value="oldest">Oldest First</option>
-                <option value="popular">Most Popular</option>
-                <option value="read_time">Quick Reads</option>
-              </select>
-            </div>
+                  {/* Tag Filter */}
+                  <select
+                    value={selectedTag}
+                    onChange={(e) => setSelectedTag(e.target.value)}
+                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">All Tags</option>
+                    {allTags.map(tag => (
+                      <option key={tag} value={tag}>{tag}</option>
+                    ))}
+                  </select>
 
-            {/* Active Filters */}
-            {(searchTerm || selectedCategory !== 'All' || selectedTag) && (
-              <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t">
-                <span className="text-sm text-gray-600 flex items-center gap-1">
-                  <Filter className="w-4 h-4" />
-                  Active filters:
-                </span>
-                {searchTerm && (
-                  <Badge variant="secondary" className="flex items-center gap-1">
-                    Search: {searchTerm}
-                    <button onClick={() => setSearchTerm('')} className="ml-1 hover:text-red-600">
-                      ×
-                    </button>
-                  </Badge>
+                  {/* Sort */}
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="popular">Most Popular</option>
+                    <option value="read_time">Quick Reads</option>
+                  </select>
+                </div>
+
+                {/* Active Filters */}
+                {(searchTerm || selectedCategory !== 'All' || selectedTag) && (
+                  <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t">
+                    <span className="text-sm text-gray-600 flex items-center gap-1">
+                      <Filter className="w-4 h-4" />
+                      Active filters:
+                    </span>
+                    {searchTerm && (
+                      <Badge variant="secondary" className="flex items-center gap-1">
+                        Search: {searchTerm}
+                        <button onClick={() => setSearchTerm('')} className="ml-1 hover:text-red-600">
+                          ×
+                        </button>
+                      </Badge>
+                    )}
+                    {selectedCategory !== 'All' && (
+                      <Badge variant="secondary" className="flex items-center gap-1">
+                        Category: {selectedCategory}
+                        <button onClick={() => setSelectedCategory('All')} className="ml-1 hover:text-red-600">
+                          ×
+                        </button>
+                      </Badge>
+                    )}
+                    {selectedTag && (
+                      <Badge variant="secondary" className="flex items-center gap-1">
+                        Tag: {selectedTag}
+                        <button onClick={() => setSelectedTag('')} className="ml-1 hover:text-red-600">
+                          ×
+                        </button>
+                      </Badge>
+                    )}
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => {
+                        setSearchTerm('');
+                        setSelectedCategory('All');
+                        setSelectedTag('');
+                      }}
+                      className="text-xs"
+                    >
+                      Clear All
+                    </Button>
+                  </div>
                 )}
-                {selectedCategory !== 'All' && (
-                  <Badge variant="secondary" className="flex items-center gap-1">
-                    Category: {selectedCategory}
-                    <button onClick={() => setSelectedCategory('All')} className="ml-1 hover:text-red-600">
-                      ×
-                    </button>
-                  </Badge>
-                )}
-                {selectedTag && (
-                  <Badge variant="secondary" className="flex items-center gap-1">
-                    Tag: {selectedTag}
-                    <button onClick={() => setSelectedTag('')} className="ml-1 hover:text-red-600">
-                      ×
-                    </button>
-                  </Badge>
-                )}
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('All');
-                    setSelectedTag('');
-                  }}
-                  className="text-xs"
-                >
-                  Clear All
-                </Button>
               </div>
-            )}
-          </div>
 
-          {/* Results Summary */}
-          <div className="mb-6 flex items-center justify-between">
-            <p className="text-gray-600">
-              Showing {filteredAndSortedPosts.length} of {blogPosts.length} articles
-            </p>
-            <Button variant="outline" size="sm" onClick={() => refetch()}>
-              Retry Supabase
-            </Button>
-          </div>
+              {/* Results Summary */}
+              <div className="mb-6">
+                <p className="text-gray-600">
+                  Showing {filteredAndSortedPosts.length} of {blogPosts.length} articles
+                </p>
+              </div>
 
-          {/* Articles List */}
-          {filteredAndSortedPosts.length > 0 ? (
+              {/* Articles List */}
+              {filteredAndSortedPosts.length > 0 ? (
             <div className="space-y-6">
               {filteredAndSortedPosts.map(post => (
                 <Card key={post.id} className="hover:shadow-lg transition-shadow">
@@ -529,6 +542,8 @@ const BlogPage: React.FC = () => {
               </Button>
             </div>
           )}
+            </CollapsibleContent>
+          </Collapsible>
         </div>
       </SectionWrapper>
 
