@@ -32,6 +32,7 @@ import {
   Calendar,
   User,
   FileText,
+  Download,
 } from 'lucide-react';
 import { format } from 'date-fns';
 import { processScheduledPosts, getUpcomingScheduledPosts } from '@/lib/scheduler';
@@ -45,6 +46,7 @@ export default function AdminBlogPage() {
   const [error, setError] = useState('');
   const [scheduledPosts, setScheduledPosts] = useState<any[]>([]);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [importing, setImporting] = useState(false);
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
 
@@ -152,6 +154,32 @@ export default function AdminBlogPage() {
       fetchPosts(); // Refresh the list
     } catch (err: any) {
       setError(err.message);
+    }
+  };
+
+  const handleImportPosts = async () => {
+    if (!confirm('This will import 4 blog posts with AI-generated content. Continue?')) return;
+
+    setImporting(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('import-blog-posts');
+
+      if (error) throw error;
+
+      console.log('Import result:', data);
+      
+      if (data.success) {
+        toast.success(`Successfully imported ${data.imported} blog posts!`);
+        fetchPosts(); // Refresh the list
+      } else {
+        toast.error('Import completed with some errors. Check console for details.');
+      }
+    } catch (err: any) {
+      console.error('Import failed:', err);
+      toast.error(err.message || 'Failed to import blog posts');
+      setError(err.message || 'Failed to import blog posts');
+    } finally {
+      setImporting(false);
     }
   };
 
@@ -287,10 +315,20 @@ export default function AdminBlogPage() {
             />
           </div>
           
-          <Button onClick={() => navigate('/admin/blog/new')}>
-            <Plus className="h-4 w-4 mr-2" />
-            New Post
-          </Button>
+          <div className="flex gap-2">
+            <Button 
+              variant="outline" 
+              onClick={handleImportPosts}
+              disabled={importing}
+            >
+              <Download className="h-4 w-4 mr-2" />
+              {importing ? 'Importing...' : 'Import Sample Posts'}
+            </Button>
+            <Button onClick={() => navigate('/admin/blog/new')}>
+              <Plus className="h-4 w-4 mr-2" />
+              New Post
+            </Button>
+          </div>
         </div>
 
         {/* Scheduled Posts Section */}
