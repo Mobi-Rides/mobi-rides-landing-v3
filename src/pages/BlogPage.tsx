@@ -34,7 +34,7 @@ const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedTag, setSelectedTag] = useState('');
   const [sortBy, setSortBy] = useState('newest');
-  const [isAllArticlesOpen, setIsAllArticlesOpen] = useState(true);
+  const [isAllArticlesOpen, setIsAllArticlesOpen] = useState(false);
 
   // Fallback: transform local JSON to BlogPost shape
   const fallbackPosts: BlogPost[] = (localPosts as any[]).map((p: any) => ({
@@ -325,7 +325,7 @@ const BlogPage: React.FC = () => {
       )}
 
       {/* Search and Filter Section */}
-      <SectionWrapper background="gray" padding="medium">
+      <SectionWrapper background="gray" padding="medium" className="min-h-0">
         <div className="max-w-6xl mx-auto">
           <Collapsible open={isAllArticlesOpen} onOpenChange={setIsAllArticlesOpen}>
             {/* Clickable header */}
