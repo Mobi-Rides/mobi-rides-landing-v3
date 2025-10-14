@@ -28,3 +28,28 @@ export interface Car {
   created_at: string;
   updated_at: string;
 }
+
+// Blog post types for CMS
+export interface BlogPost {
+  id: string; // UUID from database
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string; // Rich text content
+  featured_image: string | null;
+  author_name: string;
+  author_email: string;
+  author_bio: string | null;
+  author_image: string | null;
+  category: string;
+  tags: string[];
+  meta_description: string | null;
+  status: 'draft' | 'published' | 'scheduled';
+  published_at: string | null;
+  scheduled_for: string | null;
+  created_at: string;
+  updated_at: string;
+  read_time: number; // estimated read time in minutes
+  view_count: number;
+  social_image: string | null;
+}

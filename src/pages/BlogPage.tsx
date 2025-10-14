@@ -1,10 +1,14 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useQuery } from '@tanstack/react-query';
+import { useNavigate } from 'react-router-dom';
+import { supabase, BlogPost } from '@/lib/supabase';
 import { PageLayout, PageHero, SectionWrapper } from '../components/layouts';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Badge } from '../components/ui/badge';
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '../components/ui/collapsible';
 import { 
   Search, 
   Calendar, 
@@ -16,43 +20,88 @@ import {
   TrendingUp,
   MapPin,
   Car,
-  Briefcase
+  Briefcase,
+  ChevronDown
 } from 'lucide-react';
-import blogData from '../data/blog-posts.json';
+import { format } from 'date-fns';
+import localPosts from '@/data/blog-posts.json';
 
-interface BlogPost {
-  id: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  category: string;
-  tags: string[];
-  featuredImage: string;
-  readTime: number;
-  featured: boolean;
-}
+
 
 const BlogPage: React.FC = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedTag, setSelectedTag] = useState('');
   const [sortBy, setSortBy] = useState('newest');
+  const [isAllArticlesOpen, setIsAllArticlesOpen] = useState(false);
 
-  const blogPosts: BlogPost[] = blogData;
-  const categories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))];
-  const allTags = Array.from(new Set(blogPosts.flatMap(post => post.tags)));
+  // Fallback: transform local JSON to BlogPost shape
+  const fallbackPosts: BlogPost[] = (localPosts as any[]).map((p: any) => ({
+    id: p.id,
+    title: p.title,
+    slug: p.slug,
+    excerpt: p.excerpt,
+    content: p.content,
+    featured_image: p.featuredImage,
+    author_name: p.author,
+    author_email: '',
+    author_bio: null,
+    author_image: null,
+    category: p.category,
+    tags: p.tags || [],
+    meta_description: p.excerpt || null,
+    status: 'published',
+    published_at: p.publishedAt,
+    scheduled_for: null,
+    created_at: p.publishedAt,
+    updated_at: p.publishedAt,
+    read_time: p.readTime || 0,
+    view_count: 0,
+    social_image: null,
+  }));
+
+  // Fetch blog posts from Supabase with graceful fallback
+  const { data: blogPosts = [], isLoading, error, refetch } = useQuery({
+    queryKey: ['blog-posts'],
+    retry: false,
+    queryFn: async () => {
+      try {
+        const { data, error } = await supabase
+          .from('blog_posts')
+          .select('*')
+          .eq('status', 'published')
+          .order('published_at', { ascending: false });
+
+        if (error) {
+          console.warn('Supabase error fetching blog_posts, using local fallback:', error.message);
+          return fallbackPosts;
+        }
+
+        if (!data || data.length === 0) {
+          console.info('No published posts from Supabase, using local fallback');
+          return fallbackPosts;
+        }
+
+        return data as BlogPost[];
+      } catch (e: any) {
+        console.error('Failed to fetch blog posts from Supabase, using local fallback:', e?.message || e);
+        return fallbackPosts;
+      }
+    },
+  });
+
+  const categories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category).filter(Boolean)))];
+  const allTags = Array.from(new Set(blogPosts.flatMap(post => post.tags || [])));
 
   const filteredAndSortedPosts = useMemo(() => {
     const filtered = blogPosts.filter(post => {
       const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+                           post.excerpt?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           (post.tags || []).some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       
       const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
-      const matchesTag = !selectedTag || post.tags.includes(selectedTag);
+      const matchesTag = !selectedTag || (post.tags || []).includes(selectedTag);
       
       return matchesSearch && matchesCategory && matchesTag;
     });
@@ -61,13 +110,13 @@ const BlogPage: React.FC = () => {
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'newest':
-          return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+          return new Date(b.published_at || b.created_at).getTime() - new Date(a.published_at || a.created_at).getTime();
         case 'oldest':
-          return new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime();
+          return new Date(a.published_at || a.created_at).getTime() - new Date(b.published_at || b.created_at).getTime();
         case 'popular':
-          return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-        case 'readTime':
-          return a.readTime - b.readTime;
+          return (b.view_count || 0) - (a.view_count || 0);
+        case 'read_time':
+          return (a.read_time || 0) - (b.read_time || 0);
         default:
           return 0;
       }
@@ -76,14 +125,14 @@ const BlogPage: React.FC = () => {
     return filtered;
   }, [blogPosts, searchTerm, selectedCategory, selectedTag, sortBy]);
 
-  const featuredPosts = blogPosts.filter(post => post.featured).slice(0, 3);
+  const featuredPosts = blogPosts.slice(0, 3);
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+    return format(new Date(dateString), 'MMMM d, yyyy');
+  };
+
+  const handlePostClick = (slug: string) => {
+    navigate(`/blog/${slug}`);
   };
 
   const getCategoryIcon = (category: string) => {
@@ -134,14 +183,48 @@ const BlogPage: React.FC = () => {
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.excerpt,
-      "image": post.featuredImage,
-      "datePublished": post.publishedAt,
+      "image": post.featured_image,
+      "datePublished": post.published_at || post.created_at,
       "author": {
         "@type": "Person",
-        "name": post.author
+        "name": post.author_name
       }
     }))
   };
+
+  // Loading state
+  if (isLoading) {
+    return (
+      <PageLayout
+        title="Blog - Travel Guides & Insights | Mobirides"
+        description="Discover travel guides, vehicle reviews, business insights, and local news about car rentals and mobility in Botswana."
+      >
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+        </div>
+      </PageLayout>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <PageLayout
+        title="Blog - Travel Guides & Insights | Mobirides"
+        description="Discover travel guides, vehicle reviews, business insights, and local news about car rentals and mobility in Botswana."
+      >
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Unable to Load Blog Posts</h1>
+            <p className="text-gray-600 mb-6">Please try again later.</p>
+            <Button onClick={() => window.location.reload()}>
+              Retry
+            </Button>
+          </div>
+        </div>
+      </PageLayout>
+    );
+  }
 
   return (
     <PageLayout
@@ -180,7 +263,7 @@ const BlogPage: React.FC = () => {
                 <div className="flex flex-col">
                   <div className="relative w-full">
                     <img
-                      src={post.featuredImage}
+                      src={post.featured_image}
                       alt={post.title}
                       className="w-full h-64 object-cover rounded-t-lg"
                     />
@@ -208,28 +291,28 @@ const BlogPage: React.FC = () => {
                       <div className="flex items-center gap-4">
                          <div className="flex items-center gap-1">
                             <User className="w-4 h-4" />
-                            {post.author}
+                            {post.author_name}
                           </div>
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
-                          {formatDate(post.publishedAt)}
+                          {formatDate(post.published_at || post.created_at)}
                         </div>
                         <div className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
-                          {post.readTime} min read
+                          {post.read_time} min read
                         </div>
                       </div>
                     </div>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.slice(0, 3).map(tag => (
+                      {(post.tags || []).slice(0, 3).map(tag => (
                         <Badge key={tag} variant="outline" className="text-xs">
                           {tag}
                         </Badge>
                       ))}
                     </div>
                     
-                    <Button variant="outline" className="w-full group">
+                    <Button variant="outline" className="w-full group" onClick={() => handlePostClick(post.slug)}>
                       Read More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -242,130 +325,143 @@ const BlogPage: React.FC = () => {
       )}
 
       {/* Search and Filter Section */}
-      <SectionWrapper background="gray" padding="medium">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              All Articles
-            </h2>
-            <p className="text-lg text-gray-600">
-              Explore our complete collection of articles and insights
-            </p>
-          </div>
-
-          {/* Search and Filters */}
-          <div className="bg-white rounded-lg p-6 shadow-sm mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {/* Search */}
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                <Input
-                  placeholder="Search articles..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10"
+      <section className="bg-gray-50 py-12 lg:py-20">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <Collapsible open={isAllArticlesOpen} onOpenChange={setIsAllArticlesOpen}>
+            {/* Clickable header */}
+            <CollapsibleTrigger className="w-full">
+              <div className={`${isAllArticlesOpen ? 'mb-8' : 'mb-2'} flex items-start justify-between cursor-pointer hover:bg-gray-100 p-4 rounded-lg transition-colors`}>
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-2 text-left">
+                    All Articles
+                  </h2>
+                  <p className="text-lg text-gray-600 text-left">
+                    Explore our complete collection of articles and insights
+                  </p>
+                </div>
+                <ChevronDown 
+                  className={`w-6 h-6 text-gray-600 transition-transform duration-200 flex-shrink-0 ml-4 mt-1 ${
+                    isAllArticlesOpen ? 'rotate-0' : '-rotate-90'
+                  }`}
                 />
               </div>
+            </CollapsibleTrigger>
 
-              {/* Category Filter */}
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {categories.map(category => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
-              </select>
+            {/* Collapsible content */}
+            <CollapsibleContent>
+              {/* Search and Filters */}
+              <div className="bg-white rounded-lg p-6 shadow-sm mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {/* Search */}
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                    <Input
+                      placeholder="Search articles..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="pl-10"
+                    />
+                  </div>
 
-              {/* Tag Filter */}
-              <select
-                value={selectedTag}
-                onChange={(e) => setSelectedTag(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="">All Tags</option>
-                {allTags.map(tag => (
-                  <option key={tag} value={tag}>{tag}</option>
-                ))}
-              </select>
+                  {/* Category Filter */}
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    {categories.map(category => (
+                      <option key={category} value={category}>{category}</option>
+                    ))}
+                  </select>
 
-              {/* Sort */}
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="newest">Newest First</option>
-                <option value="oldest">Oldest First</option>
-                <option value="popular">Most Popular</option>
-                <option value="readTime">Quick Reads</option>
-              </select>
-            </div>
+                  {/* Tag Filter */}
+                  <select
+                    value={selectedTag}
+                    onChange={(e) => setSelectedTag(e.target.value)}
+                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">All Tags</option>
+                    {allTags.map(tag => (
+                      <option key={tag} value={tag}>{tag}</option>
+                    ))}
+                  </select>
 
-            {/* Active Filters */}
-            {(searchTerm || selectedCategory !== 'All' || selectedTag) && (
-              <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t">
-                <span className="text-sm text-gray-600 flex items-center gap-1">
-                  <Filter className="w-4 h-4" />
-                  Active filters:
-                </span>
-                {searchTerm && (
-                  <Badge variant="secondary" className="flex items-center gap-1">
-                    Search: {searchTerm}
-                    <button onClick={() => setSearchTerm('')} className="ml-1 hover:text-red-600">
-                      ×
-                    </button>
-                  </Badge>
+                  {/* Sort */}
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="popular">Most Popular</option>
+                    <option value="read_time">Quick Reads</option>
+                  </select>
+                </div>
+
+                {/* Active Filters */}
+                {(searchTerm || selectedCategory !== 'All' || selectedTag) && (
+                  <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t">
+                    <span className="text-sm text-gray-600 flex items-center gap-1">
+                      <Filter className="w-4 h-4" />
+                      Active filters:
+                    </span>
+                    {searchTerm && (
+                      <Badge variant="secondary" className="flex items-center gap-1">
+                        Search: {searchTerm}
+                        <button onClick={() => setSearchTerm('')} className="ml-1 hover:text-red-600">
+                          ×
+                        </button>
+                      </Badge>
+                    )}
+                    {selectedCategory !== 'All' && (
+                      <Badge variant="secondary" className="flex items-center gap-1">
+                        Category: {selectedCategory}
+                        <button onClick={() => setSelectedCategory('All')} className="ml-1 hover:text-red-600">
+                          ×
+                        </button>
+                      </Badge>
+                    )}
+                    {selectedTag && (
+                      <Badge variant="secondary" className="flex items-center gap-1">
+                        Tag: {selectedTag}
+                        <button onClick={() => setSelectedTag('')} className="ml-1 hover:text-red-600">
+                          ×
+                        </button>
+                      </Badge>
+                    )}
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => {
+                        setSearchTerm('');
+                        setSelectedCategory('All');
+                        setSelectedTag('');
+                      }}
+                      className="text-xs"
+                    >
+                      Clear All
+                    </Button>
+                  </div>
                 )}
-                {selectedCategory !== 'All' && (
-                  <Badge variant="secondary" className="flex items-center gap-1">
-                    Category: {selectedCategory}
-                    <button onClick={() => setSelectedCategory('All')} className="ml-1 hover:text-red-600">
-                      ×
-                    </button>
-                  </Badge>
-                )}
-                {selectedTag && (
-                  <Badge variant="secondary" className="flex items-center gap-1">
-                    Tag: {selectedTag}
-                    <button onClick={() => setSelectedTag('')} className="ml-1 hover:text-red-600">
-                      ×
-                    </button>
-                  </Badge>
-                )}
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('All');
-                    setSelectedTag('');
-                  }}
-                  className="text-xs"
-                >
-                  Clear All
-                </Button>
               </div>
-            )}
-          </div>
 
-          {/* Results Summary */}
-          <div className="mb-6">
-            <p className="text-gray-600">
-              Showing {filteredAndSortedPosts.length} of {blogPosts.length} articles
-            </p>
-          </div>
+              {/* Results Summary */}
+              <div className="mb-6">
+                <p className="text-gray-600">
+                  Showing {filteredAndSortedPosts.length} of {blogPosts.length} articles
+                </p>
+              </div>
 
-          {/* Articles List */}
-          {filteredAndSortedPosts.length > 0 ? (
+              {/* Articles List */}
+              {filteredAndSortedPosts.length > 0 ? (
             <div className="space-y-6">
               {filteredAndSortedPosts.map(post => (
                 <Card key={post.id} className="hover:shadow-lg transition-shadow">
                   <div className="flex flex-col">
                     <div className="relative w-full">
                       <img
-                        src={post.featuredImage}
+                        src={post.featured_image}
                         alt={post.title}
                         className="w-full h-48 object-cover rounded-t-lg"
                       />
@@ -375,13 +471,6 @@ const BlogPage: React.FC = () => {
                           {post.category}
                         </Badge>
                       </div>
-                      {post.featured && (
-                        <div className="absolute top-4 right-4">
-                          <Badge variant="secondary" className="bg-black/70 text-white">
-                            Featured
-                          </Badge>
-                        </div>
-                      )}
                     </div>
                     <CardContent className="p-6 w-full">
                       <h3 className="font-bold text-lg text-gray-900 mb-3 line-clamp-2">
@@ -395,33 +484,33 @@ const BlogPage: React.FC = () => {
                         <div className="flex items-center gap-4">
                            <div className="flex items-center gap-1">
                               <User className="w-3 h-3" />
-                              {post.author}
+                              {post.author_name}
                             </div>
                           <div className="flex items-center gap-1">
                             <Calendar className="w-3 h-3" />
-                            {formatDate(post.publishedAt)}
+                            {formatDate(post.published_at || post.created_at)}
                           </div>
                           <div className="flex items-center gap-1">
                             <Clock className="w-3 h-3" />
-                            {post.readTime} min
+                            {post.read_time} min
                           </div>
                         </div>
                       </div>
                       
                       <div className="flex flex-wrap gap-1 mb-4">
-                        {post.tags.slice(0, 2).map(tag => (
+                        {(post.tags || []).slice(0, 2).map(tag => (
                           <Badge key={tag} variant="outline" className="text-xs">
                             {tag}
                           </Badge>
                         ))}
-                        {post.tags.length > 2 && (
+                        {(post.tags || []).length > 2 && (
                           <Badge variant="outline" className="text-xs">
-                            +{post.tags.length - 2}
+                            +{(post.tags || []).length - 2}
                           </Badge>
                         )}
                       </div>
                       
-                      <Button variant="outline" size="sm" className="w-full group">
+                      <Button variant="outline" size="sm" className="w-full group" onClick={() => handlePostClick(post.slug)}>
                         Read Article
                         <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
                       </Button>
@@ -453,8 +542,10 @@ const BlogPage: React.FC = () => {
               </Button>
             </div>
           )}
+            </CollapsibleContent>
+          </Collapsible>
         </div>
-      </SectionWrapper>
+      </section>
 
       {/* Newsletter Subscription */}
       <SectionWrapper background="white" padding="medium">
