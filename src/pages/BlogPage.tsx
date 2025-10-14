@@ -325,12 +325,12 @@ const BlogPage: React.FC = () => {
       )}
 
       {/* Search and Filter Section */}
-      <SectionWrapper background="gray" padding="medium" className="min-h-0">
-        <div className="max-w-6xl mx-auto">
+      <section className="bg-gray-50 py-12 lg:py-20">
+        <div className="container mx-auto px-4 max-w-6xl">
           <Collapsible open={isAllArticlesOpen} onOpenChange={setIsAllArticlesOpen}>
             {/* Clickable header */}
             <CollapsibleTrigger className="w-full">
-              <div className="mb-8 flex items-start justify-between cursor-pointer hover:bg-gray-50 p-4 rounded-lg transition-colors">
+              <div className={`${isAllArticlesOpen ? 'mb-8' : 'mb-2'} flex items-start justify-between cursor-pointer hover:bg-gray-100 p-4 rounded-lg transition-colors`}>
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-2 text-left">
                     All Articles
@@ -545,7 +545,7 @@ const BlogPage: React.FC = () => {
             </CollapsibleContent>
           </Collapsible>
         </div>
-      </SectionWrapper>
+      </section>
 
       {/* Newsletter Subscription */}
       <SectionWrapper background="white" padding="medium">
