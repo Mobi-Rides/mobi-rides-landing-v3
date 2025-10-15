@@ -3,7 +3,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.57.4";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, Authorization, x-client-info, apikey, content-type",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
   "Access-Control-Max-Age": "86400",
 };
@@ -79,25 +79,20 @@ serve(async (req) => {
       try {
         // Step 1: Generate article content
         console.log("Generating article content...");
-        const generateResponse = await fetch(
-          `${supabaseUrl}/functions/v1/generate-blog-article`,
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              topic: post.slug,
-              title: post.title,
-              excerpt: post.excerpt,
-              category: post.category,
-            }),
+        const { data: genData, error: genError } = await supabase.functions.invoke('generate-blog-article', {
+          body: {
+            topic: post.slug,
+            title: post.title,
+            excerpt: post.excerpt,
+            category: post.category,
           }
-        );
+        });
 
-        if (!generateResponse.ok) {
-          throw new Error(`Content generation failed: ${generateResponse.status}`);
+        if (genError) {
+          throw new Error(`Content generation failed: ${genError.message || genError}`);
         }
 
-        const { content, readTime } = await generateResponse.json();
+        const { content, readTime } = genData as { content: string; readTime: number };
         console.log(`✓ Generated ${readTime} min article`);
 
         // Step 2: Fetch and upload featured image
@@ -126,25 +121,19 @@ serve(async (req) => {
         
         // Upload to storage
         console.log("Uploading to storage...");
-        const uploadResponse = await fetch(
-          `${supabaseUrl}/functions/v1/upload-blog-image`,
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              imageData: base64Data,
-              fileName: post.image_file_name,
-              contentType: imageBlob.type,
-            }),
+        const { data: uploadData, error: uploadError } = await supabase.functions.invoke('upload-blog-image', {
+          body: {
+            imageData: base64Data,
+            fileName: post.image_file_name,
+            contentType: imageBlob.type,
           }
-        );
+        });
 
-        if (!uploadResponse.ok) {
-          const errorText = await uploadResponse.text();
-          throw new Error(`Image upload failed: ${uploadResponse.status} - ${errorText}`);
+        if (uploadError) {
+          throw new Error(`Image upload failed: ${uploadError.message || uploadError}`);
         }
 
-        const { publicUrl } = await uploadResponse.json();
+        const { publicUrl } = uploadData as { publicUrl: string };
         console.log(`✓ Image uploaded: ${publicUrl}`);
 
         // Step 3: Insert into database
