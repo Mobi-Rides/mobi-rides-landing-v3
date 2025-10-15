@@ -33,6 +33,7 @@ import {
   User,
   FileText,
   Download,
+  Activity,
 } from 'lucide-react';
 import { format } from 'date-fns';
 import { processScheduledPosts, getUpcomingScheduledPosts } from '@/lib/scheduler';
@@ -47,6 +48,7 @@ export default function AdminBlogPage() {
   const [scheduledPosts, setScheduledPosts] = useState<any[]>([]);
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [importing, setImporting] = useState(false);
+  const [diagRunning, setDiagRunning] = useState(false);
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
 
@@ -176,10 +178,37 @@ export default function AdminBlogPage() {
       }
     } catch (err: any) {
       console.error('Import failed:', err);
-      toast.error(err.message || 'Failed to import blog posts');
-      setError(err.message || 'Failed to import blog posts');
+      const msg = err?.message || 'Failed to import blog posts';
+      if (msg.toLowerCase().includes('fetch') || err?.name === 'FunctionsFetchError') {
+        toast.error('Edge Functions unreachable. Try "Run diagnostics" to debug.');
+      } else {
+        toast.error(msg);
+      }
+      setError(msg);
     } finally {
       setImporting(false);
+    }
+  };
+
+  const handleDiagnostics = async () => {
+    setDiagRunning(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('ping');
+      if (error) {
+        console.error('Diagnostics failed:', error);
+        toast.error('Diagnostics failed: Edge Functions unreachable.');
+      } else if (data?.ok) {
+        toast.success('Diagnostics passed: Edge Functions reachable.');
+        console.log('Diagnostics result:', data);
+      } else {
+        toast.error('Diagnostics returned unexpected response.');
+        console.warn('Diagnostics unexpected response:', data);
+      }
+    } catch (err: any) {
+      console.error('Diagnostics error:', err);
+      toast.error(err.message || 'Diagnostics error');
+    } finally {
+      setDiagRunning(false);
     }
   };
 
@@ -316,6 +345,14 @@ export default function AdminBlogPage() {
           </div>
           
           <div className="flex gap-2">
+            <Button 
+              variant="outline"
+              onClick={handleDiagnostics}
+              disabled={diagRunning}
+            >
+              <Activity className="h-4 w-4 mr-2" />
+              {diagRunning ? 'Running...' : 'Run diagnostics'}
+            </Button>
             <Button 
               variant="outline" 
               onClick={handleImportPosts}
