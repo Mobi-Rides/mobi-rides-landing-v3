@@ -44,7 +44,9 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
 }) => {
   const editor = useEditor({
     extensions: [
-      StarterKit,
+      StarterKit.configure({
+        link: false, // Disable link from StarterKit to use custom Link extension
+      }),
       Image.configure({
         HTMLAttributes: {
           class: 'max-w-full h-auto rounded-lg',
