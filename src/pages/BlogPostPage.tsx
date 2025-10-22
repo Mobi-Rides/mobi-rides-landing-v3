@@ -207,7 +207,7 @@ const BlogPostPage = () => {
               {/* Content */}
               {post.content?.includes('<') ? (
                 <div 
-                  className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900"
+                  className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:my-6 prose-a:text-blue-600 prose-strong:text-gray-900 prose-ul:my-6 prose-ol:my-6 prose-li:my-2 prose-blockquote:my-6"
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
               ) : (
