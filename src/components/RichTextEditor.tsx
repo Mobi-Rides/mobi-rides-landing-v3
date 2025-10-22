@@ -45,7 +45,26 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
-        link: false, // Disable link from StarterKit to use custom Link extension
+        bulletList: {
+          HTMLAttributes: {
+            class: 'list-disc list-outside ml-6 my-4',
+          },
+        },
+        orderedList: {
+          HTMLAttributes: {
+            class: 'list-decimal list-outside ml-6 my-4',
+          },
+        },
+        listItem: {
+          HTMLAttributes: {
+            class: 'mb-2',
+          },
+        },
+        blockquote: {
+          HTMLAttributes: {
+            class: 'border-l-4 border-gray-300 pl-4 italic my-4',
+          },
+        },
       }),
       Image.configure({
         HTMLAttributes: {
@@ -73,10 +92,17 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
     },
     editorProps: {
       attributes: {
-        class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none min-h-[400px] p-4',
+        class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none min-h-[400px] p-4 [&_ul]:list-disc [&_ol]:list-decimal [&_li]:ml-4',
       },
     },
   });
+
+  // Update editor content when prop changes
+  React.useEffect(() => {
+    if (editor && content !== editor.getHTML()) {
+      editor.commands.setContent(content);
+    }
+  }, [editor, content]);
 
   if (!editor) {
     return null;
