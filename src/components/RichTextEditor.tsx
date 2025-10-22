@@ -45,6 +45,16 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
+        paragraph: {
+          HTMLAttributes: {
+            class: 'my-4',
+          },
+        },
+        hardBreak: {
+          HTMLAttributes: {
+            class: 'block',
+          },
+        },
         bulletList: {
           HTMLAttributes: {
             class: 'list-disc list-outside ml-6 my-4',
@@ -92,7 +102,7 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
     },
     editorProps: {
       attributes: {
-        class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none min-h-[400px] p-4 [&_ul]:list-disc [&_ol]:list-decimal [&_li]:ml-4',
+        class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none min-h-[400px] p-4 [&_ul]:list-disc [&_ol]:list-decimal [&_li]:ml-4 [&_p]:my-4 [&_br]:block',
       },
     },
   });

@@ -209,13 +209,14 @@ const BlogPostPage = () => {
                 <div 
                   className="prose prose-lg max-w-none 
                     prose-headings:text-gray-900 
-                    prose-p:text-gray-700 prose-p:my-6 
+                    prose-p:text-gray-700 prose-p:my-6 prose-p:leading-relaxed
                     prose-a:text-blue-600 
                     prose-strong:text-gray-900 
                     prose-ul:my-6 prose-ul:list-disc prose-ul:ml-6
                     prose-ol:my-6 prose-ol:list-decimal prose-ol:ml-6
                     prose-li:my-2 prose-li:text-gray-700
-                    prose-blockquote:my-6 prose-blockquote:border-l-4 prose-blockquote:border-gray-300 prose-blockquote:pl-4 prose-blockquote:italic"
+                    prose-blockquote:my-6 prose-blockquote:border-l-4 prose-blockquote:border-gray-300 prose-blockquote:pl-4 prose-blockquote:italic
+                    [&_p]:my-6 [&_p]:leading-relaxed [&_br]:block [&_br]:my-2"
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
               ) : (
