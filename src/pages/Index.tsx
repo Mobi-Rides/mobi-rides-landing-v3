@@ -60,10 +60,10 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Header />
       
-      <main className="scroll-snap-y overflow-y-auto h-screen">
+      <main className="flex-1">
         <HeroSection />
         
         <LazySection fallback={<SectionSkeleton />}>

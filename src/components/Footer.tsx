@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="mb-6">
               <img 
-                src="/public/mobirides-logo.png" 
+                src="/mobirides-logo.png" 
                 alt="MobiRides - Premium Car Sharing in Botswana"
                 className="h-12 w-auto"
               />
@@ -169,9 +169,9 @@ const Footer = () => {
               © 2024 MobiRides. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-6">
-              <a href="/#cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to={{ pathname: '/', hash: '#cookies' }} className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
           
