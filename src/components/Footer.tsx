@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="mb-6">
               <img 
-                src="/mobirides-logo.png" 
+                src="/public/mobirides-logo.png" 
                 alt="MobiRides - Premium Car Sharing in Botswana"
                 className="h-12 w-auto"
               />
