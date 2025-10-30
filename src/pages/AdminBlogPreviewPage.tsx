@@ -151,7 +151,7 @@ const AdminBlogPreviewPage: React.FC = () => {
 
               {/* Content */}
               <div 
-                className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900"
+                className="blog-content"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
 

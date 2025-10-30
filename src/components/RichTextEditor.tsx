@@ -7,6 +7,7 @@ import TextAlign from '@tiptap/extension-text-align';
 import { TextStyle } from '@tiptap/extension-text-style';
 import { Color } from '@tiptap/extension-color';
 import Highlight from '@tiptap/extension-highlight';
+import { LineHeight } from '@/lib/tiptap/LineHeight';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import {
@@ -29,6 +30,7 @@ import {
   Image as ImageIcon,
   Palette,
   Highlighter,
+  LineChart,
 } from 'lucide-react';
 
 interface RichTextEditorProps {
@@ -47,48 +49,53 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
       StarterKit.configure({
         paragraph: {
           HTMLAttributes: {
-            class: 'my-4',
+            class: 'my-6 leading-relaxed',
           },
         },
         hardBreak: {
           HTMLAttributes: {
-            class: 'block',
+            class: 'block my-2',
           },
         },
         bulletList: {
           HTMLAttributes: {
-            class: 'list-disc list-outside ml-6 my-4',
+            class: 'list-disc list-outside ml-6 my-6 space-y-2',
           },
         },
         orderedList: {
           HTMLAttributes: {
-            class: 'list-decimal list-outside ml-6 my-4',
+            class: 'list-decimal list-outside ml-6 my-6 space-y-2',
           },
         },
         listItem: {
           HTMLAttributes: {
-            class: 'mb-2',
+            class: 'leading-relaxed',
           },
         },
         blockquote: {
           HTMLAttributes: {
-            class: 'border-l-4 border-gray-300 pl-4 italic my-4',
+            class: 'border-l-4 border-muted pl-4 italic my-6 text-muted-foreground',
           },
         },
       }),
       Image.configure({
         HTMLAttributes: {
-          class: 'max-w-full h-auto rounded-lg',
+          class: 'max-w-full h-auto rounded-lg shadow-sm',
         },
       }),
       Link.configure({
         openOnClick: false,
         HTMLAttributes: {
-          class: 'text-blue-600 hover:text-blue-800 underline',
+          class: 'text-primary hover:underline',
         },
       }),
       TextAlign.configure({
         types: ['heading', 'paragraph'],
+      }),
+      LineHeight.configure({
+        types: ['paragraph', 'heading'],
+        heights: ['1', '1.15', '1.5', '1.75', '2'],
+        defaultHeight: '1.5',
       }),
       TextStyle,
       Color,
@@ -102,7 +109,7 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
     },
     editorProps: {
       attributes: {
-        class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none min-h-[400px] p-4 [&_ul]:list-disc [&_ol]:list-decimal [&_li]:ml-4 [&_p]:my-4 [&_br]:block',
+        class: 'blog-content focus:outline-none min-h-[400px] p-4',
       },
     },
   });
@@ -284,6 +291,41 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
           title="Add Image"
         >
           <ImageIcon className="h-4 w-4" />
+        </ToolbarButton>
+
+        <Separator orientation="vertical" className="h-8" />
+
+        {/* Line Height Controls */}
+        <ToolbarButton
+          onClick={() => editor.chain().focus().setLineHeight('1').run()}
+          isActive={editor.getAttributes('paragraph').lineHeight === '1'}
+          title="Single Line Height (1.0)"
+        >
+          <span className="text-xs font-semibold">1.0</span>
+        </ToolbarButton>
+        
+        <ToolbarButton
+          onClick={() => editor.chain().focus().setLineHeight('1.15').run()}
+          isActive={editor.getAttributes('paragraph').lineHeight === '1.15'}
+          title="Line Height 1.15"
+        >
+          <span className="text-xs font-semibold">1.15</span>
+        </ToolbarButton>
+        
+        <ToolbarButton
+          onClick={() => editor.chain().focus().setLineHeight('1.5').run()}
+          isActive={editor.getAttributes('paragraph').lineHeight === '1.5'}
+          title="1.5 Line Height"
+        >
+          <span className="text-xs font-semibold">1.5</span>
+        </ToolbarButton>
+        
+        <ToolbarButton
+          onClick={() => editor.chain().focus().setLineHeight('2').run()}
+          isActive={editor.getAttributes('paragraph').lineHeight === '2'}
+          title="Double Line Height (2.0)"
+        >
+          <span className="text-xs font-semibold">2.0</span>
         </ToolbarButton>
 
         <Separator orientation="vertical" className="h-8" />
