@@ -19,6 +19,9 @@ import { FontSize } from '@/lib/tiptap/FontSize';
 import { exportBlogHtml } from '@/lib/htmlSanitizer';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
+import { ToolbarDropdown } from './ToolbarDropdown';
+import { FormatPainter } from './FormatPainter';
+import { SpacingPanel } from './SpacingPanel';
 import {
   Bold,
   Italic,
@@ -46,7 +49,7 @@ import {
   Outdent,
   Underline as UnderlineIcon,
   Type,
-  Space,
+  Heading,
 } from 'lucide-react';
 
 interface RichTextEditorProps {
@@ -75,12 +78,12 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
         },
         bulletList: {
           HTMLAttributes: {
-            class: 'list-disc list-outside ml-6 my-6 space-y-2',
+            class: 'list-disc list-outside ml-6',
           },
         },
         orderedList: {
           HTMLAttributes: {
-            class: 'list-decimal list-outside ml-6 my-6 space-y-2',
+            class: 'list-decimal list-outside ml-6',
           },
         },
         listItem: {
@@ -214,101 +217,135 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
     </Button>
   );
 
+  const getActiveHeading = () => {
+    for (let level = 1; level <= 6; level++) {
+      if (editor.isActive('heading', { level })) {
+        return `H${level}`;
+      }
+    }
+    return null;
+  };
+
+  const getActiveFontSize = () => {
+    const attrs = editor.getAttributes('textStyle');
+    if (attrs.fontSize === '0.875rem') return 'S';
+    if (attrs.fontSize === '1.25rem') return 'L';
+    if (attrs.fontSize === '1.5rem') return 'XL';
+    return 'M';
+  };
+
+  const getActiveLineHeight = () => {
+    const attrs = editor.getAttributes('paragraph');
+    return attrs.lineHeight || '1.5';
+  };
+
   return (
     <div className="border border-gray-200 rounded-lg overflow-hidden">
       {/* Toolbar */}
       <div className="bg-gray-50 border-b border-gray-200 p-2 flex flex-wrap gap-1">
-        {/* Text Formatting */}
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleBold().run()}
-          isActive={editor.isActive('bold')}
-          title="Bold"
-        >
-          <Bold className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleItalic().run()}
-          isActive={editor.isActive('italic')}
-          title="Italic"
-        >
-          <Italic className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleStrike().run()}
-          isActive={editor.isActive('strike')}
-          title="Strikethrough"
-        >
-          <Strikethrough className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleCode().run()}
-          isActive={editor.isActive('code')}
-          title="Code"
-        >
-          <Code className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleUnderline().run()}
-          isActive={editor.isActive('underline')}
-          title="Underline"
-        >
-          <UnderlineIcon className="h-4 w-4" />
-        </ToolbarButton>
+        {/* Text Formatting Group */}
+        <div className="flex gap-1">
+          <ToolbarButton
+            onClick={() => editor.chain().focus().toggleBold().run()}
+            isActive={editor.isActive('bold')}
+            title="Bold (Ctrl+B)"
+          >
+            <Bold className="h-4 w-4" />
+          </ToolbarButton>
+          
+          <ToolbarButton
+            onClick={() => editor.chain().focus().toggleItalic().run()}
+            isActive={editor.isActive('italic')}
+            title="Italic (Ctrl+I)"
+          >
+            <Italic className="h-4 w-4" />
+          </ToolbarButton>
+          
+          <ToolbarButton
+            onClick={() => editor.chain().focus().toggleStrike().run()}
+            isActive={editor.isActive('strike')}
+            title="Strikethrough"
+          >
+            <Strikethrough className="h-4 w-4" />
+          </ToolbarButton>
+          
+          <ToolbarButton
+            onClick={() => editor.chain().focus().toggleCode().run()}
+            isActive={editor.isActive('code')}
+            title="Code"
+          >
+            <Code className="h-4 w-4" />
+          </ToolbarButton>
+          
+          <ToolbarButton
+            onClick={() => editor.chain().focus().toggleUnderline().run()}
+            isActive={editor.isActive('underline')}
+            title="Underline (Ctrl+U)"
+          >
+            <UnderlineIcon className="h-4 w-4" />
+          </ToolbarButton>
+
+          <FormatPainter editor={editor} />
+        </div>
 
         <Separator orientation="vertical" className="h-8" />
 
-        {/* Headings */}
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-          isActive={editor.isActive('heading', { level: 1 })}
-          title="Heading 1"
-        >
-          <Heading1 className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-          isActive={editor.isActive('heading', { level: 2 })}
-          title="Heading 2"
-        >
-          <Heading2 className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
-          isActive={editor.isActive('heading', { level: 3 })}
-          title="Heading 3"
-        >
-          <Heading3 className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleHeading({ level: 4 }).run()}
-          isActive={editor.isActive('heading', { level: 4 })}
-          title="Heading 4"
-        >
-          <Heading4 className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleHeading({ level: 5 }).run()}
-          isActive={editor.isActive('heading', { level: 5 })}
-          title="Heading 5"
-        >
-          <Heading5 className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleHeading({ level: 6 }).run()}
-          isActive={editor.isActive('heading', { level: 6 })}
-          title="Heading 6"
-        >
-          <Heading6 className="h-4 w-4" />
-        </ToolbarButton>
+        {/* Headings Dropdown */}
+        <ToolbarDropdown
+          icon={<Heading className="h-4 w-4" />}
+          label="Headings"
+          activeLabel={getActiveHeading() || undefined}
+          items={[
+            {
+              icon: <Heading1 className="h-4 w-4" />,
+              label: 'Heading 1',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 1 }).run(),
+              isActive: editor.isActive('heading', { level: 1 }),
+              shortcut: 'Ctrl+Alt+1',
+            },
+            {
+              icon: <Heading2 className="h-4 w-4" />,
+              label: 'Heading 2',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
+              isActive: editor.isActive('heading', { level: 2 }),
+              shortcut: 'Ctrl+Alt+2',
+            },
+            {
+              icon: <Heading3 className="h-4 w-4" />,
+              label: 'Heading 3',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 3 }).run(),
+              isActive: editor.isActive('heading', { level: 3 }),
+              shortcut: 'Ctrl+Alt+3',
+            },
+            {
+              icon: <Heading4 className="h-4 w-4" />,
+              label: 'Heading 4',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 4 }).run(),
+              isActive: editor.isActive('heading', { level: 4 }),
+              shortcut: 'Ctrl+Alt+4',
+            },
+            {
+              icon: <Heading5 className="h-4 w-4" />,
+              label: 'Heading 5',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 5 }).run(),
+              isActive: editor.isActive('heading', { level: 5 }),
+              shortcut: 'Ctrl+Alt+5',
+            },
+            {
+              icon: <Heading6 className="h-4 w-4" />,
+              label: 'Heading 6',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 6 }).run(),
+              isActive: editor.isActive('heading', { level: 6 }),
+              shortcut: 'Ctrl+Alt+6',
+            },
+            {
+              label: 'Paragraph',
+              onClick: () => editor.chain().focus().setParagraph().run(),
+              isActive: editor.isActive('paragraph'),
+              shortcut: 'Ctrl+Alt+0',
+            },
+          ]}
+        />
 
         <Separator orientation="vertical" className="h-8" />
 
@@ -398,104 +435,71 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
 
         <Separator orientation="vertical" className="h-8" />
 
-        {/* Font Size Controls */}
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setCustomFontSize('small').run()}
-          title="Small Font"
-        >
-          <Type className="h-3 w-3" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setCustomFontSize('normal').run()}
-          title="Normal Font"
-        >
-          <Type className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setCustomFontSize('large').run()}
-          title="Large Font"
-        >
-          <Type className="h-5 w-5" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setCustomFontSize('xlarge').run()}
-          title="Extra Large Font"
-        >
-          <Type className="h-6 w-6" />
-        </ToolbarButton>
+        {/* Font Size Dropdown */}
+        <ToolbarDropdown
+          icon={<Type className="h-4 w-4" />}
+          label="Font Size"
+          activeLabel={getActiveFontSize()}
+          items={[
+            {
+              icon: <Type className="h-3 w-3" />,
+              label: 'Small',
+              onClick: () => editor.chain().focus().setCustomFontSize('small').run(),
+            },
+            {
+              icon: <Type className="h-4 w-4" />,
+              label: 'Normal',
+              onClick: () => editor.chain().focus().setCustomFontSize('normal').run(),
+            },
+            {
+              icon: <Type className="h-5 w-5" />,
+              label: 'Large',
+              onClick: () => editor.chain().focus().setCustomFontSize('large').run(),
+            },
+            {
+              icon: <Type className="h-6 w-6" />,
+              label: 'Extra Large',
+              onClick: () => editor.chain().focus().setCustomFontSize('xlarge').run(),
+            },
+          ]}
+        />
 
-        <Separator orientation="vertical" className="h-8" />
+        {/* Line Height Dropdown */}
+        <ToolbarDropdown
+          icon={<span className="text-xs font-semibold">LH</span>}
+          label="Line Height"
+          activeLabel={getActiveLineHeight()}
+          items={[
+            {
+              label: 'Single (1.0)',
+              onClick: () => editor.chain().focus().setLineHeight('1').run(),
+              isActive: editor.getAttributes('paragraph').lineHeight === '1',
+            },
+            {
+              label: 'Tight (1.15)',
+              onClick: () => editor.chain().focus().setLineHeight('1.15').run(),
+              isActive: editor.getAttributes('paragraph').lineHeight === '1.15',
+            },
+            {
+              label: 'Normal (1.5)',
+              onClick: () => editor.chain().focus().setLineHeight('1.5').run(),
+              isActive: editor.getAttributes('paragraph').lineHeight === '1.5',
+            },
+            {
+              label: 'Relaxed (1.75)',
+              onClick: () => editor.chain().focus().setLineHeight('1.75').run(),
+              isActive: editor.getAttributes('paragraph').lineHeight === '1.75',
+            },
+            {
+              label: 'Double (2.0)',
+              onClick: () => editor.chain().focus().setLineHeight('2').run(),
+              isActive: editor.getAttributes('paragraph').lineHeight === '2',
+            },
+          ]}
+        />
 
-        {/* Line Height Controls */}
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setLineHeight('1').run()}
-          isActive={editor.getAttributes('paragraph').lineHeight === '1'}
-          title="Single Line Height (1.0)"
-        >
-          <span className="text-xs font-semibold">1.0</span>
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setLineHeight('1.15').run()}
-          isActive={editor.getAttributes('paragraph').lineHeight === '1.15'}
-          title="Line Height 1.15"
-        >
-          <span className="text-xs font-semibold">1.15</span>
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setLineHeight('1.5').run()}
-          isActive={editor.getAttributes('paragraph').lineHeight === '1.5'}
-          title="1.5 Line Height"
-        >
-          <span className="text-xs font-semibold">1.5</span>
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setLineHeight('2').run()}
-          isActive={editor.getAttributes('paragraph').lineHeight === '2'}
-          title="Double Line Height (2.0)"
-        >
-          <span className="text-xs font-semibold">2.0</span>
-        </ToolbarButton>
-
-        <Separator orientation="vertical" className="h-8" />
-
-        {/* Spacing Controls */}
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setSpacing('none').run()}
-          isActive={editor.getAttributes('paragraph').spacing === 'none'}
-          title="No Spacing"
-        >
-          <Space className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setSpacing('small').run()}
-          isActive={editor.getAttributes('paragraph').spacing === 'small'}
-          title="Small Spacing"
-        >
-          <span className="text-xs font-semibold">S</span>
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setSpacing('medium').run()}
-          isActive={editor.getAttributes('paragraph').spacing === 'medium'}
-          title="Medium Spacing"
-        >
-          <span className="text-xs font-semibold">M</span>
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().setSpacing('large').run()}
-          isActive={editor.getAttributes('paragraph').spacing === 'large'}
-          title="Large Spacing"
-        >
-          <span className="text-xs font-semibold">L</span>
-        </ToolbarButton>
+        {/* Spacing Panel */}
+        <SpacingPanel editor={editor} />
 
         <Separator orientation="vertical" className="h-8" />
 
