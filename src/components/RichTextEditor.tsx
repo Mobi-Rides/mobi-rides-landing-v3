@@ -63,6 +63,8 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
   onChange,
   placeholder = 'Start writing your blog post...',
 }) => {
+  const isInternalUpdate = React.useRef(false);
+  
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
@@ -161,6 +163,8 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
       // Export HTML with preserved formatting
       const html = editor.getHTML();
       const exportedHtml = exportBlogHtml(html);
+      // Mark this as an internal update to prevent cursor jumping
+      isInternalUpdate.current = true;
       onChange(exportedHtml);
     },
     editorProps: {
@@ -170,8 +174,14 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
     },
   });
 
-  // Update editor content when prop changes
+  // Update editor content when prop changes (only for external changes)
   React.useEffect(() => {
+    if (isInternalUpdate.current) {
+      // Reset flag after internal update
+      isInternalUpdate.current = false;
+      return;
+    }
+    
     if (editor && content !== editor.getHTML()) {
       editor.commands.setContent(content);
     }
