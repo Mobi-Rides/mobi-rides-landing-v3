@@ -16,6 +16,7 @@ import TableHeader from '@tiptap/extension-table-header';
 import { LineHeight } from '@/lib/tiptap/LineHeight';
 import { Spacing } from '@/lib/tiptap/Spacing';
 import { FontSize } from '@/lib/tiptap/FontSize';
+import { exportBlogHtml } from '@/lib/htmlSanitizer';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import {
@@ -154,7 +155,10 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
     ],
     content,
     onUpdate: ({ editor }) => {
-      onChange(editor.getHTML());
+      // Export HTML with preserved formatting
+      const html = editor.getHTML();
+      const exportedHtml = exportBlogHtml(html);
+      onChange(exportedHtml);
     },
     editorProps: {
       attributes: {

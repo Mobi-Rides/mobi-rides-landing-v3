@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/lib/supabase";
+import { BlogContentRenderer } from "@/components/BlogContentRenderer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar, Clock, User, Eye } from "lucide-react";
@@ -206,10 +207,7 @@ const BlogPostPage = () => {
 
               {/* Content */}
               {post.content?.includes('<') ? (
-                <div 
-                  className="blog-content"
-                  dangerouslySetInnerHTML={{ __html: post.content }}
-                />
+                <BlogContentRenderer content={post.content} />
               ) : (
                 <div className="blog-content">
                   {post.content?.split('\n').map((paragraph, idx) => (
