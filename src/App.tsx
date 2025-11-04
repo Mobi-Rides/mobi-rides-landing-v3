@@ -38,6 +38,7 @@ import AdminBlogPage from "./pages/AdminBlogPage";
 import AdminBlogEditPage from "./pages/AdminBlogEditPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import AdminBlogPreviewPage from "./pages/AdminBlogPreviewPage";
+import Sitemap from "./pages/Sitemap";
 
 const queryClient = new QueryClient();
 
@@ -105,6 +106,9 @@ const App = () => (
                 <AdminBlogPreviewPage />
               </ProtectedRoute>
             } />
+            
+            {/* Sitemap */}
+            <Route path="/sitemap.xml" element={<Sitemap />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

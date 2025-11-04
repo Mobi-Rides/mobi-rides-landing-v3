@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/lib/supabase";
+import { BlogContentRenderer } from "@/components/BlogContentRenderer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar, Clock, User, Eye } from "lucide-react";
@@ -150,10 +151,7 @@ const AdminBlogPreviewPage: React.FC = () => {
               </div>
 
               {/* Content */}
-              <div 
-                className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900"
-                dangerouslySetInnerHTML={{ __html: post.content }}
-              />
+              <BlogContentRenderer content={post.content} />
 
               {/* Tags */}
               {post.tags && post.tags.length > 0 && (

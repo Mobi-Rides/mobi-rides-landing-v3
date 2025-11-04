@@ -7,8 +7,21 @@ import TextAlign from '@tiptap/extension-text-align';
 import { TextStyle } from '@tiptap/extension-text-style';
 import { Color } from '@tiptap/extension-color';
 import Highlight from '@tiptap/extension-highlight';
+import Underline from '@tiptap/extension-underline';
+import HorizontalRule from '@tiptap/extension-horizontal-rule';
+import { Table } from '@tiptap/extension-table';
+import TableRow from '@tiptap/extension-table-row';
+import TableCell from '@tiptap/extension-table-cell';
+import TableHeader from '@tiptap/extension-table-header';
+import { LineHeight } from '@/lib/tiptap/LineHeight';
+import { Spacing } from '@/lib/tiptap/Spacing';
+import { FontSize } from '@/lib/tiptap/FontSize';
+import { exportBlogHtml } from '@/lib/htmlSanitizer';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
+import { ToolbarDropdown } from './ToolbarDropdown';
+import { FormatPainter } from './FormatPainter';
+import { SpacingPanel } from './SpacingPanel';
 import {
   Bold,
   Italic,
@@ -17,6 +30,9 @@ import {
   Heading1,
   Heading2,
   Heading3,
+  Heading4,
+  Heading5,
+  Heading6,
   List,
   ListOrdered,
   Quote,
@@ -27,8 +43,13 @@ import {
   AlignRight,
   Link as LinkIcon,
   Image as ImageIcon,
-  Palette,
-  Highlighter,
+  Minus,
+  Table as TableIcon,
+  Indent,
+  Outdent,
+  Underline as UnderlineIcon,
+  Type,
+  Heading,
 } from 'lucide-react';
 
 interface RichTextEditorProps {
@@ -42,73 +63,125 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
   onChange,
   placeholder = 'Start writing your blog post...',
 }) => {
+  const isInternalUpdate = React.useRef(false);
+  
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
         paragraph: {
           HTMLAttributes: {
-            class: 'my-4',
+            class: 'my-6 leading-relaxed',
           },
         },
         hardBreak: {
           HTMLAttributes: {
-            class: 'block',
+            class: 'block my-2',
           },
         },
         bulletList: {
           HTMLAttributes: {
-            class: 'list-disc list-outside ml-6 my-4',
+            class: 'list-disc list-outside ml-6',
           },
         },
         orderedList: {
           HTMLAttributes: {
-            class: 'list-decimal list-outside ml-6 my-4',
+            class: 'list-decimal list-outside ml-6',
           },
         },
         listItem: {
           HTMLAttributes: {
-            class: 'mb-2',
+            class: 'leading-relaxed',
           },
         },
         blockquote: {
           HTMLAttributes: {
-            class: 'border-l-4 border-gray-300 pl-4 italic my-4',
+            class: 'border-l-4 border-muted pl-4 italic my-6 text-muted-foreground',
           },
         },
+        horizontalRule: false, // We'll use the dedicated extension
       }),
       Image.configure({
         HTMLAttributes: {
-          class: 'max-w-full h-auto rounded-lg',
+          class: 'max-w-full h-auto rounded-lg shadow-sm',
         },
       }),
       Link.configure({
         openOnClick: false,
         HTMLAttributes: {
-          class: 'text-blue-600 hover:text-blue-800 underline',
+          class: 'text-primary hover:underline',
         },
       }),
       TextAlign.configure({
         types: ['heading', 'paragraph'],
+      }),
+      LineHeight.configure({
+        types: ['paragraph', 'heading'],
+        heights: ['1', '1.15', '1.5', '1.75', '2'],
+        defaultHeight: '1.5',
+      }),
+      Spacing.configure({
+        types: ['paragraph', 'heading'],
+      }),
+      FontSize.configure({
+        types: ['textStyle'],
       }),
       TextStyle,
       Color,
       Highlight.configure({
         multicolor: true,
       }),
+      Underline,
+      HorizontalRule.configure({
+        HTMLAttributes: {
+          class: 'my-8 border-border',
+        },
+      }),
+      Table.configure({
+        resizable: true,
+        HTMLAttributes: {
+          class: 'border-collapse table-auto w-full my-6',
+        },
+      }),
+      TableRow.configure({
+        HTMLAttributes: {
+          class: 'border-b border-border',
+        },
+      }),
+      TableHeader.configure({
+        HTMLAttributes: {
+          class: 'font-bold text-left p-2 bg-muted',
+        },
+      }),
+      TableCell.configure({
+        HTMLAttributes: {
+          class: 'border border-border p-2',
+        },
+      }),
     ],
     content,
     onUpdate: ({ editor }) => {
-      onChange(editor.getHTML());
+      // Export HTML with preserved formatting
+      const html = editor.getHTML();
+      const exportedHtml = exportBlogHtml(html);
+      // Mark this as an internal update to prevent cursor jumping
+      isInternalUpdate.current = true;
+      onChange(exportedHtml);
     },
     editorProps: {
       attributes: {
-        class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none min-h-[400px] p-4 [&_ul]:list-disc [&_ol]:list-decimal [&_li]:ml-4 [&_p]:my-4 [&_br]:block',
+        class: 'blog-content focus:outline-none min-h-[400px] p-4',
       },
     },
   });
 
-  // Update editor content when prop changes
+  // Update editor content when prop changes (only for external changes)
   React.useEffect(() => {
+    if (isInternalUpdate.current) {
+      // Reset flag after internal update
+      isInternalUpdate.current = false;
+      return;
+    }
+    
     if (editor && content !== editor.getHTML()) {
       editor.commands.setContent(content);
     }
@@ -132,6 +205,10 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
     }
   };
 
+  const addTable = () => {
+    editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run();
+  };
+
   const ToolbarButton: React.FC<{
     onClick: () => void;
     isActive?: boolean;
@@ -150,69 +227,135 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
     </Button>
   );
 
+  const getActiveHeading = () => {
+    for (let level = 1; level <= 6; level++) {
+      if (editor.isActive('heading', { level })) {
+        return `H${level}`;
+      }
+    }
+    return null;
+  };
+
+  const getActiveFontSize = () => {
+    const attrs = editor.getAttributes('textStyle');
+    if (attrs.fontSize === '0.875rem') return 'S';
+    if (attrs.fontSize === '1.25rem') return 'L';
+    if (attrs.fontSize === '1.5rem') return 'XL';
+    return 'M';
+  };
+
+  const getActiveLineHeight = () => {
+    const attrs = editor.getAttributes('paragraph');
+    return attrs.lineHeight || '1.5';
+  };
+
   return (
     <div className="border border-gray-200 rounded-lg overflow-hidden">
       {/* Toolbar */}
       <div className="bg-gray-50 border-b border-gray-200 p-2 flex flex-wrap gap-1">
-        {/* Text Formatting */}
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleBold().run()}
-          isActive={editor.isActive('bold')}
-          title="Bold"
-        >
-          <Bold className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleItalic().run()}
-          isActive={editor.isActive('italic')}
-          title="Italic"
-        >
-          <Italic className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleStrike().run()}
-          isActive={editor.isActive('strike')}
-          title="Strikethrough"
-        >
-          <Strikethrough className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleCode().run()}
-          isActive={editor.isActive('code')}
-          title="Code"
-        >
-          <Code className="h-4 w-4" />
-        </ToolbarButton>
+        {/* Text Formatting Group */}
+        <div className="flex gap-1">
+          <ToolbarButton
+            onClick={() => editor.chain().focus().toggleBold().run()}
+            isActive={editor.isActive('bold')}
+            title="Bold (Ctrl+B)"
+          >
+            <Bold className="h-4 w-4" />
+          </ToolbarButton>
+          
+          <ToolbarButton
+            onClick={() => editor.chain().focus().toggleItalic().run()}
+            isActive={editor.isActive('italic')}
+            title="Italic (Ctrl+I)"
+          >
+            <Italic className="h-4 w-4" />
+          </ToolbarButton>
+          
+          <ToolbarButton
+            onClick={() => editor.chain().focus().toggleStrike().run()}
+            isActive={editor.isActive('strike')}
+            title="Strikethrough"
+          >
+            <Strikethrough className="h-4 w-4" />
+          </ToolbarButton>
+          
+          <ToolbarButton
+            onClick={() => editor.chain().focus().toggleCode().run()}
+            isActive={editor.isActive('code')}
+            title="Code"
+          >
+            <Code className="h-4 w-4" />
+          </ToolbarButton>
+          
+          <ToolbarButton
+            onClick={() => editor.chain().focus().toggleUnderline().run()}
+            isActive={editor.isActive('underline')}
+            title="Underline (Ctrl+U)"
+          >
+            <UnderlineIcon className="h-4 w-4" />
+          </ToolbarButton>
+
+          <FormatPainter editor={editor} />
+        </div>
 
         <Separator orientation="vertical" className="h-8" />
 
-        {/* Headings */}
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-          isActive={editor.isActive('heading', { level: 1 })}
-          title="Heading 1"
-        >
-          <Heading1 className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-          isActive={editor.isActive('heading', { level: 2 })}
-          title="Heading 2"
-        >
-          <Heading2 className="h-4 w-4" />
-        </ToolbarButton>
-        
-        <ToolbarButton
-          onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
-          isActive={editor.isActive('heading', { level: 3 })}
-          title="Heading 3"
-        >
-          <Heading3 className="h-4 w-4" />
-        </ToolbarButton>
+        {/* Headings Dropdown */}
+        <ToolbarDropdown
+          icon={<Heading className="h-4 w-4" />}
+          label="Headings"
+          activeLabel={getActiveHeading() || undefined}
+          items={[
+            {
+              icon: <Heading1 className="h-4 w-4" />,
+              label: 'Heading 1',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 1 }).run(),
+              isActive: editor.isActive('heading', { level: 1 }),
+              shortcut: 'Ctrl+Alt+1',
+            },
+            {
+              icon: <Heading2 className="h-4 w-4" />,
+              label: 'Heading 2',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
+              isActive: editor.isActive('heading', { level: 2 }),
+              shortcut: 'Ctrl+Alt+2',
+            },
+            {
+              icon: <Heading3 className="h-4 w-4" />,
+              label: 'Heading 3',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 3 }).run(),
+              isActive: editor.isActive('heading', { level: 3 }),
+              shortcut: 'Ctrl+Alt+3',
+            },
+            {
+              icon: <Heading4 className="h-4 w-4" />,
+              label: 'Heading 4',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 4 }).run(),
+              isActive: editor.isActive('heading', { level: 4 }),
+              shortcut: 'Ctrl+Alt+4',
+            },
+            {
+              icon: <Heading5 className="h-4 w-4" />,
+              label: 'Heading 5',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 5 }).run(),
+              isActive: editor.isActive('heading', { level: 5 }),
+              shortcut: 'Ctrl+Alt+5',
+            },
+            {
+              icon: <Heading6 className="h-4 w-4" />,
+              label: 'Heading 6',
+              onClick: () => editor.chain().focus().toggleHeading({ level: 6 }).run(),
+              isActive: editor.isActive('heading', { level: 6 }),
+              shortcut: 'Ctrl+Alt+6',
+            },
+            {
+              label: 'Paragraph',
+              onClick: () => editor.chain().focus().setParagraph().run(),
+              isActive: editor.isActive('paragraph'),
+              shortcut: 'Ctrl+Alt+0',
+            },
+          ]}
+        />
 
         <Separator orientation="vertical" className="h-8" />
 
@@ -284,6 +427,107 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
           title="Add Image"
         >
           <ImageIcon className="h-4 w-4" />
+        </ToolbarButton>
+        
+        <ToolbarButton
+          onClick={() => editor.chain().focus().setHorizontalRule().run()}
+          title="Horizontal Rule"
+        >
+          <Minus className="h-4 w-4" />
+        </ToolbarButton>
+        
+        <ToolbarButton
+          onClick={addTable}
+          title="Insert Table"
+        >
+          <TableIcon className="h-4 w-4" />
+        </ToolbarButton>
+
+        <Separator orientation="vertical" className="h-8" />
+
+        {/* Font Size Dropdown */}
+        <ToolbarDropdown
+          icon={<Type className="h-4 w-4" />}
+          label="Font Size"
+          activeLabel={getActiveFontSize()}
+          items={[
+            {
+              icon: <Type className="h-3 w-3" />,
+              label: 'Small',
+              onClick: () => editor.chain().focus().setCustomFontSize('small').run(),
+            },
+            {
+              icon: <Type className="h-4 w-4" />,
+              label: 'Normal',
+              onClick: () => editor.chain().focus().setCustomFontSize('normal').run(),
+            },
+            {
+              icon: <Type className="h-5 w-5" />,
+              label: 'Large',
+              onClick: () => editor.chain().focus().setCustomFontSize('large').run(),
+            },
+            {
+              icon: <Type className="h-6 w-6" />,
+              label: 'Extra Large',
+              onClick: () => editor.chain().focus().setCustomFontSize('xlarge').run(),
+            },
+          ]}
+        />
+
+        {/* Line Height Dropdown */}
+        <ToolbarDropdown
+          icon={<span className="text-xs font-semibold">LH</span>}
+          label="Line Height"
+          activeLabel={getActiveLineHeight()}
+          items={[
+            {
+              label: 'Single (1.0)',
+              onClick: () => editor.chain().focus().setLineHeight('1').run(),
+              isActive: editor.getAttributes('paragraph').lineHeight === '1',
+            },
+            {
+              label: 'Tight (1.15)',
+              onClick: () => editor.chain().focus().setLineHeight('1.15').run(),
+              isActive: editor.getAttributes('paragraph').lineHeight === '1.15',
+            },
+            {
+              label: 'Normal (1.5)',
+              onClick: () => editor.chain().focus().setLineHeight('1.5').run(),
+              isActive: editor.getAttributes('paragraph').lineHeight === '1.5',
+            },
+            {
+              label: 'Relaxed (1.75)',
+              onClick: () => editor.chain().focus().setLineHeight('1.75').run(),
+              isActive: editor.getAttributes('paragraph').lineHeight === '1.75',
+            },
+            {
+              label: 'Double (2.0)',
+              onClick: () => editor.chain().focus().setLineHeight('2').run(),
+              isActive: editor.getAttributes('paragraph').lineHeight === '2',
+            },
+          ]}
+        />
+
+        {/* Spacing Panel */}
+        <SpacingPanel editor={editor} />
+
+        <Separator orientation="vertical" className="h-8" />
+
+        {/* Indentation Controls */}
+        <ToolbarButton
+          onClick={() => editor.chain().focus().sinkListItem('listItem').run()}
+          title="Indent"
+          isActive={false}
+        >
+          <Indent className="h-4 w-4" />
+        </ToolbarButton>
+        
+        <ToolbarButton
+          onClick={() => editor.chain().focus().liftListItem('listItem').run()}
+          title="Outdent"
+          isActive={false}
+        >
+          <Outdent className="h-4 w-4" />
         </ToolbarButton>
 
         <Separator orientation="vertical" className="h-8" />
