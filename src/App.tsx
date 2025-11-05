@@ -107,9 +107,6 @@ const App = () => (
               </ProtectedRoute>
             } />
             
-            {/* Sitemap - Redirects to Edge Function */}
-            <Route path="/sitemap.xml" element={<Navigate to="https://putjowciegpzdheideaf.supabase.co/functions/v1/sitemap" replace />} />
-            
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
