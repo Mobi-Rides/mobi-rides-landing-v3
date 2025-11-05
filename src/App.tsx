@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
@@ -38,7 +38,7 @@ import AdminBlogPage from "./pages/AdminBlogPage";
 import AdminBlogEditPage from "./pages/AdminBlogEditPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import AdminBlogPreviewPage from "./pages/AdminBlogPreviewPage";
-import Sitemap from "./pages/Sitemap";
+
 
 const queryClient = new QueryClient();
 
@@ -107,8 +107,8 @@ const App = () => (
               </ProtectedRoute>
             } />
             
-            {/* Sitemap */}
-            <Route path="/sitemap.xml" element={<Sitemap />} />
+            {/* Sitemap - Redirects to Edge Function */}
+            <Route path="/sitemap.xml" element={<Navigate to="https://putjowciegpzdheideaf.supabase.co/functions/v1/sitemap" replace />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
