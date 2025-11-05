@@ -10,7 +10,7 @@ export const siteConfig = {
   
   // Company Information
   name: 'MobiRides',
-  tagline: 'Botswana\'s Premier Car Sharing Platform',
+  tagline: 'Botswana\'s Largest Car Sharing Marketplace - Rentals for You by You',
   description: 'Book trusted vehicles from verified hosts across Botswana. Safe, convenient, and affordable car rentals for every journey.',
   
   // Contact Information
@@ -58,16 +58,16 @@ export const siteConfig = {
   // Mailing Address
   mailing: {
     name: 'MobiRides Botswana',
-    poBox: 'P.O. Box 12345',
+    poBox: 'P.O. Box 3895',
     city: 'Gaborone',
     country: 'Botswana',
   },
   
   // Business Hours
   businessHours: {
-    weekdays: '08:00 - 17:00',
-    saturday: '09:00 - 13:00',
-    sunday: 'Closed',
+    weekdays: '06:00 - 23:59',
+    saturday: '07:00 - 21:00',
+    sunday: '07:00 - 21:00',
   },
   
   // SEO Defaults
