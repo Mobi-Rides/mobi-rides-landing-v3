@@ -22,9 +22,8 @@ Deno.serve(async (req) => {
     const supabaseKey = Deno.env.get('SUPABASE_ANON_KEY')!;
     const supabase = createClient(supabaseUrl, supabaseKey);
 
-    // Get the base URL from the request
-    const url = new URL(req.url);
-    const baseUrl = `${url.protocol}//${url.host}`;
+    // Use the production domain
+    const baseUrl = 'https://www.mobirides.com';
     const today = new Date().toISOString().split('T')[0];
 
     // Static pages with their priorities and change frequencies
