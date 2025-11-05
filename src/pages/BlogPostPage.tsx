@@ -139,18 +139,18 @@ const BlogPostPage = () => {
       "name": "MobiRides",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.mobirides.co.bw/mobirides-logo.jpg"
+        "url": "https://www.mobirides.com/mobirides-logo.jpg"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://www.mobirides.co.bw/blog/${post.slug}`
+      "@id": `https://www.mobirides.com/blog/${post.slug}`
     },
     ...(post.category && { "articleSection": post.category }),
     ...(post.tags && post.tags.length > 0 && { "keywords": post.tags.join(", ") })
   };
 
-  const canonicalUrl = `https://www.mobirides.co.bw/blog/${post.slug}`;
+  const canonicalUrl = `https://www.mobirides.com/blog/${post.slug}`;
 
   return (
     <>
