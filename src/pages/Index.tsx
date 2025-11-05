@@ -1,4 +1,6 @@
 import { useEffect, Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import Header from '@/components/Header';
 import HeroSection from '@/components/sections/HeroSection';
 import { LazySection } from '@/components/LazySection';
@@ -33,7 +35,7 @@ const Index = () => {
       canonicalLink.setAttribute('rel', 'canonical');
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.setAttribute('href', 'https://www.mobirides.com');
+    canonicalLink.setAttribute('href', buildCanonicalUrl());
     
     // Add structured data for local business
     const structuredData = {
@@ -41,7 +43,7 @@ const Index = () => {
       "@type": "LocalBusiness",
       "name": "MobiRides",
       "description": "Premium car sharing platform for Botswana's professionals",
-      "url": "https://www.mobirides.com",
+      "url": "${siteConfig.url}",
       "telephone": "+267 74300747",
       "address": {
         "@type": "PostalAddress",

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Scale, FileText, Users, Shield, AlertTriangle, Clock, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import { PageLayout } from '../components/layouts';
+import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import legalContent from '../data/legal-content.json';
 
 interface TermsSection {
@@ -102,7 +103,7 @@ const TermsPage: React.FC = () => {
     <PageLayout
       title="Terms of Service - MobiRides | User Agreement & Legal Terms"
       description="Read MobiRides Terms of Service and user agreements. Understand your rights and responsibilities when using our ride-sharing platform."
-      canonical="https://www.mobirides.com/terms"
+      canonical={buildCanonicalUrl('/terms')}
       jsonLd={jsonLd}
     >
 

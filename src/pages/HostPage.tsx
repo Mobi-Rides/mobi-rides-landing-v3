@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { PageLayout, PageHero, CTASection, SectionWrapper } from '../components/layouts';
+import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Input } from '../components/ui/input';
@@ -159,7 +160,7 @@ const HostPage: React.FC = () => {
     <PageLayout
       title="Become a Host - Earn with Your Vehicle | Mobirides"
       description="Turn your vehicle into a source of income. Join Mobirides as a host and earn up to P15,000 per month sharing your car with verified renters in Botswana."
-      canonical="https://www.mobirides.com/host"
+      canonical={buildCanonicalUrl('/host')}
     >
       <Helmet>
         <script type="application/ld+json">

@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { PageLayout } from '../components/layouts';
+import { buildCanonicalUrl } from '@/config/site';
 import { Search, ChevronDown, ChevronUp, HelpCircle, Car, CreditCard, Shield, Users, Smartphone, Mail, Phone, Clock } from 'lucide-react';
 import faqData from '../data/faq.json';
 
@@ -109,7 +110,7 @@ const FAQPage: React.FC = () => {
       title="Frequently Asked Questions - MobiRides"
       description="Find answers to common questions about MobiRides ride-sharing service in Botswana. Get help with booking, payments, safety, and more."
       keywords="MobiRides FAQ, help, support, questions, ride sharing, Botswana, booking, payment, safety"
-      canonical="https://www.mobirides.com/faq"
+      canonical={buildCanonicalUrl('/faq')}
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">

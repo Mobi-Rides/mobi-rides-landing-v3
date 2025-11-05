@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PageLayout } from '../components/layouts';
+import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import { Shield, CheckCircle, AlertTriangle, Phone, FileText, MapPin, Car, CreditCard, Camera, Lock } from 'lucide-react';
 
 interface ProtectionFeature {
@@ -153,7 +154,7 @@ const HostProtectionPage: React.FC = () => {
       type: 'owner-support',
       title: 'Owner Support & Disputes',
       description: 'Help with renter disputes, payments, and technical support',
-      contact: 'hello@mobirides.com or +267 74300747',
+      contact: `${siteConfig.contact.email} or ${siteConfig.contact.phone}`,
       availability: 'Mon-Fri 8AM-6PM',
       icon: <FileText className="w-5 h-5" />
     }
@@ -227,7 +228,7 @@ const HostProtectionPage: React.FC = () => {
         title="Host Protection - Vehicle Insurance & Safety | MobiRides"
         description="Comprehensive protection for car owners: P1M insurance coverage, verified renters, 24/7 support, and theft protection. Rent your vehicle with confidence."
         keywords="car rental protection, vehicle insurance, host protection, peer-to-peer car sharing, rental damage coverage, Botswana car rental"
-        canonical="https://www.mobirides.com/host/protection"
+        canonical={buildCanonicalUrl('/host/protection')}
       >
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">

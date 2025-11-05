@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PageLayout } from '../components/layouts';
-import { 
+import { buildCanonicalUrl } from '@/config/site';
+import {
   Phone, MessageCircle, Mail, Smartphone, AlertTriangle, Upload, CreditCard,
   Settings, Play, DollarSign, Shield, Car, User, Users, Calendar, BookOpen,
   Award, Heart, Wrench, Zap, Star, TrendingUp, Map, Clock, CheckCircle,
@@ -134,7 +135,7 @@ const HostSupportPage: React.FC = () => {
       title="Host Support Center - MobiRides | 24/7 Driver Support Botswana"
       description="Get comprehensive support as a MobiRides host in Botswana. 24/7 emergency assistance, training resources, community support, and help center."
       keywords="MobiRides support, driver help Botswana, rideshare support, host assistance, emergency support, driver training"
-      canonical="https://www.mobirides.com/host/support"
+      canonical={buildCanonicalUrl('/host/support')}
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">

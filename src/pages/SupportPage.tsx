@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { PageLayout, PageHero } from '../components/layouts';
-import { 
+import { buildCanonicalUrl, buildMailto, siteConfig } from '@/config/site';
+import {
   Search, 
   ChevronRight, 
   ChevronDown, 
@@ -125,7 +126,7 @@ const SupportPage: React.FC = () => {
     <PageLayout 
       title="Support Center - MobiRides | Help & FAQs"
       description="Get help with MobiRides. Find answers to frequently asked questions, troubleshooting guides, and comprehensive support documentation for riders and drivers."
-      canonical="https://www.mobirides.com/support"
+      canonical={buildCanonicalUrl('/support')}
     >
       <Helmet>
         <title>Support Center - MobiRides | Help &amp; FAQs</title>
@@ -404,7 +405,7 @@ const SupportPage: React.FC = () => {
             </a>
             
             <a
-              href="mailto:hello@mobirides.com"
+              href={buildMailto('support')}
               className="bg-purple-600 text-white p-6 rounded-xl hover:bg-purple-700 transition-colors"
             >
               <Mail className="h-8 w-8 mx-auto mb-3" />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PageLayout } from '../components/layouts';
+import { buildCanonicalUrl } from '@/config/site';
 import { Building2, Users, BarChart3, Shield, Clock, Zap, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';
 
 interface BusinessFeature {
@@ -207,7 +208,7 @@ const BusinessSolutionsPage: React.FC = () => {
         title="Business Solutions | MobiRides"
         description="Enterprise transportation solutions for businesses. Fleet management, employee transportation, and business analytics."
         keywords="business transportation, fleet management, employee rides, corporate solutions, enterprise mobility"
-        canonical="https://www.mobirides.com/business"
+        canonical={buildCanonicalUrl('/business')}
       >
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">

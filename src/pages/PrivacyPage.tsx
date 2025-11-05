@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Eye, Lock, Users, FileText, Clock, ChevronDown, ChevronUp } from 'lucide-react';
 import { PageLayout } from '../components/layouts';
+import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import legalContent from '../data/legal-content.json';
 
 interface PrivacySection {
@@ -101,7 +102,7 @@ const PrivacyPage: React.FC = () => {
     <PageLayout
       title="Privacy Policy - MobiRides | Data Protection & User Privacy"
       description="Learn how MobiRides protects your privacy and handles your personal data. Our comprehensive privacy policy explains data collection, usage, and your rights."
-      canonical="https://www.mobirides.com/privacy"
+      canonical={buildCanonicalUrl('/privacy')}
       jsonLd={jsonLd}
     >
 

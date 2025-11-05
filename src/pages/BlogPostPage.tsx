@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/lib/supabase";
+import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import { BlogContentRenderer } from "@/components/BlogContentRenderer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -139,18 +140,18 @@ const BlogPostPage = () => {
       "name": "MobiRides",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.mobirides.com/mobirides-logo.jpg"
-      }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://www.mobirides.com/blog/${post.slug}`
+        "url": `${siteConfig.url}/mobirides-logo.jpg`
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+      "@id": `${siteConfig.url}/blog/${post.slug}`
     },
     ...(post.category && { "articleSection": post.category }),
     ...(post.tags && post.tags.length > 0 && { "keywords": post.tags.join(", ") })
   };
 
-  const canonicalUrl = `https://www.mobirides.com/blog/${post.slug}`;
+  const canonicalUrl = buildCanonicalUrl(`/blog/${post.slug}`);
 
   return (
     <>

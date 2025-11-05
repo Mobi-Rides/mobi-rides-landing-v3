@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { PageLayout, PageHero } from '../components/layouts';
+import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import { ContactForm } from '../components/forms/ContactForm';
 import { 
   MapPin, 
@@ -72,7 +73,7 @@ const ContactPage: React.FC = () => {
     "@type": "ContactPage",
     "name": "Contact MobiRides",
     "description": "Get in touch with MobiRides for support, partnerships, or general inquiries. Multiple contact methods available.",
-    "url": "https://www.mobirides.com/contact",
+    "url": "${siteConfig.url}/contact",
     "mainEntity": {
       "@type": "Organization",
       "name": "MobiRides",
@@ -105,7 +106,7 @@ const ContactPage: React.FC = () => {
     <PageLayout
       title="Contact Us - MobiRides | Get Support & Connect"
       description="Contact MobiRides for support, partnerships, or inquiries. Multiple ways to reach us including phone, email, WhatsApp, and office visits. 24/7 emergency support available."
-      canonical="https://www.mobirides.com/contact"
+      canonical={buildCanonicalUrl('/contact')}
       jsonLd={jsonLd}
     >
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { PageLayout, PageHero, SectionWrapper } from '../components/layouts';
+import { buildCanonicalUrl } from '@/config/site';
 import FAQSection from '../components/FAQSection';
 import ContactForm from '../components/ContactForm';
 import DocumentDownload from '../components/DocumentDownload';
@@ -150,7 +151,7 @@ const SafetyPage: React.FC = () => {
       title="Safety First - MobiRides Security & Insurance Coverage"
       description="Learn about MobiRides' comprehensive safety measures, insurance coverage, emergency procedures, and community protection protocols."
       keywords="MobiRides safety, car sharing insurance, emergency procedures, vehicle safety, community protection"
-      canonical="https://www.mobirides.com/safety"
+      canonical={buildCanonicalUrl('/safety')}
     >
       <PageHero
         title="Your Safety is Our Priority"

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PageLayout } from '../components/layouts';
+import { buildCanonicalUrl } from '@/config/site';
 import { Shield, FileText, Phone, CheckCircle, AlertTriangle, Users, Car, Clock, Download, ExternalLink } from 'lucide-react';
 
 interface CoverageItem {
@@ -226,7 +227,7 @@ const InsurancePage: React.FC = () => {
       title="Insurance Coverage - MobiRides"
       description="Comprehensive insurance coverage for hosts and riders in Botswana. Learn about our policies, claims process, and get the protection you need."
       keywords="insurance, coverage, claims, vehicle protection, Botswana, MobiRides"
-      canonical="https://www.mobirides.com/insurance"
+      canonical={buildCanonicalUrl('/insurance')}
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { PageLayout, PageHero } from '@/components/layouts';
+import { buildCanonicalUrl } from '@/config/site';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -143,7 +144,7 @@ const PricingPage: React.FC = () => {
       title="Rent-to-Buy Vehicle Leasing | Own Your Car | MobiRides Botswana"
       description="Flexible rent-to-own vehicle plans in Botswana. Build equity with every payment. No traditional bank loans. Choose from Compact, Sedan, SUV, and Commercial vehicles starting from P2,200/month."
       keywords="rent to buy car Botswana, vehicle leasing, car ownership, flexible vehicle finance, MobiRides, rent to own Gaborone"
-      canonical="https://www.mobirides.com/pricing"
+      canonical={buildCanonicalUrl('/pricing')}
       jsonLd={jsonLd}
     >
 

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useQuery } from '@tanstack/react-query';
+import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import { useNavigate } from 'react-router-dom';
 import { supabase, BlogPost } from '@/lib/supabase';
 import { PageLayout, PageHero, SectionWrapper } from '../components/layouts';
@@ -170,13 +171,13 @@ const BlogPage: React.FC = () => {
     "@type": "Blog",
     "name": "Mobirides Blog",
     "description": "Latest insights, travel guides, and news about car rentals and mobility in Botswana",
-    "url": "https://www.mobirides.com/blog",
+    "url": "${siteConfig.url}/blog",
     "publisher": {
       "@type": "Organization",
-      "name": "Mobirides",
+      "name": "MobiRides",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.mobirides.com/logo.png"
+        "url": "${siteConfig.url}/logo.png"
       }
     },
     "blogPost": featuredPosts.map(post => ({
@@ -198,7 +199,7 @@ const BlogPage: React.FC = () => {
       <PageLayout
         title="Blog - Travel Guides & Insights | Mobirides"
         description="Discover travel guides, vehicle reviews, business insights, and local news about car rentals and mobility in Botswana."
-        canonical="https://www.mobirides.com/blog"
+        canonical={buildCanonicalUrl('/blog')}
       >
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
@@ -213,7 +214,7 @@ const BlogPage: React.FC = () => {
       <PageLayout
         title="Blog - Travel Guides & Insights | Mobirides"
         description="Discover travel guides, vehicle reviews, business insights, and local news about car rentals and mobility in Botswana."
-        canonical="https://www.mobirides.com/blog"
+        canonical={buildCanonicalUrl('/blog')}
       >
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">
           <div className="text-center">
@@ -232,7 +233,7 @@ const BlogPage: React.FC = () => {
     <PageLayout
       title="Blog - Travel Guides & Insights | Mobirides"
       description="Discover travel guides, vehicle reviews, business insights, and local news about car rentals and mobility in Botswana. Expert tips and advice from Mobirides."
-      canonical="https://www.mobirides.com/blog"
+      canonical={buildCanonicalUrl('/blog')}
     >
       <Helmet>
         <script type="application/ld+json">
