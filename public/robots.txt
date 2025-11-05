@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Crawl-delay: 1
 
-# Sitemap location
+# Sitemap location (all URLs use https://www.mobirides.com)
 Sitemap: https://putjowciegpzdheideaf.supabase.co/functions/v1/sitemap
 
 # Block admin routes from indexing
