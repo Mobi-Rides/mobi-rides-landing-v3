@@ -54,7 +54,7 @@ const AboutPage: React.FC = () => {
     console.log('Contact form submitted:', data);
     // Handle form submission here
   };
-  return <PageLayout title="About MobiRides - Connecting Communities Through Shared Mobility" description="Learn about MobiRides' mission to revolutionize transportation through community-driven car sharing. Discover our story, values, and the team behind the platform.">
+  return <PageLayout title="About MobiRides - Connecting Communities Through Shared Mobility" description="Learn about MobiRides' mission to revolutionize transportation through community-driven car sharing. Discover our story, values, and the team behind the platform." canonical="https://www.mobirides.com/about">
       <PageHero title="Revolutionizing Transportation" subtitle="Through Community Connection" description="MobiRides is more than just a car sharing platform. We're building a community-driven ecosystem that makes transportation accessible, affordable, and sustainable for everyone." variant="default" ctaText="Join Our Community" ctaLink="/signup" />
 
       {/* Company Story Section */}

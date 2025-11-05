@@ -26,13 +26,22 @@ const Index = () => {
       metaDescription.setAttribute('content', 'Access premium car rentals across Botswana. Safe, seamless, and sophisticated mobility solutions for professionals, entrepreneurs, and business travelers.');
     }
     
+    // Add canonical URL
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', 'https://www.mobirides.com');
+    
     // Add structured data for local business
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "MobiRides",
       "description": "Premium car sharing platform for Botswana's professionals",
-      "url": "https://mobirides.com",
+      "url": "https://www.mobirides.com",
       "telephone": "+267 74300747",
       "address": {
         "@type": "PostalAddress",

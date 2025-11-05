@@ -62,7 +62,7 @@ const TermsPage: React.FC = () => {
     "@type": "WebPage",
     "name": "Terms of Service - MobiRides",
     "description": "Read MobiRides Terms of Service and user agreements. Understand your rights and responsibilities when using our ride-sharing platform.",
-    "url": "https://mobirides.com/terms",
+    "url": "https://www.mobirides.com/terms",
     "mainEntity": {
       "@type": "TermsOfService",
       "name": "MobiRides Terms of Service",
@@ -77,13 +77,13 @@ const TermsPage: React.FC = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://mobirides.com"
+          "item": "https://www.mobirides.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Terms of Service",
-          "item": "https://mobirides.com/terms"
+          "item": "https://www.mobirides.com/terms"
         }
       ]
     }
@@ -102,7 +102,7 @@ const TermsPage: React.FC = () => {
     <PageLayout
       title="Terms of Service - MobiRides | User Agreement & Legal Terms"
       description="Read MobiRides Terms of Service and user agreements. Understand your rights and responsibilities when using our ride-sharing platform."
-      canonical="https://mobirides.com/terms"
+      canonical="https://www.mobirides.com/terms"
       jsonLd={jsonLd}
     >
 

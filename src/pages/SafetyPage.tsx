@@ -150,7 +150,7 @@ const SafetyPage: React.FC = () => {
       title="Safety First - MobiRides Security & Insurance Coverage"
       description="Learn about MobiRides' comprehensive safety measures, insurance coverage, emergency procedures, and community protection protocols."
       keywords="MobiRides safety, car sharing insurance, emergency procedures, vehicle safety, community protection"
-      canonical="/safety"
+      canonical="https://www.mobirides.com/safety"
     >
       <PageHero
         title="Your Safety is Our Priority"

@@ -125,7 +125,7 @@ const CareersPage: React.FC = () => {
       title="Careers at MobiRides - Join Our Mission to Transform Transportation"
       description="Explore career opportunities at MobiRides. Join our team of passionate individuals working to revolutionize transportation through community-driven car sharing."
       keywords="MobiRides careers, jobs, employment, transportation jobs, car sharing careers, tech jobs"
-      canonical="/careers"
+      canonical="https://www.mobirides.com/careers"
     >
       <PageHero
         title="Build the Future of Transportation"

@@ -226,6 +226,7 @@ const InsurancePage: React.FC = () => {
       title="Insurance Coverage - MobiRides"
       description="Comprehensive insurance coverage for hosts and riders in Botswana. Learn about our policies, claims process, and get the protection you need."
       keywords="insurance, coverage, claims, vehicle protection, Botswana, MobiRides"
+      canonical="https://www.mobirides.com/insurance"
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

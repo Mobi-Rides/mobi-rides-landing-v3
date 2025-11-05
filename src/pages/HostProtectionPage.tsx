@@ -227,6 +227,7 @@ const HostProtectionPage: React.FC = () => {
         title="Host Protection - Vehicle Insurance & Safety | MobiRides"
         description="Comprehensive protection for car owners: P1M insurance coverage, verified renters, 24/7 support, and theft protection. Rent your vehicle with confidence."
         keywords="car rental protection, vehicle insurance, host protection, peer-to-peer car sharing, rental damage coverage, Botswana car rental"
+        canonical="https://www.mobirides.com/host/protection"
       >
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">

@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
     "@type": "ContactPage",
     "name": "Contact MobiRides",
     "description": "Get in touch with MobiRides for support, partnerships, or general inquiries. Multiple contact methods available.",
-    "url": "https://mobirides.bw/contact",
+    "url": "https://www.mobirides.com/contact",
     "mainEntity": {
       "@type": "Organization",
       "name": "MobiRides",
@@ -105,7 +105,7 @@ const ContactPage: React.FC = () => {
     <PageLayout
       title="Contact Us - MobiRides | Get Support & Connect"
       description="Contact MobiRides for support, partnerships, or inquiries. Multiple ways to reach us including phone, email, WhatsApp, and office visits. 24/7 emergency support available."
-      canonical="https://mobirides.bw/contact"
+      canonical="https://www.mobirides.com/contact"
       jsonLd={jsonLd}
     >
 

@@ -170,13 +170,13 @@ const BlogPage: React.FC = () => {
     "@type": "Blog",
     "name": "Mobirides Blog",
     "description": "Latest insights, travel guides, and news about car rentals and mobility in Botswana",
-    "url": "https://mobirides.com/blog",
+    "url": "https://www.mobirides.com/blog",
     "publisher": {
       "@type": "Organization",
       "name": "Mobirides",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mobirides.com/logo.png"
+        "url": "https://www.mobirides.com/logo.png"
       }
     },
     "blogPost": featuredPosts.map(post => ({
@@ -198,6 +198,7 @@ const BlogPage: React.FC = () => {
       <PageLayout
         title="Blog - Travel Guides & Insights | Mobirides"
         description="Discover travel guides, vehicle reviews, business insights, and local news about car rentals and mobility in Botswana."
+        canonical="https://www.mobirides.com/blog"
       >
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
@@ -212,6 +213,7 @@ const BlogPage: React.FC = () => {
       <PageLayout
         title="Blog - Travel Guides & Insights | Mobirides"
         description="Discover travel guides, vehicle reviews, business insights, and local news about car rentals and mobility in Botswana."
+        canonical="https://www.mobirides.com/blog"
       >
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">
           <div className="text-center">
@@ -230,6 +232,7 @@ const BlogPage: React.FC = () => {
     <PageLayout
       title="Blog - Travel Guides & Insights | Mobirides"
       description="Discover travel guides, vehicle reviews, business insights, and local news about car rentals and mobility in Botswana. Expert tips and advice from Mobirides."
+      canonical="https://www.mobirides.com/blog"
     >
       <Helmet>
         <script type="application/ld+json">

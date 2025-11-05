@@ -142,7 +142,7 @@ const HostPage: React.FC = () => {
     "@type": "WebPage",
     "name": "Become a Host - Mobirides",
     "description": "Earn extra income by sharing your vehicle on Mobirides. Join our community of trusted hosts in Botswana.",
-    "url": "https://mobirides.com/host",
+    "url": "https://www.mobirides.com/host",
     "mainEntity": {
       "@type": "Service",
       "name": "Vehicle Hosting Service",
@@ -159,6 +159,7 @@ const HostPage: React.FC = () => {
     <PageLayout
       title="Become a Host - Earn with Your Vehicle | Mobirides"
       description="Turn your vehicle into a source of income. Join Mobirides as a host and earn up to P15,000 per month sharing your car with verified renters in Botswana."
+      canonical="https://www.mobirides.com/host"
     >
       <Helmet>
         <script type="application/ld+json">

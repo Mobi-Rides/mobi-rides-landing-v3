@@ -143,6 +143,7 @@ const PricingPage: React.FC = () => {
       title="Rent-to-Buy Vehicle Leasing | Own Your Car | MobiRides Botswana"
       description="Flexible rent-to-own vehicle plans in Botswana. Build equity with every payment. No traditional bank loans. Choose from Compact, Sedan, SUV, and Commercial vehicles starting from P2,200/month."
       keywords="rent to buy car Botswana, vehicle leasing, car ownership, flexible vehicle finance, MobiRides, rent to own Gaborone"
+      canonical="https://www.mobirides.com/pricing"
       jsonLd={jsonLd}
     >
 

@@ -80,6 +80,7 @@ const LocationsPage: React.FC = () => {
       title="Service Locations - MobiRides"
       description="Discover MobiRides service areas across Botswana. Find coverage in Gaborone, Francistown, Maun, and upcoming cities."
       keywords="MobiRides locations, Botswana cities, service areas, Gaborone, Francistown, Maun, ride sharing coverage"
+      canonical="https://www.mobirides.com/locations"
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100">

@@ -61,7 +61,7 @@ const PrivacyPage: React.FC = () => {
     "@type": "WebPage",
     "name": "Privacy Policy - MobiRides",
     "description": "Learn how MobiRides protects your privacy and handles your personal data. Our comprehensive privacy policy explains data collection, usage, and your rights.",
-    "url": "https://mobirides.com/privacy",
+    "url": "https://www.mobirides.com/privacy",
     "mainEntity": {
       "@type": "PrivacyPolicy",
       "name": "MobiRides Privacy Policy",
@@ -76,13 +76,13 @@ const PrivacyPage: React.FC = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://mobirides.com"
+          "item": "https://www.mobirides.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Privacy Policy",
-          "item": "https://mobirides.com/privacy"
+          "item": "https://www.mobirides.com/privacy"
         }
       ]
     }
@@ -101,7 +101,7 @@ const PrivacyPage: React.FC = () => {
     <PageLayout
       title="Privacy Policy - MobiRides | Data Protection & User Privacy"
       description="Learn how MobiRides protects your privacy and handles your personal data. Our comprehensive privacy policy explains data collection, usage, and your rights."
-      canonical="https://mobirides.com/privacy"
+      canonical="https://www.mobirides.com/privacy"
       jsonLd={jsonLd}
     >
 

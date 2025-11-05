@@ -134,6 +134,7 @@ const HostSupportPage: React.FC = () => {
       title="Host Support Center - MobiRides | 24/7 Driver Support Botswana"
       description="Get comprehensive support as a MobiRides host in Botswana. 24/7 emergency assistance, training resources, community support, and help center."
       keywords="MobiRides support, driver help Botswana, rideshare support, host assistance, emergency support, driver training"
+      canonical="https://www.mobirides.com/host/support"
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">

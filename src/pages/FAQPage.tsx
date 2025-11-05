@@ -109,6 +109,7 @@ const FAQPage: React.FC = () => {
       title="Frequently Asked Questions - MobiRides"
       description="Find answers to common questions about MobiRides ride-sharing service in Botswana. Get help with booking, payments, safety, and more."
       keywords="MobiRides FAQ, help, support, questions, ride sharing, Botswana, booking, payment, safety"
+      canonical="https://www.mobirides.com/faq"
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">

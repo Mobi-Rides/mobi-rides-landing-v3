@@ -207,6 +207,7 @@ const BusinessSolutionsPage: React.FC = () => {
         title="Business Solutions | MobiRides"
         description="Enterprise transportation solutions for businesses. Fleet management, employee transportation, and business analytics."
         keywords="business transportation, fleet management, employee rides, corporate solutions, enterprise mobility"
+        canonical="https://www.mobirides.com/business"
       >
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
