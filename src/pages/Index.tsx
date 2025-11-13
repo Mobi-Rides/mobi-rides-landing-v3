@@ -159,11 +159,78 @@ const Index = () => {
         "query-input": "required name=search_term_string"
       }
     };
+
+    // Add structured data - Service Schema for Car Rental
+    const serviceSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Car Rental and Sharing",
+      "provider": {
+        "@type": "Organization",
+        "name": siteConfig.name,
+        "url": siteConfig.url
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Botswana"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": `${siteConfig.url}/find-ride`,
+        "servicePhone": siteConfig.contact.phone,
+        "serviceSmsNumber": siteConfig.contact.phone
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceRange": "BWP 300 - BWP 2000 per day"
+      },
+      "category": "Car Sharing",
+      "description": "Premium car rental and sharing marketplace in Botswana. Access sedans, SUVs, trucks, and commercial vans across Gaborone, Francistown, and Maun.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Vehicle Categories",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Luxury Sedans",
+              "description": "Premium sedans for business and leisure travel"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "SUVs",
+              "description": "Spacious SUVs for families and safari adventures"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Pickup Trucks",
+              "description": "Rugged trucks for business and outdoor activities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Commercial Vans",
+              "description": "Professional vans for business logistics"
+            }
+          }
+        ]
+      }
+    };
     
     // Combine all schemas
     const combinedSchema = {
       "@context": "https://schema.org",
-      "@graph": [organizationSchema, localBusinessSchema, websiteSchema]
+      "@graph": [organizationSchema, localBusinessSchema, websiteSchema, serviceSchema]
     };
     
     const script = document.createElement('script');

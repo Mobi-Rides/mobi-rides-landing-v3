@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/lib/supabase";
 import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import { BlogContentRenderer } from "@/components/BlogContentRenderer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar, Clock, User, Eye } from "lucide-react";
@@ -198,6 +199,15 @@ const BlogPostPage = () => {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Button>
+            
+            {/* Breadcrumbs */}
+            <Breadcrumbs
+              items={[
+                { label: 'Blog', href: '/blog' },
+                { label: post.title }
+              ]}
+              className="mt-4"
+            />
           </div>
         </div>
 
