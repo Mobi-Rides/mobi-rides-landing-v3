@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { PageLayout } from '../components/layouts';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 import { buildCanonicalUrl } from '@/config/site';
 import { Search, ChevronDown, ChevronUp, HelpCircle, Car, CreditCard, Shield, Users, Smartphone, Mail, Phone, Clock } from 'lucide-react';
 import faqData from '../data/faq.json';
@@ -114,6 +115,11 @@ const FAQPage: React.FC = () => {
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
+        {/* Breadcrumbs */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+          <Breadcrumbs items={[{ label: 'FAQ' }]} />
+        </div>
+        
         {/* Hero Section */}
         <section className="relative py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
