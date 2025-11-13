@@ -12,6 +12,10 @@ interface PageLayoutProps {
   ogTitle?: string;
   ogDescription?: string;
   ogUrl?: string;
+  ogImage?: string;
+  ogImageWidth?: string;
+  ogImageHeight?: string;
+  ogImageAlt?: string;
   jsonLd?: object;
   className?: string;
 }
@@ -25,6 +29,10 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   ogTitle,
   ogDescription,
   ogUrl,
+  ogImage,
+  ogImageWidth = '1200',
+  ogImageHeight = '630',
+  ogImageAlt,
   jsonLd,
   className = ''
 }) => {
@@ -41,11 +49,25 @@ const PageLayout: React.FC<PageLayoutProps> = ({
         <meta property="og:description" content={ogDescription || description} />
         {ogUrl && <meta property="og:url" content={ogUrl} />}
         <meta property="og:type" content="website" />
+        {ogImage && (
+          <>
+            <meta property="og:image" content={ogImage} />
+            <meta property="og:image:width" content={ogImageWidth} />
+            <meta property="og:image:height" content={ogImageHeight} />
+            {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
+          </>
+        )}
         
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={ogTitle || title} />
         <meta name="twitter:description" content={ogDescription || description} />
+        {ogImage && (
+          <>
+            <meta name="twitter:image" content={ogImage} />
+            {ogImageAlt && <meta name="twitter:image:alt" content={ogImageAlt} />}
+          </>
+        )}
         
         {/* JSON-LD structured data */}
         {jsonLd && (

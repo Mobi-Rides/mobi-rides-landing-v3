@@ -37,32 +37,138 @@ const Index = () => {
     }
     canonicalLink.setAttribute('href', buildCanonicalUrl());
     
-    // Add structured data for local business
-    const structuredData = {
+    // Add structured data - Organization Schema
+    const organizationSchema = {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "MobiRides",
-      "description": "Premium car sharing platform for Botswana's professionals",
-      "url": "${siteConfig.url}",
-      "telephone": "+267 74300747",
+      "@type": "Organization",
+      "name": siteConfig.name,
+      "alternateName": "MobiRides Botswana",
+      "url": siteConfig.url,
+      "logo": `${siteConfig.url}${siteConfig.logo.url}`,
+      "description": siteConfig.description,
+      "email": siteConfig.contact.email,
+      "telephone": siteConfig.contact.phone,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Plot 123, Independence Avenue",
-        "addressLocality": "Gaborone",
-        "addressCountry": "BW"
+        "streetAddress": siteConfig.address.street,
+        "addressLocality": siteConfig.address.city,
+        "addressRegion": siteConfig.address.state,
+        "postalCode": siteConfig.address.postalCode,
+        "addressCountry": siteConfig.address.country
+      },
+      "sameAs": [
+        siteConfig.social.facebook,
+        siteConfig.social.twitter,
+        siteConfig.social.instagram,
+        siteConfig.social.linkedin,
+        siteConfig.social.youtube
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": siteConfig.contact.phone,
+          "contactType": "customer service",
+          "email": siteConfig.departments.support,
+          "availableLanguage": ["English", "Setswana"],
+          "areaServed": "BW"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": siteConfig.contact.emergency,
+          "contactType": "emergency",
+          "availableLanguage": ["English", "Setswana"],
+          "areaServed": "BW"
+        }
+      ]
+    };
+
+    // Add structured data - Enhanced LocalBusiness Schema
+    const localBusinessSchema = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": siteConfig.name,
+      "description": siteConfig.description,
+      "url": siteConfig.url,
+      "telephone": siteConfig.contact.phone,
+      "email": siteConfig.contact.email,
+      "image": `${siteConfig.url}${siteConfig.logo.url}`,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": siteConfig.address.street,
+        "addressLocality": siteConfig.address.city,
+        "addressRegion": siteConfig.address.state,
+        "postalCode": siteConfig.address.postalCode,
+        "addressCountry": siteConfig.address.country
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "-24.6282",
-        "longitude": "25.9231"
+        "latitude": siteConfig.address.coordinates.lat.toString(),
+        "longitude": siteConfig.address.coordinates.lng.toString()
       },
-      "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
-      "priceRange": "P250-P750 per day"
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": siteConfig.businessHours.weekdays.split(' - ')[0],
+          "closes": siteConfig.businessHours.weekdays.split(' - ')[1]
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": siteConfig.businessHours.saturday.split(' - ')[0],
+          "closes": siteConfig.businessHours.saturday.split(' - ')[1]
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": siteConfig.businessHours.sunday.split(' - ')[0],
+          "closes": siteConfig.businessHours.sunday.split(' - ')[1]
+        }
+      ],
+      "priceRange": "BWP 250-750",
+      "currenciesAccepted": "BWP",
+      "paymentAccepted": "Cash, Credit Card, Debit Card, Bank Transfer",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Botswana"
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": siteConfig.address.coordinates.lat.toString(),
+          "longitude": siteConfig.address.coordinates.lng.toString()
+        },
+        "geoRadius": "500000"
+      }
+    };
+
+    // Add structured data - WebSite Schema with SearchAction
+    const websiteSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": siteConfig.name,
+      "url": siteConfig.url,
+      "description": siteConfig.description,
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": `${siteConfig.url}/find-ride?location={search_term_string}`
+        },
+        "query-input": "required name=search_term_string"
+      }
+    };
+    
+    // Combine all schemas
+    const combinedSchema = {
+      "@context": "https://schema.org",
+      "@graph": [organizationSchema, localBusinessSchema, websiteSchema]
     };
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
+    script.text = JSON.stringify(combinedSchema);
     document.head.appendChild(script);
     
     return () => {
@@ -72,6 +178,17 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <Helmet>
+        {/* Open Graph Image */}
+        <meta property="og:image" content={`${siteConfig.url}${siteConfig.seo.ogImage}`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={siteConfig.seo.defaultDescription} />
+        
+        {/* Twitter Card Image */}
+        <meta name="twitter:image" content={`${siteConfig.url}${siteConfig.seo.ogImage}`} />
+        <meta name="twitter:image:alt" content={siteConfig.seo.defaultDescription} />
+      </Helmet>
       <Header />
       
       <main className="flex-1">
