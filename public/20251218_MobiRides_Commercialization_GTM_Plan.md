@@ -1,97 +1,120 @@
 # MobiRides Go-to-Market Strategy & Commercialization Plan
-**Date:** December 18, 2025  
-**Version:** 1.0  
-**Status:** Final
+**Date:** November 23, 2025  
+**Version:** 2.0  
+**Status:** Live Platform - Active Growth
 
 ---
 
 ## 0. Executive Summary
 
 ### Business Name
-**MobiRides** - Peer-to-Peer Car Rental Platform
+**MobiRides** - Botswana's Peer-to-Peer Car Sharing & Rent2Buy Marketplace
 
 ### Mission Statement
-To democratize car ownership by connecting vehicle owners with renters through a secure, transparent, and technology-driven platform that maximizes asset utilization while providing affordable mobility solutions.
+To democratize mobility in Botswana by connecting car owners with renters through a secure, transparent platform while creating pathways to vehicle ownership through our innovative Rent2Buy marketplace.
 
 ### Vision Statement
-To become the leading peer-to-peer car rental marketplace, transforming how people access and monetize vehicles while building a trusted community of hosts and renters across global markets.
+To become Southern Africa's leading peer-to-peer mobility platform, transforming how Batswana access and own vehicles while building a trusted community powered by local partnerships.
 
 ### Value Proposition
-MobiRides offers a comprehensive P2P car rental solution that combines:
-- **For Hosts:** Turn idle vehicles into revenue-generating assets with 85% net earnings after commission
-- **For Renters:** Access quality vehicles at competitive rates with verified hosts and comprehensive insurance options
-- **For Both:** Advanced handover management, real-time GPS tracking, secure in-app messaging, integrated wallet system, and KYC-verified community trust
+MobiRides offers a two-product solution for the Botswana market:
+- **For Hosts:** Turn idle vehicles into income (P3,500-7,000/month) with full Pay-U insurance, vetted renters, and <24hr confirmations
+- **For Renters:** Access affordable vehicles starting 40% cheaper than traditional rentals with on-demand delivery and transparent pricing
+- **For Aspiring Owners:** Rent2Buy pathway to vehicle ownership through partnership with Motshelo groups (6.5% returns for investors)
 
 ### Target Market Overview
-**Primary Market:** Urban millennials and Gen Z (25-40 years old) seeking flexible mobility solutions
-**Secondary Market:** Vehicle owners looking to offset ownership costs through asset sharing
-**Geographic Focus:** Initial launch in tier-1 cities with expansion to tier-2/3 cities within 12 months
-**Market Size:** $2.5B TAM in peer-to-peer car sharing, growing at 18% CAGR
+**Primary Market:** Gaborone (validated with 100+ users, 46+ vehicles)
+**Expansion Markets:** Francistown (Q3 2026), Maun/Kasane (Q4 2026)
+**Customer Segments:** Young professionals (25-40), tourism sector, business travelers, aspiring vehicle owners
+**Market Size:** P250M+ annual car rental market; 1.5M+ tourism arrivals; ~2.6M population
 
 ### Key Highlights
-- **Product Status:** 85% production-ready with core features deployed
-- **Revenue Model:** 15% commission on bookings + insurance attachment revenue
-- **Current Traction:** Platform infrastructure complete, beta testing phase
-- **Funding Stage:** Seed round targeted at $2-3M for 18-month runway
-- **Launch Timeline:** Q1 2026 public launch following infrastructure completion
+- **Platform Status:** LIVE and operational (launched Q4 2025)
+- **Current Performance:** 100+ users, 46+ vehicles, P10K+ revenue (organic growth, zero paid marketing)
+- **Active Campaign:** "Get Behind the Wheel" (Nov 17-Dec 14) - P100 OFF with code FIRST100
+- **Revenue Model:** 15% commission + Rent2Buy down payments & monthly fees
+- **Confirmed Partnerships:** BIC (insurance), Pay-U (comprehensive coverage), Sekele Fund, Metshelo, Mobile Money
+- **Secured Funding:** P55K from Cerberus Capital + P700K pre-seed round in progress
+- **Two-Product Strategy:** P2P Car Sharing (live) + Rent2Buy Marketplace (Q2 2026 pilot with 3 vehicles)
 
 ---
 
 ## 1. Business Context & Strategic Intent
 
 ### Business Model
-**Two-Sided Marketplace Platform:**
-- **Revenue Stream 1:** 15% commission on all confirmed bookings (deducted from host earnings)
-- **Revenue Stream 2:** Insurance product attachment (20-30% attach rate target)
-- **Revenue Stream 3:** Premium features (featured listings, priority support)
-- **Cost Structure:** Technology infrastructure (40%), marketing & acquisition (30%), operations (20%), other (10%)
+**Two-Product Portfolio Strategy:**
+
+**Product 1: P2P Car Sharing (Live)**
+- **Revenue Stream 1:** 15% commission on confirmed bookings
+- **Revenue Stream 2:** Mobile Money integration fees
+- **Current Pricing:** Hosts earn P300-600/day (85% of rental rate)
+- **Payment Partners:** Mobile Money (Orange Money, MyZaka, Smega)
+
+**Product 2: Rent2Buy Marketplace (Q2 2026 Pilot)**
+- **Revenue Stream 1:** P5,000-10,000 down payment per conversion (MobiRides retains 20%)
+- **Revenue Stream 2:** P500-750 monthly platform fee per active contract
+- **Initial Fund:** P200,000 for 3 repo vehicles (P60-70K each)
+- **Target Audience:** Young professionals (25-35) earning P5K-12K/month
+- **Investor Returns:** 6.5% for Motshelo groups, repaid over 36 months
+
+**Cost Structure (2025-2026):**
+- Technology & Operations: 40%
+- Marketing & User Acquisition: 30%
+- Partnership Development: 15%
+- Administrative: 15%
 
 ### Strategic Goals
-1. **Market Leadership:** Achieve 15% market share in tier-1 cities within 24 months
-2. **Platform Growth:** Reach 10,000 active vehicles and 50,000 registered users by end of Year 1
-3. **Revenue Target:** $5M ARR by Month 18, $15M ARR by Month 36
-4. **Unit Economics:** CAC payback period < 6 months, LTV:CAC ratio > 3:1
-5. **Trust & Safety:** Maintain 95%+ user satisfaction with zero major security incidents
+1. **Scale P2P Operations:** Grow from 46 to 150+ vehicles in Gaborone by Dec 2026
+2. **Launch Rent2Buy:** Pilot with 3 vehicles in Q2 2026, achieve 5+ conversions by Q4
+3. **Geographic Expansion:** Validate Francistown (Q3) and Maun/Kasane (Q4) markets
+4. **Revenue Growth:** Achieve P75K/month P2P + P15K/month Rent2Buy by Dec 2026
+5. **Partnership Ecosystem:** Secure 3+ Motshelo partnerships and 1 EV dealership by Q2 2026
 
-### Key Objectives (First 12 Months)
+### Key Objectives (2026)
 
-**Q1 2026 - Infrastructure & Launch:**
-- Complete payment integration (Stripe + local providers)
-- Deploy production monitoring and analytics
-- Launch beta with 100 host vehicles in primary city
-- Achieve 500 completed bookings
+**Q1 2026 - Foundation & Mobile Launch:**
+- Launch iOS/Android mobile apps
+- Grow to 80+ vehicles in Gaborone
+- Achieve 500+ registered users
+- Finalize Rent2Buy pilot vehicle procurement
+- Target: P40K monthly revenue
 
-**Q2 2026 - Growth & Optimization:**
-- Scale to 1,000 active vehicles
-- Launch insurance product integration
-- Expand to 2 additional tier-1 cities
-- Achieve $200K MRR
+**Q2 2026 - Rent2Buy Pilot & Growth:**
+- Launch Rent2Buy with 3 vehicles
+- Onboard first Motshelo partnership (P200K fund)
+- Scale to 100+ P2P vehicles
+- Achieve first 2 Rent2Buy conversions
+- Target: P50K monthly revenue (P2P: P40K, R2B: P10K)
 
-**Q3 2026 - Market Expansion:**
-- Launch mobile apps (iOS/Android)
-- Expand to 5 total cities
-- Implement dynamic pricing algorithm
-- Cross 5,000 active users
+**Q3 2026 - Geographic Expansion:**
+- Launch Francistown market (target: 20 vehicles)
+- Continue Rent2Buy conversions (target: cumulative 4)
+- Scale Gaborone to 120+ vehicles
+- Begin EV dealership partnership discussions
+- Target: P60K monthly revenue
 
-**Q4 2026 - Consolidation & Scale:**
-- Launch host loyalty program
-- Expand to tier-2 cities (3 markets)
-- Achieve profitability on unit economics
-- Reach $500K MRR
+**Q4 2026 - Scale & EV Preparation:**
+- Launch Maun/Kasane market (target: 15 vehicles)
+- Achieve 150+ total P2P vehicles across all markets
+- Complete 5+ total Rent2Buy conversions
+- Secure 2nd Motshelo fund (P300K for EV phase)
+- Target: P90K monthly revenue (P2P: P75K, R2B: P15K)
 
-### Success Metrics
-- **User Growth:** 15% MoM user acquisition growth
-- **Booking Volume:** 10,000 bookings in Month 12
-- **Revenue:** $5M ARR by Month 18
-- **Retention:** 60% 6-month host retention, 40% renter repeat rate
-- **NPS Score:** 50+ for both hosts and renters
-- **Platform Health:** 99.5% uptime, <2% transaction failure rate
+### Success Metrics (2026)
+- **P2P Fleet Growth:** 46 → 150 vehicles (226% growth)
+- **User Growth:** 100 → 2,500+ registered users
+- **Utilization Rate:** 55-60% average
+- **Rent2Buy Conversions:** 5+ successful ownership transfers
+- **Geographic Markets:** 3 cities operational
+- **Total Revenue:** P1.5M (P2P: P1.2M, Rent2Buy: P300K)
+- **Host Retention:** 75%+ active after 6 months
+- **Customer Satisfaction:** 4.5+ star rating
 
 ### Timeline Overview
-- **Months 1-3:** Infrastructure completion, beta launch, initial marketing
-- **Months 4-6:** Growth acceleration, product iteration, market expansion
-- **Months 7-9:** Scale operations, mobile launch, geographic expansion
-- **Months 10-12:** Consolidation, profitability focus, Series A preparation
+- **Nov-Dec 2025:** Growth campaign (FIRST100), achieve 60+ vehicles
+- **Q1 2026:** Mobile apps launch, 80+ vehicles, foundation solidification
+- **Q2 2026:** Rent2Buy pilot, 100+ vehicles, Motshelo partnerships
+- **Q3-Q4 2026:** Geographic expansion, EV preparation, scale operations
 
 ---
 
@@ -236,63 +259,75 @@ MobiRides offers a comprehensive P2P car rental solution that combines:
 ## 3. Market Validation & Opportunity Analysis
 
 ### Total Addressable Market (TAM)
-**Global P2P Car Sharing Market:**
-- **Current Size:** $2.5 billion (2025)
-- **Projected Size:** $9.8 billion (2030)
-- **CAGR:** 18.2% (2025-2030)
-- **Geographic Focus:** Initial focus on emerging markets with high urbanization
+
+**Botswana Car Sharing & Mobility Market:**
+- **Car Rental Market Size:** P250M+ annually
+- **Vehicle Ownership Rate:** 15-20% of households (~2.6M population)
+- **Tourism Arrivals (2024):** 1.5M+ international visitors
+- **Urban Population:** ~70% (~1.8M people in major cities)
+- **Safari Tourism Hub:** Maun/Kasane gateway to Okavango Delta & Chobe National Park
 
 **Serviceable Addressable Market (SAM):**
-- Target geography: 15 tier-1 and tier-2 cities
-- Urban population: 45 million
-- Target demographic penetration: 8-10%
-- SAM Size: $380 million
+- **Primary Markets:** Gaborone (250K), Francistown (100K), Maun/Kasane (60K+)
+- **Target Demographic:** Young professionals (25-40), tourists, business travelers
+- **Market Penetration Target:** 5-8% of urban vehicle owners as hosts
+- **SAM Size:** P50M+ (car sharing + rent2buy)
 
 **Serviceable Obtainable Market (SOM):**
-- Year 1 target: 5 cities
-- Market share target: 3-5%
-- SOM Size: $12-20 million
-- Revenue target: $5M ARR (25% of SOM)
+- **Year 1 Target:** Gaborone + Francistown + Maun/Kasane
+- **Market Share Target:** 3-5% of addressable market
+- **SOM Size:** P2.5-4M
+- **Revenue Target (2026):** P1.5M (60% SOM capture)
 
 ### Market Growth Rate
 **Key Growth Drivers:**
-1. **Urbanization:** 65% urban population by 2030 in target markets
-2. **Sharing Economy:** 40% YoY growth in sharing economy participation
-3. **Vehicle Ownership Costs:** Rising 8% annually, driving sharing adoption
-4. **Digital Adoption:** 85% smartphone penetration in urban areas
-5. **Environmental Awareness:** 70% of millennials prefer sustainable options
+1. **Tourism Recovery:** International arrivals returning to pre-pandemic levels with 1.5M+ annual visitors
+2. **Digital Adoption:** 85%+ smartphone penetration in urban Botswana
+3. **High Rental Costs:** Traditional agencies 40% more expensive, creating demand for alternatives
+4. **Youth Demographics:** 60% of population under 35, tech-savvy and sharing-economy friendly
+5. **Safari Tourism:** Maun/Kasane gateway status drives seasonal demand for 4x4 and adventure vehicles
+6. **Economic Diversification:** Growing beyond mining with tourism, agribusiness, and professional services
 
-**Market Trends:**
-- Shift from ownership to access economy
-- Increased trust in peer-to-peer platforms
-- Demand for flexible mobility solutions
-- Integration of insurance and safety features
-- Preference for mobile-first experiences
+**Botswana Market Trends:**
+- Strong mobile money adoption (Orange Money, MyZaka, Smega)
+- Increasing trust in peer-to-peer platforms
+- Growing middle class seeking income diversification
+- Insurance partnerships critical for host confidence
+- Safari and tourism vehicles in high demand (Maun/Kasane)
 
 ### Customer Validation Results
 
-**Beta Testing Insights (Sample: 50 hosts, 200 renters):**
+**Live Platform Performance (Jan-Nov 2025):**
+
+**Actual Traction:**
+- **Users:** 100+ organic registrations (zero paid marketing)
+- **Fleet:** 46+ vehicles listed across vehicle categories
+- **Revenue:** P10,000+ generated (P14-30K monthly range)
+- **Growth:** Entirely organic through word-of-mouth and partnerships
+- **Active Campaign:** Nov 17-Dec 14, 2025 - "Get Behind the Wheel" with P100 OFF (Code: FIRST100)
 
 **Host Feedback:**
-- 92% would recommend to other vehicle owners
-- Average earnings: $450/month per vehicle
-- Top features: Easy listing process (95%), transparent earnings (88%), booking management (85%)
-- Pain points: Payout timing (62% want faster), insurance clarity (45%)
-- Feature requests: Dynamic pricing (78%), multi-vehicle management (34%)
+- Strong interest in monetizing idle vehicles
+- **Top Request:** Insurance coverage (RESOLVED via Pay-U partnership)
+- **Earning Validation:** Hosts earning P3,500-7,000/month depending on vehicle type
+- **Appreciated Features:** Fast confirmations (<24hrs), transparent 15% commission
+- **Vehicle Mix:** Family sedans, SUVs, pickup trucks, safari-ready 4x4s
+- **Key Concern Resolved:** Pay-U partnership provides comprehensive host insurance coverage
 
 **Renter Feedback:**
-- 88% satisfaction with booking experience
-- Average booking value: $85/day
-- Top features: Verified hosts (91%), easy communication (87%), clear pricing (84%)
-- Pain points: Limited vehicle selection in some areas (56%)
-- Feature requests: Instant booking (67%), flexible cancellation (54%)
+- **Price Sensitivity:** 40% cheaper than traditional rentals resonates strongly
+- **Top Features:** On-demand delivery, transparent pricing, local hosts
+- **Booking Duration:** Average 3-5 days (tourism drives longer bookings)
+- **Popular Use Cases:** Safari trips to Maun/Kasane, business travel, weekend getaways
+- **Payment Preference:** Mobile Money integration highly valued
 
 **Key Validation Metrics:**
-- **Booking Completion Rate:** 78% (industry avg: 65%)
-- **Repeat Booking Rate:** 42% within 90 days
-- **Average Rating:** 4.6/5 for hosts, 4.5/5 for renters
-- **Response Time:** 87% of hosts respond within 2 hours
-- **Dispute Rate:** 2.3% (industry avg: 5-7%)
+- **Organic Growth:** 100% of users acquired through word-of-mouth, partnerships, and organic channels
+- **Host Activation:** 46+ vehicles listed organically
+- **Campaign Response:** FIRST100 promo (P100 OFF) driving renter acquisition in Nov-Dec 2025
+- **Insurance Partnership:** Pay-U partnership eliminates #1 host concern
+- **Fast Confirmations:** <24hr response time standard
+- **Revenue Range:** P14-30K monthly with organic traffic only
 
 ### Market Trends & Opportunities
 
@@ -319,12 +354,19 @@ MobiRides offers a comprehensive P2P car rental solution that combines:
 
 ### Market Challenges & Risks
 
-**Market Challenges:**
-1. **Trust Barriers:** 35% hesitant to rent from strangers
-   - *Mitigation:* Comprehensive KYC, reviews, insurance options
-2. **Regulatory Uncertainty:** Evolving regulations in 60% of markets
-   - *Mitigation:* Legal compliance team, proactive engagement with regulators
-3. **Insurance Complexity:** 48% confused about coverage
+**Botswana-Specific Challenges:**
+1. **Trust Barriers:** Building trust in peer-to-peer model in conservative market
+   - *Mitigation:* Pay-U insurance partnership, KYC verification, rating system, local partnerships (BIC, Metshelo)
+2. **Insurance Complexity:** Host concerns about liability and vehicle damage
+   - *Mitigation:* RESOLVED via Pay-U comprehensive coverage partnership
+3. **Payment Infrastructure:** Need for mobile money integration beyond cards
+   - *Mitigation:* Orange Money, MyZaka, Smega integration confirmed
+4. **Geographic Spread:** Distance between Gaborone, Francistown, Maun/Kasane requires localized operations
+   - *Mitigation:* Phased rollout (Gaborone first, then Francistown Q3, Maun/Kasane Q4 2026)
+5. **Seasonal Tourism:** Maun/Kasane demand highly seasonal (peak safari season)
+   - *Mitigation:* Diversified markets (Gaborone year-round, tourism seasonal boost)
+6. **Vehicle Availability:** Limited fleet requires aggressive host acquisition
+   - *Mitigation:* FIRST100 campaign, partnership with Sekele Fund, Rent2Buy to add inventory
    - *Mitigation:* Integrated insurance, clear explanations, educational content
 4. **Competition:** 12+ competitors in various stages
    - *Mitigation:* Superior product, better unit economics, community focus
@@ -886,134 +928,119 @@ We're on your side, helping you succeed whether you're earning or exploring
 
 ### Pricing Model
 
-**Commission-Based Revenue Model:**
+**Two-Product Revenue Strategy:**
 
-**Core Transaction:**
-- **Host Commission:** 15% of booking value (deducted from host earnings)
-- **Renter Service Fee:** 0% (included in booking price)
-- **Payment Processing:** Absorbed by platform (2.9% + $0.30 via Stripe)
-- **Effective Platform Take Rate:** ~12% after payment processing
+**PRODUCT 1: P2P Car Sharing (Live)**
+
+**Commission-Based Model:**
+- **Platform Commission:** 15% of booking value
+- **Host Earnings:** 85% of booking value
+- **Renter Fee:** P0 (no service fees for renters)
+- **Payment Processing:** Mobile Money (Orange Money, MyZaka, Smega) - low/no fees
 
 **Example Transaction:**
 ```
-Renter pays: $100/day × 3 days = $300
-Platform commission (15%): $45
-Payment processing (2.9% + $0.30): $9.00
-Host payout (85%): $255
-Platform net revenue: $36
+Renter pays: P350/day × 3 days = P1,050
+Platform commission (15%): P157.50
+Host payout (85%): P892.50
+Platform net revenue: P157.50
 ```
 
-**Competitive Comparison:**
-- **Turo:** 25-35% commission → Host gets $195-225 for $300 booking
-- **Getaround:** 40% commission → Host gets $180 for $300 booking
-- **MobiRides:** 15% commission → Host gets $255 for $300 booking
-- **Host Advantage:** $30-75 more per $300 booking (13-31% more earnings)
+**Competitive Advantage:**
+- **Traditional Botswana Rentals:** P600-900/day
+- **MobiRides:** P350-600/day (40% cheaper)
+- **Host Earnings:** P3,500-7,000/month depending on utilization
+- **No Hidden Fees:** Transparent pricing vs. traditional agency fees
+
+**Current Pricing Structure (Validated):**
+| Vehicle Type | Daily Rate | Host Earnings (85%) | Platform (15%) |
+|-------------|-----------|---------------------|----------------|
+| Economy Sedan | P300-400 | P255-340 | P45-60 |
+| Family Sedan | P350-450 | P298-383 | P53-68 |
+| SUV | P450-600 | P383-510 | P68-90 |
+| Luxury SUV | P600-800 | P510-680 | P90-120 |
+| Pickup Truck | P400-550 | P340-468 | P60-83 |
+
+**PRODUCT 2: Rent2Buy Marketplace (Q2 2026 Pilot)**
+
+**Revenue Streams:**
+- **Down Payment Commission:** 20% of P5,000-10,000 = P1,000-2,000 per conversion
+- **Monthly Platform Fee:** P500-750 per active contract
+- **Vehicle Margin:** P10,000-15,000 per vehicle (repo purchase at P60-70K, sell at P80-90K)
+
+**How Rent2Buy Works:**
+1. **Customer Application:** Young professional (25-35), income P5K-12K/month
+2. **Down Payment:** P5,000-10,000 (MobiRides retains 20% = P1-2K commission)
+3. **Monthly Payment:** P3,000-4,500 for 36 months + P500-750 platform fee
+4. **Investor Returns:** 6.5% annual return for Motshelo groups (repaid over 36 months)
+5. **Ownership Transfer:** After 36 months, customer owns vehicle outright
+
+**Rent2Buy Pilot Economics (3 Vehicles):**
+```
+Initial Fund: P200,000
+Vehicle Cost: P60-70K each × 3 vehicles = P180-210K
+Down Payments: P5-10K × 3 = P15-30K (retain 20% = P3-6K)
+Monthly Platform Fees: P500-750 × 3 = P1,500-2,250/month
+Vehicle Margin at Sale: P10-15K × 3 = P30-45K (over 36 months)
+Total Revenue (3 years): P3-6K + P54-81K + P30-45K = P87-132K
+Investor Return: 6.5% annually = P39K repaid over 36 months
+Net Profit: P48-93K over 3 years
+```
 
 ### Pricing Strategy
 
-**Penetration Pricing Strategy:**
+**Phase 1: Active Campaign (Nov-Dec 2025)**
+- **Objective:** Drive renter adoption and host growth to 60+ vehicles
+- **Current Promotion:** P100 OFF first rental with code **FIRST100**
+- **Renter Targets:** 150+ registered users by Dec 31, 2025
+- **Host Targets:** 60+ vehicles listed by Dec 31, 2025
+- **Commission:** 15% (maintained - already competitive)
 
-**Phase 1: Market Entry (Months 1-6)**
-- **Objective:** Rapid host acquisition and marketplace liquidity
-- **Commission:** 15% (permanent competitive advantage)
+**Phase 2: Growth Acceleration (Q1-Q2 2026)**
+- **Objective:** Mobile app launch, scale to 100+ vehicles, Rent2Buy pilot
 - **Promotions:**
-  - First 3 bookings: 10% commission (limited time)
-  - Renter credit: $20 off first booking
-  - Referral bonus: $15 for referrer, $15 for referee
-- **Target:** Build 500+ vehicle inventory
+  - Mobile app launch bonus: P50 credit for first mobile booking
+  - Referral program: P50 for referrer, P50 for new renter
+  - Host incentives: First 5 bookings commission reduced to 12%
+- **Rent2Buy Launch:** 3-vehicle pilot with Motshelo partnership
+- **Target:** 100+ P2P vehicles, 500+ registered users
 
-**Phase 2: Growth (Months 7-12)**
-- **Objective:** Scale bookings and establish market presence
-- **Commission:** 15% (maintained)
+**Phase 3: Market Expansion (Q3-Q4 2026)**
+- **Objective:** Launch Francistown and Maun/Kasane
 - **Promotions:**
-  - Seasonal campaigns (summer travel, holidays)
-  - Bulk booking discounts (7+ days: 10% off)
-  - Loyalty rewards for repeat renters
-- **Target:** 5,000+ active users, 1,000+ vehicles
-
-**Phase 3: Optimization (Months 13-24)**
-- **Objective:** Maximize revenue and introduce premium features
-- **Commission:** 15% base
-- **Premium Tiers:**
-  - Basic: 15% commission (standard)
-  - Pro: 12% commission + $29/month subscription (for hosts with 5+ bookings/month)
-  - Enterprise: 10% commission + custom pricing (for fleet operators)
-- **Target:** Profitability, 10,000+ vehicles
-
-### Price Points & Tiers
-
-**Host Tiers (Month 13+):**
-
-**Free Tier (Basic Host):**
-- Commission: 15%
-- Features: All core features
-- Payout: Standard (24-48 hours)
-- Support: Email support
-- Best for: Casual hosts, 1-2 vehicles
-
-**Pro Host ($29/month):**
-- Commission: 12% (saves $9 per $300 booking)
-- Features: All basic + dynamic pricing suggestions, priority listing, advanced analytics
-- Payout: Fast (24 hours)
-- Support: Priority email + chat
-- Best for: Active hosts, 3-5 vehicles
-- Break-even: ~10 bookings/month
-
-**Enterprise Host (Custom):**
-- Commission: 10% (negotiable)
-- Features: All Pro + API access, bulk management tools, dedicated account manager
-- Payout: Instant (on-demand)
-- Support: 24/7 phone + dedicated rep
-- Best for: Fleet operators, 10+ vehicles
-- Minimum: $500/month or 50 bookings/month
-
-**Renter Benefits (No Fees):**
-- All renters access same pricing
-- Loyalty program: 5th booking gets 10% credit
-- Referral credits stackable
-- No service fees ever
+  - Geographic launch bonuses (P75 OFF in new cities)
+  - Safari season campaigns (Maun/Kasane peak season)
+  - Host loyalty: Top performers get featured listings free
+- **Rent2Buy Scale:** Add 2-3 more vehicles, target 5+ conversions
+- **Target:** 150+ total vehicles, 2,500+ users, 3 cities operational
 
 ### Revenue Model
 
-**Primary Revenue Streams:**
+**2026 Revenue Projections:**
 
-**1. Transaction Commissions (80% of revenue)**
-- 15% commission on all confirmed bookings
-- Average booking value: $255 (3 days × $85/day)
-- Platform revenue per booking: $38.25
-- Target: 10,000 bookings in Month 12 = $382,500/month = $4.59M annual run rate
+**P2P Car Sharing Revenue:**
+| Quarter | Vehicles | Avg Bookings/Vehicle/Month | Avg Booking Value | Monthly Revenue | Quarterly Revenue |
+|---------|----------|---------------------------|------------------|-----------------|------------------|
+| Q1 2026 | 80 | 2.5 | P1,050 (3 days @ P350) | P31,500 | P94,500 |
+| Q2 2026 | 100 | 3 | P1,050 | P47,250 | P141,750 |
+| Q3 2026 | 120 | 3.5 | P1,050 | P66,150 | P198,450 |
+| Q4 2026 | 150 | 4 | P1,050 | P94,500 | P283,500 |
+| **2026 Total** | | | | | **P718,200** |
 
-**2. Insurance Product (15% of revenue)**
-- Partner with insurance providers
-- Attach rate target: 25% of bookings
-- Commission: 20% of insurance premium
-- Average premium: $30/booking
-- Revenue per insured booking: $6
-- Target: 2,500 insurance sales in Month 12 = $15,000/month = $180K annual
+**Rent2Buy Revenue (Q2-Q4 2026):**
+| Quarter | Active Contracts | Monthly Platform Fee | Down Payment Commissions | Quarterly Revenue |
+|---------|------------------|---------------------|-------------------------|------------------|
+| Q2 2026 | 3 | P1,875 (P625 avg × 3) | P4,500 (2 conversions) | P10,125 |
+| Q3 2026 | 4 | P2,500 | P3,000 (1 conversion) | P10,500 |
+| Q4 2026 | 5 | P3,125 | P4,500 (2 conversions) | P13,875 |
+| **2026 Total** | | | | **P34,500** |
 
-**3. Premium Subscriptions (5% of revenue)**
-- Pro Host: $29/month (target: 200 hosts by Month 18)
-- Enterprise Host: Custom (target: 10 hosts by Month 24)
-- Target: $5,800/month = $70K annual (Month 18)
+**Total 2026 Revenue: P752,700 (P2P: P718K + Rent2Buy: P35K)**
 
-**Future Revenue Opportunities (Roadmap):**
-- Featured listings: $50/month for priority placement
-- Verified badge: $15/month for enhanced trust signal
-- Photography service: $100 one-time for professional car photos
-- Damage protection upsell: $10/day for zero-deductible coverage
-- API access: $500/month for third-party integrations
-
-**Revenue Projections (12 Months):**
-```
-Month 1: $5,000 (100 bookings × $38 + 25 insurance × $6)
-Month 3: $20,000 (500 bookings)
-Month 6: $80,000 (2,000 bookings)
-Month 9: $200,000 (5,000 bookings)
-Month 12: $400,000 (10,000 bookings + insurance + subscriptions)
-
-Year 1 Total Revenue: ~$2.1M
-Year 2 Target: $8-10M (40,000 bookings/month average)
-```
+**2027 Projections:**
+- **P2P:** P1.2M (200 vehicles, higher utilization)
+- **Rent2Buy:** P300K (10 active contracts, more conversions)
+- **Total:** P1.5M
 
 ### Unit Economics
 
@@ -1360,77 +1387,67 @@ Accent Colors:
 
 ### Marketing Campaigns
 
-**Launch Campaign - "Share the Road" (Months 1-2)**
+**CURRENT ACTIVE CAMPAIGN - "Get Behind the Wheel" (Nov 17 - Dec 14, 2025)**
 
-**Objective:** Generate initial awareness and acquire first 500 hosts
+**Campaign Overview:**
+- **Status:** LIVE and running
+- **Duration:** 4 weeks (Nov 17 - Dec 14, 2025)
+- **Promotion:** P100 OFF first rental with code **FIRST100**
+- **Objective:** Drive rapid user acquisition before mobile app launch in Q1 2026
 
-**Creative Concept:**
-- Tagline: "Your Car, Your Rules, Your Earnings"
-- Visuals: Real hosts showing car + earnings dashboard
-- Hook: "What if your car could pay for itself?"
+**Two-Phase Structure:**
 
-**Channels:**
-- Facebook/Instagram ads to car owners
-- Google search for "earn money with car"
-- PR push with founder story
-- Guerrilla marketing in parking lots
+**Phase 1: Renter Acquisition (Nov 17-30, 2025)**
+- **Primary Message:** "P100 OFF YOUR FIRST RIDE - Use code FIRST100"
+- **Target:** 80+ new renter registrations
+- **Channels:**
+  - Social media (Facebook, Instagram) - organic posts
+  - WhatsApp groups and community networks
+  - Word-of-mouth referrals
+  - Email to existing signups
+- **Secondary Message:** "40% cheaper than traditional rentals + P100 OFF"
+- **Call-to-Action:** "Book now at www.mobiridesbw.com"
 
-**Budget:** $60,000
-**Target:** 500 hosts, 2,000 renters, 1,000 bookings
+**Phase 2: Host Acquisition (Dec 1-14, 2025)**
+- **Primary Message:** "Turn your idle car into P3,500-7,000 per month"
+- **Target:** 60+ total vehicles (20+ new hosts)
+- **Channels:**
+  - Facebook groups (car owners, side hustles)
+  - Instagram Stories and Posts
+  - Direct outreach to vehicle owners
+  - Partnership networks (Sekele Fund, Metshelo)
+- **Secondary Message:** "Full Pay-U insurance coverage | Fast confirmations <24hrs | Only 15% commission"
+- **Call-to-Action:** "List your vehicle today"
 
-**Growth Campaign - "Road Trip Season" (Months 5-7)**
+**Campaign Metrics (Target by Dec 31, 2025):**
+- Total Vehicles Listed: 60+ (from current 46)
+- Total Registered Users: 150+ (from current 100)
+- Campaign Bookings: 25+ completed rentals using FIRST100
+- Revenue Impact: P15,000+ additional revenue from campaign
+- Social Engagement: 500+ post engagements, 100+ shares
 
-**Objective:** Scale bookings during summer travel season
+**Campaign Budget:**
+- **Total:** P0 (organic campaign)
+- **Future Paid Boost (Optional):** P2,000-5,000 for Facebook/Instagram ads if organic underperforms
 
-**Creative Concept:**
-- Tagline: "Adventure Awaits - For Less"
-- Visuals: UGC from actual rentals, scenic drives
-- Hook: "Weekend getaway from $85/day"
+**Creative Assets:**
+- Hero image: Professional photo of vehicle with "P100 OFF" badge
+- Social graphics: Discount code prominently displayed
+- WhatsApp message templates for sharing
+- Testimonial graphics from early hosts showing earnings
 
-**Channels:**
-- Instagram/TikTok video ads
-- Google search for travel keywords
-- Influencer partnerships (travel niche)
-- Email campaigns to existing users
+**Campaign Success Metrics:**
+- ✅ Achieve 60+ vehicles by Dec 31
+- ✅ Acquire 150+ total users by Dec 31
+- ✅ Generate 25+ bookings with FIRST100 code
+- ✅ Build momentum for Q1 2026 mobile app launch
+- ✅ Validate product-market fit through organic growth
 
-**Budget:** $150,000
-**Target:** 5,000 new renters, 300 new hosts, 8,000 bookings
-
-**Trust Campaign - "Verified Community" (Months 8-10)**
-
-**Objective:** Address trust concerns and reduce acquisition friction
-
-**Creative Concept:**
-- Tagline: "Every User Verified. Every Ride Protected."
-- Visuals: Behind-the-scenes of verification process
-- Hook: "See why 99% of rentals complete without issues"
-
-**Channels:**
-- YouTube explainer videos
-- Blog content on safety
-- PR in safety/consumer protection media
-- Retargeting campaigns for drop-offs
-
-**Budget:** $90,000
-**Target:** Increase conversion rate by 25%, reduce support tickets by 30%
-
-**Holiday Campaign - "Give the Gift of Adventure" (Months 11-12)**
-
-**Objective:** Drive end-of-year bookings and gift cards
-
-**Creative Concept:**
-- Tagline: "Memories Over Things"
-- Visuals: Families on road trips, holiday adventures
-- Hook: "Gift cards now available - starting at $50"
-
-**Channels:**
-- Facebook/Instagram carousel ads
-- Email campaigns to existing users
-- Last-minute booking promotions
-- Partnership with gift card marketplaces
-
-**Budget:** $120,000
-**Target:** 6,000 bookings in 2 months, $100K in gift card sales
+**Post-Campaign Strategy (Jan 2026):**
+- Analyze FIRST100 conversion rates and user behavior
+- Prepare for Q1 mobile app launch campaign
+- Transition successful FIRST100 users to loyal, repeat customers
+- Use campaign learnings to refine Q1 paid acquisition strategy
 
 ---
 
@@ -1502,25 +1519,108 @@ Awareness → Interest → Evaluation → Booking → Retention
 
 ### Key Partnerships
 
-**Strategic Partnerships:**
+**Confirmed Strategic Partnerships (Live):**
 
-**1. Insurance Providers (Critical - Month 1)**
+**1. Insurance Providers - PAY-U & BIC (ACTIVE)**
 
-**Partnership Objective:**
-- Provide comprehensive coverage for hosts and renters
-- Reduce liability and increase trust
-- Generate additional revenue through insurance attachment
+**Pay-U Insurance Partnership:**
+- **Status:** Confirmed and active
+- **Coverage:** Comprehensive host insurance for all listed vehicles
+- **Impact:** Eliminated #1 host concern (liability and vehicle damage)
+- **Value Proposition:** Full coverage during rental periods, vetted renter requirements
+- **Revenue Model:** Platform-facilitated, builds trust and host confidence
 
-**Target Partners:**
-- National insurance carriers
-- P2P-specialized insurers (e.g., Intact, USAA)
-- Emerging insurtech companies
+**BIC (Botswana Insurance Corporation):**
+- **Status:** Confirmed partnership
+- **Purpose:** Additional insurance product options and coverage validation
+- **Integration:** Backup coverage and specialized insurance products
 
-**Partnership Model:**
-- White-label insurance products
-- Revenue share: 20% of premium to MobiRides
-- Integrated checkout experience
-- Claims management support
+**2. Funding & Investment Partners (ACTIVE)**
+
+**Cerberus Capital:**
+- **Investment:** P55,000 secured
+- **Status:** Active investor
+- **Purpose:** Initial platform development and launch operations
+
+**Sekele Fund:**
+- **Status:** Confirmed partnership
+- **Purpose:** Potential vehicle financing and growth capital
+- **Strategic Value:** Access to funding networks and business development support
+
+**Metshelo (Stokvel Group Network):**
+- **Status:** Active partnership discussions
+- **Purpose:** Rent2Buy vehicle financing through community investment groups
+- **Target:** P200K fund for Q2 2026 pilot (3 vehicles)
+- **Investor Returns:** 6.5% annual return over 36 months
+- **Strategic Value:** Community-driven ownership model, cultural fit with Botswana savings groups
+
+**3. Payment & Transaction Partners (ACTIVE)**
+
+**Mobile Money Integration:**
+- **Platforms:** Orange Money, MyZaka, Smega
+- **Status:** Integrated and operational
+- **Purpose:** Low-fee payment options preferred by Botswana consumers
+- **Impact:** Reduces payment friction, no high credit card processing fees
+- **Market Fit:** 85%+ smartphone penetration, strong mobile money adoption in Botswana
+
+**4. Future Partnership Pipeline (2026)**
+
+**Tier 1 Priority - Motshelo/Stokvel Groups (Q1-Q2 2026):**
+- **Objective:** Secure 3+ Motshelo partnerships for Rent2Buy funding
+- **Target Fund Size:** P200K initial, P500K+ by Q4 2026
+- **Returns:** 6.5% annually, repaid over 36 months
+- **Strategic Value:** Community ownership model, cultural alignment, patient capital
+
+**Tier 2 Priority - Chinese EV Dealerships (Q3-Q4 2026):**
+- **Objective:** Partnership with EV dealers for Rent2Buy inventory (2027 EV phase)
+- **Target Partners:** Refleet Partners, local Chinese EV importers
+- **Business Model:** Dealerships provide inventory financing, MobiRides manages rent-to-own contracts
+- **Strategic Value:** Access to affordable EV inventory, greener fleet, lower operating costs
+
+**Tier 3 Priority - Traditional Banks (2026-2027):**
+- **Objective:** Vehicle financing lines for Rent2Buy expansion
+- **Target Partners:** First National Bank Botswana, Absa Botswana, Stanbic
+- **Credit Facility Target:** P500K-1M for vehicle inventory
+- **Strategic Value:** Scale Rent2Buy beyond Motshelo funds, institutional credibility
+
+**Partnership Strategy:**
+
+**Phase 1 (Q4 2025 - Complete):**
+- ✅ Insurance (Pay-U, BIC)
+- ✅ Mobile Money (Orange Money, MyZaka, Smega)
+- ✅ Initial Funding (Cerberus, Sekele Fund, Metshelo)
+
+**Phase 2 (Q1-Q2 2026):**
+- Motshelo partnerships (3+ groups, P200K+ total fund)
+- Corporate partnerships (business travel, safari operators)
+- Tourism partnerships (hotels in Maun/Kasane, travel agencies)
+
+**Phase 3 (Q3-Q4 2026):**
+- EV dealership partnerships (prep for 2027 EV phase)
+- Traditional bank credit facilities
+- Regional expansion partnerships (Francistown, Maun/Kasane business networks)
+
+**Partnership Value Proposition:**
+
+**For Insurance Partners:**
+- New revenue stream (P2P car sharing is growing market)
+- Risk mitigation through vetted renters and KYC
+- Data sharing for better risk assessment
+
+**For Motshelo Groups:**
+- 6.5% annual returns (above bank savings rates)
+- Community impact (helping young Batswana own vehicles)
+- Repayment secured through vehicle ownership transfer structure
+
+**For Mobile Money Platforms:**
+- Transaction volume growth
+- User acquisition (renters and hosts using platform)
+- Brand association with innovative tech startup
+
+**For EV Dealerships:**
+- New sales channel (rent-to-own vs. traditional purchase)
+- Recurring revenue through financing arrangements
+- Market expansion for EV adoption in Botswana
 
 **Target Metrics:**
 - 25% attachment rate
