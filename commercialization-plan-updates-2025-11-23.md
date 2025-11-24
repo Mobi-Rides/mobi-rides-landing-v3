@@ -63,7 +63,15 @@
 - **Action:** Complete investor documentation by Dec 15; close commitments from Sekele Fund, Motshelo groups
 - **Responsible:** CEO + CFO
 
-**3. User Verification Completion Gap - HIGH**
+**3. Payment System Development Status - CRITICAL**
+- **Status:** Payment & Wallet System only 35% complete (vs Booking System 97%, Vehicle Handover 95%)
+- **Impact:** Blocks full commercialization launch (Feb 28, 2026 target); revenue processing delays; user drop-off
+- **Root Cause:** Technical complexity; integration dependencies with mobile money providers
+- **Action:** Prioritize payment system completion to 95%+ by Jan 31, 2026; daily standups; external dev support if needed
+- **Timeline:** Urgent - Q1 2026 (blocking Feb 28 commercial launch)
+- **Responsible:** CTO + Lead Developer + Product Manager
+
+**4. User Verification Completion Gap - HIGH**
 - **Status:** 95% of 154 registered users have NOT completed new 3-step verification
 - **Impact:** Limits booking conversions; reduces revenue realization
 - **Root Cause:** Old 7-step process too complex; new 3-step not retroactively completed
@@ -130,6 +138,12 @@
 ### TIER 3: Banks (Q3 2026)
 - **Targets:** FNB, Standard Chartered, BSB
 - **Role:** Larger loans (>P200K)
+
+### TIER 4: Operational Support Partners (Q1 2026)
+- **Maintenance & Service:** Local garages/dealerships for vehicle servicing
+- **Roadside Assistance:** AA Botswana, breakdown services
+- **Payment Gateway:** DPO Payment Gateway for card processing
+- **Customer Support:** WhatsApp Business, help desk software integration
 
 ---
 
