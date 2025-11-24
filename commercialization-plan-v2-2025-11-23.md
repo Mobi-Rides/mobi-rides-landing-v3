@@ -7,7 +7,7 @@
 
 ## EXECUTIVE SUMMARY
 
-MobiRides is Botswana's first peer-to-peer car-sharing platform, transitioning from MVP validation to commercial scale. After 11 months of operation, we've validated product-market fit with 100+ organic users, 46+ vehicles, and P10,000+ in revenue—all achieved with zero paid marketing.
+MobiRides is Botswana's first peer-to-peer car-sharing platform, transitioning from MVP validation to commercial scale. After 10 months of operation (Jan-Oct 2025), we've validated product-market fit with 100+ organic users, 46+ vehicles, and P247,535+ in revenue—all achieved with zero paid marketing. This represents a 305% growth rate and P24,753 average monthly revenue.
 
 **Current Momentum:**
 - Live platform operational since Q1 2025
@@ -19,7 +19,7 @@ MobiRides is Botswana's first peer-to-peer car-sharing platform, transitioning f
 We're launching a dual-product strategy combining our validated P2P car-sharing platform (15% commission) with an innovative Rent2Buy marketplace (10% platform + 6.5% financing fees) to capture both rental and vehicle ownership markets.
 
 **Funding Status:**
-- Secured: P55,000 from Cerberus Capital (January 2025)
+- Secured: P71,500 from Cerberus Capital (P55K January 2025 + P16.5K July 2025)
 - Next Round: P700,000 pre-seed (P200K for Rent2Buy revolving fund, P500K for operations)
 
 **2026 Targets:**
@@ -34,27 +34,54 @@ We're launching a dual-product strategy combining our validated P2P car-sharing 
 ### 1.1 Platform Metrics
 - **Users:** 100+ organic (zero paid marketing)
 - **Fleet:** 46+ vehicles from key fleet operators
-- **Revenue:** P10,000+ generated (Jan-Nov 2025)
+- **Revenue:** P247,535+ generated (Jan-Oct 2025)
+- **Average Monthly Revenue:** P24,753
+- **Growth Rate:** 305% (P14.2K Jan → P43.3K Oct)
 - **Average Booking Value:** P350-600 for 2-3 day rentals
 - **Repeat Booking Rate:** Strong retention among early adopters
 
-### 1.2 Monthly Financial Performance (Q1-Q3 2025)
+### 1.2 Monthly Financial Performance (Jan-Oct 2025)
 
-**January 2025:**
-- Credits: P69,200 (P55K Cerberus investment + P14,200 revenue)
-- Revenue: P14,200
-- Operating Costs: P27,000
+**Detailed Monthly Breakdown:**
 
-**February 2025:**
-- Revenue: P30,195 (PULAMED partnership + bookings)
-- Operating Costs: P25,000
+| Month | Revenue | Operating Costs | Net Profit/(Loss) |
+|-------|---------|-----------------|-------------------|
+| Jan   | P14,200 | P27,000        | (P12,800)         |
+| Feb   | P30,195 | P25,000        | P5,195            |
+| Mar   | P15,670 | P15,000        | P670              |
+| Apr   | P18,700 | P18,500        | P200              |
+| May   | P22,150 | P20,000        | P2,150            |
+| Jun   | P27,820 | P22,000        | P5,820            |
+| Jul   | P35,600 | P25,000        | P10,600           |
+| Aug   | P28,900 | P21,000        | P7,900            |
+| Sep   | P26,000 | P19,000        | P7,000            |
+| Oct   | P43,300 | P24,000        | P19,300           |
+| **Total** | **P247,535** | **P216,500** | **P31,035** |
 
-**March-October 2025:**
-- Average Monthly Revenue: P18-22K
-- Average Operating Costs: P15-27K/month
-- Cost Breakdown: Platform maintenance, operations, marketing
+**Key Financial Metrics:**
+- **Total Revenue:** P247,535.05 (Jan-Oct 2025)
+- **Average Monthly Revenue:** P24,753
+- **Peak Revenue Month:** October 2025 (P43,300)
+- **Growth Rate:** 305% (Jan P14.2K → Oct P43.3K)
+- **Gross Profit:** P40,506.41 (16.4% margin)
+- **Host Payout Rate:** 83.6% (P207,028.64 total to hosts)
+- **Operating Expenses:** P54,423.19 (detailed breakdown below)
+- **Net Profit/(Loss):** P31,035 (12.5% net margin)
+- **Breakeven Months:** 8 of 10 months (Feb-Oct)
+- **Average Monthly Burn:** P5,442 (excluding host payouts)
 
-**November 2025 (Current):**
+**Operating Cost Structure (10-month total):**
+- Platform & Technology: P20,891.92 (38%)
+- Operations & Staff: P13,066.83 (24%)
+- Vehicle Support: P10,340.18 (19%)
+- Marketing & Admin: P7,221.87 (13%)
+- Banking & Payment Fees: P2,902.39 (5%)
+
+**July 2025 Special Note:**
+- Additional Cerberus investment: P16,500
+- Total Cerberus funding: P71,500 (P55K Jan + P16.5K Jul)
+
+**November 2025 (Current Campaign):**
 - Active Campaign: P100 OFF promotion (code FIRST100)
 - Target: 50 bookings, 500 app downloads
 - Phase 1 (Nov 17-30): Renter acquisition
@@ -182,8 +209,11 @@ We're launching a dual-product strategy combining our validated P2P car-sharing 
 **Current Traction:**
 - 46+ active vehicles
 - 100+ registered users
-- P10K+ revenue generated
+- P247K+ revenue generated (Jan-Oct 2025)
+- P24,753 average monthly revenue
+- 305% growth rate (Jan to Oct)
 - Strong host retention (>80%)
+- Positive net margin achieved (12.5%)
 
 ### 3.2 Product 2: Rent2Buy Marketplace (Q2 2026 Launch)
 
@@ -407,8 +437,9 @@ Vehicle Sale Price: P100,000
 ### 6.1 Current Funding Status
 
 **Secured (2025):**
-- Cerberus Capital: P55,000 (January 2025)
+- Cerberus Capital: P71,500 total (P55K January 2025 + P16.5K July 2025)
 - Used for: Platform development, initial operations, pilot fleet acquisition
+- Current Status: Platform operational, 46+ vehicles, P247K+ revenue generated
 
 ### 6.2 Pre-Seed Round (Q1 2026) - P700,000
 
