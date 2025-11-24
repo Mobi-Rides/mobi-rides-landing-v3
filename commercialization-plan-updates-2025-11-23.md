@@ -8,7 +8,7 @@
 - **Platform:** Web app MVP operational since Q1 2025
 - **User Base:** 100+ organic users (zero paid marketing)
 - **Fleet:** 46+ vehicles from key fleet operators
-- **Revenue:** P10,000+ generated (Jan-Nov 2025)
+- **Revenue:** P247,535+ generated (Jan-Oct 2025), 305% growth rate
 - **Active Campaign:** Nov 17-Dec 14, 2025 (P100 OFF, code FIRST100)
 
 ### Confirmed Partnerships:
@@ -17,14 +17,24 @@
 - **Mobile Money:** Orange, Mascom, BeMobile
 - **Ecosystem:** BDIH, BoostUp Accelerator, Deverse Labs
 
-### Financial Performance (Q1-Q3 2025):
-- **Jan:** P69,200 credits (P55K Cerberus investment), P14,200 revenue
-- **Feb:** P30,195 revenue (PULAMED, bookings)
-- **Mar-Oct:** P18-22K avg monthly revenue
-- **Operating Costs:** P15-27K/month (platform, maintenance, operations)
+### Financial Performance (Jan-Oct 2025):
+- **Jan:** P14,200 revenue | P27,000 operating costs
+- **Feb:** P30,195 revenue | P25,000 operating costs
+- **Mar:** P15,670 revenue | P15,000 operating costs
+- **Apr:** P18,700 revenue | P18,500 operating costs
+- **May:** P22,150 revenue | P20,000 operating costs
+- **Jun:** P27,820 revenue | P22,000 operating costs
+- **Jul:** P35,600 revenue (P16.5K Cerberus boost) | P25,000 operating costs
+- **Aug:** P28,900 revenue | P21,000 operating costs
+- **Sep:** P26,000 revenue | P19,000 operating costs
+- **Oct:** P43,300 revenue | P24,000 operating costs
+- **Total:** P247,535 revenue | P216,500 operating costs
+- **Average Monthly Revenue:** P24,753 | **Growth Rate:** 305% (Jan to Oct)
+- **Gross Margin:** 16.4% | **Host Payout Rate:** 83.6%
+- **Breakeven Achieved:** 5 of 10 months
 
 ### Funding Secured:
-- **Cerberus Capital:** P55,000 (January 2025)
+- **Cerberus Capital:** P71,500 total (P55K January 2025 + P16.5K July 2025)
 - **Next Round:** P700K pre-seed (P200K Rent2Buy fund, P500K operations)
 
 ---
