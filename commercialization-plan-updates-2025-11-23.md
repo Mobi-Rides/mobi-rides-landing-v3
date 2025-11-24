@@ -6,8 +6,8 @@
 
 ### Current Status:
 - **Platform:** Web app MVP operational since Q1 2025
-- **User Base:** 100+ organic users (zero paid marketing)
-- **Fleet:** 46+ vehicles from key fleet operators
+- **User Base:** 154 registered users (zero paid marketing)
+- **Fleet:** 56 vehicles from key fleet operators
 - **Revenue:** P247,535+ generated (Jan-Oct 2025), 305% growth rate
 - **Active Campaign:** Nov 17-Dec 14, 2025 (P100 OFF, code FIRST100)
 
@@ -42,7 +42,7 @@
 ## 1. Market Positioning
 
 ### Actual Markets (Validated):
-- **Gaborone:** 46+ vehicles, 100+ users, ~70% revenue
+- **Gaborone:** 56 vehicles, 154 users, ~70% revenue
 - **Expansion:** Francistown (Q1 2026), Maun/Kasane (Q2 2026 - Safari)
 
 ### Pricing (Real Platform Data):
