@@ -24,6 +24,7 @@ We're launching a dual-product strategy combining our validated P2P car-sharing 
 - **IP Protection:** ✓ Trademark approved by CIPA, international registration in progress
 
 **CRITICAL RISKS (Nov 24, 2025):**
+- Payment system: 35% complete (blocks Feb 28, 2026 commercial launch)
 - Fleet concentration: 80%+ from Trillo Rentals (ONLY signed MOU)
 - User verification: 95% incomplete (conversion blocker)
 - Funding deadline: Dec 15, 2025 (3 weeks)
@@ -124,6 +125,18 @@ We're launching a dual-product strategy combining our validated P2P car-sharing 
 - BDIH (Botswana Digital Innovation Hub)
 - BoostUp Accelerator
 - Deverse Labs
+
+**Operational Infrastructure (In Development):**
+- WhatsApp Business (customer support integration - Q1 2026)
+- Help Desk Software (implementation planned - Q1 2026)
+- DPO Payment Gateway (card processing - 35% complete)
+- CarsCheck & Nkitsi (vehicle diagnostics, KYC background checks)
+- Rent Gear (tracking & telematics hardware)
+
+**Service Partners (Pipeline):**
+- Maintenance & Service Plans (local garage networks)
+- Roadside Assistance (AA Botswana, breakdown services)
+- Quality Assurance: Security audit, penetration testing, load testing, UAT (Q1 2026)
 
 ### 1.4 Current Pricing Structure (Live Platform)
 - **Budget:** P150-250/day
