@@ -20,7 +20,13 @@ We're launching a dual-product strategy combining our validated P2P car-sharing 
 
 **Funding Status:**
 - Secured: P71,500 from Cerberus Capital (P55K January 2025 + P16.5K July 2025)
-- Next Round: P700,000 pre-seed (P200K for Rent2Buy revolving fund, P500K for operations)
+- Next Round: P700,000 pre-seed **TARGET CLOSE: Dec 15, 2025** (P200K for Rent2Buy revolving fund, P500K for operations)
+- **IP Protection:** ✓ Trademark approved by CIPA, international registration in progress
+
+**CRITICAL RISKS (Nov 24, 2025):**
+- Fleet concentration: 80%+ from Trillo Rentals (ONLY signed MOU)
+- User verification: 95% incomplete (conversion blocker)
+- Funding deadline: Dec 15, 2025 (3 weeks)
 
 **2026 Targets:**
 - Revenue: P3.44M (P2.59M P2P + P847K Rent2Buy)
@@ -87,7 +93,19 @@ We're launching a dual-product strategy combining our validated P2P car-sharing 
 - Phase 1 (Nov 17-30): Renter acquisition
 - Phase 2 (Dec 1-14): Host acquisition (20 hosts, 30 vehicles)
 
-### 1.3 Confirmed Partnerships
+### 1.3 Fleet Composition & Risk Status
+
+**Fleet Partner Concentration (HIGH RISK):**
+- **Trillo Rentals:** 80%+ of 56 vehicles (ONLY provider with signed MOU)
+- **Other Partners:** 20% (no signed MOUs)
+- **Action Required:** Diversify to <40% per partner by Q2 2026
+
+**User Verification Gap (HIGH RISK):**
+- 154 registered users, only 5% completed new 3-step verification
+- 95% stuck on old 7-step process
+- **Action Required:** 80%+ completion by Q1 2026
+
+### 1.4 Confirmed Partnerships
 
 **Insurance:**
 - BIC (Botswana Insurance Company)

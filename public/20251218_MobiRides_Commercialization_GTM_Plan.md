@@ -35,7 +35,8 @@ MobiRides offers a two-product solution for the Botswana market:
 - **Active Campaign:** "Get Behind the Wheel" (Nov 17-Dec 14) - P100 OFF with code FIRST100
 - **Revenue Model:** 15% commission + Rent2Buy down payments & monthly fees
 - **Confirmed Partnerships:** BIC (insurance), Pay-U (comprehensive coverage), Sekele Fund, Metshelo, Mobile Money
-- **Secured Funding:** P71,500 from Cerberus Capital (P55K Jan + P16.5K July) + P700K pre-seed round in progress
+- **Funding Status:** P71,500 secured from Cerberus Capital; **P700K pre-seed round (TARGET CLOSE: Dec 15, 2025)**
+- **IP Protection:** ✓ Trademark approved by CIPA, international registration in progress
 - **Two-Product Strategy:** P2P Car Sharing (live) + Rent2Buy Marketplace (Q2 2026 pilot with 3 vehicles)
 
 ---
@@ -67,10 +68,13 @@ MobiRides offers a two-product solution for the Botswana market:
 - **Average Monthly Burn:** P5,442 (excluding host payouts)
 
 ### Strategic Goals
-1. **Scale P2P Operations:** Grow from 56 to 150+ vehicles in Gaborone by Dec 2026
-2. **Revenue Growth:** Scale from P43.3K/month (Oct 2025) to P157.5K/month (Dec 2026) - 264% growth
-3. **Launch Rent2Buy:** Pilot with 3 vehicles in Q2 2026, achieve 5+ conversions by Q4
-4. **Geographic Expansion:** Validate Francistown (Q3) and Maun/Kasane (Q4) markets
+1. **Secure Pre-Seed Funding:** Close P700K round by Dec 15, 2025 (CRITICAL)
+2. **Scale P2P Operations:** Grow from 56 to 150+ vehicles in Gaborone by Dec 2026
+3. **Diversify Fleet Partners:** Reduce Trillo concentration from 80% to <40% by Q2 2026 (HIGH PRIORITY)
+4. **Fix User Verification:** Drive 95% incomplete verifications to 80%+ completion by Q1 2026
+5. **Revenue Growth:** Scale from P43.3K/month (Oct 2025) to P157.5K/month (Dec 2026) - 264% growth
+6. **Launch Rent2Buy:** Pilot with 3 vehicles in Q2 2026, achieve 5+ conversions by Q4
+7. **Geographic Expansion:** Validate Francistown (Q3) and Maun/Kasane (Q4) markets
 5. **Partnership Ecosystem:** Secure 3+ Motshelo partnerships and 1 EV dealership by Q2 2026
 6. **Profitability:** Maintain breakeven status achieved in Oct 2025, scale to consistent monthly profit
 
@@ -636,9 +640,156 @@ MobiRides offers a two-product solution for the Botswana market:
 
 ---
 
-## 5. Competitive & Situational Analysis
+## 6. RISK MANAGEMENT FRAMEWORK
 
-### Key Competitors
+### 6.1 Critical Risk Register (As of Nov 24, 2025)
+
+#### **CRITICAL RISKS (Immediate Action Required)**
+
+**1. Fleet Partner Concentration Risk** 🔴 **CRITICAL**
+- **Current Status:** 80%+ of inventory from Trillo Rentals (ONLY provider with signed MOU)
+- **Impact:** Platform highly vulnerable to single partner withdrawal
+- **Mitigation Actions:**
+  - Sign MOUs with 3-5 additional fleet partners by Q1 2026
+  - Launch host recruitment campaign targeting individual vehicle owners
+  - Set maximum 40% concentration threshold per partner
+  - Develop partner incentive tiers to attract diversity
+- **Responsible:** CEO + Partnerships Lead
+- **Timeline:** Urgent - Q1 2026
+- **Residual Risk:** HIGH → MEDIUM (after diversification)
+
+**2. Pre-Seed Funding Timeline** 🔴 **CRITICAL**
+- **Deadline:** December 15, 2025 (3 weeks from now)
+- **Amount:** P700,000 target close
+- **Impact:** Without funding, operational runway limited to 13 months at current burn
+- **Mitigation Actions:**
+  - Investor documentation package completion by Dec 15th
+  - Active pipeline management with Sekele Fund, Metshelo groups
+  - Lean operational structure maintained (P5.4K/month burn)
+  - Terminal date established for decision clarity
+- **Responsible:** CEO
+- **Timeline:** Dec 15, 2025 (HARD DEADLINE)
+- **Residual Risk:** MEDIUM (dependent on investor decisions)
+
+**3. User Verification Completion Gap** 🟡 **HIGH**
+- **Current Status:** 95% of registered users have NOT completed new simplified verification (3 steps)
+- **Impact:** Limits bookings, reduces conversion, affects revenue realization
+- **Root Cause:** Users registered under old 7-step process; new 3-step not retroactively completed
+- **Mitigation Actions:**
+  - Automated email campaign prompting verification completion
+  - In-app verification reminders with incentive (P50 credit)
+  - SMS follow-up for high-intent users
+  - One-click verification completion from dashboard
+  - Target: 80%+ completion by Q1 2026
+- **Responsible:** Product Manager + CTO
+- **Timeline:** Immediate - Q1 2026
+- **Residual Risk:** MEDIUM → LOW (after campaign)
+
+#### **HIGH RISKS (Active Monitoring Required)**
+
+**4. Market Competition Risk** 🟡 **HIGH**
+- **Competitors:** Bolt (ride-hailing expanding to rentals), InDrive, Treepz, Moove
+- **Mitigation:** Focus on P2P ownership niche, complementary positioning
+- **Responsible:** CEO + Marketing Lead
+- **Timeline:** Ongoing
+- **Residual Risk:** MEDIUM
+
+**5. Rent2Buy Financing Partner Dependency** 🟡 **HIGH**
+- **Status:** Pilot relies on Motshelo groups (P200K fund, Q1 2026)
+- **Mitigation:** Diversify with Chinese EV dealerships, traditional banks by Q3 2026
+- **Responsible:** CFO + Partnerships Lead
+- **Timeline:** Q1-Q3 2026
+- **Residual Risk:** MEDIUM
+
+**6. Regulatory Compliance (P2P Car Sharing)** 🟡 **MEDIUM**
+- **Concern:** Botswana regulations evolving for P2P platforms
+- **Mitigation:** Legal consultation (Steffi), early regulator engagement, BDIH support
+- **Responsible:** Chief of Staff + Legal Advisor
+- **Timeline:** Before full-scale launch (Q2 2026)
+- **Residual Risk:** LOW → MEDIUM (ongoing monitoring)
+
+#### **MEDIUM RISKS (Controlled)**
+
+**7. Insurance & Liability Coverage** 🟢 **LOW** (MITIGATED)
+- **Status:** ✓ Pay-U comprehensive insurance ACTIVE
+- **Status:** ✓ BIC partnership confirmed
+- **Status:** ✓ Bryte dispute resolution protocol in place
+- **Residual Risk:** LOW (effectively mitigated)
+
+**8. Technology & Security Risks** 🟢 **LOW** (CONTROLLED)
+- **Mitigation:** Data encryption, penetration testing, access controls implemented
+- **Responsible:** CTO
+- **Status:** Controls in place before MVP launch ✓
+- **Residual Risk:** LOW (with ongoing monitoring)
+
+**9. Intellectual Property Protection** ✅ **RESOLVED**
+- **Status:** ✓ Trademark APPROVED by CIPA (Companies and Intellectual Property Authority)
+- **Status:** ✓ International trademark registration IN PROGRESS
+- **Previous Concern:** Feature replication, branding disputes
+- **Timeline:** Filed through BDIH support
+- **Residual Risk:** MINIMAL (trademark protection secured)
+
+#### **LOW RISKS (Monitoring Only)**
+
+**10. Platform Stability & Uptime**
+- **Status:** Web app MVP operational since Q1 2025
+- **Mitigation:** QA processes, Kaizen iterative improvements
+- **Residual Risk:** LOW
+
+**11. Payment Processing & Mobile Money Integration**
+- **Status:** Orange, Mascom, BeMobile confirmed partnerships
+- **Residual Risk:** LOW
+
+**12. Host/Renter Disputes**
+- **Status:** Support processes established, insurance coverage active
+- **Residual Risk:** LOW
+
+**13. Market Demand Risk**
+- **Status:** Product-market fit validated (305% growth, P247K revenue)
+- **Residual Risk:** MINIMAL
+
+### 6.2 Risk-Adjusted Financial Projections
+
+#### 2026 Revenue Scenarios
+
+**BASE CASE (Current Trajectory):**
+- P2P Revenue: P2.59M (150 vehicles, 12 days/month avg)
+- Rent2Buy Revenue: P847K (50 vehicles, Q2-Q4)
+- **Total: P3.44M**
+
+**RISK CASE (Funding Delayed Past Dec 15 OR Fleet Concentration Issues):**
+- P2P Revenue: P2.07M (-20% due to reduced marketing, slower fleet growth)
+- Rent2Buy Revenue: P508K (-40% pilot delay to Q3)
+- **Total: P2.58M (-25%)**
+
+**UPSIDE CASE (Funding Secured + Fleet Diversification + Verification Fixed):**
+- P2P Revenue: P3.37M (+30% from verification completion, expanded fleet)
+- Rent2Buy Revenue: P1.27M (+50% accelerated pilot, early bank partnerships)
+- **Total: P4.64M (+35%)**
+
+### 6.3 Risk Monitoring KPIs
+
+**Weekly Monitoring:**
+- Fleet concentration % (Target: <40% from any single partner)
+- User verification completion rate (Target: 80%+ by Q1 2026)
+- Funding pipeline status (Target: Close by Dec 15, 2025)
+
+**Monthly Monitoring:**
+- Burn rate vs. runway (Target: <P10K/month burn, 13+ months runway)
+- New fleet partner MOUs signed (Target: 1-2 per month)
+- Host retention rate (Target: >85%)
+- Payment default rate (Target: <2%)
+
+**Quarterly Monitoring:**
+- Market share vs. competitors (Bolt, InDrive, Treepz)
+- Regulatory environment changes
+- Partnership health scores
+
+---
+
+## 7. Competitive & Situational Analysis
+
+### 7.1 Key Competitors
 
 **Direct Competitors:**
 
@@ -679,7 +830,7 @@ MobiRides offers a two-product solution for the Botswana market:
 - Pricing: $15-30/hour in traffic
 - Impact: Different use case, potential partnership opportunity
 
-### Competitive Advantage
+### 7.2 Competitive Advantage
 
 **MobiRides Unique Advantages:**
 
@@ -717,46 +868,41 @@ MobiRides offers a two-product solution for the Botswana market:
 - Pricing optimized for local purchasing power
 - Cultural adaptation in features and policies
 
-### SWOT Analysis
+### 7.3 SWOT Analysis
 
 **Strengths:**
-1. ✅ **Low Commission Rate:** 15% vs 25-40% industry average - significant competitive moat
-2. ✅ **Advanced Verification:** Multi-layer KYC and handover process reduces fraud and disputes
-3. ✅ **Technology Excellence:** Modern stack with real-time features, 85% production-ready
-4. ✅ **Integrated Wallet:** Transparent financial management builds trust
-5. ✅ **Comprehensive Features:** All key features (messaging, navigation, reviews) in one platform
-6. ✅ **Admin Infrastructure:** SuperAdmin and audit logging for operational excellence
-7. ✅ **Handover Innovation:** Industry-leading 7-step process with photo documentation
+- First-mover advantage in Botswana P2P car sharing
+- Validated product-market fit (305% growth, P247K+ revenue)
+- Dual revenue streams (P2P + Rent2Buy)
+- Strong partnerships (insurance, payments, financing)
+- Local market expertise and cultural understanding
+- ✓ IP protection secured (CIPA approved, international registration in progress)
 
 **Weaknesses:**
-1. ⚠️ **Brand Recognition:** Zero brand awareness vs established competitors
-2. ⚠️ **Network Effects:** Small initial inventory limits choice
-3. ⚠️ **Mobile Apps:** Web-only initially, mobile apps in Q3 2026
-4. ⚠️ **Insurance Partnerships:** Not yet secured, critical for trust
-5. ⚠️ **Payment Integration:** In progress, delays could impact launch
-6. ⚠️ **Customer Support:** Limited support infrastructure initially
-7. ⚠️ **Content & Reviews:** Zero user-generated content at launch
+- Limited brand awareness outside Gaborone
+- Small team (lean structure)
+- Web-only platform (no native mobile app yet)
+- Reliance on third-party payment integrations
+- **CRITICAL: 80%+ fleet concentration from single partner (Trillo Rentals)**
+- **HIGH: 95% user verification incompletion - limits booking conversion**
 
 **Opportunities:**
-1. 🎯 **Underserved Markets:** Competitors focus on developed markets, leaving tier-2/3 cities open
-2. 🎯 **Host Economics:** Current platforms take unfair commissions, hosts seeking better deals
-3. 🎯 **Insurance Integration:** Partner with insurers for integrated coverage
-4. 🎯 **Dynamic Pricing:** ML-powered pricing can increase revenue 20-30%
-5. 🎯 **Corporate Partnerships:** B2B rentals for small businesses
-6. 🎯 **Tourism Sector:** Partner with hotels, travel agencies
-7. 🎯 **Fleet Hosts:** Multi-vehicle hosts seeking professional tools
-8. 🎯 **Sustainability:** ESG focus drives sharing economy adoption
+- Growing tourism sector (1.5M+ arrivals annually)
+- Young demographic (median age 25) with vehicle aspiration
+- Limited P2P competition in Botswana market
+- Rent2Buy marketplace (unique in Southern Africa)
+- EV market emergence (Chinese dealerships expanding)
+- Regional expansion (Namibia, Zambia, Zimbabwe potential)
 
 **Threats:**
-1. 🚨 **Regulatory Risk:** Governments may impose restrictions on P2P rentals
-2. 🚨 **Competitor Response:** Turo/Getaround may lower commissions or expand aggressively
-3. 🚨 **Economic Downturn:** Discretionary spending cuts impact bookings
-4. 🚨 **Insurance Availability:** Inability to secure affordable insurance partnerships
-5. 🚨 **Fraud & Safety:** Major incident could damage reputation permanently
-6. 🚨 **Technology Giants:** Uber/Lyft could enter P2P rental space
-7. 🚨 **Supply Challenges:** Difficulty acquiring quality host inventory
+- Entry of well-funded international competitors (Turo, Getaround)
+- Regulatory changes affecting P2P car sharing
+- Economic downturn reducing discretionary spending
+- Traditional rental companies launching P2P offerings
+- **IMMEDIATE: Dec 15, 2025 funding deadline - 3 weeks to close P700K round**
+- Single fleet partner dependency (Trillo = 80% inventory, only signed MOU)
 
-### Market Position
+### 7.4 Market Position & Differentiation
 
 **Current Position:**
 - **Category:** New entrant in P2P car rental
