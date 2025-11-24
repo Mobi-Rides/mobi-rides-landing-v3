@@ -1,6 +1,6 @@
 # MobiRides Go-to-Market Strategy & Commercialization Plan
 **Date:** November 23, 2025  
-**Version:** 2.0  
+**Version:** 1.5  
 **Status:** Live Platform - Active Growth
 
 ---
