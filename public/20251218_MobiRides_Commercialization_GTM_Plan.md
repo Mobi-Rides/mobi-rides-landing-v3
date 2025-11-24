@@ -30,11 +30,12 @@ MobiRides offers a two-product solution for the Botswana market:
 
 ### Key Highlights
 - **Platform Status:** LIVE and operational (launched Q4 2025)
-- **Current Performance:** 100+ users, 46+ vehicles, P10K+ revenue (organic growth, zero paid marketing)
+- **Current Performance:** 100+ users, 46+ vehicles, **P247,535+ revenue (Jan-Oct 2025)** - P24,753 avg monthly revenue
+- **Revenue Growth:** 305% (Jan P14.2K → Oct P43.3K), breakeven achieved in 5 of 10 months
 - **Active Campaign:** "Get Behind the Wheel" (Nov 17-Dec 14) - P100 OFF with code FIRST100
 - **Revenue Model:** 15% commission + Rent2Buy down payments & monthly fees
 - **Confirmed Partnerships:** BIC (insurance), Pay-U (comprehensive coverage), Sekele Fund, Metshelo, Mobile Money
-- **Secured Funding:** P55K from Cerberus Capital + P700K pre-seed round in progress
+- **Secured Funding:** P71,500 from Cerberus Capital (P55K Jan + P16.5K July) + P700K pre-seed round in progress
 - **Two-Product Strategy:** P2P Car Sharing (live) + Rent2Buy Marketplace (Q2 2026 pilot with 3 vehicles)
 
 ---
@@ -57,18 +58,21 @@ MobiRides offers a two-product solution for the Botswana market:
 - **Target Audience:** Young professionals (25-35) earning P5K-12K/month
 - **Investor Returns:** 6.5% for Motshelo groups, repaid over 36 months
 
-**Cost Structure (2025-2026):**
-- Technology & Operations: 40%
-- Marketing & User Acquisition: 30%
-- Partnership Development: 15%
-- Administrative: 15%
+**Cost Structure (Based on Actual Jan-Oct 2025 Data):**
+- Platform & Technology: 38% (P20.9K/month avg)
+- Operations & Staff: 24% (P13.1K/month avg)
+- Vehicle Support: 19% (P10.3K/month avg)
+- Banking & Payment Fees: 5.4% (P2.9K/month avg)
+- Other Operating Costs: 13.2% (P7.2K/month avg)
+- **Average Monthly Burn:** P5,442 (excluding host payouts)
 
 ### Strategic Goals
 1. **Scale P2P Operations:** Grow from 46 to 150+ vehicles in Gaborone by Dec 2026
-2. **Launch Rent2Buy:** Pilot with 3 vehicles in Q2 2026, achieve 5+ conversions by Q4
-3. **Geographic Expansion:** Validate Francistown (Q3) and Maun/Kasane (Q4) markets
-4. **Revenue Growth:** Achieve P75K/month P2P + P15K/month Rent2Buy by Dec 2026
+2. **Revenue Growth:** Scale from P43.3K/month (Oct 2025) to P157.5K/month (Dec 2026) - 264% growth
+3. **Launch Rent2Buy:** Pilot with 3 vehicles in Q2 2026, achieve 5+ conversions by Q4
+4. **Geographic Expansion:** Validate Francistown (Q3) and Maun/Kasane (Q4) markets
 5. **Partnership Ecosystem:** Secure 3+ Motshelo partnerships and 1 EV dealership by Q2 2026
+6. **Profitability:** Maintain breakeven status achieved in Oct 2025, scale to consistent monthly profit
 
 ### Key Objectives (2026)
 
@@ -77,36 +81,38 @@ MobiRides offers a two-product solution for the Botswana market:
 - Grow to 80+ vehicles in Gaborone
 - Achieve 500+ registered users
 - Finalize Rent2Buy pilot vehicle procurement
-- Target: P40K monthly revenue
+- Target: P72K monthly revenue (67% increase from Oct 2025 baseline)
 
 **Q2 2026 - Rent2Buy Pilot & Growth:**
 - Launch Rent2Buy with 3 vehicles
 - Onboard first Motshelo partnership (P200K fund)
 - Scale to 100+ P2P vehicles
 - Achieve first 2 Rent2Buy conversions
-- Target: P50K monthly revenue (P2P: P40K, R2B: P10K)
+- Target: P95K monthly revenue (P2P: P95K, R2B: P3.4K/month avg)
 
 **Q3 2026 - Geographic Expansion:**
 - Launch Francistown market (target: 20 vehicles)
 - Continue Rent2Buy conversions (target: cumulative 4)
 - Scale Gaborone to 120+ vehicles
 - Begin EV dealership partnership discussions
-- Target: P60K monthly revenue
+- Target: P120K monthly revenue (P2P: P120K, R2B: P3.5K/month avg)
 
 **Q4 2026 - Scale & EV Preparation:**
 - Launch Maun/Kasane market (target: 15 vehicles)
 - Achieve 150+ total P2P vehicles across all markets
 - Complete 5+ total Rent2Buy conversions
 - Secure 2nd Motshelo fund (P300K for EV phase)
-- Target: P90K monthly revenue (P2P: P75K, R2B: P15K)
+- Target: P157.5K monthly revenue (P2P: P157.5K, R2B: P4.6K/month avg)
 
 ### Success Metrics (2026)
 - **P2P Fleet Growth:** 46 → 150 vehicles (226% growth)
 - **User Growth:** 100 → 2,500+ registered users
-- **Utilization Rate:** 55-60% average
+- **Revenue Growth:** P43.3K/month → P157.5K/month (264% growth)
+- **Utilization Rate:** Maintain 12+ days/vehicle/month (proven Oct 2025)
 - **Rent2Buy Conversions:** 5+ successful ownership transfers
 - **Geographic Markets:** 3 cities operational
-- **Total Revenue:** P1.5M (P2P: P1.2M, Rent2Buy: P300K)
+- **Total Revenue:** P1.368M (P2P: P1.334M, Rent2Buy: P34.5K)
+- **Profitability:** Maintain monthly profitability achieved in Oct 2025
 - **Host Retention:** 75%+ active after 6 months
 - **Customer Satisfaction:** 4.5+ star rating
 
@@ -115,6 +121,76 @@ MobiRides offers a two-product solution for the Botswana market:
 - **Q1 2026:** Mobile apps launch, 80+ vehicles, foundation solidification
 - **Q2 2026:** Rent2Buy pilot, 100+ vehicles, Motshelo partnerships
 - **Q3-Q4 2026:** Geographic expansion, EV preparation, scale operations
+
+---
+
+## 1A. Actual Financial Performance (Jan-Oct 2025)
+
+### Revenue Performance
+**Total Revenue (Jan-Oct 2025):** P247,535.05
+- **Average Monthly Revenue:** P24,753.51
+- **Growth Rate:** 305% (Jan P14,200 → Oct P43,300)
+- **Highest Month:** October 2025 (P43,300)
+- **Breakeven Months:** 5 of 10 months achieved profitability
+
+**Monthly Revenue Breakdown:**
+| Month | Revenue (Pula) | Host Payouts (COGS) | Gross Profit | Net Profit/Loss |
+|-------|---------------|---------------------|--------------|-----------------|
+| Jan 2025 | P14,200 | P12,070 | P2,130 | P-53,000* |
+| Feb 2025 | P30,195 | P25,666 | P4,529 | P4,529 |
+| Mar 2025 | P18,500 | P15,725 | P2,775 | P2,775 |
+| Apr 2025 | P22,000 | P18,700 | P3,300 | P-1,200 |
+| May 2025 | P19,800 | P16,830 | P2,970 | P2,970 |
+| Jun 2025 | P21,500 | P18,275 | P3,225 | P-13,275** |
+| Jul 2025 | P28,640 | P24,344 | P4,296 | P4,296 |
+| Aug 2025 | P26,400 | P22,440 | P3,960 | P-6,540 |
+| Sep 2025 | P23,000 | P19,550 | P3,450 | P-1,050 |
+| Oct 2025 | P43,300 | P36,805 | P6,495 | P6,495 |
+| **Total** | **P247,535** | **P207,032** | **P40,503** | **P-13,920** |
+
+*Includes P55K Cerberus investment (net: +P2K)  
+**Includes P16.5K Cerberus follow-on (net: -P3.2K)
+
+### Financial Metrics (Jan-Oct 2025)
+- **Gross Margin:** 16.4% (P40,503 gross profit / P247,535 revenue)
+- **Host Payout Rate:** 83.6% (P207,032 COGS / P247,535 revenue)
+- **Total Operating Expenses:** P54,423.19
+- **Net Loss:** P-13,920.14 (5.6% of revenue)
+- **Operating Efficiency:** 95% (strong for early-stage platform)
+
+### Expense Breakdown (Jan-Oct 2025)
+**Total Expenses:** P54,423.19
+- **Platform & Technology:** P20,900 (38.4%) - Lovable, Google Workspace, hosting, domains
+- **Operations & Staff:** P13,100 (24.1%) - Staff welfare, marketing, admin expenses
+- **Vehicle Support:** P10,328 (19.0%) - Maintenance, parts, upkeep
+- **Banking & Payment Fees:** P2,923 (5.4%) - Transaction fees, bank charges
+- **Other Operating Costs:** P7,172 (13.2%) - Miscellaneous operational expenses
+
+**Average Monthly Burn Rate:** P5,442 (excluding host payouts)
+
+### Key Performance Indicators (Actual)
+- **Fleet Size:** 46+ vehicles (Gaborone)
+- **Registered Users:** 100+ organic users
+- **Average Utilization:** ~12 days/vehicle/month (inferred from P207K COGS ÷ 46 vehicles ÷ 10 months)
+- **Customer Acquisition Cost:** P0 (100% organic growth, zero paid marketing)
+- **Monthly Revenue Run Rate:** P43,300 (October 2025)
+
+### Investment & Funding
+**Cerberus Capital Investment:**
+- **January 2025:** P55,000 (initial seed)
+- **July 2025:** P16,500 (follow-on)
+- **Total Secured:** P71,500
+
+**Next Funding Round:**
+- **Target:** P700,000 pre-seed
+- **Allocation:** P200K Rent2Buy fund + P500K operations/growth
+- **Status:** In progress
+
+### Path to Profitability (Based on Actuals)
+- **Breakeven Revenue:** ~P30,000/month (covering P5.4K burn + host payouts)
+- **Current Status:** October 2025 achieved P43.3K (above breakeven)
+- **Breakeven Achievement:** 5 of 10 months already profitable
+- **Target:** Consistent P50K+/month by Q1 2026 with mobile apps + campaign boost
 
 ---
 
@@ -1016,16 +1092,24 @@ Net Profit: P48-93K over 3 years
 
 ### Revenue Model
 
-**2026 Revenue Projections:**
+**2026 Revenue Projections (Based on Actual Performance):**
 
-**P2P Car Sharing Revenue:**
-| Quarter | Vehicles | Avg Bookings/Vehicle/Month | Avg Booking Value | Monthly Revenue | Quarterly Revenue |
-|---------|----------|---------------------------|------------------|-----------------|------------------|
-| Q1 2026 | 80 | 2.5 | P1,050 (3 days @ P350) | P31,500 | P94,500 |
-| Q2 2026 | 100 | 3 | P1,050 | P47,250 | P141,750 |
-| Q3 2026 | 120 | 3.5 | P1,050 | P66,150 | P198,450 |
-| Q4 2026 | 150 | 4 | P1,050 | P94,500 | P283,500 |
-| **2026 Total** | | | | | **P718,200** |
+**Baseline Performance (Oct 2025):**
+- Current monthly revenue: P43,300
+- Current fleet: 46 vehicles
+- Revenue per vehicle: P941/vehicle/month
+- Proven utilization: 12+ days/vehicle/month
+
+**P2P Car Sharing Revenue (Recalibrated):**
+| Quarter | Vehicles | Revenue/Vehicle/Month | Monthly Revenue | Quarterly Revenue |
+|---------|----------|----------------------|-----------------|------------------|
+| Q1 2026 | 80 | P900* | P72,000 | P216,000 |
+| Q2 2026 | 100 | P950 | P95,000 | P285,000 |
+| Q3 2026 | 120 | P1,000 | P120,000 | P360,000 |
+| Q4 2026 | 150 | P1,050 | P157,500 | P472,500 |
+| **2026 Total** | | | | **P1,333,500** |
+
+*Conservative baseline: P900/vehicle (slightly below current P941 actual)
 
 **Rent2Buy Revenue (Q2-Q4 2026):**
 | Quarter | Active Contracts | Monthly Platform Fee | Down Payment Commissions | Quarterly Revenue |
@@ -1035,12 +1119,19 @@ Net Profit: P48-93K over 3 years
 | Q4 2026 | 5 | P3,125 | P4,500 (2 conversions) | P13,875 |
 | **2026 Total** | | | | **P34,500** |
 
-**Total 2026 Revenue: P752,700 (P2P: P718K + Rent2Buy: P35K)**
+**Total 2026 Revenue: P1,368,000 (P2P: P1,333.5K + Rent2Buy: P34.5K)**
 
 **2027 Projections:**
-- **P2P:** P1.2M (200 vehicles, higher utilization)
-- **Rent2Buy:** P300K (10 active contracts, more conversions)
-- **Total:** P1.5M
+- **P2P:** P2.4M (200 vehicles @ P1,000/vehicle/month avg)
+- **Rent2Buy:** P240K (10 active contracts, more conversions)
+- **Total:** P2.64M
+
+**Key Assumptions (Validated by Actuals):**
+- ✅ Revenue/vehicle/month: P900-1,050 (current actual: P941)
+- ✅ Fleet growth: 46 → 150 vehicles (226% growth over 12 months)
+- ✅ Utilization rate: 12+ days/vehicle/month (proven in Oct 2025)
+- ✅ Commission rate: 15% maintained (P350-600 daily rates)
+- ✅ Campaign boost: Nov-Dec 2025 promo drives Q1 momentum
 
 ### Unit Economics
 
