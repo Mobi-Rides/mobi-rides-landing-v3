@@ -23,14 +23,14 @@ MobiRides offers a two-product solution for the Botswana market:
 - **For Aspiring Owners:** Rent2Buy pathway to vehicle ownership through partnership with Motshelo groups (6.5% returns for investors)
 
 ### Target Market Overview
-**Primary Market:** Gaborone (validated with 100+ users, 46+ vehicles)
+**Primary Market:** Gaborone (validated with 154 users, 56 vehicles)
 **Expansion Markets:** Francistown (Q3 2026), Maun/Kasane (Q4 2026)
 **Customer Segments:** Young professionals (25-40), tourism sector, business travelers, aspiring vehicle owners
 **Market Size:** P250M+ annual car rental market; 1.5M+ tourism arrivals; ~2.6M population
 
 ### Key Highlights
 - **Platform Status:** LIVE and operational (launched Q4 2025)
-- **Current Performance:** 100+ users, 46+ vehicles, **P247,535+ revenue (Jan-Oct 2025)** - P24,753 avg monthly revenue
+- **Current Performance:** 154 users, 56 vehicles, **P247,535+ revenue (Jan-Oct 2025)** - P24,753 avg monthly revenue
 - **Revenue Growth:** 305% (Jan P14.2K → Oct P43.3K), breakeven achieved in 5 of 10 months
 - **Active Campaign:** "Get Behind the Wheel" (Nov 17-Dec 14) - P100 OFF with code FIRST100
 - **Revenue Model:** 15% commission + Rent2Buy down payments & monthly fees
@@ -67,7 +67,7 @@ MobiRides offers a two-product solution for the Botswana market:
 - **Average Monthly Burn:** P5,442 (excluding host payouts)
 
 ### Strategic Goals
-1. **Scale P2P Operations:** Grow from 46 to 150+ vehicles in Gaborone by Dec 2026
+1. **Scale P2P Operations:** Grow from 56 to 150+ vehicles in Gaborone by Dec 2026
 2. **Revenue Growth:** Scale from P43.3K/month (Oct 2025) to P157.5K/month (Dec 2026) - 264% growth
 3. **Launch Rent2Buy:** Pilot with 3 vehicles in Q2 2026, achieve 5+ conversions by Q4
 4. **Geographic Expansion:** Validate Francistown (Q3) and Maun/Kasane (Q4) markets

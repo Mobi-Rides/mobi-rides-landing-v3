@@ -7,7 +7,7 @@
 
 ## EXECUTIVE SUMMARY
 
-MobiRides is Botswana's first peer-to-peer car-sharing platform, transitioning from MVP validation to commercial scale. After 10 months of operation (Jan-Oct 2025), we've validated product-market fit with 100+ organic users, 46+ vehicles, and P247,535+ in revenue—all achieved with zero paid marketing. This represents a 305% growth rate and P24,753 average monthly revenue.
+MobiRides is Botswana's first peer-to-peer car-sharing platform, transitioning from MVP validation to commercial scale. After 10 months of operation (Jan-Oct 2025), we've validated product-market fit with 154 registered users, 56 vehicles, and P247,535+ in revenue—all achieved with zero paid marketing. This represents a 305% growth rate and P24,753 average monthly revenue.
 
 **Current Momentum:**
 - Live platform operational since Q1 2025
@@ -32,8 +32,8 @@ We're launching a dual-product strategy combining our validated P2P car-sharing 
 ## 1. ACTUAL PERFORMANCE DATA (Jan-Nov 2025)
 
 ### 1.1 Platform Metrics
-- **Users:** 100+ organic (zero paid marketing)
-- **Fleet:** 46+ vehicles from key fleet operators
+- **Users:** 154 registered users (zero paid marketing)
+- **Fleet:** 56 vehicles from key fleet operators
 - **Revenue:** P247,535+ generated (Jan-Oct 2025)
 - **Average Monthly Revenue:** P24,753
 - **Growth Rate:** 305% (P14.2K Jan → P43.3K Oct)
@@ -123,7 +123,7 @@ We're launching a dual-product strategy combining our validated P2P car-sharing 
 
 **Primary Market: Gaborone** *(Current Focus)*
 - Population: 250,000+
-- Current Fleet: 46+ vehicles
+- Current Fleet: 56 vehicles
 - Revenue Contribution: ~70%
 - Market Characteristics: Business travelers, airport transfers, weekend rentals
 - Competitive Landscape: Traditional rental agencies (Avis, Europcar, local operators)
@@ -207,8 +207,8 @@ We're launching a dual-product strategy combining our validated P2P car-sharing 
 - No upfront costs to list vehicles
 
 **Current Traction:**
-- 46+ active vehicles
-- 100+ registered users
+- 56 active vehicles
+- 154 registered users
 - P247K+ revenue generated (Jan-Oct 2025)
 - P24,753 average monthly revenue
 - 305% growth rate (Jan to Oct)
