@@ -99,11 +99,13 @@
 - **Expansion:** Francistown (Q1 2026), Maun/Kasane (Q2 2026 - Safari)
 
 ### Pricing (Real Platform Data):
-- Budget: P150-250/day
-- Mid-range: P200-400/day  
-- Safari SUV: P350-600/day
-- Executive: P500-800/day
-- **Commission:** 15% (hosts keep 85%)
+- **Average Rental Rate:** P730/day
+- Budget: P550-650/day (Host: P468-553)
+- Mid-range: P650-750/day (Host: P553-638)
+- Safari SUV: P750-900/day (Host: P638-765)
+- Executive: P900-1,100/day (Host: P765-935)
+- Pickup Truck: P700-850/day (Host: P595-723)
+- **Commission:** 15% (hosts keep 85% = P600-850/day avg)
 
 ---
 
@@ -116,7 +118,9 @@
 - **Status:** Operational, validated PMF
 
 ### Product 2: Rent2Buy (Q2 2026)
-- **Model:** 10% platform + 6.5% financing = 16.5% total
+- **Model:** 10% platform commission + 6.5%/month interest rate = total revenue split
+- **Financing Terms:** 6-18 months repayment period
+- **Default Protection:** Rental Recovery Mode (no repossession - car enters rental pool until 2 months repayments covered)
 - **Pilot:** P200K fund (Q1 2026, 3 vehicles via repos)
 - **Partners:** Motshelo groups, Chinese EV dealerships
 - **Target:** 10% financing penetration initially
@@ -127,7 +131,7 @@
 
 ### TIER 1: Motshelo/Stokvel Groups (Immediate)
 - **Target:** 10-15 groups, P200K min investment
-- **Return:** 6.5% financing commission
+- **Return:** 6.5%/month interest rate over 6-18 month terms
 - **Timeline:** Q1 2026 onboarding
 
 ### TIER 2: Chinese EV Dealerships (Q1 2026)
@@ -150,14 +154,14 @@
 ## 4. Revenue Projections
 
 ### Year 1 (2026):
-- **P2P:** P2.59M (150 vehicles, 12 days/month avg)
+- **P2P:** P3.94M (150 vehicles, 12 days/month avg @ P730/day × 15% commission)
 - **Rent2Buy:** P847K (50 vehicles, Q2-Q4)
-- **Total:** P3.44M
+- **Total:** P4.79M
 
 ### Year 2 (2027):
-- **P2P:** P6.48M (300 vehicles)
-- **Rent2Buy:** P3.98M (200 vehicles, 50% financing)
-- **Total:** P10.46M
+- **P2P:** P7.88M (300 vehicles @ P730/day avg)
+- **Rent2Buy:** P3.98M (200 vehicles, 50% financing penetration)
+- **Total:** P11.86M
 
 ---
 
