@@ -43,9 +43,9 @@
   "id": "motshelo-stokvel",
   "name": "Motshelo/Stokvel Investment Groups",
   "icon": "Users",
-  "description": "Join MobiRides as a Rent2Buy financing partner. Earn 6.5% returns while empowering Batswana to own vehicles through community-backed lending.",
+  "description": "Join MobiRides as a Rent2Buy financing partner. Earn 6.5% monthly interest over 6-18 month terms while empowering Batswana to own vehicles through community-backed lending.",
   "benefits": [
-    "Earn 6.5% financing returns on your group's capital",
+    "Earn 6.5% monthly interest on your group's capital over 6-18 month repayment terms",
     "Low-risk secured lending (vehicles as collateral + GPS tracking)",
     "Monthly or quarterly payout options for your group",
     "Impact investing: Help Batswana achieve vehicle ownership",
@@ -173,13 +173,14 @@
         </CardHeader>
         <CardContent>
           <ul>
-            <li>✓ Budget sedans: P150-250/day (P50-150/day with FIRST100)</li>
-            <li>✓ Mid-range: P200-400/day</li>
-            <li>✓ Safari SUVs: P350-600/day</li>
-            <li>✓ Executive: P500-800/day</li>
+            <li>✓ Budget sedans: P550-650/day (P450-550/day with FIRST100)</li>
+            <li>✓ Mid-range: P650-750/day</li>
+            <li>✓ Safari SUVs: P750-900/day</li>
+            <li>✓ Executive: P900-1,100/day</li>
+            <li>✓ Pickup Trucks: P700-850/day</li>
           </ul>
           <p className="text-sm text-muted-foreground mt-4">
-            Example: Book a P200/day sedan → Pay only P100/day on your first rental with code FIRST100
+            Example: Book a P650/day sedan → Pay only P550/day on your first rental with code FIRST100 (avg rate ~P730/day)
           </p>
         </CardContent>
       </Card>
@@ -213,15 +214,16 @@
       </CardHeader>
       <CardContent>
         <div className="earnings-calculator bg-background p-6 rounded-lg">
-          <p className="font-semibold mb-2">Example Earnings:</p>
+          <p className="font-semibold mb-2">Example Earnings (P730 avg rental rate):</p>
           <ul>
-            <li>Daily Rate: P200/day</li>
-            <li>Your Earnings: P170/day (after 15% commission)</li>
-            <li>Monthly (30 days rented): P5,100/month</li>
+            <li>Daily Rate: P730/day (platform average)</li>
+            <li>Your Earnings: P620/day (after 15% commission = 85% payout)</li>
+            <li>Monthly (20 days rented): P12,400/month</li>
+            <li>Monthly (30 days rented): P18,600/month</li>
           </ul>
           <p className="text-sm text-muted-foreground mt-4">
-            Our top hosts earn P5,000+ monthly with consistent bookings. 
-            Join 46+ verified hosts already earning on MobiRides.
+            Our top hosts earn P12,000+ monthly with consistent bookings at P730/day avg rate. 
+            Join 56+ verified hosts already earning on MobiRides.
           </p>
         </div>
       </CardContent>
@@ -265,7 +267,7 @@
         <CardTitle>Motshelo Financing</CardTitle>
       </CardHeader>
       <CardContent>
-        Community-backed financing with competitive 12-15% rates
+        Community-backed financing with 6.5%/month interest over flexible 6-18 month terms. No punitive repossession - rental recovery mode protects customers.
       </CardContent>
     </Card>
     <Card>
@@ -399,12 +401,13 @@ const stats = [
     <CardTitle>Earn Up to P5,000/Month</CardTitle>
   </CardHeader>
   <CardContent>
-    <p>Our top hosts earn P5,100/month with P200/day rates. Simple 15% commission. Keep 85% of every rental.</p>
+    <p>Our top hosts earn P12,000-18,000/month with P730/day average rates. Simple 15% commission. Keep 85% of every rental.</p>
     <div className="mt-4 p-4 bg-muted rounded-lg">
-      <p className="text-sm font-semibold">Real Example:</p>
+      <p className="text-sm font-semibold">Real Example (P730 avg):</p>
       <ul className="text-sm mt-2">
-        <li>• P200/day rate = P170/day earnings</li>
-        <li>• 30 days rented = P5,100/month</li>
+        <li>• P730/day rate = P620/day earnings (85%)</li>
+        <li>• 20 days rented = P12,400/month</li>
+        <li>• 30 days rented = P18,600/month</li>
       </ul>
     </div>
   </CardContent>
@@ -416,10 +419,10 @@ const stats = [
 <Card>
   <CardHeader>
     <ShieldCheck className="w-12 h-12" />
-    <CardTitle>46+ Verified Vehicles</CardTitle>
+    <CardTitle>56+ Verified Vehicles</CardTitle>
   </CardHeader>
   <CardContent>
-    <p>Every vehicle inspected and insured. Backed by BIC and Pay-U comprehensive insurance coverage.</p>
+    <p>Every vehicle inspected and insured. Backed by BIC and Pay-U comprehensive insurance coverage. Fleet growing weekly.</p>
   </CardContent>
 </Card>
 ```
@@ -484,7 +487,7 @@ const stats = [
     <CardTitle>Perfect for Safari Adventures</CardTitle>
   </CardHeader>
   <CardContent>
-    <p>From Chobe to the Okavango Delta - explore Botswana's wonders with 46+ verified vehicles including 4x4s and SUVs.</p>
+    <p>From Chobe to the Okavango Delta - explore Botswana's wonders with 56+ verified vehicles including 4x4s and SUVs averaging P730/day.</p>
   </CardContent>
 </Card>
 ```
@@ -496,7 +499,7 @@ const stats = [
 ### `/pricing` Page Meta:
 ```html
 <title>MobiRides Pricing - P100 OFF First Rental | Rent2Buy Coming Q2 2026</title>
-<meta name="description" content="Get P100 OFF your first rental with code FIRST100. Browse 46+ vehicles from P150/day. Join Rent2Buy waitlist for vehicle ownership through motshelo financing. Valid until Dec 31, 2025." />
+<meta name="description" content="Get P100 OFF your first rental with code FIRST100. Browse 56+ vehicles averaging P730/day. Join Rent2Buy waitlist for vehicle ownership through motshelo financing at 6.5%/month over 6-18 months. Valid until Dec 31, 2025." />
 <meta property="og:title" content="MobiRides - P100 OFF First Rental | Rent2Buy Q2 2026" />
 <meta property="og:description" content="Join 100+ renters saving with code FIRST100. Book now or join Rent2Buy waitlist for vehicle ownership." />
 ```
@@ -504,12 +507,12 @@ const stats = [
 ### `/partners` Page Meta:
 ```html
 <title>Partner with MobiRides - Motshelo Groups | EV Dealerships | Financial Institutions</title>
-<meta name="description" content="Join MobiRides as a Motshelo/Stokvel investment group (earn 6.5%), automotive dealership, or financial partner. Grow Botswana's mobility ecosystem with 46+ verified vehicles." />
+<meta name="description" content="Join MobiRides as a Motshelo/Stokvel investment group (earn 6.5%/month interest), automotive dealership, or financial partner. Grow Botswana's mobility ecosystem with 56+ verified vehicles." />
 ```
 
 ### Homepage Meta:
 ```html
-<meta name="description" content="MobiRides - Botswana's trusted P2P car sharing platform. Get P100 OFF your first rental with code FIRST100. 100+ active renters, 46+ verified vehicles, Pay-U insurance included." />
+<meta name="description" content="MobiRides - Botswana's trusted P2P car sharing platform. Get P100 OFF your first rental with code FIRST100. 154+ active renters, 56+ verified vehicles, Pay-U insurance included. Average P730/day rentals." />
 ```
 
 ---
@@ -603,8 +606,9 @@ CREATE TABLE rent2buy_waitlist (
 - [ ] Active promotion banner displays correctly on homepage
 - [ ] P100 OFF messaging clear on `/pricing` page
 - [ ] Rent2Buy waitlist form submits successfully
-- [ ] Real metrics display correctly (100+, 46+, P10K+)
-- [ ] Partners page loads with new categories
+  - [ ] Real metrics display correctly (154+, 56+, P247K+)
+  - [ ] Partners page loads with new categories (Motshelo 6.5%/month terms)
+  - [ ] Rent2Buy messaging reflects 6.5%/month over 6-18 months financing
 - [ ] All CTAs link to correct pages
 - [ ] Mobile responsive design maintained
 - [ ] SEO meta tags render correctly
