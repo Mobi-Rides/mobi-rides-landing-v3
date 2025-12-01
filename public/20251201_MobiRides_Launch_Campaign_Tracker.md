@@ -49,6 +49,28 @@
 
 ---
 
+## 📋 Module-Level Task Assignments
+
+### 11 Platform Modules with Assigned Owners:
+
+| Module # | Module Name | Owner | Phase | Screenshots |
+|----------|-------------|-------|-------|-------------|
+| 1 | Browse & Search Cars | Oratile | Renter | 3 screens |
+| 2 | Car Details & Selection | Mandipa | Renter | 4 screens |
+| 3 | Booking Process | Loago | Renter | 4 screens |
+| 4 | User Dashboard (Renter View) | Loago | Renter | 3 screens |
+| 5 | Messaging System | Mandipa | Renter | 2 screens |
+| 6 | Verification & Safety | Oratile | Renter | 2 screens |
+| 7 | List Your Car | Loago | Host | 4 screens |
+| 8 | Earnings Dashboard | Arnold | Host | 3 screens |
+| 9 | Booking Management (Host View) | Arnold | Host | 2 screens |
+| 10 | Handover Process | Arnold | Host | 2 screens |
+| 11 | Reviews & Ratings | Natasha | Host | 2 screens |
+
+**Total Screenshots:** 31 (18 Renter-focused + 13 Host-focused)
+
+---
+
 ## 📸 Content Production Checklist (31 Screenshots)
 
 ### PHASE 1: Renter-Focused Content (Nov 17-30) - 18 Screenshots
@@ -262,6 +284,149 @@ Voiceover: "Full BIC insurance. ID verification. You control everything."
 
 ---
 
+## 📱 Technical Specifications
+
+### Screenshot Specifications:
+- **Device:** iPhone 13/14 (standard size) or equivalent Android
+- **Resolution:** 1170 x 2532 px minimum
+- **Format:** PNG (for clarity) or JPG (for smaller file size)
+- **Orientation:** Portrait (9:16 aspect ratio preferred)
+- **Clean UI:** Remove personal info, use demo accounts
+- **Status Bar:** Show full battery, good signal (looks professional)
+- **Time:** Set to 9:41 AM (iOS standard)
+
+### Screenshot Editing:
+- **Tool:** Figma, Canva, or Adobe Express
+- **Annotations:** Use arrows/circles to highlight key features
+- **Brand Colors:** Use MobiRides design system colors
+- **Font:** Clean sans-serif (Poppins, Inter, or similar)
+- **Borders:** Add subtle phone frame mock-up for social posts
+
+### Video Recording Specifications:
+- **Resolution:** 1080p minimum (1920 x 1080)
+- **Frame Rate:** 30 fps or 60 fps
+- **Format:** MP4 (H.264 codec)
+- **Orientation:** Portrait for Reels/TikTok, Square for Feed posts
+- **Length:** 
+  - Reels/TikTok: 15-60 seconds
+  - Feed videos: 30-90 seconds max
+- **Recording Tools:**
+  - iOS: Built-in Screen Recording (Settings > Control Center)
+  - Android: AZ Screen Recorder, Mobizen
+- **Editing:** CapCut, InShot, or Adobe Premiere Rush
+
+### Recording Flow Guidelines:
+- Perform actions smoothly, pause 2 seconds on each screen
+- Edit: Speed up to 1.5x for efficiency feel
+- Add music overlay (upbeat, energetic for renters; confident, motivating for hosts)
+- Include text overlays with key messaging
+
+---
+
+## 🎨 Brand Voice & Messaging Guidelines
+
+### Brand Voice:
+- **Tone:** Friendly, helpful, confident (not salesy)
+- **Language:** Simple, clear, conversational
+- **Avoid:** Jargon, overpromising, pushy CTAs
+- **Use:** Real numbers, social proof, customer benefits
+
+### Key Messaging (Updated Pricing):
+- **Renter Focus:** "From P400/day" (not P200/day)
+- **Host Focus:** "Earn P340-P3,825/day" (not "P5,000/month")
+- **Commission:** "Hosts keep 85%" or "15% platform fee"
+- **Insurance:** "BIC insurance included" or "Pay-U comprehensive coverage"
+- **Speed:** "Book in 2 hours" or "List in 5 minutes"
+
+### Hashtag Strategy:
+- **Primary (always use):** #MobiRides #Botswana #Mobi
+- **Renter-focused:** #CarRentalBotswana #Gaborone #Francistown #VisitBotswana #BotswanaTravel
+- **Host-focused:** #PassiveIncome #MakeMoneyOnline #SideHustle #BotswanaEntrepreneur #FinancialFreedom
+- **Generic:** #PeerToPeer #CarSharing #TravelBotswana #ExploreAfrica
+
+---
+
+## 📝 Caption Bank Reference
+
+### Renter Campaign Captions:
+
+**Carousel Post: "How to Book in 3 Easy Steps"**
+```
+Need wheels? We've made it stupidly simple.
+
+1. Browse 100+ verified cars
+2. Pick your dates & see the price
+3. Book & confirm
+
+BONUS: Get P100 OFF your first rental!
+Use code: FIRST100 at checkout.
+
+Download MobiRides now [Link in bio]
+
+#MobiRides #CarRental #Botswana #Gaborone #FIRST100
+```
+
+**Single Image: "P100 OFF Announcement"**
+```
+LAUNCH SPECIAL 🎉
+
+We're NEW and we're celebrating with YOU!
+
+Get P100 OFF your first car rental
+
+✓ No hidden fees
+✓ From P400/day
+✓ Verified hosts
+✓ Instant booking
+
+Offer valid for first 500 bookings only!
+Code: FIRST100
+
+[Download link]
+
+#MobiRides #CarRentalBotswana #LaunchOffer
+```
+
+### Host Campaign Captions:
+
+**Video Post: "Turn Your Car Into Cash"**
+```
+Your car sits parked 90% of the time.
+
+What if it could make money while you're not using it?
+
+Meet MobiRides - Botswana's easiest way to rent out your car.
+
+✓ Earn P340-P3,825/day
+✓ List in 5 minutes
+✓ You control availability
+✓ Full BIC insurance coverage
+✓ Hosts keep 85%
+
+Ready to start earning? [Sign up link in bio]
+
+#MobiRides #PassiveIncome #BotswanaHustles
+```
+
+**Carousel: "Host Benefits Checklist"**
+```
+5 Reasons Car Owners Are Joining MobiRides:
+
+✓ Free to list - Zero upfront costs
+✓ You set the price - We just suggest
+✓ You approve bookings - Full control
+✓ Insurance included - Every rental covered
+✓ Fast payouts - Money in your wallet, not in limbo
+
+Got a car? Start earning today.
+
+List your car - link in bio
+
+#MobiRides #CarSharing #MakeMoneyOnline
+```
+
+---
+
 ## 🎯 Success Metrics (Weekly Check-ins)
 
 ### Week 1 Check-in (Nov 24)
@@ -338,7 +503,27 @@ Voiceover: "Full BIC insurance. ID verification. You control everything."
 
 ---
 
-**Document Owner:** Loago Phiri (Campaign Lead)  
+## 📊 Post-Launch Analysis Plan (Week 5)
+
+### Review Meeting Agenda:
+1. **Metrics Review:** Downloads, registrations, bookings vs targets
+2. **Top-Performing Content Analysis:** Which posts/videos had highest engagement?
+3. **Budget Spent vs Results:** ROI calculation on ad spend, influencer partnerships
+4. **User Feedback Summary:** Common questions, pain points, feature requests
+5. **Lessons Learned:** What worked? What didn't? What to do differently?
+6. **Week 5-8 Content Plan:** Shift from promotional to educational
+
+### Continuous Content Plan (Post-Campaign):
+- Shift from promotional to educational (how-tos, tips)
+- User-generated content (repost customer stories)
+- Seasonal campaigns (holidays, long weekends)
+- Feature spotlights (deep dive into one module per week)
+- Host success stories (monthly earnings highlights)
+- Safety and trust content (verification process, insurance details)
+
+---
+
+**Document Owner:** Loago Phiri (Campaign Lead)
 **Review Frequency:** Daily standups (9am) + Weekly check-ins (Sundays 10am)  
 **Contact:** loago@mobirides.com | WhatsApp: [number]
 
