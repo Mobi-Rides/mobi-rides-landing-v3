@@ -23,8 +23,8 @@ MobiRides offers a two-product solution for the Botswana market:
 - **For Aspiring Owners:** Rent2Buy pathway to vehicle ownership through partnership with Motshelo groups (6.5% returns for investors)
 
 ### Target Market Overview
-**Primary Market:** Gaborone (validated with 154 users, 56 vehicles)
-**Expansion Markets:** Francistown (Q3 2026), Maun/Kasane (Q4 2026)
+**Primary Market:** Gaborone (validated with 154 registered users, 56 active vehicles)
+**Expansion Markets:** Francistown (Q3 2026), Maun/Kasane (Q4 2026 - Safari)
 **Customer Segments:** Young professionals (25-40), tourism sector, business travelers, aspiring vehicle owners
 **Market Size:** P250M+ annual car rental market; 1.5M+ tourism arrivals; ~2.6M population
 
@@ -173,9 +173,9 @@ MobiRides offers a two-product solution for the Botswana market:
 **Average Monthly Burn Rate:** P5,442 (excluding host payouts)
 
 ### Key Performance Indicators (Actual)
-- **Fleet Size:** 46+ vehicles (Gaborone)
-- **Registered Users:** 100+ organic users
-- **Average Utilization:** ~12 days/vehicle/month (inferred from P207K COGS ÷ 46 vehicles ÷ 10 months)
+- **Fleet Size:** 56 active vehicles (Trillo 33 + Partner Fleet 23)
+- **Registered Users:** 154 registered users (100% organic growth)
+- **Average Utilization:** ~12 days/vehicle/month (validated Q4 2025)
 - **Customer Acquisition Cost:** P0 (100% organic growth, zero paid marketing)
 - **Monthly Revenue Run Rate:** P43,300 (October 2025)
 
@@ -390,9 +390,9 @@ MobiRides offers a two-product solution for the Botswana market:
 **Live Platform Performance (Jan-Nov 2025):**
 
 **Actual Traction:**
-- **Users:** 100+ organic registrations (zero paid marketing)
-- **Fleet:** 46+ vehicles listed across vehicle categories
-- **Revenue:** P10,000+ generated (P14-30K monthly range)
+- **Users:** 154 registered users (zero paid marketing)
+- **Fleet:** 56 active vehicles (Trillo 33 + Partner Fleet 23)
+- **Revenue:** P247,535 generated (Jan-Oct 2025, 305% growth)
 - **Growth:** Entirely organic through word-of-mouth and partnerships
 - **Active Campaign:** Nov 17-Dec 14, 2025 - "Get Behind the Wheel" with P100 OFF (Code: FIRST100)
 
