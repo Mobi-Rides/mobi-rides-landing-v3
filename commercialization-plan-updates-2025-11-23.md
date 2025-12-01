@@ -99,7 +99,7 @@
 - **Expansion:** Francistown (Q1 2026), Maun/Kasane (Q2 2026 - Safari)
 
 ### Pricing (Real Platform Data - 5-Tier System):
-- **Average Rental Rate:** P1,230/day (across 33-vehicle fleet)
+- **Average Rental Rate:** P1,230/day (across 56 active vehicles - Trillo 33 + Partner Fleet 23)
 - **5-Tier Classification:**
   - Basic (Economy): P400-500/day (Host: P340-425) - 7 vehicles
   - Standard: P750-1,000/day (Host: P637-850) - 11 vehicles
@@ -145,10 +145,14 @@
 - **Role:** Larger loans (>P200K)
 
 ### TIER 4: Operational Support Partners (Q1 2026)
-- **Maintenance & Service:** Local garages/dealerships for vehicle servicing
-- **Roadside Assistance:** AA Botswana, breakdown services
-- **Payment Gateway:** DPO Payment Gateway for card processing
-- **Customer Support:** WhatsApp Business, help desk software integration
+- **CarsCheck:** Mobile vehicle diagnostics for condition verification and pre-rental inspections
+- **Nkitsi:** Open KYC platform for background checks and identity verification
+- **AA Botswana:** Roadside assistance partnership for breakdowns and emergencies
+- **Rent Gear:** IoT tracking and telematics for vehicle monitoring
+- **Local Garage Networks:** Vehicle servicing, maintenance, and repair partnerships
+- **DPO Payment Gateway:** Card processing completion for seamless transactions
+- **WhatsApp Business:** Customer support integration for real-time communication
+- **Help Desk Software:** Ticketing system implementation for support management
 
 ---
 
@@ -164,7 +168,123 @@
 - **Rent2Buy:** P3.98M (200 vehicles, 50% financing penetration)
 - **Total:** P11.86M
 
+### 2026 Quarterly Objectives:
+
+**Q1 2026 (Jan-Mar):**
+- Mobile apps launch (iOS + Android)
+- Fleet: 80+ vehicles (diversify from Trillo concentration)
+- Users: 500+ registered (80%+ verification completion)
+- Revenue: P72K/month average
+- Rent2Buy: Pilot launch with 3 vehicles, secure 10 Motshelo MOUs (P200K fund)
+- Operational: Payment system 95%+ complete, WhatsApp Business live
+
+**Q2 2026 (Apr-Jun):**
+- Fleet: 100+ vehicles (<40% concentration per partner)
+- Users: 800+ registered
+- Revenue: P94.5K/month average
+- Rent2Buy: Public launch, 1st Motshelo MOU signed (P200K deployment)
+- Expansion: Francistown market entry prep
+
+**Q3 2026 (Jul-Sep):**
+- Fleet: 120+ total vehicles (Francistown: 20 vehicles)
+- Users: 1,200+ registered
+- Revenue: P120K/month average
+- Expansion: Francistown operational (20 vehicles)
+- Rent2Buy: 3-5 Chinese EV dealership partnerships signed
+
+**Q4 2026 (Oct-Dec):**
+- Fleet: 150+ total vehicles (Maun/Kasane: 15 vehicles)
+- Users: 1,800+ registered
+- Revenue: P157.5K/month average
+- Expansion: Maun/Kasane safari market launch
+- Rent2Buy: Scale to 50 vehicles in financing pipeline
+
 ---
+
+## 6. Risk-Adjusted Projections
+
+### 2026 Revenue Scenarios:
+
+**Base Case (60% probability): P3.44M**
+- P2P: P2.95M (120 vehicles avg, 10 days/month utilization)
+- Rent2Buy: P490K (30 vehicles Q2-Q4)
+- Assumptions: Moderate growth, fleet diversification achieved, payment system complete
+
+**Risk Case (20% probability): P2.58M (-25%)**
+- P2P: P2.21M (90 vehicles avg)
+- Rent2Buy: P367K (delayed launch, 20 vehicles)
+- Risk Factors: Pre-seed funding delayed, Trillo concentration persists, payment system delays, user verification stalls
+
+**Upside Case (20% probability): P4.64M (+35%)**
+- P2P: P3.98M (150 vehicles, 12 days/month)
+- Rent2Buy: P661K (40 vehicles, faster adoption)
+- Upside Drivers: All partnerships signed on time, viral growth, Rent2Buy exceeds expectations, early Francistown success
+
+### 2027 Revenue Scenarios:
+
+**Base Case: P8.91M** | **Risk Case: P6.68M** | **Upside Case: P12.03M**
+
+---
+
+## 7. Q1 2026 Operational Blockers
+
+### Critical Infrastructure Completions:
+
+**Payment & Wallet System (BLOCKING COMMERCIAL LAUNCH):**
+- **Current Status:** 35% complete (vs Booking 97%, Vehicle Handover 95%)
+- **Target:** 95%+ complete by Jan 31, 2026
+- **Impact:** Blocks Feb 28, 2026 commercial launch; revenue processing delays
+- **Action Plan:**
+  - Daily standups with CTO + Lead Developer
+  - External dev support if needed (budget: P50K contingency)
+  - Integration completion: DPO Payment Gateway card processing
+  - Mobile money integrations: Orange, Mascom, BeMobile
+  - Wallet system: Credit balances, refunds, host payouts
+
+**WhatsApp Business Integration:**
+- **Target:** Live by Jan 15, 2026
+- **Purpose:** Real-time customer support, booking confirmations, automated notifications
+- **Dependencies:** Phone number registration, API integration, workflow automation
+
+**Help Desk Software Implementation:**
+- **Target:** Operational by Feb 1, 2026
+- **Platform:** TBD (Zendesk, Freshdesk, or Intercom)
+- **Purpose:** Support ticket management, SLA tracking, knowledge base
+
+**QA & Security Milestones:**
+- **Security Audit:** Complete by Feb 15, 2026 (external firm)
+- **Penetration Testing:** Schedule for Feb 20-25, 2026
+- **User Acceptance Testing (UAT):** Feb 1-14, 2026 with beta users
+- **Platform Stability Validation:** 99.5%+ uptime target
+
+---
+
+## 8. KPI Monitoring Framework
+
+### Weekly Monitoring (Leadership Team):
+- **Fleet Concentration %:** Track Trillo vs Partner Fleet ratio (target: <40% per partner by Q1 end)
+- **User Verification Completion Rate:** % of users completing 3-step verification
+- **Funding Pipeline Status:** P700K pre-seed close progress, investor commitments
+- **Payment System Development %:** Weekly completion tracking (target: 35% → 95% by Jan 31)
+- **Active Bookings:** Weekly booking volume and revenue trends
+
+### Monthly Monitoring (Board Update):
+- **Burn Rate vs Runway:** Monthly expenses vs available capital (current: 13 months runway)
+- **New Partner MOUs Signed:** Fleet partners, Motshelo groups, dealerships
+- **Host Retention Rate:** % of hosts with 2+ months active listings
+- **Revenue vs Forecast:** Actual vs projected revenue by product line (P2P, Rent2Buy)
+- **User Growth:** New registrations, verification completions, booking conversions
+
+### Quarterly Monitoring (Strategic Review):
+- **Competitive Landscape:** New entrants, competitor pricing changes, market shifts
+- **Regulatory Changes:** Transport Act compliance, licensing requirements updates
+- **Partnership Health Scores:** Satisfaction surveys with Trillo, insurers, fleet partners
+- **City Expansion Readiness:** Vehicle supply, local partnerships, demand validation
+- **Technology Roadmap Progress:** Mobile apps, Rent2Buy features, IoT integration
+
+---
+
+**Next Milestones:**
 
 ## 5. Current Campaign (Nov-Dec 2025)
 
