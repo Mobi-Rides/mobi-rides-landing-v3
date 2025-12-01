@@ -7,7 +7,7 @@
 ### Platform Status (As of Nov 2025):
 - **Web App:** Live MVP operational since Q1 2025
 - **Native Mobile App:** In development (Version 4)
-- **Current Traction:** 100+ organic users, 46+ vehicles, P10,000+ revenue to-date
+- **Current Traction:** 154+ registered users, 56+ vehicles (33 active on platform), P247K+ revenue (Jan-Oct 2025)
 - **Zero Paid Marketing:** All growth organic/referral-based
 
 ### Active Launch Campaign (Nov 17 - Dec 14, 2025):
@@ -169,18 +169,18 @@
     <div className="grid md:grid-cols-2 gap-6">
       <Card>
         <CardHeader>
-          <CardTitle>Browse 46+ Vehicles</CardTitle>
+          <CardTitle>Browse 56+ Vehicles Across 5 Categories</CardTitle>
         </CardHeader>
         <CardContent>
           <ul>
-            <li>✓ Budget sedans: P550-650/day (P450-550/day with FIRST100)</li>
-            <li>✓ Mid-range: P650-750/day</li>
-            <li>✓ Safari SUVs: P750-900/day</li>
-            <li>✓ Executive: P900-1,100/day</li>
-            <li>✓ Pickup Trucks: P700-850/day</li>
+            <li>✓ Basic (Economy): P400-500/day (P300-400/day with FIRST100) - 7 vehicles</li>
+            <li>✓ Standard: P750-1,000/day (P650-900/day with FIRST100) - 11 vehicles</li>
+            <li>✓ Executive: P1,500-2,000/day - 5 vehicles</li>
+            <li>✓ 4x4/SUV: P2,000-2,500/day - 6 vehicles</li>
+            <li>✓ Prestige/Commercial: P3,500-4,500/day - 4 vehicles</li>
           </ul>
           <p className="text-sm text-muted-foreground mt-4">
-            Example: Book a P650/day sedan → Pay only P550/day on your first rental with code FIRST100 (avg rate ~P730/day)
+            Example: Book a Basic car at P450/day → Pay only P350/day on your first rental with code FIRST100. Platform average: P1,230/day across all tiers.
           </p>
         </CardContent>
       </Card>
@@ -214,16 +214,17 @@
       </CardHeader>
       <CardContent>
         <div className="earnings-calculator bg-background p-6 rounded-lg">
-          <p className="font-semibold mb-2">Example Earnings (P730 avg rental rate):</p>
-          <ul>
-            <li>Daily Rate: P730/day (platform average)</li>
-            <li>Your Earnings: P620/day (after 15% commission = 85% payout)</li>
-            <li>Monthly (20 days rented): P12,400/month</li>
-            <li>Monthly (30 days rented): P18,600/month</li>
+          <p className="font-semibold mb-2">Earnings by Vehicle Tier (85% commission):</p>
+          <ul className="space-y-2">
+            <li><strong>Basic (Economy):</strong> P450/day → P382/day earnings → P7.6K-P11.5K/month</li>
+            <li><strong>Standard:</strong> P875/day → P744/day earnings → P14.9K-P22.3K/month</li>
+            <li><strong>Executive:</strong> P1,750/day → P1,487/day earnings → P29.7K-P44.6K/month</li>
+            <li><strong>4x4/SUV:</strong> P2,250/day → P1,912/day earnings → P38.2K-P57.4K/month</li>
+            <li><strong>Prestige/Commercial:</strong> P4,000/day → P3,400/day earnings → P68K-P102K/month</li>
           </ul>
           <p className="text-sm text-muted-foreground mt-4">
-            Our top hosts earn P12,000+ monthly with consistent bookings at P730/day avg rate. 
-            Join 56+ verified hosts already earning on MobiRides.
+            Platform average: P1,230/day across 33 active vehicles. Top hosts with Standard vehicles earn P14,900+ monthly at 20 days utilization. 
+            Join 56+ vehicle owners already earning on MobiRides.
           </p>
         </div>
       </CardContent>
@@ -329,9 +330,9 @@
 ```tsx
 // In src/components/sections/TrustSection.tsx
 const stats = [
-  { number: "100+", label: "Active Renters", icon: Users },
-  { number: "46+", label: "Verified Vehicles", icon: Car },
-  { number: "P10K+", label: "Revenue Generated", icon: TrendingUp },
+  { number: "154+", label: "Registered Users", icon: Users },
+  { number: "56+", label: "Verified Vehicles", icon: Car },
+  { number: "P247K+", label: "Revenue Generated", icon: TrendingUp },
   { number: "15%", label: "Fair Commission", icon: Percent }
 ];
 ```
@@ -398,17 +399,20 @@ const stats = [
 <Card>
   <CardHeader>
     <TrendingUp className="w-12 h-12" />
-    <CardTitle>Earn Up to P5,000/Month</CardTitle>
+    <CardTitle>Earn from P7.6K to P102K/Month</CardTitle>
   </CardHeader>
   <CardContent>
-    <p>Our top hosts earn P12,000-18,000/month with P730/day average rates. Simple 15% commission. Keep 85% of every rental.</p>
+    <p>Host earnings vary by vehicle tier. Standard vehicles (most popular) earn P14,900+ monthly at 85% commission.</p>
     <div className="mt-4 p-4 bg-muted rounded-lg">
-      <p className="text-sm font-semibold">Real Example (P730 avg):</p>
-      <ul className="text-sm mt-2">
-        <li>• P730/day rate = P620/day earnings (85%)</li>
-        <li>• 20 days rented = P12,400/month</li>
-        <li>• 30 days rented = P18,600/month</li>
+      <p className="text-sm font-semibold">Real Examples (20 days/month):</p>
+      <ul className="text-sm mt-2 space-y-1">
+        <li>• Basic (P450/day): P7,640/month</li>
+        <li>• Standard (P875/day): P14,880/month</li>
+        <li>• Executive (P1,750/day): P29,750/month</li>
+        <li>• 4x4/SUV (P2,250/day): P38,250/month</li>
+        <li>• Prestige (P4,000/day): P68,000/month</li>
       </ul>
+      <p className="text-xs text-muted-foreground mt-2">Platform average: P1,230/day across 33 active vehicles</p>
     </div>
   </CardContent>
 </Card>
@@ -487,7 +491,7 @@ const stats = [
     <CardTitle>Perfect for Safari Adventures</CardTitle>
   </CardHeader>
   <CardContent>
-    <p>From Chobe to the Okavango Delta - explore Botswana's wonders with 56+ verified vehicles including 4x4s and SUVs averaging P730/day.</p>
+    <p>From Chobe to the Okavango Delta - explore Botswana's wonders with 56+ verified vehicles including 6 dedicated 4x4/SUV options (P2,000-2,500/day).</p>
   </CardContent>
 </Card>
 ```
@@ -499,9 +503,9 @@ const stats = [
 ### `/pricing` Page Meta:
 ```html
 <title>MobiRides Pricing - P100 OFF First Rental | Rent2Buy Coming Q2 2026</title>
-<meta name="description" content="Get P100 OFF your first rental with code FIRST100. Browse 56+ vehicles averaging P730/day. Join Rent2Buy waitlist for vehicle ownership through motshelo financing at 6.5%/month over 6-18 months. Valid until Dec 31, 2025." />
-<meta property="og:title" content="MobiRides - P100 OFF First Rental | Rent2Buy Q2 2026" />
-<meta property="og:description" content="Join 100+ renters saving with code FIRST100. Book now or join Rent2Buy waitlist for vehicle ownership." />
+<meta name="description" content="Get P100 OFF your first rental with code FIRST100. Browse 56+ vehicles across 5 tiers (Basic P400-500, Standard P750-1,000, Executive P1,500-2,000, 4x4/SUV P2,000-2,500, Prestige P3,500-4,500). Join Rent2Buy waitlist for vehicle ownership through motshelo financing at 6.5%/month over 6-18 months. Valid until Dec 31, 2025." />
+<meta property="og:title" content="MobiRides - P100 OFF First Rental | 5-Tier Pricing | Rent2Buy Q2 2026" />
+<meta property="og:description" content="Join 154+ users. Browse 56+ vehicles from P400/day. Save with code FIRST100 or join Rent2Buy waitlist for vehicle ownership." />
 ```
 
 ### `/partners` Page Meta:
@@ -512,7 +516,7 @@ const stats = [
 
 ### Homepage Meta:
 ```html
-<meta name="description" content="MobiRides - Botswana's trusted P2P car sharing platform. Get P100 OFF your first rental with code FIRST100. 154+ active renters, 56+ verified vehicles, Pay-U insurance included. Average P730/day rentals." />
+<meta name="description" content="MobiRides - Botswana's trusted P2P car sharing platform. Get P100 OFF your first rental with code FIRST100. 154+ registered users, 56+ verified vehicles across 5 tiers (from P400/day), Pay-U insurance included. Platform average: P1,230/day." />
 ```
 
 ---
@@ -604,14 +608,21 @@ CREATE TABLE rent2buy_waitlist (
 ## Testing Checklist
 
 - [ ] Active promotion banner displays correctly on homepage
-- [ ] P100 OFF messaging clear on `/pricing` page
+- [ ] P100 OFF messaging clear on `/pricing` page with 5-tier vehicle structure
 - [ ] Rent2Buy waitlist form submits successfully
-  - [ ] Real metrics display correctly (154+, 56+, P247K+)
-  - [ ] Partners page loads with new categories (Motshelo 6.5%/month terms)
-  - [ ] Rent2Buy messaging reflects 6.5%/month over 6-18 months financing
+- [ ] Real metrics display correctly (154+ users, 56+ vehicles, P247K+ revenue)
+- [ ] 5-tier pricing displayed accurately across all pages:
+  - [ ] Basic (Economy): P400-500/day - 7 vehicles
+  - [ ] Standard: P750-1,000/day - 11 vehicles
+  - [ ] Executive: P1,500-2,000/day - 5 vehicles
+  - [ ] 4x4/SUV: P2,000-2,500/day - 6 vehicles
+  - [ ] Prestige/Commercial: P3,500-4,500/day - 4 vehicles
+- [ ] Host earnings calculator reflects accurate tier-based earnings (85% commission)
+- [ ] Partners page loads with new categories (Motshelo 6.5%/month terms)
+- [ ] Rent2Buy messaging reflects 6.5%/month over 6-18 months financing
 - [ ] All CTAs link to correct pages
 - [ ] Mobile responsive design maintained
-- [ ] SEO meta tags render correctly
+- [ ] SEO meta tags render correctly with updated vehicle counts and pricing
 - [ ] No broken links
 
 ---
