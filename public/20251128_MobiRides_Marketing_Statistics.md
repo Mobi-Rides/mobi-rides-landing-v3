@@ -31,19 +31,20 @@
 - **P12,400 - P18,600/month** potential earnings (20-30 rental days)
 - **85%** commission to hosts (industry-leading payout)
 
-### By Vehicle Category
-| Category | Rental Rate | Host Earnings (85%) | Monthly Potential (20 days) |
-|----------|-------------|---------------------|----------------------------|
-| Budget Sedan | P550-650/day | P467-552/day | P9,340-11,040 |
-| Family Sedan | P750-850/day | P637-722/day | P12,740-14,440 |
-| Luxury SUV | P1,200-1,400/day | P1,020-1,190/day | P20,400-23,800 |
-| Pickup Truck | P800-950/day | P680-807/day | P13,600-16,140 |
-| Commercial Van | P900-1,100/day | P765-935/day | P15,300-18,700 |
+### By Vehicle Category (5-Tier System)
+| Category | Rental Rate | Host Earnings (85%) | Monthly Potential (20 days) | Fleet Count |
+|----------|-------------|---------------------|----------------------------|-------------|
+| Basic (Economy) | P400-500/day | P340-425/day | P6,800-P8,500 | 7 vehicles |
+| Standard | P750-1,000/day | P637-850/day | P12,740-P17,000 | 11 vehicles |
+| Executive | P1,500-2,000/day | P1,275-1,700/day | P25,500-P34,000 | 5 vehicles |
+| 4x4/SUV | P2,000-2,500/day | P1,700-2,125/day | P34,000-P42,500 | 6 vehicles |
+| Prestige/Commercial | P3,500-4,500/day | P2,975-3,825/day | P59,500-P76,500 | 4 vehicles |
 
 ### Copy-Paste Social Snippets
-- "Earn P620/day sharing your car with MobiRides 🚗"
-- "Turn your idle car into P12,400-P18,600/month passive income"
+- "Earn P340-P3,825/day sharing your car with MobiRides 🚗"
+- "Turn your idle car into P6,800-P76,500/month passive income"
 - "85% commission = You keep P850 from every P1,000 rental"
+- "Basic cars earn P6,800+/month. 4x4/SUVs earn P34,000+/month"
 
 ---
 
@@ -59,12 +60,12 @@
 
 ### Example Savings
 - **Traditional rental:** P1,000-1,200/day
-- **MobiRides:** P600-850/day
-- **Monthly savings:** P12,000-15,000 (30-day rental)
+- **MobiRides:** P400-850/day (Basic to Executive tiers)
+- **Monthly savings:** P18,000-21,000 (30-day rental)
 
 ### Copy-Paste Social Snippets
 - "Save 30-40% on car rentals in Botswana 🇧🇼"
-- "From P550/day with insurance included ✅"
+- "From P400/day with insurance included ✅"
 - "Book in 2 hours. Drive same day. 🔑"
 
 ---

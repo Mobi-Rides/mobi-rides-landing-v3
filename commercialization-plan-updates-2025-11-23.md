@@ -98,14 +98,15 @@
 - **Gaborone:** 56 vehicles, 154 users, ~70% revenue
 - **Expansion:** Francistown (Q1 2026), Maun/Kasane (Q2 2026 - Safari)
 
-### Pricing (Real Platform Data):
-- **Average Rental Rate:** P730/day
-- Budget: P550-650/day (Host: P468-553)
-- Mid-range: P650-750/day (Host: P553-638)
-- Safari SUV: P750-900/day (Host: P638-765)
-- Executive: P900-1,100/day (Host: P765-935)
-- Pickup Truck: P700-850/day (Host: P595-723)
-- **Commission:** 15% (hosts keep 85% = P600-850/day avg)
+### Pricing (Real Platform Data - 5-Tier System):
+- **Average Rental Rate:** P1,230/day (across 33-vehicle fleet)
+- **5-Tier Classification:**
+  - Basic (Economy): P400-500/day (Host: P340-425) - 7 vehicles
+  - Standard: P750-1,000/day (Host: P637-850) - 11 vehicles
+  - Executive: P1,500-2,000/day (Host: P1,275-1,700) - 5 vehicles
+  - 4x4/SUV: P2,000-2,500/day (Host: P1,700-2,125) - 6 vehicles
+  - Prestige/Commercial: P3,500-4,500/day (Host: P2,975-3,825) - 4 vehicles
+- **Commission:** 15% platform (hosts keep 85%)
 
 ---
 
@@ -172,8 +173,16 @@
 - Targets: 500 downloads, 50 bookings
 
 ### Phase 2: Hosts (Dec 1-14)  
-- Message: "Earn P5,000/month"
+- Message: "Earn P340-P3,825/day with MobiRides"
 - Targets: 20 hosts, 30 vehicles
+- Content: 31 screenshots, 3 videos (detailed tracker available)
+
+### Social Media Campaign Tracking
+- **Campaign Tracker:** `public/20251201_MobiRides_Launch_Campaign_Tracker.md`
+- **Content Production:** 31 screenshots (18 renter, 13 host) + 3 videos
+- **Team Assignments:** Loago (lead), Mandipa (content), Natasha (social), Oratile (ads), Arnold (ops)
+- **Budget:** P8,000 allocated (Canva, ads, influencers, production)
+- **KPIs:** 500 downloads, 50 bookings, 20 hosts, 50K reach, 5% engagement
 
 ---
 
