@@ -7,7 +7,7 @@
 ### Platform Status (As of Nov 2025):
 - **Web App:** Live MVP operational since Q1 2025
 - **Native Mobile App:** In development (Version 4)
-- **Current Traction:** 154+ registered users, 56+ vehicles (33 active on platform), P247K+ revenue (Jan-Oct 2025)
+- **Current Traction:** 154+ registered users, 56 active vehicles (Trillo majority + other partners), P247K+ revenue (Jan-Oct 2025)
 - **Zero Paid Marketing:** All growth organic/referral-based
 
 ### Active Launch Campaign (Nov 17 - Dec 14, 2025):
@@ -223,8 +223,8 @@
             <li><strong>Prestige/Commercial:</strong> P4,000/day → P3,400/day earnings → P68K-P102K/month</li>
           </ul>
           <p className="text-sm text-muted-foreground mt-4">
-            Platform average: P1,230/day across 33 active vehicles. Top hosts with Standard vehicles earn P14,900+ monthly at 20 days utilization. 
-            Join 56+ vehicle owners already earning on MobiRides.
+            Platform average: P1,230/day across 56 active vehicles. Top hosts with Standard vehicles earn P14,900+ monthly at 20 days utilization. 
+            Join our growing network of vehicle owners already earning on MobiRides.
           </p>
         </div>
       </CardContent>
@@ -412,7 +412,7 @@ const stats = [
         <li>• 4x4/SUV (P2,250/day): P38,250/month</li>
         <li>• Prestige (P4,000/day): P68,000/month</li>
       </ul>
-      <p className="text-xs text-muted-foreground mt-2">Platform average: P1,230/day across 33 active vehicles</p>
+      <p className="text-xs text-muted-foreground mt-2">Platform average: P1,230/day across 56 active vehicles</p>
     </div>
   </CardContent>
 </Card>
