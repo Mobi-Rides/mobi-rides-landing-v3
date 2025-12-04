@@ -14,13 +14,13 @@
 To democratize mobility in Botswana by connecting car owners with renters through a secure, transparent platform while creating pathways to vehicle ownership through our innovative Rent2Buy marketplace.
 
 ### Vision Statement
-To become Southern Africa's leading peer-to-peer mobility platform, transforming how Batswana access and own vehicles while building a trusted community powered by local partnerships.
+To launch Southern Africa's first Peer2Peer hub for Vehicle Rentals & Financing, Connecting Owners, Renters, Insurers & Financiers on one marketplace platform and build the rails for electric vehicle adoption on the continent
 
 ### Value Proposition
 MobiRides offers a two-product solution for the Botswana market:
 - **For Hosts:** Turn idle vehicles into income (P3,500-7,000/month) with full Pay-U insurance, vetted renters, and <24hr confirmations
-- **For Renters:** Access affordable vehicles starting 40% cheaper than traditional rentals with on-demand delivery and transparent pricing
-- **For Aspiring Owners:** Rent2Buy pathway to vehicle ownership through partnership with Motshelo groups (6.5% returns for investors)
+- **For Renters:** Access affordable vehicles starting 10x faster than traditional rentals with on-demand delivery and transparent pricing
+- **For Aspiring Owners:** Rent2Buy pathway to vehicle ownership through partnership with Motshelo and private financing groups (6.5% per month returns for investors)
 
 ### Target Market Overview
 **Primary Market:** Gaborone (validated with 154 registered users, 56 active vehicles)
@@ -29,12 +29,12 @@ MobiRides offers a two-product solution for the Botswana market:
 **Market Size:** P250M+ annual car rental market; 1.5M+ tourism arrivals; ~2.6M population
 
 ### Key Highlights
-- **Platform Status:** LIVE and operational (launched Q4 2025)
+- **Platform Status:** LIVE and operational (Beta launched Q2 2025)
 - **Current Performance:** 154 users, 56 vehicles, **P247,535+ revenue (Jan-Oct 2025)** - P24,753 avg monthly revenue
 - **Revenue Growth:** 305% (Jan P14.2K → Oct P43.3K), breakeven achieved in 5 of 10 months
 - **Active Campaign:** "Get Behind the Wheel" (Nov 17-Dec 14) - P100 OFF with code FIRST100
 - **Revenue Model:** 15% commission + Rent2Buy down payments & monthly fees
-- **Confirmed Partnerships:** BIC (insurance), Pay-U (comprehensive coverage), Sekele Fund, Metshelo, Mobile Money
+- **Confirmed Partnerships:** Trillo Rentals(Anchor Fleet Owner), Pay-U (comprehensive coverage)
 - **Funding Status:** P71,500 secured from Cerberus Capital; **P700K pre-seed round (TARGET CLOSE: Dec 15, 2025)**
 - **IP Protection:** ✓ Trademark approved by CIPA, international registration in progress
 - **Two-Product Strategy:** P2P Car Sharing (live) + Rent2Buy Marketplace (Q2 2026 pilot with 3 vehicles)
@@ -48,16 +48,16 @@ MobiRides offers a two-product solution for the Botswana market:
 
 **Product 1: P2P Car Sharing (Live)**
 - **Revenue Stream 1:** 15% commission on confirmed bookings
-- **Revenue Stream 2:** Mobile Money integration fees
+- **Revenue Stream 2:** 10% Insurance package commission
 - **Current Pricing:** Hosts earn P300-600/day (85% of rental rate)
-- **Payment Partners:** Mobile Money (Orange Money, MyZaka, Smega)
+- **Payment Partners:** Stripe, Ooze for Mobile Money (Orange Money, MyZaka, Smega), Click n Pay
 
 **Product 2: Rent2Buy Marketplace (Q2 2026 Pilot)**
 - **Revenue Stream 1:** P5,000-10,000 down payment per conversion (MobiRides retains 20%)
 - **Revenue Stream 2:** P500-750 monthly platform fee per active contract
 - **Initial Fund:** P200,000 for 3 repo vehicles (P60-70K each)
 - **Target Audience:** Young professionals (25-35) earning P5K-12K/month
-- **Investor Returns:** 6.5% for Motshelo groups, repaid over 36 months
+- **Investor Returns:** 6.5% for Private financing and Motshelo groups, repaid over 10 - 18 months
 
 **Cost Structure (Based on Actual Jan-Oct 2025 Data):**
 - Platform & Technology: 38% (P20.9K/month avg)
@@ -86,7 +86,8 @@ MobiRides offers a two-product solution for the Botswana market:
 - Achieve 500+ registered users
 - Finalize Rent2Buy pilot vehicle procurement
 - Target: P72K monthly revenue (67% increase from Oct 2025 baseline)
-
+- Launch Francistown market (target: 20 vehicles)
+  
 **Q2 2026 - Rent2Buy Pilot & Growth:**
 - Launch Rent2Buy with 3 vehicles
 - Onboard first Motshelo partnership (P200K fund)
@@ -95,16 +96,16 @@ MobiRides offers a two-product solution for the Botswana market:
 - Target: P95K monthly revenue (P2P: P95K, R2B: P3.4K/month avg)
 
 **Q3 2026 - Geographic Expansion:**
-- Launch Francistown market (target: 20 vehicles)
-- Continue Rent2Buy conversions (target: cumulative 4)
+- Continue Rent2Buy conversions (target: cumulative 5)
 - Scale Gaborone to 120+ vehicles
+- Launch Maun/Kasane market (target: 15 vehicles)
 - Begin EV dealership partnership discussions
 - Target: P120K monthly revenue (P2P: P120K, R2B: P3.5K/month avg)
+- Complete 5+ total Rent2Buy conversions
 
 **Q4 2026 - Scale & EV Preparation:**
-- Launch Maun/Kasane market (target: 15 vehicles)
+
 - Achieve 150+ total P2P vehicles across all markets
-- Complete 5+ total Rent2Buy conversions
 - Secure 2nd Motshelo fund (P300K for EV phase)
 - Target: P157.5K monthly revenue (P2P: P157.5K, R2B: P4.6K/month avg)
 
@@ -405,7 +406,7 @@ MobiRides offers a two-product solution for the Botswana market:
 - **Key Concern Resolved:** Pay-U partnership provides comprehensive host insurance coverage
 
 **Renter Feedback:**
-- **Price Sensitivity:** 40% cheaper than traditional rentals resonates strongly
+- **Price Sensitivity:** 10x faster than traditional rentals resonates strongly
 - **Top Features:** On-demand delivery, transparent pricing, local hosts
 - **Booking Duration:** Average 3-5 days (tourism drives longer bookings)
 - **Popular Use Cases:** Safari trips to Maun/Kasane, business travel, weekend getaways
@@ -416,7 +417,7 @@ MobiRides offers a two-product solution for the Botswana market:
 - **Host Activation:** 46+ vehicles listed organically
 - **Campaign Response:** FIRST100 promo (P100 OFF) driving renter acquisition in Nov-Dec 2025
 - **Insurance Partnership:** Pay-U partnership eliminates #1 host concern
-- **Fast Confirmations:** <24hr response time standard
+- **Fast Confirmations:** <1 hr response time standard
 - **Revenue Range:** P14-30K monthly with organic traffic only
 
 ### Market Trends & Opportunities
@@ -456,9 +457,9 @@ MobiRides offers a two-product solution for the Botswana market:
 5. **Seasonal Tourism:** Maun/Kasane demand highly seasonal (peak safari season)
    - *Mitigation:* Diversified markets (Gaborone year-round, tourism seasonal boost)
 6. **Vehicle Availability:** Limited fleet requires aggressive host acquisition
-   - *Mitigation:* FIRST100 campaign, partnership with Sekele Fund, Rent2Buy to add inventory
+   - *Mitigation:* FIRST100 campaign, partnership with Motshelo Funds, Rent2Buy to add inventory
    - *Mitigation:* Integrated insurance, clear explanations, educational content
-4. **Competition:** 12+ competitors in various stages
+4. **Competition:** 12+ major competitors in various stages
    - *Mitigation:* Superior product, better unit economics, community focus
 5. **Vehicle Condition Disputes:** 15-20% of bookings have minor disagreements
    - *Mitigation:* Photo documentation, handover process, dispute resolution
@@ -491,7 +492,7 @@ MobiRides offers a two-product solution for the Botswana market:
 - Age: 27 years old
 - Location: Urban tier-1 city
 - Occupation: Digital Marketing Manager
-- Income: $45,000/year
+- Income: P180,000/year
 - Education: Bachelor's degree
 - Tech Savvy: High (early adopter)
 
@@ -504,9 +505,9 @@ MobiRides offers a two-product solution for the Botswana market:
 
 **Needs & Pain Points:**
 - **Need:** Flexible access to vehicles without ownership costs
-- **Pain:** Traditional car rentals are expensive ($80-120/day) and require complicated paperwork
+- **Pain:** Traditional car rentals are expensive ($80-120/day), are not transparent on charges and require complicated paperwork
 - **Pain:** Can't afford to own a car in expensive urban area
-- **Pain:** Public transport doesn't cover weekend trips or emergencies
+- **Pain:** Public transport doesn't cover weekend trips or multi-trip journeys (excessive wait times)
 - **Fear:** Getting scammed or unsafe vehicles
 - **Desire:** Simple, affordable, trustworthy car access
 
@@ -520,28 +521,28 @@ MobiRides offers a two-product solution for the Botswana market:
 - Booking frequency: 2-3 times per month
 
 **Decision Process:**
-1. **Trigger:** Weekend trip planned or car needed for errand
+1. **Trigger:** Weekend trip planned or car needed for errands
 2. **Research:** Compare MobiRides vs traditional rentals vs competitors
 3. **Evaluation:** Filter by price, location, ratings, host verification
 4. **Decision:** Book with highest-rated, verified host at best price
 5. **Post-Purchase:** Leave review, save favorite hosts
 
 **Marketing Channels:**
-- Instagram and TikTok (discovery)
+- Instagram, Facebook and TikTok (discovery)
 - Google search (intent-driven)
 - Peer referrals (trust-building)
 - App Store reviews (validation)
 
 **Value Proposition for Sarah:**
-"Rent quality cars from verified local hosts at 40% less than traditional rentals, with instant booking and full insurance coverage."
+"Rent quality cars from verified local hosts 10x faster than traditional rentals, with instant booking and full insurance coverage."
 
 ### Secondary Buyer Persona: "David - The Side-Hustle Host"
 
 **Demographics:**
 - Age: 34 years old
 - Location: Urban/suburban tier-1 city
-- Occupation: Software Engineer (full-time) + Host (side income)
-- Income: $85,000/year + $5,400/year from hosting
+- Occupation: Engineer (full-time) + Host (side income)
+- Income: P300,000/year + P151,000/year from hosting
 - Education: Bachelor's degree
 - Tech Savvy: Very high
 
@@ -555,10 +556,10 @@ MobiRides offers a two-product solution for the Botswana market:
 **Needs & Pain Points:**
 - **Need:** Monetize idle car sitting in driveway 90% of the time
 - **Pain:** Car payments, insurance, maintenance eating into budget
-- **Pain:** Traditional car rental platforms take 30-40% commission
+- **Pain:** Private car rental providers take 30-40% commission
 - **Pain:** Concerns about vehicle damage and unreliable renters
 - **Fear:** Complicated taxes, liability issues, time-consuming management
-- **Desire:** Earn $400-600/month with minimal effort
+- **Desire:** Earn P10,000-P30,000/month with minimal effort
 
 **Buying Behavior:**
 - Calculates ROI before committing
@@ -570,33 +571,32 @@ MobiRides offers a two-product solution for the Botswana market:
 
 **Decision Process:**
 1. **Trigger:** Research side income opportunities online
-2. **Research:** Compare MobiRides vs Turo, Getaround, local alternatives
+2. **Research:** Compare MobiRides vs local alternatives
 3. **Evaluation:** Compare commission rates, features, market size, reviews
 4. **Trial:** List one vehicle as test
 5. **Scale:** Add more vehicles or commit exclusively based on results
 
 **Marketing Channels:**
 - YouTube (how-to content, earnings videos)
-- Reddit (personal finance communities)
-- Facebook groups (car owner communities)
+- Facebook & WhatsApp groups (car rental communities)
 - Google search ("make money with car")
 - Referrals from existing hosts
 
 **Value Proposition for David:**
-"Earn $500+/month from your idle car with 85% earnings after commission, integrated wallet, verified renters, and comprehensive insurance options."
+"Earn P10,000+/month from your idle car with 85% earnings after commission, integrated wallet, verified renters, and comprehensive insurance options."
 
 ### Customer Needs & Pain Points Summary
 
 **Renter Needs:**
-1. Affordable pricing (40-50% below traditional rentals)
-2. Convenient locations (within 2-3 km)
+1. Affordable pricing (15% below traditional rentals)
+2. Convenience (delivery snd pickup)
 3. Trust and safety (verified hosts, reviews, insurance)
 4. Simple booking process (< 3 minutes)
 5. Flexible durations (hourly to weekly)
 6. Quality vehicles (well-maintained, clean)
 
 **Host Needs:**
-1. Fair commission structure (15% is competitive vs 25-35% industry avg)
+1. Fair commission structure (15% is competitive vs 25-40% industry avg)
 2. Verified, trustworthy renters
 3. Protection from damages (insurance, security deposits)
 4. Easy listing and management
@@ -715,7 +715,7 @@ MobiRides offers a two-product solution for the Botswana market:
 #### **HIGH RISKS (Active Monitoring Required)**
 
 **5. Market Competition Risk** 🟡 **HIGH**
-- **Competitors:** Bolt (ride-hailing expanding to rentals), InDrive, Treepz, Moove
+- **Competitors:** Yango (ride-hailing expanding to rentals), InDrive, Treepz, Moove
 - **Mitigation:** Focus on P2P ownership niche, complementary positioning
 - **Responsible:** CEO + Marketing Lead
 - **Timeline:** Ongoing
@@ -739,8 +739,7 @@ MobiRides offers a two-product solution for the Botswana market:
 
 **8. Insurance & Liability Coverage** 🟢 **LOW** (MITIGATED)
 - **Status:** ✓ Pay-U comprehensive insurance ACTIVE
-- **Status:** ✓ BIC partnership confirmed
-- **Status:** ✓ Bryte dispute resolution protocol in place
+- **Status:** ✓ BIC (Insureguard) partnership ongoing
 - **Residual Risk:** LOW (effectively mitigated)
 
 **9. Technology & Security Risks** 🟢 **LOW** (CONTROLLED)
@@ -764,8 +763,8 @@ MobiRides offers a two-product solution for the Botswana market:
 - **Residual Risk:** LOW
 
 **12. Payment Processing & Mobile Money Integration**
-- **Status:** Orange, Mascom, BeMobile confirmed partnerships
-- **Residual Risk:** LOW
+- **Status:** Ooze (Orange, Mascom, BeMobile) pending partnership
+- **Residual Risk:** MEDIUM
 
 **13. Host/Renter Disputes**
 - **Status:** Support processes established, insurance coverage active
@@ -808,7 +807,7 @@ MobiRides offers a two-product solution for the Botswana market:
 - Payment default rate (Target: <2%)
 
 **Quarterly Monitoring:**
-- Market share vs. competitors (Bolt, InDrive, Treepz)
+- Market share vs. competitors (Facebook listings, Yango, InDrive, Treepz)
 - Regulatory environment changes
 - Partnership health scores
 
@@ -933,7 +932,7 @@ MobiRides offers a two-product solution for the Botswana market:
 
 **Current Position:**
 - **Category:** New entrant in P2P car rental
-- **Target Segment:** Value-conscious renters and income-seeking hosts
+- **Target Segment:** Convinience-conscious renters and income-seeking hosts
 - **Geographic Focus:** Tier-1 and tier-2 cities in emerging markets
 - **Differentiation:** Low commission, high trust, comprehensive features
 
@@ -967,7 +966,7 @@ MobiRides offers a two-product solution for the Botswana market:
 - Showcase integrated wallet transparency
 
 **Messaging Hierarchy:**
-1. **Primary:** "Keep 85% of your earnings" / "Save 40% on rentals"
+1. **Primary:** "Keep 85% of your earnings" / "Save hours on booking your rental"
 2. **Secondary:** "Verified hosts & renters you can trust"
 3. **Tertiary:** "Book in 3 minutes with real-time updates"
 4. **Supporting:** "Full insurance coverage & 24/7 support"
@@ -985,10 +984,10 @@ MobiRides offers a two-product solution for the Botswana market:
 ### Core Value Proposition
 
 **For Hosts:**
-"Turn your idle car into a reliable income stream. Earn $500+/month with MobiRides' industry-lowest 15% commission, verified renters, and comprehensive protection - while keeping full control of your availability and pricing."
+"Turn your idle car into a reliable income stream. Earn P10,000+/month with MobiRides' industry-lowest 15% commission, verified renters, and comprehensive protection - while keeping full control of your availability and pricing."
 
 **For Renters:**
-"Access quality cars from verified local hosts at 40% less than traditional rentals. Book instantly, communicate directly, and drive with confidence knowing every host is KYC-verified with full insurance coverage."
+"Access quality cars from verified local hosts in 10x less time than traditional rentals. Book instantly, communicate directly, and drive with confidence knowing every host is KYC-verified with full insurance coverage."
 
 **Platform Promise:**
 "MobiRides is the fair, safe, and transparent peer-to-peer car rental platform that puts more money in hosts' pockets and more choices in renters' hands."
@@ -1046,12 +1045,12 @@ Trust through transparency, powered by technology
 **Audience-Specific Messages:**
 
 **For Hosts (Lead Generation):**
-- Headline: "Your Car Could Be Earning $500/Month"
+- Headline: "Your Car Could Be Earning P10,000/Month"
 - Subhead: "Join thousands of hosts keeping 85% of their earnings on MobiRides"
 - CTA: "Calculate Your Earnings"
 
 **For Renters (Acquisition):**
-- Headline: "Quality Cars from Verified Hosts - 40% Less Than Rentals"
+- Headline: "Quality Cars from Verified Hosts - 10x Faster Booking Than Rentals"
 - Subhead: "Book instantly from your neighborhood. Fully insured. 4.7★ average rating."
 - CTA: "Find a Car Near You"
 
@@ -1094,12 +1093,12 @@ Trust through transparency, powered by technology
 
 **Economic Proof Points:**
 1. **Host Earnings:**
-   - "Average host earns $500/month per vehicle"
+   - "Average host earns P10,000/month per vehicle"
    - "15% commission - lowest in industry"
    - "Hosts earn 70% more per booking than on Turo"
 
-2. **Renter Savings:**
-   - "40% cheaper than traditional car rentals"
+2. **Renter Convenience:**
+   - "10x Faster than traditional car rentals"
    - "Average booking: $85/day vs $140/day traditional rental"
    - "No hidden fees or surprise charges"
 
@@ -1122,7 +1121,7 @@ Trust through transparency, powered by technology
 
 **Social Proof:**
 1. **User Testimonials:**
-   - Beta host: "I've earned $2,400 in my first 4 months while my car just sits there when I'm at work"
+   - Beta host: "I've earned P25,400 in my first 4 months while before my car just sat there when I was at work"
    - Beta renter: "Booked a car in 2 minutes for my weekend trip. The host was great and the car was exactly as described"
 
 2. **Third-Party Validation:**
@@ -1794,9 +1793,9 @@ Awareness → Interest → Evaluation → Booking → Retention
 - **Value Proposition:** Full coverage during rental periods, vetted renter requirements
 - **Revenue Model:** Platform-facilitated, builds trust and host confidence
 
-**BIC (Botswana Insurance Corporation):**
-- **Status:** Confirmed partnership
-- **Purpose:** Additional insurance product options and coverage validation
+**BIC (Insureguard):**
+- **Status:** Ongoing
+- **Purpose:** Additional insurance product options, underwriting and coverage validation
 - **Integration:** Backup coverage and specialized insurance products
 
 **2. Funding & Investment Partners (ACTIVE)**
@@ -1806,11 +1805,6 @@ Awareness → Interest → Evaluation → Booking → Retention
 - **Status:** Active investor
 - **Purpose:** Initial platform development and launch operations
 
-**Sekele Fund:**
-- **Status:** Confirmed partnership
-- **Purpose:** Potential vehicle financing and growth capital
-- **Strategic Value:** Access to funding networks and business development support
-
 **Metshelo (Stokvel Group Network):**
 - **Status:** Active partnership discussions
 - **Purpose:** Rent2Buy vehicle financing through community investment groups
@@ -1818,7 +1812,7 @@ Awareness → Interest → Evaluation → Booking → Retention
 - **Investor Returns:** 6.5% annual return over 36 months
 - **Strategic Value:** Community-driven ownership model, cultural fit with Botswana savings groups
 
-**3. Payment & Transaction Partners (ACTIVE)**
+**3. Payment & Transaction Partners (Pending)**
 
 **Mobile Money Integration:**
 - **Platforms:** Orange Money, MyZaka, Smega
@@ -1832,6 +1826,10 @@ Awareness → Interest → Evaluation → Booking → Retention
 - **Purpose:** Card processing for credit/debit payments
 - **Timeline:** Completion target Jan 31, 2026
 - **Impact:** Expands payment options beyond mobile money
+
+**Stripe:**
+
+**Click n Pay:**
 
 **4. Operational Support Partners (In Development - Q1 2026)**
 
@@ -1883,10 +1881,10 @@ Awareness → Interest → Evaluation → Booking → Retention
 
 **Partnership Strategy:**
 
-**Phase 1 (Q4 2025 - Complete):**
-- ✅ Insurance (Pay-U, BIC)
-- ✅ Mobile Money (Orange Money, MyZaka, Smega)
-- ✅ Initial Funding (Cerberus, Sekele Fund, Metshelo)
+**Phase 1 (Q4 2025 - Partially Complete):**
+- ✅ Insurance (Pay-U)
+- ✅ Ooze for Mobile Money (Orange Money, MyZaka, Smega)
+- ✅ Initial Funding (Cerberus, BDIH, Mascom)
 
 **Phase 2 (Q1-Q2 2026):**
 - Motshelo partnerships (3+ groups, P200K+ total fund)
@@ -2163,7 +2161,6 @@ Awareness → Interest → Evaluation → Booking → Retention
 
 **Insurance & Damage:**
 - Partner insurance coverage during rental
-- Security deposit hold ($200-500)
 - Damage claim process (photos, estimates, resolution)
 - Arbitration for disputes
 
@@ -2206,7 +2203,7 @@ Awareness → Interest → Evaluation → Booking → Retention
 
 **1. Awareness (Top of Funnel)**
 - Channels: Facebook ads, Google search, YouTube, PR
-- Message: "Earn $500/month with your idle car"
+- Message: "Earn P10,000/month with your idle car"
 - Content: Earnings calculator, success stories, commission comparison
 - Traffic: 10,000 visits/month by Month 6
 
@@ -2244,7 +2241,7 @@ Awareness → Interest → Evaluation → Booking → Retention
 
 **1. Awareness**
 - Channels: Instagram, Google search, referrals, SEO
-- Message: "Quality cars 40% cheaper than rentals"
+- Message: "Quality cars 10x faster booking than rentals"
 - Content: Car browsing, city pages, savings calculator
 - Traffic: 50,000 visits/month by Month 6
 
@@ -2574,12 +2571,12 @@ Total LTV: 96 × $38.25 = $3,648
 - 🆕 Finalize legal/compliance framework
 - 🆕 Set up customer support infrastructure
 
-**Month 2 - Beta Launch:**
-- 🆕 Launch beta in primary city with 100 vehicles
-- 🆕 Onboard founding hosts (target: 100)
+**Month 2 - Official Launch:**
+- 🆕 Launch officially in primary city with 100 vehicles
+- 🆕 Onboard founding hosts (target: 2-10)
 - 🆕 Seed renter base (target: 500)
 - 🆕 Initiate PR campaign (launch announcement)
-- 🆕 Start paid marketing ($30K budget)
+- 🆕 Start paid marketing (P30K budget)
 - 🆕 Launch referral program
 - 🆕 Implement feedback loops
 
@@ -2588,12 +2585,12 @@ Total LTV: 96 × $38.25 = $3,648
 - 🆕 Optimize conversion funnels
 - 🆕 Improve handover process based on feedback
 - 🆕 Scale host recruitment (target: 200 total)
-- 🆕 Increase marketing budget ($40K)
+- 🆕 Increase marketing budget (P40K)
 - 🆕 Launch content marketing
 - 🆕 Complete 1,000 bookings milestone
 
 **Success Metrics:**
-- ✅ 200 active hosts
+- ✅ 20 active hosts
 - ✅ 1,000 registered renters
 - ✅ 1,000 completed bookings
 - ✅ 4.5+ average rating
@@ -2610,31 +2607,31 @@ Total LTV: 96 × $38.25 = $3,648
 **Month 4 - Scale Primary Market:**
 - 🆕 Double down on winning marketing channels
 - 🆕 Launch influencer partnerships
-- 🆕 Expand to 400 hosts in primary city
+- 🆕 Expand to 40 hosts in primary city
 - 🆕 Optimize dynamic pricing (manual)
 - 🆕 Launch host loyalty program
 - 🆕 Increase marketing budget ($50K)
 
 **Month 5 - Geographic Expansion:**
-- 🆕 Launch in 2nd city (target: 100 hosts)
+- 🆕 Launch in 2nd city (target: 10 hosts)
 - 🆕 Localized marketing campaigns
 - 🆕 Hire city manager for new market
 - 🆕 Launch insurance product integration
 - 🆕 Implement customer success program
-- 🆕 Total hosts: 500 across 2 cities
+- 🆕 Total hosts: 50 across 2 cities
 
 **Month 6 - Consolidation:**
 - 🆕 Optimize operations across 2 cities
 - 🆕 Launch affiliate program
 - 🆕 Implement automated email campaigns
 - 🆕 Start hotel/travel partnerships
-- 🆕 Total hosts: 750
+- 🆕 Total hosts: 75
 - 🆕 Achieve unit economics profitability
 
 **Success Metrics:**
-- ✅ 750 active hosts across 2 cities
-- ✅ 5,000 registered renters
-- ✅ 5,000 completed bookings (cumulative: 6,000)
+- ✅ 75 active hosts across 2 cities
+- ✅ 2,000 registered renters
+- ✅ 2,000 completed bookings (cumulative: 6,000)
 - ✅ $100K MRR
 - ✅ CAC payback < 4 months
 - ✅ 65% host retention at 6 months
@@ -2652,7 +2649,7 @@ Total LTV: 96 × $38.25 = $3,648
 - 🆕 Expand to 3rd city
 - 🆕 Implement dynamic pricing algorithm (automated)
 - 🆕 Launch B2B corporate program
-- 🆕 Total hosts: 1,000
+- 🆕 Total hosts: 100
 
 **Month 8 - Mobile Launch:**
 - 🆕 Public launch of iOS app
@@ -2660,20 +2657,20 @@ Total LTV: 96 × $38.25 = $3,648
 - 🆕 App Store Optimization (ASO)
 - 🆕 Mobile-specific marketing campaigns
 - 🆕 Expand to 4th city
-- 🆕 Total hosts: 1,500
+- 🆕 Total hosts: 150
 
 **Month 9 - Market Dominance:**
 - 🆕 Expand to 5th city
 - 🆕 Launch fleet management tools for multi-car hosts
 - 🆕 Implement predictive analytics
 - 🆕 Scale B2B partnerships (50 corporate clients)
-- 🆕 Total hosts: 2,000 across 5 cities
+- 🆕 Total hosts: 200 across 5 cities
 - 🆕 Become #1 or #2 platform in 3 cities
 
 **Success Metrics:**
-- ✅ 2,000 active hosts across 5 cities
-- ✅ 15,000 registered renters
-- ✅ 15,000 bookings in Q3
+- ✅ 200 active hosts across 5 cities
+- ✅ 5,000 registered renters
+- ✅ 5,000 bookings in Q3
 - ✅ 30% of bookings from mobile apps
 - ✅ $250K MRR
 - ✅ 4.7+ platform rating
@@ -2690,26 +2687,26 @@ Total LTV: 96 × $38.25 = $3,648
 - 🆕 Launch Pro Host subscription
 - 🆕 Implement advanced fraud detection
 - 🆕 Expand to first tier-2 city
-- 🆕 Total hosts: 2,500
+- 🆕 Total hosts: 250
 
 **Month 11 - Series A Preparation:**
 - 🆕 Prepare investor deck and materials
 - 🆕 Achieve monthly profitability
 - 🆕 Launch Enterprise Host program
 - 🆕 Expand to 2 more tier-2 cities
-- 🆕 Total hosts: 3,000
+- 🆕 Total hosts: 300
 
 **Month 12 - Year-End Milestone:**
 - 🆕 Series A fundraising (target: $10-15M)
 - 🆕 Achieve $500K MRR
 - 🆕 Launch white-label solution (pilot)
-- 🆕 Total hosts: 3,500 across 8 cities
+- 🆕 Total hosts: 350 across 8 cities
 - 🆕 Plan Year 2 expansion (15 new cities)
 
 **Success Metrics:**
-- ✅ 3,500 active hosts across 8 cities
-- ✅ 30,000 registered renters
-- ✅ 30,000 bookings in Q4
+- ✅ 350 active hosts across 8 cities
+- ✅ 3,000 registered renters
+- ✅ 3,000 bookings in Q4
 - ✅ $500K MRR ($6M ARR)
 - ✅ Monthly profitability achieved
 - ✅ 70% host retention at 12 months
@@ -2728,8 +2725,8 @@ Total LTV: 96 × $38.25 = $3,648
 
 **Month 2:**
 - ✅ Platform beta launch
-- ✅ First 100 hosts onboarded
-- ✅ First 100 bookings completed
+- ✅ First 10 hosts onboarded
+- ✅ First 100 post launch bookings completed
 
 **Month 3:**
 - ✅ 1,000 bookings milestone
@@ -2920,11 +2917,11 @@ MONTHS 10-12 | PROFITABILITY & SCALE
 - **Monthly SaaS:** $1,300
 
 **Marketing Budget:**
-- Month 1-3: $30K/month
-- Month 4-6: $50K/month
-- Month 7-9: $70K/month
-- Month 10-12: $80K/month
-- **Total Year 1:** $720K
+- Month 1-3: P30K/month
+- Month 4-6: P50K/month
+- Month 7-9: P70K/month
+- Month 10-12: P80K/month
+- **Total Year 1:** P720K
 
 **Capital Requirements:**
 
@@ -3326,12 +3323,12 @@ Monthly P&L at Scale (Month 24):
 
 **Financial Milestones:**
 
-**Month 6:** $100K MRR
-**Month 9:** $250K MRR
-**Month 12:** $500K MRR, Series A fundraising
+**Month 6:** P100K MRR
+**Month 9:** P250K MRR
+**Month 12:** P500K MRR, Series A fundraising
 **Month 15:** Monthly profitability
-**Month 18:** $1M MRR
-**Month 24:** $2M MRR, Series B preparation
+**Month 18:** P1M MRR
+**Month 24:** P2M MRR, Series B preparation
 
 ### Budget Allocation by Function
 
