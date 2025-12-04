@@ -14,6 +14,7 @@ const CarsSection = lazy(() => import('@/components/sections/CarsSection'));
 const TrustSection = lazy(() => import('@/components/sections/TrustSection'));
 const TestimonialsSection = lazy(() => import('@/components/sections/TestimonialsSection'));
 const HostCTASection = lazy(() => import('@/components/sections/HostCTASection'));
+const Rent2BuyTeaser = lazy(() => import('@/components/sections/Rent2BuyTeaser'));
 const ExploreBotswanaSection = lazy(() => import('@/components/sections/ExploreBotswanaSection'));
 const FinalCTASection = lazy(() => import('@/components/sections/FinalCTASection'));
 
@@ -288,6 +289,12 @@ const Index = () => {
         <LazySection fallback={<SectionSkeleton />}>
           <AnimatedSection animation="fade-up" delay={400}>
             <HostCTASection />
+          </AnimatedSection>
+        </LazySection>
+
+        <LazySection fallback={<SectionSkeleton />}>
+          <AnimatedSection animation="fade-up" delay={450}>
+            <Rent2BuyTeaser />
           </AnimatedSection>
         </LazySection>
         

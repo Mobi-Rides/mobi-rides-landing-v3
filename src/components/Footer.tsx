@@ -14,7 +14,8 @@ const Footer = () => {
     ],
     Renters: [
       { name: 'Find a Car', href: '/find-ride' },
-      { name: 'Rent2Buy', href: '/pricing' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Rent2Buy', href: '/rent2buy' },
       { name: 'Insurance', href: '/insurance' },
       { name: 'Mobile App', href: '/#app' }
     ],
