@@ -39,6 +39,7 @@ import AdminBlogPage from "./pages/AdminBlogPage";
 import AdminBlogEditPage from "./pages/AdminBlogEditPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import AdminBlogPreviewPage from "./pages/AdminBlogPreviewPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 const queryClient = new QueryClient();
@@ -56,6 +57,7 @@ const App = () => (
               v7_relativeSplatPath: true,
             }}
           >
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/find-ride" element={<FindRidePage />} />
