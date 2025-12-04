@@ -40,6 +40,8 @@ import AdminBlogEditPage from "./pages/AdminBlogEditPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import AdminBlogPreviewPage from "./pages/AdminBlogPreviewPage";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
+import PageTransition from "./components/PageTransition";
 
 
 const queryClient = new QueryClient();
@@ -58,62 +60,65 @@ const App = () => (
             }}
           >
           <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/find-ride" element={<FindRidePage />} />
-            <Route path="/host" element={<HostPage />} />
-            <Route path="/partners" element={<PartnersPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blog/:slug" element={<BlogPostPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/safety" element={<SafetyPage />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/press" element={<PressPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/support" element={<SupportPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/terms" element={<TermsPage />} />
-            <Route path="/pricing" element={<PricingPage />} />
-            <Route path="/rent2buy" element={<Rent2BuyPage />} />
-            <Route path="/host-requirements" element={<HostRequirementsPage />} />
-            <Route path="/faq" element={<FAQPage />} />
-            <Route path="/host-benefits" element={<HostBenefitsPage />} />
-            <Route path="/host-dashboard" element={<HostDashboardPage />} />
-            <Route path="/host-support" element={<HostSupportPage />} />
-            <Route path="/locations" element={<LocationsPage />} />
-            <Route path="/insurance" element={<InsurancePage />} />
-            <Route path="/host-protection" element={<HostProtectionPage />} />
-            <Route path="/host-community" element={<HostCommunityPage />} />
-            <Route path="/travel-guides" element={<TravelGuidesPage />} />
-            <Route path="/business-solutions" element={<BusinessSolutionsPage />} />
-            <Route path="/api-docs" element={<ApiDocsPage />} />
-            
-            {/* Admin Routes */}
-            <Route path="/admin/login" element={<AdminLoginPage />} />
-            <Route path="/admin/blog" element={
-              <ProtectedRoute>
-                <AdminBlogPage />
-              </ProtectedRoute>
-            } />
-            <Route path="/admin/blog/new" element={
-              <ProtectedRoute>
-                <AdminBlogEditPage />
-              </ProtectedRoute>
-            } />
-            <Route path="/admin/blog/edit/:id" element={
-              <ProtectedRoute>
-                <AdminBlogEditPage />
-              </ProtectedRoute>
-            } />
-            <Route path="/admin/blog/preview/:id" element={
-              <ProtectedRoute>
-                <AdminBlogPreviewPage />
-              </ProtectedRoute>
-            } />
-            
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <ScrollToTopButton />
+          <PageTransition>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/find-ride" element={<FindRidePage />} />
+              <Route path="/host" element={<HostPage />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:slug" element={<BlogPostPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/safety" element={<SafetyPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/press" element={<PressPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/support" element={<SupportPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/rent2buy" element={<Rent2BuyPage />} />
+              <Route path="/host-requirements" element={<HostRequirementsPage />} />
+              <Route path="/faq" element={<FAQPage />} />
+              <Route path="/host-benefits" element={<HostBenefitsPage />} />
+              <Route path="/host-dashboard" element={<HostDashboardPage />} />
+              <Route path="/host-support" element={<HostSupportPage />} />
+              <Route path="/locations" element={<LocationsPage />} />
+              <Route path="/insurance" element={<InsurancePage />} />
+              <Route path="/host-protection" element={<HostProtectionPage />} />
+              <Route path="/host-community" element={<HostCommunityPage />} />
+              <Route path="/travel-guides" element={<TravelGuidesPage />} />
+              <Route path="/business-solutions" element={<BusinessSolutionsPage />} />
+              <Route path="/api-docs" element={<ApiDocsPage />} />
+              
+              {/* Admin Routes */}
+              <Route path="/admin/login" element={<AdminLoginPage />} />
+              <Route path="/admin/blog" element={
+                <ProtectedRoute>
+                  <AdminBlogPage />
+                </ProtectedRoute>
+              } />
+              <Route path="/admin/blog/new" element={
+                <ProtectedRoute>
+                  <AdminBlogEditPage />
+                </ProtectedRoute>
+              } />
+              <Route path="/admin/blog/edit/:id" element={
+                <ProtectedRoute>
+                  <AdminBlogEditPage />
+                </ProtectedRoute>
+              } />
+              <Route path="/admin/blog/preview/:id" element={
+                <ProtectedRoute>
+                  <AdminBlogPreviewPage />
+                </ProtectedRoute>
+              } />
+              
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </PageTransition>
           </BrowserRouter>
         </AuthProvider>
       </TooltipProvider>

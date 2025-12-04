@@ -140,12 +140,25 @@ All colors MUST be HSL. Typography: Poppins family.
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
   * {
     @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground font-poppins;
+  }
+  
+  /* Page Transitions */
+  .page-enter {
+    animation: pageEnter 0.4s ease-out forwards;
+  }
+  
+  .page-exit {
+    animation: pageExit 0.3s ease-in forwards;
   }
   
   /* Typography Hierarchy */
@@ -348,5 +361,49 @@ All colors MUST be HSL. Typography: Poppins family.
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100%);
   }
 }
