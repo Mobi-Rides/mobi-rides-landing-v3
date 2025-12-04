@@ -21,6 +21,7 @@ import SupportPage from "./pages/SupportPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
 import PricingPage from "./pages/PricingPage";
+import Rent2BuyPage from "./pages/Rent2BuyPage";
 import HostRequirementsPage from "./pages/HostRequirementsPage";
 import FAQPage from "./pages/FAQPage";
 import HostBenefitsPage from "./pages/HostBenefitsPage";
@@ -71,6 +72,7 @@ const App = () => (
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/rent2buy" element={<Rent2BuyPage />} />
             <Route path="/host-requirements" element={<HostRequirementsPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/host-benefits" element={<HostBenefitsPage />} />
