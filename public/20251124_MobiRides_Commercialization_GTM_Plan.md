@@ -1,7 +1,8 @@
 # MobiRides Go-to-Market Strategy & Commercialization Plan
-**Date:** November 23, 2025  
-**Version:** 1.5  
-**Status:** Live Platform - Active Growth
+**Date:** December 8, 2025 (Consolidated)  
+**Version:** 1.6  
+**Status:** Live Platform - Active Growth  
+**Source Documents:** MobiRides_GTM_Updated.docx, commercialization-plan-updates-2025-11-23.md
 
 ---
 
@@ -204,6 +205,14 @@ MobiRides offers a two-product solution for the Botswana market:
 ### Product Development Status
 **Overall Completion:** 85% production-ready
 
+#### Critical Component Status (As of Nov 24, 2025)
+
+| Component | Status | Completion | Notes |
+|-----------|--------|------------|-------|
+| **Booking System** | ✅ Complete | **97%** | User auth, car listings, booking with conflict detection, messaging, notifications |
+| **Vehicle Handover System** | ✅ Complete | **95%** | GPS meetup, condition docs, digital signatures, photo documentation |
+| **Payment & Wallet System** | 🔴 **BLOCKING** | **35%** | Blocks Feb 28, 2026 commercial launch. Target: 95%+ by Jan 31, 2026 |
+
 **Completed Components (100%):**
 - ✅ User authentication & role-based access control
 - ✅ Car listing management with multi-image uploads
@@ -221,7 +230,7 @@ MobiRides offers a two-product solution for the Botswana market:
 - ✅ SuperAdmin functionality
 
 **In Progress (75%):**
-- 🔄 Payment system integration (Stripe setup, pending local providers)
+- 🔄 Payment system integration (Stripe setup, pending local providers) - **35% complete** 🔴
 - 🔄 Email notification delivery (Resend configured, templates needed)
 - 🔄 SMS notifications (infrastructure ready, implementation pending)
 - 🔄 Push notifications (schema complete, delivery pending)
@@ -233,6 +242,37 @@ MobiRides offers a two-product solution for the Botswana market:
 - ⏳ Mobile applications (iOS/Android)
 - ⏳ Multi-currency support
 - ⏳ Analytics dashboard
+
+### Q1 2026 Operational Blockers
+
+#### Critical Infrastructure Completions
+
+**Payment & Wallet System (BLOCKING COMMERCIAL LAUNCH):**
+- **Current Status:** 35% complete (vs Booking 97%, Vehicle Handover 95%)
+- **Target:** 95%+ complete by Jan 31, 2026
+- **Impact:** Blocks Feb 28, 2026 commercial launch; revenue processing delays
+- **Action Plan:**
+  - Daily standups with CTO + Lead Developer
+  - External dev support if needed (budget: P50K contingency)
+  - Integration completion: DPO Payment Gateway card processing
+  - Mobile money integrations: Orange, Mascom, BeMobile
+  - Wallet system: Credit balances, refunds, host payouts
+
+**WhatsApp Business Integration:**
+- **Target:** Live by Jan 15, 2026
+- **Purpose:** Real-time customer support, booking confirmations, automated notifications
+- **Dependencies:** Phone number registration, API integration, workflow automation
+
+**Help Desk Software Implementation:**
+- **Target:** Operational by Feb 1, 2026
+- **Platform:** TBD (Zendesk, Freshdesk, or Intercom)
+- **Purpose:** Support ticket management, SLA tracking, knowledge base
+
+**QA & Security Milestones:**
+- **Security Audit:** Complete by Feb 15, 2026 (external firm)
+- **Penetration Testing:** Schedule for Feb 20-25, 2026
+- **User Acceptance Testing (UAT):** Feb 1-14, 2026 with beta users
+- **Platform Stability Validation:** 99.5%+ uptime target
 
 ### Key Features & Capabilities
 
@@ -650,6 +690,66 @@ MobiRides offers a two-product solution for the Botswana market:
 
 ---
 
+## 5. Partnership Priorities
+
+### TIER 1: Motshelo/Stokvel Groups (Immediate - Q1 2026)
+- **Target:** 10-15 groups, P200K minimum investment
+- **Return:** 6.5%/month interest rate over 6-18 month terms
+- **Timeline:** Q1 2026 onboarding
+- **Value Proposition:** Community-based financing with higher returns than traditional savings
+
+### TIER 2: Chinese EV Dealerships (Q1 2026)
+- **Focus:** BYD, GWM, Chery, JAC, Geely
+- **Model:** Refleet partnership (used inventory for Rent2Buy)
+- **Goal:** 3-5 dealership partnerships by Q2 2026
+- **Value Proposition:** Access to repo/used EV inventory at wholesale prices
+
+### TIER 3: Banks (Q3 2026)
+- **Targets:** FNB, Standard Chartered, BSB
+- **Role:** Larger loans (>P200K) for scaled Rent2Buy operations
+- **Value Proposition:** Diversified vehicle financing for larger fleet
+
+### TIER 4: Operational Support Partners (Q1 2026)
+| Partner | Function | Status |
+|---------|----------|--------|
+| **CarsCheck** | Mobile vehicle diagnostics for condition verification | Discussions |
+| **Nkitsi** | Open KYC platform for background checks | Discussions |
+| **AA Botswana** | Roadside assistance for breakdowns/emergencies | Confirmed |
+| **Rent Gear** | IoT tracking and telematics for vehicle monitoring | Pending |
+| **Local Garage Networks** | Vehicle servicing, maintenance, repair | Active |
+| **DPO Payment Gateway** | Card processing for seamless transactions | In Progress |
+| **WhatsApp Business** | Customer support integration | Target: Jan 15, 2026 |
+| **Help Desk Software** | Ticketing system for support management | Target: Feb 1, 2026 |
+
+---
+
+## 5A. Current Campaign (Nov-Dec 2025)
+
+### Phase 1: Renters (Nov 17-30)
+- **Promo:** P100 OFF with code FIRST100
+- **Targets:** 500 downloads, 50 bookings
+- **Focus:** First-time renter conversion
+
+### Phase 2: Hosts (Dec 1-14)
+- **Message:** "Earn P340-P3,825/day with MobiRides"
+- **Targets:** 20 new hosts, 30 new vehicles
+- **Content:** 31 screenshots (18 renter, 13 host), 3 videos
+
+### Social Media Campaign Tracking
+- **Campaign Tracker:** `public/20251201_MobiRides_Launch_Campaign_Tracker.md`
+- **Content Templates:** `public/20251201_MobiRides_Social_Content_Templates.md`
+- **Content Production:** 31 screenshots + 3 videos
+- **Team Assignments:** 
+  - Loago (lead)
+  - Mandipa (content)
+  - Natasha (social)
+  - Oratile (ads)
+  - Arnold (ops)
+- **Budget:** P8,000 allocated (Canva, ads, influencers, production)
+- **KPIs:** 500 downloads, 50 bookings, 20 hosts, 50K reach, 5% engagement
+
+---
+
 ## 6. RISK MANAGEMENT FRAMEWORK
 
 ### 6.1 Critical Risk Register (As of Nov 24, 2025)
@@ -795,21 +895,27 @@ MobiRides offers a two-product solution for the Botswana market:
 
 ### 6.3 Risk Monitoring KPIs
 
-**Weekly Monitoring:**
-- Fleet concentration % (Target: <40% from any single partner)
+**Weekly Monitoring (Leadership Team):**
+- Fleet concentration % (Target: <40% from any single partner by Q1 end)
 - User verification completion rate (Target: 80%+ by Q1 2026)
-- Funding pipeline status (Target: Close by Dec 15, 2025)
+- Funding pipeline status (Target: Close P700K by Dec 15, 2025)
+- **Payment System Development %:** Weekly completion tracking (Target: 35% → 95% by Jan 31)
+- Active bookings: Weekly booking volume and revenue trends
 
-**Monthly Monitoring:**
+**Monthly Monitoring (Board Update):**
 - Burn rate vs. runway (Target: <P10K/month burn, 13+ months runway)
 - New fleet partner MOUs signed (Target: 1-2 per month)
-- Host retention rate (Target: >85%)
+- Host retention rate (Target: >85% with 2+ months active listings)
 - Payment default rate (Target: <2%)
+- Revenue vs Forecast: Actual vs projected revenue by product line (P2P, Rent2Buy)
+- User Growth: New registrations, verification completions, booking conversions
 
-**Quarterly Monitoring:**
+**Quarterly Monitoring (Strategic Review):**
 - Market share vs. competitors (Facebook listings, Yango, InDrive, Treepz)
 - Regulatory environment changes
-- Partnership health scores
+- Partnership health scores: Satisfaction surveys with Trillo, insurers, fleet partners
+- City expansion readiness: Vehicle supply, local partnerships, demand validation
+- Technology roadmap progress: Mobile apps, Rent2Buy features, IoT integration
 
 ---
 
