@@ -7,61 +7,53 @@
 
 ---
 
+
 ## 0. Executive Summary
 
-### Business Name
-**MobiRides** - Botswana's Peer-to-Peer Car Sharing & Rent2Buy Marketplace
+**Business Name:** MobiRides – Botswana's Peer-to-Peer Car Sharing & Rent2Buy Marketplace
 
-### Mission Statement
-To democratize mobility in Botswana by connecting car owners with renters through a secure, transparent platform while creating pathways to vehicle ownership through our innovative Rent2Buy marketplace.
+**Mission Statement:** To democratize mobility in Botswana by connecting car owners with renters through a secure, transparent platform while creating pathways to vehicle ownership through our innovative Rent2Buy marketplace.
 
-### Vision Statement
-To launch Southern Africa's first Peer2Peer hub for Vehicle Rentals & Financing, Connecting Owners, Renters, Insurers & Financiers on one marketplace platform and build the rails for electric vehicle adoption on the continent
+**Vision Statement:** To launch Southern Africa's first Peer2Peer hub for Vehicle Rentals & Financing, connecting owners, renters, insurers, and financiers on one marketplace platform, and build the rails for electric vehicle adoption on the continent.
 
-### Value Proposition
-MobiRides offers a two-product solution for the Botswana market:
-- **For Hosts:** Turn idle vehicles into income (P3,500-7,000/month) with full Pay-U insurance, vetted renters, and <24hr confirmations
-- **For Renters:** Access affordable vehicles starting 10x faster than traditional rentals with on-demand delivery and transparent pricing
-- **For Aspiring Owners:** Rent2Buy pathway to vehicle ownership through partnership with Motshelo and private financing groups (6.5% per month returns for investors)
+**Value Proposition:**
+- **For Hosts:** Turn idle vehicles into income (avg. P4,500–15,000/month) with full Pay-U insurance, vetted renters, and <24hr confirmations.
+- **For Renters:** Access affordable vehicles starting 10x faster than traditional rentals with on-demand delivery and transparent pricing.
+- **For Aspiring Owners:** Rent2Buy pathway to vehicle ownership through partnership with Motshelo and private financing groups (6.5% per month returns for investors).
 
-### Target Market Overview
-**Primary Market:** Gaborone (validated with 154 registered users, 56 active vehicles)
-**Expansion Markets:** Francistown (Q3 2026), Maun/Kasane (Q4 2026 - Safari)
-**Customer Segments:** Young professionals (25-40), tourism sector, business travelers, aspiring vehicle owners
-**Market Size:** P250M+ annual car rental market; 1.5M+ tourism arrivals; ~2.6M population
-
-### Key Highlights
-- **Platform Status:** LIVE and operational (Beta launched Q2 2025)
-- **Current Performance:** 154 users, 56 vehicles, **P247,535+ revenue (Jan-Oct 2025)** - P24,753 avg monthly revenue
-- **Revenue Growth:** 305% (Jan P14.2K → Oct P43.3K), breakeven achieved in 5 of 10 months
-- **Active Campaign:** "Get Behind the Wheel" (Nov 17-Dec 14) - P100 OFF with code FIRST100
-- **Revenue Model:** 15% commission + Rent2Buy down payments & monthly fees
-- **Confirmed Partnerships:** Trillo Rentals(Anchor Fleet Owner), Pay-U (comprehensive coverage)
-- **Funding Status:** P71,500 secured from Cerberus Capital; **P700K pre-seed round (TARGET CLOSE: Dec 15, 2025)**
-- **IP Protection:** ✓ Trademark approved by CIPA, international registration in progress
+**Key Highlights:**
+- Platform Status: LIVE and operational (Beta launched Q2 2025)
+- Current Performance: 154 users, 56 vehicles, P247,535+ revenue (Jan–Oct 2025)
+- Revenue Growth: 305% (Jan P14.2K → Oct P43.3K), breakeven achieved in 5 of 10 months
+- Active Campaign: "Get Behind the Wheel" (Nov 17–Dec 14) – P100 OFF with code FIRST100
+- Revenue Model: 15% commission + Rent2Buy down payments & monthly fees
+- Confirmed Partnerships: Trillo Rentals (Anchor Fleet Owner), Pay-U (comprehensive coverage)
+- Funding Status: P71,500 secured from Cerberus Capital; P700K pre-seed round (TARGET CLOSE: Dec 15, 2025)
+- IP Protection: ✓ Trademark approved by CIPA, international registration in progres
 - **Two-Product Strategy:** P2P Car Sharing (live) + Rent2Buy Marketplace (Q2 2026 pilot with 3 vehicles)
 
 ---
 
+
 ## 1. Business Context & Strategic Intent
 
 ### Business Model
+
 **Two-Product Portfolio Strategy:**
+- **Product 1: P2P Car Sharing (Live)**
+  - Revenue Stream 1: 15% commission on confirmed bookings
+  - Revenue Stream 2: 10% Insurance package commission
+  - Current Pricing: Hosts earn P300–600/day (85% of rental rate)
+  - Payment Partners: Stripe, Ooze for Mobile Money (Orange Money, MyZaka, Smega), Click n Pay
 
-**Product 1: P2P Car Sharing (Live)**
-- **Revenue Stream 1:** 15% commission on confirmed bookings
-- **Revenue Stream 2:** 10% Insurance package commission
-- **Current Pricing:** Hosts earn P300-600/day (85% of rental rate)
-- **Payment Partners:** Stripe, Ooze for Mobile Money (Orange Money, MyZaka, Smega), Click n Pay
+- **Product 2: Rent2Buy Marketplace (Q2 2026 Pilot)**
+  - Revenue Stream 1: P5,000–10,000 down payment per conversion (MobiRides retains 20%)
+  - Revenue Stream 2: P500–750 monthly platform fee per active contract
+  - Initial Fund: P200,000 for 3 repo vehicles (P60–70K each)
+  - Target Audience: Young professionals (25–35) earning P5K–12K/month
+  - Investor Returns: 6.5% for Private financing and Motshelo groups, repaid over 10–18 months
 
-**Product 2: Rent2Buy Marketplace (Q2 2026 Pilot)**
-- **Revenue Stream 1:** P5,000-10,000 down payment per conversion (MobiRides retains 20%)
-- **Revenue Stream 2:** P500-750 monthly platform fee per active contract
-- **Initial Fund:** P200,000 for 3 repo vehicles (P60-70K each)
-- **Target Audience:** Young professionals (25-35) earning P5K-12K/month
-- **Investor Returns:** 6.5% for Private financing and Motshelo groups, repaid over 10 - 18 months
-
-**Cost Structure (Based on Actual Jan-Oct 2025 Data):**
+**Cost Structure (Based on Actual Jan–Oct 2025 Data):**
 - Platform & Technology: 38% (P20.9K/month avg)
 - Operations & Staff: 24% (P13.1K/month avg)
 - Vehicle Support: 19% (P10.3K/month avg)
@@ -70,21 +62,21 @@ MobiRides offers a two-product solution for the Botswana market:
 - **Average Monthly Burn:** P5,442 (excluding host payouts)
 
 ### Strategic Goals
-1. **Secure Pre-Seed Funding:** Close P700K round by Dec 15, 2025 (CRITICAL)
-2. **Scale P2P Operations:** Grow from 56 to 150+ vehicles in Gaborone by Dec 2026
-3. **Diversify Fleet Partners:** Reduce Trillo concentration from 80% to <40% by Q2 2026 (HIGH PRIORITY)
-4. **Fix User Verification:** Drive 95% incomplete verifications to 80%+ completion by Q1 2026
-5. **Revenue Growth:** Scale from P43.3K/month (Oct 2025) to P157.5K/month (Dec 2026) - 264% growth
-6. **Launch Rent2Buy:** Pilot with 3 vehicles in Q2 2026, achieve 5+ conversions by Q4
-7. **Geographic Expansion:** Validate Francistown (Q3) and Maun/Kasane (Q4) markets
-5. **Partnership Ecosystem:** Secure 3+ Motshelo partnerships and 1 EV dealership by Q2 2026
-6. **Profitability:** Maintain breakeven status achieved in Oct 2025, scale to consistent monthly profit
+1. Secure Pre-Seed Funding: Close P700K round by Dec 15, 2025 (CRITICAL)
+2. Scale P2P Operations: Grow from 56 to 150+ vehicles in Gaborone by Dec 2026
+3. Diversify Fleet Partners: Reduce Trillo concentration from 80% to <40% by Q2 2026 (HIGH PRIORITY)
+4. Fix User Verification: Drive 95% incomplete verifications to 80%+ completion by Q1 2026
+5. Revenue Growth: Scale from P43.3K/month (Oct 2025) to P157.5K/month (Dec 2026) – 264% growth
+6. Launch Rent2Buy: Pilot with 3 vehicles in Q2 2026, achieve 5+ conversions by Q4
+7. Geographic Expansion: Validate Francistown (Q3) and Maun/Kasane (Q4) markets
+8. Partnership Ecosystem: Secure 3+ Motshelo partnerships and 1 EV dealership by Q2 2026
+9. Profitability: Maintain breakeven status achieved in Oct 2025, scale to consistent monthly profit
 
 ### Key Objectives (2026)
 
 **Q1 2026 - Foundation & Mobile Launch:**
 - Launch iOS/Android mobile apps
-- Grow to 80+ vehicles in Gaborone
+- Grow to 80+ vehicles in Gaborone, 100 Nationally
 - Achieve 500+ registered users
 - Finalize Rent2Buy pilot vehicle procurement
 - Target: P72K monthly revenue (67% increase from Oct 2025 baseline)
@@ -93,13 +85,13 @@ MobiRides offers a two-product solution for the Botswana market:
 **Q2 2026 - Rent2Buy Pilot & Growth:**
 - Launch Rent2Buy with 3 vehicles
 - Onboard first Motshelo partnership (P200K fund)
-- Scale to 100+ P2P vehicles
+- Scale to 120+ P2P vehicles
 - Achieve first 2 Rent2Buy conversions
 - Target: P95K monthly revenue (P2P: P95K, R2B: P3.4K/month avg)
 
 **Q3 2026 - Geographic Expansion:**
 - Continue Rent2Buy conversions (target: cumulative 5)
-- Scale Gaborone to 120+ vehicles
+- Scale Gaborone to 150+ vehicles
 - Launch Maun/Kasane market (target: 15 vehicles)
 - Begin EV dealership partnership discussions
 - Target: P120K monthly revenue (P2P: P120K, R2B: P3.5K/month avg)
@@ -107,13 +99,13 @@ MobiRides offers a two-product solution for the Botswana market:
 
 **Q4 2026 - Scale & EV Preparation:**
 
-- Achieve 150+ total P2P vehicles across all markets
+- Achieve 200+ total P2P vehicles across all markets
 - Secure 2nd Motshelo fund (P300K for EV phase)
 - Target: P157.5K monthly revenue (P2P: P157.5K, R2B: P4.6K/month avg)
 
 ### Success Metrics (2026)
-- **P2P Fleet Growth:** 46 → 150 vehicles (226% growth)
-- **User Growth:** 100 → 2,500+ registered users
+- **P2P Fleet Growth:** 56 → 200 vehicles (226% growth)
+- **User Growth:** 100 → 500+ registered users
 - **Revenue Growth:** P43.3K/month → P157.5K/month (264% growth)
 - **Utilization Rate:** Maintain 12+ days/vehicle/month (proven Oct 2025)
 - **Rent2Buy Conversions:** 5+ successful ownership transfers
@@ -125,9 +117,9 @@ MobiRides offers a two-product solution for the Botswana market:
 
 ### Timeline Overview
 - **Nov-Dec 2025:** Growth campaign (FIRST100), achieve 60+ vehicles
-- **Q1 2026:** Mobile apps launch, 80+ vehicles, foundation solidification
-- **Q2 2026:** Rent2Buy pilot, 100+ vehicles, Motshelo partnerships
-- **Q3-Q4 2026:** Geographic expansion, EV preparation, scale operations
+- **Q1 2026:** Mobile apps launch, 100+ vehicles, foundation solidification
+- **Q2 2026:** Rent2Buy pilot, 120+ vehicles, Motshelo partnerships
+- **Q3-Q4 2026:** Geographic expansion, 200+ vehicles, EV preparation, scale operations
 
 ---
 
