@@ -1,8 +1,9 @@
 # MobiRides Go-to-Market Strategy & Commercialization Plan
 **Date:** December 8, 2025 (Consolidated)  
-**Version:** 1.7  
+**Version:** 1.8  
 **Status:** Live Platform - Active Growth  
-**Source Documents:** MobiRides_GTM_Updated.docx, commercialization-plan-updates-2025-11-23.md, Lean P700K Financial Model
+**Source Documents:** MobiRides_GTM_Updated.docx, commercialization-plan-updates-2025-11-23.md, Lean P700K Financial Model  
+**New Sections Added:** Multi-Market Financial Model (§13), CAC/LTV Analysis (§14), Team Resource Plan (§15), Regulatory Roadmap (§16), New Markets GTM (§17), Product Localization (§18), Per-Market KPIs (§19), Risk Matrix (§20), Exit Planning (§21), Appendices (§22)
 
 ---
 
@@ -4566,6 +4567,678 @@ Monthly P&L at Scale (Month 24):
 **Q2:** Retention and repeat (increase booking frequency)
 **Q3:** Efficiency and scale (reduce CAC, improve margins)
 **Q4:** Profitability and unit economics (optimize all metrics)
+
+---
+
+## 13. Multi-Market Financial Model & Expansion Economics
+
+### Dynamic Financial Model Framework
+
+**Model Structure:** Excel/Sheets with adjustable inputs per market
+- **Download Link:** [MobiRides_Financial_Model_v2.xlsx - Available upon request]
+- **Model Type:** 36-month rolling projection with scenario analysis
+
+#### Adjustable Variables by Market
+
+| Variable | Botswana | Zambia | Maputo | Notes |
+|----------|----------|--------|--------|-------|
+| Starting Fleet | 56 | 20 | 15 | Launch baseline |
+| Monthly Fleet Growth | 8-12 | 5-8 | 4-6 | Conservative ramp |
+| Avg Daily Rate | P450 | ZMW 400 | MZN 3,500 | Market-adjusted |
+| Utilization Rate | 40% | 30% | 25% | Maturity-based |
+| Commission Rate | 15% | 15% | 15% | Standard |
+| Platform Costs | P20K/mo | ZMW 15K/mo | MZN 150K/mo | Localized ops |
+| CAC | P50 | ZMW 80 | MZN 800 | Channel-adjusted |
+| Host Payout % | 85% | 85% | 85% | Standardized |
+
+#### Sensitivity Analysis Scenarios
+
+**Botswana (Base Market):**
+| Scenario | Fleet Y1 | Revenue Y1 | Breakeven Month |
+|----------|----------|------------|-----------------|
+| Conservative | 100 | P960K | Month 4 |
+| Base | 150 | P1.2M | Month 3 |
+| Optimistic | 200 | P1.8M | Month 2 |
+
+**Zambia (Expansion):**
+| Scenario | Fleet Y1 | Revenue Y1 | Breakeven Month |
+|----------|----------|------------|-----------------|
+| Conservative | 40 | ZMW 400K | Month 10 |
+| Base | 60 | ZMW 720K | Month 7 |
+| Optimistic | 80 | ZMW 1.1M | Month 5 |
+
+**Maputo (Expansion):**
+| Scenario | Fleet Y1 | Revenue Y1 | Breakeven Month |
+|----------|----------|------------|-----------------|
+| Conservative | 30 | MZN 2.5M | Month 12 |
+| Base | 50 | MZN 4.5M | Month 9 |
+| Optimistic | 70 | MZN 7M | Month 6 |
+
+#### Cost Structure by Market
+
+| Cost Category | Botswana | Zambia | Maputo |
+|---------------|----------|--------|--------|
+| Platform/Tech | 38% | 35% | 32% |
+| Local Operations | 24% | 30% | 35% |
+| Marketing | 15% | 20% | 22% |
+| Payment Fees | 5% | 6% | 7% |
+| Contingency | 8% | 9% | 4% |
+
+---
+
+## 14. Multi-Market Unit Economics (CAC/LTV Analysis)
+
+### Customer Acquisition Cost (CAC) by Market
+
+#### Host CAC
+
+| Market | Organic CAC | Paid CAC | Blended CAC | Target CAC |
+|--------|-------------|----------|-------------|------------|
+| Botswana | P0 | P150 | P50 | P75 |
+| Zambia | ZMW 0 | ZMW 200 | ZMW 80 | ZMW 100 |
+| Maputo | MZN 0 | MZN 2,000 | MZN 800 | MZN 1,000 |
+
+#### Renter CAC
+
+| Market | Organic CAC | Paid CAC | Blended CAC | Target CAC |
+|--------|-------------|----------|-------------|------------|
+| Botswana | P0 | P80 | P25 | P40 |
+| Zambia | ZMW 0 | ZMW 100 | ZMW 40 | ZMW 60 |
+| Maputo | MZN 0 | MZN 1,000 | MZN 400 | MZN 600 |
+
+### Lifetime Value (LTV) by Market
+
+#### Host LTV
+
+| Market | Avg Monthly Revenue | Avg Tenure | Commission | LTV |
+|--------|---------------------|------------|------------|-----|
+| Botswana | P3,500 | 18 months | 15% | P9,450 |
+| Zambia | ZMW 2,800 | 15 months | 15% | ZMW 6,300 |
+| Maputo | MZN 28,000 | 12 months | 15% | MZN 50,400 |
+
+#### Renter LTV
+
+| Market | Avg Booking Value | Bookings/Year | Tenure | Commission | LTV |
+|--------|-------------------|---------------|--------|------------|-----|
+| Botswana | P1,350 | 4 | 2 yrs | 15% | P1,620 |
+| Zambia | ZMW 1,200 | 3 | 1.5 yrs | 15% | ZMW 810 |
+| Maputo | MZN 10,500 | 3 | 1.5 yrs | 15% | MZN 7,088 |
+
+### LTV:CAC Ratios & Payback Period
+
+| Market | Host LTV:CAC | Renter LTV:CAC | Host Payback | Renter Payback |
+|--------|--------------|----------------|--------------|----------------|
+| Botswana | 189:1 | 65:1 | 0.5 months | 0.3 months |
+| Zambia | 79:1 | 20:1 | 1.3 months | 0.7 months |
+| Maputo | 63:1 | 18:1 | 1.5 months | 1.0 months |
+
+### Blended Group View (All Markets)
+
+| Metric | Year 1 | Year 2 | Year 3 |
+|--------|--------|--------|--------|
+| Total Hosts | 260 | 580 | 1,200 |
+| Total Renters | 3,000 | 8,500 | 22,000 |
+| Blended Host CAC | P65 | P55 | P45 |
+| Blended Renter CAC | P30 | P25 | P20 |
+| Blended Host LTV | P8,500 | P9,200 | P10,000 |
+| Blended Renter LTV | P1,400 | P1,600 | P1,800 |
+| Group LTV:CAC (Hosts) | 131:1 | 167:1 | 222:1 |
+| Group LTV:CAC (Renters) | 47:1 | 64:1 | 90:1 |
+
+---
+
+## 15. Team & Resource Plan (Per-Market)
+
+### Botswana (Current Operations)
+
+| Role | Headcount | Start Date | Monthly Cost | Annual Cost |
+|------|-----------|------------|--------------|-------------|
+| CEO/Founder | 1 | Current | P0 (equity) | P0 |
+| CTO/Co-Founder | 1 | Current | P0 (equity) | P0 |
+| Operations Manager | 1 | Q1 2026 | P12,000 | P144,000 |
+| Customer Support Lead | 1 | Q1 2026 | P8,000 | P96,000 |
+| Customer Support Agent | 2 | Q2 2026 | P5,000 | P120,000 |
+| Marketing Coordinator | 1 | Q2 2026 | P7,000 | P84,000 |
+| Finance/Admin | 1 | Q3 2026 | P10,000 | P120,000 |
+| **Botswana Total** | **8** | — | **P47,000** | **P564,000** |
+
+### Zambia (Expansion - Q3 2026)
+
+| Role | Headcount | Start Date | Monthly Cost (ZMW) | Annual Cost (ZMW) |
+|------|-----------|------------|--------------------|--------------------|
+| Country Manager | 1 | Q2 2026 | ZMW 18,000 | ZMW 216,000 |
+| Operations Lead | 1 | Q3 2026 | ZMW 12,000 | ZMW 144,000 |
+| Customer Support | 2 | Q3 2026 | ZMW 6,000 | ZMW 144,000 |
+| Marketing Associate | 1 | Q4 2026 | ZMW 8,000 | ZMW 96,000 |
+| **Zambia Total** | **5** | — | **ZMW 44,000** | **ZMW 600,000** |
+
+### Maputo (Expansion - Q4 2026)
+
+| Role | Headcount | Start Date | Monthly Cost (MZN) | Annual Cost (MZN) |
+|------|-----------|------------|--------------------|--------------------|
+| Country Manager | 1 | Q3 2026 | MZN 120,000 | MZN 1,440,000 |
+| Operations Lead | 1 | Q4 2026 | MZN 80,000 | MZN 960,000 |
+| Customer Support | 2 | Q4 2026 | MZN 45,000 | MZN 1,080,000 |
+| Marketing Associate | 1 | Q1 2027 | MZN 55,000 | MZN 660,000 |
+| **Maputo Total** | **5** | — | **MZN 300,000** | **MZN 4,140,000** |
+
+### Hiring Timeline Summary
+
+| Quarter | Botswana | Zambia | Maputo | Total Hires |
+|---------|----------|--------|--------|-------------|
+| Q1 2026 | +2 | — | — | 2 |
+| Q2 2026 | +3 | +1 | — | 4 |
+| Q3 2026 | +1 | +3 | +1 | 5 |
+| Q4 2026 | — | +1 | +3 | 4 |
+| Q1 2027 | +1 | — | +1 | 2 |
+| **Total** | **8** | **5** | **5** | **18** |
+
+### Team Cost Summary (USD Equivalent)
+
+| Market | Year 1 Total | Year 2 Total | Notes |
+|--------|--------------|--------------|-------|
+| Botswana | $42,000 | $56,000 | Founders on minimal salary Y1 |
+| Zambia | $28,000 | $45,000 | Partial year in Y1 |
+| Maputo | $18,000 | $38,000 | Launch in Q4 2026 |
+| **Group Total** | **$88,000** | **$139,000** | — |
+
+---
+
+## 16. Regulatory & Legal Roadmap (Per-Market)
+
+### Botswana (Current - Compliant)
+
+| Requirement | Status | Completion Date | Notes |
+|-------------|--------|-----------------|-------|
+| Company Registration | ✅ Complete | Jan 2025 | Pty Ltd registered |
+| CIPA Trademark | ✅ Approved | Sep 2025 | International filing in progress |
+| Data Protection (POPI) | ✅ Compliant | Oct 2025 | Privacy policy implemented |
+| Transport Licensing | ✅ Compliant | Ongoing | Operating under rental exemptions |
+| Insurance Partnership | ✅ Confirmed | Aug 2025 | Pay-U comprehensive coverage |
+| Payment Provider License | 🔄 In Progress | Jan 2026 | Via Stripe/DPO partnership |
+| Mobile Money Integration | 🔄 In Progress | Feb 2026 | Orange, Mascom, BeMobile |
+
+### Zambia (Expansion - Q2-Q3 2026)
+
+| Requirement | Status | Target Date | Legal Partner | Budget |
+|-------------|--------|-------------|---------------|--------|
+| Company Registration | ⏳ Planned | Q2 2026 | TBD (Lusaka firm) | $2,000 |
+| PACRA Compliance | ⏳ Planned | Q2 2026 | — | $500 |
+| ZICTA ICT Compliance | ⏳ Planned | Q2 2026 | — | $1,500 |
+| Data Protection Act | ⏳ Planned | Q3 2026 | — | $1,000 |
+| Road Transport Licensing | ⏳ Planned | Q3 2026 | RTSA engagement | $3,000 |
+| Insurance Partnership | ⏳ Planned | Q3 2026 | Local insurer TBD | — |
+| Mobile Money (MTN/Airtel) | ⏳ Planned | Q3 2026 | — | $2,000 |
+| **Zambia Total Budget** | — | — | — | **$10,000** |
+
+### Maputo/Mozambique (Expansion - Q3-Q4 2026)
+
+| Requirement | Status | Target Date | Legal Partner | Budget |
+|-------------|--------|-------------|---------------|--------|
+| Company Registration | ⏳ Planned | Q3 2026 | TBD (Maputo firm) | $3,000 |
+| INTIC Transport License | ⏳ Planned | Q3 2026 | — | $2,500 |
+| Data Protection Compliance | ⏳ Planned | Q4 2026 | — | $1,500 |
+| Insurance Partnership | ⏳ Planned | Q4 2026 | Local insurer TBD | — |
+| Central Bank Approval | ⏳ Planned | Q4 2026 | For payment processing | $4,000 |
+| Mobile Money (M-Pesa/E-Mola) | ⏳ Planned | Q4 2026 | — | $2,000 |
+| Portuguese Localization | ⏳ Planned | Q4 2026 | Translation/legal review | $3,000 |
+| **Maputo Total Budget** | — | — | — | **$16,000** |
+
+### Legal Engagement Timeline
+
+| Phase | Timeline | Activities | Budget |
+|-------|----------|------------|--------|
+| Pre-Entry Research | 3 months before | Market study, regulatory mapping | $2,000/market |
+| Entity Setup | 2 months before | Company registration, local counsel | $3,000-5,000/market |
+| Licensing | 1-2 months before | Transport, data, payment licenses | $5,000-10,000/market |
+| Ongoing Compliance | Post-launch | Quarterly reviews, renewals | $1,000/quarter/market |
+
+---
+
+## 17. New Markets GTM Strategy
+
+### Zambia Launch Plan (Q3 2026)
+
+#### Pre-Launch (Q2 2026)
+- **Budget Allocation:** $15,000
+- **Activities:**
+  - Market research & competitor analysis: $2,000
+  - Legal & regulatory setup: $5,000
+  - Pilot host recruitment (target: 10 hosts): $3,000
+  - Soft launch marketing: $5,000
+
+#### Launch (Q3 2026)
+- **Budget Allocation:** $25,000
+- **Channel Mix:**
+  | Channel | Budget | Target | KPI |
+  |---------|--------|--------|-----|
+  | Digital (FB/IG) | $8,000 | 500 signups | CAC < ZMW 100 |
+  | Influencer/Micro | $4,000 | 200 signups | Engagement 5%+ |
+  | PR/Media | $3,000 | 5 press hits | Reach 50K+ |
+  | Events/Activations | $5,000 | 100 signups | Conversion 10%+ |
+  | Referral Program | $3,000 | 150 referrals | Viral coef 1.2+ |
+  | Contingency | $2,000 | — | — |
+
+#### Launch KPIs (Q3 2026)
+| Metric | Target | Stretch |
+|--------|--------|---------|
+| Hosts Onboarded | 20 | 30 |
+| Renters Registered | 300 | 500 |
+| Completed Bookings | 50 | 100 |
+| Revenue | ZMW 150K | ZMW 250K |
+| NPS | 40+ | 50+ |
+
+### Maputo Launch Plan (Q4 2026)
+
+#### Pre-Launch (Q3 2026)
+- **Budget Allocation:** $20,000
+- **Activities:**
+  - Portuguese market research: $3,000
+  - Legal & regulatory setup: $8,000
+  - Pilot host recruitment (target: 8 hosts): $4,000
+  - Localization (app, website, docs): $5,000
+
+#### Launch (Q4 2026)
+- **Budget Allocation:** $30,000
+- **Channel Mix:**
+  | Channel | Budget | Target | KPI |
+  |---------|--------|--------|-----|
+  | Digital (FB/IG) | $10,000 | 400 signups | CAC < MZN 1,000 |
+  | Influencer/Micro | $5,000 | 150 signups | Engagement 5%+ |
+  | PR/Media | $4,000 | 4 press hits | Reach 40K+ |
+  | Events/Activations | $6,000 | 80 signups | Conversion 8%+ |
+  | Referral Program | $3,000 | 100 referrals | Viral coef 1.1+ |
+  | Contingency | $2,000 | — | — |
+
+#### Launch KPIs (Q4 2026)
+| Metric | Target | Stretch |
+|--------|--------|---------|
+| Hosts Onboarded | 15 | 25 |
+| Renters Registered | 250 | 400 |
+| Completed Bookings | 40 | 80 |
+| Revenue | MZN 3M | MZN 5M |
+| NPS | 35+ | 45+ |
+
+---
+
+## 18. Product Localization Roadmap
+
+### Localization Requirements by Market
+
+#### Language & Content
+
+| Component | Botswana | Zambia | Maputo |
+|-----------|----------|--------|--------|
+| Primary Language | English | English | Portuguese |
+| Secondary Language | Setswana (UI only) | — | English |
+| App Localization | ✅ Complete | ✅ Reuse | 🔄 Q3 2026 |
+| Legal Documents | ✅ Complete | 🔄 Q2 2026 | 🔄 Q3 2026 |
+| Support Scripts | ✅ Complete | 🔄 Q2 2026 | 🔄 Q3 2026 |
+| Marketing Content | ✅ Complete | 🔄 Q2 2026 | 🔄 Q3 2026 |
+
+#### Payment Integrations
+
+| Provider Type | Botswana | Zambia | Maputo |
+|---------------|----------|--------|--------|
+| Card Processing | Stripe/DPO | DPO | DPO |
+| Mobile Money | Orange, Mascom, BeMobile | MTN, Airtel | M-Pesa, E-Mola |
+| Bank Transfer | Local banks | Zanaco, Stanbic | BCI, Millennium |
+| Integration Timeline | Q1 2026 | Q3 2026 | Q4 2026 |
+| Estimated Cost | $15,000 | $8,000 | $10,000 |
+
+#### Insurance Partners
+
+| Market | Partner | Coverage Type | Commission | Status |
+|--------|---------|---------------|------------|--------|
+| Botswana | Pay-U | Comprehensive | 10% | ✅ Confirmed |
+| Zambia | TBD | Comprehensive | 10-12% | 🔍 Exploring |
+| Maputo | TBD | Comprehensive | 10-12% | 🔍 Exploring |
+
+### UX/UI Adaptations
+
+| Adaptation | Botswana | Zambia | Maputo |
+|------------|----------|--------|--------|
+| Currency Display | BWP (P) | ZMW (K) | MZN |
+| Date Format | DD/MM/YYYY | DD/MM/YYYY | DD/MM/YYYY |
+| Phone Format | +267 XXXX XXXX | +260 XXX XXX XXX | +258 XX XXX XXXX |
+| Address Format | Standard | Standard | Portuguese format |
+| ID Verification | Omang/Passport | NRC/Passport | BI/Passport |
+| License Format | BRDV | RTSA | INAC |
+
+### Regulatory Feature Requirements
+
+| Feature | Botswana | Zambia | Maputo |
+|---------|----------|--------|--------|
+| Data Residency | Not required | Local preferred | Required |
+| KYC Level | Medium | Medium | High |
+| Insurance Mandate | Yes | Yes | Yes |
+| Tax Integration | Manual | Manual | E-invoicing |
+| Reporting Requirements | Annual | Quarterly | Monthly |
+
+### Localization Timeline
+
+| Quarter | Botswana | Zambia | Maputo |
+|---------|----------|--------|--------|
+| Q1 2026 | Payment completion | Research | — |
+| Q2 2026 | Optimization | Legal docs, payments | Research |
+| Q3 2026 | Mobile apps | App launch | Legal, localization |
+| Q4 2026 | EV features | Scale | App launch |
+
+---
+
+## 19. Per-Market KPI Framework
+
+### Quarterly KPIs by Market
+
+#### Botswana
+
+| Metric | Q1 2026 | Q2 2026 | Q3 2026 | Q4 2026 |
+|--------|---------|---------|---------|---------|
+| **Vehicles** | 80 | 100 | 120 | 150 |
+| **Registered Users** | 500 | 1,000 | 1,500 | 2,500 |
+| **Monthly Bookings** | 200 | 350 | 500 | 700 |
+| **Monthly Revenue** | P72K | P95K | P120K | P157K |
+| **Utilization Rate** | 38% | 40% | 42% | 45% |
+| **NPS** | 40 | 45 | 48 | 50 |
+| **Profitability** | P5K | P12K | P20K | P35K |
+
+#### Zambia
+
+| Metric | Q3 2026 | Q4 2026 | Q1 2027 | Q2 2027 |
+|--------|---------|---------|---------|---------|
+| **Vehicles** | 20 | 35 | 50 | 70 |
+| **Registered Users** | 300 | 600 | 1,000 | 1,500 |
+| **Monthly Bookings** | 50 | 100 | 180 | 280 |
+| **Monthly Revenue** | ZMW 150K | ZMW 300K | ZMW 540K | ZMW 840K |
+| **Utilization Rate** | 25% | 30% | 35% | 38% |
+| **NPS** | 35 | 40 | 43 | 45 |
+| **Profitability** | -ZMW 50K | -ZMW 20K | ZMW 10K | ZMW 50K |
+
+#### Maputo
+
+| Metric | Q4 2026 | Q1 2027 | Q2 2027 | Q3 2027 |
+|--------|---------|---------|---------|---------|
+| **Vehicles** | 15 | 25 | 40 | 55 |
+| **Registered Users** | 250 | 500 | 900 | 1,400 |
+| **Monthly Bookings** | 40 | 80 | 150 | 250 |
+| **Monthly Revenue** | MZN 3M | MZN 6M | MZN 11M | MZN 19M |
+| **Utilization Rate** | 22% | 28% | 32% | 36% |
+| **NPS** | 32 | 38 | 42 | 45 |
+| **Profitability** | -MZN 1M | -MZN 500K | MZN 200K | MZN 1.5M |
+
+### Group Consolidated KPIs
+
+| Metric | Q4 2026 | Q2 2027 | Q4 2027 |
+|--------|---------|---------|---------|
+| **Total Vehicles** | 200 | 320 | 500 |
+| **Total Users** | 3,350 | 6,500 | 12,000 |
+| **Total Monthly Bookings** | 840 | 1,600 | 3,000 |
+| **Total Monthly Revenue (USD)** | $18K | $38K | $72K |
+| **Blended Utilization** | 40% | 42% | 45% |
+| **Group NPS** | 45 | 48 | 50 |
+| **Group Profitability (USD)** | $3K | $8K | $18K |
+
+---
+
+## 20. Comprehensive Risk Matrix
+
+### Risk Register (All Markets)
+
+#### Political Risks
+
+| Risk | Market | Probability | Impact | Score | Mitigation |
+|------|--------|-------------|--------|-------|------------|
+| Regulatory changes | Botswana | Low | Medium | 3 | Proactive gov engagement, lobby through business associations |
+| Political instability | Zambia | Low | High | 4 | Diversify markets, maintain lean operations |
+| Policy shifts | Mozambique | Medium | High | 6 | Local partnerships, flexible structure |
+| Cross-border restrictions | All | Low | Medium | 3 | Focus on domestic operations first |
+
+#### Currency Risks
+
+| Risk | Market | Probability | Impact | Score | Mitigation |
+|------|--------|-------------|--------|-------|------------|
+| BWP devaluation | Botswana | Low | Low | 1 | Pula is stable, diamond-backed |
+| ZMW volatility | Zambia | High | High | 9 | Dynamic pricing, USD hedging, quick repatriation |
+| MZN depreciation | Mozambique | High | Medium | 6 | Price in USD, weekly rate adjustments |
+| FX conversion losses | All | Medium | Medium | 4 | Multiple payment corridors, local currency focus |
+
+#### Operational Risks
+
+| Risk | Market | Probability | Impact | Score | Mitigation |
+|------|--------|-------------|--------|-------|------------|
+| Host churn | Botswana | Medium | High | 6 | Host success program, competitive payouts |
+| Vehicle damage/theft | All | Medium | High | 6 | Insurance partnerships, deposit requirements |
+| Payment failures | All | Medium | High | 6 | Multiple payment providers, manual fallbacks |
+| Fraud (renters) | All | Medium | Medium | 4 | KYC verification, identity checks, deposits |
+| Fleet concentration | Botswana | High | Critical | 12 | Diversify fleet partners (target <40% single host) |
+
+#### Competitive Risks
+
+| Risk | Market | Probability | Impact | Score | Mitigation |
+|------|--------|-------------|--------|-------|------------|
+| Global player entry | Botswana | Low | High | 4 | First-mover advantage, local relationships |
+| Local copycats | All | Medium | Medium | 4 | Brand building, tech moat, host loyalty |
+| Traditional rental price war | All | Medium | Low | 2 | Differentiated value prop, P2P model |
+| Super-app competition | All | Low | Medium | 3 | Specialization, vertical integration |
+
+#### Technology Risks
+
+| Risk | Market | Probability | Impact | Score | Mitigation |
+|------|--------|-------------|--------|-------|------------|
+| Payment system failure | All | High | Critical | 12 | Priority fix (35%→95%), multiple providers |
+| Platform downtime | All | Low | High | 4 | Cloud infrastructure, monitoring, backups |
+| Data breach | All | Low | Critical | 8 | Security audits, encryption, compliance |
+| Mobile app delays | All | Medium | Medium | 4 | Phased rollout, PWA fallback |
+
+### Risk Scoring Matrix
+
+| Score | Level | Action Required |
+|-------|-------|-----------------|
+| 1-3 | Low | Monitor quarterly |
+| 4-6 | Medium | Active mitigation, monthly review |
+| 7-9 | High | Priority action, weekly review |
+| 10-12 | Critical | Immediate escalation, daily monitoring |
+
+### Top 5 Critical Risks (Immediate Action)
+
+| Rank | Risk | Score | Owner | Due Date | Status |
+|------|------|-------|-------|----------|--------|
+| 1 | Payment System (35%) | 12 | CTO | Jan 31, 2026 | 🔴 Critical |
+| 2 | Fleet Concentration (80%) | 12 | CEO | Mar 31, 2026 | 🔴 Critical |
+| 3 | Pre-Seed Funding | 9 | CEO | Dec 15, 2025 | 🟡 In Progress |
+| 4 | ZMW Currency Volatility | 9 | CFO | Q2 2026 | 🟡 Planning |
+| 5 | Data Breach Potential | 8 | CTO | Feb 28, 2026 | 🟡 Audit Scheduled |
+
+---
+
+## 21. Exit & Contingency Planning
+
+### Market Exit Triggers
+
+#### Financial Triggers
+
+| Trigger | Threshold | Timeline | Action |
+|---------|-----------|----------|--------|
+| Sustained losses | >6 months at >30% loss | Month 6 review | Scale down or exit |
+| CAC exceeds LTV | CAC > LTV for 3+ months | Month 4 review | Pause acquisition, optimize |
+| Revenue decline | >20% MoM for 3 months | Month 3 review | Investigate, pivot or exit |
+| Cash runway < 3 months | Critical | Immediate | Emergency measures |
+
+#### Operational Triggers
+
+| Trigger | Threshold | Timeline | Action |
+|---------|-----------|----------|--------|
+| Utilization < 15% | 3+ consecutive months | Month 4 review | Marketing push or exit |
+| Fleet decline | >30% host churn in quarter | Quarterly review | Host retention program |
+| NPS < 20 | 2+ consecutive quarters | Quarterly review | Product/service overhaul |
+| Regulatory block | License denial/revocation | Immediate | Legal appeal or exit |
+
+#### Competitive Triggers
+
+| Trigger | Threshold | Timeline | Action |
+|---------|-----------|----------|--------|
+| Market share loss | >50% decline in 6 months | Bi-annual review | Competitive response or pivot |
+| Price war | Unsustainable margins for 3+ months | Quarterly review | Differentiation or exit |
+| Super-app entry | Major player captures 30%+ share | Annual review | Partnership or pivot |
+
+### Exit Procedures by Market
+
+#### Graceful Exit Process (12-Week Timeline)
+
+| Week | Activity | Responsible |
+|------|----------|-------------|
+| 1-2 | Board notification, stakeholder communication | CEO |
+| 2-4 | Complete all active bookings, no new bookings | Ops |
+| 4-6 | Host payout completion, refund processing | Finance |
+| 6-8 | Data export/deletion, regulatory notifications | CTO/Legal |
+| 8-10 | Staff transition/severance, asset liquidation | HR/Finance |
+| 10-12 | Entity closure, final compliance filings | Legal |
+
+#### Wind-Down Costs (Per Market)
+
+| Market | Staff Severance | Legal Closure | Refunds/Payouts | Total |
+|--------|-----------------|---------------|-----------------|-------|
+| Botswana | P50,000 | P10,000 | P25,000 | P85,000 |
+| Zambia | ZMW 80,000 | ZMW 20,000 | ZMW 40,000 | ZMW 140,000 |
+| Maputo | MZN 400,000 | MZN 100,000 | MZN 200,000 | MZN 700,000 |
+
+### Pivot Scenarios
+
+| Scenario | Trigger | Pivot Option | Investment Required |
+|----------|---------|--------------|---------------------|
+| P2P underperforms | <50% target after 6 mo | Fleet rental model | P200,000 |
+| Host acquisition fails | <30% target hosts | B2B corporate focus | P100,000 |
+| Rent2Buy fails | <3 conversions in 6 mo | Pause, focus P2P | P0 (reallocate) |
+| Payment system fails | Cannot complete by Q2 | White-label partnership | P50,000 |
+
+### Contingency Reserves
+
+| Reserve Type | Amount | Purpose | Access Trigger |
+|--------------|--------|---------|----------------|
+| Operating Reserve | P50,000 | 1-month runway buffer | Cash < 2 months |
+| Exit Reserve | P85,000 | Graceful shutdown | Exit decision made |
+| Legal Reserve | P30,000 | Regulatory/dispute defense | Legal action received |
+| **Total Contingency** | **P165,000** | — | — |
+
+---
+
+## 22. Appendices & Supporting Documents
+
+### Appendix A: Market Research Summaries
+
+#### A.1 Botswana Market Overview
+- **Population:** 2.6 million
+- **GDP per capita:** $7,961 (2024)
+- **Vehicle ownership:** 185 per 1,000 people
+- **Tourism arrivals:** 1.5M+ annually
+- **Car rental market:** P250M+ annually
+- **Key cities:** Gaborone (capital, 250K), Francistown (100K), Maun (tourism hub)
+
+#### A.2 Zambia Market Overview
+- **Population:** 20 million
+- **GDP per capita:** $1,095 (2024)
+- **Vehicle ownership:** 35 per 1,000 people
+- **Tourism arrivals:** 1.2M annually
+- **Car rental market:** ZMW 200M annually
+- **Key cities:** Lusaka (capital, 3M), Livingstone (tourism), Ndola (copper belt)
+
+#### A.3 Mozambique Market Overview
+- **Population:** 33 million
+- **GDP per capita:** $481 (2024)
+- **Vehicle ownership:** 18 per 1,000 people
+- **Tourism arrivals:** 2.7M annually
+- **Car rental market:** MZN 500M annually
+- **Key cities:** Maputo (capital, 1.1M), Beira (port), Pemba (tourism)
+
+### Appendix B: Regulatory Requirement Tables
+
+#### B.1 Licensing Requirements by Market
+
+| Requirement | Botswana | Zambia | Mozambique |
+|-------------|----------|--------|------------|
+| Company Registration | CIPA | PACRA | Commercial Registry |
+| Transport License | Road Traffic Act | RTSA | INATIC |
+| Data Protection | POPI Act | Data Protection Act | Data Protection Law |
+| Payment Processing | Bank of Botswana | Bank of Zambia | Banco de Moçambique |
+| Insurance Mandate | Yes (Road Traffic Act) | Yes (RTSA) | Yes (INAC) |
+| Consumer Protection | Consumer Protection Act | Competition Act | Consumer Law |
+
+### Appendix C: Competitive Benchmarking
+
+#### C.1 Regional Competitors
+
+| Competitor | Markets | Fleet Size | Model | Commission | Weakness |
+|------------|---------|------------|-------|------------|----------|
+| Traditional Rentals | Botswana | 500+ | B2C | 100% | High prices, poor UX |
+| Turo (indirect) | Global | 1M+ | P2P | 25-40% | Not in Africa |
+| GetAround | Global | 200K+ | P2P | 35%+ | Not in Africa |
+| Local Taxi Apps | All | N/A | Ride-hail | 20-25% | Different model |
+
+#### C.2 MobiRides Competitive Advantages
+
+| Factor | MobiRides | Traditional | Global P2P |
+|--------|-----------|-------------|------------|
+| Host Earnings | 85% | N/A | 60-75% |
+| Renter Savings | 30-50% | Baseline | 10-30% |
+| Local Support | 24/7 local | Limited | None |
+| KYC/Verification | Comprehensive | Basic | Varied |
+| Rent2Buy Option | ✅ Unique | ❌ | ❌ |
+
+### Appendix D: Customer Persona Details
+
+#### D.1 Primary Host Persona: "Professional Peter"
+- **Age:** 35-45
+- **Income:** P15,000-25,000/month
+- **Vehicle:** 2-5 year old sedan/SUV, fully paid
+- **Motivation:** Supplemental income, vehicle utilization
+- **Pain Points:** Unused vehicle, maintenance costs
+- **Behavior:** Risk-averse, values insurance, wants passive income
+
+#### D.2 Primary Renter Persona: "Young Professional Yolanda"
+- **Age:** 25-35
+- **Income:** P8,000-15,000/month
+- **Vehicle Status:** None or unreliable
+- **Motivation:** Weekend trips, business travel, aspires to own
+- **Pain Points:** High rental costs, poor service from traditionals
+- **Behavior:** Mobile-first, price-sensitive, values convenience
+
+### Appendix E: Partnership Templates
+
+#### E.1 Host Agreement Summary
+- Commission: 15% of booking value
+- Payout: Weekly (Fridays)
+- Insurance: Comprehensive via Pay-U (host pays 10% of booking)
+- Cancellation: 24-hour free, after 50% fee
+- Verification: Required (ID, license, vehicle docs)
+
+#### E.2 Insurance Partner Terms
+- Coverage: Third-party + comprehensive
+- Premium: 10% of booking value
+- Excess: P2,000 (renter responsibility)
+- Claims: 48-hour processing
+- Exclusions: DUI, unauthorized drivers, racing
+
+#### E.3 Motshelo Partnership Framework
+- Fund Size: P200,000 minimum
+- Returns: 6.5% monthly (flat rate)
+- Term: 12-18 months
+- Vehicle Selection: MobiRides approved list
+- Risk Sharing: 80% Motshelo / 20% MobiRides
+
+### Appendix F: Data Room Contents
+
+| Document | Status | Last Updated |
+|----------|--------|--------------|
+| Certificate of Incorporation | ✅ Available | Jan 2025 |
+| CIPA Trademark Certificate | ✅ Available | Sep 2025 |
+| Shareholder Agreement | ✅ Available | Jan 2025 |
+| Financial Statements (Jan-Oct 2025) | ✅ Available | Nov 2025 |
+| Insurance Partnership Agreement | ✅ Available | Aug 2025 |
+| Pitch Deck (v3) | ✅ Available | Dec 2025 |
+| Technical Architecture Doc | ✅ Available | Nov 2025 |
+| Customer Contracts (Templates) | ✅ Available | Oct 2025 |
+| Cap Table | ✅ Available | Nov 2025 |
+| Board Resolutions | ✅ Available | Ongoing |
 
 ---
 
