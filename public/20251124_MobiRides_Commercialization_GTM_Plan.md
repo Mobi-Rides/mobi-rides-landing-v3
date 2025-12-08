@@ -1,8 +1,8 @@
 # MobiRides Go-to-Market Strategy & Commercialization Plan
 **Date:** December 8, 2025 (Consolidated)  
-**Version:** 1.6  
+**Version:** 1.7  
 **Status:** Live Platform - Active Growth  
-**Source Documents:** MobiRides_GTM_Updated.docx, commercialization-plan-updates-2025-11-23.md
+**Source Documents:** MobiRides_GTM_Updated.docx, commercialization-plan-updates-2025-11-23.md, Lean P700K Financial Model
 
 ---
 
@@ -1372,22 +1372,22 @@ Net Profit: P48-93K over 3 years
 
 **2026 Revenue Projections (Based on Actual Performance):**
 
-**Baseline Performance (Oct 2025):**
+**Baseline Performance (Oct 2025) - STANDARDIZED:**
 - Current monthly revenue: P43,300
-- Current fleet: 46 vehicles
-- Revenue per vehicle: P941/vehicle/month
+- **Current fleet: 56 vehicles (standardized baseline)**
+- **Revenue per vehicle: ~P773/vehicle/month**
 - Proven utilization: 12+ days/vehicle/month
 
-**P2P Car Sharing Revenue (Recalibrated):**
+**P2P Car Sharing Revenue (Recalibrated for 56-Vehicle Baseline):**
 | Quarter | Vehicles | Revenue/Vehicle/Month | Monthly Revenue | Quarterly Revenue |
 |---------|----------|----------------------|-----------------|------------------|
-| Q1 2026 | 80 | P900* | P72,000 | P216,000 |
-| Q2 2026 | 100 | P950 | P95,000 | P285,000 |
-| Q3 2026 | 120 | P1,000 | P120,000 | P360,000 |
-| Q4 2026 | 150 | P1,050 | P157,500 | P472,500 |
-| **2026 Total** | | | | **P1,333,500** |
+| Q1 2026 | 80 | P800* | P64,000 | P192,000 |
+| Q2 2026 | 100 | P850 | P85,000 | P255,000 |
+| Q3 2026 | 120 | P900 | P108,000 | P324,000 |
+| Q4 2026 | 150 | P950 | P142,500 | P427,500 |
+| **2026 Total** | | | | **P1,198,500** |
 
-*Conservative baseline: P900/vehicle (slightly below current P941 actual)
+*Revenue per vehicle adjusted to conservative P800–950 range based on 56-vehicle baseline.
 
 **Rent2Buy Revenue (Q2-Q4 2026):**
 | Quarter | Active Contracts | Monthly Platform Fee | Down Payment Commissions | Quarterly Revenue |
@@ -1397,7 +1397,7 @@ Net Profit: P48-93K over 3 years
 | Q4 2026 | 5 | P3,125 | P4,500 (2 conversions) | P13,875 |
 | **2026 Total** | | | | **P34,500** |
 
-**Total 2026 Revenue: P1,368,000 (P2P: P1,333.5K + Rent2Buy: P34.5K)**
+**Total 2026 Revenue: P1,233,000 (P2P: P1,198.5K + Rent2Buy: P34.5K)**
 
 **2027 Projections:**
 - **P2P:** P2.4M (200 vehicles @ P1,000/vehicle/month avg)
@@ -1405,8 +1405,8 @@ Net Profit: P48-93K over 3 years
 - **Total:** P2.64M
 
 **Key Assumptions (Validated by Actuals):**
-- ✅ Revenue/vehicle/month: P900-1,050 (current actual: P941)
-- ✅ Fleet growth: 46 → 150 vehicles (226% growth over 12 months)
+- ✅ Revenue/vehicle/month: P800-950 (current actual: P773 on 56 vehicles)
+- ✅ Fleet growth: 56 → 150 vehicles (168% growth over 12 months)
 - ✅ Utilization rate: 12+ days/vehicle/month (proven in Oct 2025)
 - ✅ Commission rate: 15% maintained (P350-600 daily rates)
 - ✅ Campaign boost: Nov-Dec 2025 promo drives Q1 momentum
@@ -1478,7 +1478,49 @@ Target Month 9: 5,000 bookings = $45,000 monthly profit
 
 ## 8. Marketing & Brand Strategy
 
-### Marketing Channels
+### Lean Marketing Budget (Year 1 - Pre-Seed Model)
+
+**Total Marketing Allocation: P150,000 (21.5% of Pre-Seed)**
+**Strategy:** Prioritize high-ROI organic channels, referrals, and community activation
+**Monthly Budget: ~P12,500**
+
+#### Channel Allocation
+
+**Performance Marketing (P6,000/month - 48%)**
+- Targeted Facebook/Instagram Ads (geo-fenced to Gaborone)
+- Focus on retargeting 95% unverified users
+- Google Ads for high-intent keywords
+
+**Content & Community (P3,000/month - 24%)**
+- Micro-influencer partnerships (barter vehicle credit)
+- Host success stories & video content
+- User-generated content campaigns
+
+**Referral Program (P2,000/month - 16%)**
+- Direct credits for successful invites
+- Target CAC < P50
+- Host-to-host referral bonuses
+
+**Events & Guerrilla (P1,500/month - 12%)**
+- Flyers + QR codes at airport, malls, universities
+- Car wash partnerships
+- Coffee shop poster placements
+
+#### Key Campaign Focus
+
+**Q1 2026: "Trust & Verify"**
+- Primary objective: Reduce 95% verification drop-off to <20%
+- Tactics: Automated email/SMS campaigns, P50 credit incentive
+- Target: 80%+ verification completion
+
+**Q2 2026: "Rent2Buy Pilot"**
+- Primary objective: Launch first 3 Rent2Buy vehicles
+- Tactics: Targeted ads to young professionals (25-35, P5K-12K income)
+- Target: 10 qualified applications
+
+---
+
+### Marketing Channels (Scaled Model - Post Series A)
 
 **Digital Marketing (60% of budget):**
 
@@ -1486,41 +1528,6 @@ Target Month 9: 5,000 bookings = $45,000 monthly profit
 
 **Google Ads - Search ($15K/month by Month 6)**
 - **Intent keywords:** "rent car near me," "p2p car rental," "cheap car rental [city]"
-- **Brand keywords:** "MobiRides," "MobiRides booking"
-- **Competitor keywords:** "Turo alternative," "better than Getaround"
-- **Target CPA:** $35 for renters, $150 for hosts
-- **Expected CAC:** $40-50 (search intent strong)
-- **Monthly acquisitions:** 300 renters, 100 hosts
-
-**Meta Ads - Facebook & Instagram ($20K/month by Month 6)**
-- **Audience segments:**
-  - Hosts: Car owners 25-45, interested in side income, gig economy
-  - Renters: Urban millennials, travelers, budget-conscious
-- **Creative types:**
-  - Video testimonials from beta hosts showing earnings
-  - Carousel ads showcasing vehicle variety
-  - UGC content from actual rentals
-- **Target CPA:** $30 for renters, $120 for hosts
-- **Monthly acquisitions:** 400 renters, 150 hosts
-
-**2. Content Marketing (10% of budget)**
-
-**SEO & Organic Content ($5K/month)**
-- **Blog topics:**
-  - "How to Earn $500/Month Renting Your Car"
-  - "P2P Car Rental Guide: Save 40% on Your Next Trip"
-  - "MobiRides vs Turo: Commission Comparison"
-  - "Is Renting Your Car Safe? Everything You Need to Know"
-- **Landing pages:** City-specific pages for local SEO
-- **Target:** 10,000 organic visits/month by Month 12
-- **Expected conversions:** 150/month (1.5% conversion rate)
-
-**YouTube Content ($3K/month)**
-- **Series 1:** "Host Success Stories" (earnings reveals)
-- **Series 2:** "How It Works" (explainer videos)
-- **Series 3:** "Safety First" (trust & verification process)
-- **Influencer partnerships:** Micro-influencers (10-50K followers) in personal finance
-- **Target:** 50K views/month, 100 sign-ups/month
 
 **3. Social Media Organic (5% of budget)**
 
@@ -3046,35 +3053,46 @@ MONTHS 10-12 | PROFITABILITY & SCALE
 - **Use of Funds:** 45% marketing, 45% team, 10% infrastructure/other
 - **Series A (Month 12):** $10-15M for Year 2 expansion
 
-### Dependencies & Risks
+### Critical Dependencies & Risks
+
+**🔴 CRITICAL BLOCKERS:**
+
+**1. Payment Integration (35% Complete) - BLOCKING COMMERCIAL LAUNCH**
+- **Status:** Payment & Wallet System only 35% complete
+- **Impact:** Blocks Feb 28, 2026 commercial launch; revenue processing delays; user drop-off
+- **Action:** Allocate Pre-Seed resources to finalize DPO/Stripe integration by Jan 31, 2026
+- **Mitigation:** Continue manual e-wallet payments as fallback
+- **Responsible:** CTO + Lead Developer
+- **Target:** 95%+ by Jan 31, 2026
+
+---
 
 **Critical Dependencies:**
 
 **Legal & Regulatory:**
 - ✅ Business registration and licenses
-- ⚠️ Insurance partnership (CRITICAL - Month 1)
+- ✅ Insurance partnership (Pay-U comprehensive - ACTIVE)
 - ⚠️ Compliance with local P2P rental regulations
 - ⚠️ Data protection and privacy compliance (GDPR, local laws)
 - ⚠️ Tax reporting and documentation
 
 **Technology:**
-- ✅ Payment integration (Stripe + local) - Month 1
-- ✅ Email notification system - Month 1
-- ⚠️ SMS provider integration - Month 2
-- ⚠️ Push notification infrastructure - Month 3
-- ⚠️ Mobile app development - Month 7-8
+- 🔴 **Payment integration (35% - CRITICAL BLOCKER)** - Target: Jan 31, 2026
+- ✅ Email notification system (Resend configured)
+- ⚠️ SMS provider integration - pending
+- ⚠️ Push notification infrastructure - pending
+- ⚠️ Mobile app development - Q1 2026
 
 **Partnerships:**
-- 🔴 Insurance provider (blocking launch)
-- ⚠️ Payment processors (in progress)
-- ⚠️ Marketing channels (ongoing)
-- ⚠️ B2B partnerships (Month 6+)
+- ✅ Insurance provider (Pay-U - ACTIVE)
+- 🔴 Payment processors (DPO, Mobile Money - in progress)
+- ⚠️ Motshelo groups (Rent2Buy capital)
+- ⚠️ Fleet diversification (reduce Trillo concentration)
 
 **Operational:**
-- ⚠️ Customer support infrastructure
-- ⚠️ Dispute resolution process
-- ⚠️ Fraud detection systems
-- ⚠️ Quality control mechanisms
+- ⚠️ WhatsApp Business integration - Target: Jan 15, 2026
+- ⚠️ Help desk software - Target: Feb 1, 2026
+- ⚠️ User verification campaign (95% incomplete)
 
 **Key Risks:**
 
@@ -3177,83 +3195,106 @@ MONTHS 10-12 | PROFITABILITY & SCALE
 
 ## 12. Financial Plan & Resource Requirements
 
-### Budget Overview
+### Budget Overview (Lean / Pre-Seed Model)
 
-**Year 1 Total Budget: $2.01M**
+**Total Requirement: P700,000**
+**Runway: 12 Months**
+**Objective:** Fix Payment Tech, launch Rent2Buy pilot, reach Series A metrics
 
-**Expense Categories:**
+---
 
-**1. Personnel (45% - $900K):**
-- Founders: $200K (2 × $100K)
-- Head of Growth: $90K (Months 4-12)
-- Customer Success Lead: $65K (Months 4-12)
-- Partnerships Manager: $70K (Months 4-12)
-- Performance Marketer: $60K (Months 7-12)
-- Content Marketer: $55K (Months 7-12)
-- Community Manager: $50K (Months 10-12)
-- Affiliate Manager: $50K (Months 10-12)
-- Support Reps (5): $175K (varying start dates)
-- Contractors: $85K
+### Use of Funds (P700,000)
 
-**2. Marketing & Sales (36% - $720K):**
-- Digital advertising: $480K
-- Content creation: $60K
-- Influencer partnerships: $80K
-- PR & media: $50K
-- Events & offline: $30K
-- Marketing tools: $20K
+#### 1. Rent2Buy Pilot Capital — P200,000 (28.5%)
+- Purchase/Finance initial 3 vehicles (P60-70K each)
+- Revolving capital fund through down payments
+- Target: 10 Motshelo MOUs for ongoing capital
 
-**3. Technology & Infrastructure (5% - $100K):**
-- Cloud hosting: $36K
-- SaaS subscriptions: $16K
-- Mobile app development: $30K
-- Security & compliance: $18K
+#### 2. Product & Technology — P150,000 (21.5%)
+- **Payment System Completion (35% → 100%)** 🔴 CRITICAL
+  - Senior contract developer: P30K/month × 4 months = P120K
+  - Infrastructure costs: P5K/month × 6 months = P30K
+- DPO Payment Gateway integration
+- Mobile money connections (Orange, Mascom, BeMobile)
+- Wallet system completion
 
-**4. Legal & Compliance (3% - $60K):**
-- Business formation: $10K
-- Insurance: $25K
-- Legal counsel: $20K
-- Licenses & permits: $5K
+#### 3. Growth & Marketing — P150,000 (21.5%)
+- **Monthly allocation: ~P12,500/month**
+- Performance marketing (P6K/mo): Facebook/Instagram ads, retargeting
+- Content & community (P3K/mo): Micro-influencer partnerships
+- Referral program (P2K/mo): User acquisition credits
+- Events & guerrilla (P1.5K/mo): Flyers, QR codes, local activations
+- Focus: Verification conversion, host acquisition
 
-**5. Operations & Admin (3% - $60K):**
-- Office expenses: $15K
-- Equipment: $20K
-- Professional services: $15K
-- Misc: $10K
+#### 4. Operations & Admin — P120,000 (17%)
+- **Monthly: ~P10K/month**
+- Office & utilities: P3K/month
+- Legal & compliance: P2K/month
+- Administrative support: P3K/month
+- Misc operational: P2K/month
+- **Founders on minimal/no salary during pre-seed phase**
 
-**6. Contingency (8% - $170K):**
-- Buffer for overruns and unexpected expenses
+#### 5. Contingency — P80,000 (11.5%)
+- FX risk buffer
+- Regulatory compliance buffer
+- Unexpected technical challenges
 
-**Monthly Burn Rate:**
-- Month 1-3: $90K/month
-- Month 4-6: $135K/month
-- Month 7-9: $180K/month
-- Month 10-12: $200K/month
-- **Average:** $168K/month
+---
 
-**Cash Runway:**
-- Initial funding: $2.5M (seed round)
-- Burn: $2.01M in Year 1
-- Revenue: $368K in Year 1
-- Net burn: $1.64M
-- Remaining: $860K
-- **Runway at end of Year 1:** 5 months at Month 12 burn rate
+### Financial Projections (Lean Model)
 
-### Funding Requirements
+#### Year 1 P&L Summary
 
-**Seed Round (Target: Q4 2025 / Q1 2026):**
+| Line Item | Amount |
+|-----------|--------|
+| **Revenue (P2P Commission)** | P1,198,500 |
+| **Revenue (Rent2Buy Fees)** | P34,500 |
+| **Total Revenue** | **P1,233,000** |
+| **Expenses** | P700,000 |
+| **Net Position** | **Positive cash flow possible by Q4 2026** |
 
-**Amount:** $2-3M
-**Valuation:** $8-12M pre-money
-**Dilution:** 20-25%
+#### Breakeven Analysis
 
-**Use of Funds:**
-- Marketing & user acquisition: 40% ($800K-1.2M)
-- Team building: 40% ($800K-1.2M)
-- Technology & infrastructure: 10% ($200K-300K)
-- Operations & working capital: 10% ($200K-300K)
+| Metric | Value |
+|--------|-------|
+| **Monthly Burn** | P41,600 (excluding Rent2Buy capital) |
+| **Current Revenue** | P43,300 (Oct 2025) |
+| **Status** | **Operationally breakeven** (excluding Rent2Buy capital costs) |
+| **Breakeven Revenue** | ~P42K/month |
 
-**Investor Targets:**
+---
+
+### Funding Strategy
+
+#### Pre-Seed Round (Immediate – Dec 15, 2025) 🔴 CRITICAL
+
+| Parameter | Value |
+|-----------|-------|
+| **Amount** | P700,000 |
+| **Sources** | Angels, Local Grants (BDIH), Pre-Seed VCs, Motshelo groups |
+| **Use** | Payment system + Rent2Buy pilot + 12-month runway |
+| **Milestones** | Payment 95%+ by Jan 31, Rent2Buy 3-vehicle pilot by Q2 |
+| **Deadline** | December 15, 2025 |
+
+#### Seed Round (Q1 2027)
+
+| Parameter | Value |
+|-----------|-------|
+| **Amount** | $500K–$1M |
+| **Trigger** | Rent2Buy repayment performance + 150 active vehicles |
+| **Use** | Scale Rent2Buy to 50 vehicles, mobile apps, Francistown expansion |
+| **Prerequisites** | Payment system complete, 150+ vehicles, 5+ Rent2Buy conversions |
+
+---
+
+### Investor Targets
+
+**Pre-Seed:**
+- **Angels:** Local high-net-worth individuals interested in fintech/mobility
+- **Grants:** BDIH Innovation Fund, LEA Youth Fund
+- **Motshelo Groups:** Community financing for Rent2Buy capital
+
+**Seed:**
 - **Lead:** Early-stage VC focused on marketplaces, mobility, or sharing economy
 - **Angels:** Operators from Turo, Getaround, Airbnb, Uber
 - **Strategic:** Corporate VCs from automotive, insurance, or travel industries
@@ -3261,10 +3302,11 @@ MONTHS 10-12 | PROFITABILITY & SCALE
 **Key Metrics for Fundraising:**
 - ✅ Product: 85% production-ready with core features
 - ✅ Team: Experienced founders with complementary skills
-- ✅ Market: $2.5B TAM growing at 18% CAGR
+- ✅ Market: P250M+ TAM in Botswana car rental market
 - ✅ Differentiation: 15% commission vs 25-40% competition
-- ✅ Unit Economics: LTV:CAC of 20:1, 65% contribution margin
-- ⚠️ Traction: Beta metrics (will have post-launch)
+- ✅ Unit Economics: Operationally breakeven, 65% contribution margin
+- ✅ Traction: P247K revenue (Jan-Oct 2025), 305% growth
+- 🔴 Critical: Payment system 35% complete (blocker)
 
 **Series A (Target: Month 12-18):**
 
