@@ -63,7 +63,7 @@
 
 ### Strategic Goals
 1. Secure Pre-Seed Funding: Close P700K round by Dec 15, 2025 (CRITICAL)
-2. Scale P2P Operations: Grow from 56 to 150+ vehicles in Gaborone by Dec 2026
+2. Scale P2P Operations: Grow from 56 to 200+ vehicles in Gaborone by Dec 2026
 3. Diversify Fleet Partners: Reduce Trillo concentration from 80% to <40% by Q2 2026 (HIGH PRIORITY)
 4. Fix User Verification: Drive 95% incomplete verifications to 80%+ completion by Q1 2026
 5. Revenue Growth: Scale from P43.3K/month (Oct 2025) to P157.5K/month (Dec 2026) – 264% growth
