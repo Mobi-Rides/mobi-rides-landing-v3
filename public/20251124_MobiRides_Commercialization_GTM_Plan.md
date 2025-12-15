@@ -1,9 +1,48 @@
 # MobiRides Go-to-Market Strategy & Commercialization Plan
-**Date:** December 8, 2025 (Consolidated)  
-**Version:** 1.8  
+**Date:** December 15, 2025 (Consolidated)  
+**Version:** 1.9  
 **Status:** Live Platform - Active Growth  
 **Source Documents:** MobiRides_GTM_Updated.docx, commercialization-plan-updates-2025-11-23.md, Lean P700K Financial Model  
-**New Sections Added:** Multi-Market Financial Model (§13), CAC/LTV Analysis (§14), Team Resource Plan (§15), Regulatory Roadmap (§16), New Markets GTM (§17), Product Localization (§18), Per-Market KPIs (§19), Risk Matrix (§20), Exit Planning (§21), Appendices (§22)
+**Changes in v1.9:** Section renumbering (0-26), currency standardization to Pula (P), contact info updated, Table of Contents added
+
+---
+
+## Table of Contents
+
+| Section | Title | Page |
+|---------|-------|------|
+| 0 | Executive Summary | - |
+| 1 | Business Context & Strategic Intent | - |
+| 1A | Actual Financial Performance (Jan-Oct 2025) | - |
+| 2 | Product Readiness & Development Overview | - |
+| 3 | Market Validation & Opportunity Analysis | - |
+| 4 | Target Market Analysis & Personas | - |
+| 5 | Partnership Priorities & Ecosystem | - |
+| 5A | Current Campaign (Nov-Dec 2025) | - |
+| 6 | Risk Management Framework | - |
+| 7 | Competitive & Situational Analysis | - |
+| 8 | Value Proposition & Positioning | - |
+| 9 | Pricing & Commercial Model | - |
+| 10 | Marketing & Brand Strategy | - |
+| 11 | Distribution Channels & Partnerships | - |
+| 12 | Sales & Customer Acquisition | - |
+| 13 | Go-to-Market Roadmap | - |
+| 14 | Financial Plan & Resource Requirements | - |
+| 15 | Risk & Compliance Management | - |
+| 16 | Performance Metrics & Success Indicators | - |
+| 17 | Multi-Market Financial Model & Expansion Economics | - |
+| 18 | Multi-Market Unit Economics (CAC/LTV Analysis) | - |
+| 19 | Team & Resource Plan (Per-Market) | - |
+| 20 | Regulatory & Legal Roadmap (Per-Market) | - |
+| 21 | New Markets GTM Strategy | - |
+| 22 | Product Localization Roadmap | - |
+| 23 | Per-Market KPI Framework | - |
+| 24 | Comprehensive Risk Matrix | - |
+| 25 | Exit & Contingency Planning | - |
+| 26 | Appendices & Supporting Documents | - |
+| — | Conclusion & Next Steps | - |
+
+**Currency Note:** All figures in this document are in Botswana Pula (P) unless otherwise specified. For multi-market sections, local currencies (ZMW for Zambia, MZN for Mozambique) are shown alongside Pula equivalents. Historical USD references have been converted at approximately P13.5 = $1 USD.
 
 ---
 
@@ -944,15 +983,15 @@
 **4. Traditional Car Rentals (Hertz, Enterprise, Budget)**
 - Market share: 60% of total car rental market
 - Strengths: Established trust, business partnerships, airport locations
-- Weaknesses: High prices ($80-150/day), limited flexibility, outdated experience
-- Pricing: $80-150/day
+- Weaknesses: High prices (P1,080-2,025/day), limited flexibility, outdated experience
+- Pricing: P1,080-2,025/day
 - Impact: High prices drive customers to P2P
 
 **5. Ride-hailing (Uber, Lyft, Local)**
 - Market share: 35% of urban mobility
 - Strengths: Convenience, no driving required, established user base
 - Weaknesses: Expensive for full-day use, no vehicle control, surge pricing
-- Pricing: $15-30/hour in traffic
+- Pricing: P200-400/hour in traffic
 - Impact: Different use case, potential partnership opportunity
 
 ### 7.2 Competitive Advantage
@@ -1078,7 +1117,7 @@
 
 ---
 
-## 6. Value Proposition & Positioning
+## 8. Value Proposition & Positioning
 
 ### Core Value Proposition
 
@@ -1271,7 +1310,7 @@ We're on your side, helping you succeed whether you're earning or exploring
 
 ---
 
-## 7. Pricing & Commercial Model
+## 9. Pricing & Commercial Model
 
 ### Pricing Model
 
@@ -1469,7 +1508,7 @@ Target Month 9: 5,000 bookings = $45,000 monthly profit
 
 ---
 
-## 8. Marketing & Brand Strategy
+## 10. Marketing & Brand Strategy
 
 ### Lean Marketing Budget (Year 1 - Pre-Seed Model)
 
@@ -1519,12 +1558,12 @@ Target Month 9: 5,000 bookings = $45,000 monthly profit
 
 **1. Performance Marketing (35% of budget)**
 
-**Google Ads - Search ($15K/month by Month 6)**
+**Google Ads - Search (P200K/month by Month 6)**
 - **Intent keywords:** "rent car near me," "p2p car rental," "cheap car rental [city]"
 
 **3. Social Media Organic (5% of budget)**
 
-**Instagram ($2K/month for tools + content)**
+**Instagram (P27K/month for tools + content)**
 - **Content pillars:**
   - Host earnings screenshots (with permission)
   - Renter adventures and testimonials
@@ -1562,11 +1601,11 @@ Target Month 9: 5,000 bookings = $45,000 monthly profit
 **5. Referral & Word-of-Mouth (5% of budget)**
 
 **Referral Program:**
-- Referrer reward: $15 credit
-- Referee reward: $15 off first booking
-- Host referral: $25 bonus after 3 completed bookings
+- Referrer reward: P200 credit
+- Referee reward: P200 off first booking
+- Host referral: P340 bonus after 3 completed bookings
 - Target: 20% of new users from referrals by Month 12
-- Cost: $7.50 CAC (vs $35-150 paid channels)
+- Cost: P100 CAC (vs P470-2,025 paid channels)
 
 **Community Building:**
 - Private Facebook group for hosts
@@ -1597,21 +1636,21 @@ Target Month 9: 5,000 bookings = $45,000 monthly profit
 - **Insurance companies:** Integrated coverage
 
 **Affiliate Program:**
-- Commission: $10 per booking
+- Commission: P135 per booking
 - Partners: Travel bloggers, personal finance websites
 - Target: 50 active affiliates by Month 12
 
 **PR & Media (15% of budget):**
 
-**Press Relations ($7K/month)**
+**Press Relations (P95K/month)**
 - Press releases for milestones (launch, funding, expansion)
 - Pitch to TechCrunch, Product Hunt, local media
 - Founder interviews and thought leadership
 - Podcast appearances (entrepreneurship, side hustles)
 
-**Influencer Partnerships ($8K/month)**
-- Micro-influencers (10-50K): $500/post
-- Mid-tier (50-250K): $2,000/post
+**Influencer Partnerships (P108K/month)**
+- Micro-influencers (10-50K): P6,750/post
+- Mid-tier (50-250K): P27K/post
 - Focus: Personal finance, travel, lifestyle
 
 **Content Strategy:**
@@ -1622,7 +1661,7 @@ Target Month 9: 5,000 bookings = $45,000 monthly profit
 1. **Earnings & Economics:**
    - "How Much Can You Really Earn Renting Your Car?"
    - "MobiRides Commission vs Turo: A Real Comparison"
-   - "I Earned $2,400 in 4 Months - Here's How"
+   - "I Earned P32,400 in 4 Months - Here's How"
 
 2. **Safety & Protection:**
    - "How MobiRides Protects Your Vehicle"
@@ -1710,47 +1749,47 @@ Accent Colors:
 
 ### Marketing Budget & Allocation
 
-**Total Year 1 Marketing Budget: $720,000**
+**Total Year 1 Marketing Budget: P9.72M** (Post-Series A - scaled model)
 
 **Monthly Budget Progression:**
-- Months 1-3: $30,000/month (infrastructure, testing)
-- Months 4-6: $50,000/month (scale winning channels)
-- Months 7-9: $70,000/month (expansion to new cities)
-- Months 10-12: $80,000/month (optimization and peak seasons)
+- Months 1-3: P405K/month (infrastructure, testing)
+- Months 4-6: P675K/month (scale winning channels)
+- Months 7-9: P945K/month (expansion to new cities)
+- Months 10-12: P1.08M/month (optimization and peak seasons)
 
 **Budget Allocation by Channel:**
 
-**Digital Marketing - $432,000 (60%)**
-- Google Ads: $108,000 (15%)
-- Meta Ads (FB/IG): $144,000 (20%)
-- Content Marketing: $72,000 (10%)
-- Email Marketing: $36,000 (5%)
-- Referral Program: $36,000 (5%)
-- Social Media Tools: $36,000 (5%)
+**Digital Marketing - P5.83M (60%)**
+- Google Ads: P1.46M (15%)
+- Meta Ads (FB/IG): P1.94M (20%)
+- Content Marketing: P972K (10%)
+- Email Marketing: P486K (5%)
+- Referral Program: P486K (5%)
+- Social Media Tools: P486K (5%)
 
-**Partnerships - $72,000 (10%)**
-- Affiliate program: $36,000
-- Strategic partnerships: $36,000
+**Partnerships - P972K (10%)**
+- Affiliate program: P486K
+- Strategic partnerships: P486K
 
-**Offline Marketing - $108,000 (15%)**
-- Guerrilla marketing: $60,000
-- Local events: $48,000
+**Offline Marketing - P1.46M (15%)**
+- Guerrilla marketing: P810K
+- Local events: P648K
 
-**PR & Media - $108,000 (15%)**
-- Press relations: $42,000
-- Influencer partnerships: $66,000
+**PR & Media - P1.46M (15%)**
+- Press relations: P567K
+- Influencer partnerships: P891K
 
 **Budget by Objective:**
-- Host Acquisition (40%): $288,000
-- Renter Acquisition (35%): $252,000
-- Brand Awareness (15%): $108,000
-- Retention & Engagement (10%): $72,000
+- Host Acquisition (40%): P3.89M
+- Renter Acquisition (35%): P3.4M
+- Brand Awareness (15%): P1.46M
+- Retention & Engagement (10%): P972K
 
 **Expected Returns (Year 1):**
 - Total users acquired: 15,000 (10,000 renters, 5,000 hosts)
-- Blended CAC: $48
+- Blended CAC: P648
 - Total bookings: 25,000
-- Revenue generated: $2.1M
+- Revenue generated: P28.35M
 - CAC Payback: 4.2 months average
 - ROAS: 2.9x
 
@@ -1820,7 +1859,7 @@ Accent Colors:
 
 ---
 
-## 9. Distribution Channels & Partnerships
+## 11. Distribution Channels & Partnerships
 
 ### Distribution Channels
 
@@ -1873,7 +1912,7 @@ Awareness → Interest → Evaluation → Booking → Retention
 **Tertiary Channels - Affiliate Network (5% of bookings)**
 
 **Affiliate Program:**
-- Commission: $10 per completed booking
+- Commission: P135 per completed booking
 - Custom tracking links
 - Real-time dashboard
 - Monthly payouts
@@ -2026,8 +2065,8 @@ Awareness → Interest → Evaluation → Booking → Retention
 
 **Target Metrics:**
 - 25% attachment rate
-- Average premium: $30/booking
-- Revenue: $15K/month by Month 12
+- Average premium: P405/booking
+- Revenue: P202K/month by Month 12
 
 **2. Payment Processors (Critical - Month 1)**
 
@@ -2041,7 +2080,7 @@ Awareness → Interest → Evaluation → Booking → Retention
 - Local payment gateways (TBD based on geography)
 
 **Partnership Model:**
-- Standard processing fees: 2.9% + $0.30
+- Standard processing fees: 2.9% + P4
 - Instant payout premium: 1% additional
 - Fraud protection included
 
@@ -2141,25 +2180,25 @@ Awareness → Interest → Evaluation → Booking → Retention
 **Channel Economics by Type:**
 
 **Direct Digital:**
-- CAC: $35-150 (depending on audience)
-- LTV: $684-3,648
+- CAC: P470-2,025 (depending on audience)
+- LTV: P9,234-49,248
 - Payback: 1-4 months
 - Margin: 65%
 
 **Partnership/Affiliate:**
-- CAC: $10-15 (commission only)
+- CAC: P135-200 (commission only)
 - LTV: Same as direct
 - Payback: Immediate (performance-based)
 - Margin: 50% (after commission)
 
 **B2B Corporate:**
-- CAC: $200-500 per corporate account
-- Account LTV: $10,000+ over 24 months
+- CAC: P2,700-6,750 per corporate account
+- Account LTV: P135,000+ over 24 months
 - Payback: 2-3 months
 - Margin: 60%
 
 **Organic (SEO, Referral, WOM):**
-- CAC: $0-10
+- CAC: P0-135
 - LTV: Same as direct
 - Payback: Immediate
 - Margin: 75%
@@ -2172,7 +2211,7 @@ Awareness → Interest → Evaluation → Booking → Retention
 
 **Bronze Partner (Free)**
 - Access to affiliate dashboard
-- Standard commission: $10/booking
+- Standard commission: P135/booking
 - Marketing materials
 - Monthly payouts
 - Support: Email
@@ -2180,25 +2219,25 @@ Awareness → Interest → Evaluation → Booking → Retention
 **Requirements:**
 - Minimum 5 referrals/month
 
-**Silver Partner ($99/month)**
-- Commission: $15/booking
+**Silver Partner (P1,340/month)**
+- Commission: P200/booking
 - Custom landing pages
 - Co-marketing opportunities
 - Bi-weekly payouts
 - Support: Priority email + chat
 
 **Requirements:**
-- Minimum 25 referrals/month or $1,500 in bookings
+- Minimum 25 referrals/month or P20,250 in bookings
 
-**Gold Partner ($299/month)**
-- Commission: $20/booking
+**Gold Partner (P4,035/month)**
+- Commission: P270/booking
 - API access for integration
 - Dedicated account manager
 - Weekly payouts
 - Support: 24/7 phone + dedicated Slack
 
 **Requirements:**
-- Minimum 100 referrals/month or $5,000 in bookings
+- Minimum 100 referrals/month or P67,500 in bookings
 
 **Partner Benefits:**
 - Real-time dashboard with analytics
@@ -2299,7 +2338,7 @@ Awareness → Interest → Evaluation → Booking → Retention
 
 ---
 
-## 10. Sales & Customer Acquisition
+## 12. Sales & Customer Acquisition
 
 ### Sales Process
 
@@ -2449,57 +2488,57 @@ Awareness → Interest → Evaluation → Booking → Retention
 
 **Digital Paid Channels:**
 - **Google Search Ads:**
-  - Renter CAC: $40-50
-  - Host CAC: $120-150
+  - Renter CAC: P540-675
+  - Host CAC: P1,620-2,025
   
 - **Meta Ads (Facebook/Instagram):**
-  - Renter CAC: $30-40
-  - Host CAC: $100-130
+  - Renter CAC: P405-540
+  - Host CAC: P1,350-1,755
   
 - **YouTube Ads:**
-  - Renter CAC: $35-45
-  - Host CAC: $110-140
+  - Renter CAC: P470-610
+  - Host CAC: P1,485-1,890
 
 **Organic Channels:**
 - **SEO/Content:**
-  - Blended CAC: $15-25 (content production costs allocated)
+  - Blended CAC: P200-340 (content production costs allocated)
   
 - **Referral Program:**
-  - Renter CAC: $7.50 (referral bonus divided by 2)
-  - Host CAC: $12.50
+  - Renter CAC: P100 (referral bonus divided by 2)
+  - Host CAC: P170
   
 - **Social Media Organic:**
-  - CAC: $5-10 (social management costs allocated)
+  - CAC: P67-135 (social management costs allocated)
 
 **Partnership Channels:**
 - **Affiliate:**
-  - CAC: $10 (commission only)
+  - CAC: P135 (commission only)
   
 - **B2B Partnerships:**
-  - Per-account CAC: $300-500
-  - Per-booking CAC: $3-5 (amortized over bookings)
+  - Per-account CAC: P4,050-6,750
+  - Per-booking CAC: P40-67 (amortized over bookings)
 
 **Blended CAC Targets:**
-- **Renter:** $35 average
-- **Host:** $150 average
-- **Overall Blended:** $48 (weighted by user mix)
+- **Renter:** P470 average
+- **Host:** P2,025 average
+- **Overall Blended:** P650 (weighted by user mix)
 
 **CAC Optimization Strategy:**
 
 **Months 1-3 (Learning Phase):**
-- Test all channels with $3-5K each
+- Test all channels with P40-67K each
 - Identify best-performing channels and creatives
-- Target CAC: $60 blended (exploration premium)
+- Target CAC: P810 blended (exploration premium)
 
 **Months 4-6 (Scaling Phase):**
 - Double down on top 3 channels
 - Optimize targeting and creative
-- Target CAC: $50 blended
+- Target CAC: P675 blended
 
 **Months 7-12 (Optimization Phase):**
 - Shift budget to organic and referral
 - Launch mobile apps for lower CAC
-- Target CAC: $40 blended
+- Target CAC: P540 blended
 
 **CAC Payback Period:**
 - **Renter:** 1 booking (Month 0)
@@ -2514,13 +2553,13 @@ Awareness → Interest → Evaluation → Booking → Retention
 - Average booking frequency: 1 per month
 - Average lifespan: 18 months
 - Churn rate: 5.5% per month (60% 12-month retention)
-- Revenue per booking: $38.25
+- Revenue per booking: P516
 
 **Calculation:**
 ```
 Total bookings over lifetime: 18
-Revenue per booking: $38.25
-Total LTV: 18 × $38.25 = $684
+Revenue per booking: P516
+Total LTV: 18 × P516 = P9,288
 ```
 
 **LTV Improvement Levers:**
@@ -2534,13 +2573,13 @@ Total LTV: 18 × $38.25 = $684
 - Average booking frequency: 4 per month
 - Average lifespan: 24 months
 - Churn rate: 3% per month (70% 12-month retention)
-- Revenue per booking: $38.25
+- Revenue per booking: P516
 
 **Calculation:**
 ```
 Total bookings over lifetime: 96
-Revenue per booking: $38.25
-Total LTV: 96 × $38.25 = $3,648
+Revenue per booking: P516
+Total LTV: 96 × P516 = P49,536
 ```
 
 **LTV Improvement Levers:**
@@ -2549,27 +2588,27 @@ Total LTV: 96 × $38.25 = $3,648
 - Expand fleet: Multi-vehicle hosts (higher LTV)
 
 **LTV:CAC Ratios:**
-- **Renter:** $684 / $35 = **19.5:1** ✅ (Target: >3:1)
-- **Host:** $3,648 / $150 = **24.3:1** ✅ (Target: >3:1)
+- **Renter:** P9,288 / P470 = **19.8:1** ✅ (Target: >3:1)
+- **Host:** P49,536 / P2,025 = **24.5:1** ✅ (Target: >3:1)
 - **Blended:** Excellent unit economics
 
 **LTV Enhancement Strategy:**
 
 **Renter:**
-1. **Loyalty Program:** 5th booking = 10% credit (+2 bookings = +$76 LTV)
-2. **Re-engagement Campaigns:** Win back inactive users (+20% retention = +$137 LTV)
-3. **Insurance Attachment:** 25% take rate × $6 profit = +$27 LTV
-4. **Premium Features:** Instant booking, priority support (+10% frequency = +$68 LTV)
+1. **Loyalty Program:** 5th booking = 10% credit (+2 bookings = +P1,032 LTV)
+2. **Re-engagement Campaigns:** Win back inactive users (+20% retention = +P1,858 LTV)
+3. **Insurance Attachment:** 25% take rate × P81 profit = +P365 LTV
+4. **Premium Features:** Instant booking, priority support (+10% frequency = +P929 LTV)
 
-**Target Renter LTV (Month 18): $900**
+**Target Renter LTV (Month 18): P12,150**
 
 **Host:**
-1. **Pro Subscription:** 20% adoption × $348/year profit = +$70 LTV per host
-2. **Multi-vehicle Hosts:** 2x bookings = +$3,648 LTV
-3. **Performance Coaching:** +1 booking/month = +$918 LTV
-4. **Community Building:** Decrease churn by 1% = +$518 LTV
+1. **Pro Subscription:** 20% adoption × P4,698/year profit = +P940 LTV per host
+2. **Multi-vehicle Hosts:** 2x bookings = +P49,536 LTV
+3. **Performance Coaching:** +1 booking/month = +P12,384 LTV
+4. **Community Building:** Decrease churn by 1% = +P6,996 LTV
 
-**Target Host LTV (Month 18): $4,500**
+**Target Host LTV (Month 18): P60,750**
 
 ### Sales Forecast (12 Months)
 
@@ -2577,7 +2616,7 @@ Total LTV: 96 × $38.25 = $3,648
 - Launch Month 1 with 100 vehicles, 500 users
 - 15% MoM user growth
 - 4 bookings/vehicle/month average
-- $85 average booking value
+- P1,148 average booking value
 - 78% booking completion rate
 - 15% commission + insurance revenue
 
@@ -2587,52 +2626,52 @@ Total LTV: 96 × $38.25 = $3,648
 - Hosts: 100
 - Renters: 500
 - Bookings: 312 (100 vehicles × 4 bookings × 78%)
-- GMV: $26,520
-- Commission Revenue: $3,978
-- Insurance Revenue: $468
-- Total Revenue: $4,446
+- GMV: P358,176
+- Commission Revenue: P53,726
+- Insurance Revenue: P6,320
+- Total Revenue: P60,046
 
 **Month 3:**
 - Hosts: 152
 - Renters: 762
 - Bookings: 475
-- GMV: $40,375
-- Total Revenue: $6,787
+- GMV: P545,300
+- Total Revenue: P91,625
 
 **Month 6:**
 - Hosts: 304
 - Renters: 1,520
 - Bookings: 950
-- GMV: $80,750
-- Total Revenue: $13,575
+- GMV: P1,090,600
+- Total Revenue: P183,250
 
 **Month 9:**
 - Hosts: 607
 - Renters: 3,035
 - Bookings: 1,896
-- GMV: $161,160
-- Total Revenue: $27,095
+- GMV: P2,176,608
+- Total Revenue: P365,775
 
 **Month 12:**
 - Hosts: 1,213
 - Renters: 6,065
 - Bookings: 3,789
-- GMV: $322,065
-- Total Revenue: $54,147
+- GMV: P4,349,172
+- Total Revenue: P730,920
 
 **Yearly Totals (First 12 Months):**
 - Total Bookings: ~25,000
-- Total GMV: $2.125M
-- Total Commission Revenue: $318,750
-- Total Insurance Revenue: $37,500
-- Total Subscription Revenue (Month 6+): $12,180
-- **Total Revenue: $368,430**
+- Total GMV: P28.7M
+- Total Commission Revenue: P4.3M
+- Total Insurance Revenue: P506K
+- Total Subscription Revenue (Month 6+): P164K
+- **Total Revenue: P4.97M**
 
 **Year 2 Projections:**
 - Continued 15% MoM growth to Month 18
 - Then 10% MoM growth to Month 24
-- Month 24 Revenue: ~$165,000/month
-- **Year 2 Total Revenue: $1.56M**
+- Month 24 Revenue: ~P2.23M/month
+- **Year 2 Total Revenue: P21.06M**
 
 **Revenue Drivers & Risks:**
 
@@ -2649,16 +2688,16 @@ Total LTV: 96 × $38.25 = $3,648
 - Competitive pressure on commission: -15% revenue
 
 **Conservative Forecast (80% probability):**
-- Year 1 Revenue: $295,000 (20% below base case)
-- Year 2 Revenue: $1.25M
+- Year 1 Revenue: P3.98M (20% below base case)
+- Year 2 Revenue: P16.88M
 
 **Optimistic Forecast (20% probability):**
-- Year 1 Revenue: $515,000 (40% above base case)
-- Year 2 Revenue: $2.2M
+- Year 1 Revenue: P6.96M (40% above base case)
+- Year 2 Revenue: P29.7M
 
 ---
 
-## 11. Go-to-Market Roadmap
+## 13. Go-to-Market Roadmap
 
 ### GTM Phases
 
@@ -3186,7 +3225,7 @@ MONTHS 10-12 | PROFITABILITY & SCALE
 
 ---
 
-## 12. Financial Plan & Resource Requirements
+## 14. Financial Plan & Resource Requirements
 
 ### Budget Overview (Lean / Pre-Seed Model)
 
@@ -3578,7 +3617,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 13. Risk & Compliance Management
+## 15. Risk & Compliance Management
 
 ### Key Risks
 
@@ -3964,7 +4003,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 14. Performance Metrics & Success Indicators
+## 16. Performance Metrics & Success Indicators
 
 ### Key Performance Indicators (KPIs)
 
@@ -4562,7 +4601,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 13. Multi-Market Financial Model & Expansion Economics
+## 17. Multi-Market Financial Model & Expansion Economics
 
 ### Dynamic Financial Model Framework
 
@@ -4618,7 +4657,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 14. Multi-Market Unit Economics (CAC/LTV Analysis)
+## 18. Multi-Market Unit Economics (CAC/LTV Analysis)
 
 ### Customer Acquisition Cost (CAC) by Market
 
@@ -4679,7 +4718,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 15. Team & Resource Plan (Per-Market)
+## 19. Team & Resource Plan (Per-Market)
 
 ### Botswana (Current Operations)
 
@@ -4736,7 +4775,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 16. Regulatory & Legal Roadmap (Per-Market)
+## 20. Regulatory & Legal Roadmap (Per-Market)
 
 ### Botswana (Current - Compliant)
 
@@ -4787,7 +4826,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 17. New Markets GTM Strategy
+## 21. New Markets GTM Strategy
 
 ### Zambia Launch Plan (Q3 2026)
 
@@ -4853,7 +4892,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 18. Product Localization Roadmap
+## 22. Product Localization Roadmap
 
 ### Localization Requirements by Market
 
@@ -4918,7 +4957,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 19. Per-Market KPI Framework
+## 23. Per-Market KPI Framework
 
 ### Quarterly KPIs by Market
 
@@ -4972,7 +5011,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 20. Comprehensive Risk Matrix
+## 24. Comprehensive Risk Matrix
 
 ### Risk Register (All Markets)
 
@@ -5043,7 +5082,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 21. Exit & Contingency Planning
+## 25. Exit & Contingency Planning
 
 ### Market Exit Triggers
 
@@ -5114,7 +5153,7 @@ Monthly P&L at Scale (Month 24):
 
 ---
 
-## 22. Appendices & Supporting Documents
+## 26. Appendices & Supporting Documents
 
 ### Appendix A: Market Research Summaries
 
@@ -5343,24 +5382,28 @@ MobiRides is 85% production-ready with a clear 12-month roadmap to market leader
 For questions about this commercialization plan or partnership opportunities, please contact:
 
 **MobiRides Leadership Team**
-- CEO: [Name], [Email]
-- CTO: [Name], [Email]
-- Head of Growth: [TBD]
+- **CEO:** Modisa Maphanyane, modisa@mobiridesbw.com
+- **CTO:** Awumsuri Mtui, awumsuri@mobiridesbw.com
+- **Head of Growth:** [TBD]
+
+**General Inquiries:**
+- Email: info@mobiridesbw.com
+- Website: www.mobiridesbw.com
 
 **Investor Relations:**
-- Contact: [CEO Email]
-- Data Room: [Link upon request]
+- Contact: modisa@mobiridesbw.com
+- Data Room: Available upon request
 
 **Partnerships:**
-- Insurance: [CEO Email]
-- B2B/Corporate: [Partnerships Manager Email - TBD]
-- Affiliates: [Marketing Email]
+- Insurance: modisa@mobiridesbw.com
+- B2B/Corporate: info@mobiridesbw.com
+- Affiliates: info@mobiridesbw.com
 
 ---
 
 *This document is confidential and proprietary. Distribution or reproduction without express written consent is prohibited.*
 
-**Document Version:** 1.0  
-**Last Updated:** December 18, 2025  
+**Document Version:** 1.9  
+**Last Updated:** December 15, 2025  
 **Next Review:** January 18, 2026  
-**Owner:** CEO, MobiRides
+**Owner:** CEO, MobiRides (Modisa Maphanyane)
