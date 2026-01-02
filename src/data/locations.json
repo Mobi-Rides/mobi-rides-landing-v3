@@ -53,7 +53,7 @@
       ],
       "stats": {
         "totalRides": 125000,
-        "activeDrivers": 450,
+        "availableVehicles": 450,
         "customerSatisfaction": 4.7
       }
     },
@@ -94,7 +94,7 @@
       ],
       "stats": {
         "totalRides": 45000,
-        "activeDrivers": 180,
+        "availableVehicles": 180,
         "customerSatisfaction": 4.5
       }
     },
@@ -130,7 +130,7 @@
       ],
       "stats": {
         "totalRides": 28000,
-        "activeDrivers": 95,
+        "availableVehicles": 95,
         "customerSatisfaction": 4.6
       }
     }
@@ -148,7 +148,7 @@
         "lng": 25.1503
       },
       "targetCoverage": 80,
-      "estimatedDrivers": 25,
+      "estimatedVehicles": 25,
       "keyFeatures": [
         "Tourism-focused service",
         "Airport transfers",
@@ -168,7 +168,7 @@
         "lng": 27.1247
       },
       "targetCoverage": 70,
-      "estimatedDrivers": 45,
+      "estimatedVehicles": 45,
       "keyFeatures": [
         "Railway station connections",
         "Mining area service",
@@ -187,7 +187,7 @@
         "lng": 26.7108
       },
       "targetCoverage": 75,
-      "estimatedDrivers": 60,
+      "estimatedVehicles": 60,
       "keyFeatures": [
         "Historical sites access",
         "Educational institutions",
@@ -206,7 +206,7 @@
         "lng": 25.6847
       },
       "targetCoverage": 85,
-      "estimatedDrivers": 40,
+      "estimatedVehicles": 40,
       "keyFeatures": [
         "Industrial area coverage",
         "Court complex access",
@@ -256,7 +256,7 @@
       "coverage": "6:00 AM - 10:00 PM",
       "averageWaitTime": "10-20 minutes",
       "features": [
-        "Multilingual drivers",
+        "Multilingual hosts",
         "Tour guide partnerships",
         "Scenic route options",
         "Cultural site access"
@@ -269,21 +269,21 @@
       "cities": ["Kasane", "Palapye"],
       "focus": "Tourism and transport hubs",
       "investment": "2.5M BWP",
-      "expectedDrivers": 70
+      "expectedVehicles": 70
     },
     "phase2": {
       "timeline": "Q3-Q4 2024",
       "cities": ["Serowe", "Lobatse"],
       "focus": "Government and industrial centers",
       "investment": "3.2M BWP",
-      "expectedDrivers": 100
+      "expectedVehicles": 100
     },
     "phase3": {
       "timeline": "2025",
       "cities": ["Molepolole", "Kanye", "Mochudi"],
       "focus": "Rural connectivity",
       "investment": "4.8M BWP",
-      "expectedDrivers": 150
+      "expectedVehicles": 150
     }
   },
   "specialServices": [
@@ -309,14 +309,14 @@
       "name": "Medical Transport",
       "description": "Non-emergency medical transportation",
       "availableIn": ["gaborone", "francistown", "maun"],
-      "features": ["Wheelchair accessible", "Medical equipment space", "Trained drivers"]
+      "features": ["Wheelchair accessible", "Medical equipment space", "Trained hosts"]
     }
   ],
   "coverage": {
     "totalArea": "15,000 km²",
     "populationCovered": "450,000+",
     "averageCoverage": "85%",
-    "totalDrivers": 725,
+    "totalVehicles": 725,
     "totalRides": "200+"
   },
   "partnerships": [
