@@ -84,7 +84,7 @@ const HostPage: React.FC = () => {
       icon: <DollarSign className="w-8 h-8 text-green-600" />,
       title: "Earn Extra Income",
       description: "Generate substantial monthly income from your vehicle when you're not using it.",
-      highlight: "Up to P15,000/month"
+      highlight: "P4,500–15,000/month"
     },
     {
       icon: <Shield className="w-8 h-8 text-blue-600" />,
@@ -159,7 +159,7 @@ const HostPage: React.FC = () => {
   return (
     <PageLayout
       title="Become a Host - Earn with Your Vehicle | Mobirides"
-      description="Turn your vehicle into a source of income. Join Mobirides as a host and earn up to P15,000 per month sharing your car with verified renters in Botswana."
+      description="Turn your vehicle into a source of income. Join Mobirides as a host and earn P4,500–15,000 per month sharing your car with verified renters in Botswana."
       canonical={buildCanonicalUrl('/host')}
     >
       <Helmet>

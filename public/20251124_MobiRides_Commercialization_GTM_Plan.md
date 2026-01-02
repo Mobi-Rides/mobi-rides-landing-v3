@@ -5382,22 +5382,22 @@ MobiRides is 85% production-ready with a clear 12-month roadmap to market leader
 For questions about this commercialization plan or partnership opportunities, please contact:
 
 **MobiRides Leadership Team**
-- **CEO:** Modisa Maphanyane, modisa@mobiridesbw.com
-- **CTO:** Awumsuri Mtui, awumsuri@mobiridesbw.com
+- **CEO:** Modisa Maphanyane, modisa@mobirides.com
+- **CTO:** Awumsuri Mtui, awumsuri@mobirides.com
 - **Head of Growth:** [TBD]
 
 **General Inquiries:**
-- Email: info@mobiridesbw.com
-- Website: www.mobiridesbw.com
+- Email: hello@mobirides.com
+- Website: www.mobirides.com
 
 **Investor Relations:**
-- Contact: modisa@mobiridesbw.com
+- Contact: modisa@mobirides.com
 - Data Room: Available upon request
 
 **Partnerships:**
-- Insurance: modisa@mobiridesbw.com
-- B2B/Corporate: info@mobiridesbw.com
-- Affiliates: info@mobiridesbw.com
+- Insurance: modisa@mobirides.com
+- B2B/Corporate: hello@mobirides.com
+- Affiliates: hello@mobirides.com
 
 ---
 
