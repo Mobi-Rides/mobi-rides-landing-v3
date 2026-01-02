@@ -23,10 +23,10 @@ interface City {
   landmarks?: string[];
   stats?: {
     totalRides: number;
-    activeDrivers: number;
+    availableVehicles: number;
     customerSatisfaction: number;
   };
-  estimatedDrivers?: number;
+  estimatedVehicles?: number;
   keyFeatures?: string[];
 }
 
@@ -104,8 +104,8 @@ const LocationsPage: React.FC = () => {
                 <div className="text-sm text-gray-600">People Served</div>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm">
-                <div className="text-2xl font-bold text-purple-600">{locationsData.coverage.totalDrivers}</div>
-                <div className="text-sm text-gray-600">Active Drivers</div>
+                <div className="text-2xl font-bold text-purple-600">{locationsData.coverage.totalVehicles}</div>
+                <div className="text-sm text-gray-600">Available Vehicles</div>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm">
                 <div className="text-2xl font-bold text-orange-600">{locationsData.coverage.averageCoverage}</div>
@@ -182,8 +182,8 @@ const LocationsPage: React.FC = () => {
                             <div className="text-xs text-gray-600">Total Rides</div>
                           </div>
                           <div className="text-center">
-                            <div className="text-lg font-semibold text-gray-900">{city.stats.activeDrivers}</div>
-                            <div className="text-xs text-gray-600">Drivers</div>
+                            <div className="text-lg font-semibold text-gray-900">{city.stats.availableVehicles}</div>
+                            <div className="text-xs text-gray-600">Vehicles</div>
                           </div>
                           <div className="text-center">
                             <div className="flex items-center justify-center gap-1">
@@ -273,8 +273,8 @@ const LocationsPage: React.FC = () => {
                         <div className="text-sm text-gray-600">Target Coverage</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-green-600">{city.estimatedDrivers}</div>
-                        <div className="text-sm text-gray-600">Est. Drivers</div>
+                        <div className="text-2xl font-bold text-green-600">{city.estimatedVehicles}</div>
+                        <div className="text-sm text-gray-600">Est. Vehicles</div>
                       </div>
                     </div>
                     
@@ -418,8 +418,8 @@ const LocationsPage: React.FC = () => {
                           <div className="text-sm text-gray-600">Investment</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-2xl font-bold text-purple-600">{plan.expectedDrivers}</div>
-                          <div className="text-sm text-gray-600">New Drivers</div>
+                          <div className="text-2xl font-bold text-purple-600">{plan.expectedVehicles}</div>
+                          <div className="text-sm text-gray-600">New Vehicles</div>
                         </div>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-orange-600">{plan.timeline}</div>

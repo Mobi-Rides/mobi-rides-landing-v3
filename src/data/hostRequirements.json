@@ -2,8 +2,8 @@
   "hero": {
     "title": "Become a MobiRides Host",
     "subtitle": "Meet the requirements and start earning today",
-    "description": "Join thousands of drivers across Botswana who are earning flexible income with MobiRides. We've made the requirements simple and straightforward.",
-    "backgroundImage": "https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20African%20driver%20with%20clean%20modern%20car%20in%20Botswana%20city%20setting%20sunny%20day%20professional%20photography&image_size=landscape_16_9",
+    "description": "Join thousands of car owners across Botswana who are earning flexible income with MobiRides. We've made the requirements simple and straightforward.",
+    "backgroundImage": "https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20African%20car%20owner%20with%20clean%20modern%20car%20in%20Botswana%20city%20setting%20sunny%20day%20professional%20photography&image_size=landscape_16_9",
     "ctaText": "Start Application"
   },
   "requirements": {
@@ -11,8 +11,8 @@
     "subtitle": "Everything you need to know to get started",
     "categories": [
       {
-        "id": "driver",
-        "title": "Driver Requirements",
+        "id": "host",
+        "title": "Host Requirements",
         "icon": "User",
         "color": "blue",
         "items": [
@@ -189,7 +189,7 @@
       {
         "step": 5,
         "title": "Approval & Onboarding",
-        "description": "Get approved, download the app, and complete driver orientation",
+        "description": "Get approved, download the app, and complete host orientation",
         "icon": "Award",
         "duration": "1 hour",
         "color": "green"
@@ -197,7 +197,7 @@
       {
         "step": 6,
         "title": "Start Earning",
-        "description": "Go online and start accepting ride requests immediately",
+        "description": "Go online and start accepting rental bookings immediately",
         "icon": "DollarSign",
         "duration": "Immediate",
         "color": "blue"
@@ -214,7 +214,7 @@
         "address": "Plot 123, Main Mall, Gaborone",
         "hours": "Mon-Fri: 8:00-17:00, Sat: 8:00-13:00",
         "phone": "+267 74300747",
-        "services": ["Vehicle Inspection", "Document Verification", "Driver Orientation"]
+        "services": ["Vehicle Inspection", "Document Verification", "Host Orientation"]
       },
       {
         "city": "Francistown",
@@ -240,7 +240,7 @@
     "categories": [
       {
         "category": "Economy",
-        "description": "Fuel-efficient vehicles perfect for city rides",
+        "description": "Fuel-efficient vehicles perfect for city rentals",
         "models": [
           "Toyota Corolla (2010+)",
           "Nissan Almera (2012+)",
@@ -293,8 +293,8 @@
         "answer": "Comprehensive motor insurance is required. MobiRides provides additional coverage during active trips."
       },
       {
-        "question": "Can I drive part-time?",
-        "answer": "Absolutely! You can drive whenever you want. There are no minimum hour requirements."
+        "question": "Can I host part-time?",
+        "answer": "Absolutely! You can list your car whenever you want. There are no minimum hour requirements."
       },
       {
         "question": "What happens if I get into an accident?",
@@ -312,7 +312,7 @@
       "24-hour approval process",
       "Free vehicle inspection",
       "Comprehensive insurance",
-      "24/7 driver support"
+      "24/7 host support"
     ]
   },
   "stats": {

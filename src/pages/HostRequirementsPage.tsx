@@ -54,7 +54,7 @@ interface FAQ {
 }
 
 const HostRequirementsPage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<string>('driver');
+  const [activeCategory, setActiveCategory] = useState<string>('host');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
   const [selectedLocation, setSelectedLocation] = useState<string>('Gaborone');
 
@@ -121,8 +121,8 @@ const HostRequirementsPage: React.FC = () => {
 
   return (
     <PageLayout
-      title="Host Requirements - Drive with MobiRides | Botswana"
-      description="Learn about MobiRides host requirements in Botswana. Age, license, vehicle, and background check requirements to start earning as a rideshare driver."
+      title="Host Requirements - List Your Car with MobiRides | Botswana"
+      description="Learn about MobiRides host requirements in Botswana. Age, license, vehicle, and background check requirements to start earning as a car rental host."
       canonical={buildCanonicalUrl('/host/requirements')}
       jsonLd={jsonLd}
     >
