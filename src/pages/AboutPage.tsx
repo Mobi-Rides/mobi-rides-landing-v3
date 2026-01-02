@@ -30,7 +30,7 @@ const AboutPage: React.FC = () => {
   }];
   const companyStats = [{
     label: 'Active Users',
-    value: '100+',
+    value: '154+',
     icon: Users
   }, {
     label: 'Cities Served',
@@ -67,7 +67,7 @@ const AboutPage: React.FC = () => {
           <div className="prose prose-lg mx-auto text-gray-600">
             <p className="mb-6">Founded in January 2025, MobiRides emerged from a simple observation: millions of cars sit idle while people struggle with transportation access. We envisioned a world where communities could share resources, reduce environmental impact, and build stronger connections.</p>
             <p className="mb-6">
-              What started as a local initiative has grown into a trusted platform serving over 100+ users across 4+ cities in Botswana. Our success stems from putting community first – every feature, policy, and decision is made with our users' safety, convenience, and trust in mind.
+              What started as a local initiative has grown into a trusted platform serving over 154+ users across 4+ cities in Botswana. Our success stems from putting community first – every feature, policy, and decision is made with our users' safety, convenience, and trust in mind.
             </p>
             <p>
               Today, we're proud to be Botswana's premier community-driven car sharing platform, facilitating over 200+ safe rentals while reducing carbon emissions and making transportation more accessible for everyone.
@@ -164,7 +164,7 @@ const AboutPage: React.FC = () => {
                 </Badge>
               </div>
               <p className="text-lg leading-relaxed">
-                To democratize transportation by creating a trusted, community-driven platform that makes car sharing safe, accessible, and sustainable for everyone.
+                To democratize mobility in Botswana by connecting car owners with renters through a secure, transparent platform while creating pathways to vehicle ownership through our innovative Rent2Buy marketplace.
               </p>
             </div>
             
@@ -175,7 +175,7 @@ const AboutPage: React.FC = () => {
                 </Badge>
               </div>
               <p className="text-lg leading-relaxed">
-                A world where communities thrive through shared resources, where transportation is accessible to all, and where every journey contributes to a more sustainable future.
+                To launch Southern Africa's first Peer2Peer hub for Vehicle Rentals and Financing, connecting owners, renters, insurers, and financiers on one marketplace platform, and build the rails for electric vehicle adoption on the continent.
               </p>
             </div>
           </div>

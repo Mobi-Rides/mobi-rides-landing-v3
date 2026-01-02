@@ -168,7 +168,7 @@ const Footer = () => {
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8">
             <p className="text-gray-400 text-sm">
-              © 2024 MobiRides. All rights reserved.
+              © 2025 MobiRides. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-6">
               <Link to={{ pathname: '/', hash: '#cookies' }} className="text-gray-400 hover:text-white text-sm transition-colors">

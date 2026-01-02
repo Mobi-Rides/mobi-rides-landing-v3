@@ -27,15 +27,20 @@ const Rent2BuyTeaser = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div>
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
-              Rent-to-Buy Program
-            </span>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+                Rent-to-Buy Program
+              </span>
+              <span className="bg-primary/10 text-primary text-xs font-semibold px-2 py-1 rounded-full">
+                Launching Q2 2026
+              </span>
+            </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Own Your Dream Car with <span className="text-primary">Rent2Buy</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Rent now, own later. Our unique program lets you build equity with every rental payment. 
-              Perfect for entrepreneurs, families, and professionals who want vehicle ownership without traditional financing.
+              Rent now, own later. Our unique program lets you build equity with every rental payment through partnerships with Motshelo groups and private financing. 
+              Perfect for entrepreneurs, families, and professionals who want vehicle ownership without traditional bank loans.
             </p>
 
             <div className="space-y-4 mb-8">
