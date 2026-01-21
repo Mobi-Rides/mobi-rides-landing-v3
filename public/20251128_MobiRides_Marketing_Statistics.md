@@ -53,7 +53,7 @@
 
 ### Price Competitiveness
 - **30-40% cheaper** than traditional car rental companies
-- **Insurance included** (P50/day comprehensive coverage via BIC/Pay-U)
+- **Damage protection included** (P50/day comprehensive coverage via Pay-U)
 - **2-hour** booking confirmation target
 - **Free delivery** available in Gaborone metro area
 - **Flexible rental periods** (daily to monthly options)
@@ -65,7 +65,7 @@
 
 ### Copy-Paste Social Snippets
 - "Save 30-40% on car rentals in Botswana 🇧🇼"
-- "From P400/day with insurance included ✅"
+- "From P400/day with damage protection included ✅"
 - "Book in 2 hours. Drive same day. 🔑"
 
 ---
@@ -165,9 +165,8 @@
 **Fleet Partners:**
 - **Trillo Rentals** - 80%+ of current fleet (critical partner)
 
-**Insurance Partners:**
-- **BIC (Botswana Insurance Company)** - Comprehensive coverage
-- **Pay-U Insurance Solutions** - Claims processing
+**Damage Protection Partners:**
+- **Pay-U** - Comprehensive damage protection & cloud-based repair services
 
 **Financial Partners (In Discussion):**
 - **Sekele Fund** - Rent2Buy financing
@@ -180,7 +179,7 @@
 
 ### Copy-Paste Social Snippets
 - "Backed by Cerberus Capital. Building with purpose 💼"
-- "Partnering with BIC Insurance for comprehensive protection"
+- "Partnering with Pay-U for comprehensive damage protection"
 - "Working with Motshelo groups to unlock vehicle ownership"
 
 ---
@@ -196,7 +195,7 @@
 5. 🔑 Own a car in 6-18 months with our Rent2Buy model.
 6. 🌍 Tapping into P250M+ Botswana car rental market.
 7. 📈 Scaling to 150 vehicles and P4.79M revenue by 2026.
-8. 🤝 Partnered with BIC Insurance & Trillo Rentals.
+8. 🤝 Partnered with Pay-U & Trillo Rentals.
 9. 💡 P1.2B+ in Motshelo savings ready to unlock ownership.
 10. ⚡ 2-hour booking confirmation. >99.5% uptime.
 
@@ -214,7 +213,7 @@
 💡 Turn your idle car into income
 💰 Earn P12,400-P18,600/month
 🎯 85% commission to hosts
-🔒 Fully insured by BIC
+🔒 Full damage protection via Pay-U
 
 Start earning today → [link]
 
@@ -301,7 +300,7 @@ Financial inclusion through mobility 🇧🇼
 ### For Hosts (Vehicle Owners)
 1. **Passive Income:** "Earn while your car sits idle"
 2. **Industry-Leading Commission:** "85% to you, 15% to us"
-3. **Full Protection:** "BIC insurance covers everything"
+3. **Full Protection:** "Pay-U damage protection covers everything"
 4. **Flexibility:** "You control availability and pricing"
 
 ### For Renters (Customers)
