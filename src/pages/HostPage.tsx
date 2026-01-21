@@ -88,8 +88,8 @@ const HostPage: React.FC = () => {
     },
     {
       icon: <Shield className="w-8 h-8 text-blue-600" />,
-      title: "Full Insurance Coverage",
-      description: "Comprehensive insurance protection for your vehicle and peace of mind.",
+      title: "Full Damage Protection",
+      description: "Comprehensive damage liability waiver for your vehicle and peace of mind via Pay-U.",
       highlight: "100% Protected"
     },
     {
@@ -109,7 +109,6 @@ const HostPage: React.FC = () => {
   const requirements = [
     "Valid Botswana driver's license (minimum 2 years)",
     "Vehicle registration and roadworthy certificate",
-    "Comprehensive insurance policy",
     "Vehicle age: Maximum 10 years old",
     "Clean driving record",
     "Smartphone for app management"

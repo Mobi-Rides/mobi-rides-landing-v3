@@ -18,8 +18,8 @@ const TrustSection = () => {
   const trustPoints = [
     {
       icon: Shield,
-      title: "Comprehensive Insurance",
-      description: "Drive with peace of mind. Every trip is covered by our comprehensive insurance policy.",
+      title: "Comprehensive Damage Protection",
+      description: "Rent with peace of mind. Every rental is covered by our damage liability waiver via Pay-U.",
       image: miningImage,
       alt: "Mining professional with reliable vehicle"
     },

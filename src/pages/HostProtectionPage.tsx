@@ -53,9 +53,9 @@ const HostProtectionPage: React.FC = () => {
       ]
     },
     {
-      id: 'insurance',
-      title: 'Vehicle Protection Insurance',
-      description: 'Comprehensive insurance protection for your vehicle and income',
+      id: 'damage-protection',
+      title: 'Vehicle Damage Protection',
+      description: 'Comprehensive damage liability waiver for your vehicle and income via Pay-U',
       icon: <Shield className="w-6 h-6" />,
       benefits: [
         'Vehicle damage coverage up to P1,000,000',
@@ -128,7 +128,7 @@ const HostProtectionPage: React.FC = () => {
         'Take post-rental photos with timestamps',
         'Rate the renter and provide feedback',
         'Report any issues or damages immediately',
-        'File insurance claim if needed'
+        'File damage claim if needed'
       ]
     }
   ];
