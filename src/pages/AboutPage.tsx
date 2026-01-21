@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => {
   const companyValues = [{
     icon: Shield,
     title: 'Safety First',
-    description: 'Every ride is backed by comprehensive insurance and rigorous safety protocols to ensure peace of mind for all users.'
+    description: 'Every rental is backed by comprehensive damage protection and rigorous safety protocols to ensure peace of mind for all users.'
   }, {
     icon: Users,
     title: 'Community Driven',

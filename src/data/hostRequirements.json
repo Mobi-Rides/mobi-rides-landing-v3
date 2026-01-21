@@ -296,10 +296,10 @@
         "question": "Can I host part-time?",
         "answer": "Absolutely! You can list your car whenever you want. There are no minimum hour requirements."
       },
-      {
-        "question": "What happens if I get into an accident?",
-        "answer": "MobiRides provides comprehensive insurance coverage during active trips. Contact our 24/7 support immediately."
-      }
+        {
+          "question": "What happens if I get into an accident?",
+          "answer": "MobiRides provides comprehensive damage protection via Pay-U during active rentals. Contact our 24/7 support immediately."
+        }
     ]
   },
   "cta": {
@@ -311,7 +311,7 @@
     "features": [
       "24-hour approval process",
       "Free vehicle inspection",
-      "Comprehensive insurance",
+      "Comprehensive damage protection",
       "24/7 host support"
     ]
   },

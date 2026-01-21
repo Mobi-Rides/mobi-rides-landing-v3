@@ -16,7 +16,7 @@ const Footer = () => {
       { name: 'Find a Car', href: '/find-ride' },
       { name: 'Pricing', href: '/pricing' },
       { name: 'Rent2Buy', href: '/rent2buy' },
-      { name: 'Insurance', href: '/insurance' },
+      { name: 'Damage Protection', href: '/damage-protection' },
       { name: 'Mobile App', href: '/#app' }
     ],
     Hosts: [

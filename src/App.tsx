@@ -28,7 +28,7 @@ import HostBenefitsPage from "./pages/HostBenefitsPage";
 import HostDashboardPage from "./pages/HostDashboardPage";
 import HostSupportPage from "./pages/HostSupportPage";
 import LocationsPage from "./pages/LocationsPage";
-import InsurancePage from "./pages/InsurancePage";
+import DamageProtectionPage from "./pages/DamageProtectionPage";
 import HostProtectionPage from "./pages/HostProtectionPage";
 import HostCommunityPage from "./pages/HostCommunityPage";
 import TravelGuidesPage from "./pages/TravelGuidesPage";
@@ -85,7 +85,9 @@ const App = () => (
               <Route path="/host-dashboard" element={<HostDashboardPage />} />
               <Route path="/host-support" element={<HostSupportPage />} />
               <Route path="/locations" element={<LocationsPage />} />
-              <Route path="/insurance" element={<InsurancePage />} />
+              <Route path="/damage-protection" element={<DamageProtectionPage />} />
+              {/* Redirect old insurance URL */}
+              <Route path="/insurance" element={<Navigate to="/damage-protection" replace />} />
               <Route path="/host-protection" element={<HostProtectionPage />} />
               <Route path="/host-community" element={<HostCommunityPage />} />
               <Route path="/travel-guides" element={<TravelGuidesPage />} />

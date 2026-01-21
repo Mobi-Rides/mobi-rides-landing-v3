@@ -191,16 +191,16 @@
   ],
   "additionalServices": [
     {
-      "name": "Comprehensive Insurance",
+      "name": "Standard Damage Protection",
       "price": 350,
       "unit": "per day",
-      "description": "Full coverage including third-party and collision"
+      "description": "Full damage liability waiver including third-party and collision via Pay-U"
     },
     {
-      "name": "Premium Insurance",
+      "name": "Premium Damage Protection",
       "price": 550,
       "unit": "per day",
-      "description": "Maximum protection with zero excess"
+      "description": "Maximum protection with zero excess via Pay-U"
     },
     {
       "name": "Extended Maintenance Package",

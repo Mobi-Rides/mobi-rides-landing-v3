@@ -61,8 +61,8 @@ const PricingPage: React.FC = () => {
   const includedFeatures = [
     {
       icon: Shield,
-      title: 'BIC Insurance Coverage',
-      description: 'Every rental includes comprehensive insurance for peace of mind',
+      title: 'Pay-U Damage Protection',
+      description: 'Every rental includes comprehensive damage liability waiver for peace of mind',
     },
     {
       icon: Headphones,
@@ -85,7 +85,7 @@ const PricingPage: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "MobiRides P2P Car Sharing",
-    "description": "Transparent peer-to-peer car sharing rates in Botswana. All rentals include BIC insurance coverage.",
+    "description": "Transparent peer-to-peer car sharing rates in Botswana. All rentals include Pay-U damage protection.",
     "provider": {
       "@type": "Organization",
       "name": "MobiRides"
@@ -95,14 +95,14 @@ const PricingPage: React.FC = () => {
   return (
     <PageLayout
       title="Car Sharing Rates | Transparent P2P Pricing | MobiRides Botswana"
-      description="Find the perfect vehicle at fair prices. Browse our 5-tier pricing from Economy (P400/day) to Prestige (P4,500/day). All rentals include BIC insurance coverage."
+      description="Find the perfect vehicle at fair prices. Browse our 5-tier pricing from Economy (P400/day) to Prestige (P4,500/day). All rentals include Pay-U damage protection."
       keywords="car rental prices Botswana, P2P car sharing rates, vehicle hire Gaborone, MobiRides pricing, car rental Botswana"
       canonical={buildCanonicalUrl('/pricing')}
       jsonLd={jsonLd}
     >
       <PageHero
         title="Transparent P2P Car Sharing Rates"
-        description="Find the perfect vehicle at fair prices. All rentals include BIC insurance coverage."
+        description="Find the perfect vehicle at fair prices. All rentals include Pay-U damage protection."
       />
 
       {/* Promo Banner */}
