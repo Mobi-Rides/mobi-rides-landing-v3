@@ -3,6 +3,7 @@ import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { MapPin, Mail, Phone, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { siteConfig } from '@/config/site';
 
 const Footer = () => {
   const footerLinks = {
@@ -13,8 +14,9 @@ const Footer = () => {
     ],
     Renters: [
       { name: 'Find a Car', href: '/find-ride' },
-      { name: 'Rent2Buy', href: '/pricing' },
-      { name: 'Insurance', href: '/insurance' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Rent2Buy', href: '/rent2buy' },
+      { name: 'Damage Protection', href: '/damage-protection' },
       { name: 'Mobile App', href: '/#app' }
     ],
     Hosts: [
@@ -33,10 +35,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/mobirides' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/mobirides' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/mobirides' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/mobirides' }
+    { name: 'Facebook', icon: Facebook, href: siteConfig.social.facebook },
+    { name: 'Twitter', icon: Twitter, href: siteConfig.social.twitter },
+    { name: 'Instagram', icon: Instagram, href: siteConfig.social.instagram },
+    { name: 'LinkedIn', icon: Linkedin, href: siteConfig.social.linkedin }
   ];
 
   return (
@@ -61,15 +63,15 @@ const Footer = () => {
             <div className="space-y-3 mb-8">
               <div className="flex items-center text-gray-400">
                 <MapPin className="w-4 h-4 mr-3 flex-shrink-0" />
-                <span className="text-sm">Plot 16530, Sehithwa Rd, Gaborone West - Phase 1, Gaborone, Botswana</span>
+                <span className="text-sm">{siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.country}</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <Phone className="w-4 h-4 mr-3 flex-shrink-0" />
-                <span className="text-sm">+267 74300747</span>
+                <span className="text-sm">{siteConfig.contact.phone}</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <Mail className="w-4 h-4 mr-3 flex-shrink-0" />
-                <span className="text-sm">hello@mobirides.com</span>
+                <span className="text-sm">{siteConfig.contact.email}</span>
               </div>
             </div>
 
@@ -166,7 +168,7 @@ const Footer = () => {
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8">
             <p className="text-gray-400 text-sm">
-              © 2024 MobiRides. All rights reserved.
+              © 2025 MobiRides. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-6">
               <Link to={{ pathname: '/', hash: '#cookies' }} className="text-gray-400 hover:text-white text-sm transition-colors">

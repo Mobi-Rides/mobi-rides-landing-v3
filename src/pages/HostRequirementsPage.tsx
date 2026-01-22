@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PageLayout } from '../components/layouts';
-import { 
+import { buildCanonicalUrl } from '@/config/site';
+import {
   User, Car, FileText, CheckCircle, Clock, MapPin, Phone, Upload,
   Shield, Calendar, CreditCard, Smartphone, MessageCircle, Wind,
   Sparkles, Camera, Award, DollarSign, ChevronRight, ArrowRight,
@@ -53,7 +54,7 @@ interface FAQ {
 }
 
 const HostRequirementsPage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<string>('driver');
+  const [activeCategory, setActiveCategory] = useState<string>('host');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
   const [selectedLocation, setSelectedLocation] = useState<string>('Gaborone');
 
@@ -120,8 +121,9 @@ const HostRequirementsPage: React.FC = () => {
 
   return (
     <PageLayout
-      title="Host Requirements - Drive with MobiRides | Botswana"
-      description="Learn about MobiRides host requirements in Botswana. Age, license, vehicle, and background check requirements to start earning as a rideshare driver."
+      title="Host Requirements - List Your Car with MobiRides | Botswana"
+      description="Learn about MobiRides host requirements in Botswana. Age, license, vehicle, and background check requirements to start earning as a car rental host."
+      canonical={buildCanonicalUrl('/host/requirements')}
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">

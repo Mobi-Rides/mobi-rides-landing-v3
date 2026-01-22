@@ -1,14 +1,9 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+Crawl-delay: 1
+
+# Sitemap location (all URLs use https://www.mobirides.com)
+Sitemap: https://putjowciegpzdheideaf.supabase.co/functions/v1/sitemap
+
+# Block admin routes from indexing
+Disallow: /admin/

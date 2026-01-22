@@ -14,13 +14,13 @@ const HostCTASection = () => {
                 Own a car? Put it to <span className="text-primary">work!</span>
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                Earn up to <span className="font-bold text-primary">P15,000 per month</span> by sharing your car with MobiRides Connect.
+                Earn <span className="font-bold text-primary">P4,500–15,000 per month</span> by sharing your car with MobiRides Connect.
               </p>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-gray-700">Comprehensive insurance coverage</span>
+                  <span className="text-gray-700">Comprehensive damage liability waiver</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>

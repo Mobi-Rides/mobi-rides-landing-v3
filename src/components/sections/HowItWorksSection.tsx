@@ -17,7 +17,7 @@ const HowItWorksSection = () => {
     image: findYourDriveImage
   }, {
     title: "Book with Confidence",
-    description: "Secure booking with comprehensive insurance coverage and transparent pricing.",
+    description: "Secure booking with comprehensive damage protection and transparent pricing.",
     image: bookWithConfidenceImage
   }, {
     title: "Enjoy Concierge Service",

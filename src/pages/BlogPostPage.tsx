@@ -1,7 +1,9 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/lib/supabase";
+import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import { BlogContentRenderer } from "@/components/BlogContentRenderer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar, Clock, User, Eye } from "lucide-react";
@@ -119,19 +121,70 @@ const BlogPostPage = () => {
     );
   }
 
+  // Generate structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.meta_description || post.excerpt,
+    "image": post.featured_image || "",
+    "datePublished": post.published_at || post.created_at,
+    "dateModified": post.updated_at,
+    "author": {
+      "@type": "Person",
+      "name": post.author_name,
+      ...(post.author_image && { "image": post.author_image }),
+      ...(post.author_bio && { "description": post.author_bio })
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MobiRides",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteConfig.url}/mobirides-logo.jpg`
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+      "@id": `${siteConfig.url}/blog/${post.slug}`
+    },
+    ...(post.category && { "articleSection": post.category }),
+    ...(post.tags && post.tags.length > 0 && { "keywords": post.tags.join(", ") })
+  };
+
+  const canonicalUrl = buildCanonicalUrl(`/blog/${post.slug}`);
+
   return (
     <>
       <Helmet>
         <title>{post.title} | MobiRides Blog</title>
         <meta name="description" content={post.meta_description || post.excerpt} />
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Open Graph tags */}
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.meta_description || post.excerpt} />
         <meta property="og:image" content={post.featured_image || ""} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
+        <meta property="article:published_time" content={post.published_at || post.created_at} />
+        <meta property="article:modified_time" content={post.updated_at} />
+        <meta property="article:author" content={post.author_name} />
+        {post.category && <meta property="article:section" content={post.category} />}
+        {post.tags && post.tags.map((tag) => (
+          <meta key={tag} property="article:tag" content={tag} />
+        ))}
+        
+        {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.meta_description || post.excerpt} />
         <meta name="twitter:image" content={post.featured_image || ""} />
+        
+        {/* JSON-LD structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -146,6 +199,15 @@ const BlogPostPage = () => {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Button>
+            
+            {/* Breadcrumbs */}
+            <Breadcrumbs
+              items={[
+                { label: 'Blog', href: '/blog' },
+                { label: post.title }
+              ]}
+              className="mt-4"
+            />
           </div>
         </div>
 

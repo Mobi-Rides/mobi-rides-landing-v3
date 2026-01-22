@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PageLayout } from '../components/layouts';
-import { Shield, FileText, Phone, CheckCircle, AlertTriangle, Users, Car, Clock, Download, ExternalLink } from 'lucide-react';
+import { buildCanonicalUrl } from '@/config/site';
+import { Shield, FileText, Phone, CheckCircle, AlertTriangle, Users, Car, Clock, Download, ExternalLink, Wrench } from 'lucide-react';
 
 interface CoverageItem {
   type: string;
@@ -10,12 +11,12 @@ interface CoverageItem {
   description: string;
 }
 
-interface InsurancePolicy {
+interface DamageProtectionTier {
   id: string;
   name: string;
   description: string;
   coverageItems: CoverageItem[];
-  premium: string;
+  fee: string;
   popular?: boolean;
 }
 
@@ -26,16 +27,15 @@ interface ClaimStep {
   timeframe: string;
 }
 
-const InsurancePage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'coverage' | 'claims' | 'policies'>('coverage');
-  const [selectedPolicy, setSelectedPolicy] = useState<string>('comprehensive');
+const DamageProtectionPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<'coverage' | 'claims' | 'documents'>('coverage');
 
-  const insurancePolicies: InsurancePolicy[] = [
+  const protectionTiers: DamageProtectionTier[] = [
     {
       id: 'basic',
-      name: 'Basic Coverage',
-      description: 'Essential protection for everyday rides',
-      premium: '+P150/day',
+      name: 'Basic Protection',
+      description: 'Essential damage liability coverage for everyday rentals',
+      fee: '+P150/day',
       coverageItems: [
         {
           type: 'Third Party Liability',
@@ -52,10 +52,10 @@ const InsurancePage: React.FC = () => {
       ]
     },
     {
-      id: 'comprehensive',
-      name: 'Comprehensive Coverage',
-      description: 'Complete protection for hosts and riders',
-      premium: '+P350/day',
+      id: 'standard',
+      name: 'Standard Protection',
+      description: 'Complete damage protection for hosts and renters',
+      fee: '+P350/day',
       popular: true,
       coverageItems: [
         {
@@ -69,7 +69,7 @@ const InsurancePage: React.FC = () => {
           coverage: 'Collision and comprehensive damage',
           limit: 'P 800,000',
           deductible: 'P 5,000',
-          description: 'Covers repair or replacement of your vehicle'
+          description: 'Covers repair or replacement of vehicle damage'
         },
         {
           type: 'Personal Accident',
@@ -87,9 +87,9 @@ const InsurancePage: React.FC = () => {
     },
     {
       id: 'premium',
-      name: 'Premium Coverage',
-      description: 'Maximum protection with additional benefits',
-      premium: '+P550/day',
+      name: 'Premium Protection',
+      description: 'Maximum damage liability waiver with additional benefits',
+      fee: '+P550/day',
       coverageItems: [
         {
           type: 'Third Party Liability',
@@ -102,13 +102,13 @@ const InsurancePage: React.FC = () => {
           coverage: 'Collision, comprehensive, and wear coverage',
           limit: 'P 1,200,000',
           deductible: 'P 2,500',
-          description: 'Includes wear and tear coverage'
+          description: 'Includes wear and tear coverage via Pay-U repairs'
         },
         {
           type: 'Personal Accident',
-          coverage: 'Medical, disability, and life insurance',
+          coverage: 'Medical, disability, and life coverage',
           limit: 'P 200,000',
-          description: 'Includes life insurance benefits'
+          description: 'Includes life coverage benefits'
         },
         {
           type: 'Business Interruption',
@@ -130,13 +130,13 @@ const InsurancePage: React.FC = () => {
     {
       step: 1,
       title: 'Report the Incident',
-      description: 'Contact our 24/7 claims hotline immediately after any incident. Provide your policy number and incident details.',
+      description: 'Contact our 24/7 claims hotline immediately after any incident. Provide your booking reference and incident details.',
       timeframe: 'Within 24 hours'
     },
     {
       step: 2,
       title: 'Document Everything',
-      description: 'Take photos of the scene, vehicles, and any injuries. Collect contact information from all parties involved.',
+      description: 'Take photos of the scene, vehicles, and any damage. Collect contact information from all parties involved.',
       timeframe: 'At the scene'
     },
     {
@@ -147,20 +147,20 @@ const InsurancePage: React.FC = () => {
     },
     {
       step: 4,
-      title: 'Claims Assessment',
-      description: 'Our claims adjuster will inspect the damage and review all documentation to determine coverage.',
+      title: 'Damage Assessment',
+      description: 'Our Pay-U partner will inspect the damage and review all documentation to determine repair requirements.',
       timeframe: '2-5 business days'
     },
     {
       step: 5,
       title: 'Repair Authorization',
-      description: 'Once approved, we\'ll authorize repairs at our network of approved service centers.',
+      description: 'Once approved, Pay-U will authorize cloud-based repair services at their network of approved service centers.',
       timeframe: '1-2 business days'
     },
     {
       step: 6,
       title: 'Settlement',
-      description: 'Receive your settlement payment or have repairs completed at no cost to you.',
+      description: 'Receive your settlement or have repairs completed through Pay-U at no additional cost to you.',
       timeframe: '5-10 business days'
     }
   ];
@@ -169,7 +169,7 @@ const InsurancePage: React.FC = () => {
     {
       title: '24/7 Claims Hotline',
       number: '+267 74300747',
-      description: 'Report accidents and incidents'
+      description: 'Report accidents and damage incidents'
     },
     {
       title: 'Emergency Roadside',
@@ -185,20 +185,20 @@ const InsurancePage: React.FC = () => {
 
   const documents = [
     {
-      title: 'Insurance Policy Terms',
-      description: 'Complete policy terms and conditions',
+      title: 'Damage Waiver Terms',
+      description: 'Complete damage liability waiver terms and conditions',
       fileSize: '2.3 MB',
       type: 'PDF'
     },
     {
-      title: 'Claims Form',
-      description: 'Downloadable claims submission form',
+      title: 'Damage Claim Form',
+      description: 'Downloadable damage claim submission form',
       fileSize: '156 KB',
       type: 'PDF'
     },
     {
-      title: 'Coverage Summary',
-      description: 'Quick reference coverage guide',
+      title: 'Protection Summary',
+      description: 'Quick reference protection coverage guide',
       fileSize: '890 KB',
       type: 'PDF'
     }
@@ -206,16 +206,20 @@ const InsurancePage: React.FC = () => {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "InsuranceAgency",
-    "name": "MobiRides Insurance",
-    "description": "Comprehensive insurance coverage for ride-sharing in Botswana",
+    "@type": "Service",
+    "name": "MobiRides Damage Protection",
+    "description": "Comprehensive damage liability waiver and protection for car rentals in Botswana, powered by Pay-U cloud-based repair services",
+    "provider": {
+      "@type": "Organization",
+      "name": "MobiRides"
+    },
     "areaServed": {
       "@type": "Country",
       "name": "Botswana"
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+267-123-4567",
+      "telephone": "+267-74300747",
       "contactType": "Claims Support",
       "availableLanguage": ["English", "Setswana"]
     }
@@ -223,9 +227,10 @@ const InsurancePage: React.FC = () => {
 
   return (
     <PageLayout
-      title="Insurance Coverage - MobiRides"
-      description="Comprehensive insurance coverage for hosts and riders in Botswana. Learn about our policies, claims process, and get the protection you need."
-      keywords="insurance, coverage, claims, vehicle protection, Botswana, MobiRides"
+      title="Damage Protection - MobiRides"
+      description="Comprehensive damage liability waiver for hosts and renters in Botswana. Learn about our protection tiers, claims process, and Pay-U repair services."
+      keywords="damage protection, damage liability waiver, vehicle protection, claims, Botswana, MobiRides, Pay-U"
+      canonical={buildCanonicalUrl('/damage-protection')}
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -238,10 +243,10 @@ const InsurancePage: React.FC = () => {
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Complete <span className="text-blue-600">Insurance</span> Protection
+              Complete <span className="text-blue-600">Damage Protection</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Drive with confidence knowing you're fully protected. Our comprehensive insurance covers hosts, riders, and vehicles across Botswana.
+              Rent with confidence knowing you're fully protected. Our comprehensive damage liability waiver covers hosts, renters, and vehicles across Botswana—powered by Pay-U cloud-based repair services.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
@@ -251,6 +256,10 @@ const InsurancePage: React.FC = () => {
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
                 <Car className="w-5 h-5 text-blue-500" />
                 <span className="text-sm font-medium">Vehicle Protection</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                <Wrench className="w-5 h-5 text-orange-500" />
+                <span className="text-sm font-medium">Pay-U Repair Network</span>
               </div>
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
                 <Users className="w-5 h-5 text-purple-500" />
@@ -264,13 +273,13 @@ const InsurancePage: React.FC = () => {
         <section className="max-w-6xl mx-auto px-4 mb-12">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {[
-              { id: 'coverage', label: 'Coverage Options', icon: Shield },
+              { id: 'coverage', label: 'Protection Tiers', icon: Shield },
               { id: 'claims', label: 'Claims Process', icon: FileText },
-              { id: 'policies', label: 'Policy Documents', icon: Download }
+              { id: 'documents', label: 'Documents', icon: Download }
             ].map(({ id, label, icon: Icon }) => (
               <button
                 key={id}
-                onClick={() => setActiveTab(id as 'coverage' | 'claims' | 'policies')}
+                onClick={() => setActiveTab(id as 'coverage' | 'claims' | 'documents')}
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all ${
                   activeTab === id
                     ? 'bg-blue-600 text-white shadow-lg'
@@ -284,18 +293,29 @@ const InsurancePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Coverage Options */}
+        {/* Protection Tiers */}
         {activeTab === 'coverage' && (
           <section className="max-w-6xl mx-auto px-4 mb-16">
+            {/* Pay-U Partnership Banner */}
+            <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-6 mb-12 text-white text-center">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Wrench className="w-8 h-8" />
+                <h3 className="text-2xl font-bold">Powered by Pay-U</h3>
+              </div>
+              <p className="text-lg opacity-90 max-w-2xl mx-auto">
+                All damage claims are handled through Pay-U's cloud-based repair network, ensuring fast, transparent, and quality repairs across Botswana.
+              </p>
+            </div>
+
             <div className="grid md:grid-cols-3 gap-8">
-              {insurancePolicies.map((policy) => (
+              {protectionTiers.map((tier) => (
                 <div
-                  key={policy.id}
+                  key={tier.id}
                   className={`relative bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300 ${
-                    policy.popular ? 'ring-4 ring-blue-500 ring-opacity-50' : ''
+                    tier.popular ? 'ring-4 ring-blue-500 ring-opacity-50' : ''
                   }`}
                 >
-                  {policy.popular && (
+                  {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold">
                         Most Popular
@@ -304,22 +324,22 @@ const InsurancePage: React.FC = () => {
                   )}
                   
                   <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{policy.name}</h3>
-                    <p className="text-gray-600 mb-4">{policy.description}</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
+                    <p className="text-gray-600 mb-4">{tier.description}</p>
                     <div className="text-3xl font-bold text-blue-600 mb-2">
-                      {policy.premium}
+                      {tier.fee}
                     </div>
                   </div>
                   
                   <div className="space-y-4 mb-8">
-                    {policy.coverageItems.map((item, index) => (
+                    {tier.coverageItems.map((item, index) => (
                       <div key={index} className="border-l-4 border-blue-200 pl-4">
                         <h4 className="font-semibold text-gray-900 mb-1">{item.type}</h4>
                         <p className="text-sm text-gray-600 mb-1">{item.description}</p>
                         <div className="flex justify-between text-sm">
                           <span className="text-green-600 font-medium">Up to {item.limit}</span>
                           {item.deductible && (
-                            <span className="text-gray-500">Deductible: {item.deductible}</span>
+                            <span className="text-gray-500">Excess: {item.deductible}</span>
                           )}
                         </div>
                       </div>
@@ -327,11 +347,11 @@ const InsurancePage: React.FC = () => {
                   </div>
                   
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                    policy.popular
+                    tier.popular
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}>
-                    Select {policy.name}
+                    Select {tier.name}
                   </button>
                 </div>
               ))}
@@ -363,11 +383,11 @@ const InsurancePage: React.FC = () => {
           <section className="max-w-4xl mx-auto px-4 mb-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Simple Claims Process</h2>
-              <p className="text-xl text-gray-600">Follow these steps to file and track your insurance claim</p>
+              <p className="text-xl text-gray-600">Follow these steps to file and track your damage claim</p>
             </div>
             
             <div className="space-y-8">
-              {claimsProcess.map((step, index) => (
+              {claimsProcess.map((step) => (
                 <div key={step.step} className="flex gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
@@ -403,12 +423,12 @@ const InsurancePage: React.FC = () => {
           </section>
         )}
 
-        {/* Policy Documents */}
-        {activeTab === 'policies' && (
+        {/* Documents */}
+        {activeTab === 'documents' && (
           <section className="max-w-4xl mx-auto px-4 mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Policy Documents</h2>
-              <p className="text-xl text-gray-600">Download important insurance documents and forms</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Protection Documents</h2>
+              <p className="text-xl text-gray-600">Download important damage waiver documents and forms</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -443,7 +463,7 @@ const InsurancePage: React.FC = () => {
                     <li>
                       <a href="#" className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
                         <ExternalLink className="w-4 h-4" />
-                        Policy Management Portal
+                        Protection Management Portal
                       </a>
                     </li>
                     <li>
@@ -455,7 +475,7 @@ const InsurancePage: React.FC = () => {
                     <li>
                       <a href="#" className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
                         <ExternalLink className="w-4 h-4" />
-                        Premium Calculator
+                        Protection Fee Calculator
                       </a>
                     </li>
                   </ul>
@@ -472,7 +492,7 @@ const InsurancePage: React.FC = () => {
                     <li>
                       <a href="#" className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
                         <ExternalLink className="w-4 h-4" />
-                        Contact Insurance Team
+                        Contact Protection Team
                       </a>
                     </li>
                     <li>
@@ -492,4 +512,4 @@ const InsurancePage: React.FC = () => {
   );
 };
 
-export default InsurancePage;
+export default DamageProtectionPage;

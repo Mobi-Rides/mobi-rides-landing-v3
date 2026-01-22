@@ -139,9 +139,9 @@
       "popularity": 95
     },
     {
-      "id": "is-insurance-included",
-      "question": "Is insurance included with my booking?",
-      "answer": "Yes, all vehicles on MobiRides are covered by comprehensive insurance during your booking period. This includes third-party liability and comprehensive coverage for the vehicle.",
+      "id": "is-damage-protection-included",
+      "question": "Is damage protection included with my booking?",
+      "answer": "Yes, all vehicles on MobiRides are covered by comprehensive damage liability waiver during your booking period. This includes third-party liability and comprehensive damage protection via Pay-U.",
       "category": "safety",
       "popularity": 92
     },

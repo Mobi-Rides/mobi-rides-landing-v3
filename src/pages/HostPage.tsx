@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { PageLayout, PageHero, CTASection, SectionWrapper } from '../components/layouts';
+import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Input } from '../components/ui/input';
@@ -83,12 +84,12 @@ const HostPage: React.FC = () => {
       icon: <DollarSign className="w-8 h-8 text-green-600" />,
       title: "Earn Extra Income",
       description: "Generate substantial monthly income from your vehicle when you're not using it.",
-      highlight: "Up to P15,000/month"
+      highlight: "P4,500–15,000/month"
     },
     {
       icon: <Shield className="w-8 h-8 text-blue-600" />,
-      title: "Full Insurance Coverage",
-      description: "Comprehensive insurance protection for your vehicle and peace of mind.",
+      title: "Full Damage Protection",
+      description: "Comprehensive damage liability waiver for your vehicle and peace of mind via Pay-U.",
       highlight: "100% Protected"
     },
     {
@@ -108,7 +109,6 @@ const HostPage: React.FC = () => {
   const requirements = [
     "Valid Botswana driver's license (minimum 2 years)",
     "Vehicle registration and roadworthy certificate",
-    "Comprehensive insurance policy",
     "Vehicle age: Maximum 10 years old",
     "Clean driving record",
     "Smartphone for app management"
@@ -142,7 +142,7 @@ const HostPage: React.FC = () => {
     "@type": "WebPage",
     "name": "Become a Host - Mobirides",
     "description": "Earn extra income by sharing your vehicle on Mobirides. Join our community of trusted hosts in Botswana.",
-    "url": "https://mobirides.com/host",
+    "url": "https://www.mobirides.com/host",
     "mainEntity": {
       "@type": "Service",
       "name": "Vehicle Hosting Service",
@@ -158,7 +158,8 @@ const HostPage: React.FC = () => {
   return (
     <PageLayout
       title="Become a Host - Earn with Your Vehicle | Mobirides"
-      description="Turn your vehicle into a source of income. Join Mobirides as a host and earn up to P15,000 per month sharing your car with verified renters in Botswana."
+      description="Turn your vehicle into a source of income. Join Mobirides as a host and earn P4,500–15,000 per month sharing your car with verified renters in Botswana."
+      canonical={buildCanonicalUrl('/host')}
     >
       <Helmet>
         <script type="application/ld+json">

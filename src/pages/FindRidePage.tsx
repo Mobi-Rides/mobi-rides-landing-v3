@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { PageLayout, PageHero, SectionWrapper, CTASection } from '../components/layouts';
+import { buildCanonicalUrl, siteConfig } from '@/config/site';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
@@ -73,7 +74,7 @@ const FindRidePage: React.FC = () => {
     "@type": "WebPage",
     "name": "Find a Ride - Car Rental in Botswana",
     "description": "Browse and book from our fleet of rental cars in Botswana. Economy, luxury, and commercial vehicles available with transparent pricing.",
-    "url": "https://app.mobirides.com/find-ride",
+    "url": "${siteConfig.url}/find-ride",
     "mainEntity": {
       "@type": "ItemList",
       "numberOfItems": vehicles.length,
@@ -96,7 +97,7 @@ const FindRidePage: React.FC = () => {
     <PageLayout
       title="Find a Ride - Car Rental in Botswana | Mobirides"
       description="Browse and book from our fleet of rental cars in Botswana. Economy, luxury, and commercial vehicles available with transparent pricing and 24/7 support."
-      canonical="https://app.mobirides.com/find-ride"
+      canonical={buildCanonicalUrl('/find-ride')}
       jsonLd={jsonLd}
     >
       <PageHero

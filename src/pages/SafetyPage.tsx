@@ -1,5 +1,6 @@
 import React from 'react';
 import { PageLayout, PageHero, SectionWrapper } from '../components/layouts';
+import { buildCanonicalUrl } from '@/config/site';
 import FAQSection from '../components/FAQSection';
 import ContactForm from '../components/ContactForm';
 import DocumentDownload from '../components/DocumentDownload';
@@ -28,8 +29,8 @@ const SafetyPage: React.FC = () => {
   const safetyFeatures = [
     {
       icon: Shield,
-      title: 'Comprehensive Insurance',
-      description: 'Every ride is covered by our premium insurance policy with up to $1M liability coverage.',
+      title: 'Comprehensive Damage Protection',
+      description: 'Every rental is covered by our damage liability waiver with up to P1M liability coverage, powered by Pay-U.',
       details: ['Collision & comprehensive coverage', 'Liability protection', 'Uninsured motorist coverage', '24/7 claims support']
     },
     {
@@ -106,16 +107,16 @@ const SafetyPage: React.FC = () => {
       tags: ['safety', 'guide']
     },
     {
-      id: 'insurance-policy',
-      title: 'Insurance Policy Details',
-      description: 'Full insurance coverage details and claim procedures',
+      id: 'damage-waiver',
+      title: 'Damage Waiver Details',
+      description: 'Full damage liability waiver details and claim procedures',
       type: 'pdf' as const,
       size: '1.8 MB',
-      category: 'insurance',
-      downloadUrl: '/documents/insurance-policy.pdf',
+      category: 'protection',
+      downloadUrl: '/documents/damage-waiver.pdf',
       lastUpdated: '2024-01-10',
       publishedDate: '2024-01-10',
-      tags: ['insurance', 'claims']
+      tags: ['damage protection', 'claims']
     },
     {
       id: 'emergency-contacts',
@@ -150,7 +151,7 @@ const SafetyPage: React.FC = () => {
       title="Safety First - MobiRides Security & Insurance Coverage"
       description="Learn about MobiRides' comprehensive safety measures, insurance coverage, emergency procedures, and community protection protocols."
       keywords="MobiRides safety, car sharing insurance, emergency procedures, vehicle safety, community protection"
-      canonical="/safety"
+      canonical={buildCanonicalUrl('/safety')}
     >
       <PageHero
         title="Your Safety is Our Priority"
@@ -289,22 +290,22 @@ const SafetyPage: React.FC = () => {
         </div>
       </SectionWrapper>
 
-      {/* Insurance Coverage Details */}
+      {/* Damage Protection Coverage Details */}
       <SectionWrapper className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Comprehensive Insurance Coverage
+            Comprehensive Damage Protection
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="p-6">
-              <div className="text-3xl font-bold mb-2">$1M</div>
+              <div className="text-3xl font-bold mb-2">P1M</div>
               <div className="text-lg font-medium mb-2">Liability Coverage</div>
               <div className="text-sm opacity-90">Protection for third-party damages</div>
             </div>
             <div className="p-6">
-              <div className="text-3xl font-bold mb-2">$100K</div>
-              <div className="text-lg font-medium mb-2">Collision Coverage</div>
+              <div className="text-3xl font-bold mb-2">P800K</div>
+              <div className="text-lg font-medium mb-2">Vehicle Damage</div>
               <div className="text-sm opacity-90">Vehicle damage protection</div>
             </div>
             <div className="p-6">
@@ -315,11 +316,11 @@ const SafetyPage: React.FC = () => {
           </div>
 
           <p className="text-lg mb-8 opacity-90">
-            Every MobiRides trip is automatically covered by our comprehensive insurance policy, providing peace of mind for both hosts and guests.
+            Every MobiRides rental is automatically covered by our comprehensive damage liability waiver, powered by Pay-U's cloud-based repair network, providing peace of mind for both hosts and renters.
           </p>
 
-          <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-            View Full Policy Details
+          <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-gray-100" asChild>
+            <a href="/damage-protection">View Full Protection Details</a>
           </Button>
         </div>
       </SectionWrapper>

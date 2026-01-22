@@ -1,16 +1,16 @@
 {
   "categories": [
     {
-      "id": "insurance",
-      "name": "Insurance & Coverage",
+      "id": "damage-protection",
+      "name": "Damage Protection & Coverage",
       "faqs": [
         {
-          "question": "What insurance coverage is included with my rental?",
-          "answer": "All rentals include comprehensive insurance coverage. A 10% excess fee is required, secured via credit card authorization. This covers collision damage, theft protection, and third-party liability as required by Botswana law."
+          "question": "What damage protection is included with my rental?",
+          "answer": "All rentals include comprehensive damage liability waiver powered by Pay-U. A 10% liability excess is required, secured via credit card authorization. This covers collision damage, theft protection, and third-party liability as required by Botswana law."
         },
         {
-          "question": "How does the insurance excess work?",
-          "answer": "The insurance excess is 10% of the total rental value. We place a hold on your credit card for this amount, which is released upon safe return of the vehicle. No cash payments are required upfront."
+          "question": "How does the liability excess work?",
+          "answer": "The liability excess is 10% of the total rental value. We place a hold on your credit card for this amount, which is released upon safe return of the vehicle. No cash payments are required upfront."
         },
         {
           "question": "Am I covered for cross-border travel?",
@@ -42,15 +42,15 @@
       "faqs": [
         {
           "question": "Are there any hidden fees?",
-          "answer": "No hidden fees guaranteed! Our pricing includes: vehicle rental, basic insurance, 24/7 support, and free delivery within Gaborone. Additional costs are clearly stated: delivery outside Gaborone (P2.50/km), cross-border authorization (P150-200), and fuel."
+          "answer": "No hidden fees guaranteed! Our pricing includes: vehicle rental, basic damage protection, 24/7 support, and free delivery within Gaborone. Additional costs are clearly stated: delivery outside Gaborone (P2.50/km), cross-border authorization (P150-200), and fuel."
         },
         {
           "question": "How is the rental price calculated?",
-          "answer": "Pricing is based on vehicle category, rental duration, and season. Weekly rentals get 15-18% discount, monthly rentals get 20-30% discount. All prices are inclusive of VAT and basic insurance."
+          "answer": "Pricing is based on vehicle category, rental duration, and season. Weekly rentals get 15-18% discount, monthly rentals get 20-30% discount. All prices are inclusive of VAT and basic damage protection."
         },
         {
           "question": "When do I pay for the rental?",
-          "answer": "Payment is processed when you pick up the vehicle. We accept credit cards, debit cards, and mobile money. A security deposit (insurance excess) is held on your credit card."
+          "answer": "Payment is processed when you pick up the vehicle. We accept credit cards, debit cards, and mobile money. A security deposit (liability excess) is held on your credit card."
         }
       ]
     },
@@ -97,7 +97,7 @@
       "answer": "25 years with 2+ years experience"
     },
     {
-      "question": "Insurance excess?",
+      "question": "Liability excess?",
       "answer": "10% of rental value via credit card"
     },
     {

@@ -31,7 +31,7 @@
     {
       "id": "faq-gen-005",
       "question": "How much does it cost to use MobiRides?",
-      "answer": "Pricing varies by vehicle type, location, and rental duration. Our rates typically start from P50 per hour or P300 per day, plus fuel. All bookings include comprehensive insurance coverage at no extra cost. You can see exact pricing for each vehicle in our mobile app before booking.",
+      "answer": "Pricing varies by vehicle type, location, and rental duration. Our rates typically start from P50 per hour or P300 per day, plus fuel. All bookings include comprehensive damage protection at no extra cost. You can see exact pricing for each vehicle in our mobile app before booking.",
       "category": "Pricing",
       "tags": ["cost", "rates", "pricing"]
     }
@@ -40,28 +40,28 @@
     {
       "id": "faq-safety-001",
       "question": "Is MobiRides safe to use?",
-      "answer": "Yes, safety is our top priority. All vehicles undergo regular safety inspections, and every user goes through a comprehensive verification process. We provide full insurance coverage, 24/7 roadside assistance, and real-time trip monitoring for added security.",
+      "answer": "Yes, safety is our top priority. All vehicles undergo regular safety inspections, and every user goes through a comprehensive verification process. We provide full damage protection, 24/7 roadside assistance, and real-time trip monitoring for added security.",
       "category": "Safety Measures",
       "tags": ["safety", "security", "verification"]
     },
     {
       "id": "faq-safety-002",
-      "question": "What insurance coverage is provided?",
-      "answer": "Every MobiRides trip includes comprehensive insurance coverage up to P2 million in liability, full vehicle damage protection, and personal accident insurance. This coverage is provided through our partnerships with leading local insurers and is included at no additional cost.",
-      "category": "Insurance",
-      "tags": ["insurance", "coverage", "protection"]
+      "question": "What damage protection is provided?",
+      "answer": "Every MobiRides rental includes comprehensive damage liability waiver with up to P2 million in liability coverage, full vehicle damage protection, and personal accident coverage. This protection is provided through our partnership with Pay-U and is included at no additional cost.",
+      "category": "Damage Protection",
+      "tags": ["damage protection", "coverage", "waiver"]
     },
     {
       "id": "faq-safety-003",
       "question": "What happens if there's an accident?",
-      "answer": "In case of an accident, immediately contact emergency services if needed, then report the incident through our app or 24/7 support line. Our insurance partners will handle the claims process, and we provide full support throughout. Most claims are resolved within 48 hours.",
+      "answer": "In case of an accident, immediately contact emergency services if needed, then report the incident through our app or 24/7 support line. Our Pay-U damage claims team will handle the claims process, and we provide full support throughout. Most claims are resolved within 48 hours.",
       "category": "Accidents",
       "tags": ["accidents", "claims", "emergency"]
     },
     {
       "id": "faq-safety-004",
       "question": "How are vehicles maintained and inspected?",
-      "answer": "All vehicles on our platform undergo regular safety inspections every 6 months or 10,000 km, whichever comes first. Car owners must maintain valid insurance, registration, and roadworthy certificates. We also conduct random spot checks to ensure vehicle quality.",
+      "answer": "All vehicles on our platform undergo regular safety inspections every 6 months or 10,000 km, whichever comes first. Car owners must maintain valid registration and roadworthy certificates. We also conduct random spot checks to ensure vehicle quality.",
       "category": "Vehicle Maintenance",
       "tags": ["maintenance", "inspection", "quality"]
     },
@@ -91,7 +91,7 @@
     {
       "id": "faq-host-003",
       "question": "What are the requirements for hosting?",
-      "answer": "Your vehicle must be less than 10 years old, have valid registration and insurance, pass our safety inspection, and be in good condition. You must be the legal owner or have permission to rent the vehicle, and maintain it according to our standards.",
+      "answer": "Your vehicle must be less than 10 years old, have valid registration, pass our safety inspection, and be in good condition. You must be the legal owner or have permission to rent the vehicle, and maintain it according to our standards.",
       "category": "Host Requirements",
       "tags": ["requirements", "vehicle age", "condition"]
     },
@@ -105,9 +105,9 @@
     {
       "id": "faq-host-005",
       "question": "What if my car gets damaged?",
-      "answer": "All rentals are covered by comprehensive insurance. If damage occurs during a trip, report it immediately through the app. Our insurance partners will assess the damage and handle repairs. You're protected against theft, accidents, and vandalism during active rentals.",
+      "answer": "All rentals are covered by comprehensive damage protection via Pay-U. If damage occurs during a rental, report it immediately through the app. Our Pay-U claims team will assess the damage and handle repairs through their cloud-based repair network. You're protected against theft, accidents, and vandalism during active rentals.",
       "category": "Protection",
-      "tags": ["damage", "insurance", "protection"]
+      "tags": ["damage", "protection", "claims"]
     }
   ],
   "booking": [

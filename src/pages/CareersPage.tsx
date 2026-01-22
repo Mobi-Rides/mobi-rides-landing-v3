@@ -1,5 +1,6 @@
 import React from 'react';
 import { PageLayout, PageHero, SectionWrapper } from '../components/layouts';
+import { buildCanonicalUrl } from '@/config/site';
 import JobListing from '../components/JobListing';
 import TeamGrid from '../components/TeamGrid';
 import ContactForm from '../components/ContactForm';
@@ -125,7 +126,7 @@ const CareersPage: React.FC = () => {
       title="Careers at MobiRides - Join Our Mission to Transform Transportation"
       description="Explore career opportunities at MobiRides. Join our team of passionate individuals working to revolutionize transportation through community-driven car sharing."
       keywords="MobiRides careers, jobs, employment, transportation jobs, car sharing careers, tech jobs"
-      canonical="/careers"
+      canonical={buildCanonicalUrl('/careers')}
     >
       <PageHero
         title="Build the Future of Transportation"

@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { PageLayout, PageHero } from '../components/layouts';
-import { 
+import { buildCanonicalUrl, buildMailto, siteConfig } from '@/config/site';
+import {
   Search, 
   ChevronRight, 
   ChevronDown, 
@@ -110,7 +111,7 @@ const SupportPage: React.FC = () => {
     "@type": "FAQPage",
     "name": "MobiRides Support Center",
     "description": "Find answers to common questions and get help with MobiRides services. Comprehensive support documentation and troubleshooting guides.",
-    "url": "https://mobirides.bw/support",
+    "url": "https://www.mobirides.com/support",
     "mainEntity": supportData.faqs.slice(0, 10).map((faq: FAQ) => ({
       "@type": "Question",
       "name": faq.question,
@@ -125,6 +126,7 @@ const SupportPage: React.FC = () => {
     <PageLayout 
       title="Support Center - MobiRides | Help & FAQs"
       description="Get help with MobiRides. Find answers to frequently asked questions, troubleshooting guides, and comprehensive support documentation for riders and drivers."
+      canonical={buildCanonicalUrl('/support')}
     >
       <Helmet>
         <title>Support Center - MobiRides | Help &amp; FAQs</title>
@@ -133,7 +135,7 @@ const SupportPage: React.FC = () => {
           content="Get help with MobiRides. Find answers to frequently asked questions, troubleshooting guides, and comprehensive support documentation for riders and drivers." 
         />
         <meta name="keywords" content="MobiRides support, help center, FAQ, troubleshooting, customer service, rider help, driver support, how to guides" />
-        <link rel="canonical" href="https://mobirides.bw/support" />
+        <link rel="canonical" href="https://www.mobirides.com/support" />
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
         </script>
@@ -403,7 +405,7 @@ const SupportPage: React.FC = () => {
             </a>
             
             <a
-              href="mailto:hello@mobirides.com"
+              href={buildMailto('support')}
               className="bg-purple-600 text-white p-6 rounded-xl hover:bg-purple-700 transition-colors"
             >
               <Mail className="h-8 w-8 mx-auto mb-3" />

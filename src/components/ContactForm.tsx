@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { siteConfig } from '@/config/site';
 import { Send, Phone, Mail, MessageSquare } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -305,11 +306,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
           <div className="flex flex-col sm:flex-row gap-4 text-sm">
             <div className="flex items-center gap-2 text-gray-600">
               <Phone className="w-4 h-4" />
-              <span>+267 74300747</span>
+              <span>{siteConfig.contact.phone}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Mail className="w-4 h-4" />
-              <span>hello@mobirides.com</span>
+              <span>{siteConfig.contact.email}</span>
             </div>
           </div>
         </div>

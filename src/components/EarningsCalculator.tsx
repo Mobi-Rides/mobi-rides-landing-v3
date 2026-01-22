@@ -21,32 +21,39 @@ interface VehicleType {
 
 const vehicleTypes: VehicleType[] = [
   {
-    id: 'economy',
-    name: 'Economy Car',
-    dailyRate: 350,
-    demandMultiplier: 0.8,
-    description: 'Compact cars, fuel efficient'
+    id: 'basic',
+    name: 'Basic (Economy)',
+    dailyRate: 450,
+    demandMultiplier: 0.85,
+    description: 'Budget hatchbacks, most affordable'
   },
   {
     id: 'standard',
-    name: 'Standard Car',
-    dailyRate: 450,
+    name: 'Standard',
+    dailyRate: 875,
     demandMultiplier: 1.0,
-    description: 'Mid-size sedans, most popular'
+    description: 'Compact/standard sedans, popular choice'
+  },
+  {
+    id: 'executive',
+    name: 'Executive',
+    dailyRate: 1750,
+    demandMultiplier: 0.9,
+    description: 'Premium sedans, business travel'
   },
   {
     id: 'suv',
-    name: 'SUV',
-    dailyRate: 650,
-    demandMultiplier: 1.2,
-    description: 'Family vehicles, high demand'
+    name: '4x4/SUV',
+    dailyRate: 2250,
+    demandMultiplier: 1.1,
+    description: 'Off-road capable, safari ready'
   },
   {
-    id: 'luxury',
-    name: 'Luxury Car',
-    dailyRate: 950,
-    demandMultiplier: 0.6,
-    description: 'Premium vehicles, niche market'
+    id: 'prestige',
+    name: 'Prestige/Commercial',
+    dailyRate: 4000,
+    demandMultiplier: 0.7,
+    description: 'Luxury MPVs, commercial vans'
   }
 ];
 

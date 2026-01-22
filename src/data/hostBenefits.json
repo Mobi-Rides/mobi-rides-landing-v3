@@ -71,13 +71,13 @@
     {
       "id": "safety-first",
       "title": "Safety & Security",
-      "description": "Your safety is our priority with comprehensive insurance and 24/7 support.",
+      "description": "Your safety is our priority with comprehensive damage protection and 24/7 support.",
       "icon": "Shield",
       "features": [
-        "Comprehensive insurance coverage",
+        "Comprehensive damage protection via Pay-U",
         "24/7 emergency support",
-        "GPS tracking for all trips",
-        "Background-checked passengers"
+        "GPS tracking for all rentals",
+        "Background-checked renters"
       ]
     },
     {
@@ -227,7 +227,7 @@
         "Be your own boss",
         "Work from anywhere in Botswana",
         "Performance bonuses and incentives",
-        "Comprehensive insurance coverage",
+        "Comprehensive damage protection via Pay-U",
         "24/7 support and community"
       ]
     },
@@ -255,8 +255,8 @@
         "icon": "FileText"
       },
       {
-        "requirement": "Vehicle registration and insurance",
-        "description": "Current registration and comprehensive insurance",
+        "requirement": "Vehicle registration",
+        "description": "Current registration and roadworthy certificate",
         "icon": "Car"
       },
       {

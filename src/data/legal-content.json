@@ -107,9 +107,9 @@
         "content": "**Cancellation by Guests:**\n\n• Free cancellation up to 24 hours before pickup\n• Partial refund for cancellations 2-24 hours before pickup\n• No refund for cancellations less than 2 hours before pickup\n\n**Cancellation by Hosts:**\n\n• Must provide reasonable notice\n• Full refund plus inconvenience credit for Guest\n• Repeated cancellations may result in account suspension"
       },
       {
-        "id": "insurance-liability",
-        "title": "Insurance and Liability",
-        "content": "• All vehicles must maintain comprehensive insurance coverage\n• MobiRides provides additional coverage during active rentals\n• Users are responsible for damages not covered by insurance\n• Report all incidents immediately through the app\n• Cooperate fully with insurance investigations\n• MobiRides is not liable for personal injuries or property damage beyond insurance coverage"
+        "id": "damage-protection-liability",
+        "title": "Damage Protection and Liability",
+        "content": "• All vehicles are covered by our damage liability waiver during active rentals\n• MobiRides provides damage protection through our partnership with Pay-U\n• Users are responsible for damages not covered by the protection waiver\n• Report all incidents immediately through the app\n• Cooperate fully with damage claims investigations\n• MobiRides is not liable for personal injuries or property damage beyond protection coverage"
       },
       {
         "id": "prohibited-uses",
