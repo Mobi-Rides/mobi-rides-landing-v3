@@ -1,56 +1,128 @@
 
-# Fix Canonical URL Mismatches and Remaining Insurance References
+
+# Fix Facebook Open Graph Errors - Complete Implementation Plan
 
 ## Problem Summary
-Canonical URLs in several pages don't match the actual routes defined in App.tsx. This causes 404 errors when sharing links on social media because platforms use the canonical URL for link previews.
 
-## Phase 1: Fix Canonical URLs in Host Pages
+Facebook's Sharing Debugger reports two issues when scraping `https://www.mobirides.com/host-protection`:
 
-### File: `src/pages/HostProtectionPage.tsx`
-- Line 231: Change `buildCanonicalUrl('/host/protection')` to `buildCanonicalUrl('/host-protection')`
-- Line 206-207: Update JSON-LD description from "insurance coverage" to "damage protection coverage"
-- Line 208: Update JSON-LD URL from `/host-protection` to match canonical
-- Line 228: Update page title from "Vehicle Insurance & Safety" to "Vehicle Damage Protection & Safety"
-- Line 229: Update description from "P1M insurance coverage" to "P1M damage protection coverage"
-- Line 259: Change button text "Learn About Insurance" to "Learn About Protection"
-- Line 272: Change tab label "Insurance Coverage" to "Damage Protection"
+1. **Invalid og:image URL**: Showing `/og-image.png` (relative path) instead of an absolute URL
+2. **Incorrect og:url**: Showing `https://mobirides.com/` (wrong domain, missing `www`, wrong path)
 
-### File: `src/pages/HostRequirementsPage.tsx`
-- Line 126: Change `buildCanonicalUrl('/host/requirements')` to `buildCanonicalUrl('/host-requirements')`
+## Root Cause Analysis
 
-### File: `src/pages/HostBenefitsPage.tsx`
-- Line 99: Change `buildCanonicalUrl('/host/benefits')` to `buildCanonicalUrl('/host-benefits')`
+### Issue 1: Relative Image Paths
+- `index.html` (lines 22, 30) uses relative paths: `content="/og-image.png"`
+- `PageLayout` component only renders `og:image` if the `ogImage` prop is explicitly passed
+- Most pages don't pass `ogImage` prop, so the fallback from `index.html` is used
+- Facebook cannot resolve relative paths
 
-### File: `src/pages/HostSupportPage.tsx`
-- Line 138: Change `buildCanonicalUrl('/host/support')` to `buildCanonicalUrl('/host-support')`
+### Issue 2: Incorrect og:url
+- `index.html` (line 23) has hardcoded: `content="https://mobirides.com"` (missing `www`)
+- `PageLayout` only renders `og:url` if `ogUrl` prop is passed
+- Most pages don't pass `ogUrl` prop
 
-## Phase 2: Fix Other Page Canonical URLs
+### Affected Pages: 20+ pages
+All pages using `PageLayout` without `ogImage` and `ogUrl` props are affected.
 
-### File: `src/pages/BusinessSolutionsPage.tsx`
-- Line 211: Change `buildCanonicalUrl('/business')` to `buildCanonicalUrl('/business-solutions')`
+---
 
-### File: `src/pages/PressPage.tsx`
-- Line 170: Change `canonical="/press"` to `canonical={buildCanonicalUrl('/press')}`
-- Ensure `buildCanonicalUrl` is imported from `@/config/site`
+## Solution Architecture
 
-## Summary of Changes
+Rather than updating all 20+ pages individually, we'll make two targeted fixes:
 
-| File | Line | Current Value | New Value |
-|------|------|---------------|-----------|
-| HostProtectionPage.tsx | 231 | `/host/protection` | `/host-protection` |
-| HostRequirementsPage.tsx | 126 | `/host/requirements` | `/host-requirements` |
-| HostBenefitsPage.tsx | 99 | `/host/benefits` | `/host-benefits` |
-| HostSupportPage.tsx | 138 | `/host/support` | `/host-support` |
-| BusinessSolutionsPage.tsx | 211 | `/business` | `/business-solutions` |
-| PressPage.tsx | 170 | `"/press"` | `buildCanonicalUrl('/press')` |
+### Fix 1: Update `index.html` fallback tags
+Fix the static fallback tags to use correct absolute URLs with `www` subdomain.
 
-## Additional Fixes in HostProtectionPage.tsx
-- Update remaining "insurance" references to "damage protection" terminology
-- Align JSON-LD schema description with page content
+### Fix 2: Update `PageLayout` component  
+Add automatic defaults for `ogImage` and `ogUrl` that derive from `canonical` and `siteConfig`, so pages don't need to pass these props explicitly.
+
+---
+
+## Phase 1: Fix `index.html` Fallback Tags
+
+**File: `index.html`**
+
+| Line | Current Value | New Value |
+|------|---------------|-----------|
+| 22 | `content="/og-image.png"` | `content="https://www.mobirides.com/og-image.png"` |
+| 23 | `content="https://mobirides.com"` | `content="https://www.mobirides.com"` |
+| 30 | `content="/og-image.png"` | `content="https://www.mobirides.com/og-image.png"` |
+
+---
+
+## Phase 2: Update `PageLayout` Component
+
+**File: `src/components/layouts/PageLayout.tsx`**
+
+Add logic to automatically provide default values:
+
+1. Import `siteConfig` from `@/config/site`
+2. Create computed defaults:
+   - `defaultOgImage`: Always use `${siteConfig.url}${siteConfig.seo.ogImage}` (absolute URL)
+   - `defaultOgUrl`: Use `canonical` if provided, otherwise undefined
+3. Use defaults when props not provided
+
+```text
+Changes:
+- Line 1: Add import for siteConfig
+- Lines 39-41: Add computed defaults
+- Line 50: Use ogUrl || canonical instead of conditional
+- Lines 52-59: Always render og:image with default fallback
+```
+
+### Updated Logic
+```text
+// Computed defaults
+const resolvedOgImage = ogImage || `${siteConfig.url}${siteConfig.seo.ogImage}`;
+const resolvedOgUrl = ogUrl || canonical;
+const resolvedOgImageAlt = ogImageAlt || description;
+
+// Always render og:image (no conditional)
+<meta property="og:image" content={resolvedOgImage} />
+
+// Always render og:url when canonical is available
+{resolvedOgUrl && <meta property="og:url" content={resolvedOgUrl} />}
+```
+
+---
+
+## Expected Results After Fix
+
+When Facebook scrapes `https://www.mobirides.com/host-protection`:
+
+| Meta Tag | Current Value | Fixed Value |
+|----------|---------------|-------------|
+| og:image | `/og-image.png` | `https://www.mobirides.com/og-image.png` |
+| og:url | `https://mobirides.com/` | `https://www.mobirides.com/host-protection` |
+| canonical | ✓ Already correct | `https://www.mobirides.com/host-protection` |
+
+---
+
+## Files Modified
+
+| File | Changes |
+|------|---------|
+| `index.html` | 3 lines - absolute URLs for og:image and og:url |
+| `src/components/layouts/PageLayout.tsx` | ~10 lines - add siteConfig import and default resolution logic |
+
+**Total: 2 files, ~13 lines changed**
+
+---
+
+## Post-Deployment Steps
+
+After publishing these changes:
+
+1. **Clear Facebook cache**: Visit [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) and click "Scrape Again" for affected URLs
+2. **Clear Twitter cache**: Use [Twitter Card Validator](https://cards-dev.twitter.com/validator) to refresh previews
+3. **Test multiple pages**: Verify og:image and og:url are correct across different pages
+
+---
 
 ## Technical Notes
-- After deployment, you may need to use Facebook's Sharing Debugger and Twitter Card Validator to refresh cached social media previews
-- Consider adding redirects for the incorrect canonical paths (e.g., `/host/protection` to `/host-protection`) to handle any existing indexed links
 
-## Files Modified: 6
-## Estimated Lines Changed: ~15
+- This fix benefits all 20+ pages automatically without individual page updates
+- The `PageLayout` component becomes the single source of truth for OG defaults
+- Pages can still override with explicit `ogImage` and `ogUrl` props when needed (e.g., blog posts with custom images)
+
