@@ -123,7 +123,7 @@ const HostRequirementsPage: React.FC = () => {
     <PageLayout
       title="Host Requirements - List Your Car with MobiRides | Botswana"
       description="Learn about MobiRides host requirements in Botswana. Age, license, vehicle, and background check requirements to start earning as a car rental host."
-      canonical={buildCanonicalUrl('/host/requirements')}
+      canonical={buildCanonicalUrl('/host-requirements')}
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">

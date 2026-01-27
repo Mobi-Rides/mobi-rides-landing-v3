@@ -96,7 +96,7 @@ const HostBenefitsPage: React.FC = () => {
     <PageLayout
       title="Host Benefits - Earn More with MobiRides | Botswana"
       description="Join thousands of MobiRides hosts in Botswana. Earn BWP 10,000-18,000 monthly with flexible schedules, instant payments, and comprehensive support."
-      canonical={buildCanonicalUrl('/host/benefits')}
+      canonical={buildCanonicalUrl('/host-benefits')}
       jsonLd={jsonLd}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">

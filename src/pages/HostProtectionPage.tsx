@@ -203,9 +203,9 @@ const HostProtectionPage: React.FC = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Host Protection - Vehicle Insurance & Safety | MobiRides",
-    "description": "Comprehensive protection for car owners: P1M insurance coverage, verified renters, 24/7 support, and theft protection. Rent your vehicle with confidence.",
-    "url": "https://mobirides.com/host-protection",
+    "name": "Host Protection - Vehicle Damage Protection & Safety | MobiRides",
+    "description": "Comprehensive protection for car owners: P1M damage protection coverage, verified renters, 24/7 support, and theft protection. Rent your vehicle with confidence.",
+    "url": "https://www.mobirides.com/host-protection",
     "mainEntity": {
       "@type": "Service",
       "name": "Host Protection Program",
@@ -225,10 +225,10 @@ const HostProtectionPage: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageLayout
-        title="Host Protection - Vehicle Insurance & Safety | MobiRides"
-        description="Comprehensive protection for car owners: P1M insurance coverage, verified renters, 24/7 support, and theft protection. Rent your vehicle with confidence."
-        keywords="car rental protection, vehicle insurance, host protection, peer-to-peer car sharing, rental damage coverage, Botswana car rental"
-        canonical={buildCanonicalUrl('/host/protection')}
+        title="Host Protection - Vehicle Damage Protection & Safety | MobiRides"
+        description="Comprehensive protection for car owners: P1M damage protection coverage, verified renters, 24/7 support, and theft protection. Rent your vehicle with confidence."
+        keywords="car rental protection, vehicle damage protection, host protection, peer-to-peer car sharing, rental damage coverage, Botswana car rental"
+        canonical={buildCanonicalUrl('/host-protection')}
       >
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
@@ -256,7 +256,7 @@ const HostProtectionPage: React.FC = () => {
                   onClick={() => setActiveTab('coverage')}
                   className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
                 >
-                  Learn About Insurance
+                  Learn About Protection
                 </button>
               </div>
             </div>
@@ -269,7 +269,7 @@ const HostProtectionPage: React.FC = () => {
             <nav className="flex space-x-4 overflow-x-auto" aria-label="Tabs">
               {[
                 { id: 'features', label: 'Protection Features', icon: Shield },
-                { id: 'coverage', label: 'Insurance Coverage', icon: CreditCard },
+                { id: 'coverage', label: 'Damage Protection', icon: CreditCard },
                 { id: 'protocols', label: 'Safety Protocols', icon: CheckCircle },
                 { id: 'support', label: 'Support & Contact', icon: Phone }
               ].map(({ id, label, icon: Icon }) => (

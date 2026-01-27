@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PageLayout, PageHero, SectionWrapper } from '../components/layouts';
+import { buildCanonicalUrl } from '@/config/site';
 import DocumentDownload from '../components/DocumentDownload';
 import ContactForm from '../components/ContactForm';
 import { Button } from '../components/ui/button';
@@ -167,7 +168,7 @@ const PressPage: React.FC = () => {
       title="Press & Media - MobiRides News, Updates & Media Resources"
       description="Latest press releases, media kit, and resources for journalists covering MobiRides. Get the latest news, company updates, and media assets."
       keywords="MobiRides press, media kit, press releases, news, media resources, journalist resources"
-      canonical="/press"
+      canonical={buildCanonicalUrl('/press')}
     >
       <PageHero
         title="Press & Media Center"
