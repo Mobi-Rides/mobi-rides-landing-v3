@@ -86,8 +86,13 @@ const App = () => (
               <Route path="/host-support" element={<HostSupportPage />} />
               <Route path="/locations" element={<LocationsPage />} />
               <Route path="/damage-protection" element={<DamageProtectionPage />} />
-              {/* Redirect old insurance URL */}
+              {/* Redirect old URLs for SEO */}
               <Route path="/insurance" element={<Navigate to="/damage-protection" replace />} />
+              <Route path="/host/protection" element={<Navigate to="/host-protection" replace />} />
+              <Route path="/host/requirements" element={<Navigate to="/host-requirements" replace />} />
+              <Route path="/host/benefits" element={<Navigate to="/host-benefits" replace />} />
+              <Route path="/host/support" element={<Navigate to="/host-support" replace />} />
+              <Route path="/business" element={<Navigate to="/business-solutions" replace />} />
               <Route path="/host-protection" element={<HostProtectionPage />} />
               <Route path="/host-community" element={<HostCommunityPage />} />
               <Route path="/travel-guides" element={<TravelGuidesPage />} />
