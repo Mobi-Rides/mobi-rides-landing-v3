@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '../Header';
 import Footer from '../Footer';
+import { siteConfig } from '@/config/site';
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -36,6 +37,11 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   jsonLd,
   className = ''
 }) => {
+  // Compute defaults for OG tags using siteConfig
+  const resolvedOgImage = ogImage || `${siteConfig.url}${siteConfig.seo.ogImage}`;
+  const resolvedOgUrl = ogUrl || canonical;
+  const resolvedOgImageAlt = ogImageAlt || description;
+
   return (
     <>
       <Helmet>
@@ -47,27 +53,19 @@ const PageLayout: React.FC<PageLayoutProps> = ({
         {/* Open Graph tags */}
         <meta property="og:title" content={ogTitle || title} />
         <meta property="og:description" content={ogDescription || description} />
-        {ogUrl && <meta property="og:url" content={ogUrl} />}
+        {resolvedOgUrl && <meta property="og:url" content={resolvedOgUrl} />}
         <meta property="og:type" content="website" />
-        {ogImage && (
-          <>
-            <meta property="og:image" content={ogImage} />
-            <meta property="og:image:width" content={ogImageWidth} />
-            <meta property="og:image:height" content={ogImageHeight} />
-            {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
-          </>
-        )}
+        <meta property="og:image" content={resolvedOgImage} />
+        <meta property="og:image:width" content={ogImageWidth} />
+        <meta property="og:image:height" content={ogImageHeight} />
+        <meta property="og:image:alt" content={resolvedOgImageAlt} />
         
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={ogTitle || title} />
         <meta name="twitter:description" content={ogDescription || description} />
-        {ogImage && (
-          <>
-            <meta name="twitter:image" content={ogImage} />
-            {ogImageAlt && <meta name="twitter:image:alt" content={ogImageAlt} />}
-          </>
-        )}
+        <meta name="twitter:image" content={resolvedOgImage} />
+        <meta name="twitter:image:alt" content={resolvedOgImageAlt} />
         
         {/* JSON-LD structured data */}
         {jsonLd && (
