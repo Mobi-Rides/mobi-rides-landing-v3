@@ -338,17 +338,30 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
       if (!token || token === 'your_mapbox_token_here') {
         return;
       }
+
+      // Check WebGL support before initializing
+      if (!mapboxgl.supported()) {
+        setMapError('Your browser or environment does not support WebGL. The interactive map cannot be displayed.');
+        return;
+      }
       
       mapboxgl.accessToken = token;
       
-      map.current = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: FALLBACK_STYLES[0],
-        center: [24.6282, -25.9044],
-        zoom: 4,
-        attributionControl: false,
-        logoPosition: 'bottom-right'
-      });
+      try {
+        map.current = new mapboxgl.Map({
+          container: mapContainer.current,
+          style: FALLBACK_STYLES[0],
+          center: [24.6282, -25.9044],
+          zoom: 4,
+          attributionControl: false,
+          logoPosition: 'bottom-right',
+          failIfMajorPerformanceCaveat: false
+        });
+      } catch (error) {
+        console.error('Failed to create Mapbox map:', error);
+        setMapError('Unable to initialize the interactive map. Please try a different browser.');
+        return;
+      }
       
       map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
       
