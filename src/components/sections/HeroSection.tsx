@@ -101,30 +101,30 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 sm:pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-20">
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-12 items-center">
           <div className="max-w-2xl mb-3 sm:mb-0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-3 sm:mb-6 leading-tight">
               Rentals For You<br />
               <span className="gradient-text-light">By You</span>
             </h1>
-            <p className="text-xl mb-8 font-light text-white">
+            <p className="text-xl mb-4 sm:mb-8 font-light text-white">
               Search it, Tap it, Like it, Drive it!
             </p>
             
             {/* Mobile App Badge */}
-            <div className="mb-8">
+            <div className="mb-4 sm:mb-8">
               <p className="text-sm mb-4 text-white">Unlock cars 24/7 with your phone, and go...</p>
             </div>
           </div>
 
           {/* Search Component */}
-          <div className="bg-white rounded-3xl p-8 shadow-2xl">
-            <div className="space-y-6">
+          <div className="bg-white rounded-3xl p-5 sm:p-8 shadow-2xl">
+            <div className="space-y-4 sm:space-y-6">
               <div className="relative">
                 <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
                 {isLoading && <Loader2 className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 animate-spin z-10" />}
-                <input ref={inputRef} type="text" placeholder="Specific address, station, suburb..." value={locationQuery} onChange={handleLocationInputChange} className="w-full pl-12 pr-12 py-4 text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50 relative z-0" />
+                <input ref={inputRef} type="text" placeholder="Specific address, station, suburb..." value={locationQuery} onChange={handleLocationInputChange} className="w-full pl-12 pr-12 py-3 sm:py-4 text-base sm:text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50 relative z-0" />
                 
                 {/* Autocomplete Suggestions Dropdown */}
                 {showSuggestions && (suggestions.length > 0 || error) && <div ref={suggestionsRef} className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-2xl shadow-lg max-h-60 overflow-y-auto z-50">
@@ -150,11 +150,11 @@ const HeroSection = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative">
                   <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
-                  <input type="date" value={pickupDate} onChange={handlePickupDateChange} min={new Date().toISOString().split('T')[0]} className="w-full pl-12 pr-4 py-4 text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50 [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-4 [&::-webkit-calendar-picker-indicator]:w-5 [&::-webkit-calendar-picker-indicator]:h-5 [&::-webkit-calendar-picker-indicator]:cursor-pointer" />
+                  <input type="date" value={pickupDate} onChange={handlePickupDateChange} min={new Date().toISOString().split('T')[0]} className="w-full pl-12 pr-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50 [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-4 [&::-webkit-calendar-picker-indicator]:w-5 [&::-webkit-calendar-picker-indicator]:h-5 [&::-webkit-calendar-picker-indicator]:cursor-pointer" />
                 </div>
                 <div className="relative">
                   <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
-                  <input type="date" value={returnDate} onChange={handleReturnDateChange} min={pickupDate} className="w-full pl-12 pr-4 py-4 text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50 [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-4 [&::-webkit-calendar-picker-indicator]:w-5 [&::-webkit-calendar-picker-indicator]:h-5 [&::-webkit-calendar-picker-indicator]:cursor-pointer" />
+                  <input type="date" value={returnDate} onChange={handleReturnDateChange} min={pickupDate} className="w-full pl-12 pr-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50 [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-4 [&::-webkit-calendar-picker-indicator]:w-5 [&::-webkit-calendar-picker-indicator]:h-5 [&::-webkit-calendar-picker-indicator]:cursor-pointer" />
                 </div>
               </div>
               
@@ -162,7 +162,7 @@ const HeroSection = () => {
                   {dateError}
                 </div>}
               
-              <a href="https://app.mobirides.com" target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-hero text-white py-4 px-8 text-xl font-bold rounded-2xl shadow-strong hover:shadow-glow transition-all duration-300 transform hover:scale-[1.02] block text-center">
+              <a href="https://app.mobirides.com" target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-hero text-white py-3 sm:py-4 px-8 text-lg sm:text-xl font-bold rounded-2xl shadow-strong hover:shadow-glow transition-all duration-300 transform hover:scale-[1.02] block text-center">
                 Search
               </a>
             </div>
