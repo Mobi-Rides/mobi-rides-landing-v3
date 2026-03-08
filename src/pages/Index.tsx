@@ -259,15 +259,6 @@ const Index = () => {
       </Helmet>
       <Header />
       
-      {/* Sticky Promo Banner */}
-      <div className="sticky top-0 z-40 bg-primary text-primary-foreground py-2 px-4 text-center text-sm font-medium shadow-md">
-        <p>
-          🚗 Use code <span className="font-bold bg-primary-foreground/20 px-1.5 py-0.5 rounded mx-1">FIRST100</span> for P100 off your first booking!{' '}
-          <a href="https://app.mobirides.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-primary-foreground/80 transition-colors">
-            Book Now →
-          </a>
-        </p>
-      </div>
       
       <main className="flex-1">
         <HeroSection />
