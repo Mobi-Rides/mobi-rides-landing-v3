@@ -103,7 +103,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 sm:pt-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl mb-3 sm:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
               Rentals For You<br />
               <span className="gradient-text-light">By You</span>
