@@ -84,7 +84,7 @@ const PageHero: React.FC<PageHeroProps> = ({
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white">
               
-                  <a href={ctaLink} className="inline-flex items-center gap-2">
+                  <a href={ctaLink} className="inline-flex items-center gap-2 bg-ring">
                     {ctaText}
                     <ArrowRight className="w-4 h-4" />
                   </a>
