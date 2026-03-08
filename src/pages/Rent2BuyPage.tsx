@@ -29,6 +29,7 @@ import {
   FastForward
 } from 'lucide-react';
 import pricingData from '@/data/pricing.json';
+import rent2buyHeroBg from '../assets/banners/rent2buy-hero.jpg';
 
 interface RentalPeriod {
   months: number;
