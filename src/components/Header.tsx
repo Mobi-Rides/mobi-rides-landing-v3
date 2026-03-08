@@ -109,7 +109,7 @@ const Header = () => {
               className={`transition-colors p-2 rounded-lg ${
                 isScrolled
                   ? 'text-foreground hover:text-primary'
-                  : 'text-white hover:text-gray-200 bg-primary/30 backdrop-blur-sm'
+                  : 'text-foreground hover:text-primary bg-orange-500/80 backdrop-blur-sm'
               }`}
               style={{ zIndex: 9999 }}
             >
