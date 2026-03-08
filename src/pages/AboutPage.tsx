@@ -10,6 +10,7 @@ import { Badge } from '../components/ui/badge';
 import { Users, Target, Award, Globe, Heart, Shield } from 'lucide-react';
 import teamMembersData from '../data/team-members.json';
 import faqData from '../data/faq-data.json';
+import aboutHeroBg from '../assets/banners/about-hero.jpg';
 const AboutPage: React.FC = () => {
   const companyValues = [{
     icon: Shield,
