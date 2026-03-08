@@ -1,37 +1,18 @@
 
 
-# Add Facebook Domain Verification Meta Tag
+## Update Hamburger Menu Button Colors
 
-## Overview
-Add the Facebook domain verification meta tag to the `<head>` section of `index.html` to verify domain ownership with Facebook.
+The purple pill on a purple-heavy hero doesn't stand out. Use a complementary accent color for the button background and change the icon lines for better contrast.
 
-## Implementation
+### Color Choice
 
-### File: `index.html`
+Burnt orange works well as a complement to purple. A warm orange like `bg-orange-500/80` (or a custom amber-orange) will pop against purple hero backgrounds while feeling energetic and on-brand for a mobility company.
 
-**Location**: Line 12 (after the existing Google site verification tag on line 11)
-
-**Add this line**:
-```html
-<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
-```
-
-**Result**: The verification meta tags section will look like:
-```html
-<meta name="google-site-verification" content="RyDwY9e65CLZGlnUhgni_zZnf1Bxw0-w3wHIveGR_N4" />
-<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
-```
-
-## Summary
+### Changes
 
 | File | Change |
 |------|--------|
-| `index.html` | Add 1 line - Facebook domain verification meta tag |
+| `src/components/Header.tsx` | Line ~112: Change unscrolled button classes from `text-white hover:text-gray-200 bg-primary/30 backdrop-blur-sm` to `text-foreground hover:text-primary bg-orange-500/80 backdrop-blur-sm` — burnt orange pill with dark/purple hamburger lines |
 
-## Post-Deployment Steps
-
-After publishing:
-1. Return to Facebook Business Suite / Meta Business Settings
-2. Click "Verify" to confirm the domain verification
-3. Facebook will crawl the page and detect the meta tag
+The hamburger lines will use `text-foreground` (dark) for strong contrast against the orange pill. On scroll, behavior stays the same.
 
