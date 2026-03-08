@@ -250,24 +250,29 @@ const CoverageMap: React.FC<CoverageMapProps> = ({ className = '' }) => {
       const styleToUse = FALLBACK_STYLES[styleIndex] || FALLBACK_STYLES[0];
       console.log(`Initializing map with style: ${styleToUse}`);
 
-      // Check WebGL support before initializing
-      const canvas = document.createElement('canvas');
-      const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-      if (!gl) {
+      // Check WebGL/Mapbox support before initializing
+      if (!mapboxgl.supported()) {
         setMapError('Your browser or environment does not support WebGL, which is required for the interactive map. Please try viewing in a different browser.');
         return;
       }
 
       // Create new map instance
-      const newMap = new mapboxgl.Map({
-        container: mapContainer,
-        style: styleToUse,
-        center: [24.6282, -25.9044], // Botswana center
-        zoom: 4.0,
-        attributionControl: false,
-        logoPosition: 'bottom-right',
-        failIfMajorPerformanceCaveat: false
-      });
+      let newMap: mapboxgl.Map;
+      try {
+        newMap = new mapboxgl.Map({
+          container: mapContainer,
+          style: styleToUse,
+          center: [24.6282, -25.9044], // Botswana center
+          zoom: 4.0,
+          attributionControl: false,
+          logoPosition: 'bottom-right',
+          failIfMajorPerformanceCaveat: false
+        });
+      } catch (mapInitError) {
+        console.error('Mapbox Map constructor failed:', mapInitError);
+        setMapError('Unable to initialize the interactive map in this environment. Please try a different browser.');
+        return;
+      }
 
       // Store map reference globally for cleanup
       (window as Window & { currentMap?: mapboxgl.Map }).currentMap = newMap;
