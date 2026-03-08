@@ -106,10 +106,10 @@ const Header = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`transition-colors p-2 ${
+              className={`transition-colors p-2 rounded-lg ${
                 isScrolled
                   ? 'text-foreground hover:text-primary'
-                  : 'text-white hover:text-gray-200'
+                  : 'text-white hover:text-gray-200 bg-black/20 backdrop-blur-sm'
               }`}
               style={{ zIndex: 9999 }}
             >
