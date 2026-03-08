@@ -173,7 +173,7 @@ const HostPage: React.FC = () => {
         subtitle="Join thousands of car owners earning extra income by sharing their vehicles with trusted drivers in your community."
         ctaText="Start Hosting Today"
         ctaLink="https://app.mobirides.com"
-        backgroundImage="/images/host-hero-bg.jpg"
+        backgroundImage={hostHeroBg}
       />
 
       {/* Earnings Calculator Section */}
