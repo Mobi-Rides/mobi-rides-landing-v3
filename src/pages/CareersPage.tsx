@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import jobListingsData from '../data/job-listings.json';
 import teamMembersData from '../data/team-members.json';
+import careersHeroBg from '../assets/banners/careers-hero.jpg';
 
 const CareersPage: React.FC = () => {
   const companyBenefits = [
