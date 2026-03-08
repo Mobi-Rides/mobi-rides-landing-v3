@@ -104,6 +104,7 @@ const PricingPage: React.FC = () => {
       <PageHero
         title="Transparent P2P Car Sharing Rates"
         description="Find the perfect vehicle at fair prices. All rentals include Pay-U damage protection."
+        backgroundImage={pricingHeroBg}
       />
 
       {/* Promo Banner */}

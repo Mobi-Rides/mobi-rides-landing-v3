@@ -25,6 +25,7 @@ import {
   MapPin
 } from 'lucide-react';
 import pricingData from '../data/pricing.json';
+import hostHeroBg from '../assets/banners/host-hero.jpg';
 
 interface EarningsCalculation {
   dailyEarnings: number;

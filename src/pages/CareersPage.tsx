@@ -133,9 +133,10 @@ const CareersPage: React.FC = () => {
         title="Build the Future of Transportation"
         subtitle="Join Our Mission"
         description="We're looking for passionate individuals who want to make a real impact. Help us create a more sustainable, accessible, and connected world through innovative transportation solutions."
-        variant="gradient"
+        variant="default"
         ctaText="View Open Positions"
         ctaLink="#jobs"
+        backgroundImage={careersHeroBg}
       />
 
       {/* Company Stats */}

@@ -158,9 +158,10 @@ const SafetyPage: React.FC = () => {
         title="Your Safety is Our Priority"
         subtitle="Comprehensive Protection for Every Journey"
         description="From verified users to comprehensive insurance coverage, we've built multiple layers of protection to ensure your peace of mind on every ride."
-        variant="gradient"
+        variant="default"
         ctaText="View Safety Guide"
         ctaLink="#safety-guide"
+        backgroundImage={safetyHeroBg}
       />
 
       {/* Emergency Alert */}

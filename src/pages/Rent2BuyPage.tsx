@@ -151,6 +151,7 @@ const Rent2BuyPage: React.FC = () => {
       <PageHero
         title="Own Your Vehicle, Build Your Wealth"
         description="Rent-to-Buy: Convert your rental payments into ownership equity."
+        backgroundImage={rent2buyHeroBg}
       />
 
       {/* How It Works Section */}
