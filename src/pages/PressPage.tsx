@@ -23,6 +23,7 @@ import {
   Mic
 } from 'lucide-react';
 import pressReleasesData from '../data/press-releases.json';
+import pressHeroBg from '../assets/banners/press-hero.jpg';
 
 const PressPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
