@@ -1,32 +1,37 @@
 
 
-## Plan: Create Implementation Tracker for PageHero Banner Images
+# Add Facebook Domain Verification Meta Tag
 
-Create a single markdown file `public/20260308_MobiRides_PageHero_Banner_Images.md` documenting the implementation of background images for all pages currently missing them.
+## Overview
+Add the Facebook domain verification meta tag to the `<head>` section of `index.html` to verify domain ownership with Facebook.
 
-Based on the earlier audit, these 7 pages need banner images:
+## Implementation
 
-| Page | File | Theme for Image |
-|------|------|----------------|
-| Host | `HostPage.tsx` | Car keys handover / car sharing |
-| About | `AboutPage.tsx` | Team / community / Botswana cityscape |
-| Pricing | `PricingPage.tsx` | Cars lineup / value / pricing |
-| Safety | `SafetyPage.tsx` | Seatbelt / shield / safe driving |
-| Careers | `CareersPage.tsx` | Office / teamwork / growth |
-| Press | `PressPage.tsx` | News / media / press conference |
-| Rent2Buy | `Rent2BuyPage.tsx` | Car purchase / keys / ownership |
+### File: `index.html`
 
-The markdown will follow the project's existing JIRA-style format (matching files like `blog-editor-enhancement-jira-2025-10-30.md`) with:
-- Epic overview and acceptance criteria
-- Individual tickets per page with Unsplash image URLs
-- Implementation steps (add `backgroundImage` prop to each `<PageHero>`)
-- Testing checklist
+**Location**: Line 12 (after the existing Google site verification tag on line 11)
 
-Each ticket will include a recommended Unsplash URL using their source API format (`https://images.unsplash.com/photo-XXXXX?w=1920&q=80`) for high-quality, free-to-use images themed to each page's content.
+**Add this line**:
+```html
+<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
+```
 
-### Files
+**Result**: The verification meta tags section will look like:
+```html
+<meta name="google-site-verification" content="RyDwY9e65CLZGlnUhgni_zZnf1Bxw0-w3wHIveGR_N4" />
+<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
+```
 
-| File | Action |
+## Summary
+
+| File | Change |
 |------|--------|
-| `public/20260308_MobiRides_PageHero_Banner_Images.md` | Create — full implementation tracker |
+| `index.html` | Add 1 line - Facebook domain verification meta tag |
+
+## Post-Deployment Steps
+
+After publishing:
+1. Return to Facebook Business Suite / Meta Business Settings
+2. Click "Verify" to confirm the domain verification
+3. Facebook will crawl the page and detect the meta tag
 
