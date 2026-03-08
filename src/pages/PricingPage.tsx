@@ -13,6 +13,7 @@ import {
   Check,
   Sparkles
 } from 'lucide-react';
+import pricingHeroBg from '../assets/banners/pricing-hero.jpg';
 
 const PricingPage: React.FC = () => {
   const pricingTiers = [
