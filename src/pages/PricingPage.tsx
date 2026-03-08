@@ -111,7 +111,7 @@ const PricingPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
             <Sparkles className="h-6 w-6 text-primary-foreground" />
             <p className="text-lg font-semibold text-primary-foreground">
-              Use code <span className="bg-primary-foreground/20 px-2 py-1 rounded">MOBIRIDES100</span> for P100 off your first booking!
+              Use code <span className="bg-primary-foreground/20 px-2 py-1 rounded">FIRST100</span> for P100 off your first booking!
             </p>
             <Sparkles className="h-6 w-6 text-primary-foreground hidden sm:block" />
           </div>

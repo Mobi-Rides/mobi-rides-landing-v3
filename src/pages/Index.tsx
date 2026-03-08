@@ -26,7 +26,7 @@ const Index = () => {
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Access premium car rentals across Botswana. Safe, seamless, and sophisticated mobility solutions for professionals, entrepreneurs, and business travelers.');
+      metaDescription.setAttribute('content', 'Botswana\'s fastest-growing car sharing platform — 154+ registered users, 56+ verified vehicles, P247K+ revenue generated. Use code FIRST100 for P100 off your first booking.');
     }
     
     // Add canonical URL
@@ -258,6 +258,16 @@ const Index = () => {
         <meta name="twitter:image:alt" content={siteConfig.seo.defaultDescription} />
       </Helmet>
       <Header />
+      
+      {/* Sticky Promo Banner */}
+      <div className="sticky top-0 z-40 bg-primary text-primary-foreground py-2 px-4 text-center text-sm font-medium shadow-md">
+        <p>
+          🚗 Use code <span className="font-bold bg-primary-foreground/20 px-1.5 py-0.5 rounded mx-1">FIRST100</span> for P100 off your first booking!{' '}
+          <a href="https://app.mobirides.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-primary-foreground/80 transition-colors">
+            Book Now →
+          </a>
+        </p>
+      </div>
       
       <main className="flex-1">
         <HeroSection />
