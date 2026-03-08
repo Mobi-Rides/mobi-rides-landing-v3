@@ -1,37 +1,23 @@
 
 
-# Add Facebook Domain Verification Meta Tag
+## Problem
 
-## Overview
-Add the Facebook domain verification meta tag to the `<head>` section of `index.html` to verify domain ownership with Facebook.
+On mobile, the hero section uses `min-h-screen` with generous padding and spacing, causing the search widget to be cut off or require scrolling. The text block and search card have large margins, padding, and font sizes that push the widget below the fold.
 
-## Implementation
+## Plan — Mobile-only spacing reductions
 
-### File: `index.html`
+All changes scoped to mobile only (default / below `sm:` breakpoint), preserving desktop/tablet layout.
 
-**Location**: Line 12 (after the existing Google site verification tag on line 11)
+**File: `src/components/sections/HeroSection.tsx`**
 
-**Add this line**:
-```html
-<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
-```
+1. **Reduce top padding**: `pt-36` → `pt-28` (keep `sm:pt-20`)
+2. **Reduce heading bottom margin & size**: `text-4xl` → `text-3xl`, `mb-6` → `mb-3 sm:mb-6`
+3. **Reduce tagline margin**: `mb-8` → `mb-4 sm:mb-8` on the tagline `<p>`
+4. **Remove or shrink "Unlock cars" badge block**: `mb-8` → `mb-4 sm:mb-8`
+5. **Compact search card padding**: `p-8` → `p-5 sm:p-8`
+6. **Reduce inner spacing**: `space-y-6` → `space-y-4 sm:space-y-6`
+7. **Reduce input heights**: `py-4` → `py-3 sm:py-4` and `text-lg` → `text-base sm:text-lg` on all three inputs
+8. **Reduce search button padding**: `py-4` → `py-3 sm:py-4`, `text-xl` → `text-lg sm:text-xl`
 
-**Result**: The verification meta tags section will look like:
-```html
-<meta name="google-site-verification" content="RyDwY9e65CLZGlnUhgni_zZnf1Bxw0-w3wHIveGR_N4" />
-<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
-```
-
-## Summary
-
-| File | Change |
-|------|--------|
-| `index.html` | Add 1 line - Facebook domain verification meta tag |
-
-## Post-Deployment Steps
-
-After publishing:
-1. Return to Facebook Business Suite / Meta Business Settings
-2. Click "Verify" to confirm the domain verification
-3. Facebook will crawl the page and detect the meta tag
+These cumulative reductions (~100-120px saved) should keep the entire search widget visible on mobile without scrolling.
 
