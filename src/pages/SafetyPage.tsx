@@ -24,6 +24,7 @@ import {
   Smartphone
 } from 'lucide-react';
 import faqData from '../data/faq-data.json';
+import safetyHeroBg from '../assets/banners/safety-hero.jpg';
 
 const SafetyPage: React.FC = () => {
   const safetyFeatures = [
