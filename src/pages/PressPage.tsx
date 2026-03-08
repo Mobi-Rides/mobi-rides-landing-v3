@@ -23,6 +23,7 @@ import {
   Mic
 } from 'lucide-react';
 import pressReleasesData from '../data/press-releases.json';
+import pressHeroBg from '../assets/banners/press-hero.jpg';
 
 const PressPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -174,9 +175,10 @@ const PressPage: React.FC = () => {
         title="Press & Media Center"
         subtitle="Latest News & Resources"
         description="Stay up to date with MobiRides news, announcements, and access our comprehensive media kit for journalists and media professionals."
-        variant="gradient"
+        variant="default"
         ctaText="Download Media Kit"
         ctaLink="#media-kit"
+        backgroundImage={pressHeroBg}
       />
 
       {/* Press Stats */}

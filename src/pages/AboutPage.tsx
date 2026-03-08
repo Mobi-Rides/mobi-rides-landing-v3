@@ -10,6 +10,7 @@ import { Badge } from '../components/ui/badge';
 import { Users, Target, Award, Globe, Heart, Shield } from 'lucide-react';
 import teamMembersData from '../data/team-members.json';
 import faqData from '../data/faq-data.json';
+import aboutHeroBg from '../assets/banners/about-hero.jpg';
 const AboutPage: React.FC = () => {
   const companyValues = [{
     icon: Shield,
@@ -56,7 +57,7 @@ const AboutPage: React.FC = () => {
     // Handle form submission here
   };
   return <PageLayout title="About MobiRides - Connecting Communities Through Shared Mobility" description="Learn about MobiRides' mission to revolutionize transportation through community-driven car sharing. Discover our story, values, and the team behind the platform." canonical={buildCanonicalUrl('/about')}>
-      <PageHero title="Revolutionizing Transportation" subtitle="Through Community Connection" description="MobiRides is more than just a car sharing platform. We're building a community-driven ecosystem that makes transportation accessible, affordable, and sustainable for everyone." variant="default" ctaText="Join Our Community" ctaLink="/signup" />
+      <PageHero title="Revolutionizing Transportation" subtitle="Through Community Connection" description="MobiRides is more than just a car sharing platform. We're building a community-driven ecosystem that makes transportation accessible, affordable, and sustainable for everyone." variant="default" ctaText="Join Our Community" ctaLink="/signup" backgroundImage={aboutHeroBg} />
 
       {/* Company Story Section */}
       <SectionWrapper className="py-16">

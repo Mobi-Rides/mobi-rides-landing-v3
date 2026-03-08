@@ -29,6 +29,7 @@ import {
   FastForward
 } from 'lucide-react';
 import pricingData from '@/data/pricing.json';
+import rent2buyHeroBg from '../assets/banners/rent2buy-hero.jpg';
 
 interface RentalPeriod {
   months: number;
@@ -151,6 +152,7 @@ const Rent2BuyPage: React.FC = () => {
       <PageHero
         title="Own Your Vehicle, Build Your Wealth"
         description="Rent-to-Buy: Convert your rental payments into ownership equity."
+        backgroundImage={rent2buyHeroBg}
       />
 
       {/* How It Works Section */}
