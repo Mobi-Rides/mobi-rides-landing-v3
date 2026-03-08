@@ -23,10 +23,36 @@ const Header = () => {
     { name: 'Blog', href: '/blog' },
   ];
 
+  const promoText = '🚗 Use code FIRST100 for P100 off your first booking! Book Now →';
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-transparent'
     }`}>
+      {/* Promo Banner */}
+      <div className="bg-primary text-primary-foreground py-2.5 lg:py-3 px-4 shadow-md">
+        {/* Desktop: static centered */}
+        <div className="hidden lg:block text-center text-sm font-medium">
+          <p>
+            🚗 Use code <span className="font-bold bg-primary-foreground/20 px-1.5 py-0.5 rounded mx-1">FIRST100</span> for P100 off your first booking!{' '}
+            <a href="https://app.mobirides.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-primary-foreground/80 transition-colors">
+              Book Now →
+            </a>
+          </p>
+        </div>
+        {/* Mobile: marquee scrolling */}
+        <div className="lg:hidden overflow-hidden">
+          <a
+            href="https://app.mobirides.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block whitespace-nowrap animate-marquee text-sm font-medium hover:text-primary-foreground/80 transition-colors"
+          >
+            {promoText}
+          </a>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
