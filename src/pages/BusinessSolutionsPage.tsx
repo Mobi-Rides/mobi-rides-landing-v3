@@ -526,7 +526,7 @@ const BusinessSolutionsPage: React.FC = () => {
                   </div>
                   <div className="flex items-center text-blue-100">
                     <Mail className="w-5 h-5 mr-3" />
-                    <span>partnerships@mobirides.com</span>
+                    <span>partnerships@mobirides.africa</span>
                   </div>
                 </div>
               </div>

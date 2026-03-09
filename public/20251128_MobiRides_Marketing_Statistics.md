@@ -377,4 +377,4 @@ Financial inclusion through mobility 🇧🇼
 **Last Updated:** 28 November 2025  
 **Next Review:** 15 December 2025 (post-funding round)  
 
-For questions or updates, contact: team@mobirides.com
+For questions or updates, contact: team@mobirides.africa

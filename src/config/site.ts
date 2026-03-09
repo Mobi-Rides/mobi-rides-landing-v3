@@ -24,13 +24,13 @@ export const siteConfig = {
   // Department Emails
   departments: {
     support: 'hello@mobirides.africa',
-    safety: 'safety@mobirides.com',
-    partnerships: 'partnerships@mobirides.com',
-    media: 'media@mobirides.com',
-    careers: 'careers@mobirides.com',
-    gaborone: 'gaborone@mobirides.com',
-    francistown: 'francistown@mobirides.com',
-    maun: 'maun@mobirides.com',
+    safety: 'safety@mobirides.africa',
+    partnerships: 'partnerships@mobirides.africa',
+    media: 'media@mobirides.africa',
+    careers: 'careers@mobirides.africa',
+    gaborone: 'gaborone@mobirides.africa',
+    francistown: 'francistown@mobirides.africa',
+    maun: 'maun@mobirides.africa',
   },
   
   // Social Media Links

@@ -41,7 +41,7 @@
         "lng": 25.9231
       },
       "phone": "+267 74300747",
-      "email": "gaborone@mobirides.com",
+      "email": "gaborone@mobirides.africa",
       "services": ["Customer Support", "Fleet Management", "Corporate Sales"],
       "businessHours": {
         "monday": "08:00 - 17:00",
@@ -69,7 +69,7 @@
         "lng": 27.5084
       },
       "phone": "+267 241 2345",
-      "email": "francistown@mobirides.com",
+      "email": "francistown@mobirides.africa",
       "services": ["Customer Support", "Vehicle Inspection"],
       "businessHours": {
         "monday": "08:00 - 17:00",
@@ -97,7 +97,7 @@
         "lng": 23.4241
       },
       "phone": "+267 686 1234",
-      "email": "maun@mobirides.com",
+      "email": "maun@mobirides.africa",
       "services": ["Customer Support", "Tourism Partnerships"],
       "businessHours": {
         "monday": "08:00 - 17:00",
@@ -165,7 +165,7 @@
     {
       "id": "safety",
       "name": "Safety & Security",
-      "email": "safety@mobirides.com",
+      "email": "safety@mobirides.africa",
       "phone": "+267 74300748",
       "description": "Safety incidents, security concerns, and emergency response",
       "icon": "Building"
@@ -173,7 +173,7 @@
     {
       "id": "partnerships",
       "name": "Business Partnerships",
-      "email": "partnerships@mobirides.com",
+      "email": "partnerships@mobirides.africa",
       "phone": "+267 74300749",
       "description": "Corporate partnerships, fleet solutions, and business inquiries",
       "icon": "Globe"
@@ -181,7 +181,7 @@
     {
       "id": "media",
       "name": "Media & Press",
-      "email": "media@mobirides.com",
+      "email": "media@mobirides.africa",
       "phone": "+267 74300750",
       "description": "Press inquiries, media relations, and public communications",
       "icon": "Users"
@@ -189,7 +189,7 @@
     {
       "id": "careers",
       "name": "Human Resources",
-      "email": "careers@mobirides.com",
+      "email": "careers@mobirides.africa",
       "phone": "+267 74300751",
       "description": "Job applications, career opportunities, and employment inquiries",
       "icon": "Building"

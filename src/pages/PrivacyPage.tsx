@@ -237,7 +237,7 @@ const PrivacyPage: React.FC = () => {
                   If you have any questions about this Privacy Policy or how we handle your personal information, please contact us:
                 </p>
                 <div className="space-y-2 text-sm">
-                  <p><strong>Email:</strong> privacy@mobirides.com</p>
+                  <p><strong>Email:</strong> privacy@mobirides.africa</p>
                   <p><strong>Address:</strong> Plot 16530, Sehithwa Rd, Gaborone West - Phase 1, Gaborone, Botswana</p>
                   <p><strong>Phone:</strong> +267 74300747</p>
                 </div>
