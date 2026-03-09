@@ -1,37 +1,29 @@
 
 
-# Add Facebook Domain Verification Meta Tag
+## Migrate All @mobirides.com Emails to @mobirides.africa (Excluding Auth/Admin/Edge Functions)
 
-## Overview
-Add the Facebook domain verification meta tag to the `<head>` section of `index.html` to verify domain ownership with Facebook.
+### Scope
 
-## Implementation
+Replace `@mobirides.com` → `@mobirides.africa` in all files **except**:
+- `src/pages/AdminLoginPage.tsx` (placeholder text)
+- `src/contexts/AuthContext.tsx` (admin domain check)
+- `supabase/functions/import-blog-posts/index.ts` (edge function author emails)
 
-### File: `index.html`
+### Files to Update
 
-**Location**: Line 12 (after the existing Google site verification tag on line 11)
+1. **`src/config/site.ts`** — department emails (safety, partnerships, media, careers, gaborone, francistown, maun)
+2. **`src/data/contact-info.json`** — office emails, department emails
+3. **`src/data/legal-content.json`** — privacy@, legal@, dpo@
+4. **`src/data/press-releases.json`** — press@
+5. **`src/data/team-members.json`** — individual team member emails
+6. **`src/data/faq.json`** — drivers@
+7. **`src/pages/TermsPage.tsx`** — legal@
+8. **`src/pages/PrivacyPage.tsx`** — privacy@
+9. **`src/pages/BusinessSolutionsPage.tsx`** — partnerships@
+10. **`src/pages/HostProtectionPage.tsx`** — claims@
+11. **Public markdown docs** (`public/*.md`) — any @mobirides.com references
 
-**Add this line**:
-```html
-<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
-```
+### Approach
 
-**Result**: The verification meta tags section will look like:
-```html
-<meta name="google-site-verification" content="RyDwY9e65CLZGlnUhgni_zZnf1Bxw0-w3wHIveGR_N4" />
-<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
-```
-
-## Summary
-
-| File | Change |
-|------|--------|
-| `index.html` | Add 1 line - Facebook domain verification meta tag |
-
-## Post-Deployment Steps
-
-After publishing:
-1. Return to Facebook Business Suite / Meta Business Settings
-2. Click "Verify" to confirm the domain verification
-3. Facebook will crawl the page and detect the meta tag
+Simple string replacement `@mobirides.com` → `@mobirides.africa` in each file listed above.
 
