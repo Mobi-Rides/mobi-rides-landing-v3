@@ -34,6 +34,7 @@ import HostCommunityPage from "./pages/HostCommunityPage";
 import TravelGuidesPage from "./pages/TravelGuidesPage";
 import BusinessSolutionsPage from "./pages/BusinessSolutionsPage";
 import ApiDocsPage from "./pages/ApiDocsPage";
+import VIPServicesPage from "./pages/VIPServicesPage";
 import AdminLoginPage from "./pages/AdminLoginPage";
 import AdminBlogPage from "./pages/AdminBlogPage";
 import AdminBlogEditPage from "./pages/AdminBlogEditPage";
@@ -98,6 +99,7 @@ const App = () => (
               <Route path="/travel-guides" element={<TravelGuidesPage />} />
               <Route path="/business-solutions" element={<BusinessSolutionsPage />} />
               <Route path="/api-docs" element={<ApiDocsPage />} />
+              <Route path="/vip" element={<VIPServicesPage />} />
               
               {/* Admin Routes */}
               <Route path="/admin/login" element={<AdminLoginPage />} />

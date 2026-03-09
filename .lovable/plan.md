@@ -1,54 +1,37 @@
 
 
-## New VIP & Executive Services Page
+# Add Facebook Domain Verification Meta Tag
 
-### Overview
-Create a dedicated `/vip` page showcasing MobiRides' premium chauffeur, shuttle, and executive transport services. This page positions MobiRides as a trusted provider for diplomats, corporate executives, and high-profile events — leveraging real social proof (Austrian & Ireland Ambassadors, Techstars Programme managers).
+## Overview
+Add the Facebook domain verification meta tag to the `<head>` section of `index.html` to verify domain ownership with Facebook.
 
-### Page Structure
+## Implementation
 
-**1. Hero Section** — Full-width with premium dark overlay, gold/purple accent
-- Headline: "Executive & VIP Transport Services"
-- Subtitle: "Trusted by ambassadors, global programme leaders, and Botswana's most discerning travellers"
-- CTA: "Request a Quote" (scrolls to contact form)
+### File: `index.html`
 
-**2. Services Grid** — 6 service cards with icons
-- **Airport Transfers** — Meet & greet, flight tracking, luxury vehicles
-- **Executive Chauffeur** — Professional drivers, corporate accounts, hourly/daily hire
-- **VIP Shuttle Service** — Group transport, multi-stop routes, branded vehicles
-- **Events & Conferences** — Delegate transport, logistics coordination, on-site management
-- **Safari & Tour Drives** — Guided safari transfers, scenic tours, 4x4 vehicles
-- **Diplomatic & Protocol Transport** — Security-cleared drivers, protocol-trained, confidential service
+**Location**: Line 12 (after the existing Google site verification tag on line 11)
 
-**3. Social Proof / Trust Section**
-- Notable clients banner: "Trusted by the Austrian Embassy, Irish Embassy, Techstars Botswana, and leading corporates"
-- Testimonial quotes (can start with placeholder quotes attributed to roles, e.g. "Programme Director, Techstars")
+**Add this line**:
+```html
+<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
+```
 
-**4. Why Choose MobiRides VIP** — 4 value props
-- Professional, vetted chauffeurs
-- Premium & luxury vehicle fleet
-- 24/7 availability & real-time coordination
-- Discreet, protocol-aware service
+**Result**: The verification meta tags section will look like:
+```html
+<meta name="google-site-verification" content="RyDwY9e65CLZGlnUhgni_zZnf1Bxw0-w3wHIveGR_N4" />
+<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
+```
 
-**5. Fleet Showcase** — Visual grid of vehicle categories (luxury sedan, SUV, safari 4x4, shuttle van) using existing car images
+## Summary
 
-**6. Contact / Quote Request Form**
-- Fields: Name, Email, Phone, Service Type (dropdown), Event Date, Number of Guests, Special Requirements
-- Submit sends to existing contact form pattern
-
-### Technical Plan
-
-| Task | Detail |
+| File | Change |
 |------|--------|
-| New file | `src/pages/VIPServicesPage.tsx` — follows `BusinessSolutionsPage` pattern with PageLayout, sections, form |
-| Route | Add `/vip` route in `App.tsx` |
-| Navigation | Add "VIP Services" to header nav array |
-| Footer | Add link under appropriate footer column |
-| Assets | Use existing car/professional images from `src/assets/` |
-| No new dependencies | Uses existing components: PageLayout, Button, Card, Input, Textarea, Select |
+| `index.html` | Add 1 line - Facebook domain verification meta tag |
 
-### Estimated Scope
-- 1 new page file (~400-500 lines)
-- 2 minor edits (App.tsx route, Header.tsx nav link)
-- 1 footer edit
+## Post-Deployment Steps
+
+After publishing:
+1. Return to Facebook Business Suite / Meta Business Settings
+2. Click "Verify" to confirm the domain verification
+3. Facebook will crawl the page and detect the meta tag
 

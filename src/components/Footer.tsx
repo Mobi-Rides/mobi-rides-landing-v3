@@ -29,6 +29,7 @@ const Footer = () => {
     Resources: [
       { name: 'Blog', href: '/blog' },
       { name: 'Travel Guides', href: '/travel-guides' },
+      { name: 'VIP Services', href: '/vip' },
       { name: 'Business Solutions', href: '/business-solutions' },
       { name: 'API Documentation', href: '/api-docs' }
     ]
