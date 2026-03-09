@@ -669,7 +669,7 @@
 4. **Close by Dec 15:** [Wire instructions + legal docs]
 
 **Contact:**
-- **Email:** team@mobirides.com
+- **Email:** team@mobirides.africa
 - **Phone:** [Phone number]
 - **Website:** www.mobirides.com
 
