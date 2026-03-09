@@ -87,12 +87,6 @@ const TestimonialsSection = () => {
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <Card className="card-elevated group hover:shadow-strong transition-all duration-300 relative h-full">
                     <CardContent className="p-6 flex flex-col h-full">
-                      {/* Quote Icon */}
-                      <div className="absolute -top-4 left-6">
-                        <div className="w-8 h-8 bg-gradient-hero rounded-full flex items-center justify-center">
-                          <Quote className="w-4 h-4 text-white" />
-                        </div>
-                      </div>
 
                       {/* Rating */}
                       <div className="flex items-center mb-4 pt-2">
