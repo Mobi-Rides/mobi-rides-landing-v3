@@ -1,26 +1,37 @@
 
 
-## Fix: Desktop Navigation Shows Hamburger Menu
+# Add Facebook Domain Verification Meta Tag
 
-### Problem
-The Header uses `lg:` (1024px) as the breakpoint for showing the full navigation. This means on screens between 768px–1023px (tablets and smaller desktops), users see a hamburger menu instead of the full nav. More importantly, your `App.css` has `#root { max-width: 1280px }` which constrains the layout, but the real issue is the `lg:` breakpoint is too high for a nav with only 5 links + 1 button.
+## Overview
+Add the Facebook domain verification meta tag to the `<head>` section of `index.html` to verify domain ownership with Facebook.
 
-### Fix
-Change the desktop nav breakpoint from `lg:` (1024px) to `md:` (768px) across the Header component. The nav has only 5 links + a CTA button, which fits comfortably at 768px+.
+## Implementation
 
-### Changes in `src/components/Header.tsx`
+### File: `index.html`
 
-Replace all `lg:` breakpoint references with `md:`:
+**Location**: Line 12 (after the existing Google site verification tag on line 11)
 
-- Line 34: Promo banner `lg:py-3` → `md:py-3`
-- Line 36: Desktop promo `hidden lg:block` → `hidden md:block`
-- Line 43: Mobile promo `lg:hidden` → `md:hidden`
-- Line 57: Logo height `lg:h-16` → `md:h-16`
-- Line 64: Nav container height `lg:h-20` → `md:h-20`
-- Line 73: Desktop nav `hidden lg:flex` → `hidden md:flex`
-- Line 90: Desktop actions `hidden lg:flex` → `hidden md:flex`
-- Line 108: Mobile menu button `lg:hidden` → `md:hidden`
-- Line 126: Mobile nav panel `lg:hidden` → `md:hidden`
+**Add this line**:
+```html
+<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
+```
 
-Also update `PageLayout.tsx` line 82: `pt-[136px] sm:pt-[124px]` — verify padding still works at `md` breakpoint.
+**Result**: The verification meta tags section will look like:
+```html
+<meta name="google-site-verification" content="RyDwY9e65CLZGlnUhgni_zZnf1Bxw0-w3wHIveGR_N4" />
+<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
+```
+
+## Summary
+
+| File | Change |
+|------|--------|
+| `index.html` | Add 1 line - Facebook domain verification meta tag |
+
+## Post-Deployment Steps
+
+After publishing:
+1. Return to Facebook Business Suite / Meta Business Settings
+2. Click "Verify" to confirm the domain verification
+3. Facebook will crawl the page and detect the meta tag
 
