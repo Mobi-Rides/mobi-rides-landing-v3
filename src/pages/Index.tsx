@@ -26,7 +26,7 @@ const Index = () => {
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Access premium car rentals across Botswana. Safe, seamless, and sophisticated mobility solutions for professionals, entrepreneurs, and business travelers.');
+      metaDescription.setAttribute('content', 'Botswana\'s fastest-growing car sharing platform — 154+ registered users, 56+ verified vehicles, P247K+ revenue generated. Use code FIRST100 for P100 off your first booking.');
     }
     
     // Add canonical URL
@@ -258,6 +258,7 @@ const Index = () => {
         <meta name="twitter:image:alt" content={siteConfig.seo.defaultDescription} />
       </Helmet>
       <Header />
+      
       
       <main className="flex-1">
         <HeroSection />

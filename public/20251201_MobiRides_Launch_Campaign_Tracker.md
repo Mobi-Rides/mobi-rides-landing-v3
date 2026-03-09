@@ -525,7 +525,7 @@ List your car - link in bio
 
 **Document Owner:** Loago Phiri (Campaign Lead)
 **Review Frequency:** Daily standups (9am) + Weekly check-ins (Sundays 10am)  
-**Contact:** loago@mobirides.com | WhatsApp: [number]
+**Contact:** loago@mobirides.africa | WhatsApp: [number]
 
 ---
 

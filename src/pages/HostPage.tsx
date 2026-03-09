@@ -25,6 +25,7 @@ import {
   MapPin
 } from 'lucide-react';
 import pricingData from '../data/pricing.json';
+import hostHeroBg from '../assets/banners/host-hero.jpg';
 
 interface EarningsCalculation {
   dailyEarnings: number;
@@ -173,7 +174,7 @@ const HostPage: React.FC = () => {
         subtitle="Join thousands of car owners earning extra income by sharing their vehicles with trusted drivers in your community."
         ctaText="Start Hosting Today"
         ctaLink="https://app.mobirides.com"
-        backgroundImage="/images/host-hero-bg.jpg"
+        backgroundImage={hostHeroBg}
       />
 
       {/* Earnings Calculator Section */}

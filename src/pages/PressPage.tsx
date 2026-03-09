@@ -23,6 +23,7 @@ import {
   Mic
 } from 'lucide-react';
 import pressReleasesData from '../data/press-releases.json';
+import pressHeroBg from '../assets/banners/press-hero.jpg';
 
 const PressPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -32,21 +33,21 @@ const PressPage: React.FC = () => {
     {
       name: 'Sarah Johnson',
       title: 'Head of Communications',
-      email: 'press@mobirides.com',
+      email: 'press@mobirides.africa',
       phone: '+267 74300750',
       specialties: ['Company News', 'Product Launches', 'Partnerships']
     },
     {
       name: 'Michael Chen',
       title: 'PR Manager',
-      email: 'media@mobirides.com', 
+      email: 'media@mobirides.africa', 
       phone: '+267 74300750',
       specialties: ['Industry Analysis', 'Executive Interviews', 'Market Trends']
     },
     {
       name: 'Emily Rodriguez',
       title: 'Communications Specialist',
-      email: 'news@mobirides.com',
+      email: 'news@mobirides.africa',
       phone: '+267 74300750',
       specialties: ['Community Stories', 'Safety Updates', 'Local News']
     }
@@ -154,7 +155,7 @@ const PressPage: React.FC = () => {
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
-      company: 'bg-blue-100 text-blue-800',
+      company: 'bg-primary/10 text-primary',
       product: 'bg-green-100 text-green-800',
       partnership: 'bg-purple-100 text-purple-800',
       funding: 'bg-yellow-100 text-yellow-800',
@@ -174,9 +175,10 @@ const PressPage: React.FC = () => {
         title="Press & Media Center"
         subtitle="Latest News & Resources"
         description="Stay up to date with MobiRides news, announcements, and access our comprehensive media kit for journalists and media professionals."
-        variant="gradient"
+        variant="default"
         ctaText="Download Media Kit"
         ctaLink="#media-kit"
+        backgroundImage={pressHeroBg}
       />
 
       {/* Press Stats */}
@@ -195,7 +197,7 @@ const PressPage: React.FC = () => {
             {pressStats.map((stat, index) => (
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardContent className="p-0">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                  <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
                   <div className="text-sm font-medium text-gray-900 mb-1">{stat.label}</div>
                   <div className="text-xs text-gray-600">{stat.description}</div>
                 </CardContent>
@@ -344,8 +346,8 @@ const PressPage: React.FC = () => {
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                 <CardContent className="p-0">
                   <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-blue-600" />
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <User className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
                       {contact.name}
@@ -356,13 +358,13 @@ const PressPage: React.FC = () => {
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center text-sm text-gray-600">
                       <Mail className="h-4 w-4 mr-2 text-gray-400" />
-                      <a href={`mailto:${contact.email}`} className="hover:text-blue-600">
+                      <a href={`mailto:${contact.email}`} className="hover:text-primary">
                         {contact.email}
                       </a>
                     </div>
                     <div className="flex items-center text-sm text-gray-600">
                       <Phone className="h-4 w-4 mr-2 text-gray-400" />
-                      <a href={`tel:${contact.phone}`} className="hover:text-blue-600">
+                      <a href={`tel:${contact.phone}`} className="hover:text-primary">
                         {contact.phone}
                       </a>
                     </div>
@@ -402,7 +404,7 @@ const PressPage: React.FC = () => {
       </SectionWrapper>
 
       {/* Newsletter Signup */}
-      <SectionWrapper className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+      <SectionWrapper className="py-16 bg-gradient-to-r from-primary to-primary-light">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Stay Updated
@@ -416,7 +418,7 @@ const PressPage: React.FC = () => {
               placeholder="Enter your email"
               className="bg-white text-gray-900 border-white"
             />
-            <Button variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
+            <Button variant="secondary" className="bg-white text-primary hover:bg-gray-100">
               Subscribe
             </Button>
           </div>

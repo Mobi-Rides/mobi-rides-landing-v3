@@ -192,7 +192,7 @@ const SupportTicketForm: React.FC<SupportTicketFormProps> = ({ onSubmit, classNa
             id="name"
             value={formData.name}
             onChange={(e) => handleInputChange('name', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${
               errors.name ? 'border-red-300' : 'border-gray-300'
             }`}
             placeholder="Enter your full name"
@@ -214,7 +214,7 @@ const SupportTicketForm: React.FC<SupportTicketFormProps> = ({ onSubmit, classNa
             id="email"
             value={formData.email}
             onChange={(e) => handleInputChange('email', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${
               errors.email ? 'border-red-300' : 'border-gray-300'
             }`}
             placeholder="Enter your email address"
@@ -238,7 +238,7 @@ const SupportTicketForm: React.FC<SupportTicketFormProps> = ({ onSubmit, classNa
             id="phone"
             value={formData.phone}
             onChange={(e) => handleInputChange('phone', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
             placeholder="Enter your phone number"
           />
         </div>
@@ -251,7 +251,7 @@ const SupportTicketForm: React.FC<SupportTicketFormProps> = ({ onSubmit, classNa
             id="category"
             value={formData.category}
             onChange={(e) => handleInputChange('category', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${
               errors.category ? 'border-red-300' : 'border-gray-300'
             }`}
           >
@@ -282,7 +282,7 @@ const SupportTicketForm: React.FC<SupportTicketFormProps> = ({ onSubmit, classNa
               key={priority.value}
               className={`flex items-center justify-center p-3 border rounded-lg cursor-pointer transition-colors ${
                 formData.priority === priority.value
-                  ? 'border-blue-500 bg-blue-50'
+                  ? 'border-primary bg-primary/5'
                   : 'border-gray-300 hover:border-gray-400'
               }`}
             >
@@ -312,7 +312,7 @@ const SupportTicketForm: React.FC<SupportTicketFormProps> = ({ onSubmit, classNa
           id="subject"
           value={formData.subject}
           onChange={(e) => handleInputChange('subject', e.target.value)}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${
             errors.subject ? 'border-red-300' : 'border-gray-300'
           }`}
           placeholder="Brief description of your issue"
@@ -335,7 +335,7 @@ const SupportTicketForm: React.FC<SupportTicketFormProps> = ({ onSubmit, classNa
           rows={6}
           value={formData.description}
           onChange={(e) => handleInputChange('description', e.target.value)}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-vertical ${
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-vertical ${
             errors.description ? 'border-red-300' : 'border-gray-300'
           }`}
           placeholder="Please provide detailed information about your issue, including steps to reproduce if applicable..."
@@ -377,7 +377,7 @@ const SupportTicketForm: React.FC<SupportTicketFormProps> = ({ onSubmit, classNa
           />
           <label
             htmlFor="file-upload"
-            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 cursor-pointer transition-colors"
+            className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 cursor-pointer transition-colors"
           >
             Choose Files
           </label>
@@ -414,7 +414,7 @@ const SupportTicketForm: React.FC<SupportTicketFormProps> = ({ onSubmit, classNa
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {isSubmitting ? (
             <>
@@ -433,11 +433,11 @@ const SupportTicketForm: React.FC<SupportTicketFormProps> = ({ onSubmit, classNa
       {/* Privacy Notice */}
       <div className="text-xs text-gray-500 text-center">
         By submitting this form, you agree to our{' '}
-        <a href="/privacy" className="text-blue-600 hover:underline">
+        <a href="/privacy" className="text-primary hover:underline">
           Privacy Policy
         </a>{' '}
         and{' '}
-        <a href="/terms" className="text-blue-600 hover:underline">
+        <a href="/terms" className="text-primary hover:underline">
           Terms of Service
         </a>
         .

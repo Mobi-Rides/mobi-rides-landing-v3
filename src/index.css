@@ -43,6 +43,8 @@ All colors MUST be HSL. Typography: Poppins family.
     --border: 220 13% 91%;
     --input: 220 13% 91%;
     --ring: 281 100% 59%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
     /* Professional Grays */
     --gray-50: 220 13% 98%;

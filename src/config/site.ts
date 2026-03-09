@@ -15,7 +15,7 @@ export const siteConfig = {
   
   // Contact Information
   contact: {
-    email: 'hello@mobirides.com',
+    email: 'hello@mobirides.africa',
     phone: '+267 74300747',
     emergency: '+267 911 MOBI (6624)',
     whatsapp: '+267 74300747',
@@ -23,14 +23,14 @@ export const siteConfig = {
   
   // Department Emails
   departments: {
-    support: 'hello@mobirides.com',
-    safety: 'safety@mobirides.com',
-    partnerships: 'partnerships@mobirides.com',
-    media: 'media@mobirides.com',
-    careers: 'careers@mobirides.com',
-    gaborone: 'gaborone@mobirides.com',
-    francistown: 'francistown@mobirides.com',
-    maun: 'maun@mobirides.com',
+    support: 'hello@mobirides.africa',
+    safety: 'safety@mobirides.africa',
+    partnerships: 'partnerships@mobirides.africa',
+    media: 'media@mobirides.africa',
+    careers: 'careers@mobirides.africa',
+    gaborone: 'gaborone@mobirides.africa',
+    francistown: 'francistown@mobirides.africa',
+    maun: 'maun@mobirides.africa',
   },
   
   // Social Media Links

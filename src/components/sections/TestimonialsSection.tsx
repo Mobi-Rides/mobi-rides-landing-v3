@@ -16,48 +16,42 @@ const TestimonialsSection = () => {
       role: "Mining Operations Manager",
       company: "Debswana Diamond Company",
       content: "MobiRides has transformed how our team moves between sites. The reliability is unmatched, and the 4WD options are perfect for our operations.",
-      rating: 5,
-      avatar: "/api/placeholder/80/80"
+      rating: 5
     },
     {
       name: "Thandiwe Sebego", 
       role: "Tourism Director",
       company: "Okavango Safaris",
       content: "Our clients expect luxury, and MobiRides delivers. The premium vehicles and professional service make every safari transfer seamless.",
-      rating: 5,
-      avatar: "/api/placeholder/80/80"
+      rating: 5
     },
     {
       name: "Motlalepula Tshosa",
       role: "Agricultural Entrepreneur", 
       company: "Botswana Beef Exports",
       content: "From farm to market, MobiRides provides reliable transport solutions. The bakkies are perfect for our agricultural operations across the country.",
-      rating: 5,
-      avatar: "/api/placeholder/80/80"
+      rating: 5
     },
     {
       name: "David Makgato",
       role: "Senior Consultant",
       company: "PwC Botswana",
       content: "As a consultant traveling between Gaborone and Francistown weekly, MobiRides gives me the flexibility and professionalism I need.",
-      rating: 5,
-      avatar: "/api/placeholder/80/80"
+      rating: 5
     },
     {
       name: "Lesego Ramotswana",
       role: "Creative Director",
       company: "Mindset Media",
       content: "The booking process is so smooth, and the variety of vehicles means I always find the perfect ride for client meetings across Botswana.",
-      rating: 5,
-      avatar: "/api/placeholder/80/80"
+      rating: 5
     },
     {
       name: "Bogosi Molotsi",
       role: "Regional Manager",
       company: "Orange Botswana",
       content: "MobiRides understands business needs. The transparent pricing and reliable service have made them our go-to for corporate transportation.",
-      rating: 5,
-      avatar: "/api/placeholder/80/80"
+      rating: 5
     }
   ];
 
@@ -87,12 +81,6 @@ const TestimonialsSection = () => {
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <Card className="card-elevated group hover:shadow-strong transition-all duration-300 relative h-full">
                     <CardContent className="p-6 flex flex-col h-full">
-                      {/* Quote Icon */}
-                      <div className="absolute -top-4 left-6">
-                        <div className="w-8 h-8 bg-gradient-hero rounded-full flex items-center justify-center">
-                          <Quote className="w-4 h-4 text-white" />
-                        </div>
-                      </div>
 
                       {/* Rating */}
                       <div className="flex items-center mb-4 pt-2">

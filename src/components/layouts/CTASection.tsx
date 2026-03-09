@@ -31,11 +31,11 @@ const CTASection: React.FC<CTASectionProps> = ({
   const getVariantClasses = () => {
     switch (variant) {
       case 'gradient':
-        return 'bg-gradient-to-r from-blue-600 to-purple-600 text-white';
+        return 'bg-gradient-to-r from-primary to-primary-light text-white';
       case 'minimal':
-        return 'bg-gray-50';
+        return 'bg-muted';
       default:
-        return 'bg-blue-600 text-white';
+        return 'bg-primary text-white';
     }
   };
 
@@ -43,21 +43,21 @@ const CTASection: React.FC<CTASectionProps> = ({
     if (variant === 'minimal') {
       switch (actionVariant) {
         case 'secondary':
-          return 'bg-gray-600 hover:bg-gray-700 text-white';
+          return 'bg-muted-foreground hover:bg-muted-foreground/90 text-white';
         case 'outline':
-          return 'border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white';
+          return 'border-primary text-primary hover:bg-primary hover:text-white';
         default:
-          return 'bg-blue-600 hover:bg-blue-700 text-white';
+          return 'bg-primary hover:bg-primary/90 text-white';
       }
     }
     
     switch (actionVariant) {
       case 'secondary':
-        return 'bg-white text-blue-600 hover:bg-gray-100';
+        return 'bg-white text-primary hover:bg-gray-100';
       case 'outline':
-        return 'border-white text-white hover:bg-white hover:text-blue-600';
+        return 'border-white text-white hover:bg-white hover:text-primary';
       default:
-        return 'bg-white text-blue-600 hover:bg-gray-100';
+        return 'bg-white text-primary hover:bg-gray-100';
     }
   };
 
@@ -86,7 +86,7 @@ const CTASection: React.FC<CTASectionProps> = ({
           
           {description && (
             <p className={`text-lg lg:text-xl mb-8 max-w-2xl mx-auto ${
-              variant === 'minimal' ? 'text-gray-600' : 'text-gray-200'
+              variant === 'minimal' ? 'text-muted-foreground' : 'text-gray-200'
             }`}>
               {description}
             </p>

@@ -1,10 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { DollarSign, Shield, Users, TrendingUp } from 'lucide-react';
+import hostEarningImage from '@/assets/host-earning-professional.jpg';
 
 const HostCTASection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-700">
+    <section className="py-20 bg-gradient-to-br from-primary to-primary-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -44,7 +45,7 @@ const HostCTASection = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                 <img 
-                  src="/api/placeholder/500/400"
+                  src={hostEarningImage}
                   alt="Professional in car earning with car sharing"
                   className="w-full h-full object-cover"
                 />
