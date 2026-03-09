@@ -80,7 +80,9 @@ const Header = () => {
                 className={`transition-colors ${
                   isScrolled 
                     ? 'text-foreground hover:text-primary font-medium' 
-                    : 'text-white hover:text-gray-200 font-semibold'
+                    : isHomePage
+                      ? 'text-white hover:text-gray-200 font-semibold'
+                      : 'text-primary hover:text-primary-dark font-semibold'
                 }`}
               >
                 {item.name}
