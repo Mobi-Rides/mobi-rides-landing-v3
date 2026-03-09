@@ -107,11 +107,11 @@ const PrivacyPage: React.FC = () => {
     >
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-primary/5 to-primary/10 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="p-4 bg-blue-600 rounded-full">
+              <div className="p-4 bg-primary rounded-full">
                 <Shield className="h-8 w-8 text-white" />
               </div>
             </div>
@@ -151,7 +151,7 @@ const PrivacyPage: React.FC = () => {
                       onClick={() => scrollToSection(section.id)}
                       className={`flex items-center gap-3 w-full text-left px-3 py-2 rounded-lg transition-colors ${
                         activeSection === section.id
-                          ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-600'
+                          ? 'bg-primary/10 text-primary border-l-4 border-primary'
                           : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                       }`}
                     >
@@ -168,12 +168,12 @@ const PrivacyPage: React.FC = () => {
           <div className="lg:col-span-3 mt-8 lg:mt-0">
             <div className="space-y-8">
               {/* Effective Date Notice */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
                 <div className="flex items-start gap-3">
-                  <Shield className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <Shield className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-blue-900 mb-2">Effective Date</h3>
-                    <p className="text-blue-800 text-sm">
+                    <h3 className="font-semibold text-primary mb-2">Effective Date</h3>
+                    <p className="text-gray-700 text-sm">
                       This Privacy Policy is effective as of {privacyPolicy.effectiveDate} and applies to all users of MobiRides services.
                     </p>
                   </div>
@@ -196,7 +196,7 @@ const PrivacyPage: React.FC = () => {
                       className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                     >
                       <div className="flex items-center gap-3">
-                        <IconComponent className="h-5 w-5 text-blue-600" />
+                        <IconComponent className="h-5 w-5 text-primary" />
                         <h2 className="text-xl font-semibold text-gray-900">{section.title}</h2>
                       </div>
                       {isExpanded ? (
@@ -248,7 +248,7 @@ const PrivacyPage: React.FC = () => {
                 <p className="text-gray-500 text-sm mb-4">
                   You can download a copy of this privacy policy for your records.
                 </p>
-                <button className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                <button className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
                   <FileText className="h-4 w-4" />
                   Download PDF
                 </button>

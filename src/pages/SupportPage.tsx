@@ -160,7 +160,7 @@ const SupportPage: React.FC = () => {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="block w-full pl-10 pr-3 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                className="block w-full pl-10 pr-3 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary text-lg"
                 placeholder="Search for help articles, FAQs, or guides..."
               />
             </div>
@@ -199,7 +199,7 @@ const SupportPage: React.FC = () => {
                   <p className="text-gray-600 text-sm mb-4">
                     {action.description}
                   </p>
-                  <div className="flex items-center justify-center text-blue-600 font-medium">
+                  <div className="flex items-center justify-center text-primary font-medium">
                     <span className="mr-1">{action.action}</span>
                     <ExternalLink className="h-4 w-4" />
                   </div>
@@ -218,7 +218,7 @@ const SupportPage: React.FC = () => {
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 selectedCategory === 'all'
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-primary text-white'
                   : 'bg-white text-gray-700 hover:bg-gray-100'
               }`}
             >
@@ -232,7 +232,7 @@ const SupportPage: React.FC = () => {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center space-x-2 ${
                     selectedCategory === category.id
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-primary text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-100'
                   }`}
                 >
@@ -311,7 +311,7 @@ const SupportPage: React.FC = () => {
               <div key={article.id} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="p-6">
                   <div className="flex items-center space-x-2 mb-3">
-                    <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">
+                    <span className="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">
                       {supportData.categories.find(cat => cat.id === article.category)?.name}
                     </span>
                     <span className="text-xs text-gray-500">
@@ -337,7 +337,7 @@ const SupportPage: React.FC = () => {
                   
                   <button
                     onClick={() => setExpandedArticle(expandedArticle === article.id ? null : article.id)}
-                    className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center space-x-1 transition-colors"
+                    className="text-primary hover:text-primary/80 font-medium text-sm flex items-center space-x-1 transition-colors"
                   >
                     <span>{expandedArticle === article.id ? 'Hide' : 'Read'} Article</span>
                     {expandedArticle === article.id ? (
@@ -388,7 +388,7 @@ const SupportPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <a
               href="/contact"
-              className="bg-blue-600 text-white p-6 rounded-xl hover:bg-blue-700 transition-colors"
+              className="bg-primary text-white p-6 rounded-xl hover:bg-primary/90 transition-colors"
             >
               <MessageCircle className="h-8 w-8 mx-auto mb-3" />
               <h3 className="font-semibold mb-2">Contact Form</h3>
@@ -397,7 +397,7 @@ const SupportPage: React.FC = () => {
             
             <a
               href="tel:+267-123-4567"
-              className="bg-green-600 text-white p-6 rounded-xl hover:bg-green-700 transition-colors"
+              className="bg-secondary text-white p-6 rounded-xl hover:bg-secondary/90 transition-colors"
             >
               <Phone className="h-8 w-8 mx-auto mb-3" />
               <h3 className="font-semibold mb-2">Phone Support</h3>

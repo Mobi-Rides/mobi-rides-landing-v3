@@ -114,7 +114,7 @@ const FAQPage: React.FC = () => {
       canonical={buildCanonicalUrl('/faq')}
       jsonLd={jsonLd}
     >
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
+      <div className="min-h-screen bg-gradient-to-br from-primary/5 to-secondary/5">
         {/* Breadcrumbs */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
           <Breadcrumbs items={[{ label: 'FAQ' }]} />
@@ -124,7 +124,7 @@ const FAQPage: React.FC = () => {
         <section className="relative py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              How can we <span className="text-blue-600">help</span> you?
+              How can we <span className="text-primary">help</span> you?
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Find quick answers to common questions about MobiRides services, booking, payments, and more.
@@ -139,7 +139,7 @@ const FAQPage: React.FC = () => {
                   placeholder="Search for answers..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-lg"
+                  className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent shadow-lg"
                 />
               </div>
               {searchTerm && (
@@ -152,7 +152,7 @@ const FAQPage: React.FC = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
               <div className="bg-white rounded-lg p-4 shadow-sm">
-                <div className="text-2xl font-bold text-blue-600">{faqData.categories.length}</div>
+                <div className="text-2xl font-bold text-primary">{faqData.categories.length}</div>
                 <div className="text-sm text-gray-600">Categories</div>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm">
@@ -180,7 +180,7 @@ const FAQPage: React.FC = () => {
               onClick={() => setSelectedCategory('all')}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all ${
                 selectedCategory === 'all'
-                  ? 'bg-blue-600 text-white shadow-lg'
+                  ? 'bg-primary text-white shadow-lg'
                   : 'bg-white text-gray-600 hover:bg-gray-50 shadow-sm'
               }`}
             >
@@ -195,7 +195,7 @@ const FAQPage: React.FC = () => {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all ${
                     selectedCategory === category.id
-                      ? 'bg-blue-600 text-white shadow-lg'
+                      ? 'bg-primary text-white shadow-lg'
                       : 'bg-white text-gray-600 hover:bg-gray-50 shadow-sm'
                   }`}
                 >
@@ -226,7 +226,7 @@ const FAQPage: React.FC = () => {
                     >
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold text-gray-900 mb-1">{question.question}</h3>
-                        <div className="text-sm text-blue-600">{question.categoryName}</div>
+                        <div className="text-sm text-primary">{question.categoryName}</div>
                       </div>
                       {isExpanded ? (
                         <ChevronUp className="w-6 h-6 text-gray-400 flex-shrink-0" />
@@ -239,7 +239,7 @@ const FAQPage: React.FC = () => {
                         <div className="pt-4 text-gray-700 leading-relaxed">{question.answer}</div>
                         <div className="flex flex-wrap gap-2 mt-4">
                           {question.tags.map((tag, index) => (
-                            <span key={index} className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">
+                            <span key={index} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
                               {tag}
                             </span>
                           ))}
@@ -254,7 +254,7 @@ const FAQPage: React.FC = () => {
             <div className="text-center mt-8">
               <button
                 onClick={() => setShowPopular(false)}
-                className="text-blue-600 hover:text-blue-700 font-medium"
+                className="text-primary hover:text-primary/80 font-medium"
               >
                 View All Questions →
               </button>
@@ -298,7 +298,7 @@ const FAQPage: React.FC = () => {
                     setSelectedCategory('all');
                     setShowPopular(true);
                   }}
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
                 >
                   View All Questions
                 </button>
@@ -315,7 +315,7 @@ const FAQPage: React.FC = () => {
                       >
                         <div className="flex-1">
                           <h3 className="text-lg font-semibold text-gray-900 mb-1">{question.question}</h3>
-                          <div className="text-sm text-blue-600">{question.categoryName}</div>
+                          <div className="text-sm text-primary">{question.categoryName}</div>
                         </div>
                         {isExpanded ? (
                           <ChevronUp className="w-6 h-6 text-gray-400 flex-shrink-0" />
@@ -328,7 +328,7 @@ const FAQPage: React.FC = () => {
                           <div className="pt-4 text-gray-700 leading-relaxed">{question.answer}</div>
                           <div className="flex flex-wrap gap-2 mt-4">
                             {question.tags.map((tag, index) => (
-                              <span key={index} className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">
+                              <span key={index} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
                                 {tag}
                               </span>
                             ))}
@@ -345,7 +345,7 @@ const FAQPage: React.FC = () => {
 
         {/* Contact Support */}
         <section className="max-w-4xl mx-auto px-4 mb-16">
-          <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Still need help?</h2>
             <p className="text-xl mb-8 opacity-90">
               Can't find what you're looking for? Our support team is here to help 24/7.
@@ -377,7 +377,7 @@ const FAQPage: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href={`mailto:${faqData.contactInfo.supportEmail}`}
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Contact Support
               </a>
@@ -403,7 +403,7 @@ const FAQPage: React.FC = () => {
               <button
                 key={index}
                 onClick={() => setSearchTerm(tag)}
-                className="bg-white text-gray-700 px-4 py-2 rounded-full text-sm hover:bg-blue-50 hover:text-blue-600 transition-colors shadow-sm border border-gray-200"
+                className="bg-white text-gray-700 px-4 py-2 rounded-full text-sm hover:bg-primary/5 hover:text-primary transition-colors shadow-sm border border-gray-200"
               >
                 #{tag}
               </button>

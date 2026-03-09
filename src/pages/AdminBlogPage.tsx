@@ -236,7 +236,7 @@ export default function AdminBlogPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
           <p>Loading blog posts...</p>
         </div>
       </div>
@@ -383,14 +383,14 @@ export default function AdminBlogPage() {
             <CardContent>
               <div className="space-y-3">
                 {scheduledPosts.map((post) => (
-                  <div key={post.id} className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                  <div key={post.id} className="flex items-center justify-between p-3 bg-primary/5 rounded-lg">
                     <div>
                       <h4 className="font-medium text-gray-900">{post.title}</h4>
                       <p className="text-sm text-gray-600">
                         Scheduled for: {format(new Date(post.scheduled_for), 'MMM dd, yyyy at h:mm a')}
                       </p>
                     </div>
-                    <Badge variant="outline" className="bg-blue-100 text-blue-800">
+                    <Badge variant="outline" className="bg-primary/10 text-primary">
                       Scheduled
                     </Badge>
                   </div>
