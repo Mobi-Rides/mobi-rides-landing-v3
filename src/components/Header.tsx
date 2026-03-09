@@ -30,9 +30,9 @@ const Header = () => {
       isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-transparent'
     }`}>
       {/* Promo Banner */}
-      <div className="bg-primary text-primary-foreground py-2.5 lg:py-3 px-4 shadow-md">
+      <div className="bg-primary text-primary-foreground py-2.5 md:py-3 px-4 shadow-md">
         {/* Desktop: static centered */}
-        <div className="hidden lg:block text-center text-sm font-medium">
+        <div className="hidden md:block text-center text-sm font-medium">
           <p>
             🚗 Use code <span className="font-bold bg-primary-foreground/20 px-1.5 py-0.5 rounded mx-1">FIRST100</span> for P100 off your first booking!{' '}
             <a href="https://app.mobirides.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-primary-foreground/80 transition-colors">
@@ -41,7 +41,7 @@ const Header = () => {
           </p>
         </div>
         {/* Mobile: marquee scrolling */}
-        <div className="lg:hidden overflow-hidden">
+        <div className="md:hidden overflow-hidden">
           <a
             href="https://app.mobirides.com"
             target="_blank"
@@ -54,14 +54,14 @@ const Header = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 lg:h-20">
+        <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0 min-w-[180px]">
             <Link to="/">
               <img 
                 src="/public/mobirides-logo.png" 
                 alt="MobiRides Logo"
-                className="h-12 lg:h-16 w-auto max-h-full"
+                className="h-12 md:h-16 w-auto max-h-full"
                 onError={(e) => {
                   console.error('Logo failed to load:', e);
                 }}
@@ -70,7 +70,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -87,7 +87,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden md:flex items-center">
             <Button 
               className="btn-primary" 
               asChild
@@ -103,7 +103,7 @@ const Header = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`transition-colors p-2 rounded-lg ${
@@ -124,7 +124,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full right-4 w-auto min-w-fit" style={{ zIndex: 9998 }}>
+          <div className="md:hidden absolute top-full right-4 w-auto min-w-fit" style={{ zIndex: 9998 }}>
             <div className="pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md rounded-lg mt-2 shadow-medium">
               {navigation.map((item) => (
                 <Link
