@@ -13,7 +13,7 @@
       "lng": 25.9231
     },
     "phone": "+267 74300747",
-    "email": "hello@mobirides.com",
+    "email": "hello@mobirides.africa",
     "businessHours": {
       "monday": "08:00 - 17:00",
       "tuesday": "08:00 - 17:00",
@@ -124,7 +124,7 @@
       "id": "email",
       "name": "Email Support",
       "description": "Send us your questions and concerns",
-      "contact": "hello@mobirides.com",
+      "contact": "hello@mobirides.africa",
       "availability": "Business Hours",
       "responseTime": "Within 2 hours",
       "icon": "Mail"
@@ -157,7 +157,7 @@
     {
       "id": "customer-support",
       "name": "Customer Support",
-      "email": "hello@mobirides.com",
+      "email": "hello@mobirides.africa",
       "phone": "+267 74300747",
       "description": "General inquiries, booking assistance, and customer service",
       "icon": "Users"
