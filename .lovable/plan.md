@@ -1,37 +1,101 @@
 
+## AI-Generated Image for Host CTA Section + Replace All Placeholders
 
-# Add Facebook Domain Verification Meta Tag
+### Problem Identified
 
-## Overview
-Add the Facebook domain verification meta tag to the `<head>` section of `index.html` to verify domain ownership with Facebook.
+**Placeholder Images Found:**
+1. **HostCTASection.tsx** (Line 47): `/api/placeholder/500/400` - Professional earning with car sharing
+2. **TestimonialsSection.tsx** (Lines 20, 28, 36, 44, 52, 60): 6× `/api/placeholder/80/80` - Testimonial avatars
 
-## Implementation
+These development placeholders need to be replaced with brand-compliant assets.
 
-### File: `index.html`
+---
 
-**Location**: Line 12 (after the existing Google site verification tag on line 11)
+### Brand Image Guidelines (from mobirides-brand-guide-2025-10-27.md)
 
-**Add this line**:
-```html
-<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
+**Photography Style Requirements:**
+- ✅ Feature real Botswana people (diverse representation)
+- ✅ Professional quality but approachable feel
+- ✅ Natural lighting, authentic moments
+- ✅ Show clean, well-maintained vehicles
+- ❌ No generic international stock photos
+- ❌ Not overly staged or heavily filtered
+
+**Reference Images from Brand:**
+- `hero-professional.jpg` - Professional, aspirational style
+- `gaborone-business.jpg` - Urban professionals, real community members
+
+**Color Palette Context:**
+- Mobi Purple: `#be30ff` (innovation, transformation, premium)
+- Renter Green: `#16A34A` (growth, trust, prosperity)
+- Modern, clean aesthetic with Botswana context
+
+---
+
+### Solution Plan
+
+#### 1. Generate AI Image for Host CTA Section
+
+**Image Prompt (Nano Banana Pro for higher quality):**
+```
+A professional African businessperson smiling warmly while sitting in the driver's seat of a clean, modern car in Gaborone, Botswana. Natural daylight streaming through the windshield. The person is holding a smartphone showing earning statistics. The car interior is pristine with a purple accent visible on the dashboard. Shot from outside the car through the window, capturing both the person and the vehicle interior. Professional photography style, authentic and approachable, not overly staged. Warm, natural lighting. 16:9 aspect ratio, 3:2 crop safe.
 ```
 
-**Result**: The verification meta tags section will look like:
-```html
-<meta name="google-site-verification" content="RyDwY9e65CLZGlnUhgni_zZnf1Bxw0-w3wHIveGR_N4" />
-<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
+**Technical Specs:**
+- Model: `google/gemini-3-pro-image-preview` (higher quality)
+- Aspect ratio: 4:3 to match existing `aspect-[4/3]` container
+- Output format: Base64 → Upload to project assets
+- File path: `src/assets/host-earning-professional.jpg`
+
+#### 2. Replace Testimonial Avatars
+
+**Strategy:** Remove avatar images entirely and use gradient initials (already implemented)
+
+**Current Code (Lines 90-100 in TestimonialsSection.tsx):**
+```tsx
+<div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center mr-4">
+  <span className="text-white font-bold text-sm">
+    {testimonial.name.split(' ').map(n => n[0]).join('')}
+  </span>
+</div>
 ```
 
-## Summary
+This gradient circle with initials is already implemented and looks professional—no image needed. Simply remove the unused `avatar` property from the testimonials data array.
 
-| File | Change |
-|------|--------|
-| `index.html` | Add 1 line - Facebook domain verification meta tag |
+---
 
-## Post-Deployment Steps
+### Implementation Changes
 
-After publishing:
-1. Return to Facebook Business Suite / Meta Business Settings
-2. Click "Verify" to confirm the domain verification
-3. Facebook will crawl the page and detect the meta tag
+| File | Lines | Change |
+|------|-------|--------|
+| `src/components/sections/HostCTASection.tsx` | 1 | Add import: `import hostEarningImage from '@/assets/host-earning-professional.jpg';` |
+| `src/components/sections/HostCTASection.tsx` | 47 | Replace `src="/api/placeholder/500/400"` with `src={hostEarningImage}` |
+| `src/components/sections/TestimonialsSection.tsx` | 20, 28, 36, 44, 52, 60 | Remove `avatar: "/api/placeholder/80/80"` lines (6 instances) |
+| `src/assets/host-earning-professional.jpg` | NEW | Upload AI-generated image |
 
+---
+
+### AI Image Generation Workflow
+
+1. **Generate**: Call Nano Banana Pro with brand-aligned prompt
+2. **Receive**: Base64-encoded image data
+3. **Upload**: Save to `src/assets/host-earning-professional.jpg`
+4. **Integrate**: Import and use in HostCTASection component
+5. **Verify**: Image loads correctly and matches brand aesthetic
+
+---
+
+### Brand Alignment Verification
+
+**Host CTA Context:**
+- Section message: "Own a car? Put it to work!"
+- Target: Part-time hosts earning P4,500–15,000/month
+- Tone: Empowering, aspirational, professional yet approachable
+- Image should show: Success, earnings potential, professionalism, Botswana context
+
+**Generated Image Will:**
+- Feature an African professional (Botswana representation)
+- Show smartphone with earnings (tangible benefit)
+- Include clean, modern vehicle (quality signal)
+- Use natural lighting (authentic feel)
+- Match brand's professional-yet-approachable tone
