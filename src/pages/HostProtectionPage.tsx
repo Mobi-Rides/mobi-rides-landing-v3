@@ -146,7 +146,7 @@ const HostProtectionPage: React.FC = () => {
       type: 'claims',
       title: 'Claims & Damage Support',
       description: 'Insurance claims and damage documentation assistance',
-      contact: 'claims@mobirides.com',
+      contact: 'claims@mobirides.africa',
       availability: 'Mon-Sun 8AM-8PM',
       icon: <Shield className="w-5 h-5" />
     },

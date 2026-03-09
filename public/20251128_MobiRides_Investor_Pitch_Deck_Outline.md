@@ -783,5 +783,5 @@ Democratizing Car Ownership in Botswana
 **Status:** Ready for investor presentations
 
 **For questions or to schedule a pitch:**  
-📧 team@mobirides.com  
+📧 team@mobirides.africa  
 🌐 www.mobirides.com

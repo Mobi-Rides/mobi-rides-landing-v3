@@ -286,7 +286,7 @@ const TermsPage: React.FC = () => {
                   If you have any questions about these Terms of Service or need clarification on any provisions, please contact our legal team:
                 </p>
                 <div className="space-y-2 text-sm">
-                  <p><strong>Email:</strong> legal@mobirides.com</p>
+                  <p><strong>Email:</strong> legal@mobirides.africa</p>
                   <p><strong>Address:</strong> Legal Department, Plot 16530, Sehithwa Rd, Gaborone West - Phase 1, Gaborone, Botswana</p>
                   <p><strong>Phone:</strong> +267 74300747</p>
                 </div>
