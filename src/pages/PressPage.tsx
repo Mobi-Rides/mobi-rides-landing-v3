@@ -33,7 +33,7 @@ const PressPage: React.FC = () => {
     {
       name: 'Sarah Johnson',
       title: 'Head of Communications',
-      email: 'press@mobirides.com',
+      email: 'press@mobirides.africa',
       phone: '+267 74300750',
       specialties: ['Company News', 'Product Launches', 'Partnerships']
     },
