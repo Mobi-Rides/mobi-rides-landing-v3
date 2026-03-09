@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { DollarSign, Shield, Users, TrendingUp } from 'lucide-react';
+import hostEarningImage from '@/assets/host-earning-professional.jpg';
 
 const HostCTASection = () => {
   return (
