@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,7 +80,9 @@ const Header = () => {
                 className={`transition-colors ${
                   isScrolled 
                     ? 'text-foreground hover:text-primary font-medium' 
-                    : 'text-white hover:text-gray-200 font-semibold'
+                    : isHomePage
+                      ? 'text-white hover:text-gray-200 font-semibold'
+                      : 'text-primary hover:text-primary-dark font-semibold'
                 }`}
               >
                 {item.name}
