@@ -103,11 +103,11 @@ const TeamGrid: React.FC<TeamGridProps> = ({
           <Card key={member.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
             <CardContent className="p-0">
               {/* Member Image */}
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden bg-muted">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
                 />
                 {member.isLeadership && (
