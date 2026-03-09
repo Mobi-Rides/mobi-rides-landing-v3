@@ -83,8 +83,8 @@ const AboutPage: React.FC = () => {
           return <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardContent className="p-0">
                   <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-blue-100 rounded-full">
-                      <IconComponent className="h-6 w-6 text-blue-600" />
+                    <div className="p-3 bg-primary/10 rounded-full">
+                      <IconComponent className="h-6 w-6 text-primary" />
                     </div>
                   </div>
                   <div className="text-2xl font-bold text-gray-900 mb-2">{stat.value}</div>
@@ -114,8 +114,8 @@ const AboutPage: React.FC = () => {
                   <CardContent className="p-0">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="p-3 bg-blue-100 rounded-lg">
-                          <IconComponent className="h-6 w-6 text-blue-600" />
+                        <div className="p-3 bg-primary/10 rounded-lg">
+                          <IconComponent className="h-6 w-6 text-primary" />
                         </div>
                       </div>
                       <div>
@@ -151,7 +151,7 @@ const AboutPage: React.FC = () => {
       </SectionWrapper>
 
       {/* Mission & Vision Section */}
-      <SectionWrapper className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+      <SectionWrapper className="py-16 bg-gradient-to-r from-primary to-primary-light">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
             Mission &amp; Vision

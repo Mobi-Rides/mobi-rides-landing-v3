@@ -166,7 +166,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className={`block w-full pl-10 pr-3 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors ${
+            className={`block w-full pl-10 pr-3 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors ${
               errors.name ? 'border-red-300' : 'border-gray-300'
             }`}
             placeholder="Enter your full name"
@@ -192,7 +192,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className={`block w-full pl-10 pr-3 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors ${
+            className={`block w-full pl-10 pr-3 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors ${
               errors.email ? 'border-red-300' : 'border-gray-300'
             }`}
             placeholder="Enter your email address"
@@ -218,7 +218,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            className={`block w-full pl-10 pr-3 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors ${
+            className={`block w-full pl-10 pr-3 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors ${
               errors.phone ? 'border-red-300' : 'border-gray-300'
             }`}
             placeholder="Enter your phone number"
@@ -243,7 +243,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             name="department"
             value={formData.department}
             onChange={handleInputChange}
-            className={`block w-full pl-10 pr-3 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors appearance-none bg-white ${
+            className={`block w-full pl-10 pr-3 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors appearance-none bg-white ${
               errors.department ? 'border-red-300' : 'border-gray-300'
             }`}
           >
@@ -271,7 +271,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
           name="subject"
           value={formData.subject}
           onChange={handleInputChange}
-          className={`block w-full px-3 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors ${
+          className={`block w-full px-3 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors ${
             errors.subject ? 'border-red-300' : 'border-gray-300'
           }`}
           placeholder="Brief description of your inquiry"
@@ -296,7 +296,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             rows={6}
             value={formData.message}
             onChange={handleInputChange}
-            className={`block w-full pl-10 pr-3 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-vertical ${
+            className={`block w-full pl-10 pr-3 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-vertical ${
               errors.message ? 'border-red-300' : 'border-gray-300'
             }`}
             placeholder="Please provide details about your inquiry..."
@@ -315,7 +315,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+          className="w-full bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
         >
           {isSubmitting ? (
             <>
@@ -335,7 +335,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
       <div className="text-sm text-gray-600 bg-gray-50 rounded-lg p-4">
         <p>
           By submitting this form, you agree to our{' '}
-          <a href="/privacy" className="text-blue-600 hover:text-blue-700 transition-colors">
+          <a href="/privacy" className="text-primary hover:text-primary/80 transition-colors">
             Privacy Policy
           </a>{' '}
           and consent to us contacting you regarding your inquiry.

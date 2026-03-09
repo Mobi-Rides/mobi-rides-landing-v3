@@ -190,7 +190,7 @@ const SafetyPage: React.FC = () => {
             {safetyStats.map((stat, index) => (
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardContent className="p-0">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                  <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
                   <div className="text-sm font-medium text-gray-900 mb-1">{stat.label}</div>
                   <div className="text-xs text-gray-600">{stat.description}</div>
                 </CardContent>
@@ -219,8 +219,8 @@ const SafetyPage: React.FC = () => {
                 <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
                   <CardHeader className="p-0 mb-6">
                     <div className="flex items-center space-x-4">
-                      <div className="p-3 bg-blue-100 rounded-lg">
-                        <IconComponent className="h-6 w-6 text-blue-600" />
+                      <div className="p-3 bg-primary/10 rounded-lg">
+                        <IconComponent className="h-6 w-6 text-primary" />
                       </div>
                       <div>
                         <CardTitle className="text-xl text-gray-900">{feature.title}</CardTitle>
@@ -282,9 +282,9 @@ const SafetyPage: React.FC = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <Alert className="max-w-2xl mx-auto border-blue-200 bg-blue-50">
-              <Phone className="h-4 w-4 text-blue-600" />
-              <AlertDescription className="text-blue-800">
+            <Alert className="max-w-2xl mx-auto border-primary/20 bg-primary/5">
+              <Phone className="h-4 w-4 text-primary" />
+              <AlertDescription className="text-gray-800">
                 <strong>Remember:</strong> Our 24/7 emergency support team is always available at 1-800-MOBI-911 or through the emergency button in your app.
               </AlertDescription>
             </Alert>
@@ -293,7 +293,7 @@ const SafetyPage: React.FC = () => {
       </SectionWrapper>
 
       {/* Damage Protection Coverage Details */}
-      <SectionWrapper className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+      <SectionWrapper className="py-16 bg-gradient-to-r from-primary to-primary-light">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
             Comprehensive Damage Protection
@@ -321,7 +321,7 @@ const SafetyPage: React.FC = () => {
             Every MobiRides rental is automatically covered by our comprehensive damage liability waiver, powered by Pay-U's cloud-based repair network, providing peace of mind for both hosts and renters.
           </p>
 
-          <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-gray-100" asChild>
+          <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100" asChild>
             <a href="/damage-protection">View Full Protection Details</a>
           </Button>
         </div>
