@@ -23,7 +23,7 @@ export const siteConfig = {
   
   // Department Emails
   departments: {
-    support: 'hello@mobirides.com',
+    support: 'hello@mobirides.africa',
     safety: 'safety@mobirides.com',
     partnerships: 'partnerships@mobirides.com',
     media: 'media@mobirides.com',
