@@ -18,11 +18,10 @@ const Header = () => {
   }, []);
 
   const navigation = [
-    { name: 'Find a Ride', href: '/find-ride' },
+    { name: 'Rent a Car', href: '/find-ride' },
     { name: 'List My Car', href: '/host' },
     { name: 'Rent2Buy', href: '/rent2buy' },
     { name: 'Partners', href: '/partners' },
-    { name: 'Blog', href: '/blog' },
   ];
 
   const promoText = '🚗 Use code FIRST100 for P100 off your first booking! Book Now →';
