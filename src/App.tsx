@@ -99,6 +99,7 @@ const App = () => (
               <Route path="/travel-guides" element={<TravelGuidesPage />} />
               <Route path="/business-solutions" element={<BusinessSolutionsPage />} />
               <Route path="/api-docs" element={<ApiDocsPage />} />
+              <Route path="/vip" element={<VIPServicesPage />} />
               
               {/* Admin Routes */}
               <Route path="/admin/login" element={<AdminLoginPage />} />
