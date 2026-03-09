@@ -40,7 +40,7 @@ const PressPage: React.FC = () => {
     {
       name: 'Michael Chen',
       title: 'PR Manager',
-      email: 'media@mobirides.com', 
+      email: 'media@mobirides.africa', 
       phone: '+267 74300750',
       specialties: ['Industry Analysis', 'Executive Interviews', 'Market Trends']
     },
