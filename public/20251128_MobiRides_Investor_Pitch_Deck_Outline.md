@@ -685,7 +685,7 @@
 Democratizing Car Ownership in Botswana
 
 **Contact:**
-- team@mobirides.com
+- team@mobirides.africa
 - www.mobirides.com
 - [LinkedIn/Social links]
 
