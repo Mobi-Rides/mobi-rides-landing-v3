@@ -19,7 +19,7 @@ const Header = () => {
 
   const navigation = [
     { name: 'Find a Ride', href: '/find-ride' },
-    { name: 'Rent Out Your Car', href: '/host' },
+    { name: 'List My Car', href: '/host' },
     { name: 'Rent2Buy', href: '/rent2buy' },
     { name: 'Partners', href: '/partners' },
     { name: 'Blog', href: '/blog' },
