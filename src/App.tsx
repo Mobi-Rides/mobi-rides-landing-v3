@@ -34,6 +34,7 @@ import HostCommunityPage from "./pages/HostCommunityPage";
 import TravelGuidesPage from "./pages/TravelGuidesPage";
 import BusinessSolutionsPage from "./pages/BusinessSolutionsPage";
 import ApiDocsPage from "./pages/ApiDocsPage";
+import VIPServicesPage from "./pages/VIPServicesPage";
 import AdminLoginPage from "./pages/AdminLoginPage";
 import AdminBlogPage from "./pages/AdminBlogPage";
 import AdminBlogEditPage from "./pages/AdminBlogEditPage";
