@@ -120,11 +120,29 @@ const VIPServicesPage: React.FC = () => {
       return;
     }
     setIsSubmitting(true);
-    // Simulate submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    toast({ title: "Quote request submitted!", description: "Our VIP team will contact you within 24 hours." });
-    setFormData({ name: '', email: '', phone: '', serviceType: '', eventDate: '', guests: '', requirements: '' });
-    setIsSubmitting(false);
+    try {
+      const { data, error } = await supabase.functions.invoke('send-vip-quote-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          serviceType: formData.serviceType,
+          eventDate: formData.eventDate,
+          guests: formData.guests,
+          requirements: formData.requirements,
+        },
+      });
+
+      if (error) throw error;
+
+      toast({ title: "Quote request submitted!", description: "Our VIP team will contact you within 24 hours." });
+      setFormData({ name: '', email: '', phone: '', serviceType: '', eventDate: '', guests: '', requirements: '' });
+    } catch (error) {
+      console.error('Submit error:', error);
+      toast({ title: "Something went wrong", description: "Please try again or call us directly.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToForm = () => {
