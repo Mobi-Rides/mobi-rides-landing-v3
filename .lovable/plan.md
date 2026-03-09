@@ -1,31 +1,37 @@
 
 
-## Fix: Transparent Dropdown Background on Rent2Buy Calculator
+# Add Facebook Domain Verification Meta Tag
 
-### Problem
+## Overview
+Add the Facebook domain verification meta tag to the `<head>` section of `index.html` to verify domain ownership with Facebook.
 
-The `SelectContent` dropdown uses `bg-popover` but `--popover` CSS variable is **not defined** in the light theme (only in dark theme at line 110). This causes an undefined/transparent background, making dropdown options blend with form elements behind them.
+## Implementation
 
-### Solution
+### File: `index.html`
 
-Add `--popover` and `--popover-foreground` variables to the light theme in `src/index.css`. This ensures dropdowns have a solid white background.
+**Location**: Line 12 (after the existing Google site verification tag on line 11)
 
-### Change
-
-**File: `src/index.css`**
-
-Add these two lines after line 45 (`--ring: 281 100% 59%;`):
-
-```css
---popover: 0 0% 100%;
---popover-foreground: 222 47% 11%;
+**Add this line**:
+```html
+<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
 ```
 
-This gives dropdowns a solid white background (`#fff`) with proper dark text, matching the `--background` and `--foreground` values.
+**Result**: The verification meta tags section will look like:
+```html
+<meta name="google-site-verification" content="RyDwY9e65CLZGlnUhgni_zZnf1Bxw0-w3wHIveGR_N4" />
+<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
+```
 
-### Result
+## Summary
 
-- Dropdown menus will have a **solid white background**
-- No more text bleed-through from underlying form elements
-- Consistent with existing card/background styling
+| File | Change |
+|------|--------|
+| `index.html` | Add 1 line - Facebook domain verification meta tag |
+
+## Post-Deployment Steps
+
+After publishing:
+1. Return to Facebook Business Suite / Meta Business Settings
+2. Click "Verify" to confirm the domain verification
+3. Facebook will crawl the page and detect the meta tag
 
