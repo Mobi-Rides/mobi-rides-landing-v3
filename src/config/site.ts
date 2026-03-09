@@ -15,7 +15,7 @@ export const siteConfig = {
   
   // Contact Information
   contact: {
-    email: 'hello@mobirides.com',
+    email: 'hello@mobirides.africa',
     phone: '+267 74300747',
     emergency: '+267 911 MOBI (6624)',
     whatsapp: '+267 74300747',
