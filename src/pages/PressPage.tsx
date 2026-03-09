@@ -47,7 +47,7 @@ const PressPage: React.FC = () => {
     {
       name: 'Emily Rodriguez',
       title: 'Communications Specialist',
-      email: 'news@mobirides.com',
+      email: 'news@mobirides.africa',
       phone: '+267 74300750',
       specialties: ['Community Stories', 'Safety Updates', 'Local News']
     }
