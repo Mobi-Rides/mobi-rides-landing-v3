@@ -14,7 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      vip_quote_requests: {
+        Row: {
+          created_at: string
+          email: string
+          event_date: string | null
+          guests: number | null
+          id: string
+          name: string
+          phone: string | null
+          requirements: string | null
+          service_type: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          event_date?: string | null
+          guests?: number | null
+          id?: string
+          name: string
+          phone?: string | null
+          requirements?: string | null
+          service_type: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          event_date?: string | null
+          guests?: number | null
+          id?: string
+          name?: string
+          phone?: string | null
+          requirements?: string | null
+          service_type?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
