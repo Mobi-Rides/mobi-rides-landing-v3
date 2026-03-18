@@ -75,7 +75,7 @@ export const siteConfig = {
     defaultTitle: 'MobiRides - Botswana\'s Premier Car Sharing Platform',
     titleTemplate: '%s | MobiRides',
     defaultDescription: 'Book trusted vehicles from verified hosts across Botswana. Safe, convenient, and affordable car rentals for every journey.',
-    ogImage: '/og-image.png',
+    ogImage: '/mobirides-logo.jpg',
     twitterHandle: '@mobirides_bw',
   },
   
