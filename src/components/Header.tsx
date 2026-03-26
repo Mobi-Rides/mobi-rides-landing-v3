@@ -60,7 +60,7 @@ const Header = () => {
           <div className="flex items-center flex-shrink-0 min-w-[180px]">
             <Link to="/">
               <img 
-                src="/public/mobirides-logo.png" 
+                src="/mobirides-logo.png" 
                 alt="MobiRides Logo"
                 className="h-12 md:h-16 w-auto max-h-full"
                 onError={(e) => {
