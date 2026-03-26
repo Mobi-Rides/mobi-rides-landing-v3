@@ -1,37 +1,17 @@
 
 
-# Add Facebook Domain Verification Meta Tag
+## Fix: Logo Not Displaying — Incorrect Path
 
-## Overview
-Add the Facebook domain verification meta tag to the `<head>` section of `index.html` to verify domain ownership with Facebook.
+### Problem
+The Header and Footer reference the logo as `/public/mobirides-logo.png`. In Vite projects, files in the `public/` folder are served at the root — so the correct path is `/mobirides-logo.png` (without the `/public/` prefix). The current path results in a 404, so the browser shows nothing or a broken image.
 
-## Implementation
+### Changes
 
-### File: `index.html`
+**`src/components/Header.tsx`** (line 63):
+- Change `src="/public/mobirides-logo.png"` → `src="/mobirides-logo.png"`
 
-**Location**: Line 12 (after the existing Google site verification tag on line 11)
+**`src/components/Footer.tsx`** (line 54):
+- Change `src="/public/mobirides-logo.png"` → `src="/mobirides-logo.png"`
 
-**Add this line**:
-```html
-<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
-```
-
-**Result**: The verification meta tags section will look like:
-```html
-<meta name="google-site-verification" content="RyDwY9e65CLZGlnUhgni_zZnf1Bxw0-w3wHIveGR_N4" />
-<meta name="facebook-domain-verification" content="ptgs6djtqfq3gzq73e5rgm0eur6tvv" />
-```
-
-## Summary
-
-| File | Change |
-|------|--------|
-| `index.html` | Add 1 line - Facebook domain verification meta tag |
-
-## Post-Deployment Steps
-
-After publishing:
-1. Return to Facebook Business Suite / Meta Business Settings
-2. Click "Verify" to confirm the domain verification
-3. Facebook will crawl the page and detect the meta tag
+That's it — two one-line fixes. The new wordmark file is already in `public/mobirides-logo.png`, it just needs the correct reference path.
 
