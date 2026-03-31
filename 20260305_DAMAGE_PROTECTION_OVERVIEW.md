@@ -1,5 +1,21 @@
 # MobiRides Damage Protection Module
 
+---
+
+## Terms & Conditions (Popup)
+
+For the full terms and conditions, please click the "View Terms & Conditions" button in the app or website. The popup displays the latest Service Level Agreement and coverage details, including:
+
+- Coverage tiers and inclusions/exclusions
+- Premium calculation and payment terms
+- Claims process and timelines
+- Excess and admin fee details
+- Revenue split and remittance schedule
+
+The popup is powered by the TermsPopup React component, which renders the full markdown content of the Service Level Agreement for user review.
+
+---
+
 > **Version**: 1.0.0  
 > **Date**: 2026-03-05  
 > **Classification**: Mixed (sections marked individually)  
