@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PageLayout } from '../components/layouts';
 import { buildCanonicalUrl } from '@/config/site';
 import { Shield, FileText, Phone, CheckCircle, AlertTriangle, Users, Car, Clock, Download, ExternalLink, Wrench } from 'lucide-react';
+import TermsPopup from '../components/TermsPopup';
 
 interface CoverageItem {
   type: string;
@@ -188,21 +189,26 @@ const DamageProtectionPage: React.FC = () => {
       title: 'Damage Waiver Terms',
       description: 'Complete damage liability waiver terms and conditions',
       fileSize: '2.3 MB',
-      type: 'PDF'
+      type: 'Markdown',
+      action: 'popup'
     },
     {
       title: 'Damage Claim Form',
       description: 'Downloadable damage claim submission form',
       fileSize: '156 KB',
-      type: 'PDF'
+      type: 'PDF',
+      action: 'download'
     },
     {
       title: 'Protection Summary',
       description: 'Quick reference protection coverage guide',
       fileSize: '890 KB',
-      type: 'PDF'
+      type: 'PDF',
+      action: 'download'
     }
   ];
+
+  const termsMarkdownPath = '/damage-protection/20260305_DAMAGE_PROTECTION_OVERVIEW.md';
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -443,10 +449,21 @@ const DamageProtectionPage: React.FC = () => {
                       <p className="text-gray-600 mb-3">{doc.description}</p>
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-500">{doc.type} • {doc.fileSize}</span>
-                        <button className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
-                          <Download className="w-4 h-4" />
-                          Download
-                        </button>
+                        {doc.action === 'popup' ? (
+                          <div className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
+                            <FileText className="w-4 h-4" />
+                            <TermsPopup
+                              markdownPath={termsMarkdownPath}
+                              title="Damage Protection Terms & Conditions"
+                              triggerLabel="View Terms"
+                            />
+                          </div>
+                        ) : (
+                          <button type="button" className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
+                            <Download className="w-4 h-4" />
+                            Download
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
