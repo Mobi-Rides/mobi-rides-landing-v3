@@ -4,20 +4,14 @@ import { buildCanonicalUrl } from '@/config/site';
 import { Shield, FileText, Phone, CheckCircle, AlertTriangle, Users, Car, Clock, Download, ExternalLink, Wrench } from 'lucide-react';
 import TermsPopup from '../components/TermsPopup';
 
-interface CoverageItem {
-  type: string;
-  coverage: string;
-  limit: string;
-  deductible?: string;
-  description: string;
-}
-
 interface DamageProtectionTier {
   id: string;
   name: string;
   description: string;
-  coverageItems: CoverageItem[];
   fee: string;
+  coverageCap: string;
+  excess: string;
+  targetSegment: string;
   popular?: boolean;
 }
 
@@ -33,137 +27,101 @@ const DamageProtectionPage: React.FC = () => {
 
   const protectionTiers: DamageProtectionTier[] = [
     {
+      id: 'no-coverage',
+      name: 'No Coverage',
+      description: 'Renter bears full liability for any damage. Suited to budget-conscious renters who accept the risk.',
+      fee: 'P0 / day',
+      coverageCap: 'None',
+      excess: '100% renter liability',
+      targetSegment: 'Budget / risk-tolerant renters',
+    },
+    {
       id: 'basic',
-      name: 'Basic Protection',
-      description: 'Essential damage liability coverage for everyday rentals',
-      fee: '+P150/day',
-      coverageItems: [
-        {
-          type: 'Third Party Liability',
-          coverage: 'Bodily injury and property damage to others',
-          limit: 'P 500,000',
-          description: 'Covers damages to other people and their property'
-        },
-        {
-          type: 'Personal Accident',
-          coverage: 'Medical expenses for driver and passengers',
-          limit: 'P 50,000',
-          description: 'Emergency medical treatment and hospitalization'
-        }
-      ]
+      name: 'Basic',
+      description: 'Essential protection for short city rentals, capped at P8,000.',
+      fee: 'P80 / day',
+      coverageCap: 'P8,000',
+      excess: '20% of approved claim',
+      targetSegment: 'Short-term city rentals',
     },
     {
       id: 'standard',
-      name: 'Standard Protection',
-      description: 'Complete damage protection for hosts and renters',
-      fee: '+P350/day',
+      name: 'Standard',
+      description: 'Recommended for multi-day and intercity trips, capped at P20,000.',
+      fee: 'P150 / day',
+      coverageCap: 'P20,000',
+      excess: '15% of approved claim',
+      targetSegment: 'Multi-day / intercity trips',
       popular: true,
-      coverageItems: [
-        {
-          type: 'Third Party Liability',
-          coverage: 'Bodily injury and property damage to others',
-          limit: 'P 1,000,000',
-          description: 'Enhanced coverage for third-party claims'
-        },
-        {
-          type: 'Vehicle Damage',
-          coverage: 'Collision and comprehensive damage',
-          limit: 'P 800,000',
-          deductible: 'P 5,000',
-          description: 'Covers repair or replacement of vehicle damage'
-        },
-        {
-          type: 'Personal Accident',
-          coverage: 'Medical expenses and disability benefits',
-          limit: 'P 100,000',
-          description: 'Comprehensive medical coverage for all occupants'
-        },
-        {
-          type: 'Theft Protection',
-          coverage: 'Vehicle theft and hijacking',
-          limit: 'P 800,000',
-          description: 'Full replacement value for stolen vehicles'
-        }
-      ]
     },
     {
       id: 'premium',
-      name: 'Premium Protection',
-      description: 'Maximum damage liability waiver with additional benefits',
-      fee: '+P550/day',
-      coverageItems: [
-        {
-          type: 'Third Party Liability',
-          coverage: 'Bodily injury and property damage to others',
-          limit: 'P 2,000,000',
-          description: 'Maximum liability protection available'
-        },
-        {
-          type: 'Vehicle Damage',
-          coverage: 'Collision, comprehensive, and wear coverage',
-          limit: 'P 1,200,000',
-          deductible: 'P 2,500',
-          description: 'Includes wear and tear coverage via Pay-U repairs'
-        },
-        {
-          type: 'Personal Accident',
-          coverage: 'Medical, disability, and life coverage',
-          limit: 'P 200,000',
-          description: 'Includes life coverage benefits'
-        },
-        {
-          type: 'Business Interruption',
-          coverage: 'Lost income during vehicle repairs',
-          limit: 'P 50,000',
-          description: 'Compensation for lost earnings'
-        },
-        {
-          type: 'Legal Protection',
-          coverage: 'Legal fees and court costs',
-          limit: 'P 100,000',
-          description: 'Full legal support and representation'
-        }
-      ]
-    }
+      name: 'Premium',
+      description: 'Maximum protection for high-value vehicles and long-term rentals, capped at P50,000.',
+      fee: 'P250 / day',
+      coverageCap: 'P50,000',
+      excess: '10% of approved claim',
+      targetSegment: 'High-value vehicles / long-term',
+    },
   ];
 
   const claimsProcess: ClaimStep[] = [
     {
       step: 1,
       title: 'Report the Incident',
-      description: 'Contact our 24/7 claims hotline immediately after any incident. Provide your booking reference and incident details.',
-      timeframe: 'Within 24 hours'
+      description: 'Submit your incident report via the MobiRides platform within 24 hours. Include your booking reference, a description of the incident, and all relevant details.',
+      timeframe: 'Within 24 hours of incident'
     },
     {
       step: 2,
-      title: 'Document Everything',
-      description: 'Take photos of the scene, vehicles, and any damage. Collect contact information from all parties involved.',
-      timeframe: 'At the scene'
+      title: 'MobiRides Initial Triage',
+      description: 'The MobiRides claims team reviews your submission, performs initial triage, and confirms receipt. You will be notified of the outcome or any further requirements.',
+      timeframe: 'Within 48 hours of submission'
     },
     {
       step: 3,
-      title: 'File Police Report',
-      description: 'Report the incident to local police if required. Obtain a police report number for your records.',
-      timeframe: 'Within 24 hours'
+      title: 'Evidence Collection',
+      description: 'If additional documentation is required, MobiRides will request it. Provide clear, timestamped photos of all damage from multiple angles and any police report numbers.',
+      timeframe: 'Within 48 hours of submission'
     },
     {
       step: 4,
-      title: 'Damage Assessment',
-      description: 'Our Pay-U partner will inspect the damage and review all documentation to determine repair requirements.',
-      timeframe: '2-5 business days'
+      title: 'Renter Information Response',
+      description: 'Respond to any requests for additional information or documentation from MobiRides. Failure to respond within the deadline may result in the claim being rejected.',
+      timeframe: 'Within 7 days of request'
     },
     {
       step: 5,
-      title: 'Repair Authorization',
-      description: 'Once approved, Pay-U will authorize cloud-based repair services at their network of approved service centers.',
-      timeframe: '1-2 business days'
+      title: 'Pay-U Claim Adjudication',
+      description: 'Pay-U assesses and adjudicates the claim once all evidence is received. Claims of P500 or less with sufficient photographic evidence are auto-approved without manual review.',
+      timeframe: 'Within 5 business days'
     },
     {
       step: 6,
-      title: 'Settlement',
-      description: 'Receive your settlement or have repairs completed through Pay-U at no additional cost to you.',
-      timeframe: '5-10 business days'
+      title: 'Payout & Excess Settlement',
+      description: 'Pay-U processes the approved payout within 24 hours. A fixed P150 admin fee is deducted from every payout. MobiRides collects your excess portion (per your tier) within 7 days of approval.',
+      timeframe: 'Within 24 hours of approval'
     }
+  ];
+
+  const coverageInclusions = [
+    'Accidental collision damage',
+    'Single-vehicle incidents',
+    'Weather damage (hail, flooding, storm)',
+    'Vandalism and malicious damage',
+    'Attempted theft damage',
+  ];
+
+  const coverageExclusions = [
+    'Intentional or reckless damage',
+    'Driving under the influence of alcohol or drugs',
+    'Unlicensed or unauthorized drivers',
+    'Off-road use (unless vehicle is rated for off-road)',
+    'Mechanical wear and tear',
+    'Pre-existing damage (documented at handover)',
+    'Damage during illegal activities',
+    'Consequential losses (loss of income, travel delays)',
+    '3rd Party liability',
   ];
 
   const emergencyContacts = [
@@ -272,6 +230,21 @@ const DamageProtectionPage: React.FC = () => {
                 <span className="text-sm font-medium">Personal Coverage</span>
               </div>
             </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <TermsPopup
+                markdownPath={termsMarkdownPath}
+                title="Damage Protection Terms & Conditions"
+                triggerLabel="View Terms & Conditions"
+                triggerClassName="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-sm transition-colors hover:bg-blue-700"
+              />
+              <button
+                type="button"
+                onClick={() => setActiveTab('documents')}
+                className="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-white px-6 py-3 font-semibold text-blue-700 shadow-sm transition-colors hover:bg-blue-50"
+              >
+                Browse Documents
+              </button>
+            </div>
           </div>
         </section>
 
@@ -313,13 +286,13 @@ const DamageProtectionPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {protectionTiers.map((tier) => (
                 <div
                   key={tier.id}
-                  className={`relative bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300 ${
+                  className={`relative bg-white rounded-2xl shadow-xl p-6 transform hover:scale-105 transition-all duration-300 ${
                     tier.popular ? 'ring-4 ring-blue-500 ring-opacity-50' : ''
-                  }`}
+                  } ${tier.id === 'no-coverage' ? 'opacity-80' : ''}`}
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -328,39 +301,75 @@ const DamageProtectionPage: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
-                    <p className="text-gray-600 mb-4">{tier.description}</p>
-                    <div className="text-3xl font-bold text-blue-600 mb-2">
+
+                  <div className="text-center mb-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">{tier.name}</h3>
+                    <p className="text-gray-500 text-sm mb-4">{tier.description}</p>
+                    <div className={`text-3xl font-bold mb-1 ${tier.id === 'no-coverage' ? 'text-gray-400' : 'text-blue-600'}`}>
                       {tier.fee}
                     </div>
                   </div>
-                  
-                  <div className="space-y-4 mb-8">
-                    {tier.coverageItems.map((item, index) => (
-                      <div key={index} className="border-l-4 border-blue-200 pl-4">
-                        <h4 className="font-semibold text-gray-900 mb-1">{item.type}</h4>
-                        <p className="text-sm text-gray-600 mb-1">{item.description}</p>
-                        <div className="flex justify-between text-sm">
-                          <span className="text-green-600 font-medium">Up to {item.limit}</span>
-                          {item.deductible && (
-                            <span className="text-gray-500">Excess: {item.deductible}</span>
-                          )}
-                        </div>
-                      </div>
-                    ))}
+
+                  <div className="space-y-3 mb-6 text-sm">
+                    <div className="flex justify-between border-b border-gray-100 pb-2">
+                      <span className="text-gray-500">Coverage cap</span>
+                      <span className={`font-semibold ${tier.id === 'no-coverage' ? 'text-red-500' : 'text-gray-900'}`}>{tier.coverageCap}</span>
+                    </div>
+                    <div className="flex justify-between border-b border-gray-100 pb-2">
+                      <span className="text-gray-500">Your excess</span>
+                      <span className="font-semibold text-gray-900">{tier.excess}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-500">Best for</span>
+                      <span className="font-semibold text-gray-900 text-right max-w-[55%]">{tier.targetSegment}</span>
+                    </div>
                   </div>
-                  
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
+
+                  {tier.id !== 'no-coverage' && (
+                    <p className="text-xs text-gray-400 text-center mb-4">Includes all 5 standard coverage types. P150 admin fee deducted from payouts.</p>
+                  )}
+
+                  <button className={`w-full py-2.5 px-4 rounded-lg font-semibold transition-all text-sm ${
                     tier.popular
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
+                      : tier.id === 'no-coverage'
+                      ? 'bg-gray-100 text-gray-500 hover:bg-gray-200'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}>
                     Select {tier.name}
                   </button>
                 </div>
               ))}
+            </div>
+
+            {/* Coverage Inclusions & Exclusions */}
+            <div className="mt-12 grid md:grid-cols-2 gap-8">
+              <div className="bg-green-50 rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-green-800 mb-4 flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" /> All Paid Tiers Include
+                </h3>
+                <ul className="space-y-2">
+                  {coverageInclusions.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-green-700 text-sm">
+                      <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-red-50 rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-red-800 mb-4 flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5" /> All Tiers Exclude
+                </h3>
+                <ul className="space-y-2">
+                  {coverageExclusions.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-red-700 text-sm">
+                      <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             {/* Emergency Contacts */}
@@ -414,7 +423,33 @@ const DamageProtectionPage: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-12 bg-blue-50 rounded-2xl p-8 text-center">
+            <div className="mt-12 grid md:grid-cols-2 gap-6">
+              {/* Auto-Approval */}
+              <div className="bg-green-50 rounded-2xl p-8">
+                <h3 className="text-xl font-bold text-green-800 mb-3 flex items-center gap-2">
+                  <CheckCircle className="w-6 h-6" /> Auto-Approval
+                </h3>
+                <p className="text-green-700 mb-4">Claims at or below <strong>P500</strong> with sufficient photographic evidence are automatically approved — no manual adjudication required.</p>
+                <div className="flex items-center gap-2 text-sm text-green-700">
+                  <Clock className="w-4 h-4" />
+                  <span>Payout within 24 hours of auto-approval</span>
+                </div>
+              </div>
+
+              {/* Admin Fee */}
+              <div className="bg-amber-50 rounded-2xl p-8">
+                <h3 className="text-xl font-bold text-amber-800 mb-3">Admin Fee</h3>
+                <p className="text-amber-700 mb-4">A fixed <strong>P150 admin fee</strong> is deducted from every approved claim payout, regardless of tier or claim amount.</p>
+                <h4 className="font-semibold text-amber-800 mb-2 text-sm">Excess calculation examples:</h4>
+                <div className="space-y-1 text-sm text-amber-700">
+                  <div className="flex justify-between"><span>Basic — P5,000 claim (20%)</span><span>Renter pays P1,000 · Pay-U pays P3,850</span></div>
+                  <div className="flex justify-between"><span>Standard — P10,000 claim (15%)</span><span>Renter pays P1,500 · Pay-U pays P8,350</span></div>
+                  <div className="flex justify-between"><span>Premium — P30,000 claim (10%)</span><span>Renter pays P3,000 · Pay-U pays P26,850</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 bg-blue-50 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Need Help with Your Claim?</h3>
               <p className="text-gray-600 mb-6">Our claims specialists are available 24/7 to assist you</p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -450,14 +485,12 @@ const DamageProtectionPage: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-500">{doc.type} • {doc.fileSize}</span>
                         {doc.action === 'popup' ? (
-                          <div className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
-                            <FileText className="w-4 h-4" />
-                            <TermsPopup
-                              markdownPath={termsMarkdownPath}
-                              title="Damage Protection Terms & Conditions"
-                              triggerLabel="View Terms"
-                            />
-                          </div>
+                          <TermsPopup
+                            markdownPath={termsMarkdownPath}
+                            title="Damage Protection Terms & Conditions"
+                            triggerLabel="Open Terms"
+                            triggerClassName="inline-flex items-center gap-2 rounded-md bg-blue-50 px-4 py-2 font-medium text-blue-700 transition-colors hover:bg-blue-100"
+                          />
                         ) : (
                           <button type="button" className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
                             <Download className="w-4 h-4" />

@@ -7,6 +7,7 @@ interface TermsPopupProps {
   markdownPath?: string;
   title?: string;
   triggerLabel?: string;
+  triggerClassName?: string;
 }
 
 const TermsPopup: React.FC<TermsPopupProps> = ({
@@ -14,6 +15,7 @@ const TermsPopup: React.FC<TermsPopupProps> = ({
   markdownPath,
   title = "Terms & Conditions",
   triggerLabel = "View Terms & Conditions",
+  triggerClassName,
 }) => {
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState(markdown ?? "");
@@ -65,7 +67,10 @@ const TermsPopup: React.FC<TermsPopupProps> = ({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <button type="button" className="underline text-blue-600 hover:text-blue-800 cursor-pointer">
+        <button
+          type="button"
+          className={triggerClassName ?? "underline text-blue-600 hover:text-blue-800 cursor-pointer"}
+        >
           {triggerLabel}
         </button>
       </DialogTrigger>
