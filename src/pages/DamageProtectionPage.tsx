@@ -166,7 +166,7 @@ const DamageProtectionPage: React.FC = () => {
     }
   ];
 
-  const termsMarkdownPath = '/damage-protection/20260305_DAMAGE_PROTECTION_OVERVIEW.md';
+  const termsMarkdownPath = '/damage-protection/terms-and-conditions-user.md';
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -233,7 +233,7 @@ const DamageProtectionPage: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <TermsPopup
                 markdownPath={termsMarkdownPath}
-                title="Damage Protection Terms & Conditions"
+                title="Damage Protection Terms (User Summary)"
                 triggerLabel="View Terms & Conditions"
                 triggerClassName="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-sm transition-colors hover:bg-blue-700"
               />
@@ -487,8 +487,8 @@ const DamageProtectionPage: React.FC = () => {
                         {doc.action === 'popup' ? (
                           <TermsPopup
                             markdownPath={termsMarkdownPath}
-                            title="Damage Protection Terms & Conditions"
-                            triggerLabel="Open Terms"
+                            title="Damage Protection Terms (User Summary)"
+                            triggerLabel="Open User Terms"
                             triggerClassName="inline-flex items-center gap-2 rounded-md bg-blue-50 px-4 py-2 font-medium text-blue-700 transition-colors hover:bg-blue-100"
                           />
                         ) : (
